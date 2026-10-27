@@ -1,0 +1,20 @@
+TastePro content
+
+Original TastePro content in this directory — including the domain taxonomy,
+seed playbooks, original templates, and generated catalog metadata for original
+packs — is licensed under the Apache License 2.0. See the repository root
+LICENSE file.
+
+Content derived from upstream sources remains under the upstream license:
+
+- Taste Skill: MIT
+- Awesome DESIGN.md: MIT
+- Vercel Web Interface Guidelines: MIT
+- Microsoft Playwright CLI: Apache-2.0
+
+Each generated pack records its source, commit, path, license, authors, and
+transformations in its provenance object. Full upstream license texts are in
+content/sources/licenses/. See ATTRIBUTION.md at the repository root for the
+complete attribution record.
+
+No third-party logos, screenshots, or binary brand assets are included.

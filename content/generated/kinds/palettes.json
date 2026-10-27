@@ -1,0 +1,5438 @@
+[
+  {
+    "id": "palette/black-crimson",
+    "kind": "palette",
+    "name": "Black and crimson",
+    "summary": "Black with off-white text and mid-grey texture takes nearly the whole page, and the last sections may invert to off-white with black type. Deep crimson is scattered sparingly: a few characters in a heading, a slider fill, the one button.",
+    "domains": [],
+    "sectors": [],
+    "tags": [
+      "dark-neutral",
+      "mono-accent"
+    ],
+    "moods": [
+      "dark"
+    ],
+    "quality": "verified",
+    "provenance": {
+      "source": "taste-skill",
+      "repo": "https://github.com/Leonxlnx/taste-skill",
+      "commit": "12af471f627f866411b4bd785b19646d3672784c",
+      "path": "skills/taste-skill/library/palettes.json",
+      "license": "MIT",
+      "authors": [
+        "Leonxlnx"
+      ],
+      "url": "https://github.com/Leonxlnx/taste-skill",
+      "transformations": [
+        "computed WCAG contrast for core pairs"
+      ]
+    },
+    "sourceUrl": "https://github.com/Leonxlnx/taste-skill",
+    "bg": "#0a0a0a",
+    "surface": "#151515",
+    "ink": "#efefef",
+    "muted": "#8c8c8c",
+    "accent": "#b11226",
+    "accentInk": "#ffffff",
+    "fields": [
+      {
+        "bg": "#efefef",
+        "ink": "#0a0a0a"
+      }
+    ],
+    "note": "Black with off-white text and mid-grey texture takes nearly the whole page, and the last sections may invert to off-white with black type. Deep crimson is scattered sparingly: a few characters in a heading, a slider fill, the one button.",
+    "seenIn": [
+      "opl-textmode-overlay"
+    ],
+    "contrast": {
+      "bg-ink": {
+        "foreground": "#0a0a0a",
+        "background": "#efefef",
+        "ratio": 17.22,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      },
+      "bg-muted": {
+        "foreground": "#0a0a0a",
+        "background": "#8c8c8c",
+        "ratio": 5.89,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": false
+      },
+      "accent-accentInk": {
+        "foreground": "#b11226",
+        "background": "#ffffff",
+        "ratio": 7.04,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      },
+      "surface-ink": {
+        "foreground": "#151515",
+        "background": "#efefef",
+        "ratio": 15.88,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      },
+      "field-1": {
+        "foreground": "#efefef",
+        "background": "#0a0a0a",
+        "ratio": 17.22,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      }
+    }
+  },
+  {
+    "id": "palette/blue-red-black",
+    "kind": "palette",
+    "name": "Blue, red, black",
+    "summary": "Three flat poster colours each own whole sections: electric blue, red-orange and black, with white for the areas that show the product. No tints sit between them, and blue is the button colour on white.",
+    "domains": [],
+    "sectors": [],
+    "tags": [
+      "flat-loud"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "taste-skill",
+      "repo": "https://github.com/Leonxlnx/taste-skill",
+      "commit": "12af471f627f866411b4bd785b19646d3672784c",
+      "path": "skills/taste-skill/library/palettes.json",
+      "license": "MIT",
+      "authors": [
+        "Leonxlnx"
+      ],
+      "url": "https://github.com/Leonxlnx/taste-skill",
+      "transformations": [
+        "computed WCAG contrast for core pairs"
+      ]
+    },
+    "sourceUrl": "https://github.com/Leonxlnx/taste-skill",
+    "bg": "#ffffff",
+    "surface": "#f3f3f3",
+    "ink": "#0a0a0a",
+    "muted": "#6b6b6b",
+    "accent": "#2436ff",
+    "accentInk": "#ffffff",
+    "fields": [
+      {
+        "bg": "#2436ff",
+        "ink": "#ffffff"
+      },
+      {
+        "bg": "#ff3b1f",
+        "ink": "#0a0a0a"
+      },
+      {
+        "bg": "#0a0a0a",
+        "ink": "#ffffff"
+      },
+      {
+        "bg": "#050a5c",
+        "ink": "#ffffff"
+      }
+    ],
+    "note": "Three flat poster colours each own whole sections: electric blue, red-orange and black, with white for the areas that show the product. No tints sit between them, and blue is the button colour on white.",
+    "seenIn": [
+      "opl-juggle"
+    ],
+    "contrast": {
+      "bg-ink": {
+        "foreground": "#ffffff",
+        "background": "#0a0a0a",
+        "ratio": 19.8,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      },
+      "bg-muted": {
+        "foreground": "#ffffff",
+        "background": "#6b6b6b",
+        "ratio": 5.33,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": false
+      },
+      "accent-accentInk": {
+        "foreground": "#2436ff",
+        "background": "#ffffff",
+        "ratio": 6.89,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": false
+      },
+      "surface-ink": {
+        "foreground": "#f3f3f3",
+        "background": "#0a0a0a",
+        "ratio": 17.84,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      },
+      "field-1": {
+        "foreground": "#2436ff",
+        "background": "#ffffff",
+        "ratio": 6.89,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": false
+      },
+      "field-2": {
+        "foreground": "#ff3b1f",
+        "background": "#0a0a0a",
+        "ratio": 5.56,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": false
+      },
+      "field-3": {
+        "foreground": "#0a0a0a",
+        "background": "#ffffff",
+        "ratio": 19.8,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      },
+      "field-4": {
+        "foreground": "#050a5c",
+        "background": "#ffffff",
+        "ratio": 17.44,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      }
+    }
+  },
+  {
+    "id": "palette/blush-aubergine",
+    "kind": "palette",
+    "name": "Blush and aubergine",
+    "summary": "Blush pink and dark aubergine alternate as full fields and serve as each other's text colour, in roughly equal shares. There is no third colour: the button is a solid block of whichever of the two is not the ground.",
+    "domains": [],
+    "sectors": [],
+    "tags": [
+      "two-tone"
+    ],
+    "moods": [
+      "dark"
+    ],
+    "quality": "verified",
+    "provenance": {
+      "source": "taste-skill",
+      "repo": "https://github.com/Leonxlnx/taste-skill",
+      "commit": "12af471f627f866411b4bd785b19646d3672784c",
+      "path": "skills/taste-skill/library/palettes.json",
+      "license": "MIT",
+      "authors": [
+        "Leonxlnx"
+      ],
+      "url": "https://github.com/Leonxlnx/taste-skill",
+      "transformations": [
+        "computed WCAG contrast for core pairs"
+      ]
+    },
+    "sourceUrl": "https://github.com/Leonxlnx/taste-skill",
+    "bg": "#edccbe",
+    "surface": "#e8c2b2",
+    "ink": "#351a2b",
+    "muted": "#6c4857",
+    "accent": "#351a2b",
+    "accentInk": "#edccbe",
+    "fields": [
+      {
+        "bg": "#351a2b",
+        "ink": "#edccbe"
+      }
+    ],
+    "note": "Blush pink and dark aubergine alternate as full fields and serve as each other's text colour, in roughly equal shares. There is no third colour: the button is a solid block of whichever of the two is not the ground.",
+    "seenIn": [
+      "aww-house-of-honey-1",
+      "opl-sarah-matt-wedding"
+    ],
+    "contrast": {
+      "bg-ink": {
+        "foreground": "#edccbe",
+        "background": "#351a2b",
+        "ratio": 10.48,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      },
+      "bg-muted": {
+        "foreground": "#edccbe",
+        "background": "#6c4857",
+        "ratio": 5.17,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": false
+      },
+      "accent-accentInk": {
+        "foreground": "#351a2b",
+        "background": "#edccbe",
+        "ratio": 10.48,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      },
+      "surface-ink": {
+        "foreground": "#e8c2b2",
+        "background": "#351a2b",
+        "ratio": 9.59,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      },
+      "field-1": {
+        "foreground": "#351a2b",
+        "background": "#edccbe",
+        "ratio": 10.48,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      }
+    }
+  },
+  {
+    "id": "palette/blush-sage-slate",
+    "kind": "palette",
+    "name": "Blush, sage, slate",
+    "summary": "Slate blue-grey, sage and blush share the page as soft flat blocks, one per chapter or menu tile, with dark type; one deep olive block anchors the close with pale type. Olive is also the button colour, and photographs of sea and sky do the rest.",
+    "domains": [],
+    "sectors": [],
+    "tags": [
+      "pastel-fields",
+      "earth"
+    ],
+    "moods": [
+      "dark"
+    ],
+    "quality": "verified",
+    "provenance": {
+      "source": "taste-skill",
+      "repo": "https://github.com/Leonxlnx/taste-skill",
+      "commit": "12af471f627f866411b4bd785b19646d3672784c",
+      "path": "skills/taste-skill/library/palettes.json",
+      "license": "MIT",
+      "authors": [
+        "Leonxlnx"
+      ],
+      "url": "https://github.com/Leonxlnx/taste-skill",
+      "transformations": [
+        "computed WCAG contrast for core pairs"
+      ]
+    },
+    "sourceUrl": "https://github.com/Leonxlnx/taste-skill",
+    "bg": "#a6b3bc",
+    "surface": "#b2bdc5",
+    "ink": "#1c1c1c",
+    "muted": "#38424a",
+    "accent": "#2c3620",
+    "accentInk": "#e3e2da",
+    "fields": [
+      {
+        "bg": "#a6b3bc",
+        "ink": "#1c1c1c"
+      },
+      {
+        "bg": "#b7c8be",
+        "ink": "#1c1c1c"
+      },
+      {
+        "bg": "#d6c4b8",
+        "ink": "#1c1c1c"
+      },
+      {
+        "bg": "#2c3620",
+        "ink": "#e3e2da"
+      }
+    ],
+    "note": "Slate blue-grey, sage and blush share the page as soft flat blocks, one per chapter or menu tile, with dark type; one deep olive block anchors the close with pale type. Olive is also the button colour, and photographs of sea and sky do the rest.",
+    "seenIn": [
+      "aww-seasats",
+      "opl-nia-creative"
+    ],
+    "contrast": {
+      "bg-ink": {
+        "foreground": "#a6b3bc",
+        "background": "#1c1c1c",
+        "ratio": 7.95,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      },
+      "bg-muted": {
+        "foreground": "#a6b3bc",
+        "background": "#38424a",
+        "ratio": 4.79,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": false
+      },
+      "accent-accentInk": {
+        "foreground": "#2c3620",
+        "background": "#e3e2da",
+        "ratio": 9.76,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      },
+      "surface-ink": {
+        "foreground": "#b2bdc5",
+        "background": "#1c1c1c",
+        "ratio": 8.91,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      },
+      "field-1": {
+        "foreground": "#a6b3bc",
+        "background": "#1c1c1c",
+        "ratio": 7.95,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      },
+      "field-2": {
+        "foreground": "#b7c8be",
+        "background": "#1c1c1c",
+        "ratio": 9.75,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      },
+      "field-3": {
+        "foreground": "#d6c4b8",
+        "background": "#1c1c1c",
+        "ratio": 10.1,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      },
+      "field-4": {
+        "foreground": "#2c3620",
+        "background": "#e3e2da",
+        "ratio": 9.76,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      }
+    }
+  },
+  {
+    "id": "palette/green-mat-chocolate",
+    "kind": "palette",
+    "name": "Bone, green, chocolate",
+    "summary": "Bone ground with chocolate-brown text takes most of the page. The green is spent on one large flat block, about a third of a screen, and on the button; all other colour comes from photographs.",
+    "domains": [],
+    "sectors": [],
+    "tags": [
+      "light-neutral",
+      "earth"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "taste-skill",
+      "repo": "https://github.com/Leonxlnx/taste-skill",
+      "commit": "12af471f627f866411b4bd785b19646d3672784c",
+      "path": "skills/taste-skill/library/palettes.json",
+      "license": "MIT",
+      "authors": [
+        "Leonxlnx"
+      ],
+      "url": "https://github.com/Leonxlnx/taste-skill",
+      "transformations": [
+        "computed WCAG contrast for core pairs"
+      ]
+    },
+    "sourceUrl": "https://github.com/Leonxlnx/taste-skill",
+    "bg": "#e5e1d8",
+    "surface": "#dad5ca",
+    "ink": "#2a1d17",
+    "muted": "#6b5b51",
+    "accent": "#456f3a",
+    "accentInk": "#ffffff",
+    "fields": [
+      {
+        "bg": "#456f3a",
+        "ink": "#ffffff"
+      }
+    ],
+    "note": "Bone ground with chocolate-brown text takes most of the page. The green is spent on one large flat block, about a third of a screen, and on the button; all other colour comes from photographs.",
+    "seenIn": [
+      "opl-davesocozy",
+      "opl-mat"
+    ],
+    "contrast": {
+      "bg-ink": {
+        "foreground": "#e5e1d8",
+        "background": "#2a1d17",
+        "ratio": 12.51,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      },
+      "bg-muted": {
+        "foreground": "#e5e1d8",
+        "background": "#6b5b51",
+        "ratio": 4.97,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": false
+      },
+      "accent-accentInk": {
+        "foreground": "#456f3a",
+        "background": "#ffffff",
+        "ratio": 5.85,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": false
+      },
+      "surface-ink": {
+        "foreground": "#dad5ca",
+        "background": "#2a1d17",
+        "ratio": 11.15,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      },
+      "field-1": {
+        "foreground": "#456f3a",
+        "background": "#ffffff",
+        "ratio": 5.85,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": false
+      }
+    }
+  },
+  {
+    "id": "palette/bottle-green-gold",
+    "kind": "palette",
+    "name": "Bottle green, gold",
+    "summary": "Bottle green covers the page and warm gold sets all the type, with panels one step lighter than the ground. The button is solid gold with green text, and photographs are kept dark and warm so the pair is not disturbed.",
+    "domains": [],
+    "sectors": [],
+    "tags": [
+      "two-tone",
+      "earth"
+    ],
+    "moods": [
+      "dark",
+      "warm"
+    ],
+    "quality": "verified",
+    "provenance": {
+      "source": "taste-skill",
+      "repo": "https://github.com/Leonxlnx/taste-skill",
+      "commit": "12af471f627f866411b4bd785b19646d3672784c",
+      "path": "skills/taste-skill/library/palettes.json",
+      "license": "MIT",
+      "authors": [
+        "Leonxlnx"
+      ],
+      "url": "https://github.com/Leonxlnx/taste-skill",
+      "transformations": [
+        "computed WCAG contrast for core pairs"
+      ]
+    },
+    "sourceUrl": "https://github.com/Leonxlnx/taste-skill",
+    "bg": "#133621",
+    "surface": "#1a4429",
+    "ink": "#f4d96c",
+    "muted": "#b3a55e",
+    "accent": "#f4d96c",
+    "accentInk": "#133621",
+    "fields": [],
+    "note": "Bottle green covers the page and warm gold sets all the type, with panels one step lighter than the ground. The button is solid gold with green text, and photographs are kept dark and warm so the pair is not disturbed.",
+    "seenIn": [
+      "aww-lacoste-ace-breaker"
+    ],
+    "contrast": {
+      "bg-ink": {
+        "foreground": "#133621",
+        "background": "#f4d96c",
+        "ratio": 9.5,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      },
+      "bg-muted": {
+        "foreground": "#133621",
+        "background": "#b3a55e",
+        "ratio": 5.36,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": false
+      },
+      "accent-accentInk": {
+        "foreground": "#f4d96c",
+        "background": "#133621",
+        "ratio": 9.5,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      },
+      "surface-ink": {
+        "foreground": "#1a4429",
+        "background": "#f4d96c",
+        "ratio": 7.88,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      }
+    }
+  },
+  {
+    "id": "palette/offwhite-bottle-yellow",
+    "kind": "palette",
+    "name": "Bottle ink, yellow",
+    "summary": "Off-white ground with all type in a near-black bottle green instead of black. Yellow is the only saturated note: the button or one small object on most screens, and one later section that turns fully yellow.",
+    "domains": [],
+    "sectors": [],
+    "tags": [
+      "mono-accent"
+    ],
+    "moods": [
+      "dark"
+    ],
+    "quality": "verified",
+    "provenance": {
+      "source": "taste-skill",
+      "repo": "https://github.com/Leonxlnx/taste-skill",
+      "commit": "12af471f627f866411b4bd785b19646d3672784c",
+      "path": "skills/taste-skill/library/palettes.json",
+      "license": "MIT",
+      "authors": [
+        "Leonxlnx"
+      ],
+      "url": "https://github.com/Leonxlnx/taste-skill",
+      "transformations": [
+        "computed WCAG contrast for core pairs"
+      ]
+    },
+    "sourceUrl": "https://github.com/Leonxlnx/taste-skill",
+    "bg": "#f7f7f7",
+    "surface": "#ebebeb",
+    "ink": "#0d2a1c",
+    "muted": "#5f6b64",
+    "accent": "#f6e016",
+    "accentInk": "#0d2a1c",
+    "fields": [
+      {
+        "bg": "#f6e016",
+        "ink": "#0d2a1c"
+      }
+    ],
+    "note": "Off-white ground with all type in a near-black bottle green instead of black. Yellow is the only saturated note: the button or one small object on most screens, and one later section that turns fully yellow.",
+    "seenIn": [
+      "aww-leo-parpeix-portfolio-2026",
+      "opl-wild-as"
+    ],
+    "contrast": {
+      "bg-ink": {
+        "foreground": "#f7f7f7",
+        "background": "#0d2a1c",
+        "ratio": 14.36,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      },
+      "bg-muted": {
+        "foreground": "#f7f7f7",
+        "background": "#5f6b64",
+        "ratio": 5.19,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": false
+      },
+      "accent-accentInk": {
+        "foreground": "#f6e016",
+        "background": "#0d2a1c",
+        "ratio": 11.42,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      },
+      "surface-ink": {
+        "foreground": "#ebebeb",
+        "background": "#0d2a1c",
+        "ratio": 12.9,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      },
+      "field-1": {
+        "foreground": "#f6e016",
+        "background": "#0d2a1c",
+        "ratio": 11.42,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      }
+    }
+  },
+  {
+    "id": "palette/pink-field-lime",
+    "kind": "palette",
+    "name": "Bubblegum and lime",
+    "summary": "A flat bubblegum pink field with black type from top to bottom. Fluorescent lime is the action colour only: the menu button, one highlighter swipe behind a word and the main button.",
+    "domains": [],
+    "sectors": [],
+    "tags": [
+      "single-field"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "taste-skill",
+      "repo": "https://github.com/Leonxlnx/taste-skill",
+      "commit": "12af471f627f866411b4bd785b19646d3672784c",
+      "path": "skills/taste-skill/library/palettes.json",
+      "license": "MIT",
+      "authors": [
+        "Leonxlnx"
+      ],
+      "url": "https://github.com/Leonxlnx/taste-skill",
+      "transformations": [
+        "computed WCAG contrast for core pairs"
+      ]
+    },
+    "sourceUrl": "https://github.com/Leonxlnx/taste-skill",
+    "bg": "#ff87ab",
+    "surface": "#ff739d",
+    "ink": "#0a0a0a",
+    "muted": "#6b1f3a",
+    "accent": "#def915",
+    "accentInk": "#0a0a0a",
+    "fields": [
+      {
+        "bg": "#0a0a0a",
+        "ink": "#ff87ab"
+      }
+    ],
+    "note": "A flat bubblegum pink field with black type from top to bottom. Fluorescent lime is the action colour only: the menu button, one highlighter swipe behind a word and the main button.",
+    "seenIn": [
+      "opl-nodeck",
+      "aww-decathlon-yestalgia"
+    ],
+    "contrast": {
+      "bg-ink": {
+        "foreground": "#ff87ab",
+        "background": "#0a0a0a",
+        "ratio": 8.77,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      },
+      "bg-muted": {
+        "foreground": "#ff87ab",
+        "background": "#6b1f3a",
+        "ratio": 4.94,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": false
+      },
+      "accent-accentInk": {
+        "foreground": "#def915",
+        "background": "#0a0a0a",
+        "ratio": 16.66,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      },
+      "surface-ink": {
+        "foreground": "#ff739d",
+        "background": "#0a0a0a",
+        "ratio": 7.72,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      },
+      "field-1": {
+        "foreground": "#0a0a0a",
+        "background": "#ff87ab",
+        "ratio": 8.77,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      }
+    }
+  },
+  {
+    "id": "palette/burgundy-bubblegum",
+    "kind": "palette",
+    "name": "Burgundy and bubblegum",
+    "summary": "Deep burgundy is the ground for the whole page and bubblegum pink sets every word on it. The button and the active state of a control are solid pink with burgundy type; product photographs supply any other colour.",
+    "domains": [],
+    "sectors": [],
+    "tags": [
+      "two-tone"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "taste-skill",
+      "repo": "https://github.com/Leonxlnx/taste-skill",
+      "commit": "12af471f627f866411b4bd785b19646d3672784c",
+      "path": "skills/taste-skill/library/palettes.json",
+      "license": "MIT",
+      "authors": [
+        "Leonxlnx"
+      ],
+      "url": "https://github.com/Leonxlnx/taste-skill",
+      "transformations": [
+        "computed WCAG contrast for core pairs"
+      ]
+    },
+    "sourceUrl": "https://github.com/Leonxlnx/taste-skill",
+    "bg": "#3d0012",
+    "surface": "#4d0519",
+    "ink": "#ff99d3",
+    "muted": "#c77aa0",
+    "accent": "#ff99d3",
+    "accentInk": "#3d0012",
+    "fields": [],
+    "note": "Deep burgundy is the ground for the whole page and bubblegum pink sets every word on it. The button and the active state of a control are solid pink with burgundy type; product photographs supply any other colour.",
+    "seenIn": [
+      "opl-madie"
+    ],
+    "contrast": {
+      "bg-ink": {
+        "foreground": "#3d0012",
+        "background": "#ff99d3",
+        "ratio": 8.9,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      },
+      "bg-muted": {
+        "foreground": "#3d0012",
+        "background": "#c77aa0",
+        "ratio": 5.57,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": false
+      },
+      "accent-accentInk": {
+        "foreground": "#ff99d3",
+        "background": "#3d0012",
+        "ratio": 8.9,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      },
+      "surface-ink": {
+        "foreground": "#4d0519",
+        "background": "#ff99d3",
+        "ratio": 7.95,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      }
+    }
+  },
+  {
+    "id": "palette/candy-chapters",
+    "kind": "palette",
+    "name": "Candy chapters",
+    "summary": "Each section owns one flat candy colour: yellow first, then white, pink, cyan and orange, with all type in black. Magenta is kept for buttons alone.",
+    "domains": [],
+    "sectors": [],
+    "tags": [
+      "flat-loud"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "taste-skill",
+      "repo": "https://github.com/Leonxlnx/taste-skill",
+      "commit": "12af471f627f866411b4bd785b19646d3672784c",
+      "path": "skills/taste-skill/library/palettes.json",
+      "license": "MIT",
+      "authors": [
+        "Leonxlnx"
+      ],
+      "url": "https://github.com/Leonxlnx/taste-skill",
+      "transformations": [
+        "computed WCAG contrast for core pairs"
+      ]
+    },
+    "sourceUrl": "https://github.com/Leonxlnx/taste-skill",
+    "bg": "#ffd249",
+    "surface": "#f5c63c",
+    "ink": "#0a0a0a",
+    "muted": "#5e4a0a",
+    "accent": "#f53fd6",
+    "accentInk": "#0a0a0a",
+    "fields": [
+      {
+        "bg": "#ffd249",
+        "ink": "#0a0a0a"
+      },
+      {
+        "bg": "#ffffff",
+        "ink": "#0a0a0a"
+      },
+      {
+        "bg": "#ffc4ef",
+        "ink": "#0a0a0a"
+      },
+      {
+        "bg": "#a4f6f8",
+        "ink": "#0a0a0a"
+      },
+      {
+        "bg": "#f9a21f",
+        "ink": "#0a0a0a"
+      }
+    ],
+    "note": "Each section owns one flat candy colour: yellow first, then white, pink, cyan and orange, with all type in black. Magenta is kept for buttons alone.",
+    "seenIn": [
+      "aww-aardvark-book-club"
+    ],
+    "contrast": {
+      "bg-ink": {
+        "foreground": "#ffd249",
+        "background": "#0a0a0a",
+        "ratio": 13.73,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      },
+      "bg-muted": {
+        "foreground": "#ffd249",
+        "background": "#5e4a0a",
+        "ratio": 5.92,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": false
+      },
+      "accent-accentInk": {
+        "foreground": "#f53fd6",
+        "background": "#0a0a0a",
+        "ratio": 6.19,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": false
+      },
+      "surface-ink": {
+        "foreground": "#f5c63c",
+        "background": "#0a0a0a",
+        "ratio": 12.28,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      },
+      "field-1": {
+        "foreground": "#ffd249",
+        "background": "#0a0a0a",
+        "ratio": 13.73,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      },
+      "field-2": {
+        "foreground": "#ffffff",
+        "background": "#0a0a0a",
+        "ratio": 19.8,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      },
+      "field-3": {
+        "foreground": "#ffc4ef",
+        "background": "#0a0a0a",
+        "ratio": 13.57,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      },
+      "field-4": {
+        "foreground": "#a4f6f8",
+        "background": "#0a0a0a",
+        "ratio": 16.14,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      },
+      "field-5": {
+        "foreground": "#f9a21f",
+        "background": "#0a0a0a",
+        "ratio": 9.63,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      }
+    }
+  },
+  {
+    "id": "palette/candy-on-black",
+    "kind": "palette",
+    "name": "Candy on black",
+    "summary": "Black ground and dark photographs take nearly all of the surface. The only flat colour is a solid block behind each title, which takes a new candy pastel per project (mint, cyan, lemon, orange, cornflower); cyan is the default for the button.",
+    "domains": [],
+    "sectors": [],
+    "tags": [
+      "pastel-fields"
+    ],
+    "moods": [
+      "dark"
+    ],
+    "quality": "verified",
+    "provenance": {
+      "source": "taste-skill",
+      "repo": "https://github.com/Leonxlnx/taste-skill",
+      "commit": "12af471f627f866411b4bd785b19646d3672784c",
+      "path": "skills/taste-skill/library/palettes.json",
+      "license": "MIT",
+      "authors": [
+        "Leonxlnx"
+      ],
+      "url": "https://github.com/Leonxlnx/taste-skill",
+      "transformations": [
+        "computed WCAG contrast for core pairs"
+      ]
+    },
+    "sourceUrl": "https://github.com/Leonxlnx/taste-skill",
+    "bg": "#000000",
+    "surface": "#0d0d0d",
+    "ink": "#ffffff",
+    "muted": "#999999",
+    "accent": "#93f1f7",
+    "accentInk": "#000000",
+    "fields": [
+      {
+        "bg": "#9ae187",
+        "ink": "#000000"
+      },
+      {
+        "bg": "#93f1f7",
+        "ink": "#000000"
+      },
+      {
+        "bg": "#f3ea7a",
+        "ink": "#000000"
+      },
+      {
+        "bg": "#fbb65c",
+        "ink": "#000000"
+      },
+      {
+        "bg": "#b9c8ff",
+        "ink": "#000000"
+      }
+    ],
+    "note": "Black ground and dark photographs take nearly all of the surface. The only flat colour is a solid block behind each title, which takes a new candy pastel per project (mint, cyan, lemon, orange, cornflower); cyan is the default for the button.",
+    "seenIn": [
+      "aww-glitch-grit"
+    ],
+    "contrast": {
+      "bg-ink": {
+        "foreground": "#000000",
+        "background": "#ffffff",
+        "ratio": 21,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      },
+      "bg-muted": {
+        "foreground": "#000000",
+        "background": "#999999",
+        "ratio": 7.37,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      },
+      "accent-accentInk": {
+        "foreground": "#93f1f7",
+        "background": "#000000",
+        "ratio": 16.17,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      },
+      "surface-ink": {
+        "foreground": "#0d0d0d",
+        "background": "#ffffff",
+        "ratio": 19.44,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      },
+      "field-1": {
+        "foreground": "#9ae187",
+        "background": "#000000",
+        "ratio": 13.49,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      },
+      "field-2": {
+        "foreground": "#93f1f7",
+        "background": "#000000",
+        "ratio": 16.17,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      },
+      "field-3": {
+        "foreground": "#f3ea7a",
+        "background": "#000000",
+        "ratio": 16.86,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      },
+      "field-4": {
+        "foreground": "#fbb65c",
+        "background": "#000000",
+        "ratio": 11.95,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      },
+      "field-5": {
+        "foreground": "#b9c8ff",
+        "background": "#000000",
+        "ratio": 12.77,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      }
+    }
+  },
+  {
+    "id": "palette/card-pastels",
+    "kind": "palette",
+    "name": "Card pastels",
+    "summary": "Neutral paper ground and black type, with each card or tile given its own flat pastel (periwinkle, lime, amber or cyan), never two alike side by side. Magenta is reserved for the logo, the email address and text links.",
+    "domains": [],
+    "sectors": [],
+    "tags": [
+      "pastel-fields"
+    ],
+    "moods": [
+      "warm"
+    ],
+    "quality": "verified",
+    "provenance": {
+      "source": "taste-skill",
+      "repo": "https://github.com/Leonxlnx/taste-skill",
+      "commit": "12af471f627f866411b4bd785b19646d3672784c",
+      "path": "skills/taste-skill/library/palettes.json",
+      "license": "MIT",
+      "authors": [
+        "Leonxlnx"
+      ],
+      "url": "https://github.com/Leonxlnx/taste-skill",
+      "transformations": [
+        "computed WCAG contrast for core pairs"
+      ]
+    },
+    "sourceUrl": "https://github.com/Leonxlnx/taste-skill",
+    "bg": "#f7f7f5",
+    "surface": "#ebebe8",
+    "ink": "#000000",
+    "muted": "#666662",
+    "accent": "#d0106f",
+    "accentInk": "#ffffff",
+    "fields": [
+      {
+        "bg": "#97aaf6",
+        "ink": "#000000"
+      },
+      {
+        "bg": "#bbf697",
+        "ink": "#000000"
+      },
+      {
+        "bg": "#fed878",
+        "ink": "#000000"
+      },
+      {
+        "bg": "#6ef8fb",
+        "ink": "#000000"
+      }
+    ],
+    "note": "Neutral paper ground and black type, with each card or tile given its own flat pastel (periwinkle, lime, amber or cyan), never two alike side by side. Magenta is reserved for the logo, the email address and text links.",
+    "seenIn": [
+      "opl-medium-rare"
+    ],
+    "contrast": {
+      "bg-ink": {
+        "foreground": "#f7f7f5",
+        "background": "#000000",
+        "ratio": 19.58,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      },
+      "bg-muted": {
+        "foreground": "#f7f7f5",
+        "background": "#666662",
+        "ratio": 5.38,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": false
+      },
+      "accent-accentInk": {
+        "foreground": "#d0106f",
+        "background": "#ffffff",
+        "ratio": 5.27,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": false
+      },
+      "surface-ink": {
+        "foreground": "#ebebe8",
+        "background": "#000000",
+        "ratio": 17.58,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      },
+      "field-1": {
+        "foreground": "#97aaf6",
+        "background": "#000000",
+        "ratio": 9.4,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      },
+      "field-2": {
+        "foreground": "#bbf697",
+        "background": "#000000",
+        "ratio": 16.74,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      },
+      "field-3": {
+        "foreground": "#fed878",
+        "background": "#000000",
+        "ratio": 15.31,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      },
+      "field-4": {
+        "foreground": "#6ef8fb",
+        "background": "#000000",
+        "ratio": 16.48,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      }
+    }
+  },
+  {
+    "id": "palette/carmine-field",
+    "kind": "palette",
+    "name": "Carmine field",
+    "summary": "A deep red field bookends or fills the page, with white type and pale pink secondary lines; work shown in between sits on flat charcoal so it keeps its own colours. The button is a pale pink block with red type.",
+    "domains": [],
+    "sectors": [],
+    "tags": [
+      "single-field"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "taste-skill",
+      "repo": "https://github.com/Leonxlnx/taste-skill",
+      "commit": "12af471f627f866411b4bd785b19646d3672784c",
+      "path": "skills/taste-skill/library/palettes.json",
+      "license": "MIT",
+      "authors": [
+        "Leonxlnx"
+      ],
+      "url": "https://github.com/Leonxlnx/taste-skill",
+      "transformations": [
+        "computed WCAG contrast for core pairs"
+      ]
+    },
+    "sourceUrl": "https://github.com/Leonxlnx/taste-skill",
+    "bg": "#9c1220",
+    "surface": "#8a101c",
+    "ink": "#ffffff",
+    "muted": "#f0b9bd",
+    "accent": "#ffd9dc",
+    "accentInk": "#9c1220",
+    "fields": [
+      {
+        "bg": "#2a2a2a",
+        "ink": "#ffffff"
+      }
+    ],
+    "note": "A deep red field bookends or fills the page, with white type and pale pink secondary lines; work shown in between sits on flat charcoal so it keeps its own colours. The button is a pale pink block with red type.",
+    "seenIn": [
+      "opl-marina-rachello",
+      "opl-belgrade-architecture"
+    ],
+    "contrast": {
+      "bg-ink": {
+        "foreground": "#9c1220",
+        "background": "#ffffff",
+        "ratio": 8.33,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      },
+      "bg-muted": {
+        "foreground": "#9c1220",
+        "background": "#f0b9bd",
+        "ratio": 4.91,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": false
+      },
+      "accent-accentInk": {
+        "foreground": "#ffd9dc",
+        "background": "#9c1220",
+        "ratio": 6.43,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": false
+      },
+      "surface-ink": {
+        "foreground": "#8a101c",
+        "background": "#ffffff",
+        "ratio": 9.67,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      },
+      "field-1": {
+        "foreground": "#2a2a2a",
+        "background": "#ffffff",
+        "ratio": 14.35,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      }
+    }
+  },
+  {
+    "id": "palette/charcoal-primaries",
+    "kind": "palette",
+    "name": "Charcoal and primaries",
+    "summary": "A charcoal ground holds flat poster primaries assigned to whole panels: red, blue, teal green and yellow, each placed against a different one. Type is white, or black on yellow; teal green is the button colour on charcoal.",
+    "domains": [],
+    "sectors": [],
+    "tags": [
+      "flat-loud"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "taste-skill",
+      "repo": "https://github.com/Leonxlnx/taste-skill",
+      "commit": "12af471f627f866411b4bd785b19646d3672784c",
+      "path": "skills/taste-skill/library/palettes.json",
+      "license": "MIT",
+      "authors": [
+        "Leonxlnx"
+      ],
+      "url": "https://github.com/Leonxlnx/taste-skill",
+      "transformations": [
+        "computed WCAG contrast for core pairs"
+      ]
+    },
+    "sourceUrl": "https://github.com/Leonxlnx/taste-skill",
+    "bg": "#191919",
+    "surface": "#242424",
+    "ink": "#ffffff",
+    "muted": "#9a9a9a",
+    "accent": "#0c7866",
+    "accentInk": "#ffffff",
+    "fields": [
+      {
+        "bg": "#d71e1e",
+        "ink": "#ffffff"
+      },
+      {
+        "bg": "#1e4bd7",
+        "ink": "#ffffff"
+      },
+      {
+        "bg": "#0c7866",
+        "ink": "#ffffff"
+      },
+      {
+        "bg": "#ffe927",
+        "ink": "#111111"
+      }
+    ],
+    "note": "A charcoal ground holds flat poster primaries assigned to whole panels: red, blue, teal green and yellow, each placed against a different one. Type is white, or black on yellow; teal green is the button colour on charcoal.",
+    "seenIn": [
+      "aww-mosbys-files"
+    ],
+    "contrast": {
+      "bg-ink": {
+        "foreground": "#191919",
+        "background": "#ffffff",
+        "ratio": 17.58,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      },
+      "bg-muted": {
+        "foreground": "#191919",
+        "background": "#9a9a9a",
+        "ratio": 6.25,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": false
+      },
+      "accent-accentInk": {
+        "foreground": "#0c7866",
+        "background": "#ffffff",
+        "ratio": 5.39,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": false
+      },
+      "surface-ink": {
+        "foreground": "#242424",
+        "background": "#ffffff",
+        "ratio": 15.52,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      },
+      "field-1": {
+        "foreground": "#d71e1e",
+        "background": "#ffffff",
+        "ratio": 5.13,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": false
+      },
+      "field-2": {
+        "foreground": "#1e4bd7",
+        "background": "#ffffff",
+        "ratio": 6.9,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": false
+      },
+      "field-3": {
+        "foreground": "#0c7866",
+        "background": "#ffffff",
+        "ratio": 5.39,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": false
+      },
+      "field-4": {
+        "foreground": "#ffe927",
+        "background": "#111111",
+        "ratio": 15.23,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      }
+    }
+  },
+  {
+    "id": "palette/charcoal-room-sage",
+    "kind": "palette",
+    "name": "Charcoal and sage",
+    "summary": "Charcoal holds the page with off-white text, and one section may flip to a pale concrete tone with dark text. Colour comes from the photographs; grey sage is used for the single button and the active state of a control.",
+    "domains": [],
+    "sectors": [],
+    "tags": [
+      "dark-neutral",
+      "photographic-neutral"
+    ],
+    "moods": [
+      "dark"
+    ],
+    "quality": "verified",
+    "provenance": {
+      "source": "taste-skill",
+      "repo": "https://github.com/Leonxlnx/taste-skill",
+      "commit": "12af471f627f866411b4bd785b19646d3672784c",
+      "path": "skills/taste-skill/library/palettes.json",
+      "license": "MIT",
+      "authors": [
+        "Leonxlnx"
+      ],
+      "url": "https://github.com/Leonxlnx/taste-skill",
+      "transformations": [
+        "computed WCAG contrast for core pairs"
+      ]
+    },
+    "sourceUrl": "https://github.com/Leonxlnx/taste-skill",
+    "bg": "#1c1c1c",
+    "surface": "#262626",
+    "ink": "#f1f1ef",
+    "muted": "#9a9b96",
+    "accent": "#8fa68e",
+    "accentInk": "#1c1c1c",
+    "fields": [
+      {
+        "bg": "#c8c5ba",
+        "ink": "#1c1c1c"
+      }
+    ],
+    "note": "Charcoal holds the page with off-white text, and one section may flip to a pale concrete tone with dark text. Colour comes from the photographs; grey sage is used for the single button and the active state of a control.",
+    "seenIn": [
+      "opl-transport",
+      "opl-amanda-guo-design"
+    ],
+    "contrast": {
+      "bg-ink": {
+        "foreground": "#1c1c1c",
+        "background": "#f1f1ef",
+        "ratio": 15.07,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      },
+      "bg-muted": {
+        "foreground": "#1c1c1c",
+        "background": "#9a9b96",
+        "ratio": 6.09,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": false
+      },
+      "accent-accentInk": {
+        "foreground": "#8fa68e",
+        "background": "#1c1c1c",
+        "ratio": 6.5,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": false
+      },
+      "surface-ink": {
+        "foreground": "#262626",
+        "background": "#f1f1ef",
+        "ratio": 13.38,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      },
+      "field-1": {
+        "foreground": "#c8c5ba",
+        "background": "#1c1c1c",
+        "ratio": 9.86,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      }
+    }
+  },
+  {
+    "id": "palette/cobalt-field",
+    "kind": "palette",
+    "name": "Cobalt field",
+    "summary": "One electric cobalt fills everything, with white and pale-blue type; photographs are tinted into blue monotone or kept as small thumbnails. A single yellow dot or button is the only other colour on the page.",
+    "domains": [],
+    "sectors": [],
+    "tags": [
+      "single-field"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "taste-skill",
+      "repo": "https://github.com/Leonxlnx/taste-skill",
+      "commit": "12af471f627f866411b4bd785b19646d3672784c",
+      "path": "skills/taste-skill/library/palettes.json",
+      "license": "MIT",
+      "authors": [
+        "Leonxlnx"
+      ],
+      "url": "https://github.com/Leonxlnx/taste-skill",
+      "transformations": [
+        "computed WCAG contrast for core pairs"
+      ]
+    },
+    "sourceUrl": "https://github.com/Leonxlnx/taste-skill",
+    "bg": "#0034eb",
+    "surface": "#002fd6",
+    "ink": "#ffffff",
+    "muted": "#c5d0ff",
+    "accent": "#e9e34a",
+    "accentInk": "#111111",
+    "fields": [],
+    "note": "One electric cobalt fills everything, with white and pale-blue type; photographs are tinted into blue monotone or kept as small thumbnails. A single yellow dot or button is the only other colour on the page.",
+    "seenIn": [
+      "opl-george-wood",
+      "aww-studio-k95-3"
+    ],
+    "contrast": {
+      "bg-ink": {
+        "foreground": "#0034eb",
+        "background": "#ffffff",
+        "ratio": 7.8,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      },
+      "bg-muted": {
+        "foreground": "#0034eb",
+        "background": "#c5d0ff",
+        "ratio": 5.14,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": false
+      },
+      "accent-accentInk": {
+        "foreground": "#e9e34a",
+        "background": "#111111",
+        "ratio": 13.98,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      },
+      "surface-ink": {
+        "foreground": "#002fd6",
+        "background": "#ffffff",
+        "ratio": 8.83,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      }
+    }
+  },
+  {
+    "id": "palette/cobalt-on-sand",
+    "kind": "palette",
+    "name": "Cobalt on sand",
+    "summary": "Sand paper and one cobalt do everything: text, drawings and solid shapes are all the same blue. The button is a cobalt block with sand-coloured type, and no black or second hue is used.",
+    "domains": [],
+    "sectors": [],
+    "tags": [
+      "two-tone"
+    ],
+    "moods": [
+      "warm"
+    ],
+    "quality": "verified",
+    "provenance": {
+      "source": "taste-skill",
+      "repo": "https://github.com/Leonxlnx/taste-skill",
+      "commit": "12af471f627f866411b4bd785b19646d3672784c",
+      "path": "skills/taste-skill/library/palettes.json",
+      "license": "MIT",
+      "authors": [
+        "Leonxlnx"
+      ],
+      "url": "https://github.com/Leonxlnx/taste-skill",
+      "transformations": [
+        "computed WCAG contrast for core pairs"
+      ]
+    },
+    "sourceUrl": "https://github.com/Leonxlnx/taste-skill",
+    "bg": "#e6dbc7",
+    "surface": "#ddd0b9",
+    "ink": "#062b8a",
+    "muted": "#3a5aa8",
+    "accent": "#062b8a",
+    "accentInk": "#e6dbc7",
+    "fields": [],
+    "note": "Sand paper and one cobalt do everything: text, drawings and solid shapes are all the same blue. The button is a cobalt block with sand-coloured type, and no black or second hue is used.",
+    "seenIn": [
+      "aww-illoca"
+    ],
+    "contrast": {
+      "bg-ink": {
+        "foreground": "#e6dbc7",
+        "background": "#062b8a",
+        "ratio": 8.91,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      },
+      "bg-muted": {
+        "foreground": "#e6dbc7",
+        "background": "#3a5aa8",
+        "ratio": 4.78,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": false
+      },
+      "accent-accentInk": {
+        "foreground": "#062b8a",
+        "background": "#e6dbc7",
+        "ratio": 8.91,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      },
+      "surface-ink": {
+        "foreground": "#ddd0b9",
+        "background": "#062b8a",
+        "ratio": 8.02,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      }
+    }
+  },
+  {
+    "id": "palette/cool-grey-cobalt",
+    "kind": "palette",
+    "name": "Cool grey, cobalt",
+    "summary": "Cool pale grey holds the page with near-black type and nothing else tinted. Cobalt starts as the button and one highlighted sentence, takes one whole section as a flat field with white text, then returns as a single button block.",
+    "domains": [],
+    "sectors": [],
+    "tags": [
+      "mono-accent"
+    ],
+    "moods": [
+      "dark"
+    ],
+    "quality": "verified",
+    "provenance": {
+      "source": "taste-skill",
+      "repo": "https://github.com/Leonxlnx/taste-skill",
+      "commit": "12af471f627f866411b4bd785b19646d3672784c",
+      "path": "skills/taste-skill/library/palettes.json",
+      "license": "MIT",
+      "authors": [
+        "Leonxlnx"
+      ],
+      "url": "https://github.com/Leonxlnx/taste-skill",
+      "transformations": [
+        "computed WCAG contrast for core pairs"
+      ]
+    },
+    "sourceUrl": "https://github.com/Leonxlnx/taste-skill",
+    "bg": "#eef0f3",
+    "surface": "#e2e5ea",
+    "ink": "#0b0c0e",
+    "muted": "#5d6470",
+    "accent": "#1f2de6",
+    "accentInk": "#ffffff",
+    "fields": [
+      {
+        "bg": "#1f2de6",
+        "ink": "#ffffff"
+      }
+    ],
+    "note": "Cool pale grey holds the page with near-black type and nothing else tinted. Cobalt starts as the button and one highlighted sentence, takes one whole section as a flat field with white text, then returns as a single button block.",
+    "seenIn": [
+      "opl-vessa",
+      "opl-specia1ne",
+      "opl-brikkenco"
+    ],
+    "contrast": {
+      "bg-ink": {
+        "foreground": "#eef0f3",
+        "background": "#0b0c0e",
+        "ratio": 17.14,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      },
+      "bg-muted": {
+        "foreground": "#eef0f3",
+        "background": "#5d6470",
+        "ratio": 5.22,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": false
+      },
+      "accent-accentInk": {
+        "foreground": "#1f2de6",
+        "background": "#ffffff",
+        "ratio": 8.15,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      },
+      "surface-ink": {
+        "foreground": "#e2e5ea",
+        "background": "#0b0c0e",
+        "ratio": 15.5,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      },
+      "field-1": {
+        "foreground": "#1f2de6",
+        "background": "#ffffff",
+        "ratio": 8.15,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      }
+    }
+  },
+  {
+    "id": "palette/forest-pale-lime",
+    "kind": "palette",
+    "name": "Forest and lime",
+    "summary": "Forest green, black and white sections alternate, with forest green holding the most; photographs stay in moss greens and stone browns. Pale lime sits on small squares only, such as arrow buttons and the closing wordmark.",
+    "domains": [],
+    "sectors": [],
+    "tags": [
+      "dark-neutral",
+      "earth"
+    ],
+    "moods": [
+      "dark"
+    ],
+    "quality": "verified",
+    "provenance": {
+      "source": "taste-skill",
+      "repo": "https://github.com/Leonxlnx/taste-skill",
+      "commit": "12af471f627f866411b4bd785b19646d3672784c",
+      "path": "skills/taste-skill/library/palettes.json",
+      "license": "MIT",
+      "authors": [
+        "Leonxlnx"
+      ],
+      "url": "https://github.com/Leonxlnx/taste-skill",
+      "transformations": [
+        "computed WCAG contrast for core pairs"
+      ]
+    },
+    "sourceUrl": "https://github.com/Leonxlnx/taste-skill",
+    "bg": "#0f1f10",
+    "surface": "#162a17",
+    "ink": "#ffffff",
+    "muted": "#9aa39a",
+    "accent": "#c6f19d",
+    "accentInk": "#0f1f10",
+    "fields": [
+      {
+        "bg": "#000000",
+        "ink": "#ffffff"
+      },
+      {
+        "bg": "#ffffff",
+        "ink": "#0f1f10"
+      }
+    ],
+    "note": "Forest green, black and white sections alternate, with forest green holding the most; photographs stay in moss greens and stone browns. Pale lime sits on small squares only, such as arrow buttons and the closing wordmark.",
+    "seenIn": [
+      "aww-alethia"
+    ],
+    "contrast": {
+      "bg-ink": {
+        "foreground": "#0f1f10",
+        "background": "#ffffff",
+        "ratio": 17.16,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      },
+      "bg-muted": {
+        "foreground": "#0f1f10",
+        "background": "#9aa39a",
+        "ratio": 6.6,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": false
+      },
+      "accent-accentInk": {
+        "foreground": "#c6f19d",
+        "background": "#0f1f10",
+        "ratio": 13.46,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      },
+      "surface-ink": {
+        "foreground": "#162a17",
+        "background": "#ffffff",
+        "ratio": 15.24,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      },
+      "field-1": {
+        "foreground": "#000000",
+        "background": "#ffffff",
+        "ratio": 21,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      },
+      "field-2": {
+        "foreground": "#ffffff",
+        "background": "#0f1f10",
+        "ratio": 17.16,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      }
+    }
+  },
+  {
+    "id": "palette/cool-white-slate",
+    "kind": "palette",
+    "name": "Frost and slate",
+    "summary": "Cool white and one paler blue-grey step hold everything, with type in dark slate instead of black. Teal appears once per screen at most, as the primary button or one small detail beside the product photograph.",
+    "domains": [],
+    "sectors": [],
+    "tags": [
+      "light-neutral"
+    ],
+    "moods": [
+      "dark"
+    ],
+    "quality": "verified",
+    "provenance": {
+      "source": "taste-skill",
+      "repo": "https://github.com/Leonxlnx/taste-skill",
+      "commit": "12af471f627f866411b4bd785b19646d3672784c",
+      "path": "skills/taste-skill/library/palettes.json",
+      "license": "MIT",
+      "authors": [
+        "Leonxlnx"
+      ],
+      "url": "https://github.com/Leonxlnx/taste-skill",
+      "transformations": [
+        "computed WCAG contrast for core pairs"
+      ]
+    },
+    "sourceUrl": "https://github.com/Leonxlnx/taste-skill",
+    "bg": "#f7f9fa",
+    "surface": "#ecf0f2",
+    "ink": "#1f3038",
+    "muted": "#5d6b72",
+    "accent": "#0d7480",
+    "accentInk": "#ffffff",
+    "fields": [],
+    "note": "Cool white and one paler blue-grey step hold everything, with type in dark slate instead of black. Teal appears once per screen at most, as the primary button or one small detail beside the product photograph.",
+    "seenIn": [
+      "opl-aevion",
+      "aww-cominvi"
+    ],
+    "contrast": {
+      "bg-ink": {
+        "foreground": "#f7f9fa",
+        "background": "#1f3038",
+        "ratio": 12.93,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      },
+      "bg-muted": {
+        "foreground": "#f7f9fa",
+        "background": "#5d6b72",
+        "ratio": 5.22,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": false
+      },
+      "accent-accentInk": {
+        "foreground": "#0d7480",
+        "background": "#ffffff",
+        "ratio": 5.49,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": false
+      },
+      "surface-ink": {
+        "foreground": "#ecf0f2",
+        "background": "#1f3038",
+        "ratio": 11.91,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      }
+    }
+  },
+  {
+    "id": "palette/graphite-safety-orange",
+    "kind": "palette",
+    "name": "Graphite and orange",
+    "summary": "Graphite and cool light-grey sections alternate, graphite taking about two thirds, and photographs are desaturated so nothing competes. Safety orange marks the buttons, one thick solid bar across the top of the page and the highlighted item in a list or chart.",
+    "domains": [],
+    "sectors": [],
+    "tags": [
+      "mono-accent",
+      "dark-neutral"
+    ],
+    "moods": [
+      "dark"
+    ],
+    "quality": "verified",
+    "provenance": {
+      "source": "taste-skill",
+      "repo": "https://github.com/Leonxlnx/taste-skill",
+      "commit": "12af471f627f866411b4bd785b19646d3672784c",
+      "path": "skills/taste-skill/library/palettes.json",
+      "license": "MIT",
+      "authors": [
+        "Leonxlnx"
+      ],
+      "url": "https://github.com/Leonxlnx/taste-skill",
+      "transformations": [
+        "computed WCAG contrast for core pairs"
+      ]
+    },
+    "sourceUrl": "https://github.com/Leonxlnx/taste-skill",
+    "bg": "#18191b",
+    "surface": "#222427",
+    "ink": "#eff0f1",
+    "muted": "#9c9ea3",
+    "accent": "#ff4a1f",
+    "accentInk": "#18191b",
+    "fields": [
+      {
+        "bg": "#eff0f1",
+        "ink": "#18191b"
+      }
+    ],
+    "note": "Graphite and cool light-grey sections alternate, graphite taking about two thirds, and photographs are desaturated so nothing competes. Safety orange marks the buttons, one thick solid bar across the top of the page and the highlighted item in a list or chart.",
+    "seenIn": [
+      "aww-sstr-friction-reduction",
+      "aww-boc-studio",
+      "aww-dragonfly-redux"
+    ],
+    "contrast": {
+      "bg-ink": {
+        "foreground": "#18191b",
+        "background": "#eff0f1",
+        "ratio": 15.42,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      },
+      "bg-muted": {
+        "foreground": "#18191b",
+        "background": "#9c9ea3",
+        "ratio": 6.56,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": false
+      },
+      "accent-accentInk": {
+        "foreground": "#ff4a1f",
+        "background": "#18191b",
+        "ratio": 5.24,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": false
+      },
+      "surface-ink": {
+        "foreground": "#222427",
+        "background": "#eff0f1",
+        "ratio": 13.64,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      },
+      "field-1": {
+        "foreground": "#eff0f1",
+        "background": "#18191b",
+        "ratio": 15.42,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      }
+    }
+  },
+  {
+    "id": "palette/green-black-bone",
+    "kind": "palette",
+    "name": "Green-black and bone",
+    "summary": "Bone type on green-black from top to bottom, with panels and drawn details barely lighter than the ground so photographs supply the colour. Pale jade is for the booking or contact button alone.",
+    "domains": [],
+    "sectors": [],
+    "tags": [
+      "dark-neutral",
+      "earth"
+    ],
+    "moods": [
+      "dark"
+    ],
+    "quality": "verified",
+    "provenance": {
+      "source": "taste-skill",
+      "repo": "https://github.com/Leonxlnx/taste-skill",
+      "commit": "12af471f627f866411b4bd785b19646d3672784c",
+      "path": "skills/taste-skill/library/palettes.json",
+      "license": "MIT",
+      "authors": [
+        "Leonxlnx"
+      ],
+      "url": "https://github.com/Leonxlnx/taste-skill",
+      "transformations": [
+        "computed WCAG contrast for core pairs"
+      ]
+    },
+    "sourceUrl": "https://github.com/Leonxlnx/taste-skill",
+    "bg": "#161c1a",
+    "surface": "#1f2725",
+    "ink": "#e3e2da",
+    "muted": "#8e948d",
+    "accent": "#9fc7b8",
+    "accentInk": "#161c1a",
+    "fields": [],
+    "note": "Bone type on green-black from top to bottom, with panels and drawn details barely lighter than the ground so photographs supply the colour. Pale jade is for the booking or contact button alone.",
+    "seenIn": [
+      "opl-kereliott",
+      "aww-lama-lama-2"
+    ],
+    "contrast": {
+      "bg-ink": {
+        "foreground": "#161c1a",
+        "background": "#e3e2da",
+        "ratio": 13.3,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      },
+      "bg-muted": {
+        "foreground": "#161c1a",
+        "background": "#8e948d",
+        "ratio": 5.57,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": false
+      },
+      "accent-accentInk": {
+        "foreground": "#9fc7b8",
+        "background": "#161c1a",
+        "ratio": 9.33,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      },
+      "surface-ink": {
+        "foreground": "#1f2725",
+        "background": "#e3e2da",
+        "ratio": 11.75,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      }
+    }
+  },
+  {
+    "id": "palette/mint-orange-grey",
+    "kind": "palette",
+    "name": "Grey, mint, orange",
+    "summary": "Black on white to start, then whole sections flood with flat mid-grey, acid mint and orange in turn. Photographs inside a flooded section are shown in black-and-white, and mint is also the button colour on white and black.",
+    "domains": [],
+    "sectors": [],
+    "tags": [
+      "flat-loud"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "taste-skill",
+      "repo": "https://github.com/Leonxlnx/taste-skill",
+      "commit": "12af471f627f866411b4bd785b19646d3672784c",
+      "path": "skills/taste-skill/library/palettes.json",
+      "license": "MIT",
+      "authors": [
+        "Leonxlnx"
+      ],
+      "url": "https://github.com/Leonxlnx/taste-skill",
+      "transformations": [
+        "computed WCAG contrast for core pairs"
+      ]
+    },
+    "sourceUrl": "https://github.com/Leonxlnx/taste-skill",
+    "bg": "#ffffff",
+    "surface": "#f5f5f5",
+    "ink": "#000000",
+    "muted": "#666666",
+    "accent": "#a7ff9c",
+    "accentInk": "#000000",
+    "fields": [
+      {
+        "bg": "#c5c5c5",
+        "ink": "#000000"
+      },
+      {
+        "bg": "#a7ff9c",
+        "ink": "#000000"
+      },
+      {
+        "bg": "#ff6831",
+        "ink": "#000000"
+      },
+      {
+        "bg": "#000000",
+        "ink": "#ffffff"
+      }
+    ],
+    "note": "Black on white to start, then whole sections flood with flat mid-grey, acid mint and orange in turn. Photographs inside a flooded section are shown in black-and-white, and mint is also the button colour on white and black.",
+    "seenIn": [
+      "aww-paul-kalkbrenner"
+    ],
+    "contrast": {
+      "bg-ink": {
+        "foreground": "#ffffff",
+        "background": "#000000",
+        "ratio": 21,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      },
+      "bg-muted": {
+        "foreground": "#ffffff",
+        "background": "#666666",
+        "ratio": 5.74,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": false
+      },
+      "accent-accentInk": {
+        "foreground": "#a7ff9c",
+        "background": "#000000",
+        "ratio": 17.43,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      },
+      "surface-ink": {
+        "foreground": "#f5f5f5",
+        "background": "#000000",
+        "ratio": 19.26,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      },
+      "field-1": {
+        "foreground": "#c5c5c5",
+        "background": "#000000",
+        "ratio": 12.17,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      },
+      "field-2": {
+        "foreground": "#a7ff9c",
+        "background": "#000000",
+        "ratio": 17.43,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      },
+      "field-3": {
+        "foreground": "#ff6831",
+        "background": "#000000",
+        "ratio": 7.28,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      },
+      "field-4": {
+        "foreground": "#000000",
+        "background": "#ffffff",
+        "ratio": 21,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      }
+    }
+  },
+  {
+    "id": "palette/white-mint-tiles",
+    "kind": "palette",
+    "name": "Greys and mint",
+    "summary": "White, near-black and two greys fill a board of flat tiles. Mint floods a few whole tiles (one statement, one figure, the closing call to action) and appears nowhere else.",
+    "domains": [],
+    "sectors": [],
+    "tags": [
+      "mono-accent"
+    ],
+    "moods": [
+      "dark"
+    ],
+    "quality": "verified",
+    "provenance": {
+      "source": "taste-skill",
+      "repo": "https://github.com/Leonxlnx/taste-skill",
+      "commit": "12af471f627f866411b4bd785b19646d3672784c",
+      "path": "skills/taste-skill/library/palettes.json",
+      "license": "MIT",
+      "authors": [
+        "Leonxlnx"
+      ],
+      "url": "https://github.com/Leonxlnx/taste-skill",
+      "transformations": [
+        "computed WCAG contrast for core pairs"
+      ]
+    },
+    "sourceUrl": "https://github.com/Leonxlnx/taste-skill",
+    "bg": "#ffffff",
+    "surface": "#f3f3f3",
+    "ink": "#232323",
+    "muted": "#6e6e6e",
+    "accent": "#a1ffcb",
+    "accentInk": "#232323",
+    "fields": [
+      {
+        "bg": "#a1ffcb",
+        "ink": "#232323"
+      },
+      {
+        "bg": "#232323",
+        "ink": "#ffffff"
+      }
+    ],
+    "note": "White, near-black and two greys fill a board of flat tiles. Mint floods a few whole tiles (one statement, one figure, the closing call to action) and appears nowhere else.",
+    "seenIn": [
+      "aww-aspen-search"
+    ],
+    "contrast": {
+      "bg-ink": {
+        "foreground": "#ffffff",
+        "background": "#232323",
+        "ratio": 15.72,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      },
+      "bg-muted": {
+        "foreground": "#ffffff",
+        "background": "#6e6e6e",
+        "ratio": 5.1,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": false
+      },
+      "accent-accentInk": {
+        "foreground": "#a1ffcb",
+        "background": "#232323",
+        "ratio": 13.23,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      },
+      "surface-ink": {
+        "foreground": "#f3f3f3",
+        "background": "#232323",
+        "ratio": 14.16,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      },
+      "field-1": {
+        "foreground": "#a1ffcb",
+        "background": "#232323",
+        "ratio": 13.23,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      },
+      "field-2": {
+        "foreground": "#232323",
+        "background": "#ffffff",
+        "ratio": 15.72,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      }
+    }
+  },
+  {
+    "id": "palette/lunar-grey-bronze",
+    "kind": "palette",
+    "name": "Lunar and bronze",
+    "summary": "Soft black holds the page with panels one step lighter, white text and grey secondary lines, so photographs supply all the colour. Muted bronze goes on small markers and the one button only.",
+    "domains": [],
+    "sectors": [],
+    "tags": [
+      "dark-neutral"
+    ],
+    "moods": [
+      "dark"
+    ],
+    "quality": "verified",
+    "provenance": {
+      "source": "taste-skill",
+      "repo": "https://github.com/Leonxlnx/taste-skill",
+      "commit": "12af471f627f866411b4bd785b19646d3672784c",
+      "path": "skills/taste-skill/library/palettes.json",
+      "license": "MIT",
+      "authors": [
+        "Leonxlnx"
+      ],
+      "url": "https://github.com/Leonxlnx/taste-skill",
+      "transformations": [
+        "computed WCAG contrast for core pairs"
+      ]
+    },
+    "sourceUrl": "https://github.com/Leonxlnx/taste-skill",
+    "bg": "#111111",
+    "surface": "#1c1c1c",
+    "ink": "#f2f2f2",
+    "muted": "#8f8f8f",
+    "accent": "#a08672",
+    "accentInk": "#111111",
+    "fields": [],
+    "note": "Soft black holds the page with panels one step lighter, white text and grey secondary lines, so photographs supply all the colour. Muted bronze goes on small markers and the one button only.",
+    "seenIn": [
+      "aww-21-hrs-on-the-moon",
+      "opl-dialkit",
+      "opl-lorenzo-bocchi-photography"
+    ],
+    "contrast": {
+      "bg-ink": {
+        "foreground": "#111111",
+        "background": "#f2f2f2",
+        "ratio": 16.87,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      },
+      "bg-muted": {
+        "foreground": "#111111",
+        "background": "#8f8f8f",
+        "ratio": 5.84,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": false
+      },
+      "accent-accentInk": {
+        "foreground": "#a08672",
+        "background": "#111111",
+        "ratio": 5.53,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": false
+      },
+      "surface-ink": {
+        "foreground": "#1c1c1c",
+        "background": "#f2f2f2",
+        "ratio": 15.22,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      }
+    }
+  },
+  {
+    "id": "palette/mint-pink-accounts",
+    "kind": "palette",
+    "name": "Mint and pink",
+    "summary": "Near-white base with black type; mint and pink are the only two colours and each stands for one side of the product. They first appear as small circles, then as full-screen section fields, and deep green is used only for the button.",
+    "domains": [],
+    "sectors": [],
+    "tags": [
+      "pastel-fields"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "taste-skill",
+      "repo": "https://github.com/Leonxlnx/taste-skill",
+      "commit": "12af471f627f866411b4bd785b19646d3672784c",
+      "path": "skills/taste-skill/library/palettes.json",
+      "license": "MIT",
+      "authors": [
+        "Leonxlnx"
+      ],
+      "url": "https://github.com/Leonxlnx/taste-skill",
+      "transformations": [
+        "computed WCAG contrast for core pairs"
+      ]
+    },
+    "sourceUrl": "https://github.com/Leonxlnx/taste-skill",
+    "bg": "#f8f8f8",
+    "surface": "#eeeeee",
+    "ink": "#0a0a0a",
+    "muted": "#6a6a6a",
+    "accent": "#1f6b3a",
+    "accentInk": "#ffffff",
+    "fields": [
+      {
+        "bg": "#c3edce",
+        "ink": "#0a0a0a"
+      },
+      {
+        "bg": "#f8c7c9",
+        "ink": "#0a0a0a"
+      },
+      {
+        "bg": "#ffffff",
+        "ink": "#0a0a0a"
+      }
+    ],
+    "note": "Near-white base with black type; mint and pink are the only two colours and each stands for one side of the product. They first appear as small circles, then as full-screen section fields, and deep green is used only for the button.",
+    "seenIn": [
+      "opl-tara"
+    ],
+    "contrast": {
+      "bg-ink": {
+        "foreground": "#f8f8f8",
+        "background": "#0a0a0a",
+        "ratio": 18.64,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      },
+      "bg-muted": {
+        "foreground": "#f8f8f8",
+        "background": "#6a6a6a",
+        "ratio": 5.09,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": false
+      },
+      "accent-accentInk": {
+        "foreground": "#1f6b3a",
+        "background": "#ffffff",
+        "ratio": 6.52,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": false
+      },
+      "surface-ink": {
+        "foreground": "#eeeeee",
+        "background": "#0a0a0a",
+        "ratio": 17.06,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      },
+      "field-1": {
+        "foreground": "#c3edce",
+        "background": "#0a0a0a",
+        "ratio": 15.39,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      },
+      "field-2": {
+        "foreground": "#f8c7c9",
+        "background": "#0a0a0a",
+        "ratio": 13.2,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      },
+      "field-3": {
+        "foreground": "#ffffff",
+        "background": "#0a0a0a",
+        "ratio": 19.8,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      }
+    }
+  },
+  {
+    "id": "palette/mustard-field",
+    "kind": "palette",
+    "name": "Mustard and black",
+    "summary": "One warm mustard field for the whole page with black ink only. Royal blue is the single interruption, kept to a sliver along one edge or one small button.",
+    "domains": [],
+    "sectors": [],
+    "tags": [
+      "single-field"
+    ],
+    "moods": [
+      "warm"
+    ],
+    "quality": "verified",
+    "provenance": {
+      "source": "taste-skill",
+      "repo": "https://github.com/Leonxlnx/taste-skill",
+      "commit": "12af471f627f866411b4bd785b19646d3672784c",
+      "path": "skills/taste-skill/library/palettes.json",
+      "license": "MIT",
+      "authors": [
+        "Leonxlnx"
+      ],
+      "url": "https://github.com/Leonxlnx/taste-skill",
+      "transformations": [
+        "computed WCAG contrast for core pairs"
+      ]
+    },
+    "sourceUrl": "https://github.com/Leonxlnx/taste-skill",
+    "bg": "#e1ac10",
+    "surface": "#cd9d0f",
+    "ink": "#0b0b0b",
+    "muted": "#4d3d0a",
+    "accent": "#24338f",
+    "accentInk": "#ffffff",
+    "fields": [],
+    "note": "One warm mustard field for the whole page with black ink only. Royal blue is the single interruption, kept to a sliver along one edge or one small button.",
+    "seenIn": [
+      "opl-beige-force"
+    ],
+    "contrast": {
+      "bg-ink": {
+        "foreground": "#e1ac10",
+        "background": "#0b0b0b",
+        "ratio": 9.48,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      },
+      "bg-muted": {
+        "foreground": "#e1ac10",
+        "background": "#4d3d0a",
+        "ratio": 5.09,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": false
+      },
+      "accent-accentInk": {
+        "foreground": "#24338f",
+        "background": "#ffffff",
+        "ratio": 10.8,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      },
+      "surface-ink": {
+        "foreground": "#cd9d0f",
+        "background": "#0b0b0b",
+        "ratio": 7.9,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      }
+    }
+  },
+  {
+    "id": "palette/navy-pink",
+    "kind": "palette",
+    "name": "Navy and pink",
+    "summary": "One navy field runs the entire page. Pink does everything else, from the name and headings to body text, and fills one solid button.",
+    "domains": [],
+    "sectors": [],
+    "tags": [
+      "two-tone",
+      "single-field"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "taste-skill",
+      "repo": "https://github.com/Leonxlnx/taste-skill",
+      "commit": "12af471f627f866411b4bd785b19646d3672784c",
+      "path": "skills/taste-skill/library/palettes.json",
+      "license": "MIT",
+      "authors": [
+        "Leonxlnx"
+      ],
+      "url": "https://github.com/Leonxlnx/taste-skill",
+      "transformations": [
+        "computed WCAG contrast for core pairs"
+      ]
+    },
+    "sourceUrl": "https://github.com/Leonxlnx/taste-skill",
+    "bg": "#1a2039",
+    "surface": "#212846",
+    "ink": "#f9a3c0",
+    "muted": "#b9879c",
+    "accent": "#f9a3c0",
+    "accentInk": "#1a2039",
+    "fields": [],
+    "note": "One navy field runs the entire page. Pink does everything else, from the name and headings to body text, and fills one solid button.",
+    "seenIn": [
+      "aww-trevor-noah"
+    ],
+    "contrast": {
+      "bg-ink": {
+        "foreground": "#1a2039",
+        "background": "#f9a3c0",
+        "ratio": 8.42,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      },
+      "bg-muted": {
+        "foreground": "#1a2039",
+        "background": "#b9879c",
+        "ratio": 5.35,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": false
+      },
+      "accent-accentInk": {
+        "foreground": "#f9a3c0",
+        "background": "#1a2039",
+        "ratio": 8.42,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      },
+      "surface-ink": {
+        "foreground": "#212846",
+        "background": "#f9a3c0",
+        "ratio": 7.57,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      }
+    }
+  },
+  {
+    "id": "palette/white-navy-tab",
+    "kind": "palette",
+    "name": "Navy on white",
+    "summary": "Pure white pages with navy type sit between full-bleed photographs, opening on near-black and closing on a warm grey footer. Tangerine is one small tab or button, never larger than a thumbnail.",
+    "domains": [],
+    "sectors": [],
+    "tags": [
+      "light-neutral",
+      "photographic-neutral"
+    ],
+    "moods": [
+      "dark",
+      "warm"
+    ],
+    "quality": "verified",
+    "provenance": {
+      "source": "taste-skill",
+      "repo": "https://github.com/Leonxlnx/taste-skill",
+      "commit": "12af471f627f866411b4bd785b19646d3672784c",
+      "path": "skills/taste-skill/library/palettes.json",
+      "license": "MIT",
+      "authors": [
+        "Leonxlnx"
+      ],
+      "url": "https://github.com/Leonxlnx/taste-skill",
+      "transformations": [
+        "computed WCAG contrast for core pairs"
+      ]
+    },
+    "sourceUrl": "https://github.com/Leonxlnx/taste-skill",
+    "bg": "#ffffff",
+    "surface": "#f4f4f2",
+    "ink": "#1f2b4d",
+    "muted": "#6a7186",
+    "accent": "#f7941d",
+    "accentInk": "#1f2b4d",
+    "fields": [
+      {
+        "bg": "#05070a",
+        "ink": "#ffffff"
+      },
+      {
+        "bg": "#e3e1dc",
+        "ink": "#1f2b4d"
+      }
+    ],
+    "note": "Pure white pages with navy type sit between full-bleed photographs, opening on near-black and closing on a warm grey footer. Tangerine is one small tab or button, never larger than a thumbnail.",
+    "seenIn": [
+      "aww-white-desert",
+      "aww-realevate"
+    ],
+    "contrast": {
+      "bg-ink": {
+        "foreground": "#ffffff",
+        "background": "#1f2b4d",
+        "ratio": 13.9,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      },
+      "bg-muted": {
+        "foreground": "#ffffff",
+        "background": "#6a7186",
+        "ratio": 4.86,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": false
+      },
+      "accent-accentInk": {
+        "foreground": "#f7941d",
+        "background": "#1f2b4d",
+        "ratio": 6.09,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": false
+      },
+      "surface-ink": {
+        "foreground": "#f4f4f2",
+        "background": "#1f2b4d",
+        "ratio": 12.62,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      },
+      "field-1": {
+        "foreground": "#05070a",
+        "background": "#ffffff",
+        "ratio": 20.17,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      },
+      "field-2": {
+        "foreground": "#e3e1dc",
+        "background": "#1f2b4d",
+        "ratio": 10.64,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      }
+    }
+  },
+  {
+    "id": "palette/paper-grey-brass",
+    "kind": "palette",
+    "name": "Newsprint and brass",
+    "summary": "Warm paper grey with near-black type holds the upper page, then whole sections flip to near-black with paper-grey type; no section is tinted. Brass yellow marks one small detail per screen, such as the button or a single word.",
+    "domains": [],
+    "sectors": [],
+    "tags": [
+      "light-neutral"
+    ],
+    "moods": [
+      "dark",
+      "warm"
+    ],
+    "quality": "verified",
+    "provenance": {
+      "source": "taste-skill",
+      "repo": "https://github.com/Leonxlnx/taste-skill",
+      "commit": "12af471f627f866411b4bd785b19646d3672784c",
+      "path": "skills/taste-skill/library/palettes.json",
+      "license": "MIT",
+      "authors": [
+        "Leonxlnx"
+      ],
+      "url": "https://github.com/Leonxlnx/taste-skill",
+      "transformations": [
+        "computed WCAG contrast for core pairs"
+      ]
+    },
+    "sourceUrl": "https://github.com/Leonxlnx/taste-skill",
+    "bg": "#e8e8e3",
+    "surface": "#dcdcd6",
+    "ink": "#181715",
+    "muted": "#63625c",
+    "accent": "#bfb21a",
+    "accentInk": "#181715",
+    "fields": [
+      {
+        "bg": "#181715",
+        "ink": "#e8e8e3"
+      }
+    ],
+    "note": "Warm paper grey with near-black type holds the upper page, then whole sections flip to near-black with paper-grey type; no section is tinted. Brass yellow marks one small detail per screen, such as the button or a single word.",
+    "seenIn": [
+      "aww-monolog"
+    ],
+    "contrast": {
+      "bg-ink": {
+        "foreground": "#e8e8e3",
+        "background": "#181715",
+        "ratio": 14.57,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      },
+      "bg-muted": {
+        "foreground": "#e8e8e3",
+        "background": "#63625c",
+        "ratio": 4.98,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": false
+      },
+      "accent-accentInk": {
+        "foreground": "#bfb21a",
+        "background": "#181715",
+        "ratio": 8.19,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      },
+      "surface-ink": {
+        "foreground": "#dcdcd6",
+        "background": "#181715",
+        "ratio": 13.01,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      },
+      "field-1": {
+        "foreground": "#181715",
+        "background": "#e8e8e3",
+        "ratio": 14.57,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      }
+    }
+  },
+  {
+    "id": "palette/blue-black-cornflower",
+    "kind": "palette",
+    "name": "Night and cornflower",
+    "summary": "Blue-black ground and slate panels with silver-white text fill the page; no section changes colour. Cornflower blue marks the buttons and at most one word in a heading.",
+    "domains": [],
+    "sectors": [],
+    "tags": [
+      "dark-neutral"
+    ],
+    "moods": [
+      "dark"
+    ],
+    "quality": "verified",
+    "provenance": {
+      "source": "taste-skill",
+      "repo": "https://github.com/Leonxlnx/taste-skill",
+      "commit": "12af471f627f866411b4bd785b19646d3672784c",
+      "path": "skills/taste-skill/library/palettes.json",
+      "license": "MIT",
+      "authors": [
+        "Leonxlnx"
+      ],
+      "url": "https://github.com/Leonxlnx/taste-skill",
+      "transformations": [
+        "computed WCAG contrast for core pairs"
+      ]
+    },
+    "sourceUrl": "https://github.com/Leonxlnx/taste-skill",
+    "bg": "#0a0d14",
+    "surface": "#131824",
+    "ink": "#e9edf3",
+    "muted": "#8891a1",
+    "accent": "#5a9bfc",
+    "accentInk": "#0a0d14",
+    "fields": [],
+    "note": "Blue-black ground and slate panels with silver-white text fill the page; no section changes colour. Cornflower blue marks the buttons and at most one word in a heading.",
+    "seenIn": [
+      "opl-viewport-2",
+      "aww-moto-finance",
+      "opl-rafael-derolez-2026"
+    ],
+    "contrast": {
+      "bg-ink": {
+        "foreground": "#0a0d14",
+        "background": "#e9edf3",
+        "ratio": 16.54,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      },
+      "bg-muted": {
+        "foreground": "#0a0d14",
+        "background": "#8891a1",
+        "ratio": 6.12,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": false
+      },
+      "accent-accentInk": {
+        "foreground": "#5a9bfc",
+        "background": "#0a0d14",
+        "ratio": 6.97,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": false
+      },
+      "surface-ink": {
+        "foreground": "#131824",
+        "background": "#e9edf3",
+        "ratio": 15.1,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      }
+    }
+  },
+  {
+    "id": "palette/olive-on-bone",
+    "kind": "palette",
+    "name": "Olive on bone",
+    "summary": "A bone page with every word, large or small, in one olive green; the footer inverts to a solid olive field with bone text. Photography supplies all other colour, and the button is the same olive, filled.",
+    "domains": [],
+    "sectors": [],
+    "tags": [
+      "two-tone",
+      "earth"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "taste-skill",
+      "repo": "https://github.com/Leonxlnx/taste-skill",
+      "commit": "12af471f627f866411b4bd785b19646d3672784c",
+      "path": "skills/taste-skill/library/palettes.json",
+      "license": "MIT",
+      "authors": [
+        "Leonxlnx"
+      ],
+      "url": "https://github.com/Leonxlnx/taste-skill",
+      "transformations": [
+        "computed WCAG contrast for core pairs"
+      ]
+    },
+    "sourceUrl": "https://github.com/Leonxlnx/taste-skill",
+    "bg": "#ecebe7",
+    "surface": "#e1dfd9",
+    "ink": "#38450f",
+    "muted": "#5d683a",
+    "accent": "#38450f",
+    "accentInk": "#ecebe7",
+    "fields": [
+      {
+        "bg": "#38450f",
+        "ink": "#ecebe7"
+      }
+    ],
+    "note": "A bone page with every word, large or small, in one olive green; the footer inverts to a solid olive field with bone text. Photography supplies all other colour, and the button is the same olive, filled.",
+    "seenIn": [
+      "aww-tengile-malamala-collection"
+    ],
+    "contrast": {
+      "bg-ink": {
+        "foreground": "#ecebe7",
+        "background": "#38450f",
+        "ratio": 8.69,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      },
+      "bg-muted": {
+        "foreground": "#ecebe7",
+        "background": "#5d683a",
+        "ratio": 5.02,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": false
+      },
+      "accent-accentInk": {
+        "foreground": "#38450f",
+        "background": "#ecebe7",
+        "ratio": 8.69,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      },
+      "surface-ink": {
+        "foreground": "#e1dfd9",
+        "background": "#38450f",
+        "ratio": 7.78,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      },
+      "field-1": {
+        "foreground": "#38450f",
+        "background": "#ecebe7",
+        "ratio": 8.69,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      }
+    }
+  },
+  {
+    "id": "palette/orange-field-black",
+    "kind": "palette",
+    "name": "Orange and black",
+    "summary": "Hot orange is the page: one flat field with blue-black type, flipping at a hard horizontal seam to a white section when the content needs a rest. The button is a solid block of the same blue-black with orange text, and every other colour comes from the objects shown.",
+    "domains": [],
+    "sectors": [],
+    "tags": [
+      "single-field",
+      "two-tone"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "taste-skill",
+      "repo": "https://github.com/Leonxlnx/taste-skill",
+      "commit": "12af471f627f866411b4bd785b19646d3672784c",
+      "path": "skills/taste-skill/library/palettes.json",
+      "license": "MIT",
+      "authors": [
+        "Leonxlnx"
+      ],
+      "url": "https://github.com/Leonxlnx/taste-skill",
+      "transformations": [
+        "computed WCAG contrast for core pairs"
+      ]
+    },
+    "sourceUrl": "https://github.com/Leonxlnx/taste-skill",
+    "bg": "#ff7a1f",
+    "surface": "#ff8633",
+    "ink": "#050f16",
+    "muted": "#5a2306",
+    "accent": "#050f16",
+    "accentInk": "#ff7a1f",
+    "fields": [
+      {
+        "bg": "#ffffff",
+        "ink": "#050f16"
+      }
+    ],
+    "note": "Hot orange is the page: one flat field with blue-black type, flipping at a hard horizontal seam to a white section when the content needs a rest. The button is a solid block of the same blue-black with orange text, and every other colour comes from the objects shown.",
+    "seenIn": [
+      "opl-postaway",
+      "opl-the-new-industrials"
+    ],
+    "contrast": {
+      "bg-ink": {
+        "foreground": "#ff7a1f",
+        "background": "#050f16",
+        "ratio": 7.42,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      },
+      "bg-muted": {
+        "foreground": "#ff7a1f",
+        "background": "#5a2306",
+        "ratio": 4.8,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": false
+      },
+      "accent-accentInk": {
+        "foreground": "#050f16",
+        "background": "#ff7a1f",
+        "ratio": 7.42,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      },
+      "surface-ink": {
+        "foreground": "#ff8633",
+        "background": "#050f16",
+        "ratio": 8.02,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      },
+      "field-1": {
+        "foreground": "#ffffff",
+        "background": "#050f16",
+        "ratio": 19.33,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      }
+    }
+  },
+  {
+    "id": "palette/orange-sky-lime",
+    "kind": "palette",
+    "name": "Orange, sky, lime",
+    "summary": "The page ground changes as you read: orange first, then sky blue, then acid lime at the end, with one near-black band between; type stays black on all three colours. Crimson is one small button per field.",
+    "domains": [],
+    "sectors": [],
+    "tags": [
+      "flat-loud"
+    ],
+    "moods": [
+      "dark"
+    ],
+    "quality": "verified",
+    "provenance": {
+      "source": "taste-skill",
+      "repo": "https://github.com/Leonxlnx/taste-skill",
+      "commit": "12af471f627f866411b4bd785b19646d3672784c",
+      "path": "skills/taste-skill/library/palettes.json",
+      "license": "MIT",
+      "authors": [
+        "Leonxlnx"
+      ],
+      "url": "https://github.com/Leonxlnx/taste-skill",
+      "transformations": [
+        "computed WCAG contrast for core pairs"
+      ]
+    },
+    "sourceUrl": "https://github.com/Leonxlnx/taste-skill",
+    "bg": "#ff8126",
+    "surface": "#ff8d3a",
+    "ink": "#111111",
+    "muted": "#5c2a05",
+    "accent": "#de194b",
+    "accentInk": "#ffffff",
+    "fields": [
+      {
+        "bg": "#ff8126",
+        "ink": "#111111"
+      },
+      {
+        "bg": "#4db3ff",
+        "ink": "#111111"
+      },
+      {
+        "bg": "#c5f53d",
+        "ink": "#111111"
+      },
+      {
+        "bg": "#161615",
+        "ink": "#f2f2f2"
+      }
+    ],
+    "note": "The page ground changes as you read: orange first, then sky blue, then acid lime at the end, with one near-black band between; type stays black on all three colours. Crimson is one small button per field.",
+    "seenIn": [
+      "opl-the-new-industrials",
+      "opl-anidachi"
+    ],
+    "contrast": {
+      "bg-ink": {
+        "foreground": "#ff8126",
+        "background": "#111111",
+        "ratio": 7.57,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      },
+      "bg-muted": {
+        "foreground": "#ff8126",
+        "background": "#5c2a05",
+        "ratio": 4.71,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": false
+      },
+      "accent-accentInk": {
+        "foreground": "#de194b",
+        "background": "#ffffff",
+        "ratio": 4.83,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": false
+      },
+      "surface-ink": {
+        "foreground": "#ff8d3a",
+        "background": "#111111",
+        "ratio": 8.2,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      },
+      "field-1": {
+        "foreground": "#ff8126",
+        "background": "#111111",
+        "ratio": 7.57,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      },
+      "field-2": {
+        "foreground": "#4db3ff",
+        "background": "#111111",
+        "ratio": 8.28,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      },
+      "field-3": {
+        "foreground": "#c5f53d",
+        "background": "#111111",
+        "ratio": 14.84,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      },
+      "field-4": {
+        "foreground": "#161615",
+        "background": "#f2f2f2",
+        "ratio": 16.18,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      }
+    }
+  },
+  {
+    "id": "palette/oxblood-grey",
+    "kind": "palette",
+    "name": "Oxblood and grey",
+    "summary": "Deep red text on grey paper holds most of the page, then pale grey text on a solid red field takes one long section and the footer. Photographs are desaturated so nothing breaks the pair, and the button is a solid red block.",
+    "domains": [],
+    "sectors": [],
+    "tags": [
+      "two-tone"
+    ],
+    "moods": [
+      "warm"
+    ],
+    "quality": "verified",
+    "provenance": {
+      "source": "taste-skill",
+      "repo": "https://github.com/Leonxlnx/taste-skill",
+      "commit": "12af471f627f866411b4bd785b19646d3672784c",
+      "path": "skills/taste-skill/library/palettes.json",
+      "license": "MIT",
+      "authors": [
+        "Leonxlnx"
+      ],
+      "url": "https://github.com/Leonxlnx/taste-skill",
+      "transformations": [
+        "computed WCAG contrast for core pairs"
+      ]
+    },
+    "sourceUrl": "https://github.com/Leonxlnx/taste-skill",
+    "bg": "#e2e2e2",
+    "surface": "#d6d6d6",
+    "ink": "#7d0c14",
+    "muted": "#7a4a4e",
+    "accent": "#7d0c14",
+    "accentInk": "#e2e2e2",
+    "fields": [
+      {
+        "bg": "#7d0c14",
+        "ink": "#e2e2e2"
+      }
+    ],
+    "note": "Deep red text on grey paper holds most of the page, then pale grey text on a solid red field takes one long section and the footer. Photographs are desaturated so nothing breaks the pair, and the button is a solid red block.",
+    "seenIn": [
+      "opl-belgrade-architecture"
+    ],
+    "contrast": {
+      "bg-ink": {
+        "foreground": "#e2e2e2",
+        "background": "#7d0c14",
+        "ratio": 8.38,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      },
+      "bg-muted": {
+        "foreground": "#e2e2e2",
+        "background": "#7a4a4e",
+        "ratio": 5.56,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": false
+      },
+      "accent-accentInk": {
+        "foreground": "#7d0c14",
+        "background": "#e2e2e2",
+        "ratio": 8.38,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      },
+      "surface-ink": {
+        "foreground": "#d6d6d6",
+        "background": "#7d0c14",
+        "ratio": 7.47,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      },
+      "field-1": {
+        "foreground": "#7d0c14",
+        "background": "#e2e2e2",
+        "ratio": 8.38,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      }
+    }
+  },
+  {
+    "id": "palette/plum-black-pink",
+    "kind": "palette",
+    "name": "Plum-black and pink",
+    "summary": "Near-black and plum at the top and bottom bracket a white middle with navy-black text. Hot pink is reserved for primary buttons, bars in charts and map markers; it never fills a section.",
+    "domains": [],
+    "sectors": [],
+    "tags": [
+      "mono-accent",
+      "dark-neutral"
+    ],
+    "moods": [
+      "dark"
+    ],
+    "quality": "verified",
+    "provenance": {
+      "source": "taste-skill",
+      "repo": "https://github.com/Leonxlnx/taste-skill",
+      "commit": "12af471f627f866411b4bd785b19646d3672784c",
+      "path": "skills/taste-skill/library/palettes.json",
+      "license": "MIT",
+      "authors": [
+        "Leonxlnx"
+      ],
+      "url": "https://github.com/Leonxlnx/taste-skill",
+      "transformations": [
+        "computed WCAG contrast for core pairs"
+      ]
+    },
+    "sourceUrl": "https://github.com/Leonxlnx/taste-skill",
+    "bg": "#0d060b",
+    "surface": "#1b0e17",
+    "ink": "#ffffff",
+    "muted": "#9a8f97",
+    "accent": "#ff488b",
+    "accentInk": "#0d060b",
+    "fields": [
+      {
+        "bg": "#470c35",
+        "ink": "#ffffff"
+      },
+      {
+        "bg": "#ffffff",
+        "ink": "#101421"
+      }
+    ],
+    "note": "Near-black and plum at the top and bottom bracket a white middle with navy-black text. Hot pink is reserved for primary buttons, bars in charts and map markers; it never fills a section.",
+    "seenIn": [
+      "aww-cerebrium"
+    ],
+    "contrast": {
+      "bg-ink": {
+        "foreground": "#0d060b",
+        "background": "#ffffff",
+        "ratio": 20.04,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      },
+      "bg-muted": {
+        "foreground": "#0d060b",
+        "background": "#9a8f97",
+        "ratio": 6.44,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": false
+      },
+      "accent-accentInk": {
+        "foreground": "#ff488b",
+        "background": "#0d060b",
+        "ratio": 6.25,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": false
+      },
+      "surface-ink": {
+        "foreground": "#1b0e17",
+        "background": "#ffffff",
+        "ratio": 18.72,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      },
+      "field-1": {
+        "foreground": "#470c35",
+        "background": "#ffffff",
+        "ratio": 15.31,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      },
+      "field-2": {
+        "foreground": "#ffffff",
+        "background": "#101421",
+        "ratio": 18.36,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      }
+    }
+  },
+  {
+    "id": "palette/post-red-mustard",
+    "kind": "palette",
+    "name": "Post red, mustard",
+    "summary": "Post red and bone alternate as full section fields, with red holding the opening and the close. Mustard, slate blue and maroon are kept for whole card frames, and slate blue also fills the one button.",
+    "domains": [],
+    "sectors": [],
+    "tags": [
+      "flat-loud"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "taste-skill",
+      "repo": "https://github.com/Leonxlnx/taste-skill",
+      "commit": "12af471f627f866411b4bd785b19646d3672784c",
+      "path": "skills/taste-skill/library/palettes.json",
+      "license": "MIT",
+      "authors": [
+        "Leonxlnx"
+      ],
+      "url": "https://github.com/Leonxlnx/taste-skill",
+      "transformations": [
+        "computed WCAG contrast for core pairs"
+      ]
+    },
+    "sourceUrl": "https://github.com/Leonxlnx/taste-skill",
+    "bg": "#e2dccf",
+    "surface": "#d7d0c1",
+    "ink": "#2a1110",
+    "muted": "#6b524c",
+    "accent": "#4a6f84",
+    "accentInk": "#ffffff",
+    "fields": [
+      {
+        "bg": "#dc1928",
+        "ink": "#ffffff"
+      },
+      {
+        "bg": "#952625",
+        "ink": "#ffffff"
+      },
+      {
+        "bg": "#e0a912",
+        "ink": "#2a1110"
+      },
+      {
+        "bg": "#4a6f84",
+        "ink": "#ffffff"
+      },
+      {
+        "bg": "#e2dccf",
+        "ink": "#2a1110"
+      }
+    ],
+    "note": "Post red and bone alternate as full section fields, with red holding the opening and the close. Mustard, slate blue and maroon are kept for whole card frames, and slate blue also fills the one button.",
+    "seenIn": [
+      "opl-locker-land"
+    ],
+    "contrast": {
+      "bg-ink": {
+        "foreground": "#e2dccf",
+        "background": "#2a1110",
+        "ratio": 12.96,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      },
+      "bg-muted": {
+        "foreground": "#e2dccf",
+        "background": "#6b524c",
+        "ratio": 5.23,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": false
+      },
+      "accent-accentInk": {
+        "foreground": "#4a6f84",
+        "background": "#ffffff",
+        "ratio": 5.39,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": false
+      },
+      "surface-ink": {
+        "foreground": "#d7d0c1",
+        "background": "#2a1110",
+        "ratio": 11.54,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      },
+      "field-1": {
+        "foreground": "#dc1928",
+        "background": "#ffffff",
+        "ratio": 4.98,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": false
+      },
+      "field-2": {
+        "foreground": "#952625",
+        "background": "#ffffff",
+        "ratio": 8.13,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      },
+      "field-3": {
+        "foreground": "#e0a912",
+        "background": "#2a1110",
+        "ratio": 8.31,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      },
+      "field-4": {
+        "foreground": "#4a6f84",
+        "background": "#ffffff",
+        "ratio": 5.39,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": false
+      },
+      "field-5": {
+        "foreground": "#e2dccf",
+        "background": "#2a1110",
+        "ratio": 12.96,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      }
+    }
+  },
+  {
+    "id": "palette/poster-chapters",
+    "kind": "palette",
+    "name": "Poster chapters",
+    "summary": "Each chapter takes one flat field in turn (coral red, near-black, bone, green, yellow) with black or bone type and no tints between them. Green doubles as the accent for the one button when the ground is bone or black.",
+    "domains": [],
+    "sectors": [],
+    "tags": [
+      "flat-loud"
+    ],
+    "moods": [
+      "dark",
+      "warm"
+    ],
+    "quality": "verified",
+    "provenance": {
+      "source": "taste-skill",
+      "repo": "https://github.com/Leonxlnx/taste-skill",
+      "commit": "12af471f627f866411b4bd785b19646d3672784c",
+      "path": "skills/taste-skill/library/palettes.json",
+      "license": "MIT",
+      "authors": [
+        "Leonxlnx"
+      ],
+      "url": "https://github.com/Leonxlnx/taste-skill",
+      "transformations": [
+        "computed WCAG contrast for core pairs"
+      ]
+    },
+    "sourceUrl": "https://github.com/Leonxlnx/taste-skill",
+    "bg": "#e6e0d2",
+    "surface": "#dcd5c5",
+    "ink": "#1a1a1a",
+    "muted": "#5f5b52",
+    "accent": "#18bc42",
+    "accentInk": "#1a1a1a",
+    "fields": [
+      {
+        "bg": "#ed4b44",
+        "ink": "#0f0f0f"
+      },
+      {
+        "bg": "#1a1a1a",
+        "ink": "#e6e0d2"
+      },
+      {
+        "bg": "#18bc42",
+        "ink": "#1a1a1a"
+      },
+      {
+        "bg": "#f2c21a",
+        "ink": "#1a1a1a"
+      },
+      {
+        "bg": "#e6e0d2",
+        "ink": "#1a1a1a"
+      }
+    ],
+    "note": "Each chapter takes one flat field in turn (coral red, near-black, bone, green, yellow) with black or bone type and no tints between them. Green doubles as the accent for the one button when the ground is bone or black.",
+    "seenIn": [
+      "aww-pp-neue-montreal"
+    ],
+    "contrast": {
+      "bg-ink": {
+        "foreground": "#e6e0d2",
+        "background": "#1a1a1a",
+        "ratio": 13.23,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      },
+      "bg-muted": {
+        "foreground": "#e6e0d2",
+        "background": "#5f5b52",
+        "ratio": 5.14,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": false
+      },
+      "accent-accentInk": {
+        "foreground": "#18bc42",
+        "background": "#1a1a1a",
+        "ratio": 6.89,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": false
+      },
+      "surface-ink": {
+        "foreground": "#dcd5c5",
+        "background": "#1a1a1a",
+        "ratio": 11.91,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      },
+      "field-1": {
+        "foreground": "#ed4b44",
+        "background": "#0f0f0f",
+        "ratio": 5.19,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": false
+      },
+      "field-2": {
+        "foreground": "#1a1a1a",
+        "background": "#e6e0d2",
+        "ratio": 13.23,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      },
+      "field-3": {
+        "foreground": "#18bc42",
+        "background": "#1a1a1a",
+        "ratio": 6.89,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": false
+      },
+      "field-4": {
+        "foreground": "#f2c21a",
+        "background": "#1a1a1a",
+        "ratio": 10.37,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      },
+      "field-5": {
+        "foreground": "#e6e0d2",
+        "background": "#1a1a1a",
+        "ratio": 13.23,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      }
+    }
+  },
+  {
+    "id": "palette/putty-black-teal",
+    "kind": "palette",
+    "name": "Putty and black",
+    "summary": "Warm putty covers the page and pure black handles all type and the main shapes. The only tint in the interface is teal, used for the one button or a single marker placed near the photographs.",
+    "domains": [],
+    "sectors": [],
+    "tags": [
+      "light-neutral",
+      "photographic-neutral"
+    ],
+    "moods": [
+      "warm"
+    ],
+    "quality": "verified",
+    "provenance": {
+      "source": "taste-skill",
+      "repo": "https://github.com/Leonxlnx/taste-skill",
+      "commit": "12af471f627f866411b4bd785b19646d3672784c",
+      "path": "skills/taste-skill/library/palettes.json",
+      "license": "MIT",
+      "authors": [
+        "Leonxlnx"
+      ],
+      "url": "https://github.com/Leonxlnx/taste-skill",
+      "transformations": [
+        "computed WCAG contrast for core pairs"
+      ]
+    },
+    "sourceUrl": "https://github.com/Leonxlnx/taste-skill",
+    "bg": "#dedad3",
+    "surface": "#d3cec6",
+    "ink": "#0a0a0a",
+    "muted": "#5c5852",
+    "accent": "#256f82",
+    "accentInk": "#ffffff",
+    "fields": [],
+    "note": "Warm putty covers the page and pure black handles all type and the main shapes. The only tint in the interface is teal, used for the one button or a single marker placed near the photographs.",
+    "seenIn": [
+      "aww-colonia-zacamil",
+      "opl-archiv"
+    ],
+    "contrast": {
+      "bg-ink": {
+        "foreground": "#dedad3",
+        "background": "#0a0a0a",
+        "ratio": 14.21,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      },
+      "bg-muted": {
+        "foreground": "#dedad3",
+        "background": "#5c5852",
+        "ratio": 5.07,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": false
+      },
+      "accent-accentInk": {
+        "foreground": "#256f82",
+        "background": "#ffffff",
+        "ratio": 5.71,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": false
+      },
+      "surface-ink": {
+        "foreground": "#d3cec6",
+        "background": "#0a0a0a",
+        "ratio": 12.65,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      }
+    }
+  },
+  {
+    "id": "palette/report-blocks",
+    "kind": "palette",
+    "name": "Report blocks",
+    "summary": "A white base with flat blocks of orange, sage, acid yellow and black assigned to whole modules: figure tiles, quote panels and chapter bands. Text is black on every colour and off-white on black, and orange is also the button colour.",
+    "domains": [],
+    "sectors": [],
+    "tags": [
+      "flat-loud"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "taste-skill",
+      "repo": "https://github.com/Leonxlnx/taste-skill",
+      "commit": "12af471f627f866411b4bd785b19646d3672784c",
+      "path": "skills/taste-skill/library/palettes.json",
+      "license": "MIT",
+      "authors": [
+        "Leonxlnx"
+      ],
+      "url": "https://github.com/Leonxlnx/taste-skill",
+      "transformations": [
+        "computed WCAG contrast for core pairs"
+      ]
+    },
+    "sourceUrl": "https://github.com/Leonxlnx/taste-skill",
+    "bg": "#ffffff",
+    "surface": "#f6f6f6",
+    "ink": "#000000",
+    "muted": "#5f5f5f",
+    "accent": "#fe7141",
+    "accentInk": "#000000",
+    "fields": [
+      {
+        "bg": "#fe7141",
+        "ink": "#000000"
+      },
+      {
+        "bg": "#d1ddd3",
+        "ink": "#000000"
+      },
+      {
+        "bg": "#f0ff1c",
+        "ink": "#000000"
+      },
+      {
+        "bg": "#000000",
+        "ink": "#f4f4f4"
+      }
+    ],
+    "note": "A white base with flat blocks of orange, sage, acid yellow and black assigned to whole modules: figure tiles, quote panels and chapter bands. Text is black on every colour and off-white on black, and orange is also the button colour.",
+    "seenIn": [
+      "aww-ai-in-design-report-2026"
+    ],
+    "contrast": {
+      "bg-ink": {
+        "foreground": "#ffffff",
+        "background": "#000000",
+        "ratio": 21,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      },
+      "bg-muted": {
+        "foreground": "#ffffff",
+        "background": "#5f5f5f",
+        "ratio": 6.39,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": false
+      },
+      "accent-accentInk": {
+        "foreground": "#fe7141",
+        "background": "#000000",
+        "ratio": 7.65,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      },
+      "surface-ink": {
+        "foreground": "#f6f6f6",
+        "background": "#000000",
+        "ratio": 19.43,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      },
+      "field-1": {
+        "foreground": "#fe7141",
+        "background": "#000000",
+        "ratio": 7.65,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      },
+      "field-2": {
+        "foreground": "#d1ddd3",
+        "background": "#000000",
+        "ratio": 14.99,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      },
+      "field-3": {
+        "foreground": "#f0ff1c",
+        "background": "#000000",
+        "ratio": 19.03,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      },
+      "field-4": {
+        "foreground": "#000000",
+        "background": "#f4f4f4",
+        "ratio": 19.09,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      }
+    }
+  },
+  {
+    "id": "palette/rose-grey-green",
+    "kind": "palette",
+    "name": "Rose grey, green",
+    "summary": "A single rosy grey covers the page from top to bottom with brown-black text and grey secondary lines; images are kept greyscale. Green appears only on the current-page link and on one button in the footer.",
+    "domains": [],
+    "sectors": [],
+    "tags": [
+      "light-neutral"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "taste-skill",
+      "repo": "https://github.com/Leonxlnx/taste-skill",
+      "commit": "12af471f627f866411b4bd785b19646d3672784c",
+      "path": "skills/taste-skill/library/palettes.json",
+      "license": "MIT",
+      "authors": [
+        "Leonxlnx"
+      ],
+      "url": "https://github.com/Leonxlnx/taste-skill",
+      "transformations": [
+        "computed WCAG contrast for core pairs"
+      ]
+    },
+    "sourceUrl": "https://github.com/Leonxlnx/taste-skill",
+    "bg": "#ebe5e3",
+    "surface": "#e1dad7",
+    "ink": "#2b2622",
+    "muted": "#6a615d",
+    "accent": "#0f7d45",
+    "accentInk": "#ffffff",
+    "fields": [],
+    "note": "A single rosy grey covers the page from top to bottom with brown-black text and grey secondary lines; images are kept greyscale. Green appears only on the current-page link and on one button in the footer.",
+    "seenIn": [
+      "opl-the-queue"
+    ],
+    "contrast": {
+      "bg-ink": {
+        "foreground": "#ebe5e3",
+        "background": "#2b2622",
+        "ratio": 12.01,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      },
+      "bg-muted": {
+        "foreground": "#ebe5e3",
+        "background": "#6a615d",
+        "ratio": 4.84,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": false
+      },
+      "accent-accentInk": {
+        "foreground": "#0f7d45",
+        "background": "#ffffff",
+        "ratio": 5.2,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": false
+      },
+      "surface-ink": {
+        "foreground": "#e1dad7",
+        "background": "#2b2622",
+        "ratio": 10.84,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      }
+    }
+  },
+  {
+    "id": "palette/moss-sand",
+    "kind": "palette",
+    "name": "Sand and moss",
+    "summary": "Sand grey holds the page with charcoal type, and one deep leaf-green band may close it. Moss green is reserved for buttons; brighter greens and blues arrive only through photographs.",
+    "domains": [],
+    "sectors": [],
+    "tags": [
+      "light-neutral",
+      "earth"
+    ],
+    "moods": [
+      "warm"
+    ],
+    "quality": "verified",
+    "provenance": {
+      "source": "taste-skill",
+      "repo": "https://github.com/Leonxlnx/taste-skill",
+      "commit": "12af471f627f866411b4bd785b19646d3672784c",
+      "path": "skills/taste-skill/library/palettes.json",
+      "license": "MIT",
+      "authors": [
+        "Leonxlnx"
+      ],
+      "url": "https://github.com/Leonxlnx/taste-skill",
+      "transformations": [
+        "computed WCAG contrast for core pairs"
+      ]
+    },
+    "sourceUrl": "https://github.com/Leonxlnx/taste-skill",
+    "bg": "#ddd6c6",
+    "surface": "#d2cab8",
+    "ink": "#2a2a26",
+    "muted": "#59574e",
+    "accent": "#4f6238",
+    "accentInk": "#ffffff",
+    "fields": [
+      {
+        "bg": "#3f5a2a",
+        "ink": "#ffffff"
+      }
+    ],
+    "note": "Sand grey holds the page with charcoal type, and one deep leaf-green band may close it. Moss green is reserved for buttons; brighter greens and blues arrive only through photographs.",
+    "seenIn": [
+      "opl-vestris",
+      "aww-izanami"
+    ],
+    "contrast": {
+      "bg-ink": {
+        "foreground": "#ddd6c6",
+        "background": "#2a2a26",
+        "ratio": 9.95,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      },
+      "bg-muted": {
+        "foreground": "#ddd6c6",
+        "background": "#59574e",
+        "ratio": 5.01,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": false
+      },
+      "accent-accentInk": {
+        "foreground": "#4f6238",
+        "background": "#ffffff",
+        "ratio": 6.7,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": false
+      },
+      "surface-ink": {
+        "foreground": "#d2cab8",
+        "background": "#2a2a26",
+        "ratio": 8.84,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      },
+      "field-1": {
+        "foreground": "#3f5a2a",
+        "background": "#ffffff",
+        "ratio": 7.76,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      }
+    }
+  },
+  {
+    "id": "palette/white-link-blue",
+    "kind": "palette",
+    "name": "Sheet and biro",
+    "summary": "White holds the whole page with black type, one grey for secondary lines and a pale grey step for tiles and inputs; the footer may invert to black. Blue is the colour of text links and the one button, and nothing else is tinted.",
+    "domains": [],
+    "sectors": [],
+    "tags": [
+      "light-neutral",
+      "mono-accent"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "taste-skill",
+      "repo": "https://github.com/Leonxlnx/taste-skill",
+      "commit": "12af471f627f866411b4bd785b19646d3672784c",
+      "path": "skills/taste-skill/library/palettes.json",
+      "license": "MIT",
+      "authors": [
+        "Leonxlnx"
+      ],
+      "url": "https://github.com/Leonxlnx/taste-skill",
+      "transformations": [
+        "computed WCAG contrast for core pairs"
+      ]
+    },
+    "sourceUrl": "https://github.com/Leonxlnx/taste-skill",
+    "bg": "#ffffff",
+    "surface": "#f4f4f4",
+    "ink": "#111111",
+    "muted": "#6b6b6b",
+    "accent": "#1a4be0",
+    "accentInk": "#ffffff",
+    "fields": [
+      {
+        "bg": "#111111",
+        "ink": "#ffffff"
+      }
+    ],
+    "note": "White holds the whole page with black type, one grey for secondary lines and a pale grey step for tiles and inputs; the footer may invert to black. Blue is the colour of text links and the one button, and nothing else is tinted.",
+    "seenIn": [
+      "opl-shawn-golden",
+      "opl-lovably",
+      "aww-bleibtgleich26"
+    ],
+    "contrast": {
+      "bg-ink": {
+        "foreground": "#ffffff",
+        "background": "#111111",
+        "ratio": 18.88,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      },
+      "bg-muted": {
+        "foreground": "#ffffff",
+        "background": "#6b6b6b",
+        "ratio": 5.33,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": false
+      },
+      "accent-accentInk": {
+        "foreground": "#1a4be0",
+        "background": "#ffffff",
+        "ratio": 6.72,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": false
+      },
+      "surface-ink": {
+        "foreground": "#f4f4f4",
+        "background": "#111111",
+        "ratio": 17.17,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      },
+      "field-1": {
+        "foreground": "#111111",
+        "background": "#ffffff",
+        "ratio": 18.88,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      }
+    }
+  },
+  {
+    "id": "palette/white-signal-red",
+    "kind": "palette",
+    "name": "Signal red, white",
+    "summary": "White ground, black text and paper grey for filled panels, with one full black band allowed. Signal red is the only colour in the interface: one word in a headline, a few solid blocks, or the button.",
+    "domains": [],
+    "sectors": [],
+    "tags": [
+      "mono-accent"
+    ],
+    "moods": [
+      "warm"
+    ],
+    "quality": "verified",
+    "provenance": {
+      "source": "taste-skill",
+      "repo": "https://github.com/Leonxlnx/taste-skill",
+      "commit": "12af471f627f866411b4bd785b19646d3672784c",
+      "path": "skills/taste-skill/library/palettes.json",
+      "license": "MIT",
+      "authors": [
+        "Leonxlnx"
+      ],
+      "url": "https://github.com/Leonxlnx/taste-skill",
+      "transformations": [
+        "computed WCAG contrast for core pairs"
+      ]
+    },
+    "sourceUrl": "https://github.com/Leonxlnx/taste-skill",
+    "bg": "#ffffff",
+    "surface": "#f2f2f2",
+    "ink": "#0a0a0a",
+    "muted": "#6b6b6b",
+    "accent": "#d92b21",
+    "accentInk": "#ffffff",
+    "fields": [
+      {
+        "bg": "#000000",
+        "ink": "#ffffff"
+      }
+    ],
+    "note": "White ground, black text and paper grey for filled panels, with one full black band allowed. Signal red is the only colour in the interface: one word in a headline, a few solid blocks, or the button.",
+    "seenIn": [
+      "opl-rsquad",
+      "aww-serotoninn",
+      "opl-estacion-venenta"
+    ],
+    "contrast": {
+      "bg-ink": {
+        "foreground": "#ffffff",
+        "background": "#0a0a0a",
+        "ratio": 19.8,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      },
+      "bg-muted": {
+        "foreground": "#ffffff",
+        "background": "#6b6b6b",
+        "ratio": 5.33,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": false
+      },
+      "accent-accentInk": {
+        "foreground": "#d92b21",
+        "background": "#ffffff",
+        "ratio": 4.86,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": false
+      },
+      "surface-ink": {
+        "foreground": "#f2f2f2",
+        "background": "#0a0a0a",
+        "ratio": 17.68,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      },
+      "field-1": {
+        "foreground": "#000000",
+        "background": "#ffffff",
+        "ratio": 21,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      }
+    }
+  },
+  {
+    "id": "palette/sky-field-navy",
+    "kind": "palette",
+    "name": "Sky and navy",
+    "summary": "Sky blue sits behind everything, white cards lie on top of it, and navy handles all text and the footer. Orange is for buttons and one highlighted word, so orange against blue is the single clash on the page.",
+    "domains": [],
+    "sectors": [],
+    "tags": [
+      "single-field"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "taste-skill",
+      "repo": "https://github.com/Leonxlnx/taste-skill",
+      "commit": "12af471f627f866411b4bd785b19646d3672784c",
+      "path": "skills/taste-skill/library/palettes.json",
+      "license": "MIT",
+      "authors": [
+        "Leonxlnx"
+      ],
+      "url": "https://github.com/Leonxlnx/taste-skill",
+      "transformations": [
+        "computed WCAG contrast for core pairs"
+      ]
+    },
+    "sourceUrl": "https://github.com/Leonxlnx/taste-skill",
+    "bg": "#6bb4ee",
+    "surface": "#7dbdf0",
+    "ink": "#0e1822",
+    "muted": "#1b3d5c",
+    "accent": "#ff5a1f",
+    "accentInk": "#0e1822",
+    "fields": [
+      {
+        "bg": "#ffffff",
+        "ink": "#0e1822"
+      },
+      {
+        "bg": "#0e1822",
+        "ink": "#ffffff"
+      }
+    ],
+    "note": "Sky blue sits behind everything, white cards lie on top of it, and navy handles all text and the footer. Orange is for buttons and one highlighted word, so orange against blue is the single clash on the page.",
+    "seenIn": [
+      "opl-ohhmydesign",
+      "opl-anidachi"
+    ],
+    "contrast": {
+      "bg-ink": {
+        "foreground": "#6bb4ee",
+        "background": "#0e1822",
+        "ratio": 8.01,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      },
+      "bg-muted": {
+        "foreground": "#6bb4ee",
+        "background": "#1b3d5c",
+        "ratio": 5.02,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": false
+      },
+      "accent-accentInk": {
+        "foreground": "#ff5a1f",
+        "background": "#0e1822",
+        "ratio": 5.74,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": false
+      },
+      "surface-ink": {
+        "foreground": "#7dbdf0",
+        "background": "#0e1822",
+        "ratio": 8.88,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      },
+      "field-1": {
+        "foreground": "#ffffff",
+        "background": "#0e1822",
+        "ratio": 17.91,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      },
+      "field-2": {
+        "foreground": "#0e1822",
+        "background": "#ffffff",
+        "ratio": 17.91,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      }
+    }
+  },
+  {
+    "id": "palette/sky-sand",
+    "kind": "palette",
+    "name": "Sky and sand",
+    "summary": "Sky blue and sand yellow are the constant ground, each holding whole sections, with black text throughout. Saturated colour arrives only as small solid objects, and magenta is kept for the contact card and its button.",
+    "domains": [],
+    "sectors": [],
+    "tags": [
+      "pastel-fields"
+    ],
+    "moods": [
+      "warm"
+    ],
+    "quality": "verified",
+    "provenance": {
+      "source": "taste-skill",
+      "repo": "https://github.com/Leonxlnx/taste-skill",
+      "commit": "12af471f627f866411b4bd785b19646d3672784c",
+      "path": "skills/taste-skill/library/palettes.json",
+      "license": "MIT",
+      "authors": [
+        "Leonxlnx"
+      ],
+      "url": "https://github.com/Leonxlnx/taste-skill",
+      "transformations": [
+        "computed WCAG contrast for core pairs"
+      ]
+    },
+    "sourceUrl": "https://github.com/Leonxlnx/taste-skill",
+    "bg": "#cbe4f2",
+    "surface": "#bcdcee",
+    "ink": "#0a0a0a",
+    "muted": "#44606e",
+    "accent": "#b0298f",
+    "accentInk": "#ffffff",
+    "fields": [
+      {
+        "bg": "#cbe4f2",
+        "ink": "#0a0a0a"
+      },
+      {
+        "bg": "#f1e3b5",
+        "ink": "#0a0a0a"
+      },
+      {
+        "bg": "#ffc013",
+        "ink": "#0a0a0a"
+      },
+      {
+        "bg": "#0a0a0a",
+        "ink": "#f2f2f2"
+      }
+    ],
+    "note": "Sky blue and sand yellow are the constant ground, each holding whole sections, with black text throughout. Saturated colour arrives only as small solid objects, and magenta is kept for the contact card and its button.",
+    "seenIn": [
+      "opl-applied-imagination"
+    ],
+    "contrast": {
+      "bg-ink": {
+        "foreground": "#cbe4f2",
+        "background": "#0a0a0a",
+        "ratio": 15.01,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      },
+      "bg-muted": {
+        "foreground": "#cbe4f2",
+        "background": "#44606e",
+        "ratio": 5.06,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": false
+      },
+      "accent-accentInk": {
+        "foreground": "#b0298f",
+        "background": "#ffffff",
+        "ratio": 5.9,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": false
+      },
+      "surface-ink": {
+        "foreground": "#bcdcee",
+        "background": "#0a0a0a",
+        "ratio": 13.77,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      },
+      "field-1": {
+        "foreground": "#cbe4f2",
+        "background": "#0a0a0a",
+        "ratio": 15.01,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      },
+      "field-2": {
+        "foreground": "#f1e3b5",
+        "background": "#0a0a0a",
+        "ratio": 15.46,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      },
+      "field-3": {
+        "foreground": "#ffc013",
+        "background": "#0a0a0a",
+        "ratio": 12.07,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      },
+      "field-4": {
+        "foreground": "#0a0a0a",
+        "background": "#f2f2f2",
+        "ratio": 17.68,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      }
+    }
+  },
+  {
+    "id": "palette/soot-pale-lime",
+    "kind": "palette",
+    "name": "Soot and lime",
+    "summary": "A soot-black opening and close bracket white middle sections, all in black, white and grey. Pale lime is the single action colour: every button, and at most one headline set in it on the dark ground.",
+    "domains": [],
+    "sectors": [],
+    "tags": [
+      "mono-accent",
+      "dark-neutral"
+    ],
+    "moods": [
+      "dark"
+    ],
+    "quality": "verified",
+    "provenance": {
+      "source": "taste-skill",
+      "repo": "https://github.com/Leonxlnx/taste-skill",
+      "commit": "12af471f627f866411b4bd785b19646d3672784c",
+      "path": "skills/taste-skill/library/palettes.json",
+      "license": "MIT",
+      "authors": [
+        "Leonxlnx"
+      ],
+      "url": "https://github.com/Leonxlnx/taste-skill",
+      "transformations": [
+        "computed WCAG contrast for core pairs"
+      ]
+    },
+    "sourceUrl": "https://github.com/Leonxlnx/taste-skill",
+    "bg": "#0f0f0f",
+    "surface": "#1a1a1a",
+    "ink": "#ffffff",
+    "muted": "#8f8f8f",
+    "accent": "#dafa9c",
+    "accentInk": "#0f0f0f",
+    "fields": [
+      {
+        "bg": "#ffffff",
+        "ink": "#0f0f0f"
+      },
+      {
+        "bg": "#dafa9c",
+        "ink": "#0f0f0f"
+      }
+    ],
+    "note": "A soot-black opening and close bracket white middle sections, all in black, white and grey. Pale lime is the single action colour: every button, and at most one headline set in it on the dark ground.",
+    "seenIn": [
+      "opl-builders-table",
+      "aww-made-with-gsap-1",
+      "aww-hilden-kaira"
+    ],
+    "contrast": {
+      "bg-ink": {
+        "foreground": "#0f0f0f",
+        "background": "#ffffff",
+        "ratio": 19.17,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      },
+      "bg-muted": {
+        "foreground": "#0f0f0f",
+        "background": "#8f8f8f",
+        "ratio": 5.93,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": false
+      },
+      "accent-accentInk": {
+        "foreground": "#dafa9c",
+        "background": "#0f0f0f",
+        "ratio": 16.55,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      },
+      "surface-ink": {
+        "foreground": "#1a1a1a",
+        "background": "#ffffff",
+        "ratio": 17.4,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      },
+      "field-1": {
+        "foreground": "#ffffff",
+        "background": "#0f0f0f",
+        "ratio": 19.17,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      },
+      "field-2": {
+        "foreground": "#dafa9c",
+        "background": "#0f0f0f",
+        "ratio": 16.55,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      }
+    }
+  },
+  {
+    "id": "palette/stone-blueprint",
+    "kind": "palette",
+    "name": "Stone and blueprint",
+    "summary": "Stone paper carries the whole page with near-black and grey text. One image at a time is printed in the accent blue as its only ink, and the same blue fills the single button.",
+    "domains": [],
+    "sectors": [],
+    "tags": [
+      "light-neutral"
+    ],
+    "moods": [
+      "dark",
+      "warm"
+    ],
+    "quality": "verified",
+    "provenance": {
+      "source": "taste-skill",
+      "repo": "https://github.com/Leonxlnx/taste-skill",
+      "commit": "12af471f627f866411b4bd785b19646d3672784c",
+      "path": "skills/taste-skill/library/palettes.json",
+      "license": "MIT",
+      "authors": [
+        "Leonxlnx"
+      ],
+      "url": "https://github.com/Leonxlnx/taste-skill",
+      "transformations": [
+        "computed WCAG contrast for core pairs"
+      ]
+    },
+    "sourceUrl": "https://github.com/Leonxlnx/taste-skill",
+    "bg": "#dfdedb",
+    "surface": "#d3d2ce",
+    "ink": "#26251e",
+    "muted": "#5f5d55",
+    "accent": "#2456d6",
+    "accentInk": "#ffffff",
+    "fields": [],
+    "note": "Stone paper carries the whole page with near-black and grey text. One image at a time is printed in the accent blue as its only ink, and the same blue fills the single button.",
+    "seenIn": [
+      "opl-compile"
+    ],
+    "contrast": {
+      "bg-ink": {
+        "foreground": "#dfdedb",
+        "background": "#26251e",
+        "ratio": 11.43,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      },
+      "bg-muted": {
+        "foreground": "#dfdedb",
+        "background": "#5f5d55",
+        "ratio": 4.9,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": false
+      },
+      "accent-accentInk": {
+        "foreground": "#2456d6",
+        "background": "#ffffff",
+        "ratio": 6.22,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": false
+      },
+      "surface-ink": {
+        "foreground": "#d3d2ce",
+        "background": "#26251e",
+        "ratio": 10.16,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      }
+    }
+  },
+  {
+    "id": "palette/studio-grey",
+    "kind": "palette",
+    "name": "Studio grey",
+    "summary": "One mid grey serves as both page and studio backdrop, so the photographed object seems to stand on the page itself; type is black and one black band comes late. Colour comes only from the product, and racing green is for the single button.",
+    "domains": [],
+    "sectors": [],
+    "tags": [
+      "photographic-neutral"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "taste-skill",
+      "repo": "https://github.com/Leonxlnx/taste-skill",
+      "commit": "12af471f627f866411b4bd785b19646d3672784c",
+      "path": "skills/taste-skill/library/palettes.json",
+      "license": "MIT",
+      "authors": [
+        "Leonxlnx"
+      ],
+      "url": "https://github.com/Leonxlnx/taste-skill",
+      "transformations": [
+        "computed WCAG contrast for core pairs"
+      ]
+    },
+    "sourceUrl": "https://github.com/Leonxlnx/taste-skill",
+    "bg": "#a8a8aa",
+    "surface": "#b4b4b6",
+    "ink": "#0e0e0e",
+    "muted": "#3a3a3c",
+    "accent": "#1f5c49",
+    "accentInk": "#ffffff",
+    "fields": [
+      {
+        "bg": "#1b1b1c",
+        "ink": "#ffffff"
+      }
+    ],
+    "note": "One mid grey serves as both page and studio backdrop, so the photographed object seems to stand on the page itself; type is black and one black band comes late. Colour comes only from the product, and racing green is for the single button.",
+    "seenIn": [
+      "aww-longbow",
+      "aww-l-i-s-a"
+    ],
+    "contrast": {
+      "bg-ink": {
+        "foreground": "#a8a8aa",
+        "background": "#0e0e0e",
+        "ratio": 8.13,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      },
+      "bg-muted": {
+        "foreground": "#a8a8aa",
+        "background": "#3a3a3c",
+        "ratio": 4.78,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": false
+      },
+      "accent-accentInk": {
+        "foreground": "#1f5c49",
+        "background": "#ffffff",
+        "ratio": 7.82,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      },
+      "surface-ink": {
+        "foreground": "#b4b4b6",
+        "background": "#0e0e0e",
+        "ratio": 9.33,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      },
+      "field-1": {
+        "foreground": "#1b1b1c",
+        "background": "#ffffff",
+        "ratio": 17.21,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      }
+    }
+  },
+  {
+    "id": "palette/swap-pastels",
+    "kind": "palette",
+    "name": "Swapping pastels",
+    "summary": "One flat pastel is the whole background and it swaps per project or chapter: periwinkle, pink, sand, sage, peach. Type and one solid box stay near-black on all five, and dark teal is only for the button.",
+    "domains": [],
+    "sectors": [],
+    "tags": [
+      "pastel-fields"
+    ],
+    "moods": [
+      "dark",
+      "warm"
+    ],
+    "quality": "verified",
+    "provenance": {
+      "source": "taste-skill",
+      "repo": "https://github.com/Leonxlnx/taste-skill",
+      "commit": "12af471f627f866411b4bd785b19646d3672784c",
+      "path": "skills/taste-skill/library/palettes.json",
+      "license": "MIT",
+      "authors": [
+        "Leonxlnx"
+      ],
+      "url": "https://github.com/Leonxlnx/taste-skill",
+      "transformations": [
+        "computed WCAG contrast for core pairs"
+      ]
+    },
+    "sourceUrl": "https://github.com/Leonxlnx/taste-skill",
+    "bg": "#c3cbe5",
+    "surface": "#d0d6eb",
+    "ink": "#141414",
+    "muted": "#4a5068",
+    "accent": "#0f5257",
+    "accentInk": "#ffffff",
+    "fields": [
+      {
+        "bg": "#c3cbe5",
+        "ink": "#141414"
+      },
+      {
+        "bg": "#efd3da",
+        "ink": "#141414"
+      },
+      {
+        "bg": "#e6dccd",
+        "ink": "#141414"
+      },
+      {
+        "bg": "#cfd3cb",
+        "ink": "#141414"
+      },
+      {
+        "bg": "#f9cdbd",
+        "ink": "#141414"
+      }
+    ],
+    "note": "One flat pastel is the whole background and it swaps per project or chapter: periwinkle, pink, sand, sage, peach. Type and one solid box stay near-black on all five, and dark teal is only for the button.",
+    "seenIn": [
+      "opl-belen-jones"
+    ],
+    "contrast": {
+      "bg-ink": {
+        "foreground": "#c3cbe5",
+        "background": "#141414",
+        "ratio": 11.4,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      },
+      "bg-muted": {
+        "foreground": "#c3cbe5",
+        "background": "#4a5068",
+        "ratio": 4.92,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": false
+      },
+      "accent-accentInk": {
+        "foreground": "#0f5257",
+        "background": "#ffffff",
+        "ratio": 8.88,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      },
+      "surface-ink": {
+        "foreground": "#d0d6eb",
+        "background": "#141414",
+        "ratio": 12.72,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      },
+      "field-1": {
+        "foreground": "#c3cbe5",
+        "background": "#141414",
+        "ratio": 11.4,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      },
+      "field-2": {
+        "foreground": "#efd3da",
+        "background": "#141414",
+        "ratio": 13.16,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      },
+      "field-3": {
+        "foreground": "#e6dccd",
+        "background": "#141414",
+        "ratio": 13.58,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      },
+      "field-4": {
+        "foreground": "#cfd3cb",
+        "background": "#141414",
+        "ratio": 12.14,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      },
+      "field-5": {
+        "foreground": "#f9cdbd",
+        "background": "#141414",
+        "ratio": 12.72,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      }
+    }
+  },
+  {
+    "id": "palette/teal-on-paper",
+    "kind": "palette",
+    "name": "Teal on paper",
+    "summary": "Cool white paper and a single teal used for every word, shape and button, with no black anywhere. The accent is that same teal filled solid, for the button and for one inverted band with paper-coloured type.",
+    "domains": [],
+    "sectors": [],
+    "tags": [
+      "two-tone"
+    ],
+    "moods": [
+      "warm"
+    ],
+    "quality": "verified",
+    "provenance": {
+      "source": "taste-skill",
+      "repo": "https://github.com/Leonxlnx/taste-skill",
+      "commit": "12af471f627f866411b4bd785b19646d3672784c",
+      "path": "skills/taste-skill/library/palettes.json",
+      "license": "MIT",
+      "authors": [
+        "Leonxlnx"
+      ],
+      "url": "https://github.com/Leonxlnx/taste-skill",
+      "transformations": [
+        "computed WCAG contrast for core pairs"
+      ]
+    },
+    "sourceUrl": "https://github.com/Leonxlnx/taste-skill",
+    "bg": "#f7f9f8",
+    "surface": "#ebf0ee",
+    "ink": "#06525c",
+    "muted": "#2f737d",
+    "accent": "#06525c",
+    "accentInk": "#f7f9f8",
+    "fields": [
+      {
+        "bg": "#06525c",
+        "ink": "#f7f9f8"
+      }
+    ],
+    "note": "Cool white paper and a single teal used for every word, shape and button, with no black anywhere. The accent is that same teal filled solid, for the button and for one inverted band with paper-coloured type.",
+    "seenIn": [
+      "opl-le-petit-bleu"
+    ],
+    "contrast": {
+      "bg-ink": {
+        "foreground": "#f7f9f8",
+        "background": "#06525c",
+        "ratio": 8.38,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      },
+      "bg-muted": {
+        "foreground": "#f7f9f8",
+        "background": "#2f737d",
+        "ratio": 5.13,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": false
+      },
+      "accent-accentInk": {
+        "foreground": "#06525c",
+        "background": "#f7f9f8",
+        "ratio": 8.38,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      },
+      "surface-ink": {
+        "foreground": "#ebf0ee",
+        "background": "#06525c",
+        "ratio": 7.7,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      },
+      "field-1": {
+        "foreground": "#06525c",
+        "background": "#f7f9f8",
+        "ratio": 8.38,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      }
+    }
+  },
+  {
+    "id": "palette/three-stones",
+    "kind": "palette",
+    "name": "Three stones",
+    "summary": "Three close stone tones share the interface: the lightest for the page, the middle one for panels, the darkest for a single band, all with charcoal type. Saturated colour is left to the photographs and their backdrops; the grey-green fills the button only.",
+    "domains": [],
+    "sectors": [],
+    "tags": [
+      "light-neutral",
+      "photographic-neutral"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "taste-skill",
+      "repo": "https://github.com/Leonxlnx/taste-skill",
+      "commit": "12af471f627f866411b4bd785b19646d3672784c",
+      "path": "skills/taste-skill/library/palettes.json",
+      "license": "MIT",
+      "authors": [
+        "Leonxlnx"
+      ],
+      "url": "https://github.com/Leonxlnx/taste-skill",
+      "transformations": [
+        "computed WCAG contrast for core pairs"
+      ]
+    },
+    "sourceUrl": "https://github.com/Leonxlnx/taste-skill",
+    "bg": "#eeecea",
+    "surface": "#e4e1dd",
+    "ink": "#333231",
+    "muted": "#6b6763",
+    "accent": "#5c6b54",
+    "accentInk": "#ffffff",
+    "fields": [
+      {
+        "bg": "#cdc3b6",
+        "ink": "#333231"
+      }
+    ],
+    "note": "Three close stone tones share the interface: the lightest for the page, the middle one for panels, the darkest for a single band, all with charcoal type. Saturated colour is left to the photographs and their backdrops; the grey-green fills the button only.",
+    "seenIn": [
+      "aww-noho",
+      "aww-vero-new-york"
+    ],
+    "contrast": {
+      "bg-ink": {
+        "foreground": "#eeecea",
+        "background": "#333231",
+        "ratio": 10.86,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      },
+      "bg-muted": {
+        "foreground": "#eeecea",
+        "background": "#6b6763",
+        "ratio": 4.76,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": false
+      },
+      "accent-accentInk": {
+        "foreground": "#5c6b54",
+        "background": "#ffffff",
+        "ratio": 5.7,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": false
+      },
+      "surface-ink": {
+        "foreground": "#e4e1dd",
+        "background": "#333231",
+        "ratio": 9.82,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      },
+      "field-1": {
+        "foreground": "#cdc3b6",
+        "background": "#333231",
+        "ratio": 7.36,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      }
+    }
+  },
+  {
+    "id": "palette/tobacco-olive",
+    "kind": "palette",
+    "name": "Tobacco and olive",
+    "summary": "Tobacco brown fills the page with bone type, and photographs stay in browns and ochre. One olive block holds the main text or the button, and a single ochre band may break the brown once.",
+    "domains": [],
+    "sectors": [],
+    "tags": [
+      "single-field",
+      "earth"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "taste-skill",
+      "repo": "https://github.com/Leonxlnx/taste-skill",
+      "commit": "12af471f627f866411b4bd785b19646d3672784c",
+      "path": "skills/taste-skill/library/palettes.json",
+      "license": "MIT",
+      "authors": [
+        "Leonxlnx"
+      ],
+      "url": "https://github.com/Leonxlnx/taste-skill",
+      "transformations": [
+        "computed WCAG contrast for core pairs"
+      ]
+    },
+    "sourceUrl": "https://github.com/Leonxlnx/taste-skill",
+    "bg": "#472913",
+    "surface": "#55321a",
+    "ink": "#e4e0cf",
+    "muted": "#b39f84",
+    "accent": "#525e1b",
+    "accentInk": "#e4e0cf",
+    "fields": [
+      {
+        "bg": "#c79a3e",
+        "ink": "#2b170a"
+      },
+      {
+        "bg": "#525e1b",
+        "ink": "#e4e0cf"
+      }
+    ],
+    "note": "Tobacco brown fills the page with bone type, and photographs stay in browns and ochre. One olive block holds the main text or the button, and a single ochre band may break the brown once.",
+    "seenIn": [
+      "aww-the-tuscan-journey-begins"
+    ],
+    "contrast": {
+      "bg-ink": {
+        "foreground": "#472913",
+        "background": "#e4e0cf",
+        "ratio": 9.95,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      },
+      "bg-muted": {
+        "foreground": "#472913",
+        "background": "#b39f84",
+        "ratio": 5.15,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": false
+      },
+      "accent-accentInk": {
+        "foreground": "#525e1b",
+        "background": "#e4e0cf",
+        "ratio": 5.33,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": false
+      },
+      "surface-ink": {
+        "foreground": "#55321a",
+        "background": "#e4e0cf",
+        "ratio": 8.54,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      },
+      "field-1": {
+        "foreground": "#c79a3e",
+        "background": "#2b170a",
+        "ratio": 6.6,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": false
+      },
+      "field-2": {
+        "foreground": "#525e1b",
+        "background": "#e4e0cf",
+        "ratio": 5.33,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": false
+      }
+    }
+  },
+  {
+    "id": "palette/ultramarine-yellow",
+    "kind": "palette",
+    "name": "Ultramarine and yellow",
+    "summary": "Each section is one flat field in sequence: ultramarine, black, yellow, then ultramarine again, with white type on blue and black, and black type on yellow. Green is the only small accent and never grows larger than a button.",
+    "domains": [],
+    "sectors": [],
+    "tags": [
+      "flat-loud"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "taste-skill",
+      "repo": "https://github.com/Leonxlnx/taste-skill",
+      "commit": "12af471f627f866411b4bd785b19646d3672784c",
+      "path": "skills/taste-skill/library/palettes.json",
+      "license": "MIT",
+      "authors": [
+        "Leonxlnx"
+      ],
+      "url": "https://github.com/Leonxlnx/taste-skill",
+      "transformations": [
+        "computed WCAG contrast for core pairs"
+      ]
+    },
+    "sourceUrl": "https://github.com/Leonxlnx/taste-skill",
+    "bg": "#1423b8",
+    "surface": "#1220a6",
+    "ink": "#ffffff",
+    "muted": "#b4bcf0",
+    "accent": "#1fc27a",
+    "accentInk": "#0a0a0a",
+    "fields": [
+      {
+        "bg": "#1423b8",
+        "ink": "#ffffff"
+      },
+      {
+        "bg": "#000000",
+        "ink": "#ffffff"
+      },
+      {
+        "bg": "#f7dd47",
+        "ink": "#000000"
+      },
+      {
+        "bg": "#e9479f",
+        "ink": "#000000"
+      }
+    ],
+    "note": "Each section is one flat field in sequence: ultramarine, black, yellow, then ultramarine again, with white type on blue and black, and black type on yellow. Green is the only small accent and never grows larger than a button.",
+    "seenIn": [
+      "aww-warm-fuzzy",
+      "aww-px-push"
+    ],
+    "contrast": {
+      "bg-ink": {
+        "foreground": "#1423b8",
+        "background": "#ffffff",
+        "ratio": 10.7,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      },
+      "bg-muted": {
+        "foreground": "#1423b8",
+        "background": "#b4bcf0",
+        "ratio": 5.81,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": false
+      },
+      "accent-accentInk": {
+        "foreground": "#1fc27a",
+        "background": "#0a0a0a",
+        "ratio": 8.54,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      },
+      "surface-ink": {
+        "foreground": "#1220a6",
+        "background": "#ffffff",
+        "ratio": 11.78,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      },
+      "field-1": {
+        "foreground": "#1423b8",
+        "background": "#ffffff",
+        "ratio": 10.7,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      },
+      "field-2": {
+        "foreground": "#000000",
+        "background": "#ffffff",
+        "ratio": 21,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      },
+      "field-3": {
+        "foreground": "#f7dd47",
+        "background": "#000000",
+        "ratio": 15.39,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      },
+      "field-4": {
+        "foreground": "#e9479f",
+        "background": "#000000",
+        "ratio": 5.87,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": false
+      }
+    }
+  },
+  {
+    "id": "palette/walnut-tan",
+    "kind": "palette",
+    "name": "Walnut and tan",
+    "summary": "Dark walnut holds the opening and the close with bone type, and the middle of the page may turn to flat tan around honey-lit photographs. There is no bright accent: tan is the fill for the one button on walnut.",
+    "domains": [],
+    "sectors": [],
+    "tags": [
+      "photographic-neutral",
+      "earth"
+    ],
+    "moods": [
+      "dark"
+    ],
+    "quality": "verified",
+    "provenance": {
+      "source": "taste-skill",
+      "repo": "https://github.com/Leonxlnx/taste-skill",
+      "commit": "12af471f627f866411b4bd785b19646d3672784c",
+      "path": "skills/taste-skill/library/palettes.json",
+      "license": "MIT",
+      "authors": [
+        "Leonxlnx"
+      ],
+      "url": "https://github.com/Leonxlnx/taste-skill",
+      "transformations": [
+        "computed WCAG contrast for core pairs"
+      ]
+    },
+    "sourceUrl": "https://github.com/Leonxlnx/taste-skill",
+    "bg": "#2b2216",
+    "surface": "#382d1e",
+    "ink": "#e4e2da",
+    "muted": "#a39a8b",
+    "accent": "#bda38b",
+    "accentInk": "#2b2216",
+    "fields": [
+      {
+        "bg": "#bda38b",
+        "ink": "#1c150d"
+      }
+    ],
+    "note": "Dark walnut holds the opening and the close with bone type, and the middle of the page may turn to flat tan around honey-lit photographs. There is no bright accent: tan is the fill for the one button on walnut.",
+    "seenIn": [
+      "opl-the-deep-end"
+    ],
+    "contrast": {
+      "bg-ink": {
+        "foreground": "#2b2216",
+        "background": "#e4e2da",
+        "ratio": 12.05,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      },
+      "bg-muted": {
+        "foreground": "#2b2216",
+        "background": "#a39a8b",
+        "ratio": 5.62,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": false
+      },
+      "accent-accentInk": {
+        "foreground": "#bda38b",
+        "background": "#2b2216",
+        "ratio": 6.53,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": false
+      },
+      "surface-ink": {
+        "foreground": "#382d1e",
+        "background": "#e4e2da",
+        "ratio": 10.36,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      },
+      "field-1": {
+        "foreground": "#bda38b",
+        "background": "#1c150d",
+        "ratio": 7.55,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      }
+    }
+  },
+  {
+    "id": "palette/warm-black-gold",
+    "kind": "palette",
+    "name": "Warm black, gold",
+    "summary": "Warm near-black fills the page and photographs sit bright against it, with pure white small type; panels warm to a brown-black. Gold is for one text link or small button per screen, never a field.",
+    "domains": [],
+    "sectors": [],
+    "tags": [
+      "dark-neutral",
+      "photographic-neutral"
+    ],
+    "moods": [
+      "dark",
+      "warm"
+    ],
+    "quality": "verified",
+    "provenance": {
+      "source": "taste-skill",
+      "repo": "https://github.com/Leonxlnx/taste-skill",
+      "commit": "12af471f627f866411b4bd785b19646d3672784c",
+      "path": "skills/taste-skill/library/palettes.json",
+      "license": "MIT",
+      "authors": [
+        "Leonxlnx"
+      ],
+      "url": "https://github.com/Leonxlnx/taste-skill",
+      "transformations": [
+        "computed WCAG contrast for core pairs"
+      ]
+    },
+    "sourceUrl": "https://github.com/Leonxlnx/taste-skill",
+    "bg": "#0c0a08",
+    "surface": "#181512",
+    "ink": "#ffffff",
+    "muted": "#8f8a84",
+    "accent": "#c9a45a",
+    "accentInk": "#0c0a08",
+    "fields": [],
+    "note": "Warm near-black fills the page and photographs sit bright against it, with pure white small type; panels warm to a brown-black. Gold is for one text link or small button per screen, never a field.",
+    "seenIn": [
+      "aww-cipher",
+      "opl-hebbia"
+    ],
+    "contrast": {
+      "bg-ink": {
+        "foreground": "#0c0a08",
+        "background": "#ffffff",
+        "ratio": 19.76,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      },
+      "bg-muted": {
+        "foreground": "#0c0a08",
+        "background": "#8f8a84",
+        "ratio": 5.78,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": false
+      },
+      "accent-accentInk": {
+        "foreground": "#c9a45a",
+        "background": "#0c0a08",
+        "ratio": 8.41,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      },
+      "surface-ink": {
+        "foreground": "#181512",
+        "background": "#ffffff",
+        "ratio": 18.18,
+        "aaNormal": true,
+        "aaLarge": true,
+        "aaaNormal": true
+      }
+    }
+  }
+]

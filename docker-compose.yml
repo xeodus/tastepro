@@ -1,0 +1,27 @@
+name: tastepro
+
+services:
+  tastepro:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: tastepro:local
+    restart: unless-stopped
+    init: true
+    ports:
+      # Local only. Do not bind this to 0.0.0.0 without auth and a proxy.
+      - "127.0.0.1:${TASTEPRO_PORT:-3000}:3000"
+    environment:
+      TASTEPRO_HOST: 0.0.0.0
+      TASTEPRO_PORT: "3000"
+      TASTEPRO_LOG_LEVEL: ${TASTEPRO_LOG_LEVEL:-info}
+      TASTEPRO_API_KEY: ${TASTEPRO_API_KEY:-}
+      TASTEPRO_CORS_ORIGIN: ${TASTEPRO_CORS_ORIGIN:-}
+      TASTEPRO_ALLOWED_HOSTS: ${TASTEPRO_ALLOWED_HOSTS:-}
+    read_only: true
+    tmpfs:
+      - /tmp:size=16m,mode=1777
+    security_opt:
+      - no-new-privileges:true
+    cap_drop:
+      - ALL

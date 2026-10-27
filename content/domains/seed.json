@@ -1,0 +1,1102 @@
+{
+  "developer-tools": {
+    "audience": [
+      "Engineers evaluating infrastructure",
+      "Platform, DevOps, and security leads",
+      "Technical founders who still read the docs"
+    ],
+    "jobs": [
+      "Understand what the product does in one screen",
+      "See a real request, response, or terminal output",
+      "Evaluate latency, reliability, limits, and security",
+      "Find pricing and the shortest integration path",
+      "Start a first call without a sales conversation"
+    ],
+    "trust": [
+      "Real code and terminal output, not a code screenshot",
+      "Status page, incident history, and uptime with units",
+      "Security, compliance, and data-handling page",
+      "Open-source repository, changelog, or public roadmap",
+      "Named customers with permission and a specific outcome"
+    ],
+    "informationArchitecture": [
+      "intro",
+      "proof",
+      "features",
+      "how-it-works",
+      "pricing",
+      "faq",
+      "cta",
+      "footer"
+    ],
+    "conversion": "Make the path install → key → first call → verify. Put a copy-paste snippet and a believable response next to the CTA, and state what happens after the first call.",
+    "contentChecklist": [
+      "Install command for each supported runtime",
+      "Authentication model and key handling",
+      "Rate limits, quotas, and overage behavior",
+      "Error model with one real error example",
+      "SDK languages and versions",
+      "Pricing units and a worked example",
+      "Status page and support path",
+      "Security and data residency"
+    ],
+    "antiPatterns": [
+      "A fake dashboard instead of a real API response",
+      "Generic gradient hero with no product evidence",
+      "“AI-powered” claims without a concrete capability",
+      "Pricing hidden behind “contact sales” when self-serve exists",
+      "Docs links that dead-end or require a login",
+      "Code shown only as a styled screenshot"
+    ],
+    "signatureMoves": [
+      "A live request/response or terminal transcript in the hero",
+      "Latency and reliability numbers with units and dates",
+      "A comparison table that names the tradeoff, not just the win",
+      "A first-call tutorial that fits on one screen",
+      "Architecture diagram only where it explains a real boundary"
+    ],
+    "recommendedDirections": [
+      "product-performs",
+      "quiet-instrument",
+      "one-motif",
+      "sentence-as-layout"
+    ],
+    "recommendedSections": [
+      "intro",
+      "proof",
+      "features",
+      "how-it-works",
+      "pricing",
+      "faq",
+      "cta",
+      "footer"
+    ],
+    "recommendedPalettes": [
+      "white-navy-tab",
+      "cool-white-slate",
+      "black-crimson",
+      "charcoal-room-sage"
+    ],
+    "questions": [
+      "Which runtime and deployment model is the primary path?",
+      "Can the page show a real response without exposing customer data?",
+      "Which number is the honest proof: latency, uptime, throughput, or adoption?"
+    ],
+    "liveThing": "A real request/response or CLI call that a visitor can run from the page.",
+    "notes": "Developer audiences reward precision and punish theatre. The page should read like a well-kept README with a point of view: fast to scan, concrete, and honest about limits."
+  },
+  "ai-products": {
+    "audience": [
+      "Teams evaluating AI-native tools",
+      "Builders and operators who need a specific outcome",
+      "Technical buyers assessing model and data risk"
+    ],
+    "jobs": [
+      "Understand the specific capability",
+      "See a real input and output",
+      "Evaluate quality, latency, and failure modes",
+      "Understand data handling and model choice",
+      "Try the product or start a pilot"
+    ],
+    "trust": [
+      "A real example with input, output, and limitations",
+      "Evaluation results with methodology",
+      "Data retention, training, and privacy terms",
+      "Model/provider disclosure where it matters",
+      "Human fallback and failure behavior"
+    ],
+    "informationArchitecture": [
+      "intro",
+      "showcase",
+      "how-it-works",
+      "proof",
+      "pricing",
+      "faq",
+      "cta",
+      "footer"
+    ],
+    "conversion": "Let the visitor see the product do the job, then offer the smallest honest next step: a sample, a playground, a template, or a pilot. Do not make them imagine the output.",
+    "contentChecklist": [
+      "One concrete use case with a real example",
+      "Input and output pair",
+      "Quality and latency evidence",
+      "Model and data-handling disclosure",
+      "Limits and failure modes",
+      "Pricing and usage units",
+      "Security and privacy",
+      "Human support path"
+    ],
+    "antiPatterns": [
+      "Robot icons, neural-network decoration, and purple gradients as the whole idea",
+      "A fake chat window with invented answers",
+      "“Revolutionary” copy with no measurable outcome",
+      "Hiding model/provider or data-retention terms",
+      "Demo output that is obviously too perfect",
+      "Ignoring latency and failure states"
+    ],
+    "signatureMoves": [
+      "A real before/after task with a visible output",
+      "A small, honest evaluation table",
+      "A failure case shown next to the success case",
+      "A model/data card that reads like a product spec",
+      "A live playground seeded with a real example"
+    ],
+    "recommendedDirections": ["product-performs", "quiet-instrument", "one-motif", "hero-object"],
+    "recommendedSections": [
+      "intro",
+      "showcase",
+      "how-it-works",
+      "proof",
+      "pricing",
+      "faq",
+      "cta",
+      "footer"
+    ],
+    "recommendedPalettes": [
+      "lunar-grey-bronze",
+      "soot-pale-lime",
+      "cool-white-slate",
+      "plum-black-pink"
+    ],
+    "questions": [
+      "What is the one job the model does better than a general assistant?",
+      "What does a bad output look like, and what happens then?",
+      "Which data can never leave the customer's boundary?"
+    ],
+    "liveThing": "A real task input and output pair, with a visible failure case.",
+    "notes": "The category is crowded with abstraction. The differentiator is evidence: a real task, a real output, and a clear account of when the product should not be used."
+  },
+  "b2b-saas": {
+    "audience": [
+      "Department leads with a workflow problem",
+      "Daily users who will live in the product",
+      "Finance and security approvers"
+    ],
+    "jobs": [
+      "Recognize their current workflow in the page",
+      "See the after-state and the product surface",
+      "Understand integrations and migration",
+      "Evaluate security, admin, and ROI",
+      "Book a demo or start a trial"
+    ],
+    "trust": [
+      "A real product surface, not a generic dashboard",
+      "Named customer story with a measurable change",
+      "Security and admin controls",
+      "Migration and onboarding process",
+      "Clear pricing or a transparent sales process"
+    ],
+    "informationArchitecture": [
+      "intro",
+      "proof",
+      "features",
+      "how-it-works",
+      "testimonial",
+      "pricing",
+      "faq",
+      "cta",
+      "footer"
+    ],
+    "conversion": "Choose one primary path for the page's audience: self-serve trial or a qualified demo. Show what happens in the first week, who owns the rollout, and what the buyer needs to bring.",
+    "contentChecklist": [
+      "The before/after workflow",
+      "A real product surface",
+      "Integrations and import path",
+      "Security, permissions, and audit logs",
+      "Admin and onboarding model",
+      "Pricing or sales qualification",
+      "Customer proof with a metric",
+      "Support and SLA"
+    ],
+    "antiPatterns": [
+      "Three generic feature cards with icons",
+      "A dashboard mockup that could belong to any product",
+      "“Trusted by” logos with no story or permission",
+      "A demo CTA that hides all pricing",
+      "Feature names that only the internal team understands",
+      "Ignoring the daily user in favor of the buyer"
+    ],
+    "signatureMoves": [
+      "A workflow shown as a before/after sequence",
+      "A product surface with real data and a clear primary action",
+      "A customer story anchored to one operational metric",
+      "An admin/security panel shown as part of the product",
+      "A migration checklist that reduces risk"
+    ],
+    "recommendedDirections": [
+      "quiet-instrument",
+      "product-performs",
+      "editorial-report",
+      "one-motif"
+    ],
+    "recommendedSections": [
+      "intro",
+      "proof",
+      "features",
+      "how-it-works",
+      "testimonial",
+      "pricing",
+      "faq",
+      "cta",
+      "footer"
+    ],
+    "recommendedPalettes": [
+      "white-navy-tab",
+      "cool-grey-cobalt",
+      "paper-grey-brass",
+      "cool-white-slate"
+    ],
+    "questions": [
+      "Who feels the pain daily, and who signs the contract?",
+      "What is the current workaround, and why is it failing?",
+      "Which integration or migration is the real blocker?"
+    ],
+    "liveThing": "A small, real workflow that can be tried without a sales call.",
+    "notes": "B2B pages often sell to the buyer and forget the user. Show the work, the admin model, and the migration path; those are the real objections."
+  },
+  "fintech-payments": {
+    "audience": [
+      "Developers integrating payments",
+      "Finance and operations teams",
+      "Founders choosing a banking or treasury partner"
+    ],
+    "jobs": [
+      "Understand the exact product and fee",
+      "See the money flow and settlement timing",
+      "Evaluate security, compliance, and licensing",
+      "Compare plans or rates",
+      "Start an application or integration"
+    ],
+    "trust": [
+      "Regulatory status and licensing",
+      "Security and fraud controls",
+      "Fee schedule with a worked example",
+      "Settlement and reconciliation details",
+      "Named customers or audited partners"
+    ],
+    "informationArchitecture": [
+      "intro",
+      "how-it-works",
+      "features",
+      "proof",
+      "pricing",
+      "faq",
+      "cta",
+      "footer"
+    ],
+    "conversion": "Make the fee and the next step unambiguous. For developers, show the API call; for finance teams, show the settlement statement and reconciliation path. Never hide eligibility or risk.",
+    "contentChecklist": [
+      "Fee schedule and a worked example",
+      "Eligibility and geographic coverage",
+      "Settlement timing and reconciliation",
+      "Security, fraud, and dispute handling",
+      "Regulatory and licensing status",
+      "API or dashboard entry point",
+      "Support and escalation",
+      "Data and privacy terms"
+    ],
+    "antiPatterns": [
+      "A dark hero with a floating card and no product",
+      "“Banking-grade security” with no specifics",
+      "Fees buried in a footnote",
+      "A fake dashboard with invented balances",
+      "Crypto price theatre unrelated to the product",
+      "A CTA that starts an application before explaining eligibility"
+    ],
+    "signatureMoves": [
+      "A real fee calculator or worked transaction",
+      "A settlement timeline with actual days",
+      "A reconciliation view with clear states",
+      "A security page written for a skeptical CFO",
+      "A developer quickstart beside the business value"
+    ],
+    "recommendedDirections": [
+      "quiet-instrument",
+      "product-performs",
+      "editorial-report",
+      "one-motif"
+    ],
+    "recommendedSections": [
+      "intro",
+      "how-it-works",
+      "features",
+      "proof",
+      "pricing",
+      "faq",
+      "cta",
+      "footer"
+    ],
+    "recommendedPalettes": [
+      "white-link-blue",
+      "blue-black-cornflower",
+      "graphite-safety-orange",
+      "white-mint-tiles"
+    ],
+    "questions": [
+      "Who is eligible, and which jurisdictions are excluded?",
+      "What exactly does the customer pay, including FX and edge cases?",
+      "What happens when a payment fails or a dispute is opened?"
+    ],
+    "liveThing": "A fee calculator or a real transaction timeline with settlement states.",
+    "notes": "Trust is built through specificity: numbers, licenses, timelines, and failure handling. A beautiful page that avoids the fee schedule is a liability."
+  },
+  "ecommerce-dtc": {
+    "audience": [
+      "Shoppers comparing products",
+      "Gift buyers who need confidence fast",
+      "Returning customers who want the right variant"
+    ],
+    "jobs": [
+      "Understand the product and its materials",
+      "See accurate photography and scale",
+      "Choose the right variant",
+      "Know shipping, returns, and price",
+      "Complete checkout without friction"
+    ],
+    "trust": [
+      "Consistent product photography",
+      "Materials, dimensions, and care details",
+      "Shipping and return policy",
+      "Reviews with specific, verifiable detail",
+      "Secure checkout and clear contact path"
+    ],
+    "informationArchitecture": ["intro", "showcase", "features", "proof", "faq", "cta", "footer"],
+    "conversion": "One product, one primary action. Keep the buy box close to the product, make variant selection obvious, and answer shipping/returns before checkout.",
+    "contentChecklist": [
+      "Product name and one-line benefit",
+      "Price and variant availability",
+      "Materials, dimensions, and care",
+      "Shipping times and costs",
+      "Returns and exchanges",
+      "Reviews or press with context",
+      "Accessible product imagery",
+      "Contact and support"
+    ],
+    "antiPatterns": [
+      "A full-screen video that hides the product",
+      "Inconsistent backgrounds across product photos",
+      "Sizes or materials only in a PDF",
+      "A newsletter modal before the product is visible",
+      "Fake urgency and countdown timers",
+      "Checkout that hides shipping cost until the last step"
+    ],
+    "signatureMoves": [
+      "A product page that reads like a well-made catalogue",
+      "A detail sequence that shows material and scale",
+      "A buy box that answers the last objection",
+      "A review section with specific use cases",
+      "A returns promise stated in plain language"
+    ],
+    "recommendedDirections": [
+      "page-is-the-object",
+      "contact-sheet",
+      "specimen-catalogue",
+      "uneven-photographs"
+    ],
+    "recommendedSections": ["intro", "showcase", "features", "proof", "faq", "cta", "footer"],
+    "recommendedPalettes": [
+      "paper-grey-brass",
+      "stone-blueprint",
+      "blush-aubergine",
+      "mint-pink-accounts"
+    ],
+    "questions": [
+      "What is the one product or collection this page is for?",
+      "Which detail do shoppers ask about before buying?",
+      "What is the honest shipping and returns promise?"
+    ],
+    "liveThing": "A variant selector or size guide that answers a real pre-purchase question.",
+    "notes": "Commerce pages should behave like a good shop assistant: show the product clearly, answer the awkward questions, and get out of the way."
+  },
+  "healthcare-wellness": {
+    "audience": [
+      "Patients and caregivers",
+      "Clinicians and practice managers",
+      "Wellness customers assessing fit"
+    ],
+    "jobs": [
+      "Understand the service and eligibility",
+      "Know the cost and insurance path",
+      "Assess credentials and safety",
+      "Find the next step or emergency guidance",
+      "Feel respected rather than sold to"
+    ],
+    "trust": [
+      "Clinician credentials and licenses",
+      "Privacy and data-handling terms",
+      "Cost, insurance, and cancellation policy",
+      "Emergency and after-hours guidance",
+      "Patient stories with consent"
+    ],
+    "informationArchitecture": [
+      "intro",
+      "how-it-works",
+      "proof",
+      "features",
+      "faq",
+      "cta",
+      "footer"
+    ],
+    "conversion": "Reduce fear before asking for action. Explain eligibility, cost, privacy, and what the first appointment involves. Make the emergency path impossible to miss.",
+    "contentChecklist": [
+      "Who the service is for and not for",
+      "Cost, insurance, and payment options",
+      "Clinician credentials",
+      "Privacy and consent",
+      "First appointment expectations",
+      "Emergency and after-hours path",
+      "Accessibility and language support",
+      "Cancellation policy"
+    ],
+    "antiPatterns": [
+      "Soft gradients and stock photos of smiling doctors",
+      "Health claims without evidence or qualifications",
+      "A booking CTA before eligibility and cost",
+      "Hiding the emergency path in a footer",
+      "Testimonials that reveal patient identity without consent",
+      "Tiny body text and low-contrast pastels"
+    ],
+    "signatureMoves": [
+      "A calm, plain-language eligibility checker",
+      "A cost estimate with insurance caveats",
+      "A first-visit timeline that reduces uncertainty",
+      "A clinician profile with real credentials",
+      "A visible emergency guidance block"
+    ],
+    "recommendedDirections": [
+      "quiet-instrument",
+      "place-carries-it",
+      "editorial-report",
+      "sentence-as-layout"
+    ],
+    "recommendedSections": ["intro", "how-it-works", "proof", "features", "faq", "cta", "footer"],
+    "recommendedPalettes": [
+      "white-mint-tiles",
+      "cool-white-slate",
+      "moss-sand",
+      "mint-orange-grey"
+    ],
+    "questions": [
+      "Who is clinically eligible, and who should not use this service?",
+      "What does the patient pay, and what does insurance cover?",
+      "What happens in an emergency or outside opening hours?"
+    ],
+    "liveThing": "An eligibility or cost estimator with a clear caveat and a human next step.",
+    "notes": "Calm is not the same as vague. The page should be gentle in tone and extremely clear about eligibility, cost, privacy, and emergency paths."
+  },
+  "education-edtech": {
+    "audience": [
+      "Prospective students",
+      "Teachers and curriculum leads",
+      "Parents and administrators"
+    ],
+    "jobs": [
+      "Understand the outcome and curriculum",
+      "Check time commitment and cost",
+      "See the learning experience",
+      "Evaluate credibility and accreditation",
+      "Enroll or book a trial"
+    ],
+    "trust": [
+      "Real curriculum and instructor credentials",
+      "Student outcomes with methodology",
+      "Accreditation or partner institutions",
+      "Accessibility and device requirements",
+      "Clear refund and completion terms"
+    ],
+    "informationArchitecture": [
+      "intro",
+      "how-it-works",
+      "features",
+      "proof",
+      "pricing",
+      "faq",
+      "cta",
+      "footer"
+    ],
+    "conversion": "Show the learning path and the first lesson. State the time commitment, cost, and credential before the enrollment CTA. Offer a low-risk next step such as a sample lesson.",
+    "contentChecklist": [
+      "Learning outcomes",
+      "Curriculum outline",
+      "Time commitment",
+      "Instructor credentials",
+      "Cost and payment options",
+      "Credential or completion path",
+      "Accessibility and devices",
+      "Refund and support policy"
+    ],
+    "antiPatterns": [
+      "Stock photos of graduates and generic campus imagery",
+      "“Learn anything” claims with no curriculum",
+      "Outcome statistics without a denominator",
+      "A signup wall before any sample content",
+      "Gamified confetti replacing substance",
+      "Ignoring accessibility and low-bandwidth learners"
+    ],
+    "signatureMoves": [
+      "A real sample lesson or exercise",
+      "A curriculum map with time estimates",
+      "An outcome table that names the cohort and method",
+      "An instructor profile with actual work",
+      "A clear path from first lesson to credential"
+    ],
+    "recommendedDirections": [
+      "sentence-as-layout",
+      "editorial-report",
+      "quiet-instrument",
+      "colour-chapters"
+    ],
+    "recommendedSections": [
+      "intro",
+      "how-it-works",
+      "features",
+      "proof",
+      "pricing",
+      "faq",
+      "cta",
+      "footer"
+    ],
+    "recommendedPalettes": ["white-link-blue", "sky-sand", "mint-orange-grey", "cobalt-on-sand"],
+    "questions": [
+      "Who is the learner, and what can they do at the end?",
+      "How much time does the course actually take?",
+      "Which credential or outcome can the page prove?"
+    ],
+    "liveThing": "A sample lesson or a curriculum explorer with real content.",
+    "notes": "Education pages should make the learning visible. The strongest proof is a real lesson, a real instructor, and an honest account of the time required."
+  },
+  "travel-hospitality": {
+    "audience": [
+      "Travelers choosing a stay",
+      "Guests booking a specific room or experience",
+      "Travel planners comparing locations"
+    ],
+    "jobs": [
+      "Understand the place and atmosphere",
+      "See rooms, amenities, and location",
+      "Check availability, price, and terms",
+      "Know how to get there",
+      "Book with confidence"
+    ],
+    "trust": [
+      "Real property photography",
+      "Room and amenity details",
+      "Location and transport information",
+      "Cancellation and payment terms",
+      "Reviews with specific stays"
+    ],
+    "informationArchitecture": ["intro", "showcase", "features", "proof", "faq", "cta", "footer"],
+    "conversion": "Put the booking action near the price and availability, and keep the phone path obvious. Show the room and the location, not just the pool at sunset.",
+    "contentChecklist": [
+      "Room types and capacity",
+      "Amenities and accessibility",
+      "Location and transport",
+      "Check-in and check-out",
+      "Cancellation and payment",
+      "Dining and local context",
+      "Reviews or press",
+      "Contact and concierge"
+    ],
+    "antiPatterns": [
+      "A cinematic video that never shows the room",
+      "The same sunset photo on every property page",
+      "Prices that only appear after dates are entered",
+      "Hidden resort fees",
+      "Generic “escape” copy with no place specificity",
+      "Booking CTA that loses the selected dates"
+    ],
+    "signatureMoves": [
+      "A room gallery with dimensions and light",
+      "A location page that behaves like a local guide",
+      "A booking bar that keeps dates and guests visible",
+      "A house rules and accessibility block written plainly",
+      "A concierge note with real recommendations"
+    ],
+    "recommendedDirections": [
+      "place-carries-it",
+      "uneven-photographs",
+      "contact-sheet",
+      "page-is-the-object"
+    ],
+    "recommendedSections": ["intro", "showcase", "features", "proof", "faq", "cta", "footer"],
+    "recommendedPalettes": [
+      "moss-sand",
+      "warm-black-gold",
+      "offwhite-bottle-yellow",
+      "tobacco-olive"
+    ],
+    "questions": [
+      "Which room or experience is the page selling?",
+      "What is the honest location and transport situation?",
+      "Which fees and cancellation terms must be visible before booking?"
+    ],
+    "liveThing": "A date-aware availability or room comparison that keeps the selected stay visible.",
+    "notes": "Hospitality pages sell a place, not a template. The photography and the practical details must agree; a beautiful page that hides the room is worse than a plain one."
+  },
+  "restaurants-food": {
+    "audience": [
+      "Local diners choosing where to eat",
+      "Visitors planning a meal",
+      "Guests booking a private event"
+    ],
+    "jobs": [
+      "See the menu and prices",
+      "Check hours and location",
+      "Understand the room and the food",
+      "Book a table or order",
+      "Find dietary and accessibility information"
+    ],
+    "trust": [
+      "Current menu with prices",
+      "Real food and room photography",
+      "Hours, address, and contact",
+      "Allergen and dietary notes",
+      "Booking and cancellation terms"
+    ],
+    "informationArchitecture": ["intro", "showcase", "features", "proof", "faq", "cta", "footer"],
+    "conversion": "One action: book, order, or visit. Keep hours, address, and phone visible on every screen. The menu should be readable on a phone without a PDF.",
+    "contentChecklist": [
+      "Menu with prices",
+      "Hours and holiday closures",
+      "Address and transport",
+      "Booking policy",
+      "Allergens and dietary options",
+      "Accessibility",
+      "Private events",
+      "Contact"
+    ],
+    "antiPatterns": [
+      "A menu only available as a PDF",
+      "Dark food photography that hides the dish",
+      "Autoplay video with sound",
+      "Hours buried in a footer",
+      "A booking widget that loses the date",
+      "“Authentic” claims with no specific point of view"
+    ],
+    "signatureMoves": [
+      "The menu as the page's main typographic object",
+      "A room gallery that shows the actual space",
+      "A local guide to the neighborhood",
+      "A clear dietary and allergen key",
+      "A booking flow that confirms the table details"
+    ],
+    "recommendedDirections": [
+      "page-is-the-object",
+      "place-carries-it",
+      "type-only-statement",
+      "editorial-report"
+    ],
+    "recommendedSections": ["intro", "showcase", "features", "proof", "faq", "cta", "footer"],
+    "recommendedPalettes": [
+      "tobacco-olive",
+      "warm-black-gold",
+      "paper-grey-brass",
+      "burgundy-bubblegum"
+    ],
+    "questions": [
+      "What kind of meal is this: quick, celebratory, or everyday?",
+      "Which menu items are the reason to come?",
+      "What do guests with allergies or accessibility needs need to know?"
+    ],
+    "liveThing": "A phone-readable menu with prices, allergens, and a booking action.",
+    "notes": "The menu is the product. Give it the care of a printed menu, keep the practical details visible, and let the room and food photography do the atmosphere."
+  },
+  "real-estate": {
+    "audience": [
+      "Buyers and renters",
+      "Sellers evaluating an agent",
+      "Investors comparing properties"
+    ],
+    "jobs": [
+      "Understand the property and location",
+      "See accurate photos and floor plans",
+      "Check price, fees, and availability",
+      "Evaluate the agent or brokerage",
+      "Book a viewing or make an offer"
+    ],
+    "trust": [
+      "Accurate listing data and dates",
+      "Real photography and floor plans",
+      "Agent credentials and license",
+      "Fee and commission transparency",
+      "Clear process and next steps"
+    ],
+    "informationArchitecture": ["intro", "showcase", "features", "proof", "faq", "cta", "footer"],
+    "conversion": "Make the property the hero and the viewing the next step. Keep price, availability, and agent contact visible; explain the process before asking for personal details.",
+    "contentChecklist": [
+      "Address and neighborhood",
+      "Price and fees",
+      "Bedrooms, bathrooms, and size",
+      "Floor plan",
+      "Property condition and updates",
+      "Agent credentials",
+      "Viewing availability",
+      "Offer and closing process"
+    ],
+    "antiPatterns": [
+      "Wide-angle photos that distort the rooms",
+      "Listings without a floor plan or size",
+      "“Luxury” copy with no property details",
+      "Hidden fees or auction terms",
+      "A contact form before any property information",
+      "Stale listings presented as available"
+    ],
+    "signatureMoves": [
+      "A property page that reads like a monograph",
+      "A floor plan with room dimensions",
+      "A neighborhood guide with real distances",
+      "A transparent fee and process block",
+      "A viewing scheduler that confirms the address"
+    ],
+    "recommendedDirections": [
+      "place-carries-it",
+      "contact-sheet",
+      "specimen-catalogue",
+      "editorial-report"
+    ],
+    "recommendedSections": ["intro", "showcase", "features", "proof", "faq", "cta", "footer"],
+    "recommendedPalettes": [
+      "stone-blueprint",
+      "warm-black-gold",
+      "cool-white-slate",
+      "putty-black-teal"
+    ],
+    "questions": [
+      "Is this page for buyers, renters, sellers, or investors?",
+      "Which property facts are verified and current?",
+      "What is the honest condition, fee, and process?"
+    ],
+    "liveThing": "A floor plan or viewing scheduler with real availability.",
+    "notes": "Real estate buyers are making a high-stakes decision. Accurate facts, real images, and a clear process beat aspirational lifestyle copy."
+  },
+  "creative-agencies": {
+    "audience": [
+      "Prospective clients with a specific brief",
+      "Marketing and brand leads",
+      "Founders looking for a long-term partner"
+    ],
+    "jobs": [
+      "Understand the studio's point of view",
+      "See relevant work and outcomes",
+      "Meet the people",
+      "Understand the engagement model",
+      "Start a conversation"
+    ],
+    "trust": [
+      "Real case studies with a stated role",
+      "Named clients with permission",
+      "Team credentials",
+      "Clear engagement and pricing model",
+      "A contact path that reaches a human"
+    ],
+    "informationArchitecture": ["intro", "work", "about", "proof", "contact", "footer"],
+    "conversion": "Let the work carry the argument, then make the contact step specific: what to send, who reads it, and what happens next. Avoid a generic “let's talk” form.",
+    "contentChecklist": [
+      "Studio positioning in one sentence",
+      "Three to six strong projects",
+      "Role and outcome for each project",
+      "Team and capabilities",
+      "Engagement model",
+      "Availability",
+      "Contact and response time",
+      "Credits"
+    ],
+    "antiPatterns": [
+      "A portfolio with twenty equal-weight thumbnails",
+      "Awards used as the only proof",
+      "Generic “we craft digital experiences” copy",
+      "Case studies with no stated role or result",
+      "A contact form with no indication of fit",
+      "Motion that delays the work"
+    ],
+    "signatureMoves": [
+      "A project index with a strong point of view",
+      "A case study that shows the decision, not just the render",
+      "A team page with real voices",
+      "A contact page that asks for the right brief",
+      "A studio note about how the work is made"
+    ],
+    "recommendedDirections": [
+      "name-as-monument",
+      "contact-sheet",
+      "split-stage",
+      "borrowed-category"
+    ],
+    "recommendedSections": ["intro", "work", "about", "proof", "contact", "footer"],
+    "recommendedPalettes": [
+      "poster-chapters",
+      "white-signal-red",
+      "black-crimson",
+      "ultramarine-yellow"
+    ],
+    "questions": [
+      "What kind of client is the studio actually for?",
+      "Which project best proves the studio's judgment?",
+      "What does the studio need in a first brief?"
+    ],
+    "liveThing": "A project index that can be filtered by capability or sector without losing the work.",
+    "notes": "Agencies sell judgment. The site should show the decisions behind the work, not just the finished images, and it should practice the taste it claims."
+  },
+  "portfolios": {
+    "audience": ["Hiring managers and collaborators", "Prospective clients", "Peers and curators"],
+    "jobs": [
+      "Know who this person is",
+      "See selected work quickly",
+      "Understand their role and range",
+      "Find contact or availability",
+      "Decide whether to reach out"
+    ],
+    "trust": [
+      "Specific project roles and credits",
+      "Real work, not mockups presented as client work",
+      "A current CV or about page",
+      "Contact details",
+      "A clear statement of availability"
+    ],
+    "informationArchitecture": ["intro", "work", "about", "contact", "footer"],
+    "conversion": "The next step is a conversation. Make the person's practice legible, then give one clear contact path. Do not hide the work behind a slow intro animation.",
+    "contentChecklist": [
+      "Name and practice",
+      "Selected projects with role",
+      "About and experience",
+      "Contact",
+      "Availability",
+      "Credits and collaborators",
+      "A downloadable CV if relevant",
+      "Social or professional links"
+    ],
+    "antiPatterns": [
+      "A loading screen before the work",
+      "Equal-weight thumbnails with no context",
+      "A custom cursor that fights the content",
+      "“Passionate designer” copy with no evidence",
+      "Work presented without role or credit",
+      "Contact hidden behind a contact form only"
+    ],
+    "signatureMoves": [
+      "The name or one strong idea as the first screen",
+      "A project index with generous images",
+      "A short, specific about note",
+      "A contact page that reads like an invitation",
+      "A case study that shows process and judgment"
+    ],
+    "recommendedDirections": [
+      "name-as-monument",
+      "contact-sheet",
+      "uneven-photographs",
+      "type-only-statement"
+    ],
+    "recommendedSections": ["intro", "work", "about", "contact", "footer"],
+    "recommendedPalettes": [
+      "three-stones",
+      "white-link-blue",
+      "plum-black-pink",
+      "offwhite-bottle-yellow"
+    ],
+    "questions": [
+      "What is the person's strongest piece of work?",
+      "What role did they play in it?",
+      "What kind of next conversation do they want?"
+    ],
+    "liveThing": "A project index with real credits and a fast path to one case study.",
+    "notes": "A portfolio is an edited argument, not an archive. Fewer, better projects with clear roles beat a wall of thumbnails."
+  },
+  "media-editorial": {
+    "audience": [
+      "Readers looking for a point of view",
+      "Subscribers and returning readers",
+      "Advertisers or partners assessing audience"
+    ],
+    "jobs": [
+      "Understand what the publication covers",
+      "Scan the latest stories",
+      "Read comfortably",
+      "Trust the reporting and credits",
+      "Subscribe or return"
+    ],
+    "trust": [
+      "Bylines, dates, and credits",
+      "Corrections and editorial policy",
+      "Named sources and reporting",
+      "A clear separation of advertising",
+      "A readable archive"
+    ],
+    "informationArchitecture": ["intro", "list", "showcase", "proof", "cta", "footer"],
+    "conversion": "The primary action is reading. Make the front page a strong edit, keep story pages fast and legible, and ask for a subscription only after delivering value.",
+    "contentChecklist": [
+      "Publication name and point of view",
+      "Lead story with a real headline",
+      "Bylines and dates",
+      "Section navigation",
+      "Story summaries",
+      "Subscription offer",
+      "Editorial policy",
+      "Contact and tips"
+    ],
+    "antiPatterns": [
+      "A carousel that hides the lead story",
+      "Pop-ups before the first paragraph",
+      "Infinite scroll with no archive",
+      "Headlines that are not supported by the story",
+      "Ads styled as editorial",
+      "Tiny type and poor line length"
+    ],
+    "signatureMoves": [
+      "A front page that reads like a well-edited newspaper",
+      "A story page with generous type and clear credits",
+      "A section index with a strong hierarchy",
+      "A corrections or editorial standards page",
+      "A newsletter with a distinct voice"
+    ],
+    "recommendedDirections": [
+      "editorial-report",
+      "contact-sheet",
+      "sentence-as-layout",
+      "type-only-statement"
+    ],
+    "recommendedSections": ["intro", "list", "showcase", "proof", "cta", "footer"],
+    "recommendedPalettes": ["white-link-blue", "black-crimson", "paper-grey-brass", "sky-sand"],
+    "questions": [
+      "What does this publication cover that others do not?",
+      "What is the lead story, and why now?",
+      "How are corrections and advertising handled?"
+    ],
+    "liveThing": "A story page with real typography, bylines, and a related-reading path.",
+    "notes": "Editorial design is mostly hierarchy and reading comfort. The front page should have an opinion; the story page should disappear into the text."
+  },
+  "nonprofit-civic": {
+    "audience": [
+      "Donors and volunteers",
+      "People served by the organization",
+      "Partners and public officials"
+    ],
+    "jobs": [
+      "Understand the mission and the need",
+      "See the work and who it serves",
+      "Know how funds are used",
+      "Take one action: donate, volunteer, or apply",
+      "Trust the organization"
+    ],
+    "trust": [
+      "Program outcomes with methodology",
+      "Financial accountability",
+      "Leadership and governance",
+      "Participant stories with consent",
+      "Clear donation and privacy terms"
+    ],
+    "informationArchitecture": ["intro", "proof", "features", "about", "faq", "cta", "footer"],
+    "conversion": "One action per audience. Donors need to know what their money does; participants need a clear service path. Do not mix the two into a generic “get involved” button.",
+    "contentChecklist": [
+      "Mission in plain language",
+      "Who is served",
+      "Program outcomes",
+      "Use of funds",
+      "Leadership and governance",
+      "Donation or volunteer path",
+      "Privacy and consent",
+      "Contact"
+    ],
+    "antiPatterns": [
+      "Poverty tourism photography",
+      "“Every dollar helps” without a unit of impact",
+      "A donate button before any explanation",
+      "Participant stories without consent",
+      "Generic hope imagery",
+      "Financial information hidden from donors"
+    ],
+    "signatureMoves": [
+      "A concrete unit of impact",
+      "A program page that centers participants",
+      "A transparent annual report",
+      "A volunteer path with real tasks",
+      "A civic campaign with a clear ask"
+    ],
+    "recommendedDirections": [
+      "colour-chapters",
+      "editorial-report",
+      "sentence-as-layout",
+      "place-carries-it"
+    ],
+    "recommendedSections": ["intro", "proof", "features", "about", "faq", "cta", "footer"],
+    "recommendedPalettes": ["moss-sand", "white-mint-tiles", "cobalt-on-sand", "orange-sky-lime"],
+    "questions": [
+      "Who is served, and who is the donor or volunteer?",
+      "What does one unit of support actually pay for?",
+      "Which outcomes are measured, and which are aspirational?"
+    ],
+    "liveThing": "An impact calculator or a volunteer signup with real tasks and dates.",
+    "notes": "Civic and nonprofit pages must respect the people at the center of the work. Show accountability, use real numbers, and make the ask specific."
+  },
+  "product-surfaces": {
+    "audience": ["Daily users of a product", "Admins and operators", "New users in onboarding"],
+    "jobs": [
+      "Know the screen's one job",
+      "Find the primary action",
+      "Understand data and state",
+      "Recover from empty, loading, and error states",
+      "Work comfortably for long sessions"
+    ],
+    "trust": [
+      "Clear system status and data freshness",
+      "Undo or confirmation for destructive actions",
+      "Keyboard and screen-reader support",
+      "Consistent terminology",
+      "Visible permissions and scope"
+    ],
+    "informationArchitecture": [
+      "intro",
+      "features",
+      "how-it-works",
+      "proof",
+      "faq",
+      "cta",
+      "footer"
+    ],
+    "conversion": "This is a product surface, not a landing page. The primary action should be obvious, the data should have a source and time, and every state should be designed.",
+    "contentChecklist": [
+      "Screen title and scope",
+      "Primary action",
+      "Empty state",
+      "Loading state",
+      "Error and retry state",
+      "Long-content behavior",
+      "Permissions and destructive actions",
+      "Keyboard path"
+    ],
+    "antiPatterns": [
+      "A dashboard with no primary action",
+      "Fake data that looks real but has no source",
+      "Icon-only controls without labels",
+      "Modals that trap focus or lose scroll position",
+      "Dense tables without sorting or empty states",
+      "Color as the only status signal"
+    ],
+    "signatureMoves": [
+      "A shell that fits the product's real work",
+      "A data table with clear hierarchy and states",
+      "An onboarding flow that teaches by doing",
+      "A pricing or settings page with honest tradeoffs",
+      "A docs page that reads like a good book"
+    ],
+    "recommendedDirections": [
+      "quiet-instrument",
+      "product-performs",
+      "one-motif",
+      "editorial-report"
+    ],
+    "recommendedSections": ["intro", "features", "how-it-works", "proof", "faq", "cta", "footer"],
+    "recommendedPalettes": [
+      "white-navy-tab",
+      "cool-white-slate",
+      "graphite-safety-orange",
+      "charcoal-room-sage"
+    ],
+    "questions": [
+      "What is the one job of this screen?",
+      "What does the empty state teach?",
+      "Which action is destructive, and how is it protected?"
+    ],
+    "liveThing": "A real interaction with empty, loading, success, and error states.",
+    "notes": "Product surfaces are judged in use, not in screenshots. Design the shell, the states, and the keyboard path before polishing the hero."
+  }
+}

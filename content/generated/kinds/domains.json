@@ -1,0 +1,4194 @@
+[
+  {
+    "id": "domain/agriculture",
+    "kind": "domain",
+    "name": "Agriculture",
+    "summary": "Farming, food production, agtech, and rural services.",
+    "domains": [
+      "agriculture"
+    ],
+    "sectors": [
+      "other",
+      "physical-product"
+    ],
+    "tags": [
+      "domain",
+      "science",
+      "agriculture",
+      "farming",
+      "farm",
+      "agtech",
+      "crop",
+      "livestock",
+      "rural",
+      "food production"
+    ],
+    "moods": [],
+    "quality": "reference",
+    "provenance": {
+      "source": "tastepro",
+      "repo": "",
+      "commit": "workspace",
+      "path": "content/taxonomy/domains.json",
+      "license": "Apache-2.0",
+      "authors": [
+        "TastePro"
+      ],
+      "url": "",
+      "transformations": [
+        "curated taxonomy"
+      ]
+    },
+    "family": "science",
+    "description": "Farming, food production, agtech, and rural services.",
+    "aliases": [
+      "agriculture",
+      "farming",
+      "farm",
+      "agtech",
+      "crop",
+      "livestock",
+      "rural",
+      "food production"
+    ],
+    "status": "planned",
+    "depth": "taxonomy",
+    "launchTier": false,
+    "upstreamSectors": [
+      "other",
+      "physical-product"
+    ],
+    "appKinds": [
+      "analytics",
+      "workspace"
+    ],
+    "brandCategories": [
+      "Backend, Database & DevOps"
+    ],
+    "questions": [
+      "Which crop, region, scale, and season does the product serve?",
+      "Can the page work in the field: fast, legible, low bandwidth, and glove-friendly?",
+      "Does the proof come from real yields, costs, or growers rather than stock imagery?"
+    ]
+  },
+  {
+    "id": "domain/ai-products",
+    "kind": "domain",
+    "name": "AI products",
+    "summary": "AI-native products and model platforms: assistants, agents, generation tools, evaluation, and infrastructure.",
+    "domains": [
+      "ai-products"
+    ],
+    "sectors": [
+      "ai-product",
+      "saas",
+      "dev-tool"
+    ],
+    "tags": [
+      "domain",
+      "software",
+      "ai",
+      "artificial intelligence",
+      "llm",
+      "machine learning",
+      "ml",
+      "agents",
+      "model",
+      "inference"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "tastepro",
+      "repo": "",
+      "commit": "workspace",
+      "path": "content/taxonomy/domains.json",
+      "license": "Apache-2.0",
+      "authors": [
+        "TastePro"
+      ],
+      "url": "",
+      "transformations": [
+        "curated taxonomy",
+        "authored seed playbook"
+      ]
+    },
+    "family": "software",
+    "description": "AI-native products and model platforms: assistants, agents, generation tools, evaluation, and infrastructure.",
+    "aliases": [
+      "ai",
+      "artificial intelligence",
+      "llm",
+      "machine learning",
+      "ml",
+      "agents",
+      "model",
+      "inference"
+    ],
+    "status": "available",
+    "depth": "seed",
+    "launchTier": true,
+    "upstreamSectors": [
+      "ai-product",
+      "saas",
+      "dev-tool"
+    ],
+    "playbook": {
+      "audience": [
+        "Teams evaluating AI-native tools",
+        "Builders and operators who need a specific outcome",
+        "Technical buyers assessing model and data risk"
+      ],
+      "jobs": [
+        "Understand the specific capability",
+        "See a real input and output",
+        "Evaluate quality, latency, and failure modes",
+        "Understand data handling and model choice",
+        "Try the product or start a pilot"
+      ],
+      "trust": [
+        "A real example with input, output, and limitations",
+        "Evaluation results with methodology",
+        "Data retention, training, and privacy terms",
+        "Model/provider disclosure where it matters",
+        "Human fallback and failure behavior"
+      ],
+      "informationArchitecture": [
+        "intro",
+        "showcase",
+        "how-it-works",
+        "proof",
+        "pricing",
+        "faq",
+        "cta",
+        "footer"
+      ],
+      "conversion": "Let the visitor see the product do the job, then offer the smallest honest next step: a sample, a playground, a template, or a pilot. Do not make them imagine the output.",
+      "contentChecklist": [
+        "One concrete use case with a real example",
+        "Input and output pair",
+        "Quality and latency evidence",
+        "Model and data-handling disclosure",
+        "Limits and failure modes",
+        "Pricing and usage units",
+        "Security and privacy",
+        "Human support path"
+      ],
+      "antiPatterns": [
+        "Robot icons, neural-network decoration, and purple gradients as the whole idea",
+        "A fake chat window with invented answers",
+        "“Revolutionary” copy with no measurable outcome",
+        "Hiding model/provider or data-retention terms",
+        "Demo output that is obviously too perfect",
+        "Ignoring latency and failure states"
+      ],
+      "signatureMoves": [
+        "A real before/after task with a visible output",
+        "A small, honest evaluation table",
+        "A failure case shown next to the success case",
+        "A model/data card that reads like a product spec",
+        "A live playground seeded with a real example"
+      ],
+      "recommendedDirections": [
+        "product-performs",
+        "quiet-instrument",
+        "one-motif",
+        "hero-object"
+      ],
+      "recommendedSections": [
+        "intro",
+        "showcase",
+        "how-it-works",
+        "proof",
+        "pricing",
+        "faq",
+        "cta",
+        "footer"
+      ],
+      "recommendedPalettes": [
+        "lunar-grey-bronze",
+        "soot-pale-lime",
+        "cool-white-slate",
+        "plum-black-pink"
+      ],
+      "questions": [
+        "What is the one job the model does better than a general assistant?",
+        "What does a bad output look like, and what happens then?",
+        "Which data can never leave the customer's boundary?"
+      ],
+      "liveThing": "A real task input and output pair, with a visible failure case.",
+      "notes": "The category is crowded with abstraction. The differentiator is evidence: a real task, a real output, and a clear account of when the product should not be used."
+    },
+    "appKinds": [
+      "workspace",
+      "builder",
+      "analytics"
+    ],
+    "brandCategories": [
+      "AI & LLM Platforms"
+    ],
+    "questions": [
+      "What can the product do that a general chatbot cannot, and can the page show that in one concrete interaction?",
+      "Is the model, data handling, evaluation, and failure mode explained without hand-waving?",
+      "Does the interface show the output rather than a decorative gradient, robot icon, or fake chat bubble?"
+    ]
+  },
+  {
+    "id": "domain/architecture",
+    "kind": "domain",
+    "name": "Architecture",
+    "summary": "Architecture practices, interior design, landscape, and built-environment studios.",
+    "domains": [
+      "architecture"
+    ],
+    "sectors": [
+      "architecture",
+      "real-estate"
+    ],
+    "tags": [
+      "domain",
+      "creative",
+      "architecture",
+      "architect",
+      "interior",
+      "landscape",
+      "built environment",
+      "design practice"
+    ],
+    "moods": [],
+    "quality": "reference",
+    "provenance": {
+      "source": "tastepro",
+      "repo": "",
+      "commit": "workspace",
+      "path": "content/taxonomy/domains.json",
+      "license": "Apache-2.0",
+      "authors": [
+        "TastePro"
+      ],
+      "url": "",
+      "transformations": [
+        "curated taxonomy"
+      ]
+    },
+    "family": "creative",
+    "description": "Architecture practices, interior design, landscape, and built-environment studios.",
+    "aliases": [
+      "architecture",
+      "architect",
+      "interior",
+      "landscape",
+      "built environment",
+      "design practice"
+    ],
+    "status": "planned",
+    "depth": "taxonomy",
+    "launchTier": false,
+    "upstreamSectors": [
+      "architecture",
+      "real-estate"
+    ],
+    "appKinds": [
+      "workspace"
+    ],
+    "brandCategories": [
+      "Design & Creative Tools"
+    ],
+    "questions": [
+      "Do the projects show the practice's thinking, not just finished photographs?",
+      "Is the studio's approach, scale, and contact path clear?",
+      "Does the layout handle large imagery and long project narratives?"
+    ]
+  },
+  {
+    "id": "domain/automotive",
+    "kind": "domain",
+    "name": "Automotive",
+    "summary": "Cars, motorcycles, mobility, dealerships, and automotive brands.",
+    "domains": [
+      "automotive"
+    ],
+    "sectors": [
+      "other"
+    ],
+    "tags": [
+      "domain",
+      "commerce",
+      "automotive",
+      "car",
+      "vehicle",
+      "motorcycle",
+      "dealership",
+      "mobility",
+      "ev"
+    ],
+    "moods": [],
+    "quality": "reference",
+    "provenance": {
+      "source": "tastepro",
+      "repo": "",
+      "commit": "workspace",
+      "path": "content/taxonomy/domains.json",
+      "license": "Apache-2.0",
+      "authors": [
+        "TastePro"
+      ],
+      "url": "",
+      "transformations": [
+        "curated taxonomy"
+      ]
+    },
+    "family": "commerce",
+    "description": "Cars, motorcycles, mobility, dealerships, and automotive brands.",
+    "aliases": [
+      "automotive",
+      "car",
+      "vehicle",
+      "motorcycle",
+      "dealership",
+      "mobility",
+      "ev"
+    ],
+    "status": "planned",
+    "depth": "taxonomy",
+    "launchTier": false,
+    "upstreamSectors": [
+      "other"
+    ],
+    "appKinds": [
+      "commerce"
+    ],
+    "brandCategories": [
+      "Automotive"
+    ],
+    "questions": [
+      "Is the vehicle's real specification, price, availability, and financing clear?",
+      "Does the page use imagery as evidence rather than atmosphere alone?",
+      "Is the enquiry or booking path appropriate for a high-consideration purchase?"
+    ]
+  },
+  {
+    "id": "domain/b2b-saas",
+    "kind": "domain",
+    "name": "B2B SaaS",
+    "summary": "Business software sold to teams: workflow, collaboration, operations, customer support, and vertical SaaS.",
+    "domains": [
+      "b2b-saas"
+    ],
+    "sectors": [
+      "saas",
+      "dev-tool"
+    ],
+    "tags": [
+      "domain",
+      "software",
+      "saas",
+      "software as a service",
+      "b2b",
+      "business software",
+      "workflow",
+      "crm",
+      "operations"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "tastepro",
+      "repo": "",
+      "commit": "workspace",
+      "path": "content/taxonomy/domains.json",
+      "license": "Apache-2.0",
+      "authors": [
+        "TastePro"
+      ],
+      "url": "",
+      "transformations": [
+        "curated taxonomy",
+        "authored seed playbook"
+      ]
+    },
+    "family": "software",
+    "description": "Business software sold to teams: workflow, collaboration, operations, customer support, and vertical SaaS.",
+    "aliases": [
+      "saas",
+      "software as a service",
+      "b2b",
+      "business software",
+      "workflow",
+      "crm",
+      "operations"
+    ],
+    "status": "available",
+    "depth": "seed",
+    "launchTier": true,
+    "upstreamSectors": [
+      "saas",
+      "dev-tool"
+    ],
+    "playbook": {
+      "audience": [
+        "Department leads with a workflow problem",
+        "Daily users who will live in the product",
+        "Finance and security approvers"
+      ],
+      "jobs": [
+        "Recognize their current workflow in the page",
+        "See the after-state and the product surface",
+        "Understand integrations and migration",
+        "Evaluate security, admin, and ROI",
+        "Book a demo or start a trial"
+      ],
+      "trust": [
+        "A real product surface, not a generic dashboard",
+        "Named customer story with a measurable change",
+        "Security and admin controls",
+        "Migration and onboarding process",
+        "Clear pricing or a transparent sales process"
+      ],
+      "informationArchitecture": [
+        "intro",
+        "proof",
+        "features",
+        "how-it-works",
+        "testimonial",
+        "pricing",
+        "faq",
+        "cta",
+        "footer"
+      ],
+      "conversion": "Choose one primary path for the page's audience: self-serve trial or a qualified demo. Show what happens in the first week, who owns the rollout, and what the buyer needs to bring.",
+      "contentChecklist": [
+        "The before/after workflow",
+        "A real product surface",
+        "Integrations and import path",
+        "Security, permissions, and audit logs",
+        "Admin and onboarding model",
+        "Pricing or sales qualification",
+        "Customer proof with a metric",
+        "Support and SLA"
+      ],
+      "antiPatterns": [
+        "Three generic feature cards with icons",
+        "A dashboard mockup that could belong to any product",
+        "“Trusted by” logos with no story or permission",
+        "A demo CTA that hides all pricing",
+        "Feature names that only the internal team understands",
+        "Ignoring the daily user in favor of the buyer"
+      ],
+      "signatureMoves": [
+        "A workflow shown as a before/after sequence",
+        "A product surface with real data and a clear primary action",
+        "A customer story anchored to one operational metric",
+        "An admin/security panel shown as part of the product",
+        "A migration checklist that reduces risk"
+      ],
+      "recommendedDirections": [
+        "quiet-instrument",
+        "product-performs",
+        "editorial-report",
+        "one-motif"
+      ],
+      "recommendedSections": [
+        "intro",
+        "proof",
+        "features",
+        "how-it-works",
+        "testimonial",
+        "pricing",
+        "faq",
+        "cta",
+        "footer"
+      ],
+      "recommendedPalettes": [
+        "white-navy-tab",
+        "cool-grey-cobalt",
+        "paper-grey-brass",
+        "cool-white-slate"
+      ],
+      "questions": [
+        "Who feels the pain daily, and who signs the contract?",
+        "What is the current workaround, and why is it failing?",
+        "Which integration or migration is the real blocker?"
+      ],
+      "liveThing": "A small, real workflow that can be tried without a sales call.",
+      "notes": "B2B pages often sell to the buyer and forget the user. Show the work, the admin model, and the migration path; those are the real objections."
+    },
+    "appKinds": [
+      "workspace",
+      "analytics",
+      "smb-admin",
+      "support"
+    ],
+    "brandCategories": [
+      "Productivity & SaaS",
+      "Backend, Database & DevOps"
+    ],
+    "questions": [
+      "Who is the buyer, who is the daily user, and are both visible in the page's language and proof?",
+      "What is the before-and-after workflow, and can it be shown with a real product surface?",
+      "Which trust signal matters most: security, migration, integrations, ROI, or a named customer story?"
+    ]
+  },
+  {
+    "id": "domain/community-social",
+    "kind": "domain",
+    "name": "Community and social",
+    "summary": "Membership communities, social platforms, forums, and local networks.",
+    "domains": [
+      "community-social"
+    ],
+    "sectors": [
+      "consumer-app",
+      "nonprofit"
+    ],
+    "tags": [
+      "domain",
+      "society",
+      "community",
+      "social",
+      "membership",
+      "forum",
+      "network",
+      "local",
+      "group",
+      "discord"
+    ],
+    "moods": [],
+    "quality": "reference",
+    "provenance": {
+      "source": "tastepro",
+      "repo": "",
+      "commit": "workspace",
+      "path": "content/taxonomy/domains.json",
+      "license": "Apache-2.0",
+      "authors": [
+        "TastePro"
+      ],
+      "url": "",
+      "transformations": [
+        "curated taxonomy"
+      ]
+    },
+    "family": "society",
+    "description": "Membership communities, social platforms, forums, and local networks.",
+    "aliases": [
+      "community",
+      "social",
+      "membership",
+      "forum",
+      "network",
+      "local",
+      "group",
+      "discord"
+    ],
+    "status": "planned",
+    "depth": "taxonomy",
+    "launchTier": false,
+    "upstreamSectors": [
+      "consumer-app",
+      "nonprofit"
+    ],
+    "appKinds": [
+      "workspace",
+      "community"
+    ],
+    "brandCategories": [
+      "Media & Consumer Tech"
+    ],
+    "questions": [
+      "What does a member get, and what does the first week feel like?",
+      "How are safety, moderation, and privacy handled?",
+      "Does the page show real member activity rather than an empty feed?"
+    ]
+  },
+  {
+    "id": "domain/creative-agencies",
+    "kind": "domain",
+    "name": "Creative agencies and studios",
+    "summary": "Design, branding, advertising, film, and multidisciplinary studios.",
+    "domains": [
+      "creative-agencies"
+    ],
+    "sectors": [
+      "agency",
+      "studio-portfolio"
+    ],
+    "tags": [
+      "domain",
+      "creative",
+      "agency",
+      "studio",
+      "design studio",
+      "branding",
+      "advertising",
+      "production"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "tastepro",
+      "repo": "",
+      "commit": "workspace",
+      "path": "content/taxonomy/domains.json",
+      "license": "Apache-2.0",
+      "authors": [
+        "TastePro"
+      ],
+      "url": "",
+      "transformations": [
+        "curated taxonomy",
+        "authored seed playbook"
+      ]
+    },
+    "family": "creative",
+    "description": "Design, branding, advertising, film, and multidisciplinary studios.",
+    "aliases": [
+      "agency",
+      "studio",
+      "creative",
+      "design studio",
+      "branding",
+      "advertising",
+      "production"
+    ],
+    "status": "available",
+    "depth": "seed",
+    "launchTier": true,
+    "upstreamSectors": [
+      "agency",
+      "studio-portfolio"
+    ],
+    "playbook": {
+      "audience": [
+        "Prospective clients with a specific brief",
+        "Marketing and brand leads",
+        "Founders looking for a long-term partner"
+      ],
+      "jobs": [
+        "Understand the studio's point of view",
+        "See relevant work and outcomes",
+        "Meet the people",
+        "Understand the engagement model",
+        "Start a conversation"
+      ],
+      "trust": [
+        "Real case studies with a stated role",
+        "Named clients with permission",
+        "Team credentials",
+        "Clear engagement and pricing model",
+        "A contact path that reaches a human"
+      ],
+      "informationArchitecture": [
+        "intro",
+        "work",
+        "about",
+        "proof",
+        "contact",
+        "footer"
+      ],
+      "conversion": "Let the work carry the argument, then make the contact step specific: what to send, who reads it, and what happens next. Avoid a generic “let's talk” form.",
+      "contentChecklist": [
+        "Studio positioning in one sentence",
+        "Three to six strong projects",
+        "Role and outcome for each project",
+        "Team and capabilities",
+        "Engagement model",
+        "Availability",
+        "Contact and response time",
+        "Credits"
+      ],
+      "antiPatterns": [
+        "A portfolio with twenty equal-weight thumbnails",
+        "Awards used as the only proof",
+        "Generic “we craft digital experiences” copy",
+        "Case studies with no stated role or result",
+        "A contact form with no indication of fit",
+        "Motion that delays the work"
+      ],
+      "signatureMoves": [
+        "A project index with a strong point of view",
+        "A case study that shows the decision, not just the render",
+        "A team page with real voices",
+        "A contact page that asks for the right brief",
+        "A studio note about how the work is made"
+      ],
+      "recommendedDirections": [
+        "name-as-monument",
+        "contact-sheet",
+        "split-stage",
+        "borrowed-category"
+      ],
+      "recommendedSections": [
+        "intro",
+        "work",
+        "about",
+        "proof",
+        "contact",
+        "footer"
+      ],
+      "recommendedPalettes": [
+        "poster-chapters",
+        "white-signal-red",
+        "black-crimson",
+        "ultramarine-yellow"
+      ],
+      "questions": [
+        "What kind of client is the studio actually for?",
+        "Which project best proves the studio's judgment?",
+        "What does the studio need in a first brief?"
+      ],
+      "liveThing": "A project index that can be filtered by capability or sector without losing the work.",
+      "notes": "Agencies sell judgment. The site should show the decisions behind the work, not just the finished images, and it should practice the taste it claims."
+    },
+    "appKinds": [
+      "workspace",
+      "builder"
+    ],
+    "brandCategories": [
+      "Design & Creative Tools"
+    ],
+    "questions": [
+      "Can a visitor see the work, the point of view, and the people behind it quickly?",
+      "Does the site practice the taste it claims to sell?",
+      "Is the contact path clear without turning the whole page into a sales funnel?"
+    ]
+  },
+  {
+    "id": "domain/crypto-web3",
+    "kind": "domain",
+    "name": "Crypto and web3",
+    "summary": "Wallets, exchanges, protocols, onchain infrastructure, and decentralized applications.",
+    "domains": [
+      "crypto-web3"
+    ],
+    "sectors": [
+      "finance",
+      "consumer-app"
+    ],
+    "tags": [
+      "domain",
+      "software",
+      "crypto",
+      "web3",
+      "blockchain",
+      "wallet",
+      "defi",
+      "onchain",
+      "token",
+      "protocol"
+    ],
+    "moods": [],
+    "quality": "reference",
+    "provenance": {
+      "source": "tastepro",
+      "repo": "",
+      "commit": "workspace",
+      "path": "content/taxonomy/domains.json",
+      "license": "Apache-2.0",
+      "authors": [
+        "TastePro"
+      ],
+      "url": "",
+      "transformations": [
+        "curated taxonomy"
+      ]
+    },
+    "family": "software",
+    "description": "Wallets, exchanges, protocols, onchain infrastructure, and decentralized applications.",
+    "aliases": [
+      "crypto",
+      "web3",
+      "blockchain",
+      "wallet",
+      "defi",
+      "onchain",
+      "token",
+      "protocol"
+    ],
+    "status": "planned",
+    "depth": "taxonomy",
+    "launchTier": false,
+    "upstreamSectors": [
+      "finance",
+      "consumer-app"
+    ],
+    "appKinds": [
+      "wallet",
+      "markets"
+    ],
+    "brandCategories": [
+      "Fintech & Crypto"
+    ],
+    "questions": [
+      "What is the real risk, custody model, and fee structure?",
+      "Can the page avoid speculative price theatre and show a concrete product action?",
+      "Which claims are audited, and which are forward-looking?"
+    ]
+  },
+  {
+    "id": "domain/culture-arts",
+    "kind": "domain",
+    "name": "Culture and arts",
+    "summary": "Museums, galleries, theatres, cultural institutions, and arts organizations.",
+    "domains": [
+      "culture-arts"
+    ],
+    "sectors": [
+      "culture",
+      "event"
+    ],
+    "tags": [
+      "domain",
+      "creative",
+      "culture",
+      "arts",
+      "museum",
+      "gallery",
+      "theatre",
+      "theater",
+      "institution",
+      "exhibition"
+    ],
+    "moods": [],
+    "quality": "reference",
+    "provenance": {
+      "source": "tastepro",
+      "repo": "",
+      "commit": "workspace",
+      "path": "content/taxonomy/domains.json",
+      "license": "Apache-2.0",
+      "authors": [
+        "TastePro"
+      ],
+      "url": "",
+      "transformations": [
+        "curated taxonomy"
+      ]
+    },
+    "family": "creative",
+    "description": "Museums, galleries, theatres, cultural institutions, and arts organizations.",
+    "aliases": [
+      "culture",
+      "arts",
+      "museum",
+      "gallery",
+      "theatre",
+      "theater",
+      "institution",
+      "exhibition"
+    ],
+    "status": "planned",
+    "depth": "taxonomy",
+    "launchTier": false,
+    "upstreamSectors": [
+      "culture",
+      "event"
+    ],
+    "appKinds": [
+      "creator",
+      "workspace"
+    ],
+    "brandCategories": [
+      "Media & Consumer Tech",
+      "Retro Web"
+    ],
+    "questions": [
+      "What is on, when, where, and how does someone attend?",
+      "Does the page respect the art rather than competing with it?",
+      "Are access, pricing, and audience information easy to find?"
+    ]
+  },
+  {
+    "id": "domain/data-analytics",
+    "kind": "domain",
+    "name": "Data and analytics",
+    "summary": "Data platforms, business intelligence, product analytics, and reporting tools.",
+    "domains": [
+      "data-analytics"
+    ],
+    "sectors": [
+      "saas",
+      "dev-tool",
+      "finance"
+    ],
+    "tags": [
+      "domain",
+      "software",
+      "analytics",
+      "data",
+      "bi",
+      "business intelligence",
+      "warehouse",
+      "metrics",
+      "reporting",
+      "dashboard"
+    ],
+    "moods": [
+      "technical"
+    ],
+    "quality": "reference",
+    "provenance": {
+      "source": "tastepro",
+      "repo": "",
+      "commit": "workspace",
+      "path": "content/taxonomy/domains.json",
+      "license": "Apache-2.0",
+      "authors": [
+        "TastePro"
+      ],
+      "url": "",
+      "transformations": [
+        "curated taxonomy"
+      ]
+    },
+    "family": "software",
+    "description": "Data platforms, business intelligence, product analytics, and reporting tools.",
+    "aliases": [
+      "analytics",
+      "data",
+      "bi",
+      "business intelligence",
+      "warehouse",
+      "metrics",
+      "reporting",
+      "dashboard"
+    ],
+    "status": "planned",
+    "depth": "taxonomy",
+    "launchTier": false,
+    "upstreamSectors": [
+      "saas",
+      "dev-tool",
+      "finance"
+    ],
+    "appKinds": [
+      "analytics",
+      "report",
+      "workspace"
+    ],
+    "brandCategories": [
+      "Backend, Database & DevOps",
+      "Productivity & SaaS"
+    ],
+    "questions": [
+      "What decision does the product help someone make, and what does the data actually show?",
+      "Can the page demonstrate the query, chart, or report without a fake dashboard?",
+      "How are freshness, lineage, privacy, and accuracy handled?"
+    ]
+  },
+  {
+    "id": "domain/developer-tools",
+    "kind": "domain",
+    "name": "Developer tools",
+    "summary": "Products engineers use to build, ship, observe, and operate software: APIs, CLIs, CI, infrastructure, observability, and platforms.",
+    "domains": [
+      "developer-tools"
+    ],
+    "sectors": [
+      "dev-tool",
+      "saas"
+    ],
+    "tags": [
+      "domain",
+      "software",
+      "devtools",
+      "dev tools",
+      "devtool",
+      "dev tool",
+      "developer tool",
+      "developer tools",
+      "developer platform",
+      "developer experience",
+      "api",
+      "sdk",
+      "cli",
+      "infrastructure",
+      "observability",
+      "devops"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "tastepro",
+      "repo": "",
+      "commit": "workspace",
+      "path": "content/taxonomy/domains.json",
+      "license": "Apache-2.0",
+      "authors": [
+        "TastePro"
+      ],
+      "url": "",
+      "transformations": [
+        "curated taxonomy",
+        "authored seed playbook"
+      ]
+    },
+    "family": "software",
+    "description": "Products engineers use to build, ship, observe, and operate software: APIs, CLIs, CI, infrastructure, observability, and platforms.",
+    "aliases": [
+      "devtools",
+      "dev tools",
+      "devtool",
+      "dev tool",
+      "developer tool",
+      "developer tools",
+      "developer platform",
+      "developer experience",
+      "api",
+      "sdk",
+      "cli",
+      "infrastructure",
+      "observability",
+      "devops"
+    ],
+    "status": "available",
+    "depth": "seed",
+    "launchTier": true,
+    "upstreamSectors": [
+      "dev-tool",
+      "saas"
+    ],
+    "playbook": {
+      "audience": [
+        "Engineers evaluating infrastructure",
+        "Platform, DevOps, and security leads",
+        "Technical founders who still read the docs"
+      ],
+      "jobs": [
+        "Understand what the product does in one screen",
+        "See a real request, response, or terminal output",
+        "Evaluate latency, reliability, limits, and security",
+        "Find pricing and the shortest integration path",
+        "Start a first call without a sales conversation"
+      ],
+      "trust": [
+        "Real code and terminal output, not a code screenshot",
+        "Status page, incident history, and uptime with units",
+        "Security, compliance, and data-handling page",
+        "Open-source repository, changelog, or public roadmap",
+        "Named customers with permission and a specific outcome"
+      ],
+      "informationArchitecture": [
+        "intro",
+        "proof",
+        "features",
+        "how-it-works",
+        "pricing",
+        "faq",
+        "cta",
+        "footer"
+      ],
+      "conversion": "Make the path install → key → first call → verify. Put a copy-paste snippet and a believable response next to the CTA, and state what happens after the first call.",
+      "contentChecklist": [
+        "Install command for each supported runtime",
+        "Authentication model and key handling",
+        "Rate limits, quotas, and overage behavior",
+        "Error model with one real error example",
+        "SDK languages and versions",
+        "Pricing units and a worked example",
+        "Status page and support path",
+        "Security and data residency"
+      ],
+      "antiPatterns": [
+        "A fake dashboard instead of a real API response",
+        "Generic gradient hero with no product evidence",
+        "“AI-powered” claims without a concrete capability",
+        "Pricing hidden behind “contact sales” when self-serve exists",
+        "Docs links that dead-end or require a login",
+        "Code shown only as a styled screenshot"
+      ],
+      "signatureMoves": [
+        "A live request/response or terminal transcript in the hero",
+        "Latency and reliability numbers with units and dates",
+        "A comparison table that names the tradeoff, not just the win",
+        "A first-call tutorial that fits on one screen",
+        "Architecture diagram only where it explains a real boundary"
+      ],
+      "recommendedDirections": [
+        "product-performs",
+        "quiet-instrument",
+        "one-motif",
+        "sentence-as-layout"
+      ],
+      "recommendedSections": [
+        "intro",
+        "proof",
+        "features",
+        "how-it-works",
+        "pricing",
+        "faq",
+        "cta",
+        "footer"
+      ],
+      "recommendedPalettes": [
+        "white-navy-tab",
+        "cool-white-slate",
+        "black-crimson",
+        "charcoal-room-sage"
+      ],
+      "questions": [
+        "Which runtime and deployment model is the primary path?",
+        "Can the page show a real response without exposing customer data?",
+        "Which number is the honest proof: latency, uptime, throughput, or adoption?"
+      ],
+      "liveThing": "A real request/response or CLI call that a visitor can run from the page.",
+      "notes": "Developer audiences reward precision and punish theatre. The page should read like a well-kept README with a point of view: fast to scan, concrete, and honest about limits."
+    },
+    "appKinds": [
+      "devtools",
+      "builder"
+    ],
+    "brandCategories": [
+      "Developer Tools & IDEs",
+      "Backend, Database & DevOps"
+    ],
+    "questions": [
+      "Can a developer understand what the product does and see a real request, response, or terminal output in the first screen?",
+      "What is the shortest honest path from landing to a working integration: install, key, first call, verify?",
+      "Which proof is real: latency, uptime, open-source code, changelog, security posture, or a named customer?"
+    ]
+  },
+  {
+    "id": "domain/ecommerce-dtc",
+    "kind": "domain",
+    "name": "E-commerce and DTC",
+    "summary": "Direct-to-consumer brands, online stores, product pages, and checkout experiences.",
+    "domains": [
+      "ecommerce-dtc"
+    ],
+    "sectors": [
+      "ecommerce",
+      "physical-product"
+    ],
+    "tags": [
+      "domain",
+      "commerce",
+      "ecommerce",
+      "e-commerce",
+      "dtc",
+      "online store",
+      "shop",
+      "store",
+      "product page",
+      "checkout",
+      "retail brand"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "tastepro",
+      "repo": "",
+      "commit": "workspace",
+      "path": "content/taxonomy/domains.json",
+      "license": "Apache-2.0",
+      "authors": [
+        "TastePro"
+      ],
+      "url": "",
+      "transformations": [
+        "curated taxonomy",
+        "authored seed playbook"
+      ]
+    },
+    "family": "commerce",
+    "description": "Direct-to-consumer brands, online stores, product pages, and checkout experiences.",
+    "aliases": [
+      "ecommerce",
+      "e-commerce",
+      "dtc",
+      "online store",
+      "shop",
+      "store",
+      "product page",
+      "checkout",
+      "retail brand"
+    ],
+    "status": "available",
+    "depth": "seed",
+    "launchTier": true,
+    "upstreamSectors": [
+      "ecommerce",
+      "physical-product"
+    ],
+    "playbook": {
+      "audience": [
+        "Shoppers comparing products",
+        "Gift buyers who need confidence fast",
+        "Returning customers who want the right variant"
+      ],
+      "jobs": [
+        "Understand the product and its materials",
+        "See accurate photography and scale",
+        "Choose the right variant",
+        "Know shipping, returns, and price",
+        "Complete checkout without friction"
+      ],
+      "trust": [
+        "Consistent product photography",
+        "Materials, dimensions, and care details",
+        "Shipping and return policy",
+        "Reviews with specific, verifiable detail",
+        "Secure checkout and clear contact path"
+      ],
+      "informationArchitecture": [
+        "intro",
+        "showcase",
+        "features",
+        "proof",
+        "faq",
+        "cta",
+        "footer"
+      ],
+      "conversion": "One product, one primary action. Keep the buy box close to the product, make variant selection obvious, and answer shipping/returns before checkout.",
+      "contentChecklist": [
+        "Product name and one-line benefit",
+        "Price and variant availability",
+        "Materials, dimensions, and care",
+        "Shipping times and costs",
+        "Returns and exchanges",
+        "Reviews or press with context",
+        "Accessible product imagery",
+        "Contact and support"
+      ],
+      "antiPatterns": [
+        "A full-screen video that hides the product",
+        "Inconsistent backgrounds across product photos",
+        "Sizes or materials only in a PDF",
+        "A newsletter modal before the product is visible",
+        "Fake urgency and countdown timers",
+        "Checkout that hides shipping cost until the last step"
+      ],
+      "signatureMoves": [
+        "A product page that reads like a well-made catalogue",
+        "A detail sequence that shows material and scale",
+        "A buy box that answers the last objection",
+        "A review section with specific use cases",
+        "A returns promise stated in plain language"
+      ],
+      "recommendedDirections": [
+        "page-is-the-object",
+        "contact-sheet",
+        "specimen-catalogue",
+        "uneven-photographs"
+      ],
+      "recommendedSections": [
+        "intro",
+        "showcase",
+        "features",
+        "proof",
+        "faq",
+        "cta",
+        "footer"
+      ],
+      "recommendedPalettes": [
+        "paper-grey-brass",
+        "stone-blueprint",
+        "blush-aubergine",
+        "mint-pink-accounts"
+      ],
+      "questions": [
+        "What is the one product or collection this page is for?",
+        "Which detail do shoppers ask about before buying?",
+        "What is the honest shipping and returns promise?"
+      ],
+      "liveThing": "A variant selector or size guide that answers a real pre-purchase question.",
+      "notes": "Commerce pages should behave like a good shop assistant: show the product clearly, answer the awkward questions, and get out of the way."
+    },
+    "appKinds": [
+      "commerce"
+    ],
+    "brandCategories": [
+      "E-commerce & Retail"
+    ],
+    "questions": [
+      "Can a visitor understand the product, price, materials, sizing, shipping, and returns without hunting?",
+      "Is the photography consistent and does it show the product honestly?",
+      "What is the one conversion path, and what friction can be removed before checkout?"
+    ]
+  },
+  {
+    "id": "domain/education-edtech",
+    "kind": "domain",
+    "name": "Education and edtech",
+    "summary": "Schools, universities, courses, learning platforms, and education products.",
+    "domains": [
+      "education-edtech"
+    ],
+    "sectors": [
+      "education",
+      "saas"
+    ],
+    "tags": [
+      "domain",
+      "services",
+      "education",
+      "edtech",
+      "school",
+      "university",
+      "course",
+      "learning",
+      "student",
+      "teacher",
+      "curriculum"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "tastepro",
+      "repo": "",
+      "commit": "workspace",
+      "path": "content/taxonomy/domains.json",
+      "license": "Apache-2.0",
+      "authors": [
+        "TastePro"
+      ],
+      "url": "",
+      "transformations": [
+        "curated taxonomy",
+        "authored seed playbook"
+      ]
+    },
+    "family": "services",
+    "description": "Schools, universities, courses, learning platforms, and education products.",
+    "aliases": [
+      "education",
+      "edtech",
+      "school",
+      "university",
+      "course",
+      "learning",
+      "student",
+      "teacher",
+      "curriculum"
+    ],
+    "status": "available",
+    "depth": "seed",
+    "launchTier": true,
+    "upstreamSectors": [
+      "education",
+      "saas"
+    ],
+    "playbook": {
+      "audience": [
+        "Prospective students",
+        "Teachers and curriculum leads",
+        "Parents and administrators"
+      ],
+      "jobs": [
+        "Understand the outcome and curriculum",
+        "Check time commitment and cost",
+        "See the learning experience",
+        "Evaluate credibility and accreditation",
+        "Enroll or book a trial"
+      ],
+      "trust": [
+        "Real curriculum and instructor credentials",
+        "Student outcomes with methodology",
+        "Accreditation or partner institutions",
+        "Accessibility and device requirements",
+        "Clear refund and completion terms"
+      ],
+      "informationArchitecture": [
+        "intro",
+        "how-it-works",
+        "features",
+        "proof",
+        "pricing",
+        "faq",
+        "cta",
+        "footer"
+      ],
+      "conversion": "Show the learning path and the first lesson. State the time commitment, cost, and credential before the enrollment CTA. Offer a low-risk next step such as a sample lesson.",
+      "contentChecklist": [
+        "Learning outcomes",
+        "Curriculum outline",
+        "Time commitment",
+        "Instructor credentials",
+        "Cost and payment options",
+        "Credential or completion path",
+        "Accessibility and devices",
+        "Refund and support policy"
+      ],
+      "antiPatterns": [
+        "Stock photos of graduates and generic campus imagery",
+        "“Learn anything” claims with no curriculum",
+        "Outcome statistics without a denominator",
+        "A signup wall before any sample content",
+        "Gamified confetti replacing substance",
+        "Ignoring accessibility and low-bandwidth learners"
+      ],
+      "signatureMoves": [
+        "A real sample lesson or exercise",
+        "A curriculum map with time estimates",
+        "An outcome table that names the cohort and method",
+        "An instructor profile with actual work",
+        "A clear path from first lesson to credential"
+      ],
+      "recommendedDirections": [
+        "sentence-as-layout",
+        "editorial-report",
+        "quiet-instrument",
+        "colour-chapters"
+      ],
+      "recommendedSections": [
+        "intro",
+        "how-it-works",
+        "features",
+        "proof",
+        "pricing",
+        "faq",
+        "cta",
+        "footer"
+      ],
+      "recommendedPalettes": [
+        "white-link-blue",
+        "sky-sand",
+        "mint-orange-grey",
+        "cobalt-on-sand"
+      ],
+      "questions": [
+        "Who is the learner, and what can they do at the end?",
+        "How much time does the course actually take?",
+        "Which credential or outcome can the page prove?"
+      ],
+      "liveThing": "A sample lesson or a curriculum explorer with real content.",
+      "notes": "Education pages should make the learning visible. The strongest proof is a real lesson, a real instructor, and an honest account of the time required."
+    },
+    "appKinds": [
+      "workspace",
+      "analytics"
+    ],
+    "brandCategories": [
+      "Productivity & SaaS"
+    ],
+    "questions": [
+      "Who is learning, who is teaching, and which outcome does the page promise?",
+      "Can a visitor see the curriculum, time commitment, cost, and credential?",
+      "Is the page accessible to students with different devices, abilities, and language needs?"
+    ]
+  },
+  {
+    "id": "domain/energy-climate",
+    "kind": "domain",
+    "name": "Energy and climate",
+    "summary": "Energy, utilities, climate tech, sustainability, and environmental services.",
+    "domains": [
+      "energy-climate"
+    ],
+    "sectors": [
+      "other",
+      "nonprofit"
+    ],
+    "tags": [
+      "domain",
+      "science",
+      "energy",
+      "climate",
+      "sustainability",
+      "utilities",
+      "solar",
+      "wind",
+      "carbon",
+      "environment"
+    ],
+    "moods": [],
+    "quality": "reference",
+    "provenance": {
+      "source": "tastepro",
+      "repo": "",
+      "commit": "workspace",
+      "path": "content/taxonomy/domains.json",
+      "license": "Apache-2.0",
+      "authors": [
+        "TastePro"
+      ],
+      "url": "",
+      "transformations": [
+        "curated taxonomy"
+      ]
+    },
+    "family": "science",
+    "description": "Energy, utilities, climate tech, sustainability, and environmental services.",
+    "aliases": [
+      "energy",
+      "climate",
+      "sustainability",
+      "utilities",
+      "solar",
+      "wind",
+      "carbon",
+      "environment"
+    ],
+    "status": "planned",
+    "depth": "taxonomy",
+    "launchTier": false,
+    "upstreamSectors": [
+      "other",
+      "nonprofit"
+    ],
+    "appKinds": [
+      "analytics",
+      "report"
+    ],
+    "brandCategories": [
+      "Backend, Database & DevOps"
+    ],
+    "questions": [
+      "What measurable outcome does the product or project deliver?",
+      "Are the methodology, assumptions, and units honest and visible?",
+      "Does the page avoid greenwashing by showing evidence rather than leaves?"
+    ]
+  },
+  {
+    "id": "domain/events",
+    "kind": "domain",
+    "name": "Events",
+    "summary": "Conferences, festivals, meetups, weddings, and ticketed experiences.",
+    "domains": [
+      "events"
+    ],
+    "sectors": [
+      "event",
+      "culture"
+    ],
+    "tags": [
+      "domain",
+      "creative",
+      "event",
+      "conference",
+      "festival",
+      "meetup",
+      "wedding",
+      "ticket",
+      "summit"
+    ],
+    "moods": [],
+    "quality": "reference",
+    "provenance": {
+      "source": "tastepro",
+      "repo": "",
+      "commit": "workspace",
+      "path": "content/taxonomy/domains.json",
+      "license": "Apache-2.0",
+      "authors": [
+        "TastePro"
+      ],
+      "url": "",
+      "transformations": [
+        "curated taxonomy"
+      ]
+    },
+    "family": "creative",
+    "description": "Conferences, festivals, meetups, weddings, and ticketed experiences.",
+    "aliases": [
+      "event",
+      "conference",
+      "festival",
+      "meetup",
+      "wedding",
+      "ticket",
+      "summit"
+    ],
+    "status": "planned",
+    "depth": "taxonomy",
+    "launchTier": false,
+    "upstreamSectors": [
+      "event",
+      "culture"
+    ],
+    "appKinds": [
+      "commerce",
+      "workspace"
+    ],
+    "brandCategories": [
+      "Media & Consumer Tech"
+    ],
+    "questions": [
+      "What is happening, when, where, for whom, and how much?",
+      "Can someone register or buy a ticket without uncertainty?",
+      "Do the schedule, speakers, and venue information stay readable as they grow?"
+    ]
+  },
+  {
+    "id": "domain/fashion-beauty",
+    "kind": "domain",
+    "name": "Fashion and beauty",
+    "summary": "Fashion labels, beauty brands, skincare, cosmetics, and personal style.",
+    "domains": [
+      "fashion-beauty"
+    ],
+    "sectors": [
+      "fashion",
+      "ecommerce"
+    ],
+    "tags": [
+      "domain",
+      "creative",
+      "fashion",
+      "beauty",
+      "skincare",
+      "cosmetics",
+      "clothing",
+      "apparel",
+      "style",
+      "luxury"
+    ],
+    "moods": [],
+    "quality": "reference",
+    "provenance": {
+      "source": "tastepro",
+      "repo": "",
+      "commit": "workspace",
+      "path": "content/taxonomy/domains.json",
+      "license": "Apache-2.0",
+      "authors": [
+        "TastePro"
+      ],
+      "url": "",
+      "transformations": [
+        "curated taxonomy"
+      ]
+    },
+    "family": "creative",
+    "description": "Fashion labels, beauty brands, skincare, cosmetics, and personal style.",
+    "aliases": [
+      "fashion",
+      "beauty",
+      "skincare",
+      "cosmetics",
+      "clothing",
+      "apparel",
+      "style",
+      "luxury"
+    ],
+    "status": "planned",
+    "depth": "taxonomy",
+    "launchTier": false,
+    "upstreamSectors": [
+      "fashion",
+      "ecommerce"
+    ],
+    "appKinds": [
+      "commerce"
+    ],
+    "brandCategories": [
+      "E-commerce & Retail",
+      "Media & Consumer Tech"
+    ],
+    "questions": [
+      "Does the imagery establish a coherent world without obscuring the product?",
+      "Are sizing, materials, ingredients, shipping, and returns clear?",
+      "Is the typography and pacing appropriate to the price point?"
+    ]
+  },
+  {
+    "id": "domain/fintech-payments",
+    "kind": "domain",
+    "name": "Fintech and payments",
+    "summary": "Banking, payments, lending, investing, insurance infrastructure, and financial operations.",
+    "domains": [
+      "fintech-payments"
+    ],
+    "sectors": [
+      "finance",
+      "saas"
+    ],
+    "tags": [
+      "domain",
+      "software",
+      "fintech",
+      "finance",
+      "payments",
+      "banking",
+      "bank",
+      "lending",
+      "investing",
+      "money",
+      "billing",
+      "treasury"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "tastepro",
+      "repo": "",
+      "commit": "workspace",
+      "path": "content/taxonomy/domains.json",
+      "license": "Apache-2.0",
+      "authors": [
+        "TastePro"
+      ],
+      "url": "",
+      "transformations": [
+        "curated taxonomy",
+        "authored seed playbook"
+      ]
+    },
+    "family": "software",
+    "description": "Banking, payments, lending, investing, insurance infrastructure, and financial operations.",
+    "aliases": [
+      "fintech",
+      "finance",
+      "payments",
+      "banking",
+      "bank",
+      "lending",
+      "investing",
+      "money",
+      "billing",
+      "treasury"
+    ],
+    "status": "available",
+    "depth": "seed",
+    "launchTier": true,
+    "upstreamSectors": [
+      "finance",
+      "saas"
+    ],
+    "playbook": {
+      "audience": [
+        "Developers integrating payments",
+        "Finance and operations teams",
+        "Founders choosing a banking or treasury partner"
+      ],
+      "jobs": [
+        "Understand the exact product and fee",
+        "See the money flow and settlement timing",
+        "Evaluate security, compliance, and licensing",
+        "Compare plans or rates",
+        "Start an application or integration"
+      ],
+      "trust": [
+        "Regulatory status and licensing",
+        "Security and fraud controls",
+        "Fee schedule with a worked example",
+        "Settlement and reconciliation details",
+        "Named customers or audited partners"
+      ],
+      "informationArchitecture": [
+        "intro",
+        "how-it-works",
+        "features",
+        "proof",
+        "pricing",
+        "faq",
+        "cta",
+        "footer"
+      ],
+      "conversion": "Make the fee and the next step unambiguous. For developers, show the API call; for finance teams, show the settlement statement and reconciliation path. Never hide eligibility or risk.",
+      "contentChecklist": [
+        "Fee schedule and a worked example",
+        "Eligibility and geographic coverage",
+        "Settlement timing and reconciliation",
+        "Security, fraud, and dispute handling",
+        "Regulatory and licensing status",
+        "API or dashboard entry point",
+        "Support and escalation",
+        "Data and privacy terms"
+      ],
+      "antiPatterns": [
+        "A dark hero with a floating card and no product",
+        "“Banking-grade security” with no specifics",
+        "Fees buried in a footnote",
+        "A fake dashboard with invented balances",
+        "Crypto price theatre unrelated to the product",
+        "A CTA that starts an application before explaining eligibility"
+      ],
+      "signatureMoves": [
+        "A real fee calculator or worked transaction",
+        "A settlement timeline with actual days",
+        "A reconciliation view with clear states",
+        "A security page written for a skeptical CFO",
+        "A developer quickstart beside the business value"
+      ],
+      "recommendedDirections": [
+        "quiet-instrument",
+        "product-performs",
+        "editorial-report",
+        "one-motif"
+      ],
+      "recommendedSections": [
+        "intro",
+        "how-it-works",
+        "features",
+        "proof",
+        "pricing",
+        "faq",
+        "cta",
+        "footer"
+      ],
+      "recommendedPalettes": [
+        "white-link-blue",
+        "blue-black-cornflower",
+        "graphite-safety-orange",
+        "white-mint-tiles"
+      ],
+      "questions": [
+        "Who is eligible, and which jurisdictions are excluded?",
+        "What exactly does the customer pay, including FX and edge cases?",
+        "What happens when a payment fails or a dispute is opened?"
+      ],
+      "liveThing": "A fee calculator or a real transaction timeline with settlement states.",
+      "notes": "Trust is built through specificity: numbers, licenses, timelines, and failure handling. A beautiful page that avoids the fee schedule is a liability."
+    },
+    "appKinds": [
+      "finance",
+      "wallet",
+      "markets",
+      "report"
+    ],
+    "brandCategories": [
+      "Fintech & Crypto"
+    ],
+    "questions": [
+      "Which claim requires regulatory, security, or fee transparency, and is it stated plainly?",
+      "Can a visitor understand the exact fee, risk, or eligibility before signing up?",
+      "Is the product shown with real numbers, a clear unit, and a trustworthy source?"
+    ]
+  },
+  {
+    "id": "domain/fitness",
+    "kind": "domain",
+    "name": "Fitness",
+    "summary": "Gyms, trainers, fitness apps, studios, and athletic programs.",
+    "domains": [
+      "fitness"
+    ],
+    "sectors": [
+      "health",
+      "consumer-app"
+    ],
+    "tags": [
+      "domain",
+      "services",
+      "fitness",
+      "gym",
+      "trainer",
+      "workout",
+      "training",
+      "studio",
+      "wellness",
+      "athletic"
+    ],
+    "moods": [],
+    "quality": "reference",
+    "provenance": {
+      "source": "tastepro",
+      "repo": "",
+      "commit": "workspace",
+      "path": "content/taxonomy/domains.json",
+      "license": "Apache-2.0",
+      "authors": [
+        "TastePro"
+      ],
+      "url": "",
+      "transformations": [
+        "curated taxonomy"
+      ]
+    },
+    "family": "services",
+    "description": "Gyms, trainers, fitness apps, studios, and athletic programs.",
+    "aliases": [
+      "fitness",
+      "gym",
+      "trainer",
+      "workout",
+      "training",
+      "studio",
+      "wellness",
+      "athletic"
+    ],
+    "status": "planned",
+    "depth": "taxonomy",
+    "launchTier": false,
+    "upstreamSectors": [
+      "health",
+      "consumer-app"
+    ],
+    "appKinds": [
+      "workspace",
+      "commerce"
+    ],
+    "brandCategories": [
+      "Media & Consumer Tech"
+    ],
+    "questions": [
+      "What result does the program promise, and what does the first session look like?",
+      "Are pricing, schedule, location, and cancellation terms clear?",
+      "Does the visual language feel energetic without becoming a generic gym cliché?"
+    ]
+  },
+  {
+    "id": "domain/gaming",
+    "kind": "domain",
+    "name": "Gaming",
+    "summary": "Games, studios, platforms, esports, and interactive entertainment.",
+    "domains": [
+      "gaming"
+    ],
+    "sectors": [
+      "consumer-app",
+      "other"
+    ],
+    "tags": [
+      "domain",
+      "creative",
+      "gaming",
+      "game",
+      "studio",
+      "esports",
+      "interactive",
+      "console",
+      "player"
+    ],
+    "moods": [],
+    "quality": "reference",
+    "provenance": {
+      "source": "tastepro",
+      "repo": "",
+      "commit": "workspace",
+      "path": "content/taxonomy/domains.json",
+      "license": "Apache-2.0",
+      "authors": [
+        "TastePro"
+      ],
+      "url": "",
+      "transformations": [
+        "curated taxonomy"
+      ]
+    },
+    "family": "creative",
+    "description": "Games, studios, platforms, esports, and interactive entertainment.",
+    "aliases": [
+      "gaming",
+      "game",
+      "studio",
+      "esports",
+      "interactive",
+      "console",
+      "player"
+    ],
+    "status": "planned",
+    "depth": "taxonomy",
+    "launchTier": false,
+    "upstreamSectors": [
+      "consumer-app",
+      "other"
+    ],
+    "appKinds": [
+      "creator",
+      "commerce"
+    ],
+    "brandCategories": [
+      "Media & Consumer Tech"
+    ],
+    "questions": [
+      "Can a player understand the game's fantasy and loop in the first screen?",
+      "Are platform, price, release, and system requirements clear?",
+      "Does the page use motion and media without making the content inaccessible?"
+    ]
+  },
+  {
+    "id": "domain/government-public",
+    "kind": "domain",
+    "name": "Government and public sector",
+    "summary": "Government agencies, public services, permits, benefits, and civic infrastructure.",
+    "domains": [
+      "government-public"
+    ],
+    "sectors": [
+      "nonprofit",
+      "other"
+    ],
+    "tags": [
+      "domain",
+      "society",
+      "government",
+      "public sector",
+      "gov",
+      "agency",
+      "benefits",
+      "permit",
+      "municipal",
+      "citizen"
+    ],
+    "moods": [],
+    "quality": "reference",
+    "provenance": {
+      "source": "tastepro",
+      "repo": "",
+      "commit": "workspace",
+      "path": "content/taxonomy/domains.json",
+      "license": "Apache-2.0",
+      "authors": [
+        "TastePro"
+      ],
+      "url": "",
+      "transformations": [
+        "curated taxonomy"
+      ]
+    },
+    "family": "society",
+    "description": "Government agencies, public services, permits, benefits, and civic infrastructure.",
+    "aliases": [
+      "government",
+      "public sector",
+      "gov",
+      "agency",
+      "benefits",
+      "permit",
+      "municipal",
+      "citizen"
+    ],
+    "status": "planned",
+    "depth": "taxonomy",
+    "launchTier": false,
+    "upstreamSectors": [
+      "nonprofit",
+      "other"
+    ],
+    "appKinds": [
+      "workspace",
+      "support"
+    ],
+    "brandCategories": [
+      "Media & Consumer Tech"
+    ],
+    "questions": [
+      "Can a citizen complete the task without knowing the org chart?",
+      "Are eligibility, documents, timelines, and fees stated in plain language?",
+      "Does the page work for low bandwidth, assistive technology, and multiple languages?"
+    ]
+  },
+  {
+    "id": "domain/healthcare-wellness",
+    "kind": "domain",
+    "name": "Healthcare and wellness",
+    "summary": "Clinics, telehealth, mental health, wellness, and health products.",
+    "domains": [
+      "healthcare-wellness"
+    ],
+    "sectors": [
+      "health",
+      "consumer-app"
+    ],
+    "tags": [
+      "domain",
+      "services",
+      "health",
+      "healthcare",
+      "medical",
+      "clinic",
+      "telehealth",
+      "wellness",
+      "mental health",
+      "doctor",
+      "patient"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "tastepro",
+      "repo": "",
+      "commit": "workspace",
+      "path": "content/taxonomy/domains.json",
+      "license": "Apache-2.0",
+      "authors": [
+        "TastePro"
+      ],
+      "url": "",
+      "transformations": [
+        "curated taxonomy",
+        "authored seed playbook"
+      ]
+    },
+    "family": "services",
+    "description": "Clinics, telehealth, mental health, wellness, and health products.",
+    "aliases": [
+      "health",
+      "healthcare",
+      "medical",
+      "clinic",
+      "telehealth",
+      "wellness",
+      "mental health",
+      "doctor",
+      "patient"
+    ],
+    "status": "available",
+    "depth": "seed",
+    "launchTier": true,
+    "upstreamSectors": [
+      "health",
+      "consumer-app"
+    ],
+    "playbook": {
+      "audience": [
+        "Patients and caregivers",
+        "Clinicians and practice managers",
+        "Wellness customers assessing fit"
+      ],
+      "jobs": [
+        "Understand the service and eligibility",
+        "Know the cost and insurance path",
+        "Assess credentials and safety",
+        "Find the next step or emergency guidance",
+        "Feel respected rather than sold to"
+      ],
+      "trust": [
+        "Clinician credentials and licenses",
+        "Privacy and data-handling terms",
+        "Cost, insurance, and cancellation policy",
+        "Emergency and after-hours guidance",
+        "Patient stories with consent"
+      ],
+      "informationArchitecture": [
+        "intro",
+        "how-it-works",
+        "proof",
+        "features",
+        "faq",
+        "cta",
+        "footer"
+      ],
+      "conversion": "Reduce fear before asking for action. Explain eligibility, cost, privacy, and what the first appointment involves. Make the emergency path impossible to miss.",
+      "contentChecklist": [
+        "Who the service is for and not for",
+        "Cost, insurance, and payment options",
+        "Clinician credentials",
+        "Privacy and consent",
+        "First appointment expectations",
+        "Emergency and after-hours path",
+        "Accessibility and language support",
+        "Cancellation policy"
+      ],
+      "antiPatterns": [
+        "Soft gradients and stock photos of smiling doctors",
+        "Health claims without evidence or qualifications",
+        "A booking CTA before eligibility and cost",
+        "Hiding the emergency path in a footer",
+        "Testimonials that reveal patient identity without consent",
+        "Tiny body text and low-contrast pastels"
+      ],
+      "signatureMoves": [
+        "A calm, plain-language eligibility checker",
+        "A cost estimate with insurance caveats",
+        "A first-visit timeline that reduces uncertainty",
+        "A clinician profile with real credentials",
+        "A visible emergency guidance block"
+      ],
+      "recommendedDirections": [
+        "quiet-instrument",
+        "place-carries-it",
+        "editorial-report",
+        "sentence-as-layout"
+      ],
+      "recommendedSections": [
+        "intro",
+        "how-it-works",
+        "proof",
+        "features",
+        "faq",
+        "cta",
+        "footer"
+      ],
+      "recommendedPalettes": [
+        "white-mint-tiles",
+        "cool-white-slate",
+        "moss-sand",
+        "mint-orange-grey"
+      ],
+      "questions": [
+        "Who is clinically eligible, and who should not use this service?",
+        "What does the patient pay, and what does insurance cover?",
+        "What happens in an emergency or outside opening hours?"
+      ],
+      "liveThing": "An eligibility or cost estimator with a clear caveat and a human next step.",
+      "notes": "Calm is not the same as vague. The page should be gentle in tone and extremely clear about eligibility, cost, privacy, and emergency paths."
+    },
+    "appKinds": [
+      "workspace",
+      "support"
+    ],
+    "brandCategories": [
+      "Productivity & SaaS",
+      "Media & Consumer Tech"
+    ],
+    "questions": [
+      "Can a patient understand eligibility, cost, privacy, and next steps without fear or ambiguity?",
+      "Is the tone calm and human without becoming vague or overly clinical?",
+      "Are credentials, safety, and emergency guidance visible?"
+    ]
+  },
+  {
+    "id": "domain/insurance",
+    "kind": "domain",
+    "name": "Insurance",
+    "summary": "Property, health, life, auto, and commercial insurance products.",
+    "domains": [
+      "insurance"
+    ],
+    "sectors": [
+      "finance",
+      "saas"
+    ],
+    "tags": [
+      "domain",
+      "services",
+      "insurance",
+      "insurer",
+      "policy",
+      "coverage",
+      "claims",
+      "underwriting",
+      "risk"
+    ],
+    "moods": [],
+    "quality": "reference",
+    "provenance": {
+      "source": "tastepro",
+      "repo": "",
+      "commit": "workspace",
+      "path": "content/taxonomy/domains.json",
+      "license": "Apache-2.0",
+      "authors": [
+        "TastePro"
+      ],
+      "url": "",
+      "transformations": [
+        "curated taxonomy"
+      ]
+    },
+    "family": "services",
+    "description": "Property, health, life, auto, and commercial insurance products.",
+    "aliases": [
+      "insurance",
+      "insurer",
+      "policy",
+      "coverage",
+      "claims",
+      "underwriting",
+      "risk"
+    ],
+    "status": "planned",
+    "depth": "taxonomy",
+    "launchTier": false,
+    "upstreamSectors": [
+      "finance",
+      "saas"
+    ],
+    "appKinds": [
+      "finance",
+      "support"
+    ],
+    "brandCategories": [
+      "Fintech & Crypto"
+    ],
+    "questions": [
+      "Can a visitor understand what is covered, what is excluded, and what it costs?",
+      "Is the claims path visible and reassuring without overpromising?",
+      "Are trust signals specific: underwriter, regulator, license, and customer outcome?"
+    ]
+  },
+  {
+    "id": "domain/legal",
+    "kind": "domain",
+    "name": "Legal",
+    "summary": "Law firms, legal tech, compliance, and professional legal services.",
+    "domains": [
+      "legal"
+    ],
+    "sectors": [
+      "other",
+      "saas"
+    ],
+    "tags": [
+      "domain",
+      "services",
+      "legal",
+      "law",
+      "lawyer",
+      "attorney",
+      "firm",
+      "compliance",
+      "contract",
+      "counsel"
+    ],
+    "moods": [],
+    "quality": "reference",
+    "provenance": {
+      "source": "tastepro",
+      "repo": "",
+      "commit": "workspace",
+      "path": "content/taxonomy/domains.json",
+      "license": "Apache-2.0",
+      "authors": [
+        "TastePro"
+      ],
+      "url": "",
+      "transformations": [
+        "curated taxonomy"
+      ]
+    },
+    "family": "services",
+    "description": "Law firms, legal tech, compliance, and professional legal services.",
+    "aliases": [
+      "legal",
+      "law",
+      "lawyer",
+      "attorney",
+      "firm",
+      "compliance",
+      "contract",
+      "counsel"
+    ],
+    "status": "planned",
+    "depth": "taxonomy",
+    "launchTier": false,
+    "upstreamSectors": [
+      "other",
+      "saas"
+    ],
+    "appKinds": [
+      "workspace",
+      "support"
+    ],
+    "brandCategories": [
+      "Productivity & SaaS"
+    ],
+    "questions": [
+      "Which client, matter, and jurisdiction does the page address?",
+      "Are credentials, process, fees, and confidentiality clear?",
+      "Does the tone convey competence without hiding behind legal jargon?"
+    ]
+  },
+  {
+    "id": "domain/logistics",
+    "kind": "domain",
+    "name": "Logistics",
+    "summary": "Freight, delivery, warehousing, supply chain, and fleet operations.",
+    "domains": [
+      "logistics"
+    ],
+    "sectors": [
+      "other",
+      "saas"
+    ],
+    "tags": [
+      "domain",
+      "services",
+      "logistics",
+      "freight",
+      "delivery",
+      "warehouse",
+      "supply chain",
+      "fleet",
+      "shipping",
+      "fulfillment"
+    ],
+    "moods": [],
+    "quality": "reference",
+    "provenance": {
+      "source": "tastepro",
+      "repo": "",
+      "commit": "workspace",
+      "path": "content/taxonomy/domains.json",
+      "license": "Apache-2.0",
+      "authors": [
+        "TastePro"
+      ],
+      "url": "",
+      "transformations": [
+        "curated taxonomy"
+      ]
+    },
+    "family": "services",
+    "description": "Freight, delivery, warehousing, supply chain, and fleet operations.",
+    "aliases": [
+      "logistics",
+      "freight",
+      "delivery",
+      "warehouse",
+      "supply chain",
+      "fleet",
+      "shipping",
+      "fulfillment"
+    ],
+    "status": "planned",
+    "depth": "taxonomy",
+    "launchTier": false,
+    "upstreamSectors": [
+      "other",
+      "saas"
+    ],
+    "appKinds": [
+      "analytics",
+      "workspace"
+    ],
+    "brandCategories": [
+      "Backend, Database & DevOps"
+    ],
+    "questions": [
+      "Which route, mode, geography, and service level does the product cover?",
+      "Can the page show tracking, capacity, and pricing without a fake control tower?",
+      "What operational proof would a logistics buyer actually trust?"
+    ]
+  },
+  {
+    "id": "domain/manufacturing",
+    "kind": "domain",
+    "name": "Manufacturing",
+    "summary": "Industrial production, robotics, materials, and factory software.",
+    "domains": [
+      "manufacturing"
+    ],
+    "sectors": [
+      "other",
+      "physical-product"
+    ],
+    "tags": [
+      "domain",
+      "services",
+      "manufacturing",
+      "factory",
+      "industrial",
+      "robotics",
+      "materials",
+      "production",
+      "supply"
+    ],
+    "moods": [],
+    "quality": "reference",
+    "provenance": {
+      "source": "tastepro",
+      "repo": "",
+      "commit": "workspace",
+      "path": "content/taxonomy/domains.json",
+      "license": "Apache-2.0",
+      "authors": [
+        "TastePro"
+      ],
+      "url": "",
+      "transformations": [
+        "curated taxonomy"
+      ]
+    },
+    "family": "services",
+    "description": "Industrial production, robotics, materials, and factory software.",
+    "aliases": [
+      "manufacturing",
+      "factory",
+      "industrial",
+      "robotics",
+      "materials",
+      "production",
+      "supply"
+    ],
+    "status": "planned",
+    "depth": "taxonomy",
+    "launchTier": false,
+    "upstreamSectors": [
+      "other",
+      "physical-product"
+    ],
+    "appKinds": [
+      "workspace",
+      "analytics"
+    ],
+    "brandCategories": [
+      "Backend, Database & DevOps"
+    ],
+    "questions": [
+      "What is made, for whom, at what scale, and with what tolerance?",
+      "Can the page show the process or the plant rather than abstract Industry 4.0 language?",
+      "Which certifications, lead times, and integration constraints matter?"
+    ]
+  },
+  {
+    "id": "domain/marketplaces",
+    "kind": "domain",
+    "name": "Marketplaces",
+    "summary": "Two-sided marketplaces for goods, services, rentals, and local supply and demand.",
+    "domains": [
+      "marketplaces"
+    ],
+    "sectors": [
+      "ecommerce",
+      "consumer-app"
+    ],
+    "tags": [
+      "domain",
+      "commerce",
+      "marketplace",
+      "two-sided",
+      "supply",
+      "demand",
+      "rental",
+      "booking",
+      "classifieds"
+    ],
+    "moods": [],
+    "quality": "reference",
+    "provenance": {
+      "source": "tastepro",
+      "repo": "",
+      "commit": "workspace",
+      "path": "content/taxonomy/domains.json",
+      "license": "Apache-2.0",
+      "authors": [
+        "TastePro"
+      ],
+      "url": "",
+      "transformations": [
+        "curated taxonomy"
+      ]
+    },
+    "family": "commerce",
+    "description": "Two-sided marketplaces for goods, services, rentals, and local supply and demand.",
+    "aliases": [
+      "marketplace",
+      "two-sided",
+      "supply",
+      "demand",
+      "rental",
+      "booking",
+      "classifieds"
+    ],
+    "status": "planned",
+    "depth": "taxonomy",
+    "launchTier": false,
+    "upstreamSectors": [
+      "ecommerce",
+      "consumer-app"
+    ],
+    "appKinds": [
+      "commerce",
+      "workspace"
+    ],
+    "brandCategories": [
+      "E-commerce & Retail",
+      "Media & Consumer Tech"
+    ],
+    "questions": [
+      "Which side is the page for, and does the other side's value appear without confusing the CTA?",
+      "How are trust, safety, quality, and dispute resolution handled?",
+      "Can the page show real supply density and a believable transaction path?"
+    ]
+  },
+  {
+    "id": "domain/media-editorial",
+    "kind": "domain",
+    "name": "Media and editorial",
+    "summary": "News, magazines, newsletters, publications, and content-led brands.",
+    "domains": [
+      "media-editorial"
+    ],
+    "sectors": [
+      "culture",
+      "other"
+    ],
+    "tags": [
+      "domain",
+      "creative",
+      "media",
+      "editorial",
+      "news",
+      "magazine",
+      "publication",
+      "newsletter",
+      "journalism",
+      "blog"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "tastepro",
+      "repo": "",
+      "commit": "workspace",
+      "path": "content/taxonomy/domains.json",
+      "license": "Apache-2.0",
+      "authors": [
+        "TastePro"
+      ],
+      "url": "",
+      "transformations": [
+        "curated taxonomy",
+        "authored seed playbook"
+      ]
+    },
+    "family": "creative",
+    "description": "News, magazines, newsletters, publications, and content-led brands.",
+    "aliases": [
+      "media",
+      "editorial",
+      "news",
+      "magazine",
+      "publication",
+      "newsletter",
+      "journalism",
+      "blog"
+    ],
+    "status": "available",
+    "depth": "seed",
+    "launchTier": true,
+    "upstreamSectors": [
+      "culture",
+      "other"
+    ],
+    "playbook": {
+      "audience": [
+        "Readers looking for a point of view",
+        "Subscribers and returning readers",
+        "Advertisers or partners assessing audience"
+      ],
+      "jobs": [
+        "Understand what the publication covers",
+        "Scan the latest stories",
+        "Read comfortably",
+        "Trust the reporting and credits",
+        "Subscribe or return"
+      ],
+      "trust": [
+        "Bylines, dates, and credits",
+        "Corrections and editorial policy",
+        "Named sources and reporting",
+        "A clear separation of advertising",
+        "A readable archive"
+      ],
+      "informationArchitecture": [
+        "intro",
+        "list",
+        "showcase",
+        "proof",
+        "cta",
+        "footer"
+      ],
+      "conversion": "The primary action is reading. Make the front page a strong edit, keep story pages fast and legible, and ask for a subscription only after delivering value.",
+      "contentChecklist": [
+        "Publication name and point of view",
+        "Lead story with a real headline",
+        "Bylines and dates",
+        "Section navigation",
+        "Story summaries",
+        "Subscription offer",
+        "Editorial policy",
+        "Contact and tips"
+      ],
+      "antiPatterns": [
+        "A carousel that hides the lead story",
+        "Pop-ups before the first paragraph",
+        "Infinite scroll with no archive",
+        "Headlines that are not supported by the story",
+        "Ads styled as editorial",
+        "Tiny type and poor line length"
+      ],
+      "signatureMoves": [
+        "A front page that reads like a well-edited newspaper",
+        "A story page with generous type and clear credits",
+        "A section index with a strong hierarchy",
+        "A corrections or editorial standards page",
+        "A newsletter with a distinct voice"
+      ],
+      "recommendedDirections": [
+        "editorial-report",
+        "contact-sheet",
+        "sentence-as-layout",
+        "type-only-statement"
+      ],
+      "recommendedSections": [
+        "intro",
+        "list",
+        "showcase",
+        "proof",
+        "cta",
+        "footer"
+      ],
+      "recommendedPalettes": [
+        "white-link-blue",
+        "black-crimson",
+        "paper-grey-brass",
+        "sky-sand"
+      ],
+      "questions": [
+        "What does this publication cover that others do not?",
+        "What is the lead story, and why now?",
+        "How are corrections and advertising handled?"
+      ],
+      "liveThing": "A story page with real typography, bylines, and a related-reading path.",
+      "notes": "Editorial design is mostly hierarchy and reading comfort. The front page should have an opinion; the story page should disappear into the text."
+    },
+    "appKinds": [
+      "creator",
+      "analytics"
+    ],
+    "brandCategories": [
+      "Media & Consumer Tech",
+      "Retro Web"
+    ],
+    "questions": [
+      "What is the publication's point of view, and does the front page make it legible?",
+      "Can a reader scan, choose, and read a story without fighting the layout?",
+      "Are headlines, bylines, dates, credits, and corrections trustworthy?"
+    ]
+  },
+  {
+    "id": "domain/music",
+    "kind": "domain",
+    "name": "Music",
+    "summary": "Artists, labels, venues, festivals, instruments, and music products.",
+    "domains": [
+      "music"
+    ],
+    "sectors": [
+      "music",
+      "event"
+    ],
+    "tags": [
+      "domain",
+      "creative",
+      "music",
+      "artist",
+      "band",
+      "label",
+      "venue",
+      "festival",
+      "album",
+      "concert",
+      "instrument"
+    ],
+    "moods": [],
+    "quality": "reference",
+    "provenance": {
+      "source": "tastepro",
+      "repo": "",
+      "commit": "workspace",
+      "path": "content/taxonomy/domains.json",
+      "license": "Apache-2.0",
+      "authors": [
+        "TastePro"
+      ],
+      "url": "",
+      "transformations": [
+        "curated taxonomy"
+      ]
+    },
+    "family": "creative",
+    "description": "Artists, labels, venues, festivals, instruments, and music products.",
+    "aliases": [
+      "music",
+      "artist",
+      "band",
+      "label",
+      "venue",
+      "festival",
+      "album",
+      "concert",
+      "instrument"
+    ],
+    "status": "planned",
+    "depth": "taxonomy",
+    "launchTier": false,
+    "upstreamSectors": [
+      "music",
+      "event"
+    ],
+    "appKinds": [
+      "creator",
+      "commerce"
+    ],
+    "brandCategories": [
+      "Media & Consumer Tech"
+    ],
+    "questions": [
+      "What should a fan hear, see, or do first?",
+      "Are tour dates, releases, and listening links current and obvious?",
+      "Does the visual language come from the artist's world rather than a generic dark music template?"
+    ]
+  },
+  {
+    "id": "domain/nonprofit-civic",
+    "kind": "domain",
+    "name": "Nonprofit and civic",
+    "summary": "Charities, foundations, civic organizations, public-interest projects, and community programs.",
+    "domains": [
+      "nonprofit-civic"
+    ],
+    "sectors": [
+      "nonprofit",
+      "culture"
+    ],
+    "tags": [
+      "domain",
+      "society",
+      "nonprofit",
+      "non-profit",
+      "charity",
+      "civic",
+      "foundation",
+      "public interest",
+      "community",
+      "donate",
+      "volunteer"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "tastepro",
+      "repo": "",
+      "commit": "workspace",
+      "path": "content/taxonomy/domains.json",
+      "license": "Apache-2.0",
+      "authors": [
+        "TastePro"
+      ],
+      "url": "",
+      "transformations": [
+        "curated taxonomy",
+        "authored seed playbook"
+      ]
+    },
+    "family": "society",
+    "description": "Charities, foundations, civic organizations, public-interest projects, and community programs.",
+    "aliases": [
+      "nonprofit",
+      "non-profit",
+      "charity",
+      "civic",
+      "foundation",
+      "public interest",
+      "community",
+      "donate",
+      "volunteer"
+    ],
+    "status": "available",
+    "depth": "seed",
+    "launchTier": true,
+    "upstreamSectors": [
+      "nonprofit",
+      "culture"
+    ],
+    "playbook": {
+      "audience": [
+        "Donors and volunteers",
+        "People served by the organization",
+        "Partners and public officials"
+      ],
+      "jobs": [
+        "Understand the mission and the need",
+        "See the work and who it serves",
+        "Know how funds are used",
+        "Take one action: donate, volunteer, or apply",
+        "Trust the organization"
+      ],
+      "trust": [
+        "Program outcomes with methodology",
+        "Financial accountability",
+        "Leadership and governance",
+        "Participant stories with consent",
+        "Clear donation and privacy terms"
+      ],
+      "informationArchitecture": [
+        "intro",
+        "proof",
+        "features",
+        "about",
+        "faq",
+        "cta",
+        "footer"
+      ],
+      "conversion": "One action per audience. Donors need to know what their money does; participants need a clear service path. Do not mix the two into a generic “get involved” button.",
+      "contentChecklist": [
+        "Mission in plain language",
+        "Who is served",
+        "Program outcomes",
+        "Use of funds",
+        "Leadership and governance",
+        "Donation or volunteer path",
+        "Privacy and consent",
+        "Contact"
+      ],
+      "antiPatterns": [
+        "Poverty tourism photography",
+        "“Every dollar helps” without a unit of impact",
+        "A donate button before any explanation",
+        "Participant stories without consent",
+        "Generic hope imagery",
+        "Financial information hidden from donors"
+      ],
+      "signatureMoves": [
+        "A concrete unit of impact",
+        "A program page that centers participants",
+        "A transparent annual report",
+        "A volunteer path with real tasks",
+        "A civic campaign with a clear ask"
+      ],
+      "recommendedDirections": [
+        "colour-chapters",
+        "editorial-report",
+        "sentence-as-layout",
+        "place-carries-it"
+      ],
+      "recommendedSections": [
+        "intro",
+        "proof",
+        "features",
+        "about",
+        "faq",
+        "cta",
+        "footer"
+      ],
+      "recommendedPalettes": [
+        "moss-sand",
+        "white-mint-tiles",
+        "cobalt-on-sand",
+        "orange-sky-lime"
+      ],
+      "questions": [
+        "Who is served, and who is the donor or volunteer?",
+        "What does one unit of support actually pay for?",
+        "Which outcomes are measured, and which are aspirational?"
+      ],
+      "liveThing": "An impact calculator or a volunteer signup with real tasks and dates.",
+      "notes": "Civic and nonprofit pages must respect the people at the center of the work. Show accountability, use real numbers, and make the ask specific."
+    },
+    "appKinds": [
+      "workspace",
+      "report"
+    ],
+    "brandCategories": [
+      "Media & Consumer Tech",
+      "Retro Web"
+    ],
+    "questions": [
+      "What changes if a visitor donates, volunteers, or participates?",
+      "Is the organization's accountability, leadership, and use of funds visible?",
+      "Does the page center the people served rather than the organization's self-image?"
+    ]
+  },
+  {
+    "id": "domain/photography",
+    "kind": "domain",
+    "name": "Photography",
+    "summary": "Photographers, studios, archives, and image-led practices.",
+    "domains": [
+      "photography"
+    ],
+    "sectors": [
+      "personal-portfolio",
+      "studio-portfolio"
+    ],
+    "tags": [
+      "domain",
+      "creative",
+      "photography",
+      "photographer",
+      "photo",
+      "archive",
+      "studio",
+      "editorial photography"
+    ],
+    "moods": [],
+    "quality": "reference",
+    "provenance": {
+      "source": "tastepro",
+      "repo": "",
+      "commit": "workspace",
+      "path": "content/taxonomy/domains.json",
+      "license": "Apache-2.0",
+      "authors": [
+        "TastePro"
+      ],
+      "url": "",
+      "transformations": [
+        "curated taxonomy"
+      ]
+    },
+    "family": "creative",
+    "description": "Photographers, studios, archives, and image-led practices.",
+    "aliases": [
+      "photography",
+      "photographer",
+      "photo",
+      "archive",
+      "studio",
+      "editorial photography"
+    ],
+    "status": "planned",
+    "depth": "taxonomy",
+    "launchTier": false,
+    "upstreamSectors": [
+      "personal-portfolio",
+      "studio-portfolio"
+    ],
+    "appKinds": [
+      "creator"
+    ],
+    "brandCategories": [
+      "Media & Consumer Tech",
+      "Design & Creative Tools"
+    ],
+    "questions": [
+      "Do the photographs get enough size and sequence to be judged?",
+      "Is the practice, availability, and contact path clear?",
+      "Does the interface recede so the images can do the work?"
+    ]
+  },
+  {
+    "id": "domain/portfolios",
+    "kind": "domain",
+    "name": "Portfolios and personal sites",
+    "summary": "Designers, developers, photographers, artists, writers, and independent professionals.",
+    "domains": [
+      "portfolios"
+    ],
+    "sectors": [
+      "personal-portfolio",
+      "studio-portfolio"
+    ],
+    "tags": [
+      "domain",
+      "creative",
+      "portfolio",
+      "personal site",
+      "personal website",
+      "freelance",
+      "designer",
+      "developer",
+      "artist",
+      "photographer",
+      "writer"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "tastepro",
+      "repo": "",
+      "commit": "workspace",
+      "path": "content/taxonomy/domains.json",
+      "license": "Apache-2.0",
+      "authors": [
+        "TastePro"
+      ],
+      "url": "",
+      "transformations": [
+        "curated taxonomy",
+        "authored seed playbook"
+      ]
+    },
+    "family": "creative",
+    "description": "Designers, developers, photographers, artists, writers, and independent professionals.",
+    "aliases": [
+      "portfolio",
+      "personal site",
+      "personal website",
+      "freelance",
+      "designer",
+      "developer",
+      "artist",
+      "photographer",
+      "writer"
+    ],
+    "status": "available",
+    "depth": "seed",
+    "launchTier": true,
+    "upstreamSectors": [
+      "personal-portfolio",
+      "studio-portfolio"
+    ],
+    "playbook": {
+      "audience": [
+        "Hiring managers and collaborators",
+        "Prospective clients",
+        "Peers and curators"
+      ],
+      "jobs": [
+        "Know who this person is",
+        "See selected work quickly",
+        "Understand their role and range",
+        "Find contact or availability",
+        "Decide whether to reach out"
+      ],
+      "trust": [
+        "Specific project roles and credits",
+        "Real work, not mockups presented as client work",
+        "A current CV or about page",
+        "Contact details",
+        "A clear statement of availability"
+      ],
+      "informationArchitecture": [
+        "intro",
+        "work",
+        "about",
+        "contact",
+        "footer"
+      ],
+      "conversion": "The next step is a conversation. Make the person's practice legible, then give one clear contact path. Do not hide the work behind a slow intro animation.",
+      "contentChecklist": [
+        "Name and practice",
+        "Selected projects with role",
+        "About and experience",
+        "Contact",
+        "Availability",
+        "Credits and collaborators",
+        "A downloadable CV if relevant",
+        "Social or professional links"
+      ],
+      "antiPatterns": [
+        "A loading screen before the work",
+        "Equal-weight thumbnails with no context",
+        "A custom cursor that fights the content",
+        "“Passionate designer” copy with no evidence",
+        "Work presented without role or credit",
+        "Contact hidden behind a contact form only"
+      ],
+      "signatureMoves": [
+        "The name or one strong idea as the first screen",
+        "A project index with generous images",
+        "A short, specific about note",
+        "A contact page that reads like an invitation",
+        "A case study that shows process and judgment"
+      ],
+      "recommendedDirections": [
+        "name-as-monument",
+        "contact-sheet",
+        "uneven-photographs",
+        "type-only-statement"
+      ],
+      "recommendedSections": [
+        "intro",
+        "work",
+        "about",
+        "contact",
+        "footer"
+      ],
+      "recommendedPalettes": [
+        "three-stones",
+        "white-link-blue",
+        "plum-black-pink",
+        "offwhite-bottle-yellow"
+      ],
+      "questions": [
+        "What is the person's strongest piece of work?",
+        "What role did they play in it?",
+        "What kind of next conversation do they want?"
+      ],
+      "liveThing": "A project index with real credits and a fast path to one case study.",
+      "notes": "A portfolio is an edited argument, not an archive. Fewer, better projects with clear roles beat a wall of thumbnails."
+    },
+    "appKinds": [
+      "workspace",
+      "creator"
+    ],
+    "brandCategories": [
+      "Design & Creative Tools",
+      "Media & Consumer Tech"
+    ],
+    "questions": [
+      "Whose work is this, what do they do, and what should a visitor do next?",
+      "Do the selected projects show range and judgment rather than volume?",
+      "Is the person's own voice present in the copy and the layout?"
+    ]
+  },
+  {
+    "id": "domain/product-surfaces",
+    "kind": "domain",
+    "name": "Product surfaces",
+    "summary": "The screens inside a product: dashboards, docs, pricing, auth, onboarding, checkout, settings, and empty states.",
+    "domains": [
+      "product-surfaces"
+    ],
+    "sectors": [
+      "consumer-app",
+      "saas"
+    ],
+    "tags": [
+      "domain",
+      "product",
+      "dashboard",
+      "admin",
+      "docs",
+      "documentation",
+      "pricing",
+      "auth",
+      "login",
+      "signup",
+      "onboarding",
+      "checkout",
+      "settings",
+      "app screen",
+      "product ui"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "tastepro",
+      "repo": "",
+      "commit": "workspace",
+      "path": "content/taxonomy/domains.json",
+      "license": "Apache-2.0",
+      "authors": [
+        "TastePro"
+      ],
+      "url": "",
+      "transformations": [
+        "curated taxonomy",
+        "authored seed playbook"
+      ]
+    },
+    "family": "product",
+    "description": "The screens inside a product: dashboards, docs, pricing, auth, onboarding, checkout, settings, and empty states.",
+    "aliases": [
+      "dashboard",
+      "admin",
+      "docs",
+      "documentation",
+      "pricing",
+      "auth",
+      "login",
+      "signup",
+      "onboarding",
+      "checkout",
+      "settings",
+      "app screen",
+      "product ui"
+    ],
+    "status": "available",
+    "depth": "seed",
+    "launchTier": true,
+    "upstreamSectors": [
+      "consumer-app",
+      "saas"
+    ],
+    "playbook": {
+      "audience": [
+        "Daily users of a product",
+        "Admins and operators",
+        "New users in onboarding"
+      ],
+      "jobs": [
+        "Know the screen's one job",
+        "Find the primary action",
+        "Understand data and state",
+        "Recover from empty, loading, and error states",
+        "Work comfortably for long sessions"
+      ],
+      "trust": [
+        "Clear system status and data freshness",
+        "Undo or confirmation for destructive actions",
+        "Keyboard and screen-reader support",
+        "Consistent terminology",
+        "Visible permissions and scope"
+      ],
+      "informationArchitecture": [
+        "intro",
+        "features",
+        "how-it-works",
+        "proof",
+        "faq",
+        "cta",
+        "footer"
+      ],
+      "conversion": "This is a product surface, not a landing page. The primary action should be obvious, the data should have a source and time, and every state should be designed.",
+      "contentChecklist": [
+        "Screen title and scope",
+        "Primary action",
+        "Empty state",
+        "Loading state",
+        "Error and retry state",
+        "Long-content behavior",
+        "Permissions and destructive actions",
+        "Keyboard path"
+      ],
+      "antiPatterns": [
+        "A dashboard with no primary action",
+        "Fake data that looks real but has no source",
+        "Icon-only controls without labels",
+        "Modals that trap focus or lose scroll position",
+        "Dense tables without sorting or empty states",
+        "Color as the only status signal"
+      ],
+      "signatureMoves": [
+        "A shell that fits the product's real work",
+        "A data table with clear hierarchy and states",
+        "An onboarding flow that teaches by doing",
+        "A pricing or settings page with honest tradeoffs",
+        "A docs page that reads like a good book"
+      ],
+      "recommendedDirections": [
+        "quiet-instrument",
+        "product-performs",
+        "one-motif",
+        "editorial-report"
+      ],
+      "recommendedSections": [
+        "intro",
+        "features",
+        "how-it-works",
+        "proof",
+        "faq",
+        "cta",
+        "footer"
+      ],
+      "recommendedPalettes": [
+        "white-navy-tab",
+        "cool-white-slate",
+        "graphite-safety-orange",
+        "charcoal-room-sage"
+      ],
+      "questions": [
+        "What is the one job of this screen?",
+        "What does the empty state teach?",
+        "Which action is destructive, and how is it protected?"
+      ],
+      "liveThing": "A real interaction with empty, loading, success, and error states.",
+      "notes": "Product surfaces are judged in use, not in screenshots. Design the shell, the states, and the keyboard path before polishing the hero."
+    },
+    "appKinds": [
+      "workspace",
+      "analytics",
+      "builder",
+      "support",
+      "smb-admin"
+    ],
+    "brandCategories": [
+      "Productivity & SaaS",
+      "Developer Tools & IDEs"
+    ],
+    "questions": [
+      "What is the one job of this screen, and what is the one primary action?",
+      "What does empty, loading, error, and long-content state look like?",
+      "Which shell, density, and data treatment fit the product's real work?"
+    ]
+  },
+  {
+    "id": "domain/productivity",
+    "kind": "domain",
+    "name": "Productivity",
+    "summary": "Personal and team productivity: notes, tasks, calendars, email, documents, and workflow tools.",
+    "domains": [
+      "productivity"
+    ],
+    "sectors": [
+      "consumer-app",
+      "saas"
+    ],
+    "tags": [
+      "domain",
+      "software",
+      "productivity",
+      "notes",
+      "tasks",
+      "calendar",
+      "email",
+      "workspace",
+      "docs",
+      "collaboration"
+    ],
+    "moods": [],
+    "quality": "reference",
+    "provenance": {
+      "source": "tastepro",
+      "repo": "",
+      "commit": "workspace",
+      "path": "content/taxonomy/domains.json",
+      "license": "Apache-2.0",
+      "authors": [
+        "TastePro"
+      ],
+      "url": "",
+      "transformations": [
+        "curated taxonomy"
+      ]
+    },
+    "family": "software",
+    "description": "Personal and team productivity: notes, tasks, calendars, email, documents, and workflow tools.",
+    "aliases": [
+      "productivity",
+      "notes",
+      "tasks",
+      "calendar",
+      "email",
+      "workspace",
+      "docs",
+      "collaboration"
+    ],
+    "status": "planned",
+    "depth": "taxonomy",
+    "launchTier": false,
+    "upstreamSectors": [
+      "consumer-app",
+      "saas"
+    ],
+    "appKinds": [
+      "workspace",
+      "builder",
+      "smb-admin"
+    ],
+    "brandCategories": [
+      "Productivity & SaaS"
+    ],
+    "questions": [
+      "What recurring moment does the product make easier, and can it be shown in the first screen?",
+      "Does the page respect the user's existing tools and data?",
+      "Is the product surface calm enough for daily use rather than demo theatrics?"
+    ]
+  },
+  {
+    "id": "domain/real-estate",
+    "kind": "domain",
+    "name": "Real estate",
+    "summary": "Property listings, brokerages, proptech, rentals, and built-environment services.",
+    "domains": [
+      "real-estate"
+    ],
+    "sectors": [
+      "real-estate",
+      "architecture"
+    ],
+    "tags": [
+      "domain",
+      "services",
+      "real estate",
+      "property",
+      "proptech",
+      "listing",
+      "brokerage",
+      "rental",
+      "home",
+      "apartment",
+      "housing"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "tastepro",
+      "repo": "",
+      "commit": "workspace",
+      "path": "content/taxonomy/domains.json",
+      "license": "Apache-2.0",
+      "authors": [
+        "TastePro"
+      ],
+      "url": "",
+      "transformations": [
+        "curated taxonomy",
+        "authored seed playbook"
+      ]
+    },
+    "family": "services",
+    "description": "Property listings, brokerages, proptech, rentals, and built-environment services.",
+    "aliases": [
+      "real estate",
+      "property",
+      "proptech",
+      "listing",
+      "brokerage",
+      "rental",
+      "home",
+      "apartment",
+      "housing"
+    ],
+    "status": "available",
+    "depth": "seed",
+    "launchTier": true,
+    "upstreamSectors": [
+      "real-estate",
+      "architecture"
+    ],
+    "playbook": {
+      "audience": [
+        "Buyers and renters",
+        "Sellers evaluating an agent",
+        "Investors comparing properties"
+      ],
+      "jobs": [
+        "Understand the property and location",
+        "See accurate photos and floor plans",
+        "Check price, fees, and availability",
+        "Evaluate the agent or brokerage",
+        "Book a viewing or make an offer"
+      ],
+      "trust": [
+        "Accurate listing data and dates",
+        "Real photography and floor plans",
+        "Agent credentials and license",
+        "Fee and commission transparency",
+        "Clear process and next steps"
+      ],
+      "informationArchitecture": [
+        "intro",
+        "showcase",
+        "features",
+        "proof",
+        "faq",
+        "cta",
+        "footer"
+      ],
+      "conversion": "Make the property the hero and the viewing the next step. Keep price, availability, and agent contact visible; explain the process before asking for personal details.",
+      "contentChecklist": [
+        "Address and neighborhood",
+        "Price and fees",
+        "Bedrooms, bathrooms, and size",
+        "Floor plan",
+        "Property condition and updates",
+        "Agent credentials",
+        "Viewing availability",
+        "Offer and closing process"
+      ],
+      "antiPatterns": [
+        "Wide-angle photos that distort the rooms",
+        "Listings without a floor plan or size",
+        "“Luxury” copy with no property details",
+        "Hidden fees or auction terms",
+        "A contact form before any property information",
+        "Stale listings presented as available"
+      ],
+      "signatureMoves": [
+        "A property page that reads like a monograph",
+        "A floor plan with room dimensions",
+        "A neighborhood guide with real distances",
+        "A transparent fee and process block",
+        "A viewing scheduler that confirms the address"
+      ],
+      "recommendedDirections": [
+        "place-carries-it",
+        "contact-sheet",
+        "specimen-catalogue",
+        "editorial-report"
+      ],
+      "recommendedSections": [
+        "intro",
+        "showcase",
+        "features",
+        "proof",
+        "faq",
+        "cta",
+        "footer"
+      ],
+      "recommendedPalettes": [
+        "stone-blueprint",
+        "warm-black-gold",
+        "cool-white-slate",
+        "putty-black-teal"
+      ],
+      "questions": [
+        "Is this page for buyers, renters, sellers, or investors?",
+        "Which property facts are verified and current?",
+        "What is the honest condition, fee, and process?"
+      ],
+      "liveThing": "A floor plan or viewing scheduler with real availability.",
+      "notes": "Real estate buyers are making a high-stakes decision. Accurate facts, real images, and a clear process beat aspirational lifestyle copy."
+    },
+    "appKinds": [
+      "commerce",
+      "workspace"
+    ],
+    "brandCategories": [
+      "E-commerce & Retail",
+      "Design & Creative Tools"
+    ],
+    "questions": [
+      "Can a buyer or renter understand the property, price, location, and process?",
+      "Does the imagery show the actual property and its context?",
+      "Are availability, fees, and next steps honest and current?"
+    ]
+  },
+  {
+    "id": "domain/restaurants-food",
+    "kind": "domain",
+    "name": "Restaurants and food",
+    "summary": "Restaurants, cafes, bakeries, bars, food brands, and hospitality menus.",
+    "domains": [
+      "restaurants-food"
+    ],
+    "sectors": [
+      "restaurant",
+      "hospitality"
+    ],
+    "tags": [
+      "domain",
+      "commerce",
+      "restaurant",
+      "food",
+      "cafe",
+      "bakery",
+      "bar",
+      "menu",
+      "dining",
+      "kitchen",
+      "chef",
+      "hospitality"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "tastepro",
+      "repo": "",
+      "commit": "workspace",
+      "path": "content/taxonomy/domains.json",
+      "license": "Apache-2.0",
+      "authors": [
+        "TastePro"
+      ],
+      "url": "",
+      "transformations": [
+        "curated taxonomy",
+        "authored seed playbook"
+      ]
+    },
+    "family": "commerce",
+    "description": "Restaurants, cafes, bakeries, bars, food brands, and hospitality menus.",
+    "aliases": [
+      "restaurant",
+      "food",
+      "cafe",
+      "bakery",
+      "bar",
+      "menu",
+      "dining",
+      "kitchen",
+      "chef",
+      "hospitality"
+    ],
+    "status": "available",
+    "depth": "seed",
+    "launchTier": true,
+    "upstreamSectors": [
+      "restaurant",
+      "hospitality"
+    ],
+    "playbook": {
+      "audience": [
+        "Local diners choosing where to eat",
+        "Visitors planning a meal",
+        "Guests booking a private event"
+      ],
+      "jobs": [
+        "See the menu and prices",
+        "Check hours and location",
+        "Understand the room and the food",
+        "Book a table or order",
+        "Find dietary and accessibility information"
+      ],
+      "trust": [
+        "Current menu with prices",
+        "Real food and room photography",
+        "Hours, address, and contact",
+        "Allergen and dietary notes",
+        "Booking and cancellation terms"
+      ],
+      "informationArchitecture": [
+        "intro",
+        "showcase",
+        "features",
+        "proof",
+        "faq",
+        "cta",
+        "footer"
+      ],
+      "conversion": "One action: book, order, or visit. Keep hours, address, and phone visible on every screen. The menu should be readable on a phone without a PDF.",
+      "contentChecklist": [
+        "Menu with prices",
+        "Hours and holiday closures",
+        "Address and transport",
+        "Booking policy",
+        "Allergens and dietary options",
+        "Accessibility",
+        "Private events",
+        "Contact"
+      ],
+      "antiPatterns": [
+        "A menu only available as a PDF",
+        "Dark food photography that hides the dish",
+        "Autoplay video with sound",
+        "Hours buried in a footer",
+        "A booking widget that loses the date",
+        "“Authentic” claims with no specific point of view"
+      ],
+      "signatureMoves": [
+        "The menu as the page's main typographic object",
+        "A room gallery that shows the actual space",
+        "A local guide to the neighborhood",
+        "A clear dietary and allergen key",
+        "A booking flow that confirms the table details"
+      ],
+      "recommendedDirections": [
+        "page-is-the-object",
+        "place-carries-it",
+        "type-only-statement",
+        "editorial-report"
+      ],
+      "recommendedSections": [
+        "intro",
+        "showcase",
+        "features",
+        "proof",
+        "faq",
+        "cta",
+        "footer"
+      ],
+      "recommendedPalettes": [
+        "tobacco-olive",
+        "warm-black-gold",
+        "paper-grey-brass",
+        "burgundy-bubblegum"
+      ],
+      "questions": [
+        "What kind of meal is this: quick, celebratory, or everyday?",
+        "Which menu items are the reason to come?",
+        "What do guests with allergies or accessibility needs need to know?"
+      ],
+      "liveThing": "A phone-readable menu with prices, allergens, and a booking action.",
+      "notes": "The menu is the product. Give it the care of a printed menu, keep the practical details visible, and let the room and food photography do the atmosphere."
+    },
+    "appKinds": [
+      "commerce",
+      "report"
+    ],
+    "brandCategories": [
+      "E-commerce & Retail"
+    ],
+    "questions": [
+      "Can a guest find the menu, hours, location, and booking action in one screen?",
+      "Does the photography show the place and the food honestly, with credits?",
+      "Is the menu readable on a phone, with prices, allergens, and dietary notes?"
+    ]
+  },
+  {
+    "id": "domain/retail",
+    "kind": "domain",
+    "name": "Retail",
+    "summary": "Multi-brand retail, department stores, grocery, and omnichannel commerce.",
+    "domains": [
+      "retail"
+    ],
+    "sectors": [
+      "ecommerce",
+      "physical-product"
+    ],
+    "tags": [
+      "domain",
+      "commerce",
+      "retail",
+      "retailer",
+      "department store",
+      "grocery",
+      "supermarket",
+      "omnichannel"
+    ],
+    "moods": [],
+    "quality": "reference",
+    "provenance": {
+      "source": "tastepro",
+      "repo": "",
+      "commit": "workspace",
+      "path": "content/taxonomy/domains.json",
+      "license": "Apache-2.0",
+      "authors": [
+        "TastePro"
+      ],
+      "url": "",
+      "transformations": [
+        "curated taxonomy"
+      ]
+    },
+    "family": "commerce",
+    "description": "Multi-brand retail, department stores, grocery, and omnichannel commerce.",
+    "aliases": [
+      "retail",
+      "retailer",
+      "department store",
+      "grocery",
+      "supermarket",
+      "omnichannel"
+    ],
+    "status": "planned",
+    "depth": "taxonomy",
+    "launchTier": false,
+    "upstreamSectors": [
+      "ecommerce",
+      "physical-product"
+    ],
+    "appKinds": [
+      "commerce"
+    ],
+    "brandCategories": [
+      "E-commerce & Retail"
+    ],
+    "questions": [
+      "Does the page help someone browse a broad catalogue without losing the thread?",
+      "Are availability, delivery, returns, and store details clear?",
+      "Which merchandising device is doing real work rather than filling space?"
+    ]
+  },
+  {
+    "id": "domain/security",
+    "kind": "domain",
+    "name": "Security",
+    "summary": "Application security, identity, compliance, threat detection, and security operations.",
+    "domains": [
+      "security"
+    ],
+    "sectors": [
+      "saas",
+      "dev-tool"
+    ],
+    "tags": [
+      "domain",
+      "software",
+      "security",
+      "appsec",
+      "infosec",
+      "identity",
+      "compliance",
+      "threat",
+      "soc",
+      "zero trust"
+    ],
+    "moods": [],
+    "quality": "reference",
+    "provenance": {
+      "source": "tastepro",
+      "repo": "",
+      "commit": "workspace",
+      "path": "content/taxonomy/domains.json",
+      "license": "Apache-2.0",
+      "authors": [
+        "TastePro"
+      ],
+      "url": "",
+      "transformations": [
+        "curated taxonomy"
+      ]
+    },
+    "family": "software",
+    "description": "Application security, identity, compliance, threat detection, and security operations.",
+    "aliases": [
+      "security",
+      "appsec",
+      "infosec",
+      "identity",
+      "compliance",
+      "threat",
+      "soc",
+      "zero trust"
+    ],
+    "status": "planned",
+    "depth": "taxonomy",
+    "launchTier": false,
+    "upstreamSectors": [
+      "saas",
+      "dev-tool"
+    ],
+    "appKinds": [
+      "analytics",
+      "support"
+    ],
+    "brandCategories": [
+      "Backend, Database & DevOps"
+    ],
+    "questions": [
+      "Which threat, buyer, and compliance regime does the product address?",
+      "Can the page show evidence without exposing sensitive customer data?",
+      "Is the call to action appropriate for a high-consideration, trust-first purchase?"
+    ]
+  },
+  {
+    "id": "domain/sports",
+    "kind": "domain",
+    "name": "Sports",
+    "summary": "Teams, leagues, athletes, fitness events, and sports media.",
+    "domains": [
+      "sports"
+    ],
+    "sectors": [
+      "other",
+      "event"
+    ],
+    "tags": [
+      "domain",
+      "creative",
+      "sports",
+      "team",
+      "league",
+      "athlete",
+      "match",
+      "game",
+      "club",
+      "fitness event"
+    ],
+    "moods": [],
+    "quality": "reference",
+    "provenance": {
+      "source": "tastepro",
+      "repo": "",
+      "commit": "workspace",
+      "path": "content/taxonomy/domains.json",
+      "license": "Apache-2.0",
+      "authors": [
+        "TastePro"
+      ],
+      "url": "",
+      "transformations": [
+        "curated taxonomy"
+      ]
+    },
+    "family": "creative",
+    "description": "Teams, leagues, athletes, fitness events, and sports media.",
+    "aliases": [
+      "sports",
+      "team",
+      "league",
+      "athlete",
+      "match",
+      "game",
+      "club",
+      "fitness event"
+    ],
+    "status": "planned",
+    "depth": "taxonomy",
+    "launchTier": false,
+    "upstreamSectors": [
+      "other",
+      "event"
+    ],
+    "appKinds": [
+      "creator",
+      "analytics"
+    ],
+    "brandCategories": [
+      "Media & Consumer Tech"
+    ],
+    "questions": [
+      "What is the next match, event, or action a fan cares about?",
+      "Can the page carry live or frequently changing data without breaking?",
+      "Does the identity feel specific to the club rather than generic athletic energy?"
+    ]
+  },
+  {
+    "id": "domain/telecom",
+    "kind": "domain",
+    "name": "Telecom",
+    "summary": "Connectivity, mobile networks, broadband, and communication infrastructure.",
+    "domains": [
+      "telecom"
+    ],
+    "sectors": [],
+    "tags": [
+      "domain",
+      "software",
+      "telecom",
+      "telecommunications",
+      "network",
+      "broadband",
+      "mobile",
+      "connectivity",
+      "carrier"
+    ],
+    "moods": [],
+    "quality": "reference",
+    "provenance": {
+      "source": "tastepro",
+      "repo": "",
+      "commit": "workspace",
+      "path": "content/taxonomy/domains.json",
+      "license": "Apache-2.0",
+      "authors": [
+        "TastePro"
+      ],
+      "url": "",
+      "transformations": [
+        "curated taxonomy"
+      ]
+    },
+    "family": "software",
+    "description": "Connectivity, mobile networks, broadband, and communication infrastructure.",
+    "aliases": [
+      "telecom",
+      "telecommunications",
+      "network",
+      "broadband",
+      "mobile",
+      "connectivity",
+      "carrier"
+    ],
+    "status": "planned",
+    "depth": "taxonomy",
+    "launchTier": false,
+    "upstreamSectors": [],
+    "appKinds": [
+      "smb-admin",
+      "support"
+    ],
+    "brandCategories": [
+      "Media & Consumer Tech"
+    ],
+    "questions": [
+      "Is coverage, speed, price, and contract length clear before the CTA?",
+      "Can the page show a real coverage map or plan comparison without hiding caveats?",
+      "Does the visual language feel infrastructural rather than generic consumer tech?"
+    ]
+  },
+  {
+    "id": "domain/travel-hospitality",
+    "kind": "domain",
+    "name": "Travel and hospitality",
+    "summary": "Hotels, resorts, rentals, tours, destinations, and travel services.",
+    "domains": [
+      "travel-hospitality"
+    ],
+    "sectors": [
+      "hospitality",
+      "restaurant"
+    ],
+    "tags": [
+      "domain",
+      "commerce",
+      "travel",
+      "hospitality",
+      "hotel",
+      "resort",
+      "rental",
+      "villa",
+      "tour",
+      "destination",
+      "booking",
+      "stay"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "tastepro",
+      "repo": "",
+      "commit": "workspace",
+      "path": "content/taxonomy/domains.json",
+      "license": "Apache-2.0",
+      "authors": [
+        "TastePro"
+      ],
+      "url": "",
+      "transformations": [
+        "curated taxonomy",
+        "authored seed playbook"
+      ]
+    },
+    "family": "commerce",
+    "description": "Hotels, resorts, rentals, tours, destinations, and travel services.",
+    "aliases": [
+      "travel",
+      "hospitality",
+      "hotel",
+      "resort",
+      "rental",
+      "villa",
+      "tour",
+      "destination",
+      "booking",
+      "stay"
+    ],
+    "status": "available",
+    "depth": "seed",
+    "launchTier": true,
+    "upstreamSectors": [
+      "hospitality",
+      "restaurant"
+    ],
+    "playbook": {
+      "audience": [
+        "Travelers choosing a stay",
+        "Guests booking a specific room or experience",
+        "Travel planners comparing locations"
+      ],
+      "jobs": [
+        "Understand the place and atmosphere",
+        "See rooms, amenities, and location",
+        "Check availability, price, and terms",
+        "Know how to get there",
+        "Book with confidence"
+      ],
+      "trust": [
+        "Real property photography",
+        "Room and amenity details",
+        "Location and transport information",
+        "Cancellation and payment terms",
+        "Reviews with specific stays"
+      ],
+      "informationArchitecture": [
+        "intro",
+        "showcase",
+        "features",
+        "proof",
+        "faq",
+        "cta",
+        "footer"
+      ],
+      "conversion": "Put the booking action near the price and availability, and keep the phone path obvious. Show the room and the location, not just the pool at sunset.",
+      "contentChecklist": [
+        "Room types and capacity",
+        "Amenities and accessibility",
+        "Location and transport",
+        "Check-in and check-out",
+        "Cancellation and payment",
+        "Dining and local context",
+        "Reviews or press",
+        "Contact and concierge"
+      ],
+      "antiPatterns": [
+        "A cinematic video that never shows the room",
+        "The same sunset photo on every property page",
+        "Prices that only appear after dates are entered",
+        "Hidden resort fees",
+        "Generic “escape” copy with no place specificity",
+        "Booking CTA that loses the selected dates"
+      ],
+      "signatureMoves": [
+        "A room gallery with dimensions and light",
+        "A location page that behaves like a local guide",
+        "A booking bar that keeps dates and guests visible",
+        "A house rules and accessibility block written plainly",
+        "A concierge note with real recommendations"
+      ],
+      "recommendedDirections": [
+        "place-carries-it",
+        "uneven-photographs",
+        "contact-sheet",
+        "page-is-the-object"
+      ],
+      "recommendedSections": [
+        "intro",
+        "showcase",
+        "features",
+        "proof",
+        "faq",
+        "cta",
+        "footer"
+      ],
+      "recommendedPalettes": [
+        "moss-sand",
+        "warm-black-gold",
+        "offwhite-bottle-yellow",
+        "tobacco-olive"
+      ],
+      "questions": [
+        "Which room or experience is the page selling?",
+        "What is the honest location and transport situation?",
+        "Which fees and cancellation terms must be visible before booking?"
+      ],
+      "liveThing": "A date-aware availability or room comparison that keeps the selected stay visible.",
+      "notes": "Hospitality pages sell a place, not a template. The photography and the practical details must agree; a beautiful page that hides the room is worse than a plain one."
+    },
+    "appKinds": [
+      "commerce",
+      "workspace"
+    ],
+    "brandCategories": [
+      "E-commerce & Retail",
+      "Media & Consumer Tech"
+    ],
+    "questions": [
+      "Can a guest understand the place, the rooms, the location, the price, and the booking terms?",
+      "Does the imagery carry the atmosphere without hiding the actual property?",
+      "Is the booking path short enough for a phone and honest about availability?"
+    ]
+  }
+]

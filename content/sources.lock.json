@@ -1,0 +1,76 @@
+{
+  "version": 1,
+  "generatedAt": "2026-10-27",
+  "sources": [
+    {
+      "id": "taste-skill",
+      "name": "Taste Skill",
+      "repo": "https://github.com/Leonxlnx/taste-skill",
+      "commit": "12af471f627f866411b4bd785b19646d3672784c",
+      "license": "MIT",
+      "licenseUrl": "https://raw.githubusercontent.com/Leonxlnx/taste-skill/12af471f627f866411b4bd785b19646d3672784c/LICENSE",
+      "authors": ["Leonxlnx"],
+      "url": "https://github.com/Leonxlnx/taste-skill",
+      "notes": "Design directions, palettes, type pairings, hero and section blueprints, motion recipes, site studies, photo-set metadata, app-screen library, and reference essays.",
+      "paths": {
+        "skill": "skills/taste-skill/SKILL.md",
+        "directions": "skills/taste-skill/library/directions.json",
+        "palettes": "skills/taste-skill/library/palettes.json",
+        "types": "skills/taste-skill/library/type.json",
+        "heroes": "skills/taste-skill/library/heroes.json",
+        "sections": "skills/taste-skill/library/sections.json",
+        "motions": "skills/taste-skill/library/motions.json",
+        "sites": "skills/taste-skill/library/sites.json",
+        "photos": "skills/taste-skill/library/photos.json",
+        "app": "skills/taste-skill/library/app.json",
+        "references": "skills/taste-skill/references"
+      }
+    },
+    {
+      "id": "awesome-design-md",
+      "name": "Awesome DESIGN.md",
+      "repo": "https://github.com/VoltAgent/awesome-design-md",
+      "commit": "3b605329240ce735b510037cca322f1831fdd7f8",
+      "license": "MIT",
+      "licenseUrl": "https://raw.githubusercontent.com/VoltAgent/awesome-design-md/3b605329240ce735b510037cca322f1831fdd7f8/LICENSE",
+      "authors": ["VoltAgent"],
+      "url": "https://github.com/VoltAgent/awesome-design-md",
+      "notes": "84 brand design-system analyses with YAML tokens. Brand names are used as references with attribution; no logos or screenshots are redistributed.",
+      "paths": {
+        "readme": "README.md",
+        "designDir": "design-md"
+      }
+    },
+    {
+      "id": "web-interface-guidelines",
+      "name": "Vercel Web Interface Guidelines",
+      "repo": "https://github.com/vercel-labs/web-interface-guidelines",
+      "commit": "434b7f91364665f2f733b310ec54809bf8f37937",
+      "license": "MIT",
+      "licenseUrl": "https://raw.githubusercontent.com/vercel-labs/web-interface-guidelines/434b7f91364665f2f733b310ec54809bf8f37937/LICENSE",
+      "authors": ["Vercel Labs"],
+      "url": "https://vercel.com/design/guidelines",
+      "notes": "The audit rubric: accessibility, focus, forms, animation, typography, content handling, images, performance, navigation, touch, layout, dark mode, i18n, hydration, hover, copy, and anti-patterns.",
+      "paths": {
+        "rules": "command.md",
+        "agents": "AGENTS.md"
+      }
+    },
+    {
+      "id": "playwright-cli",
+      "name": "Playwright CLI",
+      "repo": "https://github.com/microsoft/playwright-cli",
+      "commit": "b1a5903c5b633b8c9f843ad7b629c2a78437040c",
+      "license": "Apache-2.0",
+      "licenseUrl": "https://raw.githubusercontent.com/microsoft/playwright-cli/b1a5903c5b633b8c9f843ad7b629c2a78437040c/LICENSE",
+      "authors": ["Microsoft"],
+      "url": "https://github.com/microsoft/playwright-cli",
+      "notes": "Browser automation and session-management guidance for the audit loop. The TastePro audit implementation is original; this source informs the workflow and reference skill.",
+      "paths": {
+        "readme": "README.md",
+        "skill": "skills/playwright-cli/SKILL.md",
+        "references": "skills/playwright-cli/references"
+      }
+    }
+  ]
+}

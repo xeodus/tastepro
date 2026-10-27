@@ -1,0 +1,33 @@
+TastePro
+Copyright 2026 TastePro contributors
+
+This product includes material derived from the following open-source
+projects. The full license text for each source is retained in
+content/sources/licenses/ and reproduced in ATTRIBUTION.md.
+
+Taste Skill
+  Copyright (c) 2026 Leonxlnx
+  MIT License
+  https://github.com/Leonxlnx/taste-skill
+
+Awesome DESIGN.md
+  Copyright (c) 2026 VoltAgent
+  MIT License
+  https://github.com/VoltAgent/awesome-design-md
+
+Vercel Web Interface Guidelines
+  Copyright (c) 2025 Vercel Labs
+  MIT License
+  https://github.com/vercel-labs/web-interface-guidelines
+
+Microsoft Playwright CLI
+  Copyright (c) Microsoft Corporation
+  Apache License 2.0
+  https://github.com/microsoft/playwright-cli
+
+TastePro's original code, taxonomy, domain playbooks, and other original
+content are licensed under the Apache License 2.0 (see LICENSE).
+
+No third-party logos, screenshots, or binary brand assets are bundled.
+Brand packs are text analyses of published design systems and are provided
+for reference, not for impersonation.

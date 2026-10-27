@@ -1,0 +1,369 @@
+import { randomUUID, timingSafeEqual } from "node:crypto";
+import { type ServerType, serve } from "@hono/node-server";
+import type { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
+import { WebStandardStreamableHTTPServerTransport } from "@modelcontextprotocol/sdk/server/webStandardStreamableHttp.js";
+import { Hono } from "hono";
+import { cors } from "hono/cors";
+import { VERSION } from "../version.js";
+import type { TasteProContext } from "./context.js";
+import { createLogger, type Logger } from "./logger.js";
+import { createTasteProServer } from "./server.js";
+
+export interface HttpAppOptions {
+  context: TasteProContext;
+  apiKey?: string;
+  corsOrigin?: string;
+  allowedHosts?: string[];
+  sessionTtlMs?: number;
+  maxSessions?: number;
+  jsonResponse?: boolean;
+  logger?: Logger;
+}
+
+interface Session {
+  id: string;
+  transport: WebStandardStreamableHTTPServerTransport;
+  server: McpServer;
+  lastSeen: number;
+}
+
+export interface HttpApp {
+  app: Hono;
+  close: () => Promise<void>;
+  sessionCount: () => number;
+}
+
+const DEFAULT_SESSION_TTL_MS = 30 * 60 * 1_000;
+const DEFAULT_MAX_SESSIONS = 500;
+const MAX_BODY_BYTES = 1_048_576;
+
+function safeEqual(left: string, right: string): boolean {
+  const a = Buffer.from(left);
+  const b = Buffer.from(right);
+  if (a.length !== b.length) return false;
+  return timingSafeEqual(a, b);
+}
+
+function sessionNotFound(c: any) {
+  return c.json(
+    {
+      jsonrpc: "2.0",
+      error: { code: -32001, message: "Session not found or expired. Initialize a new session." },
+      id: null,
+    },
+    404,
+  );
+}
+
+function badRequest(c: any, message: string) {
+  return c.json({ jsonrpc: "2.0", error: { code: -32600, message }, id: null }, 400);
+}
+
+/**
+ * Build the Hono app. Sessions are stateful (the SDK generates an
+ * `Mcp-Session-Id` on initialize) and expire after an idle TTL. A read-only
+ * content server does not need server-initiated notifications, so JSON
+ * responses are the default; set `jsonResponse: false` for SSE streaming.
+ */
+export function createHttpApp(options: HttpAppOptions): HttpApp {
+  const logger = options.logger ?? createLogger("info");
+  const sessions = new Map<string, Session>();
+  const apiKey = options.apiKey;
+  // Browser origins are denied unless explicitly configured. Server-to-server
+  // MCP clients do not send an Origin header and are unaffected.
+  const corsSetting = options.corsOrigin ?? "";
+  const allowAllOrigins = corsSetting.trim() === "*";
+  const allowedOrigins = corsSetting
+    .split(",")
+    .map((origin) => origin.trim())
+    .filter(Boolean);
+  const allowedHosts = (options.allowedHosts ?? [])
+    .map((host) => host.trim().toLowerCase())
+    .filter(Boolean);
+  const sessionTtlMs = Math.max(30_000, options.sessionTtlMs ?? DEFAULT_SESSION_TTL_MS);
+  const maxSessions = Math.max(1, options.maxSessions ?? DEFAULT_MAX_SESSIONS);
+  let closed = false;
+
+  const app = new Hono();
+
+  app.use(
+    "*",
+    cors({
+      origin: (origin) => {
+        if (allowAllOrigins) return "*";
+        if (!origin) return "";
+        return allowedOrigins.includes(origin) ? origin : "";
+      },
+      allowMethods: ["GET", "POST", "DELETE", "OPTIONS"],
+      allowHeaders: [
+        "Content-Type",
+        "Authorization",
+        "Mcp-Session-Id",
+        "Mcp-Protocol-Version",
+        "Last-Event-ID",
+      ],
+      exposeHeaders: ["Mcp-Session-Id"],
+      maxAge: 86_400,
+    }),
+  );
+
+  app.use("*", async (c, next) => {
+    if (allowedHosts.length > 0) {
+      const host = (c.req.header("host") ?? "").toLowerCase();
+      const hostname = host.replace(/:\d+$/, "");
+      if (!allowedHosts.includes(host) && !allowedHosts.includes(hostname)) {
+        return c.json({ error: "forbidden_host" }, 403);
+      }
+    }
+    await next();
+    c.header("X-Content-Type-Options", "nosniff");
+    c.header("Referrer-Policy", "no-referrer");
+  });
+
+  app.use("*", async (c, next) => {
+    const path = c.req.path;
+    if (!path.startsWith("/mcp")) return next();
+    if (!apiKey) return next();
+    const authorization = c.req.header("authorization") ?? "";
+    const token = authorization.match(/^Bearer\s+(.+)$/i)?.[1] ?? "";
+    if (!token || !safeEqual(token, apiKey)) {
+      return c.json(
+        { error: "unauthorized", message: "A bearer token is required for this endpoint." },
+        401,
+        { "WWW-Authenticate": 'Bearer realm="tastepro"' },
+      );
+    }
+    return next();
+  });
+
+  app.use("*", async (c, next) => {
+    const started = Date.now();
+    await next();
+    if (c.req.path.startsWith("/mcp")) {
+      logger.debug("request", {
+        method: c.req.method,
+        path: c.req.path,
+        status: c.res.status,
+        ms: Date.now() - started,
+      });
+    }
+  });
+
+  async function closeSession(id: string): Promise<void> {
+    const session = sessions.get(id);
+    if (!session) return;
+    sessions.delete(id);
+    try {
+      await session.server.close();
+    } catch (error) {
+      logger.debug("session close failed", {
+        sessionId: id,
+        error: error instanceof Error ? error.message : String(error),
+      });
+    }
+  }
+
+  function evictOverflow(): void {
+    while (sessions.size > maxSessions) {
+      const oldest = [...sessions.values()].sort((a, b) => a.lastSeen - b.lastSeen)[0];
+      if (!oldest) return;
+      logger.warn("evicting session at capacity", { sessionId: oldest.id });
+      void closeSession(oldest.id);
+    }
+  }
+
+  async function createSession(): Promise<{
+    transport: WebStandardStreamableHTTPServerTransport;
+    server: McpServer;
+  }> {
+    const transport = new WebStandardStreamableHTTPServerTransport({
+      sessionIdGenerator: () => randomUUID(),
+      enableJsonResponse: options.jsonResponse ?? true,
+      maxRequestBodySize: MAX_BODY_BYTES,
+      keepAliveMs: 15_000,
+      onsessionclosed: (id) => {
+        sessions.delete(id);
+      },
+    });
+    const server = createTasteProServer({ context: options.context });
+    await server.connect(transport);
+    return { transport, server };
+  }
+
+  app.get("/", (c) =>
+    c.json({
+      name: "tastepro",
+      version: VERSION,
+      description:
+        "Design taste, domain playbooks, references, and a web-interface audit rubric for coding agents.",
+      transport: "streamable-http",
+      endpoint: "/mcp",
+      health: "/healthz",
+      auth: apiKey ? "bearer" : "none",
+      sessions: sessions.size,
+    }),
+  );
+
+  async function health(c: any) {
+    try {
+      const stats = await options.context.loader.stats();
+      return c.json({
+        status: "ok",
+        name: "tastepro",
+        version: VERSION,
+        contentHash: stats.contentHash,
+        generatedAt: stats.generatedAt,
+        catalogEntries: stats.catalogEntries,
+        counts: stats.counts,
+        quality: stats.quality,
+        warnings: stats.warnings.length,
+        sessions: sessions.size,
+        uptimeSeconds: Math.floor(process.uptime()),
+      });
+    } catch (error) {
+      logger.error("health check failed", {
+        error: error instanceof Error ? error.message : String(error),
+      });
+      return c.json(
+        {
+          status: "error",
+          message: error instanceof Error ? error.message : String(error),
+        },
+        503,
+      );
+    }
+  }
+
+  app.get("/healthz", health);
+  app.get("/readyz", health);
+
+  app.post("/mcp", async (c) => {
+    const sessionId = c.req.header("mcp-session-id");
+    if (sessionId) {
+      const session = sessions.get(sessionId);
+      if (!session) return sessionNotFound(c);
+      session.lastSeen = Date.now();
+      return session.transport.handleRequest(c.req.raw);
+    }
+
+    const { transport, server } = await createSession();
+    try {
+      const response = await transport.handleRequest(c.req.raw);
+      if (transport.sessionId) {
+        const session: Session = {
+          id: transport.sessionId,
+          transport,
+          server,
+          lastSeen: Date.now(),
+        };
+        sessions.set(session.id, session);
+        logger.info("session created", { sessionId: session.id, sessions: sessions.size });
+        evictOverflow();
+      } else {
+        // A non-initialize POST without a session is rejected by the transport.
+        // Close the throwaway server rather than leaking it.
+        await server.close().catch(() => undefined);
+      }
+      return response;
+    } catch (error) {
+      await server.close().catch(() => undefined);
+      throw error;
+    }
+  });
+
+  app.get("/mcp", async (c) => {
+    const sessionId = c.req.header("mcp-session-id");
+    if (!sessionId) return badRequest(c, "Mcp-Session-Id header is required for GET streams.");
+    const session = sessions.get(sessionId);
+    if (!session) return sessionNotFound(c);
+    session.lastSeen = Date.now();
+    return session.transport.handleRequest(c.req.raw);
+  });
+
+  app.delete("/mcp", async (c) => {
+    const sessionId = c.req.header("mcp-session-id");
+    if (!sessionId) return badRequest(c, "Mcp-Session-Id header is required to close a session.");
+    const session = sessions.get(sessionId);
+    if (!session) return sessionNotFound(c);
+    const response = await session.transport.handleRequest(c.req.raw);
+    sessions.delete(sessionId);
+    await session.server.close().catch(() => undefined);
+    logger.info("session closed", { sessionId, sessions: sessions.size });
+    return response;
+  });
+
+  app.notFound((c) => c.json({ error: "not_found", message: "Use /mcp, /healthz, or /." }, 404));
+
+  app.onError((error, c) => {
+    logger.error("request failed", {
+      path: c.req.path,
+      error: error instanceof Error ? error.message : String(error),
+    });
+    return c.json({ error: "internal_error" }, 500);
+  });
+
+  const cleanup = setInterval(
+    () => {
+      const cutoff = Date.now() - sessionTtlMs;
+      for (const session of [...sessions.values()]) {
+        if (session.lastSeen < cutoff) {
+          logger.info("session expired", { sessionId: session.id });
+          void closeSession(session.id);
+        }
+      }
+    },
+    Math.min(60_000, Math.max(10_000, Math.floor(sessionTtlMs / 2))),
+  );
+  cleanup.unref?.();
+
+  return {
+    app,
+    sessionCount: () => sessions.size,
+    close: async () => {
+      if (closed) return;
+      closed = true;
+      clearInterval(cleanup);
+      await Promise.all([...sessions.keys()].map((id) => closeSession(id)));
+    },
+  };
+}
+
+export interface StartHttpOptions extends HttpAppOptions {
+  host?: string;
+  port?: number;
+}
+
+export interface RunningHttpServer {
+  server: ServerType;
+  app: Hono;
+  url: string;
+  close: () => Promise<void>;
+}
+
+export async function startHttpServer(options: StartHttpOptions): Promise<RunningHttpServer> {
+  const host = options.host ?? "127.0.0.1";
+  const port = options.port ?? 3000;
+  const { app, close } = createHttpApp(options);
+  const server = serve({ fetch: app.fetch, hostname: host, port });
+  await new Promise<void>((resolve, reject) => {
+    server.once("listening", () => resolve());
+    server.once("error", (error) => reject(error));
+  });
+  const address = server.address();
+  const actualPort =
+    address && typeof address === "object" && "port" in address ? address.port : port;
+  return {
+    server,
+    app,
+    url: `http://${host.includes(":") ? `[${host}]` : host}:${actualPort}`,
+    close: async () => {
+      // Close MCP sessions first so any open GET/SSE streams end before the
+      // HTTP server waits for its connections to drain.
+      await close();
+      await new Promise<void>((resolve, reject) => {
+        server.close((error) => (error ? reject(error) : resolve()));
+        (server as unknown as { closeAllConnections?: () => void }).closeAllConnections?.();
+      });
+    },
+  };
+}

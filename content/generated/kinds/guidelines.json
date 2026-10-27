@@ -1,0 +1,4530 @@
+[
+  {
+    "id": "guideline/touch-webkit-tap-highlight-color-set-intentionally",
+    "kind": "guideline",
+    "name": "-webkit-tap-highlight-color set intentionally",
+    "summary": "-webkit-tap-highlight-color set intentionally",
+    "domains": [],
+    "sectors": [],
+    "tags": [
+      "touch",
+      "gesture",
+      "mobile",
+      "-webkit-tap-highlight-color",
+      "webkit",
+      "tap",
+      "highlight",
+      "color",
+      "set",
+      "intentionally"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "web-interface-guidelines",
+      "repo": "https://github.com/vercel-labs/web-interface-guidelines",
+      "commit": "434b7f91364665f2f733b310ec54809bf8f37937",
+      "path": "command.md",
+      "license": "MIT",
+      "authors": [
+        "Vercel Labs"
+      ],
+      "url": "https://vercel.com/design/guidelines",
+      "transformations": [
+        "parsed markdown heading and bullet"
+      ]
+    },
+    "sourceUrl": "https://vercel.com/design/guidelines",
+    "text": "`-webkit-tap-highlight-color` set intentionally",
+    "category": "Touch & Interaction",
+    "severity": "warn",
+    "instead": "",
+    "scope": "web-ui",
+    "sourcePath": "command.md",
+    "line": 105
+  },
+  {
+    "id": "guideline/typography-not",
+    "kind": "guideline",
+    "name": "… not ...",
+    "summary": "… not ...",
+    "domains": [],
+    "sectors": [],
+    "tags": [
+      "typography",
+      "type",
+      "copy",
+      "punctuation",
+      "not"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "web-interface-guidelines",
+      "repo": "https://github.com/vercel-labs/web-interface-guidelines",
+      "commit": "434b7f91364665f2f733b310ec54809bf8f37937",
+      "path": "command.md",
+      "license": "MIT",
+      "authors": [
+        "Vercel Labs"
+      ],
+      "url": "https://vercel.com/design/guidelines",
+      "transformations": [
+        "parsed markdown heading and bullet"
+      ]
+    },
+    "sourceUrl": "https://vercel.com/design/guidelines",
+    "text": "`…` not `...`",
+    "category": "Typography",
+    "severity": "warn",
+    "instead": "",
+    "scope": "web-ui",
+    "sourcePath": "command.md",
+    "line": 64
+  },
+  {
+    "id": "guideline/copy-and-over-and-where-space-constrained",
+    "kind": "guideline",
+    "name": "& over \"and\" where space-constrained",
+    "summary": "& over \"and\" where space-constrained",
+    "domains": [],
+    "sectors": [],
+    "tags": [
+      "copy",
+      "microcopy",
+      "voice",
+      "labels",
+      "over",
+      "where",
+      "space",
+      "constrained"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "web-interface-guidelines",
+      "repo": "https://github.com/vercel-labs/web-interface-guidelines",
+      "commit": "434b7f91364665f2f733b310ec54809bf8f37937",
+      "path": "command.md",
+      "license": "MIT",
+      "authors": [
+        "Vercel Labs"
+      ],
+      "url": "https://vercel.com/design/guidelines",
+      "transformations": [
+        "parsed markdown heading and bullet"
+      ]
+    },
+    "sourceUrl": "https://vercel.com/design/guidelines",
+    "text": "`&` over \"and\" where space-constrained",
+    "category": "Content & Copy",
+    "severity": "warn",
+    "instead": "",
+    "scope": "web-ui",
+    "sourcePath": "command.md",
+    "line": 150
+  },
+  {
+    "id": "guideline/accessibility-button-for-actions-a-link-for-navigation-not-div-onclick",
+    "kind": "guideline",
+    "name": "<button> for actions, <a>/<Link> for navigation (not <div onClick>)",
+    "summary": "<button> for actions, <a>/<Link> for navigation (not <div onClick>)",
+    "domains": [],
+    "sectors": [],
+    "tags": [
+      "accessibility",
+      "a11y",
+      "aria",
+      "keyboard",
+      "screen-reader",
+      "semantics",
+      "button",
+      "Link",
+      "div",
+      "onClick",
+      "actions",
+      "navigation"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "web-interface-guidelines",
+      "repo": "https://github.com/vercel-labs/web-interface-guidelines",
+      "commit": "434b7f91364665f2f733b310ec54809bf8f37937",
+      "path": "command.md",
+      "license": "MIT",
+      "authors": [
+        "Vercel Labs"
+      ],
+      "url": "https://vercel.com/design/guidelines",
+      "transformations": [
+        "parsed markdown heading and bullet"
+      ]
+    },
+    "sourceUrl": "https://vercel.com/design/guidelines",
+    "text": "`<button>` for actions, `<a>`/`<Link>` for navigation (not `<div onClick>`)",
+    "category": "Accessibility",
+    "severity": "warn",
+    "instead": "",
+    "scope": "web-ui",
+    "sourcePath": "command.md",
+    "line": 19
+  },
+  {
+    "id": "guideline/anti-patterns-div-or-span-with-click-handlers-should-be-button",
+    "kind": "guideline",
+    "name": "<div> or <span> with click handlers (should be <button>)",
+    "summary": "<div> or <span> with click handlers (should be <button>)",
+    "domains": [],
+    "sectors": [],
+    "tags": [
+      "anti-patterns",
+      "anti-pattern",
+      "avoid",
+      "div",
+      "span",
+      "button",
+      "click",
+      "handlers",
+      "should"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "web-interface-guidelines",
+      "repo": "https://github.com/vercel-labs/web-interface-guidelines",
+      "commit": "434b7f91364665f2f733b310ec54809bf8f37937",
+      "path": "command.md",
+      "license": "MIT",
+      "authors": [
+        "Vercel Labs"
+      ],
+      "url": "https://vercel.com/design/guidelines",
+      "transformations": [
+        "parsed markdown heading and bullet"
+      ]
+    },
+    "sourceUrl": "https://vercel.com/design/guidelines",
+    "text": "`<div>` or `<span>` with click handlers (should be `<button>`)",
+    "category": "Anti-patterns (flag these)",
+    "severity": "error",
+    "instead": "",
+    "scope": "web-ui",
+    "sourcePath": "command.md",
+    "line": 159
+  },
+  {
+    "id": "guideline/images-img-needs-explicit-width-and-height-prevents-cls",
+    "kind": "guideline",
+    "name": "<img> needs explicit width and height (prevents CLS)",
+    "summary": "<img> needs explicit width and height (prevents CLS)",
+    "domains": [],
+    "sectors": [],
+    "tags": [
+      "images",
+      "image",
+      "alt",
+      "layout-shift",
+      "img",
+      "width",
+      "height",
+      "needs",
+      "explicit",
+      "prevents"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "web-interface-guidelines",
+      "repo": "https://github.com/vercel-labs/web-interface-guidelines",
+      "commit": "434b7f91364665f2f733b310ec54809bf8f37937",
+      "path": "command.md",
+      "license": "MIT",
+      "authors": [
+        "Vercel Labs"
+      ],
+      "url": "https://vercel.com/design/guidelines",
+      "transformations": [
+        "parsed markdown heading and bullet"
+      ]
+    },
+    "sourceUrl": "https://vercel.com/design/guidelines",
+    "text": "`<img>` needs explicit `width` and `height` (prevents CLS)",
+    "category": "Images",
+    "severity": "warn",
+    "instead": "",
+    "scope": "web-ui",
+    "sourcePath": "command.md",
+    "line": 80
+  },
+  {
+    "id": "guideline/dark-mode-meta-name-theme-color-matches-page-background",
+    "kind": "guideline",
+    "name": "<meta name=\"theme-color\"> matches page background",
+    "summary": "<meta name=\"theme-color\"> matches page background",
+    "domains": [],
+    "sectors": [],
+    "tags": [
+      "dark-mode",
+      "theme",
+      "color-scheme",
+      "meta",
+      "name",
+      "theme-color",
+      "color",
+      "matches",
+      "page"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "web-interface-guidelines",
+      "repo": "https://github.com/vercel-labs/web-interface-guidelines",
+      "commit": "434b7f91364665f2f733b310ec54809bf8f37937",
+      "path": "command.md",
+      "license": "MIT",
+      "authors": [
+        "Vercel Labs"
+      ],
+      "url": "https://vercel.com/design/guidelines",
+      "transformations": [
+        "parsed markdown heading and bullet"
+      ]
+    },
+    "sourceUrl": "https://vercel.com/design/guidelines",
+    "text": "`<meta name=\"theme-color\">` matches page background",
+    "category": "Dark Mode & Theming",
+    "severity": "warn",
+    "instead": "",
+    "scope": "web-ui",
+    "sourcePath": "command.md",
+    "line": 121
+  },
+  {
+    "id": "guideline/images-above-fold-critical-images-priority-or-fetchpriority-high",
+    "kind": "guideline",
+    "name": "Above-fold critical images: priority or fetchpriority=\"high\"",
+    "summary": "Above-fold critical images: priority or fetchpriority=\"high\"",
+    "domains": [],
+    "sectors": [],
+    "tags": [
+      "images",
+      "image",
+      "alt",
+      "layout-shift",
+      "priority",
+      "fetchpriority",
+      "high",
+      "above",
+      "fold",
+      "critical"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "web-interface-guidelines",
+      "repo": "https://github.com/vercel-labs/web-interface-guidelines",
+      "commit": "434b7f91364665f2f733b310ec54809bf8f37937",
+      "path": "command.md",
+      "license": "MIT",
+      "authors": [
+        "Vercel Labs"
+      ],
+      "url": "https://vercel.com/design/guidelines",
+      "transformations": [
+        "parsed markdown heading and bullet"
+      ]
+    },
+    "sourceUrl": "https://vercel.com/design/guidelines",
+    "text": "Above-fold critical images: `priority` or `fetchpriority=\"high\"`",
+    "category": "Images",
+    "severity": "warn",
+    "instead": "",
+    "scope": "web-ui",
+    "sourcePath": "command.md",
+    "line": 82
+  },
+  {
+    "id": "guideline/copy-active-voice-install-the-cli-not-the-cli-will-be-installed",
+    "kind": "guideline",
+    "name": "Active voice: \"Install the CLI\" not \"The CLI will be installed\"",
+    "summary": "Active voice: \"Install the CLI\" not \"The CLI will be installed\"",
+    "domains": [],
+    "sectors": [],
+    "tags": [
+      "copy",
+      "microcopy",
+      "voice",
+      "labels",
+      "active",
+      "install",
+      "cli",
+      "not"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "web-interface-guidelines",
+      "repo": "https://github.com/vercel-labs/web-interface-guidelines",
+      "commit": "434b7f91364665f2f733b310ec54809bf8f37937",
+      "path": "command.md",
+      "license": "MIT",
+      "authors": [
+        "Vercel Labs"
+      ],
+      "url": "https://vercel.com/design/guidelines",
+      "transformations": [
+        "parsed markdown heading and bullet"
+      ]
+    },
+    "sourceUrl": "https://vercel.com/design/guidelines",
+    "text": "Active voice: \"Install the CLI\" not \"The CLI will be installed\"",
+    "category": "Content & Copy",
+    "severity": "warn",
+    "instead": "",
+    "scope": "web-ui",
+    "sourcePath": "command.md",
+    "line": 144
+  },
+  {
+    "id": "guideline/performance-add-link-rel-preconnect-for-cdn-asset-domains",
+    "kind": "guideline",
+    "name": "Add <link rel=\"preconnect\"> for CDN/asset domains",
+    "summary": "Add <link rel=\"preconnect\"> for CDN/asset domains",
+    "domains": [],
+    "sectors": [],
+    "tags": [
+      "performance",
+      "virtualization",
+      "preload",
+      "link",
+      "rel",
+      "preconnect",
+      "add",
+      "cdn",
+      "asset"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "web-interface-guidelines",
+      "repo": "https://github.com/vercel-labs/web-interface-guidelines",
+      "commit": "434b7f91364665f2f733b310ec54809bf8f37937",
+      "path": "command.md",
+      "license": "MIT",
+      "authors": [
+        "Vercel Labs"
+      ],
+      "url": "https://vercel.com/design/guidelines",
+      "transformations": [
+        "parsed markdown heading and bullet"
+      ]
+    },
+    "sourceUrl": "https://vercel.com/design/guidelines",
+    "text": "Add `<link rel=\"preconnect\">` for CDN/asset domains",
+    "category": "Performance",
+    "severity": "warn",
+    "instead": "",
+    "scope": "web-ui",
+    "sourcePath": "command.md",
+    "line": 90
+  },
+  {
+    "id": "guideline/animation-animate-transform-opacity-only-compositor-friendly",
+    "kind": "guideline",
+    "name": "Animate transform/opacity only (compositor-friendly)",
+    "summary": "Animate transform/opacity only (compositor-friendly)",
+    "domains": [],
+    "sectors": [],
+    "tags": [
+      "animation",
+      "motion",
+      "reduced-motion",
+      "transition",
+      "transform",
+      "opacity",
+      "animate",
+      "only",
+      "compositor",
+      "friendly"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "web-interface-guidelines",
+      "repo": "https://github.com/vercel-labs/web-interface-guidelines",
+      "commit": "434b7f91364665f2f733b310ec54809bf8f37937",
+      "path": "command.md",
+      "license": "MIT",
+      "authors": [
+        "Vercel Labs"
+      ],
+      "url": "https://vercel.com/design/guidelines",
+      "transformations": [
+        "parsed markdown heading and bullet"
+      ]
+    },
+    "sourceUrl": "https://vercel.com/design/guidelines",
+    "text": "Animate `transform`/`opacity` only (compositor-friendly)",
+    "category": "Animation",
+    "severity": "warn",
+    "instead": "",
+    "scope": "web-ui",
+    "sourcePath": "command.md",
+    "line": 54
+  },
+  {
+    "id": "guideline/anti-patterns-animated-gif-when-compressed-video-is-suitable",
+    "kind": "guideline",
+    "name": "Animated GIF when compressed video is suitable",
+    "summary": "Animated GIF when compressed video is suitable",
+    "domains": [],
+    "sectors": [],
+    "tags": [
+      "anti-patterns",
+      "anti-pattern",
+      "avoid",
+      "animated",
+      "gif",
+      "when",
+      "compressed",
+      "video",
+      "suitable"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "web-interface-guidelines",
+      "repo": "https://github.com/vercel-labs/web-interface-guidelines",
+      "commit": "434b7f91364665f2f733b310ec54809bf8f37937",
+      "path": "command.md",
+      "license": "MIT",
+      "authors": [
+        "Vercel Labs"
+      ],
+      "url": "https://vercel.com/design/guidelines",
+      "transformations": [
+        "parsed markdown heading and bullet"
+      ]
+    },
+    "sourceUrl": "https://vercel.com/design/guidelines",
+    "text": "Animated GIF when compressed video is suitable",
+    "category": "Anti-patterns (flag these)",
+    "severity": "error",
+    "instead": "",
+    "scope": "web-ui",
+    "sourcePath": "command.md",
+    "line": 166
+  },
+  {
+    "id": "guideline/animation-animations-interruptible-respond-to-user-input-mid-animation",
+    "kind": "guideline",
+    "name": "Animations interruptible—respond to user input mid-animation",
+    "summary": "Animations interruptible—respond to user input mid-animation",
+    "domains": [],
+    "sectors": [],
+    "tags": [
+      "animation",
+      "motion",
+      "reduced-motion",
+      "transition",
+      "animations",
+      "interruptible",
+      "respond",
+      "user",
+      "input",
+      "mid"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "web-interface-guidelines",
+      "repo": "https://github.com/vercel-labs/web-interface-guidelines",
+      "commit": "434b7f91364665f2f733b310ec54809bf8f37937",
+      "path": "command.md",
+      "license": "MIT",
+      "authors": [
+        "Vercel Labs"
+      ],
+      "url": "https://vercel.com/design/guidelines",
+      "transformations": [
+        "parsed markdown heading and bullet"
+      ]
+    },
+    "sourceUrl": "https://vercel.com/design/guidelines",
+    "text": "Animations interruptible—respond to user input mid-animation",
+    "category": "Animation",
+    "severity": "warn",
+    "instead": "",
+    "scope": "web-ui",
+    "sourcePath": "command.md",
+    "line": 58
+  },
+  {
+    "id": "guideline/accessibility-async-updates-toasts-validation-need-aria-live-polite",
+    "kind": "guideline",
+    "name": "Async updates (toasts, validation) need aria-live=\"polite\"",
+    "summary": "Async updates (toasts, validation) need aria-live=\"polite\"",
+    "domains": [],
+    "sectors": [],
+    "tags": [
+      "accessibility",
+      "a11y",
+      "aria",
+      "keyboard",
+      "screen-reader",
+      "semantics",
+      "aria-live",
+      "polite",
+      "async",
+      "updates",
+      "toasts",
+      "validation"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "web-interface-guidelines",
+      "repo": "https://github.com/vercel-labs/web-interface-guidelines",
+      "commit": "434b7f91364665f2f733b310ec54809bf8f37937",
+      "path": "command.md",
+      "license": "MIT",
+      "authors": [
+        "Vercel Labs"
+      ],
+      "url": "https://vercel.com/design/guidelines",
+      "transformations": [
+        "parsed markdown heading and bullet"
+      ]
+    },
+    "sourceUrl": "https://vercel.com/design/guidelines",
+    "text": "Async updates (toasts, validation) need `aria-live=\"polite\"`",
+    "category": "Accessibility",
+    "severity": "warn",
+    "instead": "",
+    "scope": "web-ui",
+    "sourcePath": "command.md",
+    "line": 22
+  },
+  {
+    "id": "guideline/forms-autocomplete-off-on-non-auth-fields-to-avoid-password-manager-triggers",
+    "kind": "guideline",
+    "name": "autocomplete=\"off\" on non-auth fields to avoid password manager triggers",
+    "summary": "autocomplete=\"off\" on non-auth fields to avoid password manager triggers",
+    "domains": [],
+    "sectors": [],
+    "tags": [
+      "forms",
+      "form",
+      "input",
+      "label",
+      "validation",
+      "autocomplete",
+      "off",
+      "non",
+      "auth",
+      "fields",
+      "avoid"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "web-interface-guidelines",
+      "repo": "https://github.com/vercel-labs/web-interface-guidelines",
+      "commit": "434b7f91364665f2f733b310ec54809bf8f37937",
+      "path": "command.md",
+      "license": "MIT",
+      "authors": [
+        "Vercel Labs"
+      ],
+      "url": "https://vercel.com/design/guidelines",
+      "transformations": [
+        "parsed markdown heading and bullet"
+      ]
+    },
+    "sourceUrl": "https://vercel.com/design/guidelines",
+    "text": "`autocomplete=\"off\"` on non-auth fields to avoid password manager triggers",
+    "category": "Forms",
+    "severity": "warn",
+    "instead": "",
+    "scope": "web-ui",
+    "sourcePath": "command.md",
+    "line": 48
+  },
+  {
+    "id": "guideline/touch-autofocus-sparingly-desktop-only-single-primary-input-avoid-on-mobile",
+    "kind": "guideline",
+    "name": "autoFocus sparingly—desktop only, single primary input; avoid on mobile",
+    "summary": "autoFocus sparingly—desktop only, single primary input; avoid on mobile",
+    "domains": [],
+    "sectors": [],
+    "tags": [
+      "touch",
+      "gesture",
+      "mobile",
+      "autoFocus",
+      "sparingly",
+      "desktop",
+      "only",
+      "single",
+      "primary"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "web-interface-guidelines",
+      "repo": "https://github.com/vercel-labs/web-interface-guidelines",
+      "commit": "434b7f91364665f2f733b310ec54809bf8f37937",
+      "path": "command.md",
+      "license": "MIT",
+      "authors": [
+        "Vercel Labs"
+      ],
+      "url": "https://vercel.com/design/guidelines",
+      "transformations": [
+        "parsed markdown heading and bullet"
+      ]
+    },
+    "sourceUrl": "https://vercel.com/design/guidelines",
+    "text": "`autoFocus` sparingly—desktop only, single primary input; avoid on mobile",
+    "category": "Touch & Interaction",
+    "severity": "warn",
+    "instead": "",
+    "scope": "web-ui",
+    "sourcePath": "command.md",
+    "line": 110
+  },
+  {
+    "id": "guideline/anti-patterns-autofocus-without-clear-justification",
+    "kind": "guideline",
+    "name": "autoFocus without clear justification",
+    "summary": "autoFocus without clear justification",
+    "domains": [],
+    "sectors": [],
+    "tags": [
+      "anti-patterns",
+      "anti-pattern",
+      "avoid",
+      "autoFocus",
+      "without",
+      "clear",
+      "justification"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "web-interface-guidelines",
+      "repo": "https://github.com/vercel-labs/web-interface-guidelines",
+      "commit": "434b7f91364665f2f733b310ec54809bf8f37937",
+      "path": "command.md",
+      "license": "MIT",
+      "authors": [
+        "Vercel Labs"
+      ],
+      "url": "https://vercel.com/design/guidelines",
+      "transformations": [
+        "parsed markdown heading and bullet"
+      ]
+    },
+    "sourceUrl": "https://vercel.com/design/guidelines",
+    "text": "`autoFocus` without clear justification",
+    "category": "Anti-patterns (flag these)",
+    "severity": "error",
+    "instead": "",
+    "scope": "web-ui",
+    "sourcePath": "command.md",
+    "line": 165
+  },
+  {
+    "id": "guideline/animation-autoplay-motion-5-seconds-alongside-other-content-needs-pause-stop-or-hide-contr",
+    "kind": "guideline",
+    "name": "Autoplay motion >5 seconds alongside other content needs pause, stop, or hide…",
+    "summary": "Autoplay motion >5 seconds alongside other content needs pause, stop, or hide controls",
+    "domains": [],
+    "sectors": [],
+    "tags": [
+      "animation",
+      "motion",
+      "reduced-motion",
+      "transition",
+      "autoplay",
+      "seconds",
+      "alongside",
+      "other",
+      "content"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "web-interface-guidelines",
+      "repo": "https://github.com/vercel-labs/web-interface-guidelines",
+      "commit": "434b7f91364665f2f733b310ec54809bf8f37937",
+      "path": "command.md",
+      "license": "MIT",
+      "authors": [
+        "Vercel Labs"
+      ],
+      "url": "https://vercel.com/design/guidelines",
+      "transformations": [
+        "parsed markdown heading and bullet"
+      ]
+    },
+    "sourceUrl": "https://vercel.com/design/guidelines",
+    "text": "Autoplay motion >5 seconds alongside other content needs pause, stop, or hide controls",
+    "category": "Animation",
+    "severity": "warn",
+    "instead": "",
+    "scope": "web-ui",
+    "sourcePath": "command.md",
+    "line": 59
+  },
+  {
+    "id": "guideline/layout-avoid-unwanted-scrollbars-overflow-x-hidden-on-containers-fix-content-overflow",
+    "kind": "guideline",
+    "name": "Avoid unwanted scrollbars: overflow-x-hidden on containers, fix content overflow",
+    "summary": "Avoid unwanted scrollbars: overflow-x-hidden on containers, fix content overflow",
+    "domains": [],
+    "sectors": [],
+    "tags": [
+      "layout",
+      "safe-area",
+      "overflow",
+      "overflow-x-hidden",
+      "avoid",
+      "unwanted",
+      "scrollbars",
+      "hidden",
+      "containers"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "web-interface-guidelines",
+      "repo": "https://github.com/vercel-labs/web-interface-guidelines",
+      "commit": "434b7f91364665f2f733b310ec54809bf8f37937",
+      "path": "command.md",
+      "license": "MIT",
+      "authors": [
+        "Vercel Labs"
+      ],
+      "url": "https://vercel.com/design/guidelines",
+      "transformations": [
+        "parsed markdown heading and bullet"
+      ]
+    },
+    "sourceUrl": "https://vercel.com/design/guidelines",
+    "text": "Avoid unwanted scrollbars: `overflow-x-hidden` on containers, fix content overflow",
+    "category": "Safe Areas & Layout",
+    "severity": "warn",
+    "instead": "",
+    "scope": "web-ui",
+    "sourcePath": "command.md",
+    "line": 115
+  },
+  {
+    "id": "guideline/performance-batch-dom-reads-writes-avoid-interleaving",
+    "kind": "guideline",
+    "name": "Batch DOM reads/writes; avoid interleaving",
+    "summary": "Batch DOM reads/writes; avoid interleaving",
+    "domains": [],
+    "sectors": [],
+    "tags": [
+      "performance",
+      "virtualization",
+      "preload",
+      "batch",
+      "dom",
+      "reads",
+      "writes",
+      "avoid",
+      "interleaving"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "web-interface-guidelines",
+      "repo": "https://github.com/vercel-labs/web-interface-guidelines",
+      "commit": "434b7f91364665f2f733b310ec54809bf8f37937",
+      "path": "command.md",
+      "license": "MIT",
+      "authors": [
+        "Vercel Labs"
+      ],
+      "url": "https://vercel.com/design/guidelines",
+      "transformations": [
+        "parsed markdown heading and bullet"
+      ]
+    },
+    "sourceUrl": "https://vercel.com/design/guidelines",
+    "text": "Batch DOM reads/writes; avoid interleaving",
+    "category": "Performance",
+    "severity": "warn",
+    "instead": "",
+    "scope": "web-ui",
+    "sourcePath": "command.md",
+    "line": 88
+  },
+  {
+    "id": "guideline/images-below-fold-images-loading-lazy",
+    "kind": "guideline",
+    "name": "Below-fold images: loading=\"lazy\"",
+    "summary": "Below-fold images: loading=\"lazy\"",
+    "domains": [],
+    "sectors": [],
+    "tags": [
+      "images",
+      "image",
+      "alt",
+      "layout-shift",
+      "loading",
+      "lazy",
+      "below",
+      "fold"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "web-interface-guidelines",
+      "repo": "https://github.com/vercel-labs/web-interface-guidelines",
+      "commit": "434b7f91364665f2f733b310ec54809bf8f37937",
+      "path": "command.md",
+      "license": "MIT",
+      "authors": [
+        "Vercel Labs"
+      ],
+      "url": "https://vercel.com/design/guidelines",
+      "transformations": [
+        "parsed markdown heading and bullet"
+      ]
+    },
+    "sourceUrl": "https://vercel.com/design/guidelines",
+    "text": "Below-fold images: `loading=\"lazy\"`",
+    "category": "Images",
+    "severity": "warn",
+    "instead": "",
+    "scope": "web-ui",
+    "sourcePath": "command.md",
+    "line": 81
+  },
+  {
+    "id": "guideline/i18n-brand-names-code-tokens-identifiers-wrap-with-translate-no-to-prevent-garbled-au",
+    "kind": "guideline",
+    "name": "Brand names, code tokens, identifiers: wrap with translate=\"no\" to prevent…",
+    "summary": "Brand names, code tokens, identifiers: wrap with translate=\"no\" to prevent garbled auto-translation",
+    "domains": [],
+    "sectors": [],
+    "tags": [
+      "i18n",
+      "locale",
+      "internationalization",
+      "intl",
+      "translate",
+      "no",
+      "brand",
+      "names",
+      "code",
+      "tokens",
+      "identifiers",
+      "wrap"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "web-interface-guidelines",
+      "repo": "https://github.com/vercel-labs/web-interface-guidelines",
+      "commit": "434b7f91364665f2f733b310ec54809bf8f37937",
+      "path": "command.md",
+      "license": "MIT",
+      "authors": [
+        "Vercel Labs"
+      ],
+      "url": "https://vercel.com/design/guidelines",
+      "transformations": [
+        "parsed markdown heading and bullet"
+      ]
+    },
+    "sourceUrl": "https://vercel.com/design/guidelines",
+    "text": "Brand names, code tokens, identifiers: wrap with `translate=\"no\"` to prevent garbled auto-translation",
+    "category": "Locale & i18n",
+    "severity": "warn",
+    "instead": "",
+    "scope": "web-ui",
+    "sourcePath": "command.md",
+    "line": 129
+  },
+  {
+    "id": "guideline/hover-buttons-links-need-hover-state-visual-feedback",
+    "kind": "guideline",
+    "name": "Buttons/links need hover: state (visual feedback)",
+    "summary": "Buttons/links need hover: state (visual feedback)",
+    "domains": [],
+    "sectors": [],
+    "tags": [
+      "hover",
+      "interactive-state",
+      "buttons",
+      "links",
+      "need",
+      "state",
+      "visual"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "web-interface-guidelines",
+      "repo": "https://github.com/vercel-labs/web-interface-guidelines",
+      "commit": "434b7f91364665f2f733b310ec54809bf8f37937",
+      "path": "command.md",
+      "license": "MIT",
+      "authors": [
+        "Vercel Labs"
+      ],
+      "url": "https://vercel.com/design/guidelines",
+      "transformations": [
+        "parsed markdown heading and bullet"
+      ]
+    },
+    "sourceUrl": "https://vercel.com/design/guidelines",
+    "text": "Buttons/links need `hover:` state (visual feedback)",
+    "category": "Hover & Interactive States",
+    "severity": "warn",
+    "instead": "",
+    "scope": "web-ui",
+    "sourcePath": "command.md",
+    "line": 139
+  },
+  {
+    "id": "guideline/forms-checkboxes-radios-label-control-share-single-hit-target-no-dead-zones",
+    "kind": "guideline",
+    "name": "Checkboxes/radios: label + control share single hit target (no dead zones)",
+    "summary": "Checkboxes/radios: label + control share single hit target (no dead zones)",
+    "domains": [],
+    "sectors": [],
+    "tags": [
+      "forms",
+      "form",
+      "input",
+      "label",
+      "validation",
+      "checkboxes",
+      "radios",
+      "control",
+      "share",
+      "single"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "web-interface-guidelines",
+      "repo": "https://github.com/vercel-labs/web-interface-guidelines",
+      "commit": "434b7f91364665f2f733b310ec54809bf8f37937",
+      "path": "command.md",
+      "license": "MIT",
+      "authors": [
+        "Vercel Labs"
+      ],
+      "url": "https://vercel.com/design/guidelines",
+      "transformations": [
+        "parsed markdown heading and bullet"
+      ]
+    },
+    "sourceUrl": "https://vercel.com/design/guidelines",
+    "text": "Checkboxes/radios: label + control share single hit target (no dead zones)",
+    "category": "Forms",
+    "severity": "warn",
+    "instead": "",
+    "scope": "web-ui",
+    "sourcePath": "command.md",
+    "line": 44
+  },
+  {
+    "id": "guideline/dark-mode-color-scheme-dark-on-html-for-dark-themes-fixes-scrollbar-inputs",
+    "kind": "guideline",
+    "name": "color-scheme: dark on <html> for dark themes (fixes scrollbar, inputs)",
+    "summary": "color-scheme: dark on <html> for dark themes (fixes scrollbar, inputs)",
+    "domains": [],
+    "sectors": [],
+    "tags": [
+      "dark-mode",
+      "theme",
+      "color-scheme",
+      "dark",
+      "html",
+      "color",
+      "scheme",
+      "themes"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "web-interface-guidelines",
+      "repo": "https://github.com/vercel-labs/web-interface-guidelines",
+      "commit": "434b7f91364665f2f733b310ec54809bf8f37937",
+      "path": "command.md",
+      "license": "MIT",
+      "authors": [
+        "Vercel Labs"
+      ],
+      "url": "https://vercel.com/design/guidelines",
+      "transformations": [
+        "parsed markdown heading and bullet"
+      ]
+    },
+    "sourceUrl": "https://vercel.com/design/guidelines",
+    "text": "`color-scheme: dark` on `<html>` for dark themes (fixes scrollbar, inputs)",
+    "category": "Dark Mode & Theming",
+    "severity": "warn",
+    "instead": "",
+    "scope": "web-ui",
+    "sourcePath": "command.md",
+    "line": 120
+  },
+  {
+    "id": "guideline/performance-critical-fonts-link-rel-preload-as-font-with-font-display-swap",
+    "kind": "guideline",
+    "name": "Critical fonts: <link rel=\"preload\" as=\"font\"> with font-display: swap",
+    "summary": "Critical fonts: <link rel=\"preload\" as=\"font\"> with font-display: swap",
+    "domains": [],
+    "sectors": [],
+    "tags": [
+      "performance",
+      "virtualization",
+      "preload",
+      "link",
+      "rel",
+      "as",
+      "font",
+      "font-display",
+      "swap",
+      "critical",
+      "fonts"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "web-interface-guidelines",
+      "repo": "https://github.com/vercel-labs/web-interface-guidelines",
+      "commit": "434b7f91364665f2f733b310ec54809bf8f37937",
+      "path": "command.md",
+      "license": "MIT",
+      "authors": [
+        "Vercel Labs"
+      ],
+      "url": "https://vercel.com/design/guidelines",
+      "transformations": [
+        "parsed markdown heading and bullet"
+      ]
+    },
+    "sourceUrl": "https://vercel.com/design/guidelines",
+    "text": "Critical fonts: `<link rel=\"preload\" as=\"font\">` with `font-display: swap`",
+    "category": "Performance",
+    "severity": "warn",
+    "instead": "",
+    "scope": "web-ui",
+    "sourcePath": "command.md",
+    "line": 91
+  },
+  {
+    "id": "guideline/typography-curly-quotes-not-straight",
+    "kind": "guideline",
+    "name": "Curly quotes “ ” not straight \"",
+    "summary": "Curly quotes “ ” not straight \"",
+    "domains": [],
+    "sectors": [],
+    "tags": [
+      "typography",
+      "type",
+      "copy",
+      "punctuation",
+      "curly",
+      "quotes",
+      "not",
+      "straight"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "web-interface-guidelines",
+      "repo": "https://github.com/vercel-labs/web-interface-guidelines",
+      "commit": "434b7f91364665f2f733b310ec54809bf8f37937",
+      "path": "command.md",
+      "license": "MIT",
+      "authors": [
+        "Vercel Labs"
+      ],
+      "url": "https://vercel.com/design/guidelines",
+      "transformations": [
+        "parsed markdown heading and bullet"
+      ]
+    },
+    "sourceUrl": "https://vercel.com/design/guidelines",
+    "text": "Curly quotes `“` `”` not straight `\"`",
+    "category": "Typography",
+    "severity": "warn",
+    "instead": "",
+    "scope": "web-ui",
+    "sourcePath": "command.md",
+    "line": 65
+  },
+  {
+    "id": "guideline/hydration-date-time-rendering-guard-against-hydration-mismatch-server-vs-client",
+    "kind": "guideline",
+    "name": "Date/time rendering: guard against hydration mismatch (server vs client)",
+    "summary": "Date/time rendering: guard against hydration mismatch (server vs client)",
+    "domains": [],
+    "sectors": [],
+    "tags": [
+      "hydration",
+      "ssr",
+      "client",
+      "date",
+      "time",
+      "rendering",
+      "guard",
+      "against"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "web-interface-guidelines",
+      "repo": "https://github.com/vercel-labs/web-interface-guidelines",
+      "commit": "434b7f91364665f2f733b310ec54809bf8f37937",
+      "path": "command.md",
+      "license": "MIT",
+      "authors": [
+        "Vercel Labs"
+      ],
+      "url": "https://vercel.com/design/guidelines",
+      "transformations": [
+        "parsed markdown heading and bullet"
+      ]
+    },
+    "sourceUrl": "https://vercel.com/design/guidelines",
+    "text": "Date/time rendering: guard against hydration mismatch (server vs client)",
+    "category": "Hydration Safety",
+    "severity": "warn",
+    "instead": "",
+    "scope": "web-ui",
+    "sourcePath": "command.md",
+    "line": 134
+  },
+  {
+    "id": "guideline/i18n-dates-times-use-intl-datetimeformat-not-hardcoded-formats",
+    "kind": "guideline",
+    "name": "Dates/times: use Intl.DateTimeFormat not hardcoded formats",
+    "summary": "Dates/times: use Intl.DateTimeFormat not hardcoded formats",
+    "domains": [],
+    "sectors": [],
+    "tags": [
+      "i18n",
+      "locale",
+      "internationalization",
+      "intl",
+      "DateTimeFormat",
+      "dates",
+      "times",
+      "use",
+      "not"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "web-interface-guidelines",
+      "repo": "https://github.com/vercel-labs/web-interface-guidelines",
+      "commit": "434b7f91364665f2f733b310ec54809bf8f37937",
+      "path": "command.md",
+      "license": "MIT",
+      "authors": [
+        "Vercel Labs"
+      ],
+      "url": "https://vercel.com/design/guidelines",
+      "transformations": [
+        "parsed markdown heading and bullet"
+      ]
+    },
+    "sourceUrl": "https://vercel.com/design/guidelines",
+    "text": "Dates/times: use `Intl.DateTimeFormat` not hardcoded formats",
+    "category": "Locale & i18n",
+    "severity": "warn",
+    "instead": "",
+    "scope": "web-ui",
+    "sourcePath": "command.md",
+    "line": 126
+  },
+  {
+    "id": "guideline/accessibility-decorative-icons-need-aria-hidden-true",
+    "kind": "guideline",
+    "name": "Decorative icons need aria-hidden=\"true\"",
+    "summary": "Decorative icons need aria-hidden=\"true\"",
+    "domains": [],
+    "sectors": [],
+    "tags": [
+      "accessibility",
+      "a11y",
+      "aria",
+      "keyboard",
+      "screen-reader",
+      "semantics",
+      "aria-hidden",
+      "true",
+      "decorative",
+      "icons",
+      "need",
+      "hidden"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "web-interface-guidelines",
+      "repo": "https://github.com/vercel-labs/web-interface-guidelines",
+      "commit": "434b7f91364665f2f733b310ec54809bf8f37937",
+      "path": "command.md",
+      "license": "MIT",
+      "authors": [
+        "Vercel Labs"
+      ],
+      "url": "https://vercel.com/design/guidelines",
+      "transformations": [
+        "parsed markdown heading and bullet"
+      ]
+    },
+    "sourceUrl": "https://vercel.com/design/guidelines",
+    "text": "Decorative icons need `aria-hidden=\"true\"`",
+    "category": "Accessibility",
+    "severity": "warn",
+    "instead": "",
+    "scope": "web-ui",
+    "sourcePath": "command.md",
+    "line": 21
+  },
+  {
+    "id": "guideline/navigation-deep-link-all-stateful-ui-if-uses-usestate-consider-url-sync-via-nuqs-or-similar",
+    "kind": "guideline",
+    "name": "Deep-link all stateful UI (if uses useState, consider URL sync via nuqs or…",
+    "summary": "Deep-link all stateful UI (if uses useState, consider URL sync via nuqs or similar)",
+    "domains": [],
+    "sectors": [],
+    "tags": [
+      "navigation",
+      "url",
+      "state",
+      "routing",
+      "useState",
+      "deep",
+      "link",
+      "all",
+      "stateful",
+      "ui",
+      "if"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "web-interface-guidelines",
+      "repo": "https://github.com/vercel-labs/web-interface-guidelines",
+      "commit": "434b7f91364665f2f733b310ec54809bf8f37937",
+      "path": "command.md",
+      "license": "MIT",
+      "authors": [
+        "Vercel Labs"
+      ],
+      "url": "https://vercel.com/design/guidelines",
+      "transformations": [
+        "parsed markdown heading and bullet"
+      ]
+    },
+    "sourceUrl": "https://vercel.com/design/guidelines",
+    "text": "Deep-link all stateful UI (if uses `useState`, consider URL sync via nuqs or similar)",
+    "category": "Navigation & State",
+    "severity": "warn",
+    "instead": "",
+    "scope": "web-ui",
+    "sourcePath": "command.md",
+    "line": 99
+  },
+  {
+    "id": "guideline/navigation-destructive-actions-need-confirmation-modal-or-undo-window-never-immediate",
+    "kind": "guideline",
+    "name": "Destructive actions need confirmation modal or undo window—never immediate",
+    "summary": "Destructive actions need confirmation modal or undo window—never immediate",
+    "domains": [],
+    "sectors": [],
+    "tags": [
+      "navigation",
+      "url",
+      "state",
+      "routing",
+      "destructive",
+      "actions",
+      "need",
+      "confirmation",
+      "modal",
+      "undo"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "web-interface-guidelines",
+      "repo": "https://github.com/vercel-labs/web-interface-guidelines",
+      "commit": "434b7f91364665f2f733b310ec54809bf8f37937",
+      "path": "command.md",
+      "license": "MIT",
+      "authors": [
+        "Vercel Labs"
+      ],
+      "url": "https://vercel.com/design/guidelines",
+      "transformations": [
+        "parsed markdown heading and bullet"
+      ]
+    },
+    "sourceUrl": "https://vercel.com/design/guidelines",
+    "text": "Destructive actions need confirmation modal or undo window—never immediate",
+    "category": "Navigation & State",
+    "severity": "error",
+    "instead": "",
+    "scope": "web-ui",
+    "sourcePath": "command.md",
+    "line": 100
+  },
+  {
+    "id": "guideline/i18n-detect-language-via-accept-language-navigator-languages-not-ip",
+    "kind": "guideline",
+    "name": "Detect language via Accept-Language / navigator.languages, not IP",
+    "summary": "Detect language via Accept-Language / navigator.languages, not IP",
+    "domains": [],
+    "sectors": [],
+    "tags": [
+      "i18n",
+      "locale",
+      "internationalization",
+      "intl",
+      "Accept-Language",
+      "navigator",
+      "languages",
+      "detect",
+      "language",
+      "via",
+      "accept"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "web-interface-guidelines",
+      "repo": "https://github.com/vercel-labs/web-interface-guidelines",
+      "commit": "434b7f91364665f2f733b310ec54809bf8f37937",
+      "path": "command.md",
+      "license": "MIT",
+      "authors": [
+        "Vercel Labs"
+      ],
+      "url": "https://vercel.com/design/guidelines",
+      "transformations": [
+        "parsed markdown heading and bullet"
+      ]
+    },
+    "sourceUrl": "https://vercel.com/design/guidelines",
+    "text": "Detect language via `Accept-Language` / `navigator.languages`, not IP",
+    "category": "Locale & i18n",
+    "severity": "warn",
+    "instead": "",
+    "scope": "web-ui",
+    "sourcePath": "command.md",
+    "line": 128
+  },
+  {
+    "id": "guideline/forms-disable-spellcheck-on-emails-codes-usernames-spellcheck-false",
+    "kind": "guideline",
+    "name": "Disable spellcheck on emails, codes, usernames (spellCheck={false})",
+    "summary": "Disable spellcheck on emails, codes, usernames (spellCheck={false})",
+    "domains": [],
+    "sectors": [],
+    "tags": [
+      "forms",
+      "form",
+      "input",
+      "label",
+      "validation",
+      "spellCheck",
+      "false",
+      "disable",
+      "emails",
+      "codes",
+      "usernames"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "web-interface-guidelines",
+      "repo": "https://github.com/vercel-labs/web-interface-guidelines",
+      "commit": "434b7f91364665f2f733b310ec54809bf8f37937",
+      "path": "command.md",
+      "license": "MIT",
+      "authors": [
+        "Vercel Labs"
+      ],
+      "url": "https://vercel.com/design/guidelines",
+      "transformations": [
+        "parsed markdown heading and bullet"
+      ]
+    },
+    "sourceUrl": "https://vercel.com/design/guidelines",
+    "text": "Disable spellcheck on emails, codes, usernames (`spellCheck={false}`)",
+    "category": "Forms",
+    "severity": "warn",
+    "instead": "",
+    "scope": "web-ui",
+    "sourcePath": "command.md",
+    "line": 43
+  },
+  {
+    "id": "guideline/touch-drag-swipe-pinch-path-gestures-need-tap-click-and-keyboard-alternatives-unless-e",
+    "kind": "guideline",
+    "name": "Drag/swipe/pinch/path gestures need tap/click and keyboard alternatives unless…",
+    "summary": "Drag/swipe/pinch/path gestures need tap/click and keyboard alternatives unless essential",
+    "domains": [],
+    "sectors": [],
+    "tags": [
+      "touch",
+      "gesture",
+      "mobile",
+      "drag",
+      "swipe",
+      "pinch",
+      "path",
+      "gestures",
+      "need"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "web-interface-guidelines",
+      "repo": "https://github.com/vercel-labs/web-interface-guidelines",
+      "commit": "434b7f91364665f2f733b310ec54809bf8f37937",
+      "path": "command.md",
+      "license": "MIT",
+      "authors": [
+        "Vercel Labs"
+      ],
+      "url": "https://vercel.com/design/guidelines",
+      "transformations": [
+        "parsed markdown heading and bullet"
+      ]
+    },
+    "sourceUrl": "https://vercel.com/design/guidelines",
+    "text": "Drag/swipe/pinch/path gestures need tap/click and keyboard alternatives unless essential",
+    "category": "Touch & Interaction",
+    "severity": "warn",
+    "instead": "",
+    "scope": "web-ui",
+    "sourcePath": "command.md",
+    "line": 109
+  },
+  {
+    "id": "guideline/touch-during-drag-disable-text-selection-inert-on-dragged-elements",
+    "kind": "guideline",
+    "name": "During drag: disable text selection, inert on dragged elements",
+    "summary": "During drag: disable text selection, inert on dragged elements",
+    "domains": [],
+    "sectors": [],
+    "tags": [
+      "touch",
+      "gesture",
+      "mobile",
+      "inert",
+      "during",
+      "drag",
+      "disable",
+      "text",
+      "selection"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "web-interface-guidelines",
+      "repo": "https://github.com/vercel-labs/web-interface-guidelines",
+      "commit": "434b7f91364665f2f733b310ec54809bf8f37937",
+      "path": "command.md",
+      "license": "MIT",
+      "authors": [
+        "Vercel Labs"
+      ],
+      "url": "https://vercel.com/design/guidelines",
+      "transformations": [
+        "parsed markdown heading and bullet"
+      ]
+    },
+    "sourceUrl": "https://vercel.com/design/guidelines",
+    "text": "During drag: disable text selection, `inert` on dragged elements",
+    "category": "Touch & Interaction",
+    "severity": "warn",
+    "instead": "",
+    "scope": "web-ui",
+    "sourcePath": "command.md",
+    "line": 108
+  },
+  {
+    "id": "guideline/copy-error-messages-include-fix-next-step-not-just-problem",
+    "kind": "guideline",
+    "name": "Error messages include fix/next step, not just problem",
+    "summary": "Error messages include fix/next step, not just problem",
+    "domains": [],
+    "sectors": [],
+    "tags": [
+      "copy",
+      "microcopy",
+      "voice",
+      "labels",
+      "error",
+      "messages",
+      "include",
+      "fix",
+      "next",
+      "step"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "web-interface-guidelines",
+      "repo": "https://github.com/vercel-labs/web-interface-guidelines",
+      "commit": "434b7f91364665f2f733b310ec54809bf8f37937",
+      "path": "command.md",
+      "license": "MIT",
+      "authors": [
+        "Vercel Labs"
+      ],
+      "url": "https://vercel.com/design/guidelines",
+      "transformations": [
+        "parsed markdown heading and bullet"
+      ]
+    },
+    "sourceUrl": "https://vercel.com/design/guidelines",
+    "text": "Error messages include fix/next step, not just problem",
+    "category": "Content & Copy",
+    "severity": "warn",
+    "instead": "",
+    "scope": "web-ui",
+    "sourcePath": "command.md",
+    "line": 148
+  },
+  {
+    "id": "guideline/forms-errors-inline-next-to-fields-focus-first-error-on-submit",
+    "kind": "guideline",
+    "name": "Errors inline next to fields; focus first error on submit",
+    "summary": "Errors inline next to fields; focus first error on submit",
+    "domains": [],
+    "sectors": [],
+    "tags": [
+      "forms",
+      "form",
+      "input",
+      "label",
+      "validation",
+      "errors",
+      "inline",
+      "next",
+      "fields",
+      "focus",
+      "first"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "web-interface-guidelines",
+      "repo": "https://github.com/vercel-labs/web-interface-guidelines",
+      "commit": "434b7f91364665f2f733b310ec54809bf8f37937",
+      "path": "command.md",
+      "license": "MIT",
+      "authors": [
+        "Vercel Labs"
+      ],
+      "url": "https://vercel.com/design/guidelines",
+      "transformations": [
+        "parsed markdown heading and bullet"
+      ]
+    },
+    "sourceUrl": "https://vercel.com/design/guidelines",
+    "text": "Errors inline next to fields; focus first error on submit",
+    "category": "Forms",
+    "severity": "warn",
+    "instead": "",
+    "scope": "web-ui",
+    "sourcePath": "command.md",
+    "line": 46
+  },
+  {
+    "id": "guideline/content-flex-children-need-min-w-0-to-allow-text-truncation",
+    "kind": "guideline",
+    "name": "Flex children need min-w-0 to allow text truncation",
+    "summary": "Flex children need min-w-0 to allow text truncation",
+    "domains": [],
+    "sectors": [],
+    "tags": [
+      "content",
+      "overflow",
+      "empty-state",
+      "truncation",
+      "min-w-0",
+      "flex",
+      "children",
+      "need",
+      "min",
+      "allow",
+      "text"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "web-interface-guidelines",
+      "repo": "https://github.com/vercel-labs/web-interface-guidelines",
+      "commit": "434b7f91364665f2f733b310ec54809bf8f37937",
+      "path": "command.md",
+      "license": "MIT",
+      "authors": [
+        "Vercel Labs"
+      ],
+      "url": "https://vercel.com/design/guidelines",
+      "transformations": [
+        "parsed markdown heading and bullet"
+      ]
+    },
+    "sourceUrl": "https://vercel.com/design/guidelines",
+    "text": "Flex children need `min-w-0` to allow text truncation",
+    "category": "Content Handling",
+    "severity": "warn",
+    "instead": "",
+    "scope": "web-ui",
+    "sourcePath": "command.md",
+    "line": 74
+  },
+  {
+    "id": "guideline/layout-flex-grid-over-js-measurement-for-layout",
+    "kind": "guideline",
+    "name": "Flex/grid over JS measurement for layout",
+    "summary": "Flex/grid over JS measurement for layout",
+    "domains": [],
+    "sectors": [],
+    "tags": [
+      "layout",
+      "safe-area",
+      "overflow",
+      "flex",
+      "grid",
+      "over",
+      "js",
+      "measurement"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "web-interface-guidelines",
+      "repo": "https://github.com/vercel-labs/web-interface-guidelines",
+      "commit": "434b7f91364665f2f733b310ec54809bf8f37937",
+      "path": "command.md",
+      "license": "MIT",
+      "authors": [
+        "Vercel Labs"
+      ],
+      "url": "https://vercel.com/design/guidelines",
+      "transformations": [
+        "parsed markdown heading and bullet"
+      ]
+    },
+    "sourceUrl": "https://vercel.com/design/guidelines",
+    "text": "Flex/grid over JS measurement for layout",
+    "category": "Safe Areas & Layout",
+    "severity": "warn",
+    "instead": "",
+    "scope": "web-ui",
+    "sourcePath": "command.md",
+    "line": 116
+  },
+  {
+    "id": "guideline/typography-font-variant-numeric-tabular-nums-for-number-columns-comparisons",
+    "kind": "guideline",
+    "name": "font-variant-numeric: tabular-nums for number columns/comparisons",
+    "summary": "font-variant-numeric: tabular-nums for number columns/comparisons",
+    "domains": [],
+    "sectors": [],
+    "tags": [
+      "typography",
+      "type",
+      "copy",
+      "punctuation",
+      "font-variant-numeric",
+      "tabular-nums",
+      "font",
+      "variant",
+      "numeric",
+      "tabular",
+      "nums",
+      "number"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "web-interface-guidelines",
+      "repo": "https://github.com/vercel-labs/web-interface-guidelines",
+      "commit": "434b7f91364665f2f733b310ec54809bf8f37937",
+      "path": "command.md",
+      "license": "MIT",
+      "authors": [
+        "Vercel Labs"
+      ],
+      "url": "https://vercel.com/design/guidelines",
+      "transformations": [
+        "parsed markdown heading and bullet"
+      ]
+    },
+    "sourceUrl": "https://vercel.com/design/guidelines",
+    "text": "`font-variant-numeric: tabular-nums` for number columns/comparisons",
+    "category": "Typography",
+    "severity": "warn",
+    "instead": "",
+    "scope": "web-ui",
+    "sourcePath": "command.md",
+    "line": 68
+  },
+  {
+    "id": "guideline/accessibility-form-controls-need-label-or-aria-label",
+    "kind": "guideline",
+    "name": "Form controls need <label> or aria-label",
+    "summary": "Form controls need <label> or aria-label",
+    "domains": [],
+    "sectors": [],
+    "tags": [
+      "accessibility",
+      "a11y",
+      "aria",
+      "keyboard",
+      "screen-reader",
+      "semantics",
+      "label",
+      "aria-label",
+      "form",
+      "controls",
+      "need"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "web-interface-guidelines",
+      "repo": "https://github.com/vercel-labs/web-interface-guidelines",
+      "commit": "434b7f91364665f2f733b310ec54809bf8f37937",
+      "path": "command.md",
+      "license": "MIT",
+      "authors": [
+        "Vercel Labs"
+      ],
+      "url": "https://vercel.com/design/guidelines",
+      "transformations": [
+        "parsed markdown heading and bullet"
+      ]
+    },
+    "sourceUrl": "https://vercel.com/design/guidelines",
+    "text": "Form controls need `<label>` or `aria-label`",
+    "category": "Accessibility",
+    "severity": "warn",
+    "instead": "",
+    "scope": "web-ui",
+    "sourcePath": "command.md",
+    "line": 17
+  },
+  {
+    "id": "guideline/anti-patterns-form-inputs-without-labels",
+    "kind": "guideline",
+    "name": "Form inputs without labels",
+    "summary": "Form inputs without labels",
+    "domains": [],
+    "sectors": [],
+    "tags": [
+      "anti-patterns",
+      "anti-pattern",
+      "avoid",
+      "form",
+      "inputs",
+      "without",
+      "labels"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "web-interface-guidelines",
+      "repo": "https://github.com/vercel-labs/web-interface-guidelines",
+      "commit": "434b7f91364665f2f733b310ec54809bf8f37937",
+      "path": "command.md",
+      "license": "MIT",
+      "authors": [
+        "Vercel Labs"
+      ],
+      "url": "https://vercel.com/design/guidelines",
+      "transformations": [
+        "parsed markdown heading and bullet"
+      ]
+    },
+    "sourceUrl": "https://vercel.com/design/guidelines",
+    "text": "Form inputs without labels",
+    "category": "Anti-patterns (flag these)",
+    "severity": "error",
+    "instead": "",
+    "scope": "web-ui",
+    "sourcePath": "command.md",
+    "line": 162
+  },
+  {
+    "id": "guideline/layout-full-bleed-layouts-need-env-safe-area-inset-for-notches",
+    "kind": "guideline",
+    "name": "Full-bleed layouts need env(safe-area-inset-) for notches",
+    "summary": "Full-bleed layouts need env(safe-area-inset-) for notches",
+    "domains": [],
+    "sectors": [],
+    "tags": [
+      "layout",
+      "safe-area",
+      "overflow",
+      "env",
+      "safe-area-inset-",
+      "full",
+      "bleed",
+      "layouts",
+      "need",
+      "safe"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "web-interface-guidelines",
+      "repo": "https://github.com/vercel-labs/web-interface-guidelines",
+      "commit": "434b7f91364665f2f733b310ec54809bf8f37937",
+      "path": "command.md",
+      "license": "MIT",
+      "authors": [
+        "Vercel Labs"
+      ],
+      "url": "https://vercel.com/design/guidelines",
+      "transformations": [
+        "parsed markdown heading and bullet"
+      ]
+    },
+    "sourceUrl": "https://vercel.com/design/guidelines",
+    "text": "Full-bleed layouts need `env(safe-area-inset-*)` for notches",
+    "category": "Safe Areas & Layout",
+    "severity": "warn",
+    "instead": "",
+    "scope": "web-ui",
+    "sourcePath": "command.md",
+    "line": 114
+  },
+  {
+    "id": "guideline/anti-patterns-gesture-only-action-without-tap-click-and-keyboard-alternative",
+    "kind": "guideline",
+    "name": "Gesture-only action without tap/click and keyboard alternative",
+    "summary": "Gesture-only action without tap/click and keyboard alternative",
+    "domains": [],
+    "sectors": [],
+    "tags": [
+      "anti-patterns",
+      "anti-pattern",
+      "avoid",
+      "gesture",
+      "only",
+      "action",
+      "without",
+      "tap",
+      "click"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "web-interface-guidelines",
+      "repo": "https://github.com/vercel-labs/web-interface-guidelines",
+      "commit": "434b7f91364665f2f733b310ec54809bf8f37937",
+      "path": "command.md",
+      "license": "MIT",
+      "authors": [
+        "Vercel Labs"
+      ],
+      "url": "https://vercel.com/design/guidelines",
+      "transformations": [
+        "parsed markdown heading and bullet"
+      ]
+    },
+    "sourceUrl": "https://vercel.com/design/guidelines",
+    "text": "Gesture-only action without tap/click and keyboard alternative",
+    "category": "Anti-patterns (flag these)",
+    "severity": "error",
+    "instead": "",
+    "scope": "web-ui",
+    "sourcePath": "command.md",
+    "line": 167
+  },
+  {
+    "id": "guideline/focus-group-focus-with-focus-within-for-compound-controls",
+    "kind": "guideline",
+    "name": "Group focus with :focus-within for compound controls",
+    "summary": "Group focus with :focus-within for compound controls",
+    "domains": [],
+    "sectors": [],
+    "tags": [
+      "focus",
+      "focus-visible",
+      "keyboard",
+      "focus-within",
+      "group",
+      "within",
+      "compound",
+      "controls"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "web-interface-guidelines",
+      "repo": "https://github.com/vercel-labs/web-interface-guidelines",
+      "commit": "434b7f91364665f2f733b310ec54809bf8f37937",
+      "path": "command.md",
+      "license": "MIT",
+      "authors": [
+        "Vercel Labs"
+      ],
+      "url": "https://vercel.com/design/guidelines",
+      "transformations": [
+        "parsed markdown heading and bullet"
+      ]
+    },
+    "sourceUrl": "https://vercel.com/design/guidelines",
+    "text": "Group focus with `:focus-within` for compound controls",
+    "category": "Focus States",
+    "severity": "warn",
+    "instead": "",
+    "scope": "web-ui",
+    "sourcePath": "command.md",
+    "line": 34
+  },
+  {
+    "id": "guideline/content-handle-empty-states-dont-render-broken-ui-for-empty-strings-arrays",
+    "kind": "guideline",
+    "name": "Handle empty states—don't render broken UI for empty strings/arrays",
+    "summary": "Handle empty states—don't render broken UI for empty strings/arrays",
+    "domains": [],
+    "sectors": [],
+    "tags": [
+      "content",
+      "overflow",
+      "empty-state",
+      "truncation",
+      "handle",
+      "empty",
+      "states",
+      "don",
+      "render",
+      "broken"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "web-interface-guidelines",
+      "repo": "https://github.com/vercel-labs/web-interface-guidelines",
+      "commit": "434b7f91364665f2f733b310ec54809bf8f37937",
+      "path": "command.md",
+      "license": "MIT",
+      "authors": [
+        "Vercel Labs"
+      ],
+      "url": "https://vercel.com/design/guidelines",
+      "transformations": [
+        "parsed markdown heading and bullet"
+      ]
+    },
+    "sourceUrl": "https://vercel.com/design/guidelines",
+    "text": "Handle empty states—don't render broken UI for empty strings/arrays",
+    "category": "Content Handling",
+    "severity": "error",
+    "instead": "",
+    "scope": "web-ui",
+    "sourcePath": "command.md",
+    "line": 75
+  },
+  {
+    "id": "guideline/anti-patterns-hardcoded-date-number-formats-use-intl",
+    "kind": "guideline",
+    "name": "Hardcoded date/number formats (use Intl.)",
+    "summary": "Hardcoded date/number formats (use Intl.)",
+    "domains": [],
+    "sectors": [],
+    "tags": [
+      "anti-patterns",
+      "anti-pattern",
+      "avoid",
+      "Intl",
+      "hardcoded",
+      "date",
+      "number",
+      "formats",
+      "use"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "web-interface-guidelines",
+      "repo": "https://github.com/vercel-labs/web-interface-guidelines",
+      "commit": "434b7f91364665f2f733b310ec54809bf8f37937",
+      "path": "command.md",
+      "license": "MIT",
+      "authors": [
+        "Vercel Labs"
+      ],
+      "url": "https://vercel.com/design/guidelines",
+      "transformations": [
+        "parsed markdown heading and bullet"
+      ]
+    },
+    "sourceUrl": "https://vercel.com/design/guidelines",
+    "text": "Hardcoded date/number formats (use `Intl.*`)",
+    "category": "Anti-patterns (flag these)",
+    "severity": "error",
+    "instead": "",
+    "scope": "web-ui",
+    "sourcePath": "command.md",
+    "line": 164
+  },
+  {
+    "id": "guideline/accessibility-headings-hierarchical-h1-h6-include-skip-link-for-main-content",
+    "kind": "guideline",
+    "name": "Headings hierarchical <h1>–<h6>; include skip link for main content",
+    "summary": "Headings hierarchical <h1>–<h6>; include skip link for main content",
+    "domains": [],
+    "sectors": [],
+    "tags": [
+      "accessibility",
+      "a11y",
+      "aria",
+      "keyboard",
+      "screen-reader",
+      "semantics",
+      "h1",
+      "h6",
+      "headings",
+      "hierarchical",
+      "include",
+      "skip"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "web-interface-guidelines",
+      "repo": "https://github.com/vercel-labs/web-interface-guidelines",
+      "commit": "434b7f91364665f2f733b310ec54809bf8f37937",
+      "path": "command.md",
+      "license": "MIT",
+      "authors": [
+        "Vercel Labs"
+      ],
+      "url": "https://vercel.com/design/guidelines",
+      "transformations": [
+        "parsed markdown heading and bullet"
+      ]
+    },
+    "sourceUrl": "https://vercel.com/design/guidelines",
+    "text": "Headings hierarchical `<h1>`–`<h6>`; include skip link for main content",
+    "category": "Accessibility",
+    "severity": "warn",
+    "instead": "",
+    "scope": "web-ui",
+    "sourcePath": "command.md",
+    "line": 24
+  },
+  {
+    "id": "guideline/animation-honor-prefers-reduced-motion-provide-reduced-variant-or-disable",
+    "kind": "guideline",
+    "name": "Honor prefers-reduced-motion (provide reduced variant or disable)",
+    "summary": "Honor prefers-reduced-motion (provide reduced variant or disable)",
+    "domains": [],
+    "sectors": [],
+    "tags": [
+      "animation",
+      "motion",
+      "reduced-motion",
+      "transition",
+      "prefers-reduced-motion",
+      "honor",
+      "prefers",
+      "reduced",
+      "provide"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "web-interface-guidelines",
+      "repo": "https://github.com/vercel-labs/web-interface-guidelines",
+      "commit": "434b7f91364665f2f733b310ec54809bf8f37937",
+      "path": "command.md",
+      "license": "MIT",
+      "authors": [
+        "Vercel Labs"
+      ],
+      "url": "https://vercel.com/design/guidelines",
+      "transformations": [
+        "parsed markdown heading and bullet"
+      ]
+    },
+    "sourceUrl": "https://vercel.com/design/guidelines",
+    "text": "Honor `prefers-reduced-motion` (provide reduced variant or disable)",
+    "category": "Animation",
+    "severity": "warn",
+    "instead": "",
+    "scope": "web-ui",
+    "sourcePath": "command.md",
+    "line": 53
+  },
+  {
+    "id": "guideline/anti-patterns-icon-buttons-without-aria-label",
+    "kind": "guideline",
+    "name": "Icon buttons without aria-label",
+    "summary": "Icon buttons without aria-label",
+    "domains": [],
+    "sectors": [],
+    "tags": [
+      "anti-patterns",
+      "anti-pattern",
+      "avoid",
+      "aria-label",
+      "icon",
+      "buttons",
+      "without",
+      "aria",
+      "label"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "web-interface-guidelines",
+      "repo": "https://github.com/vercel-labs/web-interface-guidelines",
+      "commit": "434b7f91364665f2f733b310ec54809bf8f37937",
+      "path": "command.md",
+      "license": "MIT",
+      "authors": [
+        "Vercel Labs"
+      ],
+      "url": "https://vercel.com/design/guidelines",
+      "transformations": [
+        "parsed markdown heading and bullet"
+      ]
+    },
+    "sourceUrl": "https://vercel.com/design/guidelines",
+    "text": "Icon buttons without `aria-label`",
+    "category": "Anti-patterns (flag these)",
+    "severity": "error",
+    "instead": "",
+    "scope": "web-ui",
+    "sourcePath": "command.md",
+    "line": 163
+  },
+  {
+    "id": "guideline/accessibility-icon-only-buttons-need-aria-label",
+    "kind": "guideline",
+    "name": "Icon-only buttons need aria-label",
+    "summary": "Icon-only buttons need aria-label",
+    "domains": [],
+    "sectors": [],
+    "tags": [
+      "accessibility",
+      "a11y",
+      "aria",
+      "keyboard",
+      "screen-reader",
+      "semantics",
+      "aria-label",
+      "icon",
+      "only",
+      "buttons",
+      "need",
+      "label"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "web-interface-guidelines",
+      "repo": "https://github.com/vercel-labs/web-interface-guidelines",
+      "commit": "434b7f91364665f2f733b310ec54809bf8f37937",
+      "path": "command.md",
+      "license": "MIT",
+      "authors": [
+        "Vercel Labs"
+      ],
+      "url": "https://vercel.com/design/guidelines",
+      "transformations": [
+        "parsed markdown heading and bullet"
+      ]
+    },
+    "sourceUrl": "https://vercel.com/design/guidelines",
+    "text": "Icon-only buttons need `aria-label`",
+    "category": "Accessibility",
+    "severity": "warn",
+    "instead": "",
+    "scope": "web-ui",
+    "sourcePath": "command.md",
+    "line": 16
+  },
+  {
+    "id": "guideline/accessibility-images-need-alt-or-alt-if-decorative",
+    "kind": "guideline",
+    "name": "Images need alt (or alt=\"\" if decorative)",
+    "summary": "Images need alt (or alt=\"\" if decorative)",
+    "domains": [],
+    "sectors": [],
+    "tags": [
+      "accessibility",
+      "a11y",
+      "aria",
+      "keyboard",
+      "screen-reader",
+      "semantics",
+      "alt",
+      "images",
+      "need",
+      "if",
+      "decorative"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "web-interface-guidelines",
+      "repo": "https://github.com/vercel-labs/web-interface-guidelines",
+      "commit": "434b7f91364665f2f733b310ec54809bf8f37937",
+      "path": "command.md",
+      "license": "MIT",
+      "authors": [
+        "Vercel Labs"
+      ],
+      "url": "https://vercel.com/design/guidelines",
+      "transformations": [
+        "parsed markdown heading and bullet"
+      ]
+    },
+    "sourceUrl": "https://vercel.com/design/guidelines",
+    "text": "Images need `alt` (or `alt=\"\"` if decorative)",
+    "category": "Accessibility",
+    "severity": "warn",
+    "instead": "",
+    "scope": "web-ui",
+    "sourcePath": "command.md",
+    "line": 20
+  },
+  {
+    "id": "guideline/anti-patterns-images-without-dimensions",
+    "kind": "guideline",
+    "name": "Images without dimensions",
+    "summary": "Images without dimensions",
+    "domains": [],
+    "sectors": [],
+    "tags": [
+      "anti-patterns",
+      "anti-pattern",
+      "avoid",
+      "images",
+      "without",
+      "dimensions"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "web-interface-guidelines",
+      "repo": "https://github.com/vercel-labs/web-interface-guidelines",
+      "commit": "434b7f91364665f2f733b310ec54809bf8f37937",
+      "path": "command.md",
+      "license": "MIT",
+      "authors": [
+        "Vercel Labs"
+      ],
+      "url": "https://vercel.com/design/guidelines",
+      "transformations": [
+        "parsed markdown heading and bullet"
+      ]
+    },
+    "sourceUrl": "https://vercel.com/design/guidelines",
+    "text": "Images without dimensions",
+    "category": "Anti-patterns (flag these)",
+    "severity": "error",
+    "instead": "",
+    "scope": "web-ui",
+    "sourcePath": "command.md",
+    "line": 160
+  },
+  {
+    "id": "guideline/anti-patterns-inline-onclick-navigation-without-a",
+    "kind": "guideline",
+    "name": "Inline onClick navigation without <a>",
+    "summary": "Inline onClick navigation without <a>",
+    "domains": [],
+    "sectors": [],
+    "tags": [
+      "anti-patterns",
+      "anti-pattern",
+      "avoid",
+      "onClick",
+      "inline",
+      "navigation",
+      "without"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "web-interface-guidelines",
+      "repo": "https://github.com/vercel-labs/web-interface-guidelines",
+      "commit": "434b7f91364665f2f733b310ec54809bf8f37937",
+      "path": "command.md",
+      "license": "MIT",
+      "authors": [
+        "Vercel Labs"
+      ],
+      "url": "https://vercel.com/design/guidelines",
+      "transformations": [
+        "parsed markdown heading and bullet"
+      ]
+    },
+    "sourceUrl": "https://vercel.com/design/guidelines",
+    "text": "Inline `onClick` navigation without `<a>`",
+    "category": "Anti-patterns (flag these)",
+    "severity": "error",
+    "instead": "",
+    "scope": "web-ui",
+    "sourcePath": "command.md",
+    "line": 158
+  },
+  {
+    "id": "guideline/forms-inputs-need-autocomplete-and-meaningful-name",
+    "kind": "guideline",
+    "name": "Inputs need autocomplete and meaningful name",
+    "summary": "Inputs need autocomplete and meaningful name",
+    "domains": [],
+    "sectors": [],
+    "tags": [
+      "forms",
+      "form",
+      "input",
+      "label",
+      "validation",
+      "autocomplete",
+      "name",
+      "inputs",
+      "need",
+      "meaningful"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "web-interface-guidelines",
+      "repo": "https://github.com/vercel-labs/web-interface-guidelines",
+      "commit": "434b7f91364665f2f733b310ec54809bf8f37937",
+      "path": "command.md",
+      "license": "MIT",
+      "authors": [
+        "Vercel Labs"
+      ],
+      "url": "https://vercel.com/design/guidelines",
+      "transformations": [
+        "parsed markdown heading and bullet"
+      ]
+    },
+    "sourceUrl": "https://vercel.com/design/guidelines",
+    "text": "Inputs need `autocomplete` and meaningful `name`",
+    "category": "Forms",
+    "severity": "warn",
+    "instead": "",
+    "scope": "web-ui",
+    "sourcePath": "command.md",
+    "line": 39
+  },
+  {
+    "id": "guideline/hydration-inputs-with-value-need-onchange-or-use-defaultvalue-for-uncontrolled",
+    "kind": "guideline",
+    "name": "Inputs with value need onChange (or use defaultValue for uncontrolled)",
+    "summary": "Inputs with value need onChange (or use defaultValue for uncontrolled)",
+    "domains": [],
+    "sectors": [],
+    "tags": [
+      "hydration",
+      "ssr",
+      "client",
+      "value",
+      "onChange",
+      "defaultValue",
+      "inputs",
+      "need",
+      "use"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "web-interface-guidelines",
+      "repo": "https://github.com/vercel-labs/web-interface-guidelines",
+      "commit": "434b7f91364665f2f733b310ec54809bf8f37937",
+      "path": "command.md",
+      "license": "MIT",
+      "authors": [
+        "Vercel Labs"
+      ],
+      "url": "https://vercel.com/design/guidelines",
+      "transformations": [
+        "parsed markdown heading and bullet"
+      ]
+    },
+    "sourceUrl": "https://vercel.com/design/guidelines",
+    "text": "Inputs with `value` need `onChange` (or use `defaultValue` for uncontrolled)",
+    "category": "Hydration Safety",
+    "severity": "warn",
+    "instead": "",
+    "scope": "web-ui",
+    "sourcePath": "command.md",
+    "line": 133
+  },
+  {
+    "id": "guideline/accessibility-interactive-elements-need-keyboard-handlers-onkeydown-onkeyup",
+    "kind": "guideline",
+    "name": "Interactive elements need keyboard handlers (onKeyDown/onKeyUp)",
+    "summary": "Interactive elements need keyboard handlers (onKeyDown/onKeyUp)",
+    "domains": [],
+    "sectors": [],
+    "tags": [
+      "accessibility",
+      "a11y",
+      "aria",
+      "keyboard",
+      "screen-reader",
+      "semantics",
+      "onKeyDown",
+      "onKeyUp",
+      "interactive",
+      "elements",
+      "need",
+      "handlers"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "web-interface-guidelines",
+      "repo": "https://github.com/vercel-labs/web-interface-guidelines",
+      "commit": "434b7f91364665f2f733b310ec54809bf8f37937",
+      "path": "command.md",
+      "license": "MIT",
+      "authors": [
+        "Vercel Labs"
+      ],
+      "url": "https://vercel.com/design/guidelines",
+      "transformations": [
+        "parsed markdown heading and bullet"
+      ]
+    },
+    "sourceUrl": "https://vercel.com/design/guidelines",
+    "text": "Interactive elements need keyboard handlers (`onKeyDown`/`onKeyUp`)",
+    "category": "Accessibility",
+    "severity": "warn",
+    "instead": "",
+    "scope": "web-ui",
+    "sourcePath": "command.md",
+    "line": 18
+  },
+  {
+    "id": "guideline/focus-interactive-elements-need-visible-focus-focus-visible-ring-or-equivalent",
+    "kind": "guideline",
+    "name": "Interactive elements need visible focus: focus-visible:ring- or equivalent",
+    "summary": "Interactive elements need visible focus: focus-visible:ring- or equivalent",
+    "domains": [],
+    "sectors": [],
+    "tags": [
+      "focus",
+      "focus-visible",
+      "keyboard",
+      "ring-",
+      "interactive",
+      "elements",
+      "need",
+      "visible"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "web-interface-guidelines",
+      "repo": "https://github.com/vercel-labs/web-interface-guidelines",
+      "commit": "434b7f91364665f2f733b310ec54809bf8f37937",
+      "path": "command.md",
+      "license": "MIT",
+      "authors": [
+        "Vercel Labs"
+      ],
+      "url": "https://vercel.com/design/guidelines",
+      "transformations": [
+        "parsed markdown heading and bullet"
+      ]
+    },
+    "sourceUrl": "https://vercel.com/design/guidelines",
+    "text": "Interactive elements need visible focus: `focus-visible:ring-*` or equivalent",
+    "category": "Focus States",
+    "severity": "warn",
+    "instead": "",
+    "scope": "web-ui",
+    "sourcePath": "command.md",
+    "line": 31
+  },
+  {
+    "id": "guideline/hover-interactive-states-increase-contrast-hover-active-focus-more-prominent-than-rest",
+    "kind": "guideline",
+    "name": "Interactive states increase contrast: hover/active/focus more prominent than…",
+    "summary": "Interactive states increase contrast: hover/active/focus more prominent than rest",
+    "domains": [],
+    "sectors": [],
+    "tags": [
+      "hover",
+      "interactive-state",
+      "interactive",
+      "states",
+      "increase",
+      "contrast",
+      "active"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "web-interface-guidelines",
+      "repo": "https://github.com/vercel-labs/web-interface-guidelines",
+      "commit": "434b7f91364665f2f733b310ec54809bf8f37937",
+      "path": "command.md",
+      "license": "MIT",
+      "authors": [
+        "Vercel Labs"
+      ],
+      "url": "https://vercel.com/design/guidelines",
+      "transformations": [
+        "parsed markdown heading and bullet"
+      ]
+    },
+    "sourceUrl": "https://vercel.com/design/guidelines",
+    "text": "Interactive states increase contrast: hover/active/focus more prominent than rest",
+    "category": "Hover & Interactive States",
+    "severity": "warn",
+    "instead": "",
+    "scope": "web-ui",
+    "sourcePath": "command.md",
+    "line": 140
+  },
+  {
+    "id": "guideline/forms-labels-clickable-htmlfor-or-wrapping-control",
+    "kind": "guideline",
+    "name": "Labels clickable (htmlFor or wrapping control)",
+    "summary": "Labels clickable (htmlFor or wrapping control)",
+    "domains": [],
+    "sectors": [],
+    "tags": [
+      "forms",
+      "form",
+      "input",
+      "label",
+      "validation",
+      "htmlFor",
+      "labels",
+      "clickable",
+      "wrapping",
+      "control"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "web-interface-guidelines",
+      "repo": "https://github.com/vercel-labs/web-interface-guidelines",
+      "commit": "434b7f91364665f2f733b310ec54809bf8f37937",
+      "path": "command.md",
+      "license": "MIT",
+      "authors": [
+        "Vercel Labs"
+      ],
+      "url": "https://vercel.com/design/guidelines",
+      "transformations": [
+        "parsed markdown heading and bullet"
+      ]
+    },
+    "sourceUrl": "https://vercel.com/design/guidelines",
+    "text": "Labels clickable (`htmlFor` or wrapping control)",
+    "category": "Forms",
+    "severity": "warn",
+    "instead": "",
+    "scope": "web-ui",
+    "sourcePath": "command.md",
+    "line": 42
+  },
+  {
+    "id": "guideline/anti-patterns-large-arrays-map-without-virtualization",
+    "kind": "guideline",
+    "name": "Large arrays .map() without virtualization",
+    "summary": "Large arrays .map() without virtualization",
+    "domains": [],
+    "sectors": [],
+    "tags": [
+      "anti-patterns",
+      "anti-pattern",
+      "avoid",
+      "map",
+      "large",
+      "arrays",
+      "without",
+      "virtualization"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "web-interface-guidelines",
+      "repo": "https://github.com/vercel-labs/web-interface-guidelines",
+      "commit": "434b7f91364665f2f733b310ec54809bf8f37937",
+      "path": "command.md",
+      "license": "MIT",
+      "authors": [
+        "Vercel Labs"
+      ],
+      "url": "https://vercel.com/design/guidelines",
+      "transformations": [
+        "parsed markdown heading and bullet"
+      ]
+    },
+    "sourceUrl": "https://vercel.com/design/guidelines",
+    "text": "Large arrays `.map()` without virtualization",
+    "category": "Anti-patterns (flag these)",
+    "severity": "error",
+    "instead": "",
+    "scope": "web-ui",
+    "sourcePath": "command.md",
+    "line": 161
+  },
+  {
+    "id": "guideline/performance-large-lists-50-items-virtualize-virtua-content-visibility-auto",
+    "kind": "guideline",
+    "name": "Large lists (>50 items): virtualize (virtua, content-visibility: auto)",
+    "summary": "Large lists (>50 items): virtualize (virtua, content-visibility: auto)",
+    "domains": [],
+    "sectors": [],
+    "tags": [
+      "performance",
+      "virtualization",
+      "preload",
+      "virtua",
+      "content-visibility",
+      "auto",
+      "large",
+      "lists",
+      "50",
+      "items",
+      "virtualize"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "web-interface-guidelines",
+      "repo": "https://github.com/vercel-labs/web-interface-guidelines",
+      "commit": "434b7f91364665f2f733b310ec54809bf8f37937",
+      "path": "command.md",
+      "license": "MIT",
+      "authors": [
+        "Vercel Labs"
+      ],
+      "url": "https://vercel.com/design/guidelines",
+      "transformations": [
+        "parsed markdown heading and bullet"
+      ]
+    },
+    "sourceUrl": "https://vercel.com/design/guidelines",
+    "text": "Large lists (>50 items): virtualize (`virtua`, `content-visibility: auto`)",
+    "category": "Performance",
+    "severity": "warn",
+    "instead": "",
+    "scope": "web-ui",
+    "sourcePath": "command.md",
+    "line": 86
+  },
+  {
+    "id": "guideline/navigation-links-use-a-link-cmd-ctrl-click-middle-click-support",
+    "kind": "guideline",
+    "name": "Links use <a>/<Link> (Cmd/Ctrl+click, middle-click support)",
+    "summary": "Links use <a>/<Link> (Cmd/Ctrl+click, middle-click support)",
+    "domains": [],
+    "sectors": [],
+    "tags": [
+      "navigation",
+      "url",
+      "state",
+      "routing",
+      "Link",
+      "links",
+      "use",
+      "cmd",
+      "ctrl",
+      "click"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "web-interface-guidelines",
+      "repo": "https://github.com/vercel-labs/web-interface-guidelines",
+      "commit": "434b7f91364665f2f733b310ec54809bf8f37937",
+      "path": "command.md",
+      "license": "MIT",
+      "authors": [
+        "Vercel Labs"
+      ],
+      "url": "https://vercel.com/design/guidelines",
+      "transformations": [
+        "parsed markdown heading and bullet"
+      ]
+    },
+    "sourceUrl": "https://vercel.com/design/guidelines",
+    "text": "Links use `<a>`/`<Link>` (Cmd/Ctrl+click, middle-click support)",
+    "category": "Navigation & State",
+    "severity": "warn",
+    "instead": "",
+    "scope": "web-ui",
+    "sourcePath": "command.md",
+    "line": 98
+  },
+  {
+    "id": "guideline/typography-loading-states-end-with-loading-saving",
+    "kind": "guideline",
+    "name": "Loading states end with …: \"Loading…\", \"Saving…\"",
+    "summary": "Loading states end with …: \"Loading…\", \"Saving…\"",
+    "domains": [],
+    "sectors": [],
+    "tags": [
+      "typography",
+      "type",
+      "copy",
+      "punctuation",
+      "Loading",
+      "Saving",
+      "states",
+      "end"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "web-interface-guidelines",
+      "repo": "https://github.com/vercel-labs/web-interface-guidelines",
+      "commit": "434b7f91364665f2f733b310ec54809bf8f37937",
+      "path": "command.md",
+      "license": "MIT",
+      "authors": [
+        "Vercel Labs"
+      ],
+      "url": "https://vercel.com/design/guidelines",
+      "transformations": [
+        "parsed markdown heading and bullet"
+      ]
+    },
+    "sourceUrl": "https://vercel.com/design/guidelines",
+    "text": "Loading states end with `…`: `\"Loading…\"`, `\"Saving…\"`",
+    "category": "Typography",
+    "severity": "warn",
+    "instead": "",
+    "scope": "web-ui",
+    "sourcePath": "command.md",
+    "line": 67
+  },
+  {
+    "id": "guideline/accessibility-meaningful-media-needs-captions-transcripts-or-descriptions-as-applicable",
+    "kind": "guideline",
+    "name": "Meaningful media needs captions, transcripts, or descriptions as applicable",
+    "summary": "Meaningful media needs captions, transcripts, or descriptions as applicable",
+    "domains": [],
+    "sectors": [],
+    "tags": [
+      "accessibility",
+      "a11y",
+      "aria",
+      "keyboard",
+      "screen-reader",
+      "semantics",
+      "meaningful",
+      "media",
+      "needs",
+      "captions",
+      "transcripts",
+      "descriptions"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "web-interface-guidelines",
+      "repo": "https://github.com/vercel-labs/web-interface-guidelines",
+      "commit": "434b7f91364665f2f733b310ec54809bf8f37937",
+      "path": "command.md",
+      "license": "MIT",
+      "authors": [
+        "Vercel Labs"
+      ],
+      "url": "https://vercel.com/design/guidelines",
+      "transformations": [
+        "parsed markdown heading and bullet"
+      ]
+    },
+    "sourceUrl": "https://vercel.com/design/guidelines",
+    "text": "Meaningful media needs captions, transcripts, or descriptions as applicable",
+    "category": "Accessibility",
+    "severity": "warn",
+    "instead": "",
+    "scope": "web-ui",
+    "sourcePath": "command.md",
+    "line": 26
+  },
+  {
+    "id": "guideline/accessibility-media-controls-need-keyboard-support-decorative-media-needs-assistive-tech-hidin",
+    "kind": "guideline",
+    "name": "Media controls need keyboard support; decorative media needs assistive-tech…",
+    "summary": "Media controls need keyboard support; decorative media needs assistive-tech hiding",
+    "domains": [],
+    "sectors": [],
+    "tags": [
+      "accessibility",
+      "a11y",
+      "aria",
+      "keyboard",
+      "screen-reader",
+      "semantics",
+      "media",
+      "controls",
+      "need",
+      "support",
+      "decorative"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "web-interface-guidelines",
+      "repo": "https://github.com/vercel-labs/web-interface-guidelines",
+      "commit": "434b7f91364665f2f733b310ec54809bf8f37937",
+      "path": "command.md",
+      "license": "MIT",
+      "authors": [
+        "Vercel Labs"
+      ],
+      "url": "https://vercel.com/design/guidelines",
+      "transformations": [
+        "parsed markdown heading and bullet"
+      ]
+    },
+    "sourceUrl": "https://vercel.com/design/guidelines",
+    "text": "Media controls need keyboard support; decorative media needs assistive-tech hiding",
+    "category": "Accessibility",
+    "severity": "warn",
+    "instead": "",
+    "scope": "web-ui",
+    "sourcePath": "command.md",
+    "line": 27
+  },
+  {
+    "id": "guideline/animation-muted-decorative-loops-must-stop-under-prefers-reduced-motion",
+    "kind": "guideline",
+    "name": "Muted decorative loops must stop under prefers-reduced-motion",
+    "summary": "Muted decorative loops must stop under prefers-reduced-motion",
+    "domains": [],
+    "sectors": [],
+    "tags": [
+      "animation",
+      "motion",
+      "reduced-motion",
+      "transition",
+      "prefers-reduced-motion",
+      "muted",
+      "decorative",
+      "loops",
+      "must",
+      "stop",
+      "under"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "web-interface-guidelines",
+      "repo": "https://github.com/vercel-labs/web-interface-guidelines",
+      "commit": "434b7f91364665f2f733b310ec54809bf8f37937",
+      "path": "command.md",
+      "license": "MIT",
+      "authors": [
+        "Vercel Labs"
+      ],
+      "url": "https://vercel.com/design/guidelines",
+      "transformations": [
+        "parsed markdown heading and bullet"
+      ]
+    },
+    "sourceUrl": "https://vercel.com/design/guidelines",
+    "text": "Muted decorative loops must stop under `prefers-reduced-motion`",
+    "category": "Animation",
+    "severity": "error",
+    "instead": "",
+    "scope": "web-ui",
+    "sourcePath": "command.md",
+    "line": 60
+  },
+  {
+    "id": "guideline/dark-mode-native-select-explicit-background-color-and-color-windows-dark-mode",
+    "kind": "guideline",
+    "name": "Native <select>: explicit background-color and color (Windows dark mode)",
+    "summary": "Native <select>: explicit background-color and color (Windows dark mode)",
+    "domains": [],
+    "sectors": [],
+    "tags": [
+      "dark-mode",
+      "theme",
+      "color-scheme",
+      "select",
+      "background-color",
+      "color",
+      "native",
+      "explicit",
+      "background"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "web-interface-guidelines",
+      "repo": "https://github.com/vercel-labs/web-interface-guidelines",
+      "commit": "434b7f91364665f2f733b310ec54809bf8f37937",
+      "path": "command.md",
+      "license": "MIT",
+      "authors": [
+        "Vercel Labs"
+      ],
+      "url": "https://vercel.com/design/guidelines",
+      "transformations": [
+        "parsed markdown heading and bullet"
+      ]
+    },
+    "sourceUrl": "https://vercel.com/design/guidelines",
+    "text": "Native `<select>`: explicit `background-color` and `color` (Windows dark mode)",
+    "category": "Dark Mode & Theming",
+    "severity": "warn",
+    "instead": "",
+    "scope": "web-ui",
+    "sourcePath": "command.md",
+    "line": 122
+  },
+  {
+    "id": "guideline/forms-never-block-paste-onpaste-preventdefault",
+    "kind": "guideline",
+    "name": "Never block paste (onPaste + preventDefault)",
+    "summary": "Never block paste (onPaste + preventDefault)",
+    "domains": [],
+    "sectors": [],
+    "tags": [
+      "forms",
+      "form",
+      "input",
+      "label",
+      "validation",
+      "onPaste",
+      "preventDefault",
+      "never",
+      "block",
+      "paste"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "web-interface-guidelines",
+      "repo": "https://github.com/vercel-labs/web-interface-guidelines",
+      "commit": "434b7f91364665f2f733b310ec54809bf8f37937",
+      "path": "command.md",
+      "license": "MIT",
+      "authors": [
+        "Vercel Labs"
+      ],
+      "url": "https://vercel.com/design/guidelines",
+      "transformations": [
+        "parsed markdown heading and bullet"
+      ]
+    },
+    "sourceUrl": "https://vercel.com/design/guidelines",
+    "text": "Never block paste (`onPaste` + `preventDefault`)",
+    "category": "Forms",
+    "severity": "error",
+    "instead": "",
+    "scope": "web-ui",
+    "sourcePath": "command.md",
+    "line": 41
+  },
+  {
+    "id": "guideline/focus-never-outline-none-outline-none-without-focus-replacement",
+    "kind": "guideline",
+    "name": "Never outline-none / outline: none without focus replacement",
+    "summary": "Never outline-none / outline: none without focus replacement",
+    "domains": [],
+    "sectors": [],
+    "tags": [
+      "focus",
+      "focus-visible",
+      "keyboard",
+      "outline-none",
+      "outline",
+      "none",
+      "never",
+      "without"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "web-interface-guidelines",
+      "repo": "https://github.com/vercel-labs/web-interface-guidelines",
+      "commit": "434b7f91364665f2f733b310ec54809bf8f37937",
+      "path": "command.md",
+      "license": "MIT",
+      "authors": [
+        "Vercel Labs"
+      ],
+      "url": "https://vercel.com/design/guidelines",
+      "transformations": [
+        "parsed markdown heading and bullet"
+      ]
+    },
+    "sourceUrl": "https://vercel.com/design/guidelines",
+    "text": "Never `outline-none` / `outline: none` without focus replacement",
+    "category": "Focus States",
+    "severity": "error",
+    "instead": "",
+    "scope": "web-ui",
+    "sourcePath": "command.md",
+    "line": 32
+  },
+  {
+    "id": "guideline/animation-never-transition-all-list-properties-explicitly",
+    "kind": "guideline",
+    "name": "Never transition: all—list properties explicitly",
+    "summary": "Never transition: all—list properties explicitly",
+    "domains": [],
+    "sectors": [],
+    "tags": [
+      "animation",
+      "motion",
+      "reduced-motion",
+      "transition",
+      "all",
+      "never",
+      "list",
+      "properties",
+      "explicitly"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "web-interface-guidelines",
+      "repo": "https://github.com/vercel-labs/web-interface-guidelines",
+      "commit": "434b7f91364665f2f733b310ec54809bf8f37937",
+      "path": "command.md",
+      "license": "MIT",
+      "authors": [
+        "Vercel Labs"
+      ],
+      "url": "https://vercel.com/design/guidelines",
+      "transformations": [
+        "parsed markdown heading and bullet"
+      ]
+    },
+    "sourceUrl": "https://vercel.com/design/guidelines",
+    "text": "Never `transition: all`—list properties explicitly",
+    "category": "Animation",
+    "severity": "error",
+    "instead": "",
+    "scope": "web-ui",
+    "sourcePath": "command.md",
+    "line": 55
+  },
+  {
+    "id": "guideline/performance-no-layout-reads-in-render-getboundingclientrect-offsetheight-offsetwidth-scrollt",
+    "kind": "guideline",
+    "name": "No layout reads in render (getBoundingClientRect, offsetHeight, offsetWidth,…",
+    "summary": "No layout reads in render (getBoundingClientRect, offsetHeight, offsetWidth, scrollTop)",
+    "domains": [],
+    "sectors": [],
+    "tags": [
+      "performance",
+      "virtualization",
+      "preload",
+      "getBoundingClientRect",
+      "offsetHeight",
+      "offsetWidth",
+      "scrollTop",
+      "no",
+      "layout",
+      "reads",
+      "render"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "web-interface-guidelines",
+      "repo": "https://github.com/vercel-labs/web-interface-guidelines",
+      "commit": "434b7f91364665f2f733b310ec54809bf8f37937",
+      "path": "command.md",
+      "license": "MIT",
+      "authors": [
+        "Vercel Labs"
+      ],
+      "url": "https://vercel.com/design/guidelines",
+      "transformations": [
+        "parsed markdown heading and bullet"
+      ]
+    },
+    "sourceUrl": "https://vercel.com/design/guidelines",
+    "text": "No layout reads in render (`getBoundingClientRect`, `offsetHeight`, `offsetWidth`, `scrollTop`)",
+    "category": "Performance",
+    "severity": "warn",
+    "instead": "",
+    "scope": "web-ui",
+    "sourcePath": "command.md",
+    "line": 87
+  },
+  {
+    "id": "guideline/typography-non-breaking-spaces-10-and-nbsp-mb-and-nbsp-k-brand-names",
+    "kind": "guideline",
+    "name": "Non-breaking spaces: 10&nbsp;MB, ⌘&nbsp;K, brand names",
+    "summary": "Non-breaking spaces: 10&nbsp;MB, ⌘&nbsp;K, brand names",
+    "domains": [],
+    "sectors": [],
+    "tags": [
+      "typography",
+      "type",
+      "copy",
+      "punctuation",
+      "10",
+      "nbsp",
+      "MB",
+      "non",
+      "breaking",
+      "spaces"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "web-interface-guidelines",
+      "repo": "https://github.com/vercel-labs/web-interface-guidelines",
+      "commit": "434b7f91364665f2f733b310ec54809bf8f37937",
+      "path": "command.md",
+      "license": "MIT",
+      "authors": [
+        "Vercel Labs"
+      ],
+      "url": "https://vercel.com/design/guidelines",
+      "transformations": [
+        "parsed markdown heading and bullet"
+      ]
+    },
+    "sourceUrl": "https://vercel.com/design/guidelines",
+    "text": "Non-breaking spaces: `10&nbsp;MB`, `⌘&nbsp;K`, brand names",
+    "category": "Typography",
+    "severity": "warn",
+    "instead": "",
+    "scope": "web-ui",
+    "sourcePath": "command.md",
+    "line": 66
+  },
+  {
+    "id": "guideline/i18n-numbers-currency-use-intl-numberformat-not-hardcoded-formats",
+    "kind": "guideline",
+    "name": "Numbers/currency: use Intl.NumberFormat not hardcoded formats",
+    "summary": "Numbers/currency: use Intl.NumberFormat not hardcoded formats",
+    "domains": [],
+    "sectors": [],
+    "tags": [
+      "i18n",
+      "locale",
+      "internationalization",
+      "intl",
+      "NumberFormat",
+      "numbers",
+      "currency",
+      "use",
+      "not"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "web-interface-guidelines",
+      "repo": "https://github.com/vercel-labs/web-interface-guidelines",
+      "commit": "434b7f91364665f2f733b310ec54809bf8f37937",
+      "path": "command.md",
+      "license": "MIT",
+      "authors": [
+        "Vercel Labs"
+      ],
+      "url": "https://vercel.com/design/guidelines",
+      "transformations": [
+        "parsed markdown heading and bullet"
+      ]
+    },
+    "sourceUrl": "https://vercel.com/design/guidelines",
+    "text": "Numbers/currency: use `Intl.NumberFormat` not hardcoded formats",
+    "category": "Locale & i18n",
+    "severity": "warn",
+    "instead": "",
+    "scope": "web-ui",
+    "sourcePath": "command.md",
+    "line": 127
+  },
+  {
+    "id": "guideline/copy-numerals-for-counts-8-deployments-not-eight",
+    "kind": "guideline",
+    "name": "Numerals for counts: \"8 deployments\" not \"eight\"",
+    "summary": "Numerals for counts: \"8 deployments\" not \"eight\"",
+    "domains": [],
+    "sectors": [],
+    "tags": [
+      "copy",
+      "microcopy",
+      "voice",
+      "labels",
+      "numerals",
+      "counts",
+      "deployments",
+      "not",
+      "eight"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "web-interface-guidelines",
+      "repo": "https://github.com/vercel-labs/web-interface-guidelines",
+      "commit": "434b7f91364665f2f733b310ec54809bf8f37937",
+      "path": "command.md",
+      "license": "MIT",
+      "authors": [
+        "Vercel Labs"
+      ],
+      "url": "https://vercel.com/design/guidelines",
+      "transformations": [
+        "parsed markdown heading and bullet"
+      ]
+    },
+    "sourceUrl": "https://vercel.com/design/guidelines",
+    "text": "Numerals for counts: \"8 deployments\" not \"eight\"",
+    "category": "Content & Copy",
+    "severity": "warn",
+    "instead": "",
+    "scope": "web-ui",
+    "sourcePath": "command.md",
+    "line": 146
+  },
+  {
+    "id": "guideline/anti-patterns-onpaste-with-preventdefault",
+    "kind": "guideline",
+    "name": "onPaste with preventDefault",
+    "summary": "onPaste with preventDefault",
+    "domains": [],
+    "sectors": [],
+    "tags": [
+      "anti-patterns",
+      "anti-pattern",
+      "avoid",
+      "onPaste",
+      "preventDefault"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "web-interface-guidelines",
+      "repo": "https://github.com/vercel-labs/web-interface-guidelines",
+      "commit": "434b7f91364665f2f733b310ec54809bf8f37937",
+      "path": "command.md",
+      "license": "MIT",
+      "authors": [
+        "Vercel Labs"
+      ],
+      "url": "https://vercel.com/design/guidelines",
+      "transformations": [
+        "parsed markdown heading and bullet"
+      ]
+    },
+    "sourceUrl": "https://vercel.com/design/guidelines",
+    "text": "`onPaste` with `preventDefault`",
+    "category": "Anti-patterns (flag these)",
+    "severity": "error",
+    "instead": "",
+    "scope": "web-ui",
+    "sourcePath": "command.md",
+    "line": 155
+  },
+  {
+    "id": "guideline/anti-patterns-outline-none-without-focus-visible-replacement",
+    "kind": "guideline",
+    "name": "outline-none without focus-visible replacement",
+    "summary": "outline-none without focus-visible replacement",
+    "domains": [],
+    "sectors": [],
+    "tags": [
+      "anti-patterns",
+      "anti-pattern",
+      "avoid",
+      "outline-none",
+      "outline",
+      "none",
+      "without",
+      "focus",
+      "visible",
+      "replacement"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "web-interface-guidelines",
+      "repo": "https://github.com/vercel-labs/web-interface-guidelines",
+      "commit": "434b7f91364665f2f733b310ec54809bf8f37937",
+      "path": "command.md",
+      "license": "MIT",
+      "authors": [
+        "Vercel Labs"
+      ],
+      "url": "https://vercel.com/design/guidelines",
+      "transformations": [
+        "parsed markdown heading and bullet"
+      ]
+    },
+    "sourceUrl": "https://vercel.com/design/guidelines",
+    "text": "`outline-none` without focus-visible replacement",
+    "category": "Anti-patterns (flag these)",
+    "severity": "error",
+    "instead": "",
+    "scope": "web-ui",
+    "sourcePath": "command.md",
+    "line": 157
+  },
+  {
+    "id": "guideline/touch-overscroll-behavior-contain-in-modals-drawers-sheets",
+    "kind": "guideline",
+    "name": "overscroll-behavior: contain in modals/drawers/sheets",
+    "summary": "overscroll-behavior: contain in modals/drawers/sheets",
+    "domains": [],
+    "sectors": [],
+    "tags": [
+      "touch",
+      "gesture",
+      "mobile",
+      "overscroll-behavior",
+      "contain",
+      "overscroll",
+      "behavior",
+      "modals",
+      "drawers",
+      "sheets"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "web-interface-guidelines",
+      "repo": "https://github.com/vercel-labs/web-interface-guidelines",
+      "commit": "434b7f91364665f2f733b310ec54809bf8f37937",
+      "path": "command.md",
+      "license": "MIT",
+      "authors": [
+        "Vercel Labs"
+      ],
+      "url": "https://vercel.com/design/guidelines",
+      "transformations": [
+        "parsed markdown heading and bullet"
+      ]
+    },
+    "sourceUrl": "https://vercel.com/design/guidelines",
+    "text": "`overscroll-behavior: contain` in modals/drawers/sheets",
+    "category": "Touch & Interaction",
+    "severity": "warn",
+    "instead": "",
+    "scope": "web-ui",
+    "sourcePath": "command.md",
+    "line": 106
+  },
+  {
+    "id": "guideline/touch-page-rubber-band-suppression-overscroll-behavior-none-on-html-inside-media-point",
+    "kind": "guideline",
+    "name": "Page rubber-band suppression: overscroll-behavior: none on <html> inside…",
+    "summary": "Page rubber-band suppression: overscroll-behavior: none on <html> inside @media (pointer: fine); keep coarse-pointer page defaults for pull-to-refresh. Test hybrid touch devices: pointer describes the primary input, and none also disables…",
+    "domains": [],
+    "sectors": [],
+    "tags": [
+      "touch",
+      "gesture",
+      "mobile",
+      "overscroll-behavior",
+      "none",
+      "html",
+      "media",
+      "pointer",
+      "fine",
+      "page",
+      "rubber",
+      "band"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "web-interface-guidelines",
+      "repo": "https://github.com/vercel-labs/web-interface-guidelines",
+      "commit": "434b7f91364665f2f733b310ec54809bf8f37937",
+      "path": "command.md",
+      "license": "MIT",
+      "authors": [
+        "Vercel Labs"
+      ],
+      "url": "https://vercel.com/design/guidelines",
+      "transformations": [
+        "parsed markdown heading and bullet"
+      ]
+    },
+    "sourceUrl": "https://vercel.com/design/guidelines",
+    "text": "Page rubber-band suppression: `overscroll-behavior: none` on `<html>` inside `@media (pointer: fine)`; keep coarse-pointer page defaults for pull-to-refresh. Test hybrid touch devices: `pointer` describes the primary input, and `none` also disables scroll chaining and native swipe navigation",
+    "category": "Touch & Interaction",
+    "severity": "warn",
+    "instead": "",
+    "scope": "web-ui",
+    "sourcePath": "command.md",
+    "line": 107
+  },
+  {
+    "id": "guideline/forms-placeholders-end-with-and-show-example-pattern",
+    "kind": "guideline",
+    "name": "Placeholders end with … and show example pattern",
+    "summary": "Placeholders end with … and show example pattern",
+    "domains": [],
+    "sectors": [],
+    "tags": [
+      "forms",
+      "form",
+      "input",
+      "label",
+      "validation",
+      "placeholders",
+      "end",
+      "show",
+      "example",
+      "pattern"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "web-interface-guidelines",
+      "repo": "https://github.com/vercel-labs/web-interface-guidelines",
+      "commit": "434b7f91364665f2f733b310ec54809bf8f37937",
+      "path": "command.md",
+      "license": "MIT",
+      "authors": [
+        "Vercel Labs"
+      ],
+      "url": "https://vercel.com/design/guidelines",
+      "transformations": [
+        "parsed markdown heading and bullet"
+      ]
+    },
+    "sourceUrl": "https://vercel.com/design/guidelines",
+    "text": "Placeholders end with `…` and show example pattern",
+    "category": "Forms",
+    "severity": "warn",
+    "instead": "",
+    "scope": "web-ui",
+    "sourcePath": "command.md",
+    "line": 47
+  },
+  {
+    "id": "guideline/performance-prefer-video-autoplay-muted-loop-playsinline-over-animated-gif-provide-a-still-a",
+    "kind": "guideline",
+    "name": "Prefer <video autoplay muted loop playsinline> over animated GIF; provide a…",
+    "summary": "Prefer <video autoplay muted loop playsinline> over animated GIF; provide a still alternative",
+    "domains": [],
+    "sectors": [],
+    "tags": [
+      "performance",
+      "virtualization",
+      "preload",
+      "video",
+      "autoplay",
+      "muted",
+      "loop",
+      "playsinline",
+      "prefer"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "web-interface-guidelines",
+      "repo": "https://github.com/vercel-labs/web-interface-guidelines",
+      "commit": "434b7f91364665f2f733b310ec54809bf8f37937",
+      "path": "command.md",
+      "license": "MIT",
+      "authors": [
+        "Vercel Labs"
+      ],
+      "url": "https://vercel.com/design/guidelines",
+      "transformations": [
+        "parsed markdown heading and bullet"
+      ]
+    },
+    "sourceUrl": "https://vercel.com/design/guidelines",
+    "text": "Prefer `<video autoplay muted loop playsinline>` over animated GIF; provide a still alternative",
+    "category": "Performance",
+    "severity": "warn",
+    "instead": "",
+    "scope": "web-ui",
+    "sourcePath": "command.md",
+    "line": 92
+  },
+  {
+    "id": "guideline/performance-prefer-uncontrolled-inputs-controlled-inputs-must-be-cheap-per-keystroke",
+    "kind": "guideline",
+    "name": "Prefer uncontrolled inputs; controlled inputs must be cheap per keystroke",
+    "summary": "Prefer uncontrolled inputs; controlled inputs must be cheap per keystroke",
+    "domains": [],
+    "sectors": [],
+    "tags": [
+      "performance",
+      "virtualization",
+      "preload",
+      "prefer",
+      "uncontrolled",
+      "inputs",
+      "controlled",
+      "must"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "web-interface-guidelines",
+      "repo": "https://github.com/vercel-labs/web-interface-guidelines",
+      "commit": "434b7f91364665f2f733b310ec54809bf8f37937",
+      "path": "command.md",
+      "license": "MIT",
+      "authors": [
+        "Vercel Labs"
+      ],
+      "url": "https://vercel.com/design/guidelines",
+      "transformations": [
+        "parsed markdown heading and bullet"
+      ]
+    },
+    "sourceUrl": "https://vercel.com/design/guidelines",
+    "text": "Prefer uncontrolled inputs; controlled inputs must be cheap per keystroke",
+    "category": "Performance",
+    "severity": "error",
+    "instead": "",
+    "scope": "web-ui",
+    "sourcePath": "command.md",
+    "line": 89
+  },
+  {
+    "id": "guideline/accessibility-scroll-margin-top-on-heading-anchors",
+    "kind": "guideline",
+    "name": "scroll-margin-top on heading anchors",
+    "summary": "scroll-margin-top on heading anchors",
+    "domains": [],
+    "sectors": [],
+    "tags": [
+      "accessibility",
+      "a11y",
+      "aria",
+      "keyboard",
+      "screen-reader",
+      "semantics",
+      "scroll-margin-top",
+      "scroll",
+      "margin",
+      "top",
+      "heading",
+      "anchors"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "web-interface-guidelines",
+      "repo": "https://github.com/vercel-labs/web-interface-guidelines",
+      "commit": "434b7f91364665f2f733b310ec54809bf8f37937",
+      "path": "command.md",
+      "license": "MIT",
+      "authors": [
+        "Vercel Labs"
+      ],
+      "url": "https://vercel.com/design/guidelines",
+      "transformations": [
+        "parsed markdown heading and bullet"
+      ]
+    },
+    "sourceUrl": "https://vercel.com/design/guidelines",
+    "text": "`scroll-margin-top` on heading anchors",
+    "category": "Accessibility",
+    "severity": "warn",
+    "instead": "",
+    "scope": "web-ui",
+    "sourcePath": "command.md",
+    "line": 25
+  },
+  {
+    "id": "guideline/copy-second-person-avoid-first-person",
+    "kind": "guideline",
+    "name": "Second person; avoid first person",
+    "summary": "Second person; avoid first person",
+    "domains": [],
+    "sectors": [],
+    "tags": [
+      "copy",
+      "microcopy",
+      "voice",
+      "labels",
+      "second",
+      "person",
+      "avoid",
+      "first"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "web-interface-guidelines",
+      "repo": "https://github.com/vercel-labs/web-interface-guidelines",
+      "commit": "434b7f91364665f2f733b310ec54809bf8f37937",
+      "path": "command.md",
+      "license": "MIT",
+      "authors": [
+        "Vercel Labs"
+      ],
+      "url": "https://vercel.com/design/guidelines",
+      "transformations": [
+        "parsed markdown heading and bullet"
+      ]
+    },
+    "sourceUrl": "https://vercel.com/design/guidelines",
+    "text": "Second person; avoid first person",
+    "category": "Content & Copy",
+    "severity": "warn",
+    "instead": "",
+    "scope": "web-ui",
+    "sourcePath": "command.md",
+    "line": 149
+  },
+  {
+    "id": "guideline/animation-set-correct-transform-origin",
+    "kind": "guideline",
+    "name": "Set correct transform-origin",
+    "summary": "Set correct transform-origin",
+    "domains": [],
+    "sectors": [],
+    "tags": [
+      "animation",
+      "motion",
+      "reduced-motion",
+      "transition",
+      "transform-origin",
+      "set",
+      "correct",
+      "transform",
+      "origin"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "web-interface-guidelines",
+      "repo": "https://github.com/vercel-labs/web-interface-guidelines",
+      "commit": "434b7f91364665f2f733b310ec54809bf8f37937",
+      "path": "command.md",
+      "license": "MIT",
+      "authors": [
+        "Vercel Labs"
+      ],
+      "url": "https://vercel.com/design/guidelines",
+      "transformations": [
+        "parsed markdown heading and bullet"
+      ]
+    },
+    "sourceUrl": "https://vercel.com/design/guidelines",
+    "text": "Set correct `transform-origin`",
+    "category": "Animation",
+    "severity": "warn",
+    "instead": "",
+    "scope": "web-ui",
+    "sourcePath": "command.md",
+    "line": 56
+  },
+  {
+    "id": "guideline/performance-short-non-essential-loops-safari-h-264-mp4-picture-source-prefers-reduced-motion",
+    "kind": "guideline",
+    "name": "Short non-essential loops: Safari H.264 MP4 <picture> source,…",
+    "summary": "Short non-essential loops: Safari H.264 MP4 <picture> source, prefers-reduced-motion media condition, and still fallback",
+    "domains": [],
+    "sectors": [],
+    "tags": [
+      "performance",
+      "virtualization",
+      "preload",
+      "picture",
+      "prefers-reduced-motion",
+      "short",
+      "non",
+      "essential",
+      "loops",
+      "safari",
+      "264"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "web-interface-guidelines",
+      "repo": "https://github.com/vercel-labs/web-interface-guidelines",
+      "commit": "434b7f91364665f2f733b310ec54809bf8f37937",
+      "path": "command.md",
+      "license": "MIT",
+      "authors": [
+        "Vercel Labs"
+      ],
+      "url": "https://vercel.com/design/guidelines",
+      "transformations": [
+        "parsed markdown heading and bullet"
+      ]
+    },
+    "sourceUrl": "https://vercel.com/design/guidelines",
+    "text": "Short non-essential loops: Safari H.264 MP4 `<picture>` source, `prefers-reduced-motion` media condition, and still fallback",
+    "category": "Performance",
+    "severity": "warn",
+    "instead": "",
+    "scope": "web-ui",
+    "sourcePath": "command.md",
+    "line": 93
+  },
+  {
+    "id": "guideline/copy-specific-button-labels-save-api-key-not-continue",
+    "kind": "guideline",
+    "name": "Specific button labels: \"Save API Key\" not \"Continue\"",
+    "summary": "Specific button labels: \"Save API Key\" not \"Continue\"",
+    "domains": [],
+    "sectors": [],
+    "tags": [
+      "copy",
+      "microcopy",
+      "voice",
+      "labels",
+      "specific",
+      "button",
+      "save",
+      "api",
+      "key"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "web-interface-guidelines",
+      "repo": "https://github.com/vercel-labs/web-interface-guidelines",
+      "commit": "434b7f91364665f2f733b310ec54809bf8f37937",
+      "path": "command.md",
+      "license": "MIT",
+      "authors": [
+        "Vercel Labs"
+      ],
+      "url": "https://vercel.com/design/guidelines",
+      "transformations": [
+        "parsed markdown heading and bullet"
+      ]
+    },
+    "sourceUrl": "https://vercel.com/design/guidelines",
+    "text": "Specific button labels: \"Save API Key\" not \"Continue\"",
+    "category": "Content & Copy",
+    "severity": "warn",
+    "instead": "",
+    "scope": "web-ui",
+    "sourcePath": "command.md",
+    "line": 147
+  },
+  {
+    "id": "guideline/focus-sticky-headers-footers-overlays-must-not-cover-the-focused-element",
+    "kind": "guideline",
+    "name": "Sticky headers/footers/overlays must not cover the focused element",
+    "summary": "Sticky headers/footers/overlays must not cover the focused element",
+    "domains": [],
+    "sectors": [],
+    "tags": [
+      "focus",
+      "focus-visible",
+      "keyboard",
+      "sticky",
+      "headers",
+      "footers",
+      "overlays",
+      "must",
+      "not"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "web-interface-guidelines",
+      "repo": "https://github.com/vercel-labs/web-interface-guidelines",
+      "commit": "434b7f91364665f2f733b310ec54809bf8f37937",
+      "path": "command.md",
+      "license": "MIT",
+      "authors": [
+        "Vercel Labs"
+      ],
+      "url": "https://vercel.com/design/guidelines",
+      "transformations": [
+        "parsed markdown heading and bullet"
+      ]
+    },
+    "sourceUrl": "https://vercel.com/design/guidelines",
+    "text": "Sticky headers/footers/overlays must not cover the focused element",
+    "category": "Focus States",
+    "severity": "error",
+    "instead": "",
+    "scope": "web-ui",
+    "sourcePath": "command.md",
+    "line": 35
+  },
+  {
+    "id": "guideline/forms-submit-button-stays-enabled-until-request-starts-spinner-during-request",
+    "kind": "guideline",
+    "name": "Submit button stays enabled until request starts; spinner during request",
+    "summary": "Submit button stays enabled until request starts; spinner during request",
+    "domains": [],
+    "sectors": [],
+    "tags": [
+      "forms",
+      "form",
+      "input",
+      "label",
+      "validation",
+      "submit",
+      "button",
+      "stays",
+      "enabled",
+      "until",
+      "request"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "web-interface-guidelines",
+      "repo": "https://github.com/vercel-labs/web-interface-guidelines",
+      "commit": "434b7f91364665f2f733b310ec54809bf8f37937",
+      "path": "command.md",
+      "license": "MIT",
+      "authors": [
+        "Vercel Labs"
+      ],
+      "url": "https://vercel.com/design/guidelines",
+      "transformations": [
+        "parsed markdown heading and bullet"
+      ]
+    },
+    "sourceUrl": "https://vercel.com/design/guidelines",
+    "text": "Submit button stays enabled until request starts; spinner during request",
+    "category": "Forms",
+    "severity": "warn",
+    "instead": "",
+    "scope": "web-ui",
+    "sourcePath": "command.md",
+    "line": 45
+  },
+  {
+    "id": "guideline/hydration-suppresshydrationwarning-only-where-truly-needed",
+    "kind": "guideline",
+    "name": "suppressHydrationWarning only where truly needed",
+    "summary": "suppressHydrationWarning only where truly needed",
+    "domains": [],
+    "sectors": [],
+    "tags": [
+      "hydration",
+      "ssr",
+      "client",
+      "suppressHydrationWarning",
+      "only",
+      "where",
+      "truly",
+      "needed"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "web-interface-guidelines",
+      "repo": "https://github.com/vercel-labs/web-interface-guidelines",
+      "commit": "434b7f91364665f2f733b310ec54809bf8f37937",
+      "path": "command.md",
+      "license": "MIT",
+      "authors": [
+        "Vercel Labs"
+      ],
+      "url": "https://vercel.com/design/guidelines",
+      "transformations": [
+        "parsed markdown heading and bullet"
+      ]
+    },
+    "sourceUrl": "https://vercel.com/design/guidelines",
+    "text": "`suppressHydrationWarning` only where truly needed",
+    "category": "Hydration Safety",
+    "severity": "warn",
+    "instead": "",
+    "scope": "web-ui",
+    "sourcePath": "command.md",
+    "line": 135
+  },
+  {
+    "id": "guideline/animation-svg-transforms-on-g-wrapper-with-transform-box-fill-box-transform-origin-center",
+    "kind": "guideline",
+    "name": "SVG: transforms on <g> wrapper with transform-box: fill-box; transform-origin:…",
+    "summary": "SVG: transforms on <g> wrapper with transform-box: fill-box; transform-origin: center",
+    "domains": [],
+    "sectors": [],
+    "tags": [
+      "animation",
+      "motion",
+      "reduced-motion",
+      "transition",
+      "transform-box",
+      "fill-box",
+      "transform-origin",
+      "center",
+      "svg",
+      "transforms",
+      "wrapper",
+      "transform"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "web-interface-guidelines",
+      "repo": "https://github.com/vercel-labs/web-interface-guidelines",
+      "commit": "434b7f91364665f2f733b310ec54809bf8f37937",
+      "path": "command.md",
+      "license": "MIT",
+      "authors": [
+        "Vercel Labs"
+      ],
+      "url": "https://vercel.com/design/guidelines",
+      "transformations": [
+        "parsed markdown heading and bullet"
+      ]
+    },
+    "sourceUrl": "https://vercel.com/design/guidelines",
+    "text": "SVG: transforms on `<g>` wrapper with `transform-box: fill-box; transform-origin: center`",
+    "category": "Animation",
+    "severity": "warn",
+    "instead": "",
+    "scope": "web-ui",
+    "sourcePath": "command.md",
+    "line": 57
+  },
+  {
+    "id": "guideline/content-text-containers-handle-long-content-truncate-line-clamp-or-break-words",
+    "kind": "guideline",
+    "name": "Text containers handle long content: truncate, line-clamp-, or break-words",
+    "summary": "Text containers handle long content: truncate, line-clamp-, or break-words",
+    "domains": [],
+    "sectors": [],
+    "tags": [
+      "content",
+      "overflow",
+      "empty-state",
+      "truncation",
+      "truncate",
+      "line-clamp-",
+      "break-words",
+      "text",
+      "containers",
+      "handle",
+      "long"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "web-interface-guidelines",
+      "repo": "https://github.com/vercel-labs/web-interface-guidelines",
+      "commit": "434b7f91364665f2f733b310ec54809bf8f37937",
+      "path": "command.md",
+      "license": "MIT",
+      "authors": [
+        "Vercel Labs"
+      ],
+      "url": "https://vercel.com/design/guidelines",
+      "transformations": [
+        "parsed markdown heading and bullet"
+      ]
+    },
+    "sourceUrl": "https://vercel.com/design/guidelines",
+    "text": "Text containers handle long content: `truncate`, `line-clamp-*`, or `break-words`",
+    "category": "Content Handling",
+    "severity": "warn",
+    "instead": "",
+    "scope": "web-ui",
+    "sourcePath": "command.md",
+    "line": 73
+  },
+  {
+    "id": "guideline/copy-title-case-for-headings-buttons-chicago-style",
+    "kind": "guideline",
+    "name": "Title Case for headings/buttons (Chicago style)",
+    "summary": "Title Case for headings/buttons (Chicago style)",
+    "domains": [],
+    "sectors": [],
+    "tags": [
+      "copy",
+      "microcopy",
+      "voice",
+      "labels",
+      "title",
+      "case",
+      "headings",
+      "buttons",
+      "chicago",
+      "style"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "web-interface-guidelines",
+      "repo": "https://github.com/vercel-labs/web-interface-guidelines",
+      "commit": "434b7f91364665f2f733b310ec54809bf8f37937",
+      "path": "command.md",
+      "license": "MIT",
+      "authors": [
+        "Vercel Labs"
+      ],
+      "url": "https://vercel.com/design/guidelines",
+      "transformations": [
+        "parsed markdown heading and bullet"
+      ]
+    },
+    "sourceUrl": "https://vercel.com/design/guidelines",
+    "text": "Title Case for headings/buttons (Chicago style)",
+    "category": "Content & Copy",
+    "severity": "warn",
+    "instead": "",
+    "scope": "web-ui",
+    "sourcePath": "command.md",
+    "line": 145
+  },
+  {
+    "id": "guideline/touch-touch-action-manipulation-prevents-double-tap-zoom-delay",
+    "kind": "guideline",
+    "name": "touch-action: manipulation (prevents double-tap zoom delay)",
+    "summary": "touch-action: manipulation (prevents double-tap zoom delay)",
+    "domains": [],
+    "sectors": [],
+    "tags": [
+      "touch",
+      "gesture",
+      "mobile",
+      "touch-action",
+      "manipulation",
+      "action",
+      "prevents",
+      "double",
+      "tap"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "web-interface-guidelines",
+      "repo": "https://github.com/vercel-labs/web-interface-guidelines",
+      "commit": "434b7f91364665f2f733b310ec54809bf8f37937",
+      "path": "command.md",
+      "license": "MIT",
+      "authors": [
+        "Vercel Labs"
+      ],
+      "url": "https://vercel.com/design/guidelines",
+      "transformations": [
+        "parsed markdown heading and bullet"
+      ]
+    },
+    "sourceUrl": "https://vercel.com/design/guidelines",
+    "text": "`touch-action: manipulation` (prevents double-tap zoom delay)",
+    "category": "Touch & Interaction",
+    "severity": "warn",
+    "instead": "",
+    "scope": "web-ui",
+    "sourcePath": "command.md",
+    "line": 104
+  },
+  {
+    "id": "guideline/anti-patterns-transition-all",
+    "kind": "guideline",
+    "name": "transition: all",
+    "summary": "transition: all",
+    "domains": [],
+    "sectors": [],
+    "tags": [
+      "anti-patterns",
+      "anti-pattern",
+      "avoid",
+      "transition",
+      "all"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "web-interface-guidelines",
+      "repo": "https://github.com/vercel-labs/web-interface-guidelines",
+      "commit": "434b7f91364665f2f733b310ec54809bf8f37937",
+      "path": "command.md",
+      "license": "MIT",
+      "authors": [
+        "Vercel Labs"
+      ],
+      "url": "https://vercel.com/design/guidelines",
+      "transformations": [
+        "parsed markdown heading and bullet"
+      ]
+    },
+    "sourceUrl": "https://vercel.com/design/guidelines",
+    "text": "`transition: all`",
+    "category": "Anti-patterns (flag these)",
+    "severity": "error",
+    "instead": "",
+    "scope": "web-ui",
+    "sourcePath": "command.md",
+    "line": 156
+  },
+  {
+    "id": "guideline/navigation-url-reflects-state-filters-tabs-pagination-expanded-panels-in-query-params",
+    "kind": "guideline",
+    "name": "URL reflects state—filters, tabs, pagination, expanded panels in query params",
+    "summary": "URL reflects state—filters, tabs, pagination, expanded panels in query params",
+    "domains": [],
+    "sectors": [],
+    "tags": [
+      "navigation",
+      "url",
+      "state",
+      "routing",
+      "reflects",
+      "filters",
+      "tabs",
+      "pagination"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "web-interface-guidelines",
+      "repo": "https://github.com/vercel-labs/web-interface-guidelines",
+      "commit": "434b7f91364665f2f733b310ec54809bf8f37937",
+      "path": "command.md",
+      "license": "MIT",
+      "authors": [
+        "Vercel Labs"
+      ],
+      "url": "https://vercel.com/design/guidelines",
+      "transformations": [
+        "parsed markdown heading and bullet"
+      ]
+    },
+    "sourceUrl": "https://vercel.com/design/guidelines",
+    "text": "URL reflects state—filters, tabs, pagination, expanded panels in query params",
+    "category": "Navigation & State",
+    "severity": "warn",
+    "instead": "",
+    "scope": "web-ui",
+    "sourcePath": "command.md",
+    "line": 97
+  },
+  {
+    "id": "guideline/focus-use-focus-visible-over-focus-avoid-focus-ring-on-click",
+    "kind": "guideline",
+    "name": "Use :focus-visible over :focus (avoid focus ring on click)",
+    "summary": "Use :focus-visible over :focus (avoid focus ring on click)",
+    "domains": [],
+    "sectors": [],
+    "tags": [
+      "focus",
+      "focus-visible",
+      "keyboard",
+      "use",
+      "visible",
+      "over",
+      "avoid"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "web-interface-guidelines",
+      "repo": "https://github.com/vercel-labs/web-interface-guidelines",
+      "commit": "434b7f91364665f2f733b310ec54809bf8f37937",
+      "path": "command.md",
+      "license": "MIT",
+      "authors": [
+        "Vercel Labs"
+      ],
+      "url": "https://vercel.com/design/guidelines",
+      "transformations": [
+        "parsed markdown heading and bullet"
+      ]
+    },
+    "sourceUrl": "https://vercel.com/design/guidelines",
+    "text": "Use `:focus-visible` over `:focus` (avoid focus ring on click)",
+    "category": "Focus States",
+    "severity": "warn",
+    "instead": "",
+    "scope": "web-ui",
+    "sourcePath": "command.md",
+    "line": 33
+  },
+  {
+    "id": "guideline/forms-use-correct-type-email-tel-url-number-and-inputmode",
+    "kind": "guideline",
+    "name": "Use correct type (email, tel, url, number) and inputmode",
+    "summary": "Use correct type (email, tel, url, number) and inputmode",
+    "domains": [],
+    "sectors": [],
+    "tags": [
+      "forms",
+      "form",
+      "input",
+      "label",
+      "validation",
+      "type",
+      "email",
+      "tel",
+      "url",
+      "number",
+      "inputmode",
+      "use"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "web-interface-guidelines",
+      "repo": "https://github.com/vercel-labs/web-interface-guidelines",
+      "commit": "434b7f91364665f2f733b310ec54809bf8f37937",
+      "path": "command.md",
+      "license": "MIT",
+      "authors": [
+        "Vercel Labs"
+      ],
+      "url": "https://vercel.com/design/guidelines",
+      "transformations": [
+        "parsed markdown heading and bullet"
+      ]
+    },
+    "sourceUrl": "https://vercel.com/design/guidelines",
+    "text": "Use correct `type` (`email`, `tel`, `url`, `number`) and `inputmode`",
+    "category": "Forms",
+    "severity": "warn",
+    "instead": "",
+    "scope": "web-ui",
+    "sourcePath": "command.md",
+    "line": 40
+  },
+  {
+    "id": "guideline/accessibility-use-semantic-html-button-a-label-table-before-aria",
+    "kind": "guideline",
+    "name": "Use semantic HTML (<button>, <a>, <label>, <table>) before ARIA",
+    "summary": "Use semantic HTML (<button>, <a>, <label>, <table>) before ARIA",
+    "domains": [],
+    "sectors": [],
+    "tags": [
+      "accessibility",
+      "a11y",
+      "aria",
+      "keyboard",
+      "screen-reader",
+      "semantics",
+      "button",
+      "label",
+      "table",
+      "use",
+      "semantic",
+      "html"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "web-interface-guidelines",
+      "repo": "https://github.com/vercel-labs/web-interface-guidelines",
+      "commit": "434b7f91364665f2f733b310ec54809bf8f37937",
+      "path": "command.md",
+      "license": "MIT",
+      "authors": [
+        "Vercel Labs"
+      ],
+      "url": "https://vercel.com/design/guidelines",
+      "transformations": [
+        "parsed markdown heading and bullet"
+      ]
+    },
+    "sourceUrl": "https://vercel.com/design/guidelines",
+    "text": "Use semantic HTML (`<button>`, `<a>`, `<label>`, `<table>`) before ARIA",
+    "category": "Accessibility",
+    "severity": "warn",
+    "instead": "",
+    "scope": "web-ui",
+    "sourcePath": "command.md",
+    "line": 23
+  },
+  {
+    "id": "guideline/typography-use-text-wrap-balance-or-text-pretty-on-headings-prevents-widows",
+    "kind": "guideline",
+    "name": "Use text-wrap: balance or text-pretty on headings (prevents widows)",
+    "summary": "Use text-wrap: balance or text-pretty on headings (prevents widows)",
+    "domains": [],
+    "sectors": [],
+    "tags": [
+      "typography",
+      "type",
+      "copy",
+      "punctuation",
+      "text-wrap",
+      "balance",
+      "text-pretty",
+      "use",
+      "text",
+      "wrap",
+      "pretty"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "web-interface-guidelines",
+      "repo": "https://github.com/vercel-labs/web-interface-guidelines",
+      "commit": "434b7f91364665f2f733b310ec54809bf8f37937",
+      "path": "command.md",
+      "license": "MIT",
+      "authors": [
+        "Vercel Labs"
+      ],
+      "url": "https://vercel.com/design/guidelines",
+      "transformations": [
+        "parsed markdown heading and bullet"
+      ]
+    },
+    "sourceUrl": "https://vercel.com/design/guidelines",
+    "text": "Use `text-wrap: balance` or `text-pretty` on headings (prevents widows)",
+    "category": "Typography",
+    "severity": "warn",
+    "instead": "",
+    "scope": "web-ui",
+    "sourcePath": "command.md",
+    "line": 69
+  },
+  {
+    "id": "guideline/content-user-generated-content-anticipate-short-average-and-very-long-inputs",
+    "kind": "guideline",
+    "name": "User-generated content: anticipate short, average, and very long inputs",
+    "summary": "User-generated content: anticipate short, average, and very long inputs",
+    "domains": [],
+    "sectors": [],
+    "tags": [
+      "content",
+      "overflow",
+      "empty-state",
+      "truncation",
+      "user",
+      "generated",
+      "anticipate",
+      "short",
+      "average"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "web-interface-guidelines",
+      "repo": "https://github.com/vercel-labs/web-interface-guidelines",
+      "commit": "434b7f91364665f2f733b310ec54809bf8f37937",
+      "path": "command.md",
+      "license": "MIT",
+      "authors": [
+        "Vercel Labs"
+      ],
+      "url": "https://vercel.com/design/guidelines",
+      "transformations": [
+        "parsed markdown heading and bullet"
+      ]
+    },
+    "sourceUrl": "https://vercel.com/design/guidelines",
+    "text": "User-generated content: anticipate short, average, and very long inputs",
+    "category": "Content Handling",
+    "severity": "warn",
+    "instead": "",
+    "scope": "web-ui",
+    "sourcePath": "command.md",
+    "line": 76
+  },
+  {
+    "id": "guideline/anti-patterns-user-scalable-no-or-maximum-scale-1-disabling-zoom",
+    "kind": "guideline",
+    "name": "user-scalable=no or maximum-scale=1 disabling zoom",
+    "summary": "user-scalable=no or maximum-scale=1 disabling zoom",
+    "domains": [],
+    "sectors": [],
+    "tags": [
+      "anti-patterns",
+      "anti-pattern",
+      "avoid",
+      "user-scalable",
+      "no",
+      "maximum-scale",
+      "user",
+      "scalable",
+      "maximum",
+      "scale",
+      "disabling"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "web-interface-guidelines",
+      "repo": "https://github.com/vercel-labs/web-interface-guidelines",
+      "commit": "434b7f91364665f2f733b310ec54809bf8f37937",
+      "path": "command.md",
+      "license": "MIT",
+      "authors": [
+        "Vercel Labs"
+      ],
+      "url": "https://vercel.com/design/guidelines",
+      "transformations": [
+        "parsed markdown heading and bullet"
+      ]
+    },
+    "sourceUrl": "https://vercel.com/design/guidelines",
+    "text": "`user-scalable=no` or `maximum-scale=1` disabling zoom",
+    "category": "Anti-patterns (flag these)",
+    "severity": "error",
+    "instead": "",
+    "scope": "web-ui",
+    "sourcePath": "command.md",
+    "line": 154
+  },
+  {
+    "id": "guideline/forms-warn-before-navigation-with-unsaved-changes-beforeunload-or-router-guard",
+    "kind": "guideline",
+    "name": "Warn before navigation with unsaved changes (beforeunload or router guard)",
+    "summary": "Warn before navigation with unsaved changes (beforeunload or router guard)",
+    "domains": [],
+    "sectors": [],
+    "tags": [
+      "forms",
+      "form",
+      "input",
+      "label",
+      "validation",
+      "beforeunload",
+      "warn",
+      "before",
+      "navigation",
+      "unsaved",
+      "changes"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "web-interface-guidelines",
+      "repo": "https://github.com/vercel-labs/web-interface-guidelines",
+      "commit": "434b7f91364665f2f733b310ec54809bf8f37937",
+      "path": "command.md",
+      "license": "MIT",
+      "authors": [
+        "Vercel Labs"
+      ],
+      "url": "https://vercel.com/design/guidelines",
+      "transformations": [
+        "parsed markdown heading and bullet"
+      ]
+    },
+    "sourceUrl": "https://vercel.com/design/guidelines",
+    "text": "Warn before navigation with unsaved changes (`beforeunload` or router guard)",
+    "category": "Forms",
+    "severity": "warn",
+    "instead": "",
+    "scope": "web-ui",
+    "sourcePath": "command.md",
+    "line": 49
+  }
+]

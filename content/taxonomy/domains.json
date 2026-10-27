@@ -1,0 +1,1017 @@
+[
+  {
+    "id": "developer-tools",
+    "name": "Developer tools",
+    "family": "software",
+    "description": "Products engineers use to build, ship, observe, and operate software: APIs, CLIs, CI, infrastructure, observability, and platforms.",
+    "aliases": [
+      "devtools",
+      "dev tools",
+      "devtool",
+      "dev tool",
+      "developer tool",
+      "developer tools",
+      "developer platform",
+      "developer experience",
+      "api",
+      "sdk",
+      "cli",
+      "infrastructure",
+      "observability",
+      "devops"
+    ],
+    "launchTier": true,
+    "status": "available",
+    "depth": "seed",
+    "upstreamSectors": ["dev-tool", "saas"],
+    "appKinds": ["devtools", "builder"],
+    "brandCategories": ["Developer Tools & IDEs", "Backend, Database & DevOps"],
+    "questions": [
+      "Can a developer understand what the product does and see a real request, response, or terminal output in the first screen?",
+      "What is the shortest honest path from landing to a working integration: install, key, first call, verify?",
+      "Which proof is real: latency, uptime, open-source code, changelog, security posture, or a named customer?"
+    ]
+  },
+  {
+    "id": "ai-products",
+    "name": "AI products",
+    "family": "software",
+    "description": "AI-native products and model platforms: assistants, agents, generation tools, evaluation, and infrastructure.",
+    "aliases": [
+      "ai",
+      "artificial intelligence",
+      "llm",
+      "machine learning",
+      "ml",
+      "agents",
+      "model",
+      "inference"
+    ],
+    "launchTier": true,
+    "status": "available",
+    "depth": "seed",
+    "upstreamSectors": ["ai-product", "saas", "dev-tool"],
+    "appKinds": ["workspace", "builder", "analytics"],
+    "brandCategories": ["AI & LLM Platforms"],
+    "questions": [
+      "What can the product do that a general chatbot cannot, and can the page show that in one concrete interaction?",
+      "Is the model, data handling, evaluation, and failure mode explained without hand-waving?",
+      "Does the interface show the output rather than a decorative gradient, robot icon, or fake chat bubble?"
+    ]
+  },
+  {
+    "id": "b2b-saas",
+    "name": "B2B SaaS",
+    "family": "software",
+    "description": "Business software sold to teams: workflow, collaboration, operations, customer support, and vertical SaaS.",
+    "aliases": [
+      "saas",
+      "software as a service",
+      "b2b",
+      "business software",
+      "workflow",
+      "crm",
+      "operations"
+    ],
+    "launchTier": true,
+    "status": "available",
+    "depth": "seed",
+    "upstreamSectors": ["saas", "dev-tool"],
+    "appKinds": ["workspace", "analytics", "smb-admin", "support"],
+    "brandCategories": ["Productivity & SaaS", "Backend, Database & DevOps"],
+    "questions": [
+      "Who is the buyer, who is the daily user, and are both visible in the page's language and proof?",
+      "What is the before-and-after workflow, and can it be shown with a real product surface?",
+      "Which trust signal matters most: security, migration, integrations, ROI, or a named customer story?"
+    ]
+  },
+  {
+    "id": "fintech-payments",
+    "name": "Fintech and payments",
+    "family": "software",
+    "description": "Banking, payments, lending, investing, insurance infrastructure, and financial operations.",
+    "aliases": [
+      "fintech",
+      "finance",
+      "payments",
+      "banking",
+      "bank",
+      "lending",
+      "investing",
+      "money",
+      "billing",
+      "treasury"
+    ],
+    "launchTier": true,
+    "status": "available",
+    "depth": "seed",
+    "upstreamSectors": ["finance", "saas"],
+    "appKinds": ["finance", "wallet", "markets", "report"],
+    "brandCategories": ["Fintech & Crypto"],
+    "questions": [
+      "Which claim requires regulatory, security, or fee transparency, and is it stated plainly?",
+      "Can a visitor understand the exact fee, risk, or eligibility before signing up?",
+      "Is the product shown with real numbers, a clear unit, and a trustworthy source?"
+    ]
+  },
+  {
+    "id": "security",
+    "name": "Security",
+    "family": "software",
+    "description": "Application security, identity, compliance, threat detection, and security operations.",
+    "aliases": [
+      "security",
+      "appsec",
+      "infosec",
+      "identity",
+      "compliance",
+      "threat",
+      "soc",
+      "zero trust"
+    ],
+    "launchTier": false,
+    "status": "planned",
+    "depth": "taxonomy",
+    "upstreamSectors": ["saas", "dev-tool"],
+    "appKinds": ["analytics", "support"],
+    "brandCategories": ["Backend, Database & DevOps"],
+    "questions": [
+      "Which threat, buyer, and compliance regime does the product address?",
+      "Can the page show evidence without exposing sensitive customer data?",
+      "Is the call to action appropriate for a high-consideration, trust-first purchase?"
+    ]
+  },
+  {
+    "id": "data-analytics",
+    "name": "Data and analytics",
+    "family": "software",
+    "description": "Data platforms, business intelligence, product analytics, and reporting tools.",
+    "aliases": [
+      "analytics",
+      "data",
+      "bi",
+      "business intelligence",
+      "warehouse",
+      "metrics",
+      "reporting",
+      "dashboard"
+    ],
+    "launchTier": false,
+    "status": "planned",
+    "depth": "taxonomy",
+    "upstreamSectors": ["saas", "dev-tool", "finance"],
+    "appKinds": ["analytics", "report", "workspace"],
+    "brandCategories": ["Backend, Database & DevOps", "Productivity & SaaS"],
+    "questions": [
+      "What decision does the product help someone make, and what does the data actually show?",
+      "Can the page demonstrate the query, chart, or report without a fake dashboard?",
+      "How are freshness, lineage, privacy, and accuracy handled?"
+    ]
+  },
+  {
+    "id": "productivity",
+    "name": "Productivity",
+    "family": "software",
+    "description": "Personal and team productivity: notes, tasks, calendars, email, documents, and workflow tools.",
+    "aliases": [
+      "productivity",
+      "notes",
+      "tasks",
+      "calendar",
+      "email",
+      "workspace",
+      "docs",
+      "collaboration"
+    ],
+    "launchTier": false,
+    "status": "planned",
+    "depth": "taxonomy",
+    "upstreamSectors": ["consumer-app", "saas"],
+    "appKinds": ["workspace", "builder", "smb-admin"],
+    "brandCategories": ["Productivity & SaaS"],
+    "questions": [
+      "What recurring moment does the product make easier, and can it be shown in the first screen?",
+      "Does the page respect the user's existing tools and data?",
+      "Is the product surface calm enough for daily use rather than demo theatrics?"
+    ]
+  },
+  {
+    "id": "crypto-web3",
+    "name": "Crypto and web3",
+    "family": "software",
+    "description": "Wallets, exchanges, protocols, onchain infrastructure, and decentralized applications.",
+    "aliases": ["crypto", "web3", "blockchain", "wallet", "defi", "onchain", "token", "protocol"],
+    "launchTier": false,
+    "status": "planned",
+    "depth": "taxonomy",
+    "upstreamSectors": ["finance", "consumer-app"],
+    "appKinds": ["wallet", "markets"],
+    "brandCategories": ["Fintech & Crypto"],
+    "questions": [
+      "What is the real risk, custody model, and fee structure?",
+      "Can the page avoid speculative price theatre and show a concrete product action?",
+      "Which claims are audited, and which are forward-looking?"
+    ]
+  },
+  {
+    "id": "telecom",
+    "name": "Telecom",
+    "family": "software",
+    "description": "Connectivity, mobile networks, broadband, and communication infrastructure.",
+    "aliases": [
+      "telecom",
+      "telecommunications",
+      "network",
+      "broadband",
+      "mobile",
+      "connectivity",
+      "carrier"
+    ],
+    "launchTier": false,
+    "status": "planned",
+    "depth": "taxonomy",
+    "upstreamSectors": [],
+    "appKinds": ["smb-admin", "support"],
+    "brandCategories": ["Media & Consumer Tech"],
+    "questions": [
+      "Is coverage, speed, price, and contract length clear before the CTA?",
+      "Can the page show a real coverage map or plan comparison without hiding caveats?",
+      "Does the visual language feel infrastructural rather than generic consumer tech?"
+    ]
+  },
+  {
+    "id": "product-surfaces",
+    "name": "Product surfaces",
+    "family": "product",
+    "description": "The screens inside a product: dashboards, docs, pricing, auth, onboarding, checkout, settings, and empty states.",
+    "aliases": [
+      "dashboard",
+      "admin",
+      "docs",
+      "documentation",
+      "pricing",
+      "auth",
+      "login",
+      "signup",
+      "onboarding",
+      "checkout",
+      "settings",
+      "app screen",
+      "product ui"
+    ],
+    "launchTier": true,
+    "status": "available",
+    "depth": "seed",
+    "upstreamSectors": ["consumer-app", "saas"],
+    "appKinds": ["workspace", "analytics", "builder", "support", "smb-admin"],
+    "brandCategories": ["Productivity & SaaS", "Developer Tools & IDEs"],
+    "questions": [
+      "What is the one job of this screen, and what is the one primary action?",
+      "What does empty, loading, error, and long-content state look like?",
+      "Which shell, density, and data treatment fit the product's real work?"
+    ]
+  },
+  {
+    "id": "ecommerce-dtc",
+    "name": "E-commerce and DTC",
+    "family": "commerce",
+    "description": "Direct-to-consumer brands, online stores, product pages, and checkout experiences.",
+    "aliases": [
+      "ecommerce",
+      "e-commerce",
+      "dtc",
+      "online store",
+      "shop",
+      "store",
+      "product page",
+      "checkout",
+      "retail brand"
+    ],
+    "launchTier": true,
+    "status": "available",
+    "depth": "seed",
+    "upstreamSectors": ["ecommerce", "physical-product"],
+    "appKinds": ["commerce"],
+    "brandCategories": ["E-commerce & Retail"],
+    "questions": [
+      "Can a visitor understand the product, price, materials, sizing, shipping, and returns without hunting?",
+      "Is the photography consistent and does it show the product honestly?",
+      "What is the one conversion path, and what friction can be removed before checkout?"
+    ]
+  },
+  {
+    "id": "marketplaces",
+    "name": "Marketplaces",
+    "family": "commerce",
+    "description": "Two-sided marketplaces for goods, services, rentals, and local supply and demand.",
+    "aliases": ["marketplace", "two-sided", "supply", "demand", "rental", "booking", "classifieds"],
+    "launchTier": false,
+    "status": "planned",
+    "depth": "taxonomy",
+    "upstreamSectors": ["ecommerce", "consumer-app"],
+    "appKinds": ["commerce", "workspace"],
+    "brandCategories": ["E-commerce & Retail", "Media & Consumer Tech"],
+    "questions": [
+      "Which side is the page for, and does the other side's value appear without confusing the CTA?",
+      "How are trust, safety, quality, and dispute resolution handled?",
+      "Can the page show real supply density and a believable transaction path?"
+    ]
+  },
+  {
+    "id": "retail",
+    "name": "Retail",
+    "family": "commerce",
+    "description": "Multi-brand retail, department stores, grocery, and omnichannel commerce.",
+    "aliases": ["retail", "retailer", "department store", "grocery", "supermarket", "omnichannel"],
+    "launchTier": false,
+    "status": "planned",
+    "depth": "taxonomy",
+    "upstreamSectors": ["ecommerce", "physical-product"],
+    "appKinds": ["commerce"],
+    "brandCategories": ["E-commerce & Retail"],
+    "questions": [
+      "Does the page help someone browse a broad catalogue without losing the thread?",
+      "Are availability, delivery, returns, and store details clear?",
+      "Which merchandising device is doing real work rather than filling space?"
+    ]
+  },
+  {
+    "id": "restaurants-food",
+    "name": "Restaurants and food",
+    "family": "commerce",
+    "description": "Restaurants, cafes, bakeries, bars, food brands, and hospitality menus.",
+    "aliases": [
+      "restaurant",
+      "food",
+      "cafe",
+      "bakery",
+      "bar",
+      "menu",
+      "dining",
+      "kitchen",
+      "chef",
+      "hospitality"
+    ],
+    "launchTier": true,
+    "status": "available",
+    "depth": "seed",
+    "upstreamSectors": ["restaurant", "hospitality"],
+    "appKinds": ["commerce", "report"],
+    "brandCategories": ["E-commerce & Retail"],
+    "questions": [
+      "Can a guest find the menu, hours, location, and booking action in one screen?",
+      "Does the photography show the place and the food honestly, with credits?",
+      "Is the menu readable on a phone, with prices, allergens, and dietary notes?"
+    ]
+  },
+  {
+    "id": "travel-hospitality",
+    "name": "Travel and hospitality",
+    "family": "commerce",
+    "description": "Hotels, resorts, rentals, tours, destinations, and travel services.",
+    "aliases": [
+      "travel",
+      "hospitality",
+      "hotel",
+      "resort",
+      "rental",
+      "villa",
+      "tour",
+      "destination",
+      "booking",
+      "stay"
+    ],
+    "launchTier": true,
+    "status": "available",
+    "depth": "seed",
+    "upstreamSectors": ["hospitality", "restaurant"],
+    "appKinds": ["commerce", "workspace"],
+    "brandCategories": ["E-commerce & Retail", "Media & Consumer Tech"],
+    "questions": [
+      "Can a guest understand the place, the rooms, the location, the price, and the booking terms?",
+      "Does the imagery carry the atmosphere without hiding the actual property?",
+      "Is the booking path short enough for a phone and honest about availability?"
+    ]
+  },
+  {
+    "id": "automotive",
+    "name": "Automotive",
+    "family": "commerce",
+    "description": "Cars, motorcycles, mobility, dealerships, and automotive brands.",
+    "aliases": ["automotive", "car", "vehicle", "motorcycle", "dealership", "mobility", "ev"],
+    "launchTier": false,
+    "status": "planned",
+    "depth": "taxonomy",
+    "upstreamSectors": ["other"],
+    "appKinds": ["commerce"],
+    "brandCategories": ["Automotive"],
+    "questions": [
+      "Is the vehicle's real specification, price, availability, and financing clear?",
+      "Does the page use imagery as evidence rather than atmosphere alone?",
+      "Is the enquiry or booking path appropriate for a high-consideration purchase?"
+    ]
+  },
+  {
+    "id": "creative-agencies",
+    "name": "Creative agencies and studios",
+    "family": "creative",
+    "description": "Design, branding, advertising, film, and multidisciplinary studios.",
+    "aliases": [
+      "agency",
+      "studio",
+      "creative",
+      "design studio",
+      "branding",
+      "advertising",
+      "production"
+    ],
+    "launchTier": true,
+    "status": "available",
+    "depth": "seed",
+    "upstreamSectors": ["agency", "studio-portfolio"],
+    "appKinds": ["workspace", "builder"],
+    "brandCategories": ["Design & Creative Tools"],
+    "questions": [
+      "Can a visitor see the work, the point of view, and the people behind it quickly?",
+      "Does the site practice the taste it claims to sell?",
+      "Is the contact path clear without turning the whole page into a sales funnel?"
+    ]
+  },
+  {
+    "id": "portfolios",
+    "name": "Portfolios and personal sites",
+    "family": "creative",
+    "description": "Designers, developers, photographers, artists, writers, and independent professionals.",
+    "aliases": [
+      "portfolio",
+      "personal site",
+      "personal website",
+      "freelance",
+      "designer",
+      "developer",
+      "artist",
+      "photographer",
+      "writer"
+    ],
+    "launchTier": true,
+    "status": "available",
+    "depth": "seed",
+    "upstreamSectors": ["personal-portfolio", "studio-portfolio"],
+    "appKinds": ["workspace", "creator"],
+    "brandCategories": ["Design & Creative Tools", "Media & Consumer Tech"],
+    "questions": [
+      "Whose work is this, what do they do, and what should a visitor do next?",
+      "Do the selected projects show range and judgment rather than volume?",
+      "Is the person's own voice present in the copy and the layout?"
+    ]
+  },
+  {
+    "id": "media-editorial",
+    "name": "Media and editorial",
+    "family": "creative",
+    "description": "News, magazines, newsletters, publications, and content-led brands.",
+    "aliases": [
+      "media",
+      "editorial",
+      "news",
+      "magazine",
+      "publication",
+      "newsletter",
+      "journalism",
+      "blog"
+    ],
+    "launchTier": true,
+    "status": "available",
+    "depth": "seed",
+    "upstreamSectors": ["culture", "other"],
+    "appKinds": ["creator", "analytics"],
+    "brandCategories": ["Media & Consumer Tech", "Retro Web"],
+    "questions": [
+      "What is the publication's point of view, and does the front page make it legible?",
+      "Can a reader scan, choose, and read a story without fighting the layout?",
+      "Are headlines, bylines, dates, credits, and corrections trustworthy?"
+    ]
+  },
+  {
+    "id": "music",
+    "name": "Music",
+    "family": "creative",
+    "description": "Artists, labels, venues, festivals, instruments, and music products.",
+    "aliases": [
+      "music",
+      "artist",
+      "band",
+      "label",
+      "venue",
+      "festival",
+      "album",
+      "concert",
+      "instrument"
+    ],
+    "launchTier": false,
+    "status": "planned",
+    "depth": "taxonomy",
+    "upstreamSectors": ["music", "event"],
+    "appKinds": ["creator", "commerce"],
+    "brandCategories": ["Media & Consumer Tech"],
+    "questions": [
+      "What should a fan hear, see, or do first?",
+      "Are tour dates, releases, and listening links current and obvious?",
+      "Does the visual language come from the artist's world rather than a generic dark music template?"
+    ]
+  },
+  {
+    "id": "fashion-beauty",
+    "name": "Fashion and beauty",
+    "family": "creative",
+    "description": "Fashion labels, beauty brands, skincare, cosmetics, and personal style.",
+    "aliases": [
+      "fashion",
+      "beauty",
+      "skincare",
+      "cosmetics",
+      "clothing",
+      "apparel",
+      "style",
+      "luxury"
+    ],
+    "launchTier": false,
+    "status": "planned",
+    "depth": "taxonomy",
+    "upstreamSectors": ["fashion", "ecommerce"],
+    "appKinds": ["commerce"],
+    "brandCategories": ["E-commerce & Retail", "Media & Consumer Tech"],
+    "questions": [
+      "Does the imagery establish a coherent world without obscuring the product?",
+      "Are sizing, materials, ingredients, shipping, and returns clear?",
+      "Is the typography and pacing appropriate to the price point?"
+    ]
+  },
+  {
+    "id": "photography",
+    "name": "Photography",
+    "family": "creative",
+    "description": "Photographers, studios, archives, and image-led practices.",
+    "aliases": [
+      "photography",
+      "photographer",
+      "photo",
+      "archive",
+      "studio",
+      "editorial photography"
+    ],
+    "launchTier": false,
+    "status": "planned",
+    "depth": "taxonomy",
+    "upstreamSectors": ["personal-portfolio", "studio-portfolio"],
+    "appKinds": ["creator"],
+    "brandCategories": ["Media & Consumer Tech", "Design & Creative Tools"],
+    "questions": [
+      "Do the photographs get enough size and sequence to be judged?",
+      "Is the practice, availability, and contact path clear?",
+      "Does the interface recede so the images can do the work?"
+    ]
+  },
+  {
+    "id": "culture-arts",
+    "name": "Culture and arts",
+    "family": "creative",
+    "description": "Museums, galleries, theatres, cultural institutions, and arts organizations.",
+    "aliases": [
+      "culture",
+      "arts",
+      "museum",
+      "gallery",
+      "theatre",
+      "theater",
+      "institution",
+      "exhibition"
+    ],
+    "launchTier": false,
+    "status": "planned",
+    "depth": "taxonomy",
+    "upstreamSectors": ["culture", "event"],
+    "appKinds": ["creator", "workspace"],
+    "brandCategories": ["Media & Consumer Tech", "Retro Web"],
+    "questions": [
+      "What is on, when, where, and how does someone attend?",
+      "Does the page respect the art rather than competing with it?",
+      "Are access, pricing, and audience information easy to find?"
+    ]
+  },
+  {
+    "id": "events",
+    "name": "Events",
+    "family": "creative",
+    "description": "Conferences, festivals, meetups, weddings, and ticketed experiences.",
+    "aliases": ["event", "conference", "festival", "meetup", "wedding", "ticket", "summit"],
+    "launchTier": false,
+    "status": "planned",
+    "depth": "taxonomy",
+    "upstreamSectors": ["event", "culture"],
+    "appKinds": ["commerce", "workspace"],
+    "brandCategories": ["Media & Consumer Tech"],
+    "questions": [
+      "What is happening, when, where, for whom, and how much?",
+      "Can someone register or buy a ticket without uncertainty?",
+      "Do the schedule, speakers, and venue information stay readable as they grow?"
+    ]
+  },
+  {
+    "id": "sports",
+    "name": "Sports",
+    "family": "creative",
+    "description": "Teams, leagues, athletes, fitness events, and sports media.",
+    "aliases": ["sports", "team", "league", "athlete", "match", "game", "club", "fitness event"],
+    "launchTier": false,
+    "status": "planned",
+    "depth": "taxonomy",
+    "upstreamSectors": ["other", "event"],
+    "appKinds": ["creator", "analytics"],
+    "brandCategories": ["Media & Consumer Tech"],
+    "questions": [
+      "What is the next match, event, or action a fan cares about?",
+      "Can the page carry live or frequently changing data without breaking?",
+      "Does the identity feel specific to the club rather than generic athletic energy?"
+    ]
+  },
+  {
+    "id": "gaming",
+    "name": "Gaming",
+    "family": "creative",
+    "description": "Games, studios, platforms, esports, and interactive entertainment.",
+    "aliases": ["gaming", "game", "studio", "esports", "interactive", "console", "player"],
+    "launchTier": false,
+    "status": "planned",
+    "depth": "taxonomy",
+    "upstreamSectors": ["consumer-app", "other"],
+    "appKinds": ["creator", "commerce"],
+    "brandCategories": ["Media & Consumer Tech"],
+    "questions": [
+      "Can a player understand the game's fantasy and loop in the first screen?",
+      "Are platform, price, release, and system requirements clear?",
+      "Does the page use motion and media without making the content inaccessible?"
+    ]
+  },
+  {
+    "id": "architecture",
+    "name": "Architecture",
+    "family": "creative",
+    "description": "Architecture practices, interior design, landscape, and built-environment studios.",
+    "aliases": [
+      "architecture",
+      "architect",
+      "interior",
+      "landscape",
+      "built environment",
+      "design practice"
+    ],
+    "launchTier": false,
+    "status": "planned",
+    "depth": "taxonomy",
+    "upstreamSectors": ["architecture", "real-estate"],
+    "appKinds": ["workspace"],
+    "brandCategories": ["Design & Creative Tools"],
+    "questions": [
+      "Do the projects show the practice's thinking, not just finished photographs?",
+      "Is the studio's approach, scale, and contact path clear?",
+      "Does the layout handle large imagery and long project narratives?"
+    ]
+  },
+  {
+    "id": "healthcare-wellness",
+    "name": "Healthcare and wellness",
+    "family": "services",
+    "description": "Clinics, telehealth, mental health, wellness, and health products.",
+    "aliases": [
+      "health",
+      "healthcare",
+      "medical",
+      "clinic",
+      "telehealth",
+      "wellness",
+      "mental health",
+      "doctor",
+      "patient"
+    ],
+    "launchTier": true,
+    "status": "available",
+    "depth": "seed",
+    "upstreamSectors": ["health", "consumer-app"],
+    "appKinds": ["workspace", "support"],
+    "brandCategories": ["Productivity & SaaS", "Media & Consumer Tech"],
+    "questions": [
+      "Can a patient understand eligibility, cost, privacy, and next steps without fear or ambiguity?",
+      "Is the tone calm and human without becoming vague or overly clinical?",
+      "Are credentials, safety, and emergency guidance visible?"
+    ]
+  },
+  {
+    "id": "fitness",
+    "name": "Fitness",
+    "family": "services",
+    "description": "Gyms, trainers, fitness apps, studios, and athletic programs.",
+    "aliases": [
+      "fitness",
+      "gym",
+      "trainer",
+      "workout",
+      "training",
+      "studio",
+      "wellness",
+      "athletic"
+    ],
+    "launchTier": false,
+    "status": "planned",
+    "depth": "taxonomy",
+    "upstreamSectors": ["health", "consumer-app"],
+    "appKinds": ["workspace", "commerce"],
+    "brandCategories": ["Media & Consumer Tech"],
+    "questions": [
+      "What result does the program promise, and what does the first session look like?",
+      "Are pricing, schedule, location, and cancellation terms clear?",
+      "Does the visual language feel energetic without becoming a generic gym cliché?"
+    ]
+  },
+  {
+    "id": "education-edtech",
+    "name": "Education and edtech",
+    "family": "services",
+    "description": "Schools, universities, courses, learning platforms, and education products.",
+    "aliases": [
+      "education",
+      "edtech",
+      "school",
+      "university",
+      "course",
+      "learning",
+      "student",
+      "teacher",
+      "curriculum"
+    ],
+    "launchTier": true,
+    "status": "available",
+    "depth": "seed",
+    "upstreamSectors": ["education", "saas"],
+    "appKinds": ["workspace", "analytics"],
+    "brandCategories": ["Productivity & SaaS"],
+    "questions": [
+      "Who is learning, who is teaching, and which outcome does the page promise?",
+      "Can a visitor see the curriculum, time commitment, cost, and credential?",
+      "Is the page accessible to students with different devices, abilities, and language needs?"
+    ]
+  },
+  {
+    "id": "nonprofit-civic",
+    "name": "Nonprofit and civic",
+    "family": "society",
+    "description": "Charities, foundations, civic organizations, public-interest projects, and community programs.",
+    "aliases": [
+      "nonprofit",
+      "non-profit",
+      "charity",
+      "civic",
+      "foundation",
+      "public interest",
+      "community",
+      "donate",
+      "volunteer"
+    ],
+    "launchTier": true,
+    "status": "available",
+    "depth": "seed",
+    "upstreamSectors": ["nonprofit", "culture"],
+    "appKinds": ["workspace", "report"],
+    "brandCategories": ["Media & Consumer Tech", "Retro Web"],
+    "questions": [
+      "What changes if a visitor donates, volunteers, or participates?",
+      "Is the organization's accountability, leadership, and use of funds visible?",
+      "Does the page center the people served rather than the organization's self-image?"
+    ]
+  },
+  {
+    "id": "government-public",
+    "name": "Government and public sector",
+    "family": "society",
+    "description": "Government agencies, public services, permits, benefits, and civic infrastructure.",
+    "aliases": [
+      "government",
+      "public sector",
+      "gov",
+      "agency",
+      "benefits",
+      "permit",
+      "municipal",
+      "citizen"
+    ],
+    "launchTier": false,
+    "status": "planned",
+    "depth": "taxonomy",
+    "upstreamSectors": ["nonprofit", "other"],
+    "appKinds": ["workspace", "support"],
+    "brandCategories": ["Media & Consumer Tech"],
+    "questions": [
+      "Can a citizen complete the task without knowing the org chart?",
+      "Are eligibility, documents, timelines, and fees stated in plain language?",
+      "Does the page work for low bandwidth, assistive technology, and multiple languages?"
+    ]
+  },
+  {
+    "id": "legal",
+    "name": "Legal",
+    "family": "services",
+    "description": "Law firms, legal tech, compliance, and professional legal services.",
+    "aliases": ["legal", "law", "lawyer", "attorney", "firm", "compliance", "contract", "counsel"],
+    "launchTier": false,
+    "status": "planned",
+    "depth": "taxonomy",
+    "upstreamSectors": ["other", "saas"],
+    "appKinds": ["workspace", "support"],
+    "brandCategories": ["Productivity & SaaS"],
+    "questions": [
+      "Which client, matter, and jurisdiction does the page address?",
+      "Are credentials, process, fees, and confidentiality clear?",
+      "Does the tone convey competence without hiding behind legal jargon?"
+    ]
+  },
+  {
+    "id": "insurance",
+    "name": "Insurance",
+    "family": "services",
+    "description": "Property, health, life, auto, and commercial insurance products.",
+    "aliases": ["insurance", "insurer", "policy", "coverage", "claims", "underwriting", "risk"],
+    "launchTier": false,
+    "status": "planned",
+    "depth": "taxonomy",
+    "upstreamSectors": ["finance", "saas"],
+    "appKinds": ["finance", "support"],
+    "brandCategories": ["Fintech & Crypto"],
+    "questions": [
+      "Can a visitor understand what is covered, what is excluded, and what it costs?",
+      "Is the claims path visible and reassuring without overpromising?",
+      "Are trust signals specific: underwriter, regulator, license, and customer outcome?"
+    ]
+  },
+  {
+    "id": "real-estate",
+    "name": "Real estate",
+    "family": "services",
+    "description": "Property listings, brokerages, proptech, rentals, and built-environment services.",
+    "aliases": [
+      "real estate",
+      "property",
+      "proptech",
+      "listing",
+      "brokerage",
+      "rental",
+      "home",
+      "apartment",
+      "housing"
+    ],
+    "launchTier": true,
+    "status": "available",
+    "depth": "seed",
+    "upstreamSectors": ["real-estate", "architecture"],
+    "appKinds": ["commerce", "workspace"],
+    "brandCategories": ["E-commerce & Retail", "Design & Creative Tools"],
+    "questions": [
+      "Can a buyer or renter understand the property, price, location, and process?",
+      "Does the imagery show the actual property and its context?",
+      "Are availability, fees, and next steps honest and current?"
+    ]
+  },
+  {
+    "id": "logistics",
+    "name": "Logistics",
+    "family": "services",
+    "description": "Freight, delivery, warehousing, supply chain, and fleet operations.",
+    "aliases": [
+      "logistics",
+      "freight",
+      "delivery",
+      "warehouse",
+      "supply chain",
+      "fleet",
+      "shipping",
+      "fulfillment"
+    ],
+    "launchTier": false,
+    "status": "planned",
+    "depth": "taxonomy",
+    "upstreamSectors": ["other", "saas"],
+    "appKinds": ["analytics", "workspace"],
+    "brandCategories": ["Backend, Database & DevOps"],
+    "questions": [
+      "Which route, mode, geography, and service level does the product cover?",
+      "Can the page show tracking, capacity, and pricing without a fake control tower?",
+      "What operational proof would a logistics buyer actually trust?"
+    ]
+  },
+  {
+    "id": "manufacturing",
+    "name": "Manufacturing",
+    "family": "services",
+    "description": "Industrial production, robotics, materials, and factory software.",
+    "aliases": [
+      "manufacturing",
+      "factory",
+      "industrial",
+      "robotics",
+      "materials",
+      "production",
+      "supply"
+    ],
+    "launchTier": false,
+    "status": "planned",
+    "depth": "taxonomy",
+    "upstreamSectors": ["other", "physical-product"],
+    "appKinds": ["workspace", "analytics"],
+    "brandCategories": ["Backend, Database & DevOps"],
+    "questions": [
+      "What is made, for whom, at what scale, and with what tolerance?",
+      "Can the page show the process or the plant rather than abstract Industry 4.0 language?",
+      "Which certifications, lead times, and integration constraints matter?"
+    ]
+  },
+  {
+    "id": "energy-climate",
+    "name": "Energy and climate",
+    "family": "science",
+    "description": "Energy, utilities, climate tech, sustainability, and environmental services.",
+    "aliases": [
+      "energy",
+      "climate",
+      "sustainability",
+      "utilities",
+      "solar",
+      "wind",
+      "carbon",
+      "environment"
+    ],
+    "launchTier": false,
+    "status": "planned",
+    "depth": "taxonomy",
+    "upstreamSectors": ["other", "nonprofit"],
+    "appKinds": ["analytics", "report"],
+    "brandCategories": ["Backend, Database & DevOps"],
+    "questions": [
+      "What measurable outcome does the product or project deliver?",
+      "Are the methodology, assumptions, and units honest and visible?",
+      "Does the page avoid greenwashing by showing evidence rather than leaves?"
+    ]
+  },
+  {
+    "id": "agriculture",
+    "name": "Agriculture",
+    "family": "science",
+    "description": "Farming, food production, agtech, and rural services.",
+    "aliases": [
+      "agriculture",
+      "farming",
+      "farm",
+      "agtech",
+      "crop",
+      "livestock",
+      "rural",
+      "food production"
+    ],
+    "launchTier": false,
+    "status": "planned",
+    "depth": "taxonomy",
+    "upstreamSectors": ["other", "physical-product"],
+    "appKinds": ["analytics", "workspace"],
+    "brandCategories": ["Backend, Database & DevOps"],
+    "questions": [
+      "Which crop, region, scale, and season does the product serve?",
+      "Can the page work in the field: fast, legible, low bandwidth, and glove-friendly?",
+      "Does the proof come from real yields, costs, or growers rather than stock imagery?"
+    ]
+  },
+  {
+    "id": "community-social",
+    "name": "Community and social",
+    "family": "society",
+    "description": "Membership communities, social platforms, forums, and local networks.",
+    "aliases": [
+      "community",
+      "social",
+      "membership",
+      "forum",
+      "network",
+      "local",
+      "group",
+      "discord"
+    ],
+    "launchTier": false,
+    "status": "planned",
+    "depth": "taxonomy",
+    "upstreamSectors": ["consumer-app", "nonprofit"],
+    "appKinds": ["workspace", "community"],
+    "brandCategories": ["Media & Consumer Tech"],
+    "questions": [
+      "What does a member get, and what does the first week feel like?",
+      "How are safety, moderation, and privacy handled?",
+      "Does the page show real member activity rather than an empty feed?"
+    ]
+  }
+]

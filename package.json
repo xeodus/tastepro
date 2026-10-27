@@ -1,0 +1,73 @@
+{
+  "name": "tastepro",
+  "version": "0.1.0",
+  "description": "Design taste, domain playbooks, references, and a web-interface audit rubric for coding agents. An MCP server for ChatGPT, Claude, and OpenCode.",
+  "type": "module",
+  "license": "Apache-2.0",
+  "engines": {
+    "node": ">=22"
+  },
+  "bin": {
+    "tastepro": "./dist/cli.js"
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./server": {
+      "types": "./dist/server.d.ts",
+      "import": "./dist/server.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist",
+    "content",
+    "docs",
+    "README.md",
+    "LICENSE",
+    "NOTICE",
+    "ATTRIBUTION.md"
+  ],
+  "scripts": {
+    "dev": "tsx src/cli.ts --stdio",
+    "dev:http": "tsx src/cli.ts --http",
+    "build": "tsc -p tsconfig.build.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "lint": "biome check .",
+    "lint:fix": "biome check --write .",
+    "format": "biome format --write .",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "test:integration": "vitest run tests/integration",
+    "validate": "tsx scripts/validate.ts",
+    "ingest": "tsx scripts/ingest.ts",
+    "ingest:offline": "tsx scripts/ingest.ts --offline",
+    "sources:update": "tsx scripts/update-sources.ts",
+    "smoke:http": "tsx scripts/smoke-http.ts",
+    "prepublishOnly": "npm run build && npm run validate && npm test"
+  },
+  "dependencies": {
+    "@hono/node-server": "^1.19.9",
+    "@modelcontextprotocol/sdk": "^1.32.2",
+    "commander": "^15.0.0",
+    "gray-matter": "^4.0.3",
+    "hono": "^4.11.4",
+    "js-yaml": "^4.1.0",
+    "minisearch": "^7.2.0",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^2.6.3",
+    "@types/js-yaml": "^4.0.9",
+    "@types/node": "^24.10.1",
+    "@vitest/coverage-v8": "^5.0.5",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2",
+    "vitest": "^5.0.5"
+  }
+}

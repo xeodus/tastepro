@@ -1,0 +1,23 @@
+# Caddy front door for the TastePro staging service.
+#
+# TASTEPRO_DOMAIN is provided by deploy/staging.compose.yml. Caddy obtains and
+# renews a certificate automatically. DNS must point at this host before the
+# first start.
+
+{$TASTEPRO_DOMAIN} {
+	encode zstd gzip
+
+	reverse_proxy tastepro:3000
+
+	header {
+		Strict-Transport-Security "max-age=31536000; includeSubDomains"
+		X-Content-Type-Options "nosniff"
+		Referrer-Policy "no-referrer"
+		-Server
+	}
+
+	log {
+		output stdout
+		format console
+	}
+}
