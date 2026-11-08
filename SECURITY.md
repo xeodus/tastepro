@@ -1,19 +1,21 @@
 # Security policy
 
 TastePro is a read-only MCP server for design content. It has no write tools, no
-database, no user accounts, and no server-side LLM calls. The main security
-concerns are therefore different from a typical web application: content-path
-traversal, resource exhaustion, unauthenticated exposure, and supply-chain
-integrity.
+database, no user accounts, and no server-side LLM calls. The optional audit
+tool adds two opt-in, bounded capabilities — SSRF-guarded URL fetching and
+JavaScript-disabled browser rendering — which change the threat model slightly.
+The main security concerns are still unusual for a web application:
+content-path traversal, resource exhaustion, unauthenticated exposure, and
+supply-chain integrity.
 
 ## Supported versions
 
 | Version | Supported |
 | ------- | --------- |
-| `0.1.x` | Yes       |
+| `1.0.x` | Yes       |
 | Older   | No        |
 
-M0 is pre-1.0. Security fixes land on the latest `0.1.x` release. If you deploy
+This release is 1.0. Security fixes land on the latest `1.0.x` release. If you deploy
 from a fork or a pinned image, track upstream releases and rebuild regularly.
 
 ## Reporting a vulnerability
@@ -82,8 +84,9 @@ Out of scope:
 - **Server → filesystem.** The content directory is trusted, but reference
   `bodyPath` values are checked to stay inside it.
 - **Internet → hosted HTTP.** Anonymous read-only endpoints are exposed to
-  arbitrary traffic. Auth, host allowlists, CORS, body limits, session caps, and
-  a reverse proxy are the controls.
+  arbitrary traffic. Auth, host allowlists, CORS, body limits, audit
+  concurrency, and a reverse proxy are the controls. Stateless mode applies
+  token scopes per request; stateful mode also caps sessions.
 - **Upstream → ingest.** Pinned GitHub content is parsed and validated. A
   compromised upstream commit is a supply-chain risk; pins and review are the
   mitigation.
@@ -93,10 +96,13 @@ Out of scope:
 
 ### Non-goals
 
-M0 does not execute a browser, run user-supplied code, store user content, or
-call an LLM. It does not implement OAuth. It does not rate limit by IP. It does
-not protect against a malicious operator who controls the content directory or
-environment.
+TastePro does not run user-supplied JavaScript, store user content, or call an
+LLM. It is not an OAuth authorization server: it validates tokens from your
+IdP, it does not issue them. Browser audit mode renders with JavaScript
+disabled, blocks service workers, and aborts all subresource requests. HTTP is
+stateless by default and keeps no session store. It does not rate limit by IP.
+It does not protect against a malicious operator who controls the content
+directory or environment.
 
 ## Deployment guidance
 
@@ -132,8 +138,10 @@ Use HTTPS at a reverse proxy or load balancer. Recommended controls:
 - Pin the image by digest for production. Rebuild to pick up dependency and
   base-image fixes.
 
-Hosted audit endpoints (M2+) must be auth-gated. Do not expose a browser
-automation endpoint anonymously, even if the read-only catalog is anonymous.
+The `taste_audit` tool is auth-gated by construction: explicitly anonymous
+non-loopback binds do not register it at all, OAuth requests need the
+`tastepro:audit` scope, and its URL fetcher is disabled unless the operator
+opts in. Do not work around this by proxying audit traffic around auth.
 
 ### Secrets
 
@@ -153,18 +161,29 @@ Terminate TLS, preserve `Host`, disable response buffering for SSE if you enable
 
 ### Authentication
 
-When `TASTEPRO_API_KEY` is set, every `/mcp` request must send:
+Hosted `/mcp` supports two exclusive modes:
+
+**OAuth (recommended for multi-user hosting).** With `TASTEPRO_OAUTH_ISSUER`
+and `TASTEPRO_PUBLIC_URL` set, every `/mcp` request must send:
 
 ```http
-Authorization: Bearer <token>
+Authorization: Bearer <jwt>
 ```
 
-The comparison is timing-safe. Health, readiness, and root metadata are
-anonymous. Auth is not a substitute for TLS; use both.
+Tokens are verified for signature (RS256/ES256 via the IdP's JWKS or OIDC
+discovery), issuer, audience, and expiry. `taste_audit` additionally requires
+the `tastepro:audit` scope; read-only tools accept any valid token.
+`/.well-known/oauth-protected-resource` advertises the resource, authorization
+servers, and scopes. TastePro does not issue tokens, register clients, or
+handle consent — your IdP does.
 
-M0 does not implement OAuth. ChatGPT custom connectors may require OAuth for
-authenticated servers. Use anonymous read-only hosting for ChatGPT in M0, or
-wait for the OAuth milestone. Do not weaken auth to make a client work.
+**Static bearer (single operator, CI).** With `TASTEPRO_API_KEY` set, the same
+header carries the shared key, compared timing-safely. A static key grants all
+scopes, including audit; use it only where every holder is a trusted operator.
+OAuth and a static key cannot be combined; the server refuses to start.
+
+Health, readiness, and root metadata are anonymous. Auth is not a substitute
+for TLS; use both.
 
 ### Host allowlist
 
@@ -182,9 +201,11 @@ controls browser reads.
 ### Body and session limits
 
 - Request bodies are capped at 1 MiB.
-- Sessions are capped (default 500) and expire after 30 minutes idle.
-- When the cap is exceeded, the least-recently-seen session is evicted.
-- `SIGINT`/`SIGTERM` close sessions before draining the HTTP server.
+- Stateless mode keeps no sessions. In stateful mode, sessions are capped
+  (default 500), expire after 30 minutes idle, and the least-recently-seen
+  session is evicted at the cap.
+- `taste_audit` has a concurrency/queue gate (default 2 in flight, 8 queued).
+- `SIGINT`/`SIGTERM` close stateful sessions before draining the HTTP server.
 
 These are availability controls, not a full DoS defense. Use a proxy/WAF for
 rate limiting and connection limits.
@@ -231,25 +252,31 @@ Reference documents may contain instructions or examples from upstream. Treat
 them as reference text, not as trusted executable instructions. The server does
 not execute them.
 
-## Future audit tooling
+## Audit tooling
 
-The planned Playwright audit loop will introduce new risks:
+`taste_audit` is shipped with these controls:
 
-- arbitrary URL fetching (SSRF, internal network access);
-- browser sandbox escapes;
-- resource exhaustion from rendering;
-- artifact storage and signed-link leakage;
-- untrusted page content.
+- It is removed entirely from explicitly anonymous non-loopback binds, and
+  requires the `tastepro:audit` OAuth scope on hosted requests.
+- Submitted HTML is never stored, logged, or written to disk; responses carry
+  only short evidence snippets.
+- URL input is off by default. When enabled, the SSRF guard refuses private,
+  loopback, link-local, CGNAT, documentation, multicast, and reserved
+  addresses, and enforces redirect (3), size (2 MiB), and timeout (5 s) caps.
+  The guard resolves before fetching but cannot pin the connection IP; keep
+  outbound firewall rules in place and treat it as defense in depth, not a
+  boundary.
+- Browser mode renders already-fetched HTML with JavaScript disabled, blocks
+  service workers, and aborts every subresource request, so images,
+  stylesheets, fonts, and iframes cannot reach the network. Hard timeouts and a
+  concurrency/queue gate bound a pathological document. Use the optional
+  `Dockerfile.audit` image; the default image fails closed without Playwright.
+- Documents are capped at 1,000,000 characters and findings at 50 per report.
 
-Before exposing it:
-
-- require auth on audit endpoints;
-- allow public URLs only in hosted mode, with DNS/IP filtering and redirect
-  checks;
-- run browsers in a sandbox/container with CPU, memory, and time limits;
-- isolate artifacts per tenant and expire them;
-- never return raw cookies, storage state, or internal headers;
-- validate OAuth tokens and scopes.
+Known residual risks, deliberately out of scope: executing page JavaScript,
+storing artifacts, and per-tenant isolation. DNS rebinding between the guard's
+resolution and the fetch is possible; egress controls remain the operator's
+responsibility.
 
 ## Disclosure
 
@@ -260,12 +287,18 @@ especially for hosted deployments.
 ## Security checklist for operators
 
 - [ ] HTTPS is terminated at a trusted proxy.
-- [ ] `TASTEPRO_API_KEY` is set for authenticated deployments.
+- [ ] OAuth or `TASTEPRO_API_KEY` is set for authenticated deployments.
 - [ ] `TASTEPRO_ALLOWED_HOSTS` is set.
 - [ ] `TASTEPRO_CORS_ORIGIN` is explicit, not `*`.
 - [ ] Rate limiting and connection limits are in front of the service.
+- [ ] Stateless mode is used unless SSE/resumability is required; stateful mode
+  uses sticky routing.
 - [ ] Container runs non-root, read-only, with `no-new-privileges`.
 - [ ] `/healthz` and `/readyz` are monitored.
 - [ ] Logs are collected and do not contain secrets.
 - [ ] Dependencies and the base image are patched.
-- [ ] Audit endpoints are not exposed in M0.
+- [ ] If browser audit is enabled, the audit image is used with CPU/memory
+  limits and a larger `/dev/shm`.
+- [ ] If URL audit input is enabled, outbound egress rules restrict what the
+  server can reach.
+- [ ] No anonymous non-loopback endpoint exposes `taste_audit`.

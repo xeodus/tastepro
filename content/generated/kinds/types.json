@@ -4,7 +4,9 @@
     "kind": "type",
     "name": "Albert Sans",
     "summary": "A geometric grotesque with Scandinavian restraint: round letters, even colour, nothing decorative. Suits logistics, health, property and corporate sites that need to look clear and dependable.",
-    "domains": [],
+    "domains": [
+      "real-estate"
+    ],
     "sectors": [],
     "tags": [
       "geometric",
@@ -80,7 +82,11 @@
     "kind": "type",
     "name": "Anton / Work Sans",
     "summary": "Compressed heavy capitals stacked tight, with a neutral grotesque kept small beneath. Suits fashion drops, sport, nightlife and any page built as a poster.",
-    "domains": [],
+    "domains": [
+      "b2b-saas",
+      "fashion-beauty",
+      "portfolios"
+    ],
     "sectors": [],
     "tags": [
       "condensed-heavy",
@@ -157,7 +163,13 @@
     "kind": "type",
     "name": "Archivo",
     "summary": "A sturdy grotesque kept at regular weight even at 88px, so the page reads as composed rather than loud. Suits finance, infrastructure and research pages that need to look sober and current.",
-    "domains": [],
+    "domains": [
+      "ai-products",
+      "creative-agencies",
+      "fintech-payments",
+      "product-surfaces",
+      "productivity"
+    ],
     "sectors": [],
     "tags": [
       "grotesk-light",
@@ -233,7 +245,11 @@
     "kind": "type",
     "name": "Archivo",
     "summary": "One variable family pushed to its narrowest, heaviest setting for headlines and relaxed to normal width for text, so display and body share a skeleton. Suits sportswear, campaigns and fintech pages that speak in capitals.",
-    "domains": [],
+    "domains": [
+      "b2b-saas",
+      "fashion-beauty",
+      "fintech-payments"
+    ],
     "sectors": [],
     "tags": [
       "condensed-heavy",
@@ -306,7 +322,11 @@
     "kind": "type",
     "name": "Barlow Condensed / Barlow",
     "summary": "Road-sign condensed type with squared curves, bold but not compressed into a wall, with its normal-width sibling for text. Suits logistics, motorsport, hardware and directories with many short titles.",
-    "domains": [],
+    "domains": [
+      "creative-agencies",
+      "fintech-payments",
+      "portfolios"
+    ],
     "sectors": [],
     "tags": [
       "condensed-heavy",
@@ -383,7 +403,11 @@
     "kind": "type",
     "name": "Bebas Neue / EB Garamond",
     "summary": "Huge condensed capitals against a light old-style serif with italics: an industrial voice and a literary one, with a twenty-fold size gap between them. Suits crafted physical products, spirits, outdoor goods and hospitality.",
-    "domains": [],
+    "domains": [
+      "culture-arts",
+      "ecommerce-dtc",
+      "travel-hospitality"
+    ],
     "sectors": [],
     "tags": [
       "condensed-heavy",
@@ -463,7 +487,9 @@
     "kind": "type",
     "name": "Besley / Libre Franklin",
     "summary": "A fat Clarendon with ball terminals and bracketed slabs over a plain gothic, the look of a nineteenth-century bill poster. Suits breweries, barbers, markets, fairs and heritage goods.",
-    "domains": [],
+    "domains": [
+      "portfolios"
+    ],
     "sectors": [],
     "tags": [
       "slab",
@@ -537,7 +563,10 @@
     "kind": "type",
     "name": "Big Shoulders / Public Sans",
     "summary": "A tall American gothic taken from city signage, blunt and civic, over a plain public-service sans. Suits culture indexes, community projects, bars, sport clubs and local campaigns.",
-    "domains": [],
+    "domains": [
+      "culture-arts",
+      "events"
+    ],
     "sectors": [],
     "tags": [
       "condensed-heavy",
@@ -615,7 +644,10 @@
     "kind": "type",
     "name": "Bodoni Moda / Jost",
     "summary": "A true didone with hairline serifs and vertical stress over a light geometric sans, the classic fashion-magazine pairing. Suits luxury property, jewellery, fragrance and fashion.",
-    "domains": [],
+    "domains": [
+      "portfolios",
+      "real-estate"
+    ],
     "sectors": [],
     "tags": [
       "serif-display",
@@ -692,7 +724,11 @@
     "kind": "type",
     "name": "Boska",
     "summary": "A high-contrast serif with pointed serifs and a lively italic, used roman and italic together at one size. Suits perfume, jewellery, lodges, weddings and other occasions for ceremony.",
-    "domains": [],
+    "domains": [
+      "ecommerce-dtc",
+      "events",
+      "travel-hospitality"
+    ],
     "sectors": [],
     "tags": [
       "serif-display",
@@ -769,7 +805,10 @@
     "kind": "type",
     "name": "Bricolage Grotesque",
     "summary": "A grotesk with visible stroke contrast and slightly irregular curves, so headings look drawn rather than engineered. Suits reports, consultancies and design-led software that want warmth without a serif.",
-    "domains": [],
+    "domains": [
+      "b2b-saas",
+      "creative-agencies"
+    ],
     "sectors": [],
     "tags": [
       "grotesk-tight",
@@ -846,7 +885,11 @@
     "kind": "type",
     "name": "Cabinet Grotesk",
     "summary": "A heavy sans with tight joins and an eccentric lowercase, friendly but loud. Suits bookshops, food, consumer subscriptions and marketing studios.",
-    "domains": [],
+    "domains": [
+      "creative-agencies",
+      "ecommerce-dtc",
+      "events"
+    ],
     "sectors": [],
     "tags": [
       "heavy-black",
@@ -923,7 +966,10 @@
     "kind": "type",
     "name": "Chillax",
     "summary": "A soft geometric sans with wide round letters and relaxed joins, warm at semibold and easy at text size. Suits consumer apps, community products, cafes and small friendly brands.",
-    "domains": [],
+    "domains": [
+      "product-surfaces",
+      "productivity"
+    ],
     "sectors": [],
     "tags": [
       "rounded-friendly",
@@ -1000,7 +1046,10 @@
     "kind": "type",
     "name": "Chivo",
     "summary": "A black grotesque in capitals with letters nearly colliding, and only two sizes on the page: enormous and small. Suits agencies, city and culture projects and musicians who want the type to land like a headline.",
-    "domains": [],
+    "domains": [
+      "creative-agencies",
+      "culture-arts"
+    ],
     "sectors": [],
     "tags": [
       "heavy-black",
@@ -1077,7 +1126,9 @@
     "kind": "type",
     "name": "Clash Grotesk",
     "summary": "A slightly narrow neo-grotesk with closed apertures, used at regular weight from marquee size down to paragraphs. Suits agencies and digital studios that want large type without heaviness.",
-    "domains": [],
+    "domains": [
+      "creative-agencies"
+    ],
     "sectors": [],
     "tags": [
       "grotesk-light",
@@ -1152,7 +1203,9 @@
     "kind": "type",
     "name": "EB Garamond",
     "summary": "A humanist Garamond in roman and italic at two modest sizes, with no capitals and no bold. Suits set designers, antique dealers, wine, publishers and portfolios that whisper.",
-    "domains": [],
+    "domains": [
+      "creative-agencies"
+    ],
     "sectors": [],
     "tags": [
       "serif-text",
@@ -1228,7 +1281,10 @@
     "kind": "type",
     "name": "Epilogue",
     "summary": "A broad black grotesque with a slightly uneven rhythm, at its best as a name set very large in mixed case. Suits entertainers, podcasts, consumer apps and blunt SaaS pages; emphasis comes from colour, not from a change of weight.",
-    "domains": [],
+    "domains": [
+      "b2b-saas",
+      "culture-arts"
+    ],
     "sectors": [],
     "tags": [
       "heavy-black",
@@ -1304,7 +1360,10 @@
     "kind": "type",
     "name": "Erode",
     "summary": "A serif with chiselled, angular curves and wedge serifs, sharp at display size and firm in text. Suits studios, galleries, advisory firms and written guides.",
-    "domains": [],
+    "domains": [
+      "creative-agencies",
+      "culture-arts"
+    ],
     "sectors": [],
     "tags": [
       "serif-display",
@@ -1383,7 +1442,11 @@
     "kind": "type",
     "name": "Gambarino / General Sans",
     "summary": "A narrow, sharp display serif for headlines against a small plain sans: a five-to-one jump with nothing between. Suits agencies, bakeries and restaurants, fashion and editorial brands.",
-    "domains": [],
+    "domains": [
+      "creative-agencies",
+      "portfolios",
+      "restaurants-food"
+    ],
     "sectors": [],
     "tags": [
       "serif-display",
@@ -1462,7 +1525,10 @@
     "kind": "type",
     "name": "General Sans",
     "summary": "A grotesk with slightly geometric bowls, set bold and very large against plain 16px text with nothing in between. Suits studios, type and product launches, and finance or tech brands that lead with the name.",
-    "domains": [],
+    "domains": [
+      "creative-agencies",
+      "fintech-payments"
+    ],
     "sectors": [],
     "tags": [
       "grotesk-tight",
@@ -1540,7 +1606,11 @@
     "kind": "type",
     "name": "Hanken Grotesk",
     "summary": "Medium-weight grotesk statements at one large size against caption-size text: a two-size system with no bold. Suits portfolios, agencies and tools that speak in short declarative lines.",
-    "domains": [],
+    "domains": [
+      "developer-tools",
+      "events",
+      "portfolios"
+    ],
     "sectors": [],
     "tags": [
       "grotesk-tight",
@@ -1618,7 +1688,10 @@
     "kind": "type",
     "name": "Imbue / Albert Sans",
     "summary": "A tall, condensed high-contrast serif whose capitals read like a masthead or a shop fascia. Suits residences, hotels, restaurants and wine, where a short name can stand floor to ceiling.",
-    "domains": [],
+    "domains": [
+      "real-estate",
+      "restaurants-food"
+    ],
     "sectors": [],
     "tags": [
       "serif-display",
@@ -1692,7 +1765,10 @@
     "kind": "type",
     "name": "Jost",
     "summary": "The pointed, circular geometry of the 1920s in bold capitals, with the same family at reading size. Suits space, science, museums, architecture and anything that should feel like a mid-century poster.",
-    "domains": [],
+    "domains": [
+      "culture-arts",
+      "portfolios"
+    ],
     "sectors": [],
     "tags": [
       "geometric",
@@ -1768,7 +1844,10 @@
     "kind": "type",
     "name": "League Spartan / Figtree",
     "summary": "A compact bold geometric with a low waist, punchy in short lowercase lines, over a friendly open text sans. Suits newsletters, consumer products, creators and small shops.",
-    "domains": [],
+    "domains": [
+      "ecommerce-dtc",
+      "fintech-payments"
+    ],
     "sectors": [],
     "tags": [
       "geometric",
@@ -1847,7 +1926,10 @@
     "kind": "type",
     "name": "Libre Franklin / Source Serif 4",
     "summary": "An American gothic for headings over a sober transitional serif for reading, the pairing of a newspaper front page. Suits essays, annual reports, archives and finance pages that have real paragraphs.",
-    "domains": [],
+    "domains": [
+      "culture-arts",
+      "fintech-payments"
+    ],
     "sectors": [],
     "tags": [
       "grotesk-tight",
@@ -1926,7 +2008,10 @@
     "kind": "type",
     "name": "Literata",
     "summary": "A sturdy screen-reading serif with a large x-height; headings are simply the text face at medium weight and a larger size. Suits essays, reports, newsletters and knowledge products.",
-    "domains": [],
+    "domains": [
+      "culture-arts",
+      "restaurants-food"
+    ],
     "sectors": [],
     "tags": [
       "serif-text",
@@ -2005,7 +2090,11 @@
     "kind": "type",
     "name": "Newsreader",
     "summary": "One news serif with optical sizes: light and very tight when huge, open and bookish at 18px. Suits long-form stories, culture pieces, journals and research write-ups.",
-    "domains": [],
+    "domains": [
+      "b2b-saas",
+      "culture-arts",
+      "restaurants-food"
+    ],
     "sectors": [],
     "tags": [
       "serif-light-large",
@@ -2083,7 +2172,12 @@
     "kind": "type",
     "name": "Panchang / Switzer",
     "summary": "A flat-sided extended grotesk in heavy capitals, wide enough that two words fill the screen, with a neutral sans kept small. Suits portfolios, real estate, travel and brand sites that want a broad, confident wordmark.",
-    "domains": [],
+    "domains": [
+      "creative-agencies",
+      "fashion-beauty",
+      "portfolios",
+      "real-estate"
+    ],
     "sectors": [],
     "tags": [
       "extended-heavy",
@@ -2162,7 +2256,10 @@
     "kind": "type",
     "name": "Pilcrow Rounded",
     "summary": "A sturdy sans with fully rounded stroke ends, set bold and tight in lowercase with one small size for everything else. Suits toys, gadgets, cosmetics and other objects with soft moulded edges.",
-    "domains": [],
+    "domains": [
+      "ecommerce-dtc",
+      "portfolios"
+    ],
     "sectors": [],
     "tags": [
       "rounded-friendly",
@@ -2239,7 +2336,10 @@
     "kind": "type",
     "name": "Red Hat Display / Red Hat Text",
     "summary": "A geometric black with round bowls and flat terminals, cleaner and more even than a grotesque at the same weight. Suits fintech, apps and portfolios that want heavy type with a tidy, technical finish.",
-    "domains": [],
+    "domains": [
+      "creative-agencies",
+      "portfolios"
+    ],
     "sectors": [],
     "tags": [
       "heavy-black",
@@ -2388,7 +2488,10 @@
     "kind": "type",
     "name": "Roundo",
     "summary": "A rounded geometric sans at medium weight and a generous text size, gentle without looking childish. Suits wellness, home goods, family apps and everyday money tools.",
-    "domains": [],
+    "domains": [
+      "b2b-saas",
+      "ecommerce-dtc"
+    ],
     "sectors": [],
     "tags": [
       "rounded-friendly",
@@ -2462,7 +2565,11 @@
     "kind": "type",
     "name": "Schibsted Grotesk",
     "summary": "A compact, warm grotesk set heavy with letters almost touching; small text stays in the same family at semibold. Suits music, events and culture pages where the type is the image.",
-    "domains": [],
+    "domains": [
+      "creative-agencies",
+      "events",
+      "music"
+    ],
     "sectors": [],
     "tags": [
       "grotesk-tight",
@@ -2539,7 +2646,10 @@
     "kind": "type",
     "name": "Sentient",
     "summary": "A soft, low-contrast serif in a light weight, more book than fashion magazine, large and calm in sentence case. Suits outdoor and craft products, restaurants, cameras and slow consumer goods.",
-    "domains": [],
+    "domains": [
+      "ecommerce-dtc",
+      "restaurants-food"
+    ],
     "sectors": [],
     "tags": [
       "serif-light-large",
@@ -2618,7 +2728,11 @@
     "kind": "type",
     "name": "Stack Sans Headline / Stack Sans Text",
     "summary": "A geometric sans in a light weight at large size, soft and exact at once, with its text cut underneath. Suits consumer apps, utilities and developer tools that want to feel calm and modern.",
-    "domains": [],
+    "domains": [
+      "developer-tools",
+      "product-surfaces",
+      "productivity"
+    ],
     "sectors": [],
     "tags": [
       "geometric",
@@ -2695,7 +2809,11 @@
     "kind": "type",
     "name": "STIX Two Text",
     "summary": "The plain Times-style roman of a typed document, slightly tightened and never larger than a few vw. Suits vehicles and tools presented dryly, artists' pages, investment memos and anything meant to look undesigned on purpose.",
-    "domains": [],
+    "domains": [
+      "ecommerce-dtc",
+      "fintech-payments",
+      "portfolios"
+    ],
     "sectors": [],
     "tags": [
       "serif-text",
@@ -2772,7 +2890,10 @@
     "kind": "type",
     "name": "Switzer",
     "summary": "One neo-grotesk doing everything: semibold headings pulled tight, small regular text, no capitals and no second voice. Suits software, hardware and studio pages that want to look exact and unshowy.",
-    "domains": [],
+    "domains": [
+      "b2b-saas",
+      "ecommerce-dtc"
+    ],
     "sectors": [],
     "tags": [
       "grotesk-tight",
@@ -2848,7 +2969,10 @@
     "kind": "type",
     "name": "Switzer",
     "summary": "A single roman weight of a Swiss neo-grotesk at two or three modest sizes; position and grey value do the work that size and bold usually do. Suits architects, galleries, studios and any quiet page where photographs carry the scale.",
-    "domains": [],
+    "domains": [
+      "creative-agencies",
+      "events"
+    ],
     "sectors": [],
     "tags": [
       "grotesk-light",
@@ -2927,7 +3051,13 @@
     "kind": "type",
     "name": "TikTok Sans",
     "summary": "One variable grotesk stretched wide and bold for the headline and the closing statement, then returned to normal width for reading. Suits personal portfolios, apps and tech brands that want width without a second family.",
-    "domains": [],
+    "domains": [
+      "creative-agencies",
+      "fintech-payments",
+      "portfolios",
+      "product-surfaces",
+      "productivity"
+    ],
     "sectors": [],
     "tags": [
       "extended-heavy",
@@ -3007,7 +3137,11 @@
     "kind": "type",
     "name": "Unbounded / Onest",
     "summary": "A wide display sans built from rounded squares, heavy and a little architectural, beside a clean text grotesk. Suits architecture indexes, watches, mobility and events that want a title with a constructed feel.",
-    "domains": [],
+    "domains": [
+      "creative-agencies",
+      "culture-arts",
+      "ecommerce-dtc"
+    ],
     "sectors": [],
     "tags": [
       "extended-heavy",
@@ -3085,7 +3219,10 @@
     "kind": "type",
     "name": "Work Sans",
     "summary": "A light grotesque with open, slightly old-fashioned shapes; large headings look airy and the text weight beneath stays easy to read. Suits AI and research products, fashion houses and calm brand sites.",
-    "domains": [],
+    "domains": [
+      "ai-products",
+      "creative-agencies"
+    ],
     "sectors": [],
     "tags": [
       "grotesk-light",
@@ -3162,7 +3299,10 @@
     "kind": "type",
     "name": "Young Serif / Source Serif 4",
     "summary": "A heavy, round old-style headline face with soft bracketed serifs over a clear transitional text serif. Suits essays, food, independent publishers and personal sites that want warmth with weight.",
-    "domains": [],
+    "domains": [
+      "creative-agencies",
+      "portfolios"
+    ],
     "sectors": [],
     "tags": [
       "serif-text",
@@ -3241,7 +3381,9 @@
     "kind": "type",
     "name": "Zilla Slab",
     "summary": "A contemporary slab with smooth curves and unbracketed serifs, even enough to carry headings and paragraphs alike. Suits developer tools, personal sites, open-source and nonprofit projects.",
-    "domains": [],
+    "domains": [
+      "portfolios"
+    ],
     "sectors": [],
     "tags": [
       "slab",
@@ -3314,7 +3456,11 @@
     "kind": "type",
     "name": "Zodiak / Hanken Grotesk",
     "summary": "Hairline serif capitals set large enough that the thin strokes read as drawing, with a small neutral sans for everything practical. Suits lodges, spas, architecture and interiors; keep it on flat pale or dark fields where the strokes have full contrast.",
-    "domains": [],
+    "domains": [
+      "creative-agencies",
+      "real-estate",
+      "travel-hospitality"
+    ],
     "sectors": [],
     "tags": [
       "serif-light-large",

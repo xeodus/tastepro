@@ -22,8 +22,19 @@ services:
       TASTEPRO_HOST: 0.0.0.0
       TASTEPRO_PORT: "3000"
       # Leave empty for an intentionally anonymous read-only endpoint.
+      # Anonymous non-loopback binds also require TASTEPRO_ALLOW_ANONYMOUS=true.
       # Set a strong token for authenticated clients.
       TASTEPRO_API_KEY: ${TASTEPRO_API_KEY:-}
+      TASTEPRO_ALLOW_ANONYMOUS: ${TASTEPRO_ALLOW_ANONYMOUS:-false}
+      # OAuth resource-server auth, exclusive with TASTEPRO_API_KEY.
+      TASTEPRO_OAUTH_ISSUER: ${TASTEPRO_OAUTH_ISSUER:-}
+      TASTEPRO_OAUTH_JWKS_URI: ${TASTEPRO_OAUTH_JWKS_URI:-}
+      # Derived from the public domain; required when OAuth is configured.
+      TASTEPRO_PUBLIC_URL: https://${TASTEPRO_DOMAIN:?TASTEPRO_DOMAIN is required}
+      # taste_audit; URL input and browser rendering stay off by default.
+      TASTEPRO_AUDIT_ENABLED: ${TASTEPRO_AUDIT_ENABLED:-true}
+      TASTEPRO_AUDIT_ALLOW_URL_FETCH: ${TASTEPRO_AUDIT_ALLOW_URL_FETCH:-false}
+      TASTEPRO_AUDIT_BROWSER: ${TASTEPRO_AUDIT_BROWSER:-}
       TASTEPRO_CORS_ORIGIN: ${TASTEPRO_CORS_ORIGIN:-https://chatgpt.com}
       # The public domain plus loopback names used by the container
       # healthcheck. Host matching strips the port.

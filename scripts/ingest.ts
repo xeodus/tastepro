@@ -1,5 +1,4 @@
-import { createHash } from "node:crypto";
-import { mkdir, readFile, rm, writeFile } from "node:fs/promises";
+import { mkdir, readFile, writeFile } from "node:fs/promises";
 import { dirname, join, relative, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 import { Command } from "commander";
@@ -20,33 +19,18 @@ import {
 } from "../src/core/schema.js";
 import { normalizeWhitespace, slugify, uniqueStrings } from "../src/core/text.js";
 import { inferMoods, parseDesignMarkdown } from "./lib/brand.js";
+import { computeContentHash } from "./lib/content-hash.js";
 import { mapBrandCategory } from "./lib/domains.js";
 import { fetchCached, fetchJsonCached, mapLimit } from "./lib/fetch.js";
 import { parseGuidelines } from "./lib/guidelines.js";
+import { commitSnapshot, discardStaging, prepareStaging } from "./lib/snapshot.js";
+import { type LockSource, loadSourceLock, sourceCacheKey } from "./lib/source-lock.js";
 import { parseReference, parseTasteLibrary } from "./lib/taste.js";
+import { validateContent } from "./lib/validate-content.js";
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const DEFAULT_CONTENT_DIR = join(ROOT, "content");
 const DEFAULT_CACHE_DIR = join(ROOT, ".cache", "sources");
-
-interface LockSource {
-  id: string;
-  name: string;
-  repo: string;
-  commit: string;
-  license: string;
-  licenseUrl: string;
-  authors: string[];
-  url: string;
-  notes: string;
-  paths: Record<string, string>;
-}
-
-interface SourceLock {
-  version: number;
-  generatedAt: string;
-  sources: LockSource[];
-}
 
 interface IngestOptions {
   contentDir: string;
@@ -213,19 +197,6 @@ function validateSeedPlaybook(
   }
 }
 
-async function loadLock(contentDir: string): Promise<SourceLock> {
-  const candidates = [join(contentDir, "sources.lock.json"), join(ROOT, "sources.lock.json")];
-  for (const candidate of candidates) {
-    try {
-      const raw = await readFile(candidate, "utf8");
-      return JSON.parse(raw) as SourceLock;
-    } catch {
-      // try the next location
-    }
-  }
-  throw new Error("sources.lock.json not found");
-}
-
 async function readJson<T>(path: string): Promise<T> {
   return JSON.parse(await readFile(path, "utf8")) as T;
 }
@@ -261,7 +232,7 @@ async function fetchLicense(
   options: IngestOptions,
   contentDir: string,
 ): Promise<string> {
-  const text = await fetchCached(source.licenseUrl, `${source.id}/LICENSE`, options);
+  const text = await fetchCached(source.licenseUrl, sourceCacheKey(source, "LICENSE"), options);
   const licensePath = join(contentDir, "sources", "licenses", `${source.id}.txt`);
   await writeText(licensePath, text);
   return `sources/licenses/${source.id}.txt`;
@@ -285,7 +256,11 @@ async function fetchTasteSource(
   };
   const loaded: Record<string, unknown> = {};
   for (const [key, path] of Object.entries(files)) {
-    loaded[key] = await fetchJsonCached(lockUrl(source, path), `${source.id}/${path}`, options);
+    loaded[key] = await fetchJsonCached(
+      lockUrl(source, path),
+      sourceCacheKey(source, path),
+      options,
+    );
   }
   const library = parseTasteLibrary(
     {
@@ -344,7 +319,7 @@ async function fetchTasteSource(
   for (const reference of referenceFiles) {
     const body = await fetchCached(
       lockUrl(source, reference.file),
-      `${source.id}/${reference.file}`,
+      sourceCacheKey(source, reference.file),
       options,
     );
     references.push(
@@ -402,7 +377,7 @@ async function fetchAwesomeDesignMd(
   const warnings: string[] = [];
   const tree = await fetchJsonCached<{ tree: Array<{ path: string; type: string }> }>(
     githubTreeUrl(source),
-    `${source.id}/tree.json`,
+    sourceCacheKey(source, "tree.json"),
     options,
   );
   const designPaths = tree.tree
@@ -411,7 +386,7 @@ async function fetchAwesomeDesignMd(
     .sort();
   const readme = await fetchCached(
     lockUrl(source, source.paths.readme ?? "README.md"),
-    `${source.id}/README.md`,
+    sourceCacheKey(source, "README.md"),
     options,
   );
   const readmeBrands = parseReadmeBrands(readme);
@@ -419,7 +394,7 @@ async function fetchAwesomeDesignMd(
 
   const packs = await mapLimit(slugs, 8, async (slug) => {
     const path = `design-md/${slug}/DESIGN.md`;
-    const raw = await fetchCached(lockUrl(source, path), `${source.id}/${path}`, options);
+    const raw = await fetchCached(lockUrl(source, path), sourceCacheKey(source, path), options);
     const readmeKey = normalizeBrandKey(BRAND_DIR_ALIASES[slug] ?? slug);
     const readmeBrand = readmeBrands.get(readmeKey);
     const displayName = readmeBrand?.name ?? brandDisplayNameFromSlug(slug);
@@ -476,14 +451,14 @@ async function fetchGuidelines(
 ): Promise<{ packs: Pack[]; references: ReferencePack[]; sourceInfo: SourceInfo }> {
   const markdown = await fetchCached(
     lockUrl(source, source.paths.rules ?? "command.md"),
-    `${source.id}/command.md`,
+    sourceCacheKey(source, "command.md"),
     options,
   );
   const provenance = provenanceFor(source, source.paths.rules ?? "command.md");
   const rules = parseGuidelines(markdown, provenance);
   const agents = await fetchCached(
     lockUrl(source, source.paths.agents ?? "AGENTS.md"),
-    `${source.id}/AGENTS.md`,
+    sourceCacheKey(source, "AGENTS.md"),
     options,
   );
   const references = [
@@ -526,7 +501,7 @@ async function fetchPlaywright(
 ): Promise<{ packs: Pack[]; references: ReferencePack[]; sourceInfo: SourceInfo }> {
   const tree = await fetchJsonCached<{ tree: Array<{ path: string; type: string }> }>(
     githubTreeUrl(source),
-    `${source.id}/tree.json`,
+    sourceCacheKey(source, "tree.json"),
     options,
   );
   const paths = tree.tree
@@ -542,7 +517,7 @@ async function fetchPlaywright(
     const slug = path.endsWith("SKILL.md")
       ? "skill"
       : slugify(path.split("/").pop()?.replace(/\.md$/, "") ?? path);
-    const body = await fetchCached(lockUrl(source, path), `${source.id}/${path}`, options);
+    const body = await fetchCached(lockUrl(source, path), sourceCacheKey(source, path), options);
     references.push(
       parseReference({
         slug,
@@ -678,7 +653,7 @@ async function main(): Promise<void> {
     refresh: raw.refresh,
   };
 
-  const lock = await loadLock(options.contentDir);
+  const lock = await loadSourceLock(options.contentDir, ROOT);
   const byId = new Map(lock.sources.map((source) => [source.id, source]));
   const required = [
     "taste-skill",
@@ -690,148 +665,142 @@ async function main(): Promise<void> {
     if (!byId.has(id)) throw new Error(`sources.lock.json is missing ${id}`);
   }
 
-  console.error("Ingesting pinned sources…");
-  const taste = await fetchTasteSource(byId.get("taste-skill")!, options, options.contentDir);
-  const brands = await fetchAwesomeDesignMd(
-    byId.get("awesome-design-md")!,
-    options,
-    options.contentDir,
-  );
-  const guidelines = await fetchGuidelines(
-    byId.get("web-interface-guidelines")!,
-    options,
-    options.contentDir,
-  );
-  const playwright = await fetchPlaywright(
-    byId.get("playwright-cli")!,
-    options,
-    options.contentDir,
-  );
-  const domains = await buildDomains(options.contentDir);
+  const staging = await prepareStaging(options.contentDir);
+  try {
+    console.error("Ingesting pinned sources…");
+    const taste = await fetchTasteSource(byId.get("taste-skill")!, options, staging);
+    const brands = await fetchAwesomeDesignMd(byId.get("awesome-design-md")!, options, staging);
+    const guidelines = await fetchGuidelines(
+      byId.get("web-interface-guidelines")!,
+      options,
+      staging,
+    );
+    const playwright = await fetchPlaywright(byId.get("playwright-cli")!, options, staging);
+    const domains = await buildDomains(options.contentDir);
 
-  const warnings = [...brands.warnings, ...domains.warnings];
-  const allPacks: Pack[] = sortPacks([
-    ...taste.packs,
-    ...brands.packs,
-    ...guidelines.packs,
-    ...domains.packs,
-  ]);
-  const references: ReferencePack[] = sortPacks([
-    ...taste.references,
-    ...guidelines.references,
-    ...playwright.references,
-  ]) as ReferencePack[];
+    const warnings = [...brands.warnings, ...domains.warnings];
+    const allPacks: Pack[] = sortPacks([
+      ...taste.packs,
+      ...brands.packs,
+      ...guidelines.packs,
+      ...domains.packs,
+    ]);
+    const references: ReferencePack[] = sortPacks([
+      ...taste.references,
+      ...guidelines.references,
+      ...playwright.references,
+    ]) as ReferencePack[];
 
-  const domainIds = new Set(domains.packs.map((pack) => pack.id.replace(/^domain\//, "")));
-  const directionIds = new Set(
-    allPacks.filter((pack) => pack.kind === "direction").map((pack) => pack.id),
-  );
-  const paletteIds = new Set(
-    allPacks.filter((pack) => pack.kind === "palette").map((pack) => pack.id),
-  );
-  for (const pack of allPacks) validateDomainRefs(pack, domainIds, warnings);
-  for (const domain of domains.packs) {
-    validateSeedPlaybook(domain, directionIds, paletteIds, warnings);
-  }
+    const domainIds = new Set(domains.packs.map((pack) => pack.id.replace(/^domain\//, "")));
+    const directionIds = new Set(
+      allPacks.filter((pack) => pack.kind === "direction").map((pack) => pack.id),
+    );
+    const paletteIds = new Set(
+      allPacks.filter((pack) => pack.kind === "palette").map((pack) => pack.id),
+    );
+    for (const pack of allPacks) validateDomainRefs(pack, domainIds, warnings);
+    for (const domain of domains.packs) {
+      validateSeedPlaybook(domain, directionIds, paletteIds, warnings);
+    }
 
-  const parsedPacks = allPacks.map(validatePack);
-  const parsedReferences = references.map((reference) =>
-    ReferencePackSchema.parse(reference),
-  ) as ReferencePack[];
-  const allContent: Pack[] = [...parsedPacks, ...parsedReferences];
-  const ids = new Set<string>();
-  for (const pack of allContent) {
-    if (ids.has(pack.id)) throw new Error(`Duplicate content id: ${pack.id}`);
-    ids.add(pack.id);
-  }
+    const parsedPacks = allPacks.map(validatePack);
+    const parsedReferences = references.map((reference) =>
+      ReferencePackSchema.parse(reference),
+    ) as ReferencePack[];
+    const allContent: Pack[] = [...parsedPacks, ...parsedReferences];
+    const ids = new Set<string>();
+    for (const pack of allContent) {
+      if (ids.has(pack.id)) throw new Error(`Duplicate content id: ${pack.id}`);
+      ids.add(pack.id);
+    }
 
-  const byKind = new Map<ContentKind, Pack[]>();
-  for (const pack of allContent) {
-    const list = byKind.get(pack.kind) ?? [];
-    list.push(pack);
-    byKind.set(pack.kind, list);
-  }
+    const byKind = new Map<ContentKind, Pack[]>();
+    for (const pack of allContent) {
+      const list = byKind.get(pack.kind) ?? [];
+      list.push(pack);
+      byKind.set(pack.kind, list);
+    }
 
-  const generatedKinds = join(options.contentDir, "generated", "kinds");
-  await rm(join(options.contentDir, "generated"), { recursive: true, force: true });
-  await mkdir(generatedKinds, { recursive: true });
-  for (const [kind, fileName] of Object.entries(KIND_FILE_NAMES) as Array<[ContentKind, string]>) {
-    await writeJson(join(generatedKinds, fileName), byKind.get(kind) ?? []);
-  }
+    const generatedKinds = join(staging, "generated", "kinds");
+    await mkdir(generatedKinds, { recursive: true });
+    for (const [kind, fileName] of Object.entries(KIND_FILE_NAMES) as Array<
+      [ContentKind, string]
+    >) {
+      await writeJson(join(generatedKinds, fileName), byKind.get(kind) ?? []);
+    }
 
-  // Reference bodies are also written as readable Markdown so a human can review
-  // them and a future resource handler can stream them without JSON parsing.
-  for (const reference of parsedReferences) {
-    const bodyPath = reference.bodyPath.replace(/^content\//, "");
-    await writeText(join(options.contentDir, bodyPath), reference.body);
-  }
+    // Reference bodies are also written as readable Markdown so a human can review
+    // them and a future resource handler can stream them without JSON parsing.
+    for (const reference of parsedReferences) {
+      const bodyPath = reference.bodyPath.replace(/^content\//, "");
+      await writeText(join(staging, bodyPath), reference.body);
+    }
 
-  const catalog = allContent.map(catalogEntryFor).sort((a, b) => {
-    const order = [
-      "domain",
-      "direction",
-      "brand",
-      "site",
-      "palette",
-      "type",
-      "hero",
-      "section",
-      "motion",
-      "app-style",
-      "app-shell",
-      "app-pattern",
-      "guideline",
-      "reference",
+    const catalog = allContent.map(catalogEntryFor).sort((a, b) => {
+      const order = [
+        "domain",
+        "direction",
+        "brand",
+        "site",
+        "palette",
+        "type",
+        "hero",
+        "section",
+        "motion",
+        "app-style",
+        "app-shell",
+        "app-pattern",
+        "guideline",
+        "reference",
+      ];
+      const byKindOrder = order.indexOf(a.kind) - order.indexOf(b.kind);
+      if (byKindOrder !== 0) return byKindOrder;
+      return a.name.localeCompare(b.name);
+    });
+    await writeJson(join(staging, "generated", "catalog.json"), catalog);
+
+    const sourceInfos: SourceInfo[] = [
+      taste.sourceInfo,
+      brands.sourceInfo,
+      guidelines.sourceInfo,
+      playwright.sourceInfo,
     ];
-    const byKindOrder = order.indexOf(a.kind) - order.indexOf(b.kind);
-    if (byKindOrder !== 0) return byKindOrder;
-    return a.name.localeCompare(b.name);
-  });
-  await writeJson(join(options.contentDir, "generated", "catalog.json"), catalog);
+    const counts = countBy(allContent, (pack) => pack.kind);
+    const quality = countBy(allContent, (pack) => pack.quality);
+    await writeJson(join(staging, "generated", "sources.json"), sourceInfos);
+    await writeJson(join(staging, "sources.lock.json"), lock);
 
-  const sourceInfos: SourceInfo[] = [
-    taste.sourceInfo,
-    brands.sourceInfo,
-    guidelines.sourceInfo,
-    playwright.sourceInfo,
-  ];
-  const counts = countBy(allContent, (pack) => pack.kind);
-  const quality = countBy(allContent, (pack) => pack.quality);
-  const contentHash = createHash("sha256")
-    .update(
-      JSON.stringify({
-        catalog,
-        counts,
-        commits: lock.sources.map((source) => [source.id, source.commit]),
-      }),
-    )
-    .digest("hex");
-  const stats: Stats = {
-    version: 1,
-    generatedAt: new Date().toISOString(),
-    contentHash,
-    catalogEntries: catalog.length,
-    counts,
-    quality,
-    sources: sourceInfos,
-    warnings,
-  };
-  await writeJson(join(options.contentDir, "generated", "stats.json"), stats);
-  await writeJson(join(options.contentDir, "generated", "sources.json"), sourceInfos);
-  await writeJson(join(options.contentDir, "sources.lock.json"), lock);
+    const contentHash = await computeContentHash(staging, lock.sources);
+    const stats: Stats = {
+      version: 1,
+      generatedAt: new Date().toISOString(),
+      contentHash,
+      catalogEntries: catalog.length,
+      counts,
+      quality,
+      sources: sourceInfos,
+      warnings,
+    };
+    await writeJson(join(staging, "generated", "stats.json"), stats);
 
-  console.error(
-    `Wrote ${catalog.length} catalog entries across ${Object.keys(counts).length} kinds.`,
-  );
-  if (warnings.length > 0) {
-    console.error(`Warnings (${warnings.length}):`);
-    for (const warning of warnings.slice(0, 30)) console.error(`  - ${warning}`);
-    if (warnings.length > 30) console.error(`  …and ${warnings.length - 30} more`);
+    await commitSnapshot(options.contentDir, staging, validateContent);
+
+    console.error(
+      `Wrote ${catalog.length} catalog entries across ${Object.keys(counts).length} kinds.`,
+    );
+    if (warnings.length > 0) {
+      console.error(`Warnings (${warnings.length}):`);
+      for (const warning of warnings.slice(0, 30)) console.error(`  - ${warning}`);
+      if (warnings.length > 30) console.error(`  …and ${warnings.length - 30} more`);
+    }
+    console.error(`Content hash: ${contentHash.slice(0, 16)}…`);
+    console.error(
+      `Generated: ${relative(ROOT, join(options.contentDir, "generated")) || "content/generated"}`,
+    );
+  } catch (error) {
+    await discardStaging(staging);
+    throw error;
   }
-  console.error(`Content hash: ${contentHash.slice(0, 16)}…`);
-  console.error(
-    `Generated: ${relative(ROOT, join(options.contentDir, "generated")) || "content/generated"}`,
-  );
 }
 
 main().catch((error) => {

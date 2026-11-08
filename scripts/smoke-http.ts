@@ -2,9 +2,11 @@
 import { randomUUID } from "node:crypto";
 import { Client } from "@modelcontextprotocol/sdk/client/index.js";
 import { StreamableHTTPClientTransport } from "@modelcontextprotocol/sdk/client/streamableHttp.js";
+import { createAuditService } from "../src/core/audit.js";
 import { createTasteProContext } from "../src/server/context.js";
 import { startHttpServer } from "../src/server/http.js";
 import { createLogger } from "../src/server/logger.js";
+import { AUDIT_SCOPE } from "../src/server/server.js";
 
 function assert(condition: unknown, message: string): asserts condition {
   if (!condition) throw new Error(message);
@@ -14,11 +16,17 @@ async function main(): Promise<void> {
   const apiKey = `smoke-${randomUUID()}`;
   const logger = createLogger("silent");
   const context = createTasteProContext();
+  const guidelines = await context.loader.guidelines();
   const running = await startHttpServer({
     context,
     host: "127.0.0.1",
     port: 0,
     apiKey,
+    audit: {
+      service: createAuditService({ guidelines }),
+      allowUrlFetch: false,
+      requiredScope: AUDIT_SCOPE,
+    },
     jsonResponse: true,
     logger,
   });
@@ -47,12 +55,12 @@ async function main(): Promise<void> {
     checks.push("initialize");
 
     const tools = await client.listTools();
-    assert(tools.tools.length === 3, `expected 3 tools, got ${tools.tools.length}`);
+    assert(tools.tools.length === 4, `expected 4 tools, got ${tools.tools.length}`);
     assert(
       tools.tools
         .map((tool) => tool.name)
         .sort()
-        .join(",") === "taste_get,taste_guidelines,taste_search",
+        .join(",") === "taste_audit,taste_get,taste_guidelines,taste_search",
       "tool names are wrong",
     );
     checks.push("tools/list");
@@ -88,8 +96,26 @@ async function main(): Promise<void> {
     assert(guidelineText.includes("focus"), "guidelines markdown does not mention focus");
     checks.push("taste_guidelines");
 
+    const audit = await client.callTool({
+      name: "taste_audit",
+      arguments: {
+        html: "<html><body><img src='/hero.png'></body></html>",
+        target: "smoke",
+      },
+    });
+    const auditText = (audit.content as Array<{ type: string; text?: string }>)[0]?.text ?? "";
+    const auditBody = JSON.parse(auditText) as { findings?: Array<{ guidelineId?: string }> };
+    assert(
+      auditBody.findings?.some(
+        (finding) =>
+          finding.guidelineId === "guideline/accessibility-images-need-alt-or-alt-if-decorative",
+      ),
+      "taste_audit did not report the missing alt attribute",
+    );
+    checks.push("taste_audit");
+
     const resources = await client.listResources();
-    assert(resources.resources.length >= 4, "expected at least four static resources");
+    assert(resources.resources.length === 4, "expected four static resources");
     const skill = await client.readResource({ uri: "tastepro://skill" });
     const firstContent = skill.contents[0];
     const skillText = firstContent && "text" in firstContent ? firstContent.text : "";

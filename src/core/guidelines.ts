@@ -3,6 +3,7 @@ import {
   clampMaxTokens,
   DEFAULT_GUIDELINES_MAX_TOKENS,
   estimateTokens,
+  fitJson,
   fitText,
 } from "./budget.js";
 import type { ContentLoader } from "./content/loader.js";
@@ -118,7 +119,36 @@ function fitResult(result: GuidelinesResult, maxTokens: number): GuidelinesResul
       truncated: true,
     };
   }
-  return working;
+
+  const fitted = fitJson(working, maxTokens, {
+    requiredKeys: [
+      "format",
+      "query",
+      "total",
+      "returned",
+      "categories",
+      "rules",
+      "truncated",
+      "hints",
+    ],
+    arrayKeys: ["rules", "categories", "hints"],
+    itemKeys: [
+      "id",
+      "text",
+      "summary",
+      "category",
+      "severity",
+      "instead",
+      "sourcePath",
+      "line",
+      "sourceUrl",
+    ],
+  });
+  return {
+    ...fitted.value,
+    returned: fitted.value.rules.length,
+    truncated: true,
+  };
 }
 
 /**

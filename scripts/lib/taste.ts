@@ -111,6 +111,27 @@ export function parseTasteLibrary(
   const directionRecords = input.directions.map(asRecord);
   const directionDomains = makeDirectionDomains(directionRecords);
 
+  // Palettes and type pairings are cross-domain, but the site studies that use
+  // them carry sectors. Derive domains from `seenIn` so a domain-filtered
+  // search can find the visual ingredients used in that domain.
+  const siteDomains = new Map<string, string[]>();
+  for (const site of input.sites.map(asRecord)) {
+    const id = str(site.id);
+    const kind = str(site.kind);
+    const domains = mapSectors(kind ? [kind] : []);
+    siteDomains.set(id, domains);
+    siteDomains.set(`site/${id}`, domains);
+  }
+  const domainsFromSites = (seenIn: readonly string[]): string[] => {
+    const domains = new Set<string>();
+    for (const id of seenIn) {
+      for (const domain of siteDomains.get(id) ?? siteDomains.get(`site/${id}`) ?? []) {
+        domains.add(domain);
+      }
+    }
+    return [...domains].sort();
+  };
+
   const directions: DirectionPack[] = directionRecords.map((direction) => {
     const id = str(direction.id);
     const name = str(direction.name, id);
@@ -160,12 +181,13 @@ export function parseTasteLibrary(
     const id = str(palette.id);
     const note = str(palette.note);
     const tags = stringArray(palette.tags);
+    const seenIn = stringArray(palette.seenIn);
     return {
       id: `palette/${id}`,
       kind: "palette",
       name: str(palette.name, id),
       summary: summarize(note, 300),
-      domains: [],
+      domains: domainsFromSites(seenIn),
       sectors: [],
       tags,
       moods: inferMoods(`${note} ${tags.join(" ")}`),
@@ -187,7 +209,7 @@ export function parseTasteLibrary(
           })
         : [],
       note,
-      seenIn: stringArray(palette.seenIn),
+      seenIn,
       contrast: paletteContrast(palette),
     };
   });
@@ -197,12 +219,13 @@ export function parseTasteLibrary(
     const note = str(type.note);
     const display = asRecord(type.display);
     const text = asRecord(type.text);
+    const seenIn = stringArray(type.seenIn);
     return {
       id: `type/${id}`,
       kind: "type",
       name: str(type.name, id),
       summary: summarize(note, 300),
-      domains: [],
+      domains: domainsFromSites(seenIn),
       sectors: [],
       tags: uniqueStrings([
         str(type.class),
@@ -221,7 +244,7 @@ export function parseTasteLibrary(
       text: Object.keys(text).length > 0 ? (text as TypePack["text"]) : undefined,
       standsInFor: stringArray(type.standsInFor),
       note,
-      seenIn: stringArray(type.seenIn),
+      seenIn,
       links: stringArray(type.links),
       scale: Object.fromEntries(
         Object.entries(asRecord(type.scale)).map(([key, value]) => [key, str(value)]),

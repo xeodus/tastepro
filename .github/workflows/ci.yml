@@ -53,6 +53,26 @@ jobs:
       - name: HTTP smoke test
         run: npm run smoke:http
 
+  coverage:
+    name: Coverage
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install
+        run: npm ci
+
+      - name: Coverage
+        run: npm run test:coverage
+
   docker:
     name: Docker image
     runs-on: ubuntu-latest
@@ -70,6 +90,7 @@ jobs:
           docker run -d --name tastepro-ci \
             -p 127.0.0.1:3000:3000 \
             -e TASTEPRO_API_KEY=ci-token \
+            -e TASTEPRO_ALLOWED_HOSTS=localhost,127.0.0.1 \
             tastepro:ci
 
           for attempt in $(seq 1 30); do

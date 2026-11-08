@@ -796,8 +796,31 @@ export class GetService {
     if (response.count === 0 && missing.length === 0) {
       response.missing.push("(no ids supplied)");
     }
-    const fitted = fitJson(response, maxTokens, { optionalKeys: ["suggestions"] });
-    return { ...fitted.value, truncated: fitted.truncated };
+    const fitted = fitJson(response, maxTokens, {
+      requiredKeys: ["format", "count", "packs", "missing", "suggestions", "truncated"],
+      optionalKeys: ["suggestions"],
+      arrayKeys: ["packs", "missing", "suggestions"],
+      itemKeys: [
+        "id",
+        "kind",
+        "name",
+        "summary",
+        "provenance",
+        "sourceUrl",
+        "quality",
+        "domains",
+        "tags",
+        "moods",
+        "status",
+        "depth",
+        "metrics",
+      ],
+    });
+    return {
+      ...fitted.value,
+      count: fitted.value.packs.length,
+      truncated: fitted.truncated,
+    };
   }
 }
 

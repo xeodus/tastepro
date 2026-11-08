@@ -1,5 +1,5 @@
 import MiniSearch, { type SearchResult } from "minisearch";
-import { clampMaxTokens, DEFAULT_SEARCH_MAX_TOKENS, estimateTokens } from "./budget.js";
+import { clampMaxTokens, DEFAULT_SEARCH_MAX_TOKENS, estimateTokens, fitJson } from "./budget.js";
 import type { ContentLoader } from "./content/loader.js";
 import {
   type CatalogEntry,
@@ -49,7 +49,7 @@ export interface SearchResponse {
   truncated: boolean;
   hints: string[];
   /** How the query was matched. Browse means no query was supplied. */
-  match: "browse" | "all-terms" | "any-term";
+  match: "browse" | "all-terms" | "any-term" | "domain-fallback";
   /** Number of filtered packs that contain every query term. */
   matchedAllTerms: number;
   /** Same-family playbooks added because the inferred domain has no playbook. */
@@ -189,7 +189,28 @@ function fitSearchResponse(response: SearchResponse, maxTokens: number): SearchR
       truncated: true,
     };
   }
-  return working;
+
+  const fitted = fitJson(working, maxTokens, {
+    requiredKeys: [
+      "query",
+      "total",
+      "returned",
+      "results",
+      "truncated",
+      "hints",
+      "match",
+      "matchedAllTerms",
+      "familyFallback",
+      "applied",
+    ],
+    arrayKeys: ["results", "familyFallback", "hints"],
+    itemKeys: ["id", "kind", "name", "summary", "domains", "quality", "source"],
+  });
+  return {
+    ...fitted.value,
+    returned: fitted.value.results.length,
+    truncated: true,
+  };
 }
 
 /**
@@ -407,6 +428,7 @@ export class SearchService {
 
     const hints: string[] = [];
     const coverageById = new Map<string, number>();
+    let usedDomainFallback = false;
     let ranked: Array<{ entry: CatalogEntry; score: number }>;
 
     if (!query) {
@@ -488,6 +510,26 @@ export class SearchService {
         }
       }
 
+      // A kind filter plus an inferred domain can leave no literal matches even
+      // though that kind has packs mapped to the domain. This fallback is
+      // deliberately narrow: only when the filtered result set has no
+      // non-domain match, so it cannot flood an ordinary search.
+      const requestedVisualKinds = kinds ? [...kinds].filter((kind) => kind !== "domain") : [];
+      const hasVisualKindMatch = [...merged.values()].some(({ entry }) => entry.kind !== "domain");
+      if (
+        requestedVisualKinds.length > 0 &&
+        !hasVisualKindMatch &&
+        query &&
+        queryDomains.size > 0
+      ) {
+        for (const entry of entries.values()) {
+          if (!matchesFilters(entry)) continue;
+          if (!entry.domains.some((domain) => queryDomains.has(domain))) continue;
+          merged.set(entry.id, { entry, score: 0 });
+          usedDomainFallback = true;
+        }
+      }
+
       for (const { entry } of merged.values()) {
         coverageById.set(entry.id, termCoverage(entry, terms));
       }
@@ -521,7 +563,7 @@ export class SearchService {
         if (suggestedDomains.length > 0) {
           hints.push(`Related domains: ${suggestedDomains.join(", ")}.`);
         }
-      } else if (andResults.length === 0) {
+      } else if (andResults.length === 0 && !usedDomainFallback) {
         hints.push(
           "No exact catalog matches; showing inferred domain and family-fallback playbooks.",
         );
@@ -541,7 +583,13 @@ export class SearchService {
       results: cards,
       truncated: false,
       hints,
-      match: !query ? "browse" : matchedAllTerms === total && total > 0 ? "all-terms" : "any-term",
+      match: !query
+        ? "browse"
+        : usedDomainFallback
+          ? "domain-fallback"
+          : matchedAllTerms === total && total > 0
+            ? "all-terms"
+            : "any-term",
       matchedAllTerms,
       familyFallback: [...fallbackDomains],
       applied: {
@@ -553,7 +601,12 @@ export class SearchService {
       },
     };
 
-    if (queryDomains.size > 0 && query) {
+    if (usedDomainFallback) {
+      response.hints.push(
+        `No literal text matches; showing ${(request.kinds ?? []).join(", ")} mapped to the inferred domain: ${[...queryDomains].slice(0, 4).join(", ")}.`,
+      );
+    }
+    if (queryDomains.size > 0 && query && !usedDomainFallback) {
       response.hints.push(
         `Domain intent: ${[...queryDomains].slice(0, 4).join(", ")}. Domain playbooks are ranked first.`,
       );
@@ -563,7 +616,7 @@ export class SearchService {
         `Family fallback: ${[...fallbackDomains].join(", ")}. These are same-family playbooks, not domain-specific playbooks.`,
       );
     }
-    if (query && total > 0 && matchedAllTerms < total) {
+    if (query && total > 0 && matchedAllTerms < total && !usedDomainFallback) {
       response.hints.push(
         `${total} packs match at least one term; ${matchedAllTerms} match all terms. Add a domain or kind to narrow.`,
       );

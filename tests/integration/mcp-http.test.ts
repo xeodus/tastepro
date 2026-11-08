@@ -2,9 +2,11 @@ import { randomUUID } from "node:crypto";
 import { Client } from "@modelcontextprotocol/sdk/client/index.js";
 import { StreamableHTTPClientTransport } from "@modelcontextprotocol/sdk/client/streamableHttp.js";
 import { afterAll, beforeAll, describe, expect, it } from "vitest";
+import { createAuditService } from "../../src/core/audit.js";
 import { createTasteProContext } from "../../src/server/context.js";
 import { type RunningHttpServer, startHttpServer } from "../../src/server/http.js";
 import { createLogger } from "../../src/server/logger.js";
+import { AUDIT_SCOPE } from "../../src/server/server.js";
 import { resourceText } from "../helpers/mcp.js";
 
 const apiKey = `test-${randomUUID()}`;
@@ -31,12 +33,19 @@ async function connectClient(name: string): Promise<{
 }
 
 beforeAll(async () => {
+  const guidelines = await context.loader.guidelines();
   running = await startHttpServer({
     context,
     host: "127.0.0.1",
     port: 0,
     apiKey,
+    sessionMode: "stateful",
     corsOrigin: "https://app.example.com",
+    audit: {
+      service: createAuditService({ guidelines }),
+      allowUrlFetch: false,
+      requiredScope: AUDIT_SCOPE,
+    },
     logger: createLogger("silent"),
   });
   const connected = await connectClient("tastepro-http-test");
@@ -153,7 +162,7 @@ describe("streamable HTTP transport", () => {
 
   it("serves tools, resources, and prompts over a stateful session", async () => {
     const tools = await client.listTools();
-    expect(tools.tools).toHaveLength(3);
+    expect(tools.tools).toHaveLength(4);
     expect(transport.sessionId).toBeTruthy();
 
     const search = await client.callTool({

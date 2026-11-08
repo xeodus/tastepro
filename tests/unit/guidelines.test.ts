@@ -98,7 +98,7 @@ describe("guidelines service", () => {
     });
     expect(response.truncated).toBe(true);
     expect(response.rules.length).toBeLessThan(50);
-    expect(estimateTokens(response)).toBeLessThanOrEqual(220);
+    expect(estimateTokens(response)).toBeLessThanOrEqual(128);
   });
 
   it("fits the Markdown budget", async () => {
@@ -109,7 +109,7 @@ describe("guidelines service", () => {
       maxTokens: 128,
     });
     expect(response.truncated).toBe(true);
-    expect((response.markdown ?? "").length).toBeLessThan(1_200);
+    expect(estimateTokens(response.markdown ?? "")).toBeLessThanOrEqual(128);
     expect(response.markdown).toContain("truncated");
   });
 

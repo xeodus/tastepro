@@ -34,7 +34,7 @@ Edit the Claude Desktop config file:
 }
 ```
 
-Restart Claude Desktop. The three tools should appear in the tools menu.
+Restart Claude Desktop. The four tools should appear in the tools menu.
 
 If you have published or linked the package, the shorter form is:
 
@@ -104,6 +104,19 @@ Remote:
 OpenCode expands `{env:TASTEPRO_API_KEY}` from the environment. Keep the token
 out of committed config files.
 
+For an OAuth deployment, the same `type: "remote"` config works: the server
+advertises `/.well-known/oauth-protected-resource`, and clients that speak the
+MCP OAuth flow discover it from the endpoint. If your client build cannot
+complete the flow, either deploy with a static key instead or supply a valid
+access token (with the `tastepro:audit` scope if you want audit access) in the
+`Authorization` header.
+
+HTTP is stateless by default, so the server does not issue `Mcp-Session-Id` and
+any replica can serve any request. Clients must tolerate a server that does not
+return a session id; the SDK client does. Only opt into `--stateful` if you need
+SSE or resumability, and then use sticky routing when running more than one
+replica.
+
 ## Cursor (stdio)
 
 Create `.cursor/mcp.json` in the project, or edit the global Cursor MCP config:
@@ -129,15 +142,17 @@ localhost server is not enough; deploy the HTTP transport first. See
 2. In ChatGPT, open **Settings → Connectors** and enable developer mode if your
    plan exposes it. The exact labels vary by plan and rollout.
 3. Create a connector with the MCP URL `https://your-host.example/mcp`.
-4. For M0 read-only use, choose no authentication against an intentionally
+4. For anonymous read-only use, choose no authentication against an intentionally
    anonymous read-only endpoint.
 5. Start a conversation and ask for a design brief or an audit plan.
 
-ChatGPT custom connectors are happiest with OAuth. M0 does not implement an
-OAuth authorization server; it supports anonymous read-only hosting and static
-bearer auth. Do not point ChatGPT at a bearer-only endpoint that requires a
-static token it cannot send. When hosted audit endpoints arrive, OAuth
-validation is required before they are exposed. See the roadmap in the README.
+ChatGPT custom connectors are happiest with OAuth. TastePro now validates
+OAuth access tokens as a resource server against your own IdP, but it is not an
+authorization server and does not issue tokens or implement dynamic client
+registration itself. Options: point the connector at an OAuth deployment backed
+by your IdP, or use an intentionally anonymous read-only endpoint (which never
+exposes `taste_audit`). Do not point ChatGPT at a bearer-only endpoint that
+requires a static token it cannot send.
 
 ## Generic Streamable HTTP client
 
@@ -179,9 +194,14 @@ anonymous.
 - For HTTP, the URL ends in `/mcp`, not `/`.
 - For HTTP with auth, the `Authorization` header is present on every `/mcp`
   request.
+- The client tolerates a server that does not issue `Mcp-Session-Id` (the
+  stateless default). If you run stateful mode, the load balancer routes the
+  session id consistently.
 - For hosted clients, the endpoint is HTTPS and reachable from the public
   internet.
-- The client shows three tools: `taste_search`, `taste_get`, `taste_guidelines`.
+- The client shows four tools: `taste_search`, `taste_get`, `taste_guidelines`,
+  and `taste_audit` (`taste_audit` is absent on explicitly anonymous hosted
+  endpoints and needs the `tastepro:audit` scope under OAuth).
 
 If a tool call fails, run `node dist/cli.js info` and check `/healthz` first.
 Content and setup errors are almost always visible there.

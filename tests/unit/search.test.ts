@@ -91,6 +91,68 @@ describe("catalog search", () => {
     expect(response.results.some((card) => card.id === "domain/energy-climate")).toBe(true);
   });
 
+  it("finds palettes and types through the domains of their studied sites", async () => {
+    for (const kind of ["palette", "type"] as const) {
+      const response = await context.search.search({
+        domain: "fintech-payments",
+        kinds: [kind],
+        limit: 50,
+      });
+      expect(response.total, kind).toBeGreaterThan(0);
+      expect(
+        response.results.every((card) => card.domains.includes("fintech-payments")),
+        kind,
+      ).toBe(true);
+    }
+  });
+
+  it("recovers a domain-and-kind query with no literal text match", async () => {
+    const response = await context.search.search({
+      query: "fintech palette",
+      kinds: ["palette"],
+      limit: 5,
+    });
+    expect(response.total).toBeGreaterThan(0);
+    expect(response.results.every((card) => card.kind === "palette")).toBe(true);
+    expect(response.results.every((card) => card.domains.includes("fintech-payments"))).toBe(true);
+    expect(response.hints.join(" ")).toMatch(/domain/i);
+  });
+
+  it("falls back to domain-mapped packs only when a kind-filtered query is empty", async () => {
+    const response = await context.search.search({
+      query: "dashboard palette",
+      kinds: ["palette"],
+      limit: 10,
+    });
+    expect(response.total).toBeGreaterThan(0);
+    expect(response.match).toBe("domain-fallback");
+    expect(response.results.every((card) => card.kind === "palette")).toBe(true);
+    expect(
+      response.results.every((card) =>
+        card.domains.some((domain) => ["data-analytics", "product-surfaces"].includes(domain)),
+      ),
+    ).toBe(true);
+    expect(response.hints.join(" ")).toMatch(/mapped to the inferred domain/i);
+
+    // No domain intent means no safe fallback: do not invent results.
+    const noDomain = await context.search.search({
+      query: "minimal palette",
+      kinds: ["palette"],
+      limit: 10,
+    });
+    expect(noDomain.total).toBe(0);
+    expect(noDomain.results).toHaveLength(0);
+
+    // Including the domain kind must not suppress the visual-kind fallback.
+    const mixed = await context.search.search({
+      query: "dashboard palette",
+      kinds: ["palette", "domain"],
+      limit: 10,
+    });
+    expect(mixed.match).toBe("domain-fallback");
+    expect(mixed.results.some((card) => card.kind === "palette")).toBe(true);
+  });
+
   it("filters by kind, domain, quality, and source", async () => {
     const sections = await context.search.search({
       query: "menu",
@@ -180,7 +242,7 @@ describe("catalog search", () => {
     });
     expect(response.truncated).toBe(true);
     expect(response.returned).toBeLessThan(50);
-    expect(estimateTokens(response)).toBeLessThanOrEqual(220);
+    expect(estimateTokens(response)).toBeLessThanOrEqual(128);
 
     // Fallback metadata is trimmed before the last card is dropped.
     const fallback = await context.search.search({
@@ -190,7 +252,7 @@ describe("catalog search", () => {
     });
     expect(fallback.truncated).toBe(true);
     expect(fallback.familyFallback).toEqual([]);
-    expect(estimateTokens(fallback)).toBeLessThanOrEqual(160);
+    expect(estimateTokens(fallback)).toBeLessThanOrEqual(128);
   });
 
   it("returns useful hints when nothing matches", async () => {

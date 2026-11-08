@@ -1,7 +1,7 @@
 # Architecture
 
 TastePro is a read-only MCP server. It loads a committed, validated content
-catalog, exposes three tools and a small set of resources/prompts, and speaks
+catalog, exposes four tools and a small set of resources/prompts, and speaks
 either stdio or Streamable HTTP. It has no database, no user accounts, no
 server-side LLM calls, and no network access at request time.
 
@@ -39,30 +39,32 @@ The architecture optimizes for four things:
 ```
 
 Both transports share the same `TasteProContext`. A stdio process serves one
-client. An HTTP process serves many stateful MCP sessions, each with its own
-SDK server/transport pair, all sharing the same immutable loader and indexes.
+client. An HTTP process is stateless by default: each request gets its own SDK
+server/transport pair, so any replica can serve it. Stateful mode keeps one
+server/transport pair per `Mcp-Session-Id`; all modes share the same immutable
+loader and indexes.
 
 ## Module map
 
-| Path                         | Responsibility                                                   |
-| ---------------------------- | ---------------------------------------------------------------- |
-| `src/cli.ts`                 | CLI parsing, stdio/HTTP startup, signal handling, local commands |
-| `src/server/server.ts`       | MCP tools, resources, resource templates, prompts                |
-| `src/server/context.ts`      | Shared service construction                                      |
-| `src/server/http.ts`         | Hono app, sessions, auth, host guard, CORS, health, shutdown     |
-| `src/server/instructions.ts` | Server instructions and `tastepro://skill`                       |
-| `src/server/logger.ts`       | stderr-only structured logger                                    |
-| `src/core/content/loader.ts` | Content-dir resolution, lazy validated loading, id resolution    |
-| `src/core/schema.ts`         | Zod schemas for every content kind and for catalog/stats/sources |
-| `src/core/search.ts`         | MiniSearch index, alias/domain inference, ranking, budgets       |
-| `src/core/get.ts`            | brief/full/markdown/json projections and token fitting           |
-| `src/core/guidelines.ts`     | Guideline index, filters, checklist Markdown, budgets            |
-| `src/core/budget.ts`         | Token estimation and response fitting                            |
-| `src/core/text.ts`           | Slugify, normalize, tokenize, light stemming, summaries          |
-| `scripts/ingest.ts`          | Fetch pinned sources, transform, write generated content         |
-| `scripts/validate.ts`        | Content, provenance, hash, reference, and playbook validation    |
-| `scripts/update-sources.ts`  | Check or advance the four source pins                            |
-| `scripts/smoke-http.ts`      | Real HTTP MCP smoke test with auth                               |
+| Path                         | Responsibility                                                                   |
+| ---------------------------- | -------------------------------------------------------------------------------- |
+| `src/cli.ts`                 | CLI parsing, stdio/HTTP startup, signal handling, local commands                 |
+| `src/server/server.ts`       | MCP tools, resources, resource templates, prompts                                |
+| `src/server/context.ts`      | Shared service construction                                                      |
+| `src/server/http.ts`         | Hono app, stateless/stateful transport, auth, host guard, CORS, health, shutdown |
+| `src/server/instructions.ts` | Server instructions and `tastepro://skill`                                       |
+| `src/server/logger.ts`       | stderr-only structured logger                                                    |
+| `src/core/content/loader.ts` | Content-dir resolution, lazy validated loading, id resolution                    |
+| `src/core/schema.ts`         | Zod schemas for every content kind and for catalog/stats/sources                 |
+| `src/core/search.ts`         | MiniSearch index, alias/domain inference, ranking, budgets                       |
+| `src/core/get.ts`            | brief/full/markdown/json projections and token fitting                           |
+| `src/core/guidelines.ts`     | Guideline index, filters, checklist Markdown, budgets                            |
+| `src/core/budget.ts`         | Token estimation and response fitting                                            |
+| `src/core/text.ts`           | Slugify, normalize, tokenize, light stemming, summaries                          |
+| `scripts/ingest.ts`          | Fetch pinned sources, transform, write generated content                         |
+| `scripts/validate.ts`        | Content, provenance, hash, reference, and playbook validation                    |
+| `scripts/update-sources.ts`  | Check or advance the four source pins                                            |
+| `scripts/smoke-http.ts`      | Real HTTP MCP smoke test with auth                                               |
 
 ## Request lifecycle
 
@@ -82,11 +84,16 @@ SDK server/transport pair, all sharing the same immutable loader and indexes.
 7. If the query lands **only** on taxonomy-only domains, same-family playbooks
    are merged in as `familyFallback`. This is a starting point, not a
    domain-specific playbook. Explicit `domain` filters stay literal.
-8. Results are grouped: inferred domain playbooks first, same-family fallback
+8. If a kind filter leaves no literal match but the query infers a domain, packs
+   of that kind mapped to the inferred domain are merged in and the response
+   reports `match: "domain-fallback"`. This is narrow: it only runs when the
+   filtered result set is empty.
+9. Results are grouped: inferred domain playbooks first, same-family fallback
    playbooks next, then full-coverage matches, then partial coverage. Within a
    group, BM25 score, quality, kind priority, and name break ties.
-9. Cards are projected, the response is fitted to the token budget, and hints
-   explain the match mode and next step.
+10. Cards are projected, the response is fitted to the token budget, and hints
+    explain the match mode and next step. Identity, provenance, and source URLs
+    are preserved exactly or omitted as whole fields; they are never truncated.
 
 If AND matching returns nothing, the response still contains inferred domain
 playbooks and a hint. The separate `suggest()` path is used only for missing
@@ -197,34 +204,58 @@ that it was truncated.
 
 `src/server/http.ts` builds a Hono app and serves it with `@hono/node-server`.
 
-| Route      | Method          | Auth                 | Purpose                                      |
-| ---------- | --------------- | -------------------- | -------------------------------------------- |
-| `/mcp`     | POST/GET/DELETE | Bearer if configured | MCP Streamable HTTP                          |
-| `/healthz` | GET             | No                   | Liveness plus content stats                  |
-| `/readyz`  | GET             | No                   | Same check for readiness                     |
-| `/`        | GET             | No                   | Name, version, endpoint, auth mode, sessions |
+| Route      | Method          | Auth                | Purpose                                      |
+| ---------- | --------------- | ------------------- | -------------------------------------------- |
+| `/mcp`     | POST/GET/DELETE | Bearer off loopback | MCP Streamable HTTP                          |
+| `/healthz` | GET             | No                  | Liveness plus content stats                  |
+| `/readyz`  | GET             | No                  | Same check for readiness                     |
+| `/`        | GET             | No                  | Name, version, endpoint, auth mode, sessions |
 
-Sessions are stateful. The SDK generates `Mcp-Session-Id` on initialize; the
-server stores the transport and server pair in a map. Sessions expire after 30
-minutes idle (configurable), and the map is capped at 500 sessions by default.
-When the cap is exceeded, the least-recently-seen session is evicted. A cleanup
-interval runs at half the TTL, capped between 10 and 60 seconds.
+Stateless is the default. Every request gets a fresh server/transport pair;
+the SDK issues no `Mcp-Session-Id`, `GET`/`DELETE` return 405, and the token's
+scopes are applied per request. Any replica can serve any request, so no sticky
+routing or session store is needed.
 
-JSON responses are the default. `--sse` enables SSE streaming. A read-only
-content server does not need server-initiated notifications, so JSON keeps
-proxies and clients simple.
+Stateful mode (`--stateful` / `TASTEPRO_HTTP_MODE=stateful`) generates
+`Mcp-Session-Id` on initialize and stores the transport/server pair in a map.
+Sessions expire after 30 minutes idle (configurable), and the map is capped at
+500 sessions by default. When the cap is exceeded, the least-recently-seen
+session is evicted. Use stateful mode only for SSE/resumability, and use sticky
+routing when running more than one replica.
+
+JSON responses are the default. `--sse` enables SSE streaming and requires
+stateful mode; stateless mode rejects it at startup.
 
 Hardening:
 
-- Bearer auth uses a timing-safe comparison and applies only to `/mcp`.
-- `Host` allowlisting rejects unexpected hostnames before routing.
-- CORS is deny-by-default for browser origins unless `TASTEPRO_CORS_ORIGIN` is
-  configured. `*` is intended for local development only.
+- With OAuth configured, `/mcp` verifies JWT access tokens (signature via JWKS
+  or OIDC discovery, issuer, audience, expiry, RS256/ES256 only) at the HTTP
+  boundary and serves `/.well-known/oauth-protected-resource`. The verified
+  principal's scopes are attached to the request (or the stateful session); the
+  MCP layer never sees tokens. OAuth and a static API key cannot be combined.
+- Bearer auth uses a timing-safe comparison and applies only to `/mcp`. A
+  non-loopback bind fails closed without OAuth or `TASTEPRO_API_KEY` unless
+  `TASTEPRO_ALLOW_ANONYMOUS=true` is set explicitly; explicitly anonymous
+  non-loopback binds have the `taste_audit` tool removed entirely.
+- `taste_audit` requires the `tastepro:audit` scope on hosted requests. Its
+  URL input is SSRF-guarded (private/loopback/link-local addresses refused,
+  redirect, size, and timeout caps) and is disabled by default. Browser mode
+  renders with JavaScript disabled, blocks service workers, aborts every
+  subresource request, and enforces hard timeouts; a concurrency/queue gate
+  bounds both static and browser audits. No submitted document is stored or
+  logged.
+- `Host` allowlisting rejects unexpected hostnames before routing; it is
+  required for non-loopback binds.
+- Browser origins are deny-by-default. A request with an untrusted `Origin` is
+  rejected before authentication or request handling, not just without CORS
+  headers. `*` is intended for local development only.
 - Request bodies are capped at 1 MiB.
+- In stateful mode, invalid session limits fall back to safe defaults instead of
+  disabling the cap or creating a zero-delay cleanup timer.
 - `X-Content-Type-Options: nosniff` and `Referrer-Policy: no-referrer` are set.
 - Logs go to stderr only, so stdio JSON-RPC on stdout stays clean.
-- `SIGINT`/`SIGTERM` close MCP sessions first, then close the HTTP server and
-  remaining connections.
+- `SIGINT`/`SIGTERM` close stateful MCP sessions first, then close the HTTP
+  server and remaining connections.
 
 Health returns 503 if content cannot be loaded. It reports the content hash,
 catalog counts, quality mix, warning count, session count, and uptime. It does
@@ -251,13 +282,18 @@ content/sources.lock.json
 scripts/validate.ts ── schema, counts, hash, provenance, references, playbooks
 ```
 
-The cache is keyed by source id and upstream path, not by commit. `--refresh`
+The cache is keyed by source id, pinned commit, and upstream path. `--refresh`
 bypasses it. `--offline` fails if a required file is missing rather than
 silently producing partial content.
 
-The content hash covers the catalog, counts, and source commits. Validation
-recomputes it and fails on drift. Generated files are committed so the server
-works without network access.
+Ingest writes a complete snapshot into a sibling staging directory, validates
+it, and only then swaps it into place. A failed fetch, transform, or validation
+leaves the live content untouched.
+
+The content hash covers the catalog, every full pack file (including embedded
+reference bodies), the readable reference Markdown, and source commits.
+Validation recomputes it from the served files and fails on drift. Generated
+files are committed so the server works without network access.
 
 ## Determinism and performance
 
@@ -273,12 +309,13 @@ The only nondeterministic fields are timestamps (`startedAt`, health uptime,
 
 ## Testing strategy
 
-| Tier        | Location                | What it proves                                                   |
-| ----------- | ----------------------- | ---------------------------------------------------------------- |
-| Unit        | `tests/unit/`           | Parsers, schemas, budgets, ranking, projections, loader behavior |
-| Integration | `tests/integration/`    | Real stdio and HTTP MCP clients against the real server          |
-| Production  | `tests/production/`     | Committed content invariants, CLI lifecycle, HTTP hardening      |
-| Smoke       | `scripts/smoke-http.ts` | Auth, initialize, tools, resources, prompts, close               |
+| Tier        | Location                 | What it proves                                                                  |
+| ----------- | ------------------------ | ------------------------------------------------------------------------------- |
+| Unit        | `tests/unit/`            | Parsers, schemas, budgets, ranking, projections, loader behavior                |
+| Integration | `tests/integration/`     | Real stdio and HTTP MCP clients against the real server                         |
+| Production  | `tests/production/`      | Committed content invariants, CLI lifecycle, HTTP hardening                     |
+| Smoke       | `scripts/smoke-http.ts`  | Auth, initialize, tools, search/get/guidelines/audit, resources, prompts, close |
+| OAuth smoke | `scripts/smoke-oauth.ts` | Real Keycloak token, audit scope, scope denial, audience rejection              |
 
 Unit tests use fixtures and temporary content directories. Integration tests
 spawn the compiled or `tsx` CLI and speak JSON-RPC over pipes or real HTTP.
@@ -290,17 +327,22 @@ modules.
 
 ## Failure modes
 
-| Failure                        | Behavior                                                       |
-| ------------------------------ | -------------------------------------------------------------- |
-| Missing content                | CLI exits with a clear "run ingest" message                    |
-| Invalid JSON/schema            | Loader throws with file path and Zod issues                    |
-| Missing id                     | `taste_get` returns `missing` plus suggestions                 |
-| No search matches              | Empty results plus domain hints; inferred playbooks if any     |
-| Budget too small               | Response is truncated with a visible flag, never silently cut  |
-| Session expired                | HTTP 404 JSON-RPC error telling the client to initialize again |
-| Unauthorized                   | HTTP 401 with `WWW-Authenticate: Bearer`                       |
-| Unexpected host                | HTTP 403 `forbidden_host`                                      |
-| Content load failure at health | HTTP 503                                                       |
+| Failure                        | Behavior                                                                     |
+| ------------------------------ | ---------------------------------------------------------------------------- |
+| Missing content                | CLI exits with a clear "run ingest" message                                  |
+| Invalid JSON/schema            | Loader throws with file path and Zod issues                                  |
+| Missing id                     | `taste_get` returns `missing` plus suggestions                               |
+| No search matches              | Empty results plus domain hints; inferred playbooks if any                   |
+| Budget too small               | Response is truncated with a visible flag, never silently cut                |
+| Session expired                | HTTP 404 JSON-RPC error telling the client to initialize again (stateful)    |
+| Stateless GET/DELETE           | HTTP 405 with `Allow: POST`                                                  |
+| Unauthorized                   | HTTP 401 with `WWW-Authenticate: Bearer` (+ `resource_metadata` under OAuth) |
+| Missing audit scope            | `taste_audit` returns an error naming the required scope                     |
+| Audit URL refused              | `taste_audit` error explaining SSRF/limit rules; nothing fetched             |
+| Audit busy                     | `taste_audit` error asking the client to retry                               |
+| Browser render timeout         | `taste_audit` error; the browser is closed                                   |
+| Unexpected host                | HTTP 403 `forbidden_host`                                                    |
+| Content load failure at health | HTTP 503                                                                     |
 
 ## Extension points
 
@@ -310,16 +352,15 @@ read-only contract:
 - **Templates (M1).** Add a `template` kind, generated/original packs, and a
   `taste_get` Markdown projection. Templates should carry the same provenance
   and quality fields.
-- **Browser audit (M2).** A new auth-gated tool can call Playwright, store
-  artifacts, and return signed links. It should not run in the same process as
-  anonymous read-only traffic without resource limits.
-- **OAuth (M2).** Replace static bearer validation with a token validator at the
-  HTTP boundary; keep the MCP server unaware of auth.
+- **Executed-JS audit.** Browser mode renders with JavaScript disabled. Running
+  page scripts would add real runtime evidence but needs a hardened sandbox,
+  egress policy, and artifact rules; it is deliberately out of scope.
 - **Private packs (M3).** Add a content source abstraction and per-tenant
   overlays; the loader already resolves a single content directory, so this
   needs a merge layer, not a rewrite.
-- **Shared sessions.** The in-memory map is intentionally simple. Multi-replica
-  deployments need sticky sessions or a shared session store.
+- **Stateful scaling.** Stateless is the default and needs no shared state.
+  Stateful mode's in-memory map needs sticky routing or a shared store if it is
+  ever run with multiple replicas.
 
 ## Decision log
 

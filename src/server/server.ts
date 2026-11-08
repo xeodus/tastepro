@@ -1,6 +1,7 @@
 import { McpServer, ResourceTemplate } from "@modelcontextprotocol/sdk/server/mcp.js";
 import type { CallToolResult, ReadResourceResult } from "@modelcontextprotocol/sdk/types.js";
 import { z } from "zod";
+import type { AuditService } from "../core/audit.js";
 import {
   CONTENT_KINDS,
   type ContentKind,
@@ -12,8 +13,26 @@ import {
   type SourceId,
 } from "../core/schema.js";
 import { VERSION } from "../version.js";
+import { fetchAuditHtml } from "./audit-fetch.js";
 import type { TasteProContext } from "./context.js";
 import { SERVER_INSTRUCTIONS, SKILL_MARKDOWN } from "./instructions.js";
+import { hasScope } from "./oauth.js";
+
+/** Scope required to call taste_audit on an auth-gated hosted deployment. */
+export const AUDIT_SCOPE = "tastepro:audit";
+
+export interface AuditToolOptions {
+  service: AuditService;
+  /** Allow the url input, fetched through the SSRF-guarded path. */
+  allowUrlFetch?: boolean;
+  /** Scope required when the server runs behind auth. Defaults to AUDIT_SCOPE. */
+  requiredScope?: string;
+}
+
+export interface ServerAuth {
+  /** Verified scopes for this session. Undefined means local, unauthenticated use. */
+  scopes: string[];
+}
 
 function textResult(value: unknown): CallToolResult {
   const text = typeof value === "string" ? value : JSON.stringify(value, null, 2);
@@ -90,6 +109,10 @@ function domainCard(domain: DomainPack) {
 
 export interface CreateServerOptions {
   context: TasteProContext;
+  /** When set, the taste_audit tool is registered. */
+  audit?: AuditToolOptions;
+  /** Verified principal scopes for hosted sessions; omitted for local stdio. */
+  auth?: ServerAuth;
 }
 
 /**
@@ -97,7 +120,7 @@ export interface CreateServerOptions {
  * get their own McpServer/transport pair; stdio gets exactly one.
  */
 export function createTasteProServer(options: CreateServerOptions): McpServer {
-  const { context } = options;
+  const { context, audit, auth } = options;
   const server = new McpServer(
     { name: "tastepro", version: VERSION },
     { instructions: SERVER_INSTRUCTIONS },
@@ -315,6 +338,100 @@ export function createTasteProServer(options: CreateServerOptions): McpServer {
     },
   );
 
+  if (audit) {
+    const requiredScope = audit.requiredScope ?? AUDIT_SCOPE;
+    server.registerTool(
+      "taste_audit",
+      {
+        title: "Audit submitted HTML against the web-interface rubric",
+        description:
+          "Check submitted HTML (or a fetched URL, when the server allows it) against the pinned web-interface guidelines. Returns findings with guideline id, severity, evidence, and a fix, plus an explicit list of what this audit cannot verify. Nothing is stored. URL fetching and browser rendering are server-side opt-ins.",
+        inputSchema: {
+          html: z
+            .string()
+            .min(1)
+            .max(1_000_000)
+            .optional()
+            .describe(
+              "HTML document or component to audit, up to 1,000,000 characters. Not persisted.",
+            ),
+          url: z
+            .string()
+            .max(2_000)
+            .optional()
+            .describe(
+              "Public http(s) URL to fetch and audit. Rejected unless the server sets TASTEPRO_AUDIT_ALLOW_URL_FETCH=true.",
+            ),
+          target: z
+            .string()
+            .max(500)
+            .optional()
+            .describe("Short label for the report, e.g. 'checkout page'. Not fetched."),
+          mode: z
+            .enum(["static", "browser"])
+            .optional()
+            .describe(
+              "static parses the HTML directly (default). browser renders it with JavaScript disabled when the server sets TASTEPRO_AUDIT_BROWSER=playwright.",
+            ),
+          maxTokens: z
+            .number()
+            .int()
+            .min(256)
+            .max(8_000)
+            .optional()
+            .describe("Approximate response budget in tokens (default 2000)."),
+        },
+        annotations: {
+          readOnlyHint: true,
+          destructiveHint: false,
+          idempotentHint: false,
+          openWorldHint: true,
+        },
+      },
+      async (args) => {
+        try {
+          if (auth && !hasScope(auth, requiredScope)) {
+            return errorResult(
+              new Error(
+                `taste_audit requires the "${requiredScope}" scope. Request it from your authorization server, or use the read-only taste_search, taste_get, and taste_guidelines tools.`,
+              ),
+            );
+          }
+
+          let html = args.html;
+          let target = args.target;
+          if (args.url) {
+            if (!audit.allowUrlFetch) {
+              return errorResult(
+                new Error(
+                  "URL input is disabled on this server. Submit the HTML directly, or enable TASTEPRO_AUDIT_ALLOW_URL_FETCH.",
+                ),
+              );
+            }
+            const fetched = await fetchAuditHtml(args.url);
+            html = fetched.html;
+            target = target ?? fetched.finalUrl;
+          }
+          if (!html) {
+            return errorResult(
+              new Error("Provide html to audit (or url when the server allows URL input)."),
+            );
+          }
+
+          const result = await audit.service.audit({
+            html,
+            target,
+            mode: args.mode ?? "static",
+            maxTokens: args.maxTokens,
+          });
+          return textResult(result);
+        } catch (error) {
+          return errorResult(error);
+        }
+      },
+    );
+  }
+
   server.registerResource(
     "catalog",
     "tastepro://catalog",
@@ -413,17 +530,7 @@ export function createTasteProServer(options: CreateServerOptions): McpServer {
   server.registerResource(
     "pack",
     new ResourceTemplate("tastepro://pack/{+id}", {
-      list: async () => {
-        const entries = await context.loader.catalog();
-        return {
-          resources: entries.map((entry) => ({
-            uri: `tastepro://pack/${entry.id}`,
-            name: entry.id,
-            description: entry.summary.slice(0, 240),
-            mimeType: "application/json",
-          })),
-        };
-      },
+      list: undefined,
       complete: {
         id: async (value) => {
           const entries = await context.loader.catalog();
@@ -465,17 +572,7 @@ export function createTasteProServer(options: CreateServerOptions): McpServer {
   server.registerResource(
     "guideline",
     new ResourceTemplate("tastepro://guideline/{+id}", {
-      list: async () => {
-        const rules = (await context.loader.guidelines()) as GuidelinePack[];
-        return {
-          resources: rules.map((rule) => ({
-            uri: `tastepro://guideline/${rule.id}`,
-            name: rule.id,
-            description: rule.text.slice(0, 240),
-            mimeType: "application/json",
-          })),
-        };
-      },
+      list: undefined,
       complete: {
         id: async (value) => {
           const rules = (await context.loader.guidelines()) as GuidelinePack[];

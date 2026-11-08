@@ -1,5 +1,12 @@
 import { spawn } from "node:child_process";
+import { readFileSync } from "node:fs";
 import { afterEach, describe, expect, it } from "vitest";
+
+const PACKAGE_VERSION = (
+  JSON.parse(readFileSync(new URL("../../package.json", import.meta.url), "utf8")) as {
+    version: string;
+  }
+).version;
 
 interface RunResult {
   code: number | null;
@@ -41,7 +48,7 @@ describe("CLI", () => {
   it("prints its version and help", async () => {
     const version = await run(["--version"]);
     expect(version.code).toBe(0);
-    expect(version.stdout.trim()).toBe("0.1.0");
+    expect(version.stdout.trim()).toBe(PACKAGE_VERSION);
 
     const help = await run(["--help"]);
     expect(help.code).toBe(0);

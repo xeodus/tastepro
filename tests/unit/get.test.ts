@@ -1,4 +1,5 @@
 import { describe, expect, it } from "vitest";
+import { estimateTokens } from "../../src/core/budget.js";
 import type { DomainPack, ReferencePack } from "../../src/core/schema.js";
 import { createTasteProContext } from "../../src/server/context.js";
 
@@ -233,7 +234,7 @@ describe("get service", () => {
       maxTokens: 128,
     });
     expect(response.truncated).toBe(true);
-    expect(String(response.packs[0]).length).toBeLessThan(1_200);
+    expect(estimateTokens(String(response.packs[0]))).toBeLessThanOrEqual(128);
     expect(String(response.packs[0])).toContain("truncated");
   });
 
@@ -244,9 +245,58 @@ describe("get service", () => {
       maxTokens: 200,
     });
     expect(response.truncated).toBe(true);
-    const pack = firstPack(response) as { id: string; playbook?: unknown };
+    expect(estimateTokens(response)).toBeLessThanOrEqual(200);
+    const pack = firstPack(response) as { id: string; kind: string; playbook?: unknown };
     expect(pack.id).toBe("domain/developer-tools");
-    expect(pack.playbook).toBeTruthy();
+    expect(pack.kind).toBe("domain");
+    expect(response.count).toBe(response.packs.length);
+
+    const roomy = await context.get.get({
+      ids: "domain/developer-tools",
+      format: "brief",
+      maxTokens: 2_400,
+    });
+    expect(roomy.truncated).toBe(false);
+    expect((firstPack(roomy) as { playbook?: unknown }).playbook).toBeTruthy();
+  });
+
+  it("keeps a tight JSON budget honest at the minimum", async () => {
+    const response = await context.get.get({
+      ids: "direction/quiet-instrument",
+      format: "brief",
+      maxTokens: 128,
+    });
+    expect(response.truncated).toBe(true);
+    expect(estimateTokens(response)).toBeLessThanOrEqual(128);
+    expect(response.count).toBe(response.packs.length);
+    const pack = firstPack(response) as {
+      id: string;
+      kind: string;
+      name: string;
+      provenance?: { commit?: string };
+    };
+    expect(pack.id).toBe("direction/quiet-instrument");
+    expect(pack.kind).toBe("direction");
+    expect(pack.name.length).toBeGreaterThan(0);
+    if (pack.provenance?.commit) expect(pack.provenance.commit).toHaveLength(40);
+  });
+
+  it("never truncates provenance or source URLs to fit a brief", async () => {
+    const response = await context.get.get({
+      ids: "direction/quiet-instrument",
+      format: "brief",
+      maxTokens: 400,
+    });
+    expect(response.truncated).toBe(true);
+    expect(estimateTokens(response)).toBeLessThanOrEqual(400);
+    const pack = firstPack(response) as {
+      sourceUrl?: string;
+      provenance?: { commit?: string; repo?: string; license?: string };
+    };
+    expect(pack.provenance?.commit).toHaveLength(40);
+    expect(pack.provenance?.repo).toMatch(/^https:\/\/github\.com\//);
+    expect(pack.provenance?.license).toBe("MIT");
+    expect(pack.sourceUrl).toMatch(/^https:\/\/github\.com\//);
   });
 
   it("renders a helpful missing-id document in Markdown mode", async () => {

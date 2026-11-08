@@ -1,7 +1,8 @@
-import { createHash } from "node:crypto";
 import { readdir, readFile, stat } from "node:fs/promises";
 import { join } from "node:path";
 import { describe, expect, it } from "vitest";
+import { computeContentHash } from "../../scripts/lib/content-hash.js";
+import { validateContent } from "../../scripts/lib/validate-content.js";
 import { ContentLoader, resolveContentDir } from "../../src/core/content/loader.js";
 import {
   type BrandPack,
@@ -55,41 +56,21 @@ describe("committed content", () => {
     expect(stats.warnings.every((warning) => warning.includes("contrast"))).toBe(true);
   });
 
-  it("recomputes the content hash from the committed catalog", async () => {
-    const [catalog, stats, lockRaw] = await Promise.all([
-      loader.catalog(),
+  it("recomputes the content hash from every served artifact", async () => {
+    const [stats, lockRaw] = await Promise.all([
       loader.stats(),
       readFile(join(contentDir, "sources.lock.json"), "utf8"),
     ]);
     const lock = JSON.parse(lockRaw) as {
       sources: Array<{ id: string; commit: string }>;
     };
-    const packs = [];
-    for (const kind of CONTENT_KINDS) {
-      if (kind === "reference") continue;
-      packs.push(...(await loader.packs(kind)));
-    }
-    packs.sort((a, b) => {
-      const byKind = a.kind.localeCompare(b.kind);
-      return byKind !== 0 ? byKind : a.name.localeCompare(b.name);
-    });
-    const references = [...(await loader.packs("reference"))].sort((a, b) =>
-      a.name.localeCompare(b.name),
-    );
-    const counts: Record<string, number> = {};
-    for (const pack of [...packs, ...references]) {
-      counts[pack.kind] = (counts[pack.kind] ?? 0) + 1;
-    }
-    const hash = createHash("sha256")
-      .update(
-        JSON.stringify({
-          catalog,
-          counts,
-          commits: lock.sources.map((source) => [source.id, source.commit]),
-        }),
-      )
-      .digest("hex");
+    const hash = await computeContentHash(contentDir, lock.sources);
     expect(hash).toBe(stats.contentHash);
+  });
+
+  it("passes the release validator", async () => {
+    const report = await validateContent(contentDir);
+    expect(report.errors).toEqual([]);
   });
 
   it("has unique ids and a matching pack for every catalog entry", async () => {
@@ -131,6 +112,25 @@ describe("committed content", () => {
       const body = await readFile(path, "utf8");
       expect(body.length, reference.id).toBeGreaterThan(200);
       expect(reference.headings.length, reference.id).toBeGreaterThan(0);
+    }
+  });
+
+  it("maps palettes and type pairings to domains through their studied sites", async () => {
+    const sites = new Map(
+      (await loader.packs("site")).map((site) => [site.id, new Set(site.domains)]),
+    );
+    for (const kind of ["palette", "type"] as const) {
+      const packs = await loader.packs(kind);
+      for (const pack of packs) {
+        if (pack.kind !== "palette" && pack.kind !== "type") continue;
+        const expected = new Set<string>();
+        for (const id of pack.seenIn) {
+          for (const domain of sites.get(id) ?? sites.get(`site/${id}`) ?? []) {
+            expected.add(domain);
+          }
+        }
+        expect(new Set(pack.domains), pack.id).toEqual(expected);
+      }
     }
   });
 

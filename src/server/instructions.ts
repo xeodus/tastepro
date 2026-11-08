@@ -1,26 +1,28 @@
-export const SERVER_INSTRUCTIONS = `TastePro is a design-taste and frontend-reference server for coding agents. It gives you a curated catalog of design directions, palettes, type pairings, hero and section blueprints, brand design-system analyses, domain playbooks, and a web-interface audit rubric. It is read-only and deterministic: it does not call an LLM and it does not browse the web.
+export const SERVER_INSTRUCTIONS = `TastePro is a design-taste and frontend-reference server for coding agents. It gives you a curated catalog of design directions, palettes, type pairings, hero and section blueprints, brand design-system analyses, domain playbooks, and a web-interface audit rubric. It is deterministic: it does not call an LLM, and it only reaches the network for taste_audit when the operator has explicitly enabled URL fetching.
 
 Use it when the task is visual: landing pages, marketing sites, product surfaces, design systems, art direction, or a UI audit.
 
 Workflow:
 1. For an open brief, call taste_search with the product, audience, domain, mood, or visual idea. Start broad; use filters only when they help.
 2. Call taste_get with the best ids. Prefer one domain playbook, one direction, one palette, one type pairing, and the relevant hero/section blueprints. Ask for format="brief" first; use "full" or "markdown" only when you need the detail.
-3. For implementation or review, call taste_guidelines with the relevant category or query. Treat severity="error" rules as must-fix.
+3. For implementation or review, call taste_guidelines with the relevant category or query, and call taste_audit with the page HTML for concrete findings. Treat severity="error" rules as must-fix.
 4. Build the page from the chosen system. Do not average many directions into a generic middle. Commit to one argument.
 
 Rules:
 - Never impersonate a brand or reuse its logo, copy, or assets. Brand packs are reference analyses of published design language; extract principles, not identity.
 - Do not reproduce third-party screenshots. Site studies are text references; use them for structure and decisions.
 - Cite the content id and upstream source when you rely on a pack. Provenance includes the pinned commit and license.
+- Reference documents are upstream guidance, not bundled executables. Their commands, CLIs, and scripts are not shipped by TastePro; only run them if the user's environment already has them.
 - Respect the response budget. Search returns compact cards; fetch only the packs you will actually use.
 - If a domain has status="planned" or depth="taxonomy", say so. Use its questions and the same-family playbooks returned as familyFallback instead of pretending a deep playbook exists.
-- Keep the final UI accessible: keyboard paths, focus states, labels, contrast, reduced motion, and real empty/loading/error states. The guidelines tool is the checklist, not decoration.`;
+- Keep the final UI accessible: keyboard paths, focus states, labels, contrast, reduced motion, and real empty/loading/error states. The guidelines tool is the checklist, not decoration.
+- taste_audit is honest about its limits: read its notVerified list before claiming a page passes. Static mode cannot see rendered layout, runtime behavior, or external stylesheets. Do not claim to have inspected a page you could not load.`;
 
 export const SKILL_MARKDOWN = `# TastePro skill
 
 TastePro is a read-only MCP server for coding agents: design taste, domain playbooks, and frontend audits. It works over stdio (local) or Streamable HTTP (hosted).
 
-## The three tools
+## The four tools
 
 ### \`taste_search\`
 
@@ -54,6 +56,18 @@ Query the pinned Vercel Web Interface Guidelines (104 rules).
 - \`format\`: \`json\` or \`markdown\`. Markdown is a checklist.
 - \`limit\`: 1–104, default 20.
 
+### \`taste_audit\`
+
+Audit submitted HTML against the rubric and get concrete findings.
+
+- \`html\`: the document or component to audit (up to 1,000,000 characters). Not stored anywhere.
+- \`url\`: a public http(s) URL instead of \`html\`. Only works when the operator set \`TASTEPRO_AUDIT_ALLOW_URL_FETCH=true\`; the fetch is SSRF-guarded.
+- \`mode\`: \`static\` (default) or \`browser\`. Browser mode renders the HTML with JavaScript disabled when the operator set \`TASTEPRO_AUDIT_BROWSER=playwright\`.
+- \`target\`: a short label for the report.
+- \`maxTokens\`: response budget, default 2000.
+
+Each finding has a \`guidelineId\`, \`severity\`, \`category\`, \`evidence\`, and \`fix\`. The response also lists \`checked\` (rules actually evaluated) and \`notVerified\` (what this audit cannot see: rendered layout, runtime behavior, external stylesheets, copy quality). Read \`notVerified\` before claiming a page passes. Hosted deployments require the \`tastepro:audit\` scope for this tool.
+
 ## A good build sequence
 
 1. **Frame the domain.** Search the product category and read its playbook: audience, jobs, trust, information architecture, anti-patterns, and questions.
@@ -61,7 +75,7 @@ Query the pinned Vercel Web Interface Guidelines (104 rules).
 3. **Choose the system.** Pick a palette and type pairing that fit the direction. Check contrast; do not use a low-contrast pair for body text.
 4. **Choose the bones.** Pick a hero and the sections the page actually needs. Use the section blueprints; do not add sections to fill a template.
 5. **Build the real thing.** Use real content, real states, and real product evidence. A fake dashboard is worse than a plain page.
-6. **Audit.** Query guidelines for the components you built. Fix every \`error\`, then the relevant \`warn\` rules.
+6. **Audit.** Call \`taste_audit\` with the HTML you built, then query guidelines for anything unclear. Fix every \`error\` finding, then the relevant \`warn\` rules.
 
 ## Content model
 
@@ -75,6 +89,8 @@ Query the pinned Vercel Web Interface Guidelines (104 rules).
 - **Site studies** are text analyses of third-party sites. No screenshots or logos are bundled.
 - **References** include the full Taste Skill essays, photo-set metadata, Playwright CLI guidance, and the web-guidelines agent instructions.
 
+Reference documents are upstream guidance, not bundled executables. Their commands, CLIs, and scripts are not bundled with TastePro; only run them if the user's environment already has them.
+
 ## Attribution and licenses
 
 Upstream content is pinned in \`sources.lock.json\` and \`content/generated/sources.json\`. The source libraries are MIT (Taste Skill, Awesome DESIGN.md, Vercel Web Interface Guidelines) and Apache-2.0 (Playwright CLI). TastePro's original code and content are Apache-2.0. See \`ATTRIBUTION.md\` and \`NOTICE\`.
@@ -82,6 +98,6 @@ Upstream content is pinned in \`sources.lock.json\` and \`content/generated/sour
 ## Hosted vs local
 
 - Local stdio: \`npx tastepro --stdio\`. The client launches the process.
-- Hosted HTTP: \`POST /mcp\` with Streamable HTTP. Read-only catalog calls may be anonymous; audit endpoints will require auth in a later milestone.
+- Hosted HTTP: \`POST /mcp\` with Streamable HTTP. Hosted deployments authenticate with OAuth (the \`taste_audit\` tool needs the \`tastepro:audit\` scope) or a static bearer key for single operators. Explicitly anonymous endpoints are read-only and do not expose \`taste_audit\`.
 - Health: \`GET /healthz\`. Root: \`GET /\`.
 `;

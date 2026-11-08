@@ -2,17 +2,50 @@
 import type { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
 import { Command } from "commander";
+import { createAuditService } from "./core/audit.js";
 import type { ContentKind, Quality, SourceId } from "./core/schema.js";
 import { CONTENT_KINDS, QUALITY_LEVELS, SOURCE_IDS } from "./core/schema.js";
+import { createPlaywrightRenderer } from "./server/audit-browser.js";
 import { createTasteProContext } from "./server/context.js";
 import { type RunningHttpServer, startHttpServer } from "./server/http.js";
 import { createLogger, type LogLevel, parseLogLevel } from "./server/logger.js";
-import { createTasteProServer } from "./server/server.js";
+import type { OAuthConfig } from "./server/oauth.js";
+import { AUDIT_SCOPE, type AuditToolOptions, createTasteProServer } from "./server/server.js";
 import { VERSION } from "./version.js";
 
 interface GlobalOptions {
   contentDir?: string;
   logLevel: LogLevel;
+}
+
+interface AuditConfig {
+  enabled: boolean;
+  allowUrlFetch: boolean;
+  browser?: string;
+  maxConcurrent?: number;
+  maxQueue?: number;
+}
+
+async function buildAudit(
+  context: ReturnType<typeof createTasteProContext>,
+  config: AuditConfig,
+): Promise<AuditToolOptions | undefined> {
+  if (!config.enabled) return undefined;
+  if (config.browser && config.browser !== "playwright") {
+    throw new Error(`Unknown audit browser "${config.browser}". Expected: playwright.`);
+  }
+  const guidelines = await context.loader.guidelines();
+  const renderer = config.browser ? await createPlaywrightRenderer() : undefined;
+  return {
+    service: createAuditService({
+      guidelines,
+      renderer,
+      maxConcurrent: config.maxConcurrent,
+      maxQueue: config.maxQueue,
+    }),
+    allowUrlFetch: config.allowUrlFetch,
+    requiredScope: AUDIT_SCOPE,
+  };
 }
 
 function parsePort(value: string): number {
@@ -86,10 +119,11 @@ function globalOptions(command: Command): GlobalOptions {
   };
 }
 
-async function runStdio(options: GlobalOptions): Promise<void> {
+async function runStdio(options: GlobalOptions & { audit?: AuditConfig }): Promise<void> {
   const logger = createLogger(options.logLevel);
   const context = createTasteProContext({ contentDir: options.contentDir });
-  const server: McpServer = createTasteProServer({ context });
+  const audit = await buildAudit(context, options.audit ?? { enabled: true, allowUrlFetch: false });
+  const server: McpServer = createTasteProServer({ context, audit });
   const transport = new StdioServerTransport();
   transport.onclose = () => {
     logger.debug("stdio transport closed");
@@ -111,13 +145,51 @@ async function runHttp(
     apiKey?: string;
     corsOrigin?: string;
     allowedHosts?: string[];
+    allowAnonymous?: boolean;
     jsonResponse: boolean;
+    sessionMode: "stateless" | "stateful";
     sessionTtlMs?: number;
     maxSessions?: number;
+    audit: AuditConfig;
+    publicUrl?: string;
+    oauthIssuer?: string;
+    oauthAudience?: string;
+    oauthJwksUri?: string;
   },
 ): Promise<void> {
   const logger = createLogger(options.logLevel);
   const context = createTasteProContext({ contentDir: options.contentDir });
+
+  let oauth: OAuthConfig | undefined;
+  if (options.oauthIssuer) {
+    if (!options.publicUrl) {
+      logger.error(
+        "TASTEPRO_PUBLIC_URL is required when OAuth is configured; it builds the protected-resource metadata URL.",
+      );
+      process.exitCode = 1;
+      return;
+    }
+    const base = options.publicUrl.replace(/\/$/, "");
+    oauth = {
+      issuer: options.oauthIssuer.replace(/\/$/, ""),
+      audience: options.oauthAudience ?? `${base}/mcp`,
+      resource: base,
+      requiredScope: AUDIT_SCOPE,
+      jwksUri: options.oauthJwksUri,
+    };
+  }
+
+  let auditTool: AuditToolOptions | undefined;
+  try {
+    auditTool = await buildAudit(context, options.audit);
+  } catch (error) {
+    logger.error("failed to configure the audit tool", {
+      error: error instanceof Error ? error.message : String(error),
+    });
+    process.exitCode = 1;
+    return;
+  }
+
   let running: RunningHttpServer;
   try {
     running = await startHttpServer({
@@ -125,9 +197,13 @@ async function runHttp(
       host: options.host,
       port: options.port,
       apiKey: options.apiKey,
+      oauth,
       corsOrigin: options.corsOrigin,
       allowedHosts: options.allowedHosts,
+      allowAnonymous: options.allowAnonymous,
+      audit: auditTool,
       jsonResponse: options.jsonResponse,
+      sessionMode: options.sessionMode,
       sessionTtlMs: options.sessionTtlMs,
       maxSessions: options.maxSessions,
       logger,
@@ -144,7 +220,9 @@ async function runHttp(
     url: running.url,
     endpoint: `${running.url}/mcp`,
     health: `${running.url}/healthz`,
-    auth: options.apiKey ? "bearer" : "none",
+    auth: oauth ? "oauth" : options.apiKey ? "bearer" : "none",
+    audit: auditTool ? "enabled" : "disabled",
+    sessionMode: options.sessionMode,
     contentDir: context.loader.contentDir,
   });
 
@@ -180,6 +258,11 @@ program
   .option("--port <port>", "HTTP port", process.env.TASTEPRO_PORT ?? "3000")
   .option("--api-key <key>", "require this bearer token on /mcp", process.env.TASTEPRO_API_KEY)
   .option(
+    "--allow-anonymous",
+    "allow an unauthenticated non-loopback /mcp (local containers only)",
+    process.env.TASTEPRO_ALLOW_ANONYMOUS === "true",
+  )
+  .option(
     "--cors-origin <origins>",
     "comma-separated allowed browser origins, or *",
     process.env.TASTEPRO_CORS_ORIGIN,
@@ -190,8 +273,54 @@ program
     process.env.TASTEPRO_ALLOWED_HOSTS,
   )
   .option("--sse", "use SSE streaming responses instead of JSON responses", false)
+  .option(
+    "--stateful",
+    "use stateful HTTP sessions (required for SSE)",
+    process.env.TASTEPRO_HTTP_MODE === "stateful",
+  )
   .option("--session-ttl-minutes <minutes>", "idle HTTP session TTL", "30")
   .option("--max-sessions <count>", "maximum concurrent HTTP sessions", "500")
+  .option("--no-audit", "disable the taste_audit tool")
+  .option(
+    "--audit-allow-url-fetch",
+    "allow the taste_audit url input (SSRF-guarded fetch)",
+    process.env.TASTEPRO_AUDIT_ALLOW_URL_FETCH === "true",
+  )
+  .option(
+    "--audit-browser <mode>",
+    "browser renderer for taste_audit (playwright)",
+    process.env.TASTEPRO_AUDIT_BROWSER,
+  )
+  .option(
+    "--audit-max-concurrency <count>",
+    "maximum concurrent taste_audit requests",
+    process.env.TASTEPRO_AUDIT_MAX_CONCURRENCY ?? "2",
+  )
+  .option(
+    "--audit-max-queue <count>",
+    "maximum queued taste_audit requests",
+    process.env.TASTEPRO_AUDIT_MAX_QUEUE ?? "8",
+  )
+  .option(
+    "--public-url <url>",
+    "public origin, used for OAuth metadata and hosted links",
+    process.env.TASTEPRO_PUBLIC_URL,
+  )
+  .option(
+    "--oauth-issuer <url>",
+    "OAuth issuer (IdP) URL; enables OAuth on /mcp",
+    process.env.TASTEPRO_OAUTH_ISSUER,
+  )
+  .option(
+    "--oauth-audience <aud>",
+    "expected OAuth audience (default: <public-url>/mcp)",
+    process.env.TASTEPRO_OAUTH_AUDIENCE,
+  )
+  .option(
+    "--oauth-jwks-uri <url>",
+    "JWKS endpoint; OIDC discovery is used when omitted",
+    process.env.TASTEPRO_OAUTH_JWKS_URI,
+  )
   .option("--content-dir <path>", "content directory", process.env.TASTEPRO_CONTENT_DIR)
   .option(
     "--log-level <level>",
@@ -201,6 +330,13 @@ program
   .action(async () => {
     const options = globalOptions(program);
     const opts = program.opts();
+    const audit: AuditConfig = {
+      enabled: opts.audit !== false && process.env.TASTEPRO_AUDIT_ENABLED !== "false",
+      allowUrlFetch: Boolean(opts.auditAllowUrlFetch),
+      browser: opts.auditBrowser ? String(opts.auditBrowser) : undefined,
+      maxConcurrent: Number.parseInt(String(opts.auditMaxConcurrency), 10),
+      maxQueue: Number.parseInt(String(opts.auditMaxQueue), 10),
+    };
     if (opts.http) {
       await runHttp({
         ...options,
@@ -209,13 +345,20 @@ program
         apiKey: opts.apiKey ? String(opts.apiKey) : undefined,
         corsOrigin: opts.corsOrigin ? String(opts.corsOrigin) : undefined,
         allowedHosts: splitList(opts.allowedHosts ? String(opts.allowedHosts) : undefined),
+        allowAnonymous: Boolean(opts.allowAnonymous),
         jsonResponse: !opts.sse,
+        sessionMode: opts.stateful ? "stateful" : "stateless",
         sessionTtlMs: Math.max(30_000, Number(opts.sessionTtlMinutes) * 60_000),
         maxSessions: Math.max(1, Number.parseInt(String(opts.maxSessions), 10)),
+        audit,
+        publicUrl: opts.publicUrl ? String(opts.publicUrl) : undefined,
+        oauthIssuer: opts.oauthIssuer ? String(opts.oauthIssuer) : undefined,
+        oauthAudience: opts.oauthAudience ? String(opts.oauthAudience) : undefined,
+        oauthJwksUri: opts.oauthJwksUri ? String(opts.oauthJwksUri) : undefined,
       });
       return;
     }
-    await runStdio(options);
+    await runStdio({ ...options, audit });
   });
 
 program

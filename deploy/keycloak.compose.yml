@@ -1,0 +1,25 @@
+name: tastepro-keycloak
+
+# Reference OAuth IdP for the automated smoke test and the deployment guide.
+#
+#   docker compose -f deploy/keycloak.compose.yml up -d
+#   npm run smoke:oauth
+#   docker compose -f deploy/keycloak.compose.yml down -v
+#
+# This is a development realm with known passwords and HTTP. Never use it as a
+# production IdP.
+
+services:
+  keycloak:
+    image: quay.io/keycloak/keycloak:26.5.0
+    command: ["start-dev", "--import-realm"]
+    restart: unless-stopped
+    environment:
+      KC_BOOTSTRAP_ADMIN_USERNAME: admin
+      KC_BOOTSTRAP_ADMIN_PASSWORD: admin
+      KC_HTTP_PORT: "8080"
+      KC_HOSTNAME_STRICT: "false"
+    ports:
+      - "127.0.0.1:8080:8080"
+    volumes:
+      - ./keycloak/realm.json:/opt/keycloak/data/import/realm.json:ro

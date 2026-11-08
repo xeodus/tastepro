@@ -31,9 +31,10 @@ afterAll(async () => {
 });
 
 describe("stdio MCP server", () => {
-  it("advertises exactly the three read-only tools", async () => {
+  it("advertises exactly the four read-only tools", async () => {
     const tools = await client.listTools();
     expect(tools.tools.map((tool) => tool.name).sort()).toEqual([
+      "taste_audit",
       "taste_get",
       "taste_guidelines",
       "taste_search",
@@ -43,6 +44,44 @@ describe("stdio MCP server", () => {
       expect(tool.annotations?.destructiveHint).toBe(false);
       expect(tool.inputSchema.type).toBe("object");
     }
+  });
+
+  it("audits submitted HTML against the rubric without storing it", async () => {
+    const audit = await client.callTool({
+      name: "taste_audit",
+      arguments: {
+        html: '<html><body><img src="/hero.png"><div onclick="go()">Go</div></body></html>',
+        target: "landing page",
+      },
+    });
+    expect(audit.isError).toBeFalsy();
+    const body = jsonOf(audit);
+    expect(body.mode).toBe("static");
+    expect(body.target).toBe("landing page");
+    expect(body.findings.map((finding: { guidelineId: string }) => finding.guidelineId)).toEqual(
+      expect.arrayContaining([
+        "guideline/accessibility-images-need-alt-or-alt-if-decorative",
+        "guideline/anti-patterns-div-or-span-with-click-handlers-should-be-button",
+      ]),
+    );
+    expect(body.summary.errors).toBeGreaterThan(0);
+    expect(body.notVerified.join(" ")).toMatch(/rendered layout/i);
+  });
+
+  it("rejects URL input and unconfigured browser mode with actionable errors", async () => {
+    const url = await client.callTool({
+      name: "taste_audit",
+      arguments: { url: "https://example.com/" },
+    });
+    expect(url.isError).toBe(true);
+    expect(textOf(url)).toMatch(/URL input is disabled/i);
+
+    const browser = await client.callTool({
+      name: "taste_audit",
+      arguments: { html: "<html></html>", mode: "browser" },
+    });
+    expect(browser.isError).toBe(true);
+    expect(textOf(browser)).toMatch(/browser audit is not configured/i);
   });
 
   it("serves search, get, and guidelines over JSON-RPC", async () => {
@@ -108,6 +147,11 @@ describe("stdio MCP server", () => {
   it("serves static resources and resource templates", async () => {
     const resources = await client.listResources();
     const uris = resources.resources.map((resource) => resource.uri);
+    // Resource templates are read by URI and discovered through taste_search;
+    // enumerating every pack here would cost roughly 77k tokens.
+    expect(resources.resources).toHaveLength(4);
+    expect(uris.every((uri) => !uri.startsWith("tastepro://pack/"))).toBe(true);
+    expect(uris.every((uri) => !uri.startsWith("tastepro://guideline/"))).toBe(true);
     expect(uris).toEqual(
       expect.arrayContaining([
         "tastepro://catalog",

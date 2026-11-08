@@ -10,27 +10,29 @@ TastePro speaks **stdio** for local clients and **Streamable HTTP** for hosted
 clients. The same server works with ChatGPT, Claude, OpenCode, Cursor, and any
 MCP-compatible agent.
 
-## Status: M0
+## Status: 1.0
 
-M0 ships the read-only foundation:
+The current build ships the read-only foundation plus the hosted audit:
 
 - 873 committed content packs across 14 kinds.
 - 40-domain taxonomy with 15 deep seed playbooks and same-family fallback for
   uncovered domains.
 - 104-rule web-interface audit rubric with severity and category filters.
-- `taste_search`, `taste_get`, and `taste_guidelines`.
+- `taste_search`, `taste_get`, `taste_guidelines`, and `taste_audit`, a static
+  HTML audit that cites the rubric and admits what it cannot verify.
 - Static resources, resource templates, and two design prompts.
 - stdio and Streamable HTTP transports.
-- Bearer auth, host allowlists, CORS, body limits, session TTL, and health
-  checks for the HTTP transport.
+- OAuth resource-server auth for hosted deployments, plus bearer auth, host
+  allowlists, CORS, body limits, session TTL, and health checks for the HTTP
+  transport.
 - Content ingestion from four pinned upstream repositories.
 - Unit, integration, contract, and production-tier tests.
 - Docker and staging scaffolding.
 
-Not in M0: browser execution for the audit loop, OAuth, hosted audit
-endpoints, and the six original fully built templates. M0 gives agents the
-audit rubric and a prompt that plans the audit; the Playwright-driven execution
-loop is a later milestone. See [Roadmap](#roadmap).
+Not included: executed page JavaScript during audits (browser mode renders with
+JavaScript disabled), artifact storage, or an authorization server — TastePro
+validates tokens from your IdP, it does not issue them. See
+[Roadmap](#roadmap).
 
 ## Why it exists
 
@@ -184,6 +186,33 @@ Use `severity: "error"` for must-fix issues. The Markdown format is a
 copy-paste checklist with rule ids and source lines. Rules are pinned to the
 Vercel Web Interface Guidelines commit recorded in `sources.lock.json`.
 
+### `taste_audit`
+
+Audit submitted HTML against the rubric. Findings cite a `guidelineId`,
+`severity`, `category`, `evidence`, and a `fix`; the response also lists
+`checked` (rules actually evaluated) and `notVerified` (rendered layout,
+runtime behavior, external stylesheets, and copy quality are out of scope for
+a static audit).
+
+```json
+{
+  "html": "<html><body><img src='/hero.png'></body></html>",
+  "target": "landing page"
+}
+```
+
+- `url` input requires `TASTEPRO_AUDIT_ALLOW_URL_FETCH=true`; the fetch is
+  SSRF-guarded (private, loopback, and link-local addresses are refused, with
+  redirect, size, and timeout caps).
+- `mode: "browser"` requires `TASTEPRO_AUDIT_BROWSER=playwright` and the optional
+  `Dockerfile.audit` image. It renders with JavaScript disabled, blocks service
+  workers, aborts every subresource request, adds a layout-overflow check, and
+  is bounded by hard timeouts and a concurrency/queue gate.
+- On hosted deployments the tool requires the `tastepro:audit` OAuth scope.
+  Anonymous endpoints do not expose it.
+- Submitted documents are never stored, logged, or echoed; only short evidence
+  snippets appear in the response.
+
 ## Resources and prompts
 
 Static resources:
@@ -198,6 +227,10 @@ Resource templates:
 - `tastepro://pack/{+id}` — any pack as JSON. References include the full body.
 - `tastepro://guideline/{+id}` — one guideline rule as JSON.
 
+Templates are not enumerated in `resources/list`; listing every pack would cost
+roughly 77k tokens. Use `taste_search` to discover ids, or URI completion on the
+template. `resources/list` returns only the four static resources above.
+
 Prompts:
 
 - `design_brief` — turn a project description into a concrete brief.
@@ -208,8 +241,11 @@ Prompts:
 ## HTTP transport
 
 The HTTP transport uses the MCP Streamable HTTP protocol at `POST /mcp`.
-Sessions are stateful and use the `Mcp-Session-Id` header. JSON responses are
-the default; `--sse` enables SSE streaming responses.
+**Stateless is the production default**: every request is independent, so any
+replica can serve it and no session store is needed. `--stateful` (or
+`TASTEPRO_HTTP_MODE=stateful`) enables sessions for SSE (`--sse`) and
+resumability. In stateless mode `GET`/`DELETE` return `405` and
+`--sse` is rejected at startup.
 
 ```bash
 TASTEPRO_API_KEY="$(openssl rand -hex 32)" \
@@ -230,28 +266,63 @@ Health, readiness, and root metadata stay anonymous:
 
 Other hardening:
 
+- A non-loopback bind requires auth — OAuth (`TASTEPRO_OAUTH_ISSUER` plus
+  `TASTEPRO_PUBLIC_URL`) or `TASTEPRO_API_KEY` — and
+  `TASTEPRO_ALLOWED_HOSTS`; anonymous hosting needs the explicit
+  `TASTEPRO_ALLOW_ANONYMOUS=true` opt-in and never exposes `taste_audit`.
+- With OAuth configured, `/mcp` verifies JWT access tokens (issuer, audience,
+  expiry, signature via the IdP's JWKS or OIDC discovery) and serves
+  `/.well-known/oauth-protected-resource` metadata. OAuth and a static API key
+  cannot be combined. Stateless mode applies the token's scopes per request.
 - `TASTEPRO_ALLOWED_HOSTS` rejects unexpected `Host` headers.
-- CORS is deny-by-default for browser origins unless configured.
+- Browser origins are deny-by-default; an untrusted `Origin` is rejected before
+  a request is handled.
 - Request bodies are capped at 1 MiB.
-- Sessions expire after 30 minutes idle; the server caps concurrent sessions.
+- Stateful sessions expire after 30 minutes idle and are capped; stateless mode
+  has no sessions.
+- `taste_audit` is bounded by a concurrency/queue gate. Browser mode blocks all
+  subresource requests and uses hard timeouts.
 - `SIGINT`/`SIGTERM` close sessions and drain the HTTP server.
 
-Hosted read-only access may be anonymous for clients that cannot send a static
-bearer token, such as ChatGPT custom connectors in M0. Hosted audit endpoints
-will require auth. OAuth validation is planned before hosted audit is exposed.
+For a production-shaped self-host deployment, use
+`deploy/production.compose.yml` with `deploy/production.env.example`.
+
+### OAuth with Keycloak
+
+The repository includes a reference Keycloak realm and an end-to-end smoke:
+
+```bash
+docker compose -f deploy/keycloak.compose.yml up -d
+npm run smoke:oauth
+docker compose -f deploy/keycloak.compose.yml down -v
+```
+
+It checks a real token, the `tastepro:audit` scope, scope denial, and audience
+rejection. See [docs/deployment.md](docs/deployment.md) for the production IdP
+setup.
 
 ## Configuration
 
-| Variable                 | Default            | Purpose                                    |
-| ------------------------ | ------------------ | ------------------------------------------ |
-| `TASTEPRO_CONTENT_DIR`   | package `content/` | Content directory                          |
-| `TASTEPRO_HOST`          | `127.0.0.1`        | HTTP bind host                             |
-| `TASTEPRO_PORT`          | `3000`             | HTTP port                                  |
-| `TASTEPRO_API_KEY`       | unset              | Require bearer auth on `/mcp`              |
-| `TASTEPRO_CORS_ORIGIN`   | unset (deny)       | Comma-separated browser origins, or `*`    |
-| `TASTEPRO_ALLOWED_HOSTS` | unset              | Comma-separated `Host` allowlist           |
-| `TASTEPRO_LOG_LEVEL`     | `info`             | `debug`, `info`, `warn`, `error`, `silent` |
-| `TASTEPRO_PUBLIC_URL`    | unset              | Public base URL for hosted links (M2+)     |
+| Variable                         | Default            | Purpose                                             |
+| -------------------------------- | ------------------ | --------------------------------------------------- |
+| `TASTEPRO_CONTENT_DIR`           | package `content/` | Content directory                                   |
+| `TASTEPRO_HOST`                  | `127.0.0.1`        | HTTP bind host                                      |
+| `TASTEPRO_PORT`                  | `3000`             | HTTP port                                           |
+| `TASTEPRO_API_KEY`               | unset              | Require static bearer auth on `/mcp`                |
+| `TASTEPRO_OAUTH_ISSUER`          | unset              | OAuth issuer URL; enables OAuth on `/mcp`           |
+| `TASTEPRO_OAUTH_AUDIENCE`        | `<public-url>/mcp` | Expected OAuth audience                             |
+| `TASTEPRO_OAUTH_JWKS_URI`        | OIDC discovery     | JWKS endpoint                                       |
+| `TASTEPRO_PUBLIC_URL`            | unset              | Public origin; required with OAuth                  |
+| `TASTEPRO_HTTP_MODE`             | `stateless`        | `stateful` enables sessions and SSE                 |
+| `TASTEPRO_ALLOW_ANONYMOUS`       | `false`            | Explicit opt-in for unauthenticated non-loopback    |
+| `TASTEPRO_CORS_ORIGIN`           | unset (deny)       | Comma-separated browser origins, or `*`             |
+| `TASTEPRO_ALLOWED_HOSTS`         | unset              | Comma-separated `Host` allowlist                    |
+| `TASTEPRO_AUDIT_ENABLED`         | `true`             | Set `false` to remove the `taste_audit` tool        |
+| `TASTEPRO_AUDIT_ALLOW_URL_FETCH` | `false`            | Allow the SSRF-guarded `url` input on `taste_audit` |
+| `TASTEPRO_AUDIT_BROWSER`         | unset              | `playwright` enables browser rendering (JS off)     |
+| `TASTEPRO_AUDIT_MAX_CONCURRENCY` | `2`                | Maximum in-flight audits                            |
+| `TASTEPRO_AUDIT_MAX_QUEUE`       | `8`                | Maximum queued audits before returning busy         |
+| `TASTEPRO_LOG_LEVEL`             | `info`             | `debug`, `info`, `warn`, `error`, `silent`          |
 
 CLI flags override environment variables. Run `node dist/cli.js --help` for the
 full list.
@@ -283,9 +354,9 @@ Every pack carries:
 }
 ```
 
-The `contentHash` in `content/generated/stats.json` covers the catalog, counts,
-and source commits. `npm run validate` recomputes it and fails if the committed
-content drifts.
+The `contentHash` in `content/generated/stats.json` covers the catalog, every
+full pack file, reference bodies, and source commits. `npm run validate`
+recomputes it from the served files and fails if the committed content drifts.
 
 See [docs/content.md](docs/content.md) for the content model and authoring
 rules.
@@ -331,12 +402,14 @@ TastePro is read-only. It has no write tools, no database, no user accounts,
 and no server-side LLM calls. The main risks are content-path traversal,
 resource exhaustion, and exposing an unauthenticated hosted endpoint.
 
-Mitigations in M0:
+Mitigations in the current build:
 
 - Content paths are resolved and checked against the content directory.
 - Reference bodies are validated at build time and at read time.
 - HTTP request bodies are capped at 1 MiB.
-- HTTP sessions have an idle TTL and a concurrent-session cap.
+- Stateless HTTP keeps no sessions; stateful mode has an idle TTL and a
+  concurrent-session cap.
+- Audit requests are bounded by a concurrency/queue gate.
 - Host allowlists and CORS controls are available.
 - Bearer auth is supported for hosted read-only access.
 - Logs go to stderr, never stdout, so stdio JSON-RPC stays clean.
@@ -361,12 +434,14 @@ assets.
 
 ## Roadmap
 
-- **M0 (this release):** read-only catalog, playbooks, references, audit rubric,
-  stdio + HTTP, hardening, content pipeline, tests, Docker/staging scaffolding.
+- **M0 (initial release):** read-only catalog, playbooks, references, audit
+  rubric, stdio + HTTP, hardening, content pipeline, tests, Docker/staging
+  scaffolding.
 - **M1:** six original fully built templates; richer domain playbooks; client
   recipes; hosted read-only deployment.
-- **M2:** Playwright-based browser audit execution; hosted audit endpoints with
-  OAuth; artifact storage and signed links.
+- **M2 (current):** `taste_audit` with static checks, SSRF-guarded URL input,
+  opt-in browser rendering, and OAuth resource-server auth for hosted
+  deployments.
 - **M3:** team features, private content packs, and a hosted control plane.
 
 ## Contributing

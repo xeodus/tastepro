@@ -4,7 +4,9 @@
     "kind": "palette",
     "name": "Black and crimson",
     "summary": "Black with off-white text and mid-grey texture takes nearly the whole page, and the last sections may invert to off-white with black type. Deep crimson is scattered sparingly: a few characters in a heading, a slider fill, the one button.",
-    "domains": [],
+    "domains": [
+      "developer-tools"
+    ],
     "sectors": [],
     "tags": [
       "dark-neutral",
@@ -93,7 +95,9 @@
     "kind": "palette",
     "name": "Blue, red, black",
     "summary": "Three flat poster colours each own whole sections: electric blue, red-orange and black, with white for the areas that show the product. No tints sit between them, and blue is the button colour on white.",
-    "domains": [],
+    "domains": [
+      "b2b-saas"
+    ],
     "sectors": [],
     "tags": [
       "flat-loud"
@@ -215,7 +219,10 @@
     "kind": "palette",
     "name": "Blush and aubergine",
     "summary": "Blush pink and dark aubergine alternate as full fields and serve as each other's text colour, in roughly equal shares. There is no third colour: the button is a solid block of whichever of the two is not the ground.",
-    "domains": [],
+    "domains": [
+      "creative-agencies",
+      "events"
+    ],
     "sectors": [],
     "tags": [
       "two-tone"
@@ -304,7 +311,10 @@
     "kind": "palette",
     "name": "Blush, sage, slate",
     "summary": "Slate blue-grey, sage and blush share the page as soft flat blocks, one per chapter or menu tile, with dark type; one deep olive block anchors the close with pale type. Olive is also the button colour, and photographs of sea and sky do the rest.",
-    "domains": [],
+    "domains": [
+      "creative-agencies",
+      "ecommerce-dtc"
+    ],
     "sectors": [],
     "tags": [
       "pastel-fields",
@@ -430,7 +440,11 @@
     "kind": "palette",
     "name": "Bone, green, chocolate",
     "summary": "Bone ground with chocolate-brown text takes most of the page. The green is spent on one large flat block, about a third of a screen, and on the button; all other colour comes from photographs.",
-    "domains": [],
+    "domains": [
+      "portfolios",
+      "product-surfaces",
+      "productivity"
+    ],
     "sectors": [],
     "tags": [
       "light-neutral",
@@ -595,7 +609,10 @@
     "kind": "palette",
     "name": "Bottle ink, yellow",
     "summary": "Off-white ground with all type in a near-black bottle green instead of black. Yellow is the only saturated note: the button or one small object on most screens, and one later section that turns fully yellow.",
-    "domains": [],
+    "domains": [
+      "creative-agencies",
+      "portfolios"
+    ],
     "sectors": [],
     "tags": [
       "mono-accent"
@@ -684,7 +701,10 @@
     "kind": "palette",
     "name": "Bubblegum and lime",
     "summary": "A flat bubblegum pink field with black type from top to bottom. Fluorescent lime is the action colour only: the menu button, one highlighter swipe behind a word and the main button.",
-    "domains": [],
+    "domains": [
+      "creative-agencies",
+      "fashion-beauty"
+    ],
     "sectors": [],
     "tags": [
       "single-field"
@@ -771,7 +791,9 @@
     "kind": "palette",
     "name": "Burgundy and bubblegum",
     "summary": "Deep burgundy is the ground for the whole page and bubblegum pink sets every word on it. The button and the active state of a control are solid pink with burgundy type; product photographs supply any other colour.",
-    "domains": [],
+    "domains": [
+      "restaurants-food"
+    ],
     "sectors": [],
     "tags": [
       "two-tone"
@@ -844,7 +866,9 @@
     "kind": "palette",
     "name": "Candy chapters",
     "summary": "Each section owns one flat candy colour: yellow first, then white, pink, cyan and orange, with all type in black. Magenta is kept for buttons alone.",
-    "domains": [],
+    "domains": [
+      "ecommerce-dtc"
+    ],
     "sectors": [],
     "tags": [
       "flat-loud"
@@ -978,7 +1002,9 @@
     "kind": "palette",
     "name": "Candy on black",
     "summary": "Black ground and dark photographs take nearly all of the surface. The only flat colour is a solid block behind each title, which takes a new candy pastel per project (mint, cyan, lemon, orange, cornflower); cyan is the default for the button.",
-    "domains": [],
+    "domains": [
+      "creative-agencies"
+    ],
     "sectors": [],
     "tags": [
       "pastel-fields"
@@ -1114,7 +1140,9 @@
     "kind": "palette",
     "name": "Card pastels",
     "summary": "Neutral paper ground and black type, with each card or tile given its own flat pastel (periwinkle, lime, amber or cyan), never two alike side by side. Magenta is reserved for the logo, the email address and text links.",
-    "domains": [],
+    "domains": [
+      "creative-agencies"
+    ],
     "sectors": [],
     "tags": [
       "pastel-fields"
@@ -1238,7 +1266,10 @@
     "kind": "palette",
     "name": "Carmine field",
     "summary": "A deep red field bookends or fills the page, with white type and pale pink secondary lines; work shown in between sits on flat charcoal so it keeps its own colours. The button is a pale pink block with red type.",
-    "domains": [],
+    "domains": [
+      "culture-arts",
+      "portfolios"
+    ],
     "sectors": [],
     "tags": [
       "single-field"
@@ -1325,7 +1356,9 @@
     "kind": "palette",
     "name": "Charcoal and primaries",
     "summary": "A charcoal ground holds flat poster primaries assigned to whole panels: red, blue, teal green and yellow, each placed against a different one. Type is white, or black on yellow; teal green is the button colour on charcoal.",
-    "domains": [],
+    "domains": [
+      "culture-arts"
+    ],
     "sectors": [],
     "tags": [
       "flat-loud"
@@ -1447,7 +1480,10 @@
     "kind": "palette",
     "name": "Charcoal and sage",
     "summary": "Charcoal holds the page with off-white text, and one section may flip to a pale concrete tone with dark text. Colour comes from the photographs; grey sage is used for the single button and the active state of a control.",
-    "domains": [],
+    "domains": [
+      "ecommerce-dtc",
+      "portfolios"
+    ],
     "sectors": [],
     "tags": [
       "dark-neutral",
@@ -1537,7 +1573,10 @@
     "kind": "palette",
     "name": "Cobalt field",
     "summary": "One electric cobalt fills everything, with white and pale-blue type; photographs are tinted into blue monotone or kept as small thumbnails. A single yellow dot or button is the only other colour on the page.",
-    "domains": [],
+    "domains": [
+      "creative-agencies",
+      "portfolios"
+    ],
     "sectors": [],
     "tags": [
       "single-field"
@@ -1611,7 +1650,9 @@
     "kind": "palette",
     "name": "Cobalt on sand",
     "summary": "Sand paper and one cobalt do everything: text, drawings and solid shapes are all the same blue. The button is a cobalt block with sand-coloured type, and no black or second hue is used.",
-    "domains": [],
+    "domains": [
+      "b2b-saas"
+    ],
     "sectors": [],
     "tags": [
       "two-tone"
@@ -1686,7 +1727,11 @@
     "kind": "palette",
     "name": "Cool grey, cobalt",
     "summary": "Cool pale grey holds the page with near-black type and nothing else tinted. Cobalt starts as the button and one highlighted sentence, takes one whole section as a flat field with white text, then returns as a single button block.",
-    "domains": [],
+    "domains": [
+      "b2b-saas",
+      "creative-agencies",
+      "portfolios"
+    ],
     "sectors": [],
     "tags": [
       "mono-accent"
@@ -1776,7 +1821,9 @@
     "kind": "palette",
     "name": "Forest and lime",
     "summary": "Forest green, black and white sections alternate, with forest green holding the most; photographs stay in moss greens and stone browns. Pale lime sits on small squares only, such as arrow buttons and the closing wordmark.",
-    "domains": [],
+    "domains": [
+      "b2b-saas"
+    ],
     "sectors": [],
     "tags": [
       "dark-neutral",
@@ -1877,7 +1924,9 @@
     "kind": "palette",
     "name": "Frost and slate",
     "summary": "Cool white and one paler blue-grey step hold everything, with type in dark slate instead of black. Teal appears once per screen at most, as the primary button or one small detail beside the product photograph.",
-    "domains": [],
+    "domains": [
+      "ecommerce-dtc"
+    ],
     "sectors": [],
     "tags": [
       "light-neutral"
@@ -1953,7 +2002,10 @@
     "kind": "palette",
     "name": "Graphite and orange",
     "summary": "Graphite and cool light-grey sections alternate, graphite taking about two thirds, and photographs are desaturated so nothing competes. Safety orange marks the buttons, one thick solid bar across the top of the page and the highlighted item in a list or chart.",
-    "domains": [],
+    "domains": [
+      "creative-agencies",
+      "fintech-payments"
+    ],
     "sectors": [],
     "tags": [
       "mono-accent",
@@ -2044,7 +2096,10 @@
     "kind": "palette",
     "name": "Green-black and bone",
     "summary": "Bone type on green-black from top to bottom, with panels and drawn details barely lighter than the ground so photographs supply the colour. Pale jade is for the booking or contact button alone.",
-    "domains": [],
+    "domains": [
+      "creative-agencies",
+      "travel-hospitality"
+    ],
     "sectors": [],
     "tags": [
       "dark-neutral",
@@ -2121,7 +2176,9 @@
     "kind": "palette",
     "name": "Grey, mint, orange",
     "summary": "Black on white to start, then whole sections flood with flat mid-grey, acid mint and orange in turn. Photographs inside a flooded section are shown in black-and-white, and mint is also the button colour on white and black.",
-    "domains": [],
+    "domains": [
+      "music"
+    ],
     "sectors": [],
     "tags": [
       "flat-loud"
@@ -2343,7 +2400,11 @@
     "kind": "palette",
     "name": "Lunar and bronze",
     "summary": "Soft black holds the page with panels one step lighter, white text and grey secondary lines, so photographs supply all the colour. Muted bronze goes on small markers and the one button only.",
-    "domains": [],
+    "domains": [
+      "culture-arts",
+      "developer-tools",
+      "portfolios"
+    ],
     "sectors": [],
     "tags": [
       "dark-neutral"
@@ -2420,7 +2481,9 @@
     "kind": "palette",
     "name": "Mint and pink",
     "summary": "Near-white base with black type; mint and pink are the only two colours and each stands for one side of the product. They first appear as small circles, then as full-screen section fields, and deep green is used only for the button.",
-    "domains": [],
+    "domains": [
+      "fintech-payments"
+    ],
     "sectors": [],
     "tags": [
       "pastel-fields"
@@ -2605,7 +2668,9 @@
     "kind": "palette",
     "name": "Navy and pink",
     "summary": "One navy field runs the entire page. Pink does everything else, from the name and headings to body text, and fills one solid button.",
-    "domains": [],
+    "domains": [
+      "culture-arts"
+    ],
     "sectors": [],
     "tags": [
       "two-tone",
@@ -2679,7 +2744,10 @@
     "kind": "palette",
     "name": "Navy on white",
     "summary": "Pure white pages with navy type sit between full-bleed photographs, opening on near-black and closing on a warm grey footer. Tangerine is one small tab or button, never larger than a thumbnail.",
-    "domains": [],
+    "domains": [
+      "real-estate",
+      "travel-hospitality"
+    ],
     "sectors": [],
     "tags": [
       "light-neutral",
@@ -2782,7 +2850,9 @@
     "kind": "palette",
     "name": "Newsprint and brass",
     "summary": "Warm paper grey with near-black type holds the upper page, then whole sections flip to near-black with paper-grey type; no section is tinted. Brass yellow marks one small detail per screen, such as the button or a single word.",
-    "domains": [],
+    "domains": [
+      "creative-agencies"
+    ],
     "sectors": [],
     "tags": [
       "light-neutral"
@@ -2871,7 +2941,12 @@
     "kind": "palette",
     "name": "Night and cornflower",
     "summary": "Blue-black ground and slate panels with silver-white text fill the page; no section changes colour. Cornflower blue marks the buttons and at most one word in a heading.",
-    "domains": [],
+    "domains": [
+      "fintech-payments",
+      "portfolios",
+      "product-surfaces",
+      "productivity"
+    ],
     "sectors": [],
     "tags": [
       "dark-neutral"
@@ -2948,7 +3023,9 @@
     "kind": "palette",
     "name": "Olive on bone",
     "summary": "A bone page with every word, large or small, in one olive green; the footer inverts to a solid olive field with bone text. Photography supplies all other colour, and the button is the same olive, filled.",
-    "domains": [],
+    "domains": [
+      "travel-hospitality"
+    ],
     "sectors": [],
     "tags": [
       "two-tone",
@@ -3035,7 +3112,10 @@
     "kind": "palette",
     "name": "Orange and black",
     "summary": "Hot orange is the page: one flat field with blue-black type, flipping at a hard horizontal seam to a white section when the content needs a rest. The button is a solid block of the same blue-black with orange text, and every other colour comes from the objects shown.",
-    "domains": [],
+    "domains": [
+      "product-surfaces",
+      "productivity"
+    ],
     "sectors": [],
     "tags": [
       "single-field",
@@ -3123,7 +3203,9 @@
     "kind": "palette",
     "name": "Orange, sky, lime",
     "summary": "The page ground changes as you read: orange first, then sky blue, then acid lime at the end, with one near-black band between; type stays black on all three colours. Crimson is one small button per field.",
-    "domains": [],
+    "domains": [
+      "ecommerce-dtc"
+    ],
     "sectors": [],
     "tags": [
       "flat-loud"
@@ -3248,7 +3330,9 @@
     "kind": "palette",
     "name": "Oxblood and grey",
     "summary": "Deep red text on grey paper holds most of the page, then pale grey text on a solid red field takes one long section and the footer. Photographs are desaturated so nothing breaks the pair, and the button is a solid red block.",
-    "domains": [],
+    "domains": [
+      "culture-arts"
+    ],
     "sectors": [],
     "tags": [
       "two-tone"
@@ -3336,7 +3420,9 @@
     "kind": "palette",
     "name": "Plum-black and pink",
     "summary": "Near-black and plum at the top and bottom bracket a white middle with navy-black text. Hot pink is reserved for primary buttons, bars in charts and map markers; it never fills a section.",
-    "domains": [],
+    "domains": [
+      "ai-products"
+    ],
     "sectors": [],
     "tags": [
       "mono-accent",
@@ -3708,7 +3794,11 @@
     "kind": "palette",
     "name": "Putty and black",
     "summary": "Warm putty covers the page and pure black handles all type and the main shapes. The only tint in the interface is teal, used for the one button or a single marker placed near the photographs.",
-    "domains": [],
+    "domains": [
+      "culture-arts",
+      "product-surfaces",
+      "productivity"
+    ],
     "sectors": [],
     "tags": [
       "light-neutral",
@@ -3907,7 +3997,9 @@
     "kind": "palette",
     "name": "Rose grey, green",
     "summary": "A single rosy grey covers the page from top to bottom with brown-black text and grey secondary lines; images are kept greyscale. Green appears only on the current-page link and on one button in the footer.",
-    "domains": [],
+    "domains": [
+      "culture-arts"
+    ],
     "sectors": [],
     "tags": [
       "light-neutral"
@@ -3980,7 +4072,10 @@
     "kind": "palette",
     "name": "Sand and moss",
     "summary": "Sand grey holds the page with charcoal type, and one deep leaf-green band may close it. Moss green is reserved for buttons; brighter greens and blues arrive only through photographs.",
-    "domains": [],
+    "domains": [
+      "ai-products",
+      "architecture"
+    ],
     "sectors": [],
     "tags": [
       "light-neutral",
@@ -4070,7 +4165,10 @@
     "kind": "palette",
     "name": "Sheet and biro",
     "summary": "White holds the whole page with black type, one grey for secondary lines and a pale grey step for tiles and inputs; the footer may invert to black. Blue is the colour of text links and the one button, and nothing else is tinted.",
-    "domains": [],
+    "domains": [
+      "creative-agencies",
+      "portfolios"
+    ],
     "sectors": [],
     "tags": [
       "light-neutral",
@@ -4159,7 +4257,11 @@
     "kind": "palette",
     "name": "Signal red, white",
     "summary": "White ground, black text and paper grey for filled panels, with one full black band allowed. Signal red is the only colour in the interface: one word in a headline, a few solid blocks, or the button.",
-    "domains": [],
+    "domains": [
+      "creative-agencies",
+      "fashion-beauty",
+      "music"
+    ],
     "sectors": [],
     "tags": [
       "mono-accent"
@@ -4249,7 +4351,10 @@
     "kind": "palette",
     "name": "Sky and navy",
     "summary": "Sky blue sits behind everything, white cards lie on top of it, and navy handles all text and the footer. Orange is for buttons and one highlighted word, so orange against blue is the single clash on the page.",
-    "domains": [],
+    "domains": [
+      "creative-agencies",
+      "ecommerce-dtc"
+    ],
     "sectors": [],
     "tags": [
       "single-field"
@@ -4472,7 +4577,11 @@
     "kind": "palette",
     "name": "Soot and lime",
     "summary": "A soot-black opening and close bracket white middle sections, all in black, white and grey. Pale lime is the single action colour: every button, and at most one headline set in it on the dark ground.",
-    "domains": [],
+    "domains": [
+      "creative-agencies",
+      "developer-tools",
+      "events"
+    ],
     "sectors": [],
     "tags": [
       "mono-accent",
@@ -4575,7 +4684,9 @@
     "kind": "palette",
     "name": "Stone and blueprint",
     "summary": "Stone paper carries the whole page with near-black and grey text. One image at a time is printed in the accent blue as its only ink, and the same blue fills the single button.",
-    "domains": [],
+    "domains": [
+      "events"
+    ],
     "sectors": [],
     "tags": [
       "light-neutral"
@@ -4651,7 +4762,10 @@
     "kind": "palette",
     "name": "Studio grey",
     "summary": "One mid grey serves as both page and studio backdrop, so the photographed object seems to stand on the page itself; type is black and one black band comes late. Colour comes only from the product, and racing green is for the single button.",
-    "domains": [],
+    "domains": [
+      "creative-agencies",
+      "ecommerce-dtc"
+    ],
     "sectors": [],
     "tags": [
       "photographic-neutral"
@@ -4738,7 +4852,9 @@
     "kind": "palette",
     "name": "Swapping pastels",
     "summary": "One flat pastel is the whole background and it swaps per project or chapter: periwinkle, pink, sand, sage, peach. Type and one solid box stay near-black on all five, and dark teal is only for the button.",
-    "domains": [],
+    "domains": [
+      "portfolios"
+    ],
     "sectors": [],
     "tags": [
       "pastel-fields"
@@ -4875,7 +4991,9 @@
     "kind": "palette",
     "name": "Teal on paper",
     "summary": "Cool white paper and a single teal used for every word, shape and button, with no black anywhere. The accent is that same teal filled solid, for the button and for one inverted band with paper-coloured type.",
-    "domains": [],
+    "domains": [
+      "restaurants-food"
+    ],
     "sectors": [],
     "tags": [
       "two-tone"
@@ -4963,7 +5081,9 @@
     "kind": "palette",
     "name": "Three stones",
     "summary": "Three close stone tones share the interface: the lightest for the page, the middle one for panels, the darkest for a single band, all with charcoal type. Saturated colour is left to the photographs and their backdrops; the grey-green fills the button only.",
-    "domains": [],
+    "domains": [
+      "ecommerce-dtc"
+    ],
     "sectors": [],
     "tags": [
       "light-neutral",
@@ -5051,7 +5171,9 @@
     "kind": "palette",
     "name": "Tobacco and olive",
     "summary": "Tobacco brown fills the page with bone type, and photographs stay in browns and ochre. One olive block holds the main text or the button, and a single ochre band may break the brown once.",
-    "domains": [],
+    "domains": [
+      "fashion-beauty"
+    ],
     "sectors": [],
     "tags": [
       "single-field",
@@ -5150,7 +5272,9 @@
     "kind": "palette",
     "name": "Ultramarine and yellow",
     "summary": "Each section is one flat field in sequence: ultramarine, black, yellow, then ultramarine again, with white type on blue and black, and black type on yellow. Green is the only small accent and never grows larger than a button.",
-    "domains": [],
+    "domains": [
+      "creative-agencies"
+    ],
     "sectors": [],
     "tags": [
       "flat-loud"
@@ -5273,7 +5397,9 @@
     "kind": "palette",
     "name": "Walnut and tan",
     "summary": "Dark walnut holds the opening and the close with bone type, and the middle of the page may turn to flat tan around honey-lit photographs. There is no bright accent: tan is the fill for the one button on walnut.",
-    "domains": [],
+    "domains": [
+      "events"
+    ],
     "sectors": [],
     "tags": [
       "photographic-neutral",
@@ -5362,7 +5488,9 @@
     "kind": "palette",
     "name": "Warm black, gold",
     "summary": "Warm near-black fills the page and photographs sit bright against it, with pure white small type; panels warm to a brown-black. Gold is for one text link or small button per screen, never a field.",
-    "domains": [],
+    "domains": [
+      "creative-agencies"
+    ],
     "sectors": [],
     "tags": [
       "dark-neutral",

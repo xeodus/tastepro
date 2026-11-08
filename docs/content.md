@@ -63,22 +63,22 @@ metadata used by the generated content.
 
 ## Content kinds
 
-| Kind          | File                | What it contains                                                                     |
-| ------------- | ------------------- | ------------------------------------------------------------------------------------ |
-| `domain`      | `domains.json`      | Taxonomy entry plus optional playbook                                                |
-| `direction`   | `directions.json`   | Complete visual argument: idea, composition, type, colour, imagery, motion, pitfalls |
-| `palette`     | `palettes.json`     | Background/surface/ink/muted/accent tokens, fields, contrast checks                  |
-| `type`        | `types.json`        | Display/text pairing, sources, weights, CSS, scale                                   |
-| `hero`        | `heroes.json`       | Hero archetype, blueprint, mobile behavior, motion                                   |
-| `section`     | `sections.json`     | Section role, shape, blueprint, mobile behavior                                      |
-| `motion`      | `motions.json`      | Motion recipe and description                                                        |
-| `site`        | `sites.json`        | Text study of a real site: idea, sections, lessons                                   |
-| `brand`       | `brands.json`       | Design-token analysis of a published brand system                                    |
-| `guideline`   | `guidelines.json`   | One audit rule with category, severity, `instead`, source line                       |
-| `reference`   | `references.json`   | Reference document metadata plus body path                                           |
-| `app-style`   | `app-styles.json`   | App visual system                                                                    |
-| `app-shell`   | `app-shells.json`   | App shell/navigation blueprint                                                       |
-| `app-pattern` | `app-patterns.json` | App screen pattern                                                                   |
+| Kind          | File                | What it contains                                                                                                |
+| ------------- | ------------------- | --------------------------------------------------------------------------------------------------------------- |
+| `domain`      | `domains.json`      | Taxonomy entry plus optional playbook                                                                           |
+| `direction`   | `directions.json`   | Complete visual argument: idea, composition, type, colour, imagery, motion, pitfalls                            |
+| `palette`     | `palettes.json`     | Background/surface/ink/muted/accent tokens, fields, contrast checks; domains derived from `seenIn` site studies |
+| `type`        | `types.json`        | Display/text pairing, sources, weights, CSS, scale; domains derived from `seenIn` site studies                  |
+| `hero`        | `heroes.json`       | Hero archetype, blueprint, mobile behavior, motion                                                              |
+| `section`     | `sections.json`     | Section role, shape, blueprint, mobile behavior                                                                 |
+| `motion`      | `motions.json`      | Motion recipe and description                                                                                   |
+| `site`        | `sites.json`        | Text study of a real site: idea, sections, lessons                                                              |
+| `brand`       | `brands.json`       | Design-token analysis of a published brand system                                                               |
+| `guideline`   | `guidelines.json`   | One audit rule with category, severity, `instead`, source line                                                  |
+| `reference`   | `references.json`   | Reference document metadata plus body path                                                                      |
+| `app-style`   | `app-styles.json`   | App visual system                                                                                               |
+| `app-shell`   | `app-shells.json`   | App shell/navigation blueprint                                                                                  |
+| `app-pattern` | `app-patterns.json` | App screen pattern                                                                                              |
 
 All packs share the base fields:
 
@@ -222,10 +222,20 @@ Rules for fallback:
   query such as `fintech dashboard` uses the fintech playbook and does not add
   software-family noise.
 - An explicit `domain` filter stays literal; it does not pull in siblings.
-- If the family has no playbook (the `science` family in M0), the response says
+- If the family has no playbook (the `science` family), the response says
   so and returns the domain questions. Do not invent a family playbook.
 - Never present a family playbook as if it were authored for the specific
   domain. Say "same-family fallback" and adapt with the domain questions.
+
+### Domain-mapped visual ingredients
+
+Palettes and type pairings are cross-domain, but each one records the site
+studies where it appears. Ingest derives their `domains` from those studies, so
+a domain-filtered search can find the visual ingredients actually used in that
+domain. If a query names an inferred domain and a kind filter leaves no literal
+text match, search falls back to packs of that kind mapped to the inferred
+domain and reports `match: "domain-fallback"`. It does not invent a match when
+no domain intent is inferred.
 
 The `questions` field on the domain pack is the authored set of questions from
 the taxonomy. It is available even when no playbook exists.
@@ -279,9 +289,7 @@ Authored:
 
 - `content/taxonomy/domains.json`
 - `content/domains/seed.json`
-- `sources.lock.json`
-- `content/references/` (committed copies of upstream reference documents)
-- `content/sources/licenses/` (committed license texts)
+- `sources.lock.json` (the human-edited pin file)
 
 Generated by `npm run ingest`:
 
@@ -289,7 +297,9 @@ Generated by `npm run ingest`:
 - `content/generated/kinds/*.json`
 - `content/generated/stats.json`
 - `content/generated/sources.json`
-- `content/sources.lock.json`
+- `content/references/` (readable copies of upstream reference documents)
+- `content/sources/licenses/` (upstream license texts)
+- `content/sources.lock.json` (packaged copy of the pins)
 
 Do not hand-edit generated files. If a generated pack is wrong, fix the parser
 or the authored source, then regenerate. Review the diff before committing; a
@@ -305,9 +315,13 @@ npm run sources:update    # check the four pins for newer commits
 npm run sources:update -- --write  # advance the pins (review the diff)
 ```
 
-The cache is `.cache/sources/<source-id>/<path>`. It is gitignored. Ingest uses
-retries, timeouts, and a concurrency limit. It fetches raw GitHub files at the
-pinned commit, never the default branch.
+The cache is `.cache/sources/<source-id>/<commit>/<path>`. It is gitignored.
+Ingest uses retries, timeouts, and a concurrency limit. It fetches raw GitHub
+files at the pinned commit, never the default branch.
+
+Ingest writes a complete snapshot into a sibling staging directory, runs the
+same validation as `npm run validate`, and swaps it into place only after it
+passes. A failed run leaves the previous snapshot intact.
 
 Ingest writes:
 
@@ -328,7 +342,8 @@ Errors fail the ingest.
 
 - every catalog entry parses and ids are unique;
 - catalog counts match stats and the expected counts;
-- the content hash recomputes;
+- the content hash recomputes from the catalog, full pack files, reference
+  bodies, and source pins;
 - each kind file contains only its kind and every pack parses;
 - provenance fields and source pins are valid;
 - every reference body exists, stays inside the content directory, and is
@@ -364,10 +379,12 @@ Each rule has:
 - `tags` — search vocabulary;
 - `sourcePath` and `line` — where the rule came from.
 
-Rules are parsed from the pinned Vercel Web Interface Guidelines. Do not
-paraphrase a rule in a way that changes its meaning. If you add a TastePro-only
-rule, give it `provenance.source: "tastepro"` and a clear path; do not attribute
-it to Vercel.
+Rules are parsed from the pinned Vercel Web Interface Guidelines. Severity is
+inferred from the rule wording (`never`, `must`, `do not`, or the anti-pattern
+category becomes `error`); upstream does not publish a severity field. Treat it
+as a triage hint, not an upstream guarantee. Do not paraphrase a rule in a way
+that changes its meaning. If you add a TastePro-only rule, give it
+`provenance.source: "tastepro"` and a clear path; do not attribute it to Vercel.
 
 ## Brand packs
 
@@ -386,7 +403,7 @@ message.
 
 ## Templates (M1)
 
-The six original templates are not part of M0. When they land:
+The six original templates are not part of this release. When they land:
 
 - each template gets a `template/<slug>` id and a full spec;
 - templates must be original, not traced from a brand or site;

@@ -13,8 +13,9 @@ async function start(options: Partial<Parameters<typeof startHttpServer>[0]> = {
   const server = await startHttpServer({
     ...options,
     context: options.context ?? context,
-    host: "127.0.0.1",
+    host: options.host ?? "127.0.0.1",
     port: 0,
+    sessionMode: options.sessionMode ?? "stateful",
     logger,
   });
   running.push(server);
@@ -74,6 +75,75 @@ describe("HTTP hardening", () => {
     } finally {
       await close();
     }
+  });
+
+  it("rejects an untrusted Origin before creating a session", async () => {
+    const { app, close } = createHttpApp({
+      context,
+      corsOrigin: "https://app.example.com",
+      sessionMode: "stateful",
+      logger,
+    });
+    try {
+      const init = JSON.stringify({
+        jsonrpc: "2.0",
+        id: 1,
+        method: "initialize",
+        params: {
+          protocolVersion: "2025-06-18",
+          capabilities: {},
+          clientInfo: { name: "origin-test", version: "0.0.0" },
+        },
+      });
+      const denied = await app.request("/mcp", {
+        method: "POST",
+        headers: {
+          origin: "https://evil.example.com",
+          "content-type": "application/json",
+          accept: "application/json, text/event-stream",
+        },
+        body: init,
+      });
+      expect(denied.status).toBe(403);
+      expect(await denied.json()).toEqual({ error: "forbidden_origin" });
+
+      const allowed = await app.request("/mcp", {
+        method: "POST",
+        headers: {
+          origin: "https://app.example.com",
+          "content-type": "application/json",
+          accept: "application/json, text/event-stream",
+        },
+        body: init,
+      });
+      expect(allowed.status).toBe(200);
+      expect(allowed.headers.get("access-control-allow-origin")).toBe("https://app.example.com");
+      expect(allowed.headers.get("mcp-session-id")).toBeTruthy();
+    } finally {
+      await close();
+    }
+  });
+
+  it("refuses a non-loopback bind without an API key", async () => {
+    await expect(start({ host: "0.0.0.0" })).rejects.toThrow(/TASTEPRO_API_KEY|API key/i);
+  });
+
+  it("refuses a non-loopback bind without an explicit Host allowlist", async () => {
+    await expect(start({ host: "0.0.0.0", apiKey: "secret" })).rejects.toThrow(
+      /TASTEPRO_ALLOWED_HOSTS|allowed hosts/i,
+    );
+  });
+
+  it("still requires a Host allowlist for an explicitly anonymous non-loopback bind", async () => {
+    await expect(start({ host: "0.0.0.0", allowAnonymous: true })).rejects.toThrow(
+      /TASTEPRO_ALLOWED_HOSTS|allowed hosts/i,
+    );
+  });
+
+  it("keeps loopback development unauthenticated", async () => {
+    const server = await start();
+    const response = await fetch(`${server.url}/healthz`);
+    expect(response.status).toBe(200);
   });
 
   it("rejects oversized bodies before parsing", async () => {

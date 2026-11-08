@@ -30,20 +30,27 @@ export function fitText(
   if (estimateTokens(text) <= maxTokens) {
     return { value: text, truncated: false, tokens: estimateTokens(text) };
   }
-  const maxChars = Math.max(0, maxTokens * 4 - notice.length);
-  const value = `${truncateAtWord(text, maxChars)}${notice}`;
+
+  const compactNotice = estimateTokens(notice) > maxTokens ? "\n\n_…truncated._" : notice;
+  let maxChars = Math.max(0, maxTokens * 4 - compactNotice.length);
+  let value = `${truncateAtWord(text, maxChars)}${compactNotice}`;
+  while (maxChars > 0 && estimateTokens(value) > maxTokens) {
+    maxChars = Math.max(0, maxChars - 4);
+    value = `${truncateAtWord(text, maxChars)}${compactNotice}`;
+  }
   return { value, truncated: true, tokens: estimateTokens(value) };
 }
 
 type Path = Array<string | number>;
 
-function collectStrings(
-  value: unknown,
-  path: Path = [],
-  out: Array<{ path: Path; length: number }> = [],
-): Array<{ path: Path; length: number }> {
+interface StringEntry {
+  path: Path;
+  value: string;
+}
+
+function collectStrings(value: unknown, path: Path = [], out: StringEntry[] = []): StringEntry[] {
   if (typeof value === "string") {
-    out.push({ path, length: value.length });
+    out.push({ path, value });
     return out;
   }
   if (Array.isArray(value)) {
@@ -70,76 +77,222 @@ function setAtPath(root: unknown, path: Path, next: unknown): void {
   cursor[path[path.length - 1] as string | number] = next;
 }
 
+function isRecord(value: unknown): value is Record<string, unknown> {
+  return Boolean(value) && typeof value === "object" && !Array.isArray(value);
+}
+
+export interface FitJsonOptions {
+  /** Top-level keys that must survive the fit. */
+  requiredKeys?: string[];
+  /** Top-level keys to drop first, in order. */
+  optionalKeys?: string[];
+  /** Arrays whose items may be dropped. Defaults to every top-level array. */
+  arrayKeys?: string[];
+  /** Keys to keep on objects inside arrays, highest priority first. */
+  itemKeys?: string[];
+}
+
 /**
- * Fit a JSON value into an approximate token budget. It never invents data:
- * long strings are shortened and, if necessary, optional top-level keys are
- * removed. Required keys are always kept.
+ * Identity, provenance, and source URLs are either preserved exactly or
+ * omitted as a whole. A partial commit hash or repository URL is worse than no
+ * provenance at all because it looks verifiable but is not.
+ */
+const EXACT_KEYS = new Set([
+  "id",
+  "kind",
+  "sourceUrl",
+  "url",
+  "commit",
+  "repo",
+  "license",
+  "source",
+  "path",
+  "sourcePath",
+  "bodyPath",
+  "guidelineId",
+]);
+
+const PROTECTED_ITEM_KEYS = new Set(["id", "kind", "name", "text"]);
+
+function isExactPath(path: Path): boolean {
+  if (path.includes("provenance")) return true;
+  const last = path[path.length - 1];
+  return typeof last === "string" && EXACT_KEYS.has(last);
+}
+
+/**
+ * Fit a JSON value into a token budget. The result never exceeds the budget
+ * when the required skeleton is small enough to represent. It preserves data
+ * rather than inventing it: long strings are shortened, optional fields are
+ * dropped, then array items are removed from the end.
  */
 export function fitJson<T>(
   value: T,
   maxTokens: number,
-  options: { requiredKeys?: string[]; optionalKeys?: string[] } = {},
+  options: FitJsonOptions = {},
 ): BudgetResult<T> {
   const initialTokens = estimateTokens(value);
   if (initialTokens <= maxTokens) {
     return { value, truncated: false, tokens: initialTokens };
   }
 
-  const working = structuredClone(value) as unknown;
-  let truncated = false;
-
-  // First pass: shorten the longest strings, repeatedly, until we fit.
-  for (let pass = 0; pass < 12; pass += 1) {
-    if (estimateTokens(working) <= maxTokens) break;
-    const strings = collectStrings(working).sort((a, b) => b.length - a.length);
-    if (strings.length === 0) break;
-    const target = Math.max(48, Math.min(240, Math.floor(maxTokens * 4 * 0.12)));
-    let changed = false;
-    for (const item of strings) {
-      if (item.length <= target) continue;
-      let cursor: any = working;
-      for (const segment of item.path) cursor = cursor[segment as any];
-      const shortened = truncateAtWord(String(cursor), target);
-      if (shortened !== cursor) {
-        setAtPath(working, item.path, shortened);
-        changed = true;
-      }
-      if (estimateTokens(working) <= maxTokens) break;
-    }
-    if (!changed) break;
-    truncated = true;
-  }
-
-  // Second pass: drop optional top-level keys, least important last.
-  for (const key of options.optionalKeys ?? []) {
-    if (estimateTokens(working) <= maxTokens) break;
-    if (key in (working as Record<string, unknown>)) {
-      delete (working as Record<string, unknown>)[key];
-      truncated = true;
-    }
-  }
-
-  // Third pass: if a single remaining field is still too large, truncate it
-  // hard. This is a last resort; callers should prefer optionalKeys.
-  if (estimateTokens(working) > maxTokens) {
-    const strings = collectStrings(working).sort((a, b) => b.length - a.length);
-    for (const item of strings) {
-      if (estimateTokens(working) <= maxTokens) break;
-      const over = estimateTokens(working) - maxTokens;
-      const current = (() => {
-        let cursor: any = working;
-        for (const segment of item.path) cursor = cursor[segment as any];
-        return String(cursor);
-      })();
-      const nextLength = Math.max(32, current.length - over * 4 - 32);
-      setAtPath(working, item.path, truncateAtWord(current, nextLength));
-      truncated = true;
-    }
-  }
-
-  return {
+  const working = structuredClone(value) as any;
+  const required = new Set(options.requiredKeys ?? []);
+  const fits = (): boolean => estimateTokens(working) <= maxTokens;
+  const done = (): BudgetResult<T> => ({
     value: working as T,
-    truncated,
+    truncated: true,
     tokens: estimateTokens(working),
-  };
+  });
+
+  // 1. Drop explicitly optional top-level fields.
+  if (isRecord(working)) {
+    for (const key of options.optionalKeys ?? []) {
+      if (fits()) return done();
+      if (key in working) delete working[key];
+    }
+  }
+  if (fits()) return done();
+
+  // 2. Shorten long strings progressively. Identity and provenance stay exact.
+  for (const target of [256, 160, 96, 64, 32, 16, 8]) {
+    if (fits()) break;
+    for (const entry of collectStrings(working)) {
+      if (entry.value.length <= target) continue;
+      if (isExactPath(entry.path)) continue;
+      setAtPath(working, entry.path, truncateAtWord(entry.value, target));
+    }
+  }
+  if (fits()) return done();
+
+  // 3. Compact objects inside arrays to the fields the caller needs.
+  const arrayKeys =
+    options.arrayKeys ??
+    (isRecord(working) ? Object.keys(working).filter((key) => Array.isArray(working[key])) : []);
+  if (options.itemKeys?.length) {
+    const keep = new Set(options.itemKeys);
+    for (const key of arrayKeys) {
+      if (fits()) break;
+      const array = working?.[key];
+      if (!Array.isArray(array)) continue;
+      for (const item of array) {
+        if (!isRecord(item)) continue;
+        for (const itemKey of Object.keys(item)) {
+          if (!keep.has(itemKey)) delete item[itemKey];
+        }
+      }
+    }
+  }
+  if (fits()) return done();
+
+  // 3b. Drop item fields in reverse priority order. Identity, provenance, and
+  // source URLs are protected here and only dropped as whole fields later.
+  if (options.itemKeys?.length) {
+    for (let index = options.itemKeys.length - 1; index >= 0 && !fits(); index -= 1) {
+      const itemKey = options.itemKeys[index]!;
+      if (PROTECTED_ITEM_KEYS.has(itemKey)) continue;
+      for (const key of arrayKeys) {
+        const array = working?.[key];
+        if (!Array.isArray(array)) continue;
+        for (const item of array) {
+          if (isRecord(item)) delete item[itemKey];
+        }
+      }
+    }
+  }
+  if (fits()) return done();
+
+  // 4. Drop top-level fields that are not required.
+  if (isRecord(working) && required.size > 0) {
+    for (const key of Object.keys(working)) {
+      if (fits()) break;
+      if (!required.has(key)) delete working[key];
+    }
+  }
+  if (fits()) return done();
+
+  // 5. Drop array items from the end, largest arrays first.
+  const arrays = arrayKeys
+    .map((key) => ({ key, array: working?.[key] }))
+    .filter((entry): entry is { key: string; array: unknown[] } => Array.isArray(entry.array))
+    .sort((left, right) => right.array.length - left.array.length);
+  for (const { array } of arrays) {
+    if (fits()) break;
+    if (array.length === 0) continue;
+    // Find the largest prefix that fits instead of removing one item at a time.
+    let low = 0;
+    let high = array.length;
+    while (low < high) {
+      const middle = Math.ceil((low + high) / 2);
+      array.length = middle;
+      if (fits()) low = middle;
+      else high = middle - 1;
+    }
+    array.length = low;
+  }
+  if (fits()) return done();
+
+  // 6. Keep one identity-bearing item per array, then drop provenance only if
+  //    the identity alone still cannot fit. Values are never emptied: a field
+  //    is either present and exact or absent.
+  for (const { array } of arrays) {
+    if (fits()) break;
+    if (array.length === 0) continue;
+    array.splice(1);
+    for (const item of array) {
+      if (!isRecord(item)) continue;
+      for (const itemKey of Object.keys(item)) {
+        if (
+          ![
+            "id",
+            "kind",
+            "name",
+            "text",
+            "guidelineId",
+            "severity",
+            "provenance",
+            "sourceUrl",
+          ].includes(itemKey)
+        ) {
+          delete item[itemKey];
+        }
+      }
+    }
+  }
+  if (fits()) return done();
+  for (const { array } of arrays) {
+    if (fits()) break;
+    for (const item of array) {
+      if (!isRecord(item)) continue;
+      delete item.provenance;
+      delete item.sourceUrl;
+    }
+  }
+  if (fits()) return done();
+
+  // 7. Even the required skeleton is too large; return the smallest honest
+  //    shape we can. Callers see truncated=true and can raise the budget.
+  const minimal: Record<string, unknown> = {};
+  for (const key of required) {
+    const candidate = (value as any)?.[key];
+    if (typeof candidate === "string") minimal[key] = truncateAtWord(candidate, 64);
+    else if (typeof candidate === "number" || typeof candidate === "boolean") {
+      minimal[key] = candidate;
+    } else if (Array.isArray(candidate)) {
+      const first = candidate[0];
+      if (isRecord(first)) {
+        const item: Record<string, unknown> = {};
+        for (const itemKey of ["id", "kind", "name", "text", "guidelineId", "severity"]) {
+          if (typeof first[itemKey] === "string") item[itemKey] = first[itemKey];
+        }
+        minimal[key] = Object.keys(item).length > 0 ? [item] : [];
+      } else if (typeof first === "string") {
+        minimal[key] = [first];
+      } else {
+        minimal[key] = [];
+      }
+    } else if (isRecord(candidate)) minimal[key] = {};
+  }
+  minimal.truncated = true;
+  return { value: minimal as T, truncated: true, tokens: estimateTokens(minimal) };
 }

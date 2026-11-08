@@ -1,0 +1,72 @@
+# syntax=docker/dockerfile:1.7
+#
+# Optional audit image. The default Dockerfile stays Playwright-free; this
+# image adds Chromium and enables browser mode for taste_audit. It is
+# substantially larger and must run with CPU/memory limits and a larger
+# /dev/shm. Prefer submitting HTML over enabling URL fetching.
+#
+#   docker build -f Dockerfile.audit -t tastepro:audit .
+#   docker run --rm -p 127.0.0.1:3000:3000 \
+#     -e TASTEPRO_API_KEY="$(openssl rand -hex 32)" \
+#     -e TASTEPRO_ALLOWED_HOSTS=localhost,127.0.0.1 \
+#     --shm-size=1g --memory=2g --cpus=2 \
+#     tastepro:audit
+
+ARG NODE_VERSION=22
+ARG PLAYWRIGHT_VERSION=1.65.0
+
+FROM node:${NODE_VERSION}-bookworm-slim AS deps
+WORKDIR /app
+ENV NPM_CONFIG_UPDATE_NOTIFIER=false \
+    NPM_CONFIG_FUND=false
+COPY package.json package-lock.json ./
+RUN npm ci
+
+FROM node:${NODE_VERSION}-bookworm-slim AS build
+WORKDIR /app
+COPY --from=deps /app/node_modules ./node_modules
+COPY package.json package-lock.json tsconfig.json tsconfig.build.json ./
+COPY src ./src
+RUN npm run build
+
+FROM node:${NODE_VERSION}-bookworm-slim AS prod-deps
+WORKDIR /app
+ENV NPM_CONFIG_UPDATE_NOTIFIER=false \
+    NPM_CONFIG_FUND=false
+COPY package.json package-lock.json ./
+RUN npm ci --omit=dev
+
+FROM node:${NODE_VERSION}-bookworm-slim AS runtime
+WORKDIR /app
+
+ENV NODE_ENV=production \
+    TASTEPRO_HOST=0.0.0.0 \
+    TASTEPRO_PORT=3000 \
+    TASTEPRO_LOG_LEVEL=info \
+    TASTEPRO_AUDIT_BROWSER=playwright \
+    PLAYWRIGHT_BROWSERS_PATH=/ms-playwright \
+    PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD=1
+
+COPY --from=prod-deps /app/node_modules ./node_modules
+COPY package.json ./
+# Install the Playwright package and the matching Chromium build with OS
+# dependencies. Browsers live in /ms-playwright so the unprivileged user can
+# read them at runtime.
+RUN npm install --no-save --no-package-lock playwright@${PLAYWRIGHT_VERSION} \
+    && npx playwright install --with-deps chromium \
+    && rm -rf /var/lib/apt/lists/*
+
+COPY --from=build /app/dist ./dist
+COPY content ./content
+COPY LICENSE NOTICE ATTRIBUTION.md README.md ./
+RUN chown -R node:node /app /ms-playwright
+
+USER node
+
+EXPOSE 3000
+STOPSIGNAL SIGTERM
+
+HEALTHCHECK --interval=30s --timeout=5s --start-period=15s --retries=3 \
+  CMD node -e "fetch('http://127.0.0.1:'+(process.env.TASTEPRO_PORT||3000)+'/healthz').then((r)=>{if(!r.ok)process.exit(1)}).catch(()=>process.exit(1))"
+
+CMD ["node", "dist/cli.js", "--http"]
