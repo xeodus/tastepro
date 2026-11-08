@@ -13,7 +13,9 @@
       "!coverage",
       "!.cache",
       "!content/generated",
-      "!content/sources/licenses"
+      "!content/references",
+      "!content/sources/licenses",
+      "!tests/fixtures/upstream"
     ]
   },
   "formatter": {

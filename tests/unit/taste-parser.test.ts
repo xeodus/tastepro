@@ -5,7 +5,10 @@ import type { Provenance } from "../../src/core/schema.js";
 
 function readJson<T>(path: string): T {
   return JSON.parse(
-    readFileSync(new URL(`../../.cache/research/taste-skill/${path}`, import.meta.url), "utf8"),
+    readFileSync(
+      new URL(`../../tests/fixtures/upstream/taste-skill/${path}`, import.meta.url),
+      "utf8",
+    ),
   ) as T;
 }
 
@@ -114,7 +117,7 @@ describe("taste-skill parser", () => {
 
   it("parses a markdown reference with headings and use-for tags", () => {
     const body = readFileSync(
-      new URL("../../.cache/research/taste-skill/tells.md", import.meta.url),
+      new URL("../../tests/fixtures/upstream/taste-skill/tells.md", import.meta.url),
       "utf8",
     );
     const reference = parseReference({

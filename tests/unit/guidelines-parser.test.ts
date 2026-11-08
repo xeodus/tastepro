@@ -70,7 +70,7 @@ describe("guideline parser", () => {
 
   it("parses the pinned upstream command.md", () => {
     const markdown = readFileSync(
-      new URL("../../.cache/research/web-guidelines/command.md", import.meta.url),
+      new URL("../../tests/fixtures/upstream/web-guidelines/command.md", import.meta.url),
       "utf8",
     );
     const rules = parseGuidelines(markdown, provenance);

@@ -48,7 +48,7 @@ describe("brand parser", () => {
 
   it("parses the pinned Claude DESIGN.md", () => {
     const raw = readFileSync(
-      new URL("../../.cache/research/awesome-design-md/claude.md", import.meta.url),
+      new URL("../../tests/fixtures/upstream/awesome-design-md/claude.md", import.meta.url),
       "utf8",
     );
     const pack = parseDesignMarkdown(raw, {
