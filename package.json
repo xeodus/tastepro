@@ -57,6 +57,7 @@
     "smoke:oauth": "bun scripts/smoke-oauth.ts",
     "smoke:oauth:local": "bun scripts/smoke-oauth-local.ts",
     "build:binaries": "bun scripts/build-binaries.ts",
+    "build:binaries:all": "bun scripts/build-binaries.ts --all",
     "smoke:binary": "bun scripts/smoke-binary.ts",
     "prepublishOnly": "bun run build && bun run validate && bun run test"
   },
