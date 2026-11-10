@@ -9,7 +9,9 @@ TastePro is a TypeScript MCP server (stdio and Streamable HTTP) serving a pinned
 - One test file: `bunx vitest run tests/unit/budget.test.ts`; filter by name with `-t "<pattern>"`.
 - `bun run test:integration` runs the real stdio/HTTP MCP client suites (also included in `bun run test`).
 - `bun run build:binaries` builds the host standalone binary with embedded content; `bun run smoke:binary` runs it over real stdio from a temp cwd.
-- `bun run smoke:oauth` runs the real Keycloak E2E; start `deploy/keycloak.compose.yml` first. It is not part of the default gate.
+- `bun run smoke:oauth:local` runs the OAuth path against a local JWKS without
+  Docker. `bun run smoke:oauth` runs the real Keycloak E2E; start
+  `deploy/keycloak.compose.yml` first. It is not part of the default gate.
 - `bun run lint` runs Biome check (lint plus format); `lint:fix` applies safe fixes.
 - `bun run build` compiles only `src/` into gitignored `dist/`. Tests and scripts are typechecked by `bun run typecheck`, not built.
 

@@ -51,6 +51,9 @@ jobs:
       - name: HTTP smoke test
         run: bun run smoke:http
 
+      - name: OAuth smoke test (local JWKS)
+        run: bun run smoke:oauth:local
+
   binaries:
     name: Standalone binary
     runs-on: ubuntu-latest
@@ -112,7 +115,6 @@ jobs:
             -e TASTEPRO_API_KEY=ci-token \
             -e TASTEPRO_ALLOWED_HOSTS=localhost,127.0.0.1 \
             tastepro:ci
-
           for attempt in $(seq 1 30); do
             if curl -fsS http://127.0.0.1:3000/healthz >/dev/null 2>&1; then
               break
@@ -129,7 +131,7 @@ jobs:
             -d '{"jsonrpc":"2.0","id":1,"method":"initialize","params":{}}')
           test "$status" = "401"
 
-          test "$(docker inspect -f '{{.Config.User}}' tastepro-ci)" = "node"
+          test "$(docker inspect -f '{{.Config.User}}' tastepro-ci)" = "bun"
 
       - name: Container logs
         if: always()
