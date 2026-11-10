@@ -5,8 +5,8 @@
 # substantially larger and must run with CPU/memory limits and a larger
 # /dev/shm. Prefer submitting HTML over enabling URL fetching.
 #
-# Bun installs and builds; the runtime stays Node 22 because Playwright's
-# library support under Bun is not officially guaranteed.
+# Bun installs, builds, and prepares Playwright; the server runs on Node 22
+# because Playwright's library support under Bun is not officially guaranteed.
 #
 #   docker build -f Dockerfile.audit -t tastepro:audit .
 #   docker run --rm -p 127.0.0.1:3000:3000 \
@@ -36,6 +36,14 @@ WORKDIR /app
 COPY package.json bun.lock ./
 RUN bun install --frozen-lockfile --production
 
+FROM oven/bun:${BUN_VERSION} AS playwright
+WORKDIR /pw
+ENV PLAYWRIGHT_BROWSERS_PATH=/ms-playwright \
+    PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD=1
+COPY package.json bun.lock ./
+RUN bun add --no-save playwright@${PLAYWRIGHT_VERSION} \
+    && bunx playwright install --with-deps chromium
+
 FROM node:${NODE_VERSION}-bookworm-slim AS runtime
 WORKDIR /app
 
@@ -44,20 +52,14 @@ ENV NODE_ENV=production \
     TASTEPRO_PORT=3000 \
     TASTEPRO_LOG_LEVEL=info \
     TASTEPRO_AUDIT_BROWSER=playwright \
-    PLAYWRIGHT_BROWSERS_PATH=/ms-playwright \
-    PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD=1
-
-# Bun is used only to install the Playwright package; the server runs on Node.
-RUN curl -fsSL https://bun.sh/install | bash \
-    && ln -s /root/.bun/bin/bun /usr/local/bin/bun
+    PLAYWRIGHT_BROWSERS_PATH=/ms-playwright
 
 COPY --from=prod-deps /app/node_modules ./node_modules
-COPY package.json bun.lock ./
-RUN bun add --no-save playwright@${PLAYWRIGHT_VERSION} \
-    && node node_modules/playwright/cli.js install --with-deps chromium \
-    && rm -rf /var/lib/apt/lists/*
-
+COPY --from=playwright /pw/node_modules/playwright ./node_modules/playwright
+COPY --from=playwright /pw/node_modules/playwright-core ./node_modules/playwright-core
+COPY --from=playwright /ms-playwright /ms-playwright
 COPY --from=build /app/dist ./dist
+COPY package.json ./
 COPY content ./content
 COPY LICENSE NOTICE ATTRIBUTION.md README.md ./
 RUN chown -R node:node /app /ms-playwright

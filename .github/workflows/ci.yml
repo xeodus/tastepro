@@ -96,6 +96,44 @@ jobs:
       - name: Coverage
         run: bun run test:coverage
 
+  docker-audit:
+    name: Docker audit image
+    if: github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    needs: verify
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Build audit image
+        run: docker build -f Dockerfile.audit -t tastepro:audit .
+
+      - name: Run audit image
+        run: |
+          docker run -d --name tastepro-audit-ci \
+            -p 127.0.0.1:3000:3000 \
+            -e TASTEPRO_API_KEY=ci-token \
+            -e TASTEPRO_ALLOWED_HOSTS=localhost,127.0.0.1 \
+            --shm-size=1g \
+            tastepro:audit
+          for attempt in $(seq 1 30); do
+            if curl -fsS http://127.0.0.1:3000/healthz >/dev/null 2>&1; then
+              break
+            fi
+            sleep 1
+          done
+          curl -fsS http://127.0.0.1:3000/healthz | jq -e '.status == "ok"'
+          test "$(docker inspect -f '{{.Config.User}}' tastepro-audit-ci)" = "node"
+
+      - name: Audit image logs
+        if: always()
+        run: docker logs tastepro-audit-ci || true
+
+      - name: Remove audit container
+        if: always()
+        run: docker rm -f tastepro-audit-ci || true
+
   docker:
     name: Docker image
     runs-on: ubuntu-latest
