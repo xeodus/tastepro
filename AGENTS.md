@@ -8,6 +8,7 @@ TastePro is a TypeScript MCP server (stdio and Streamable HTTP) serving a pinned
 - CI order: `bun ci && bun audit && bun run typecheck && bun run lint && bun run validate && bun run test && bun run build && bun run smoke:http`.
 - One test file: `bunx vitest run tests/unit/budget.test.ts`; filter by name with `-t "<pattern>"`.
 - `bun run test:integration` runs the real stdio/HTTP MCP client suites (also included in `bun run test`).
+- `bun run build:binaries` builds the host standalone binary with embedded content; `bun run smoke:binary` runs it over real stdio from a temp cwd.
 - `bun run smoke:oauth` runs the real Keycloak E2E; start `deploy/keycloak.compose.yml` first. It is not part of the default gate.
 - `bun run lint` runs Biome check (lint plus format); `lint:fix` applies safe fixes.
 - `bun run build` compiles only `src/` into gitignored `dist/`. Tests and scripts are typechecked by `bun run typecheck`, not built.
@@ -23,9 +24,9 @@ Once a change is confirmed, qualified (tests/checks pass), and committed, remove
 ## Architecture boundaries
 
 - `src/core/`: deterministic schemas, content loading, search, retrieval, budgeting. Keep transport and HTTP concerns out.
-- `src/server/`: MCP tools/resources/prompts (`server.ts`) and HTTP transport/hardening (`http.ts`).
+- `src/server/`: MCP tools/resources/prompts (`server.ts`), HTTP transport/hardening (`http.ts`), and the Bun/Node server adapter (`serve.ts`).
 - `src/cli.ts`: CLI commands and transport startup. `src/index.ts` and `src/server.ts` are public package entrypoints; note the `src/server.ts` file versus `src/server/` directory.
-- `scripts/`: privileged build/release pipeline (`ingest`, `validate`, `update-sources`, `smoke-http`). Runtime loads one immutable snapshot; do not add write paths, databases, or vector stores to `src/core`.
+- `scripts/`: privileged build/release pipeline (`ingest`, `validate`, `update-sources`, `smoke-http`, `build-binaries`, `smoke-binary`). Runtime loads one immutable snapshot; do not add write paths, databases, or vector stores to `src/core`.
 - Runtime logs go to stderr. stdout is reserved for MCP stdio frames; never add `console.log` to runtime code.
 
 ## Content pipeline
@@ -51,6 +52,7 @@ Once a change is confirmed, qualified (tests/checks pass), and committed, remove
 ## Configuration traps
 
 - HTTP is stateless by default: each request gets a fresh server/transport, `GET`/`DELETE` return 405, and the token's scopes apply per request. `--stateful` / `TASTEPRO_HTTP_MODE=stateful` is required for `--sse` and resumability. Do not reintroduce a session map into the stateless path.
+- Standalone binaries embed `content/` via `bun build --compile --asset ./content`. The loader checks the bundle root before the package-relative path; the version comes from the `__TASTEPRO_VERSION__` define. `bun run smoke:binary` must run from a temp cwd so it cannot silently read repo content. `dist-bin/` and `*.bun-build` are ignored build artifacts.
 - HTTP auth is optional on loopback only: `/mcp` is unauthenticated when no auth is configured and the bind host is loopback. A non-loopback bind fails closed without OAuth (`TASTEPRO_OAUTH_ISSUER` + `TASTEPRO_PUBLIC_URL`) or `TASTEPRO_API_KEY` unless `TASTEPRO_ALLOW_ANONYMOUS=true`; it also requires `TASTEPRO_ALLOWED_HOSTS`. OAuth and a static API key are exclusive; the server refuses to start with both. Empty-string env values are treated as unset.
 - OAuth lives only at the HTTP boundary (`src/server/oauth.ts`, `http.ts`): tokens are verified there and requests receive just `{ scopes }`. `src/server/server.ts` gates `taste_audit` on the `tastepro:audit` scope; it never sees tokens. Explicitly anonymous non-loopback binds have the audit runtime stripped in `startHttpServer`, so they never register `taste_audit`. Keycloak tokens carry both `scope` and `scp`; `scopesOf` must merge them.
 - `src/core/audit.ts` cites real guideline ids in its `GUIDELINE` map and throws at service construction if the rubric loses one. When a guideline id changes, update the map and `tests/unit/audit.test.ts` together; never cite an id that does not exist. Its concurrency/queue gate bounds both static and browser audits.

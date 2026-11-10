@@ -27,14 +27,18 @@ Edit the Claude Desktop config file:
 {
   "mcpServers": {
     "tastepro": {
-      "command": "node",
-      "args": ["/absolute/path/to/tastepro/dist/cli.js", "--stdio"]
+      "command": "/absolute/path/to/tastepro-darwin-arm64",
+      "args": ["--stdio"]
     }
   }
 }
 ```
 
 Restart Claude Desktop. The four tools should appear in the tools menu.
+
+Build the binary with `bun run build:binaries`; the suffix matches the platform
+(`darwin-arm64`, `darwin-x64`, `linux-x64`, `linux-arm64`). From a checkout,
+use `bun /absolute/path/to/tastepro/src/cli.ts --stdio` instead.
 
 If you have published or linked the package, the shorter form is:
 
@@ -51,11 +55,13 @@ If you have published or linked the package, the shorter form is:
 
 ## Claude Code (stdio or HTTP)
 
-Local stdio:
+Local stdio with the standalone binary:
 
 ```bash
-claude mcp add tastepro -- node /absolute/path/to/tastepro/dist/cli.js --stdio
+claude mcp add tastepro -- /absolute/path/to/tastepro-darwin-arm64 --stdio
 ```
+
+From a checkout, use `claude mcp add tastepro -- bun /absolute/path/to/tastepro/src/cli.ts --stdio`.
 
 Remote Streamable HTTP with a bearer token:
 
@@ -76,12 +82,14 @@ Add TastePro to `opencode.json` in your project or global config:
   "mcp": {
     "tastepro": {
       "type": "local",
-      "command": ["node", "/absolute/path/to/tastepro/dist/cli.js", "--stdio"],
+      "command": ["/absolute/path/to/tastepro-darwin-arm64", "--stdio"],
       "enabled": true
     }
   }
 }
 ```
+
+From a checkout, use `["bun", "/absolute/path/to/tastepro/src/cli.ts", "--stdio"]` instead.
 
 Remote:
 

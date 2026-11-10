@@ -52,7 +52,7 @@ for them. Response budgets keep context use predictable.
 
 ## Quick start
 
-Requirements: Bun 1.4.4 or newer. (Node 22 is used only for the optional Playwright audit image.)
+Requirements: Bun 1.4.4 or newer for development. The standalone binary needs no runtime installed.
 
 ```bash
 bun ci
@@ -65,7 +65,7 @@ bun dist/cli.js --stdio
 not used interactively from a shell. To expose the HTTP transport locally:
 
 ```bash
-node dist/cli.js --http --host 127.0.0.1 --port 3000
+bun dist/cli.js --http --host 127.0.0.1 --port 3000
 ```
 
 Health check:
@@ -77,6 +77,22 @@ curl http://127.0.0.1:3000/healthz
 The response includes the content hash, catalog counts, quality mix, and
 validation warning count.
 
+### Build a standalone binary
+
+The binary embeds the content snapshot; users do not need Bun, Node, npm, or a
+`content/` directory.
+
+```bash
+bun run build:binaries
+./dist-bin/tastepro-darwin-arm64 info
+./dist-bin/tastepro-darwin-arm64 --stdio
+```
+
+The target suffix matches the build host (`darwin-arm64`, `darwin-x64`,
+`linux-x64`, `linux-arm64`). `bun run smoke:binary` runs the built binary over
+real MCP stdio from a temporary working directory, proving the embedded content
+is used.
+
 ### Install as a command
 
 From a checkout:
@@ -87,7 +103,7 @@ tastepro info
 tastepro --stdio
 ```
 
-When the package is published, `bunx -y tastepro --stdio` will be the shortest
+When the package is published, `bunx tastepro --stdio` will be the shortest
 local setup.
 
 ### Connect a client
