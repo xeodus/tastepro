@@ -4,6 +4,14 @@ All notable changes are recorded here. The project follows semantic versioning
 for the MCP tool surface, configuration, and package API. Content counts may
 change between minor releases without breaking the tool contract.
 
+## 1.0.2 - 2026-11-10
+
+### Fixed
+
+- The Playwright audit image now installs Chromium's OS libraries in the Node
+  runtime and publishes `linux/amd64` and `linux/arm64`. v1.0.1's audit image was
+  amd64-only and could not launch Chromium from the Node runtime.
+
 ## 1.0.1 - 2026-11-10
 
 ### Fixed
