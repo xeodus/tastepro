@@ -31,6 +31,9 @@ export function resolveContentDir(explicit?: string): string {
   if (explicit) candidates.push(resolve(explicit));
   const env = process.env.TASTEPRO_CONTENT_DIR;
   if (env) candidates.push(resolve(env));
+  // A Bun standalone executable embeds `--asset ./content` at the bundle root,
+  // which is also the entrypoint module directory.
+  candidates.push(resolve(MODULE_DIR, "content"));
   candidates.push(resolve(MODULE_DIR, "../../../content"));
   candidates.push(resolve(process.cwd(), "content"));
 
@@ -41,7 +44,7 @@ export function resolveContentDir(explicit?: string): string {
   throw new Error(
     [
       "TastePro content not found.",
-      "Run `npm run ingest` to generate it, or set TASTEPRO_CONTENT_DIR.",
+      "Run `bun run ingest` to generate it, or set TASTEPRO_CONTENT_DIR.",
       `Tried: ${unique.join(", ")}`,
     ].join("\n"),
   );

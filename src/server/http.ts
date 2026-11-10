@@ -1,5 +1,4 @@
 import { randomUUID, timingSafeEqual } from "node:crypto";
-import { type ServerType, serve } from "@hono/node-server";
 import type { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { WebStandardStreamableHTTPServerTransport } from "@modelcontextprotocol/sdk/server/webStandardStreamableHttp.js";
 import { Hono } from "hono";
@@ -14,6 +13,7 @@ import {
   oauthChallenge,
   protectedResourceMetadata,
 } from "./oauth.js";
+import { serveHttp } from "./serve.js";
 import { type AuditToolOptions, createTasteProServer } from "./server.js";
 
 export interface HttpAppOptions {
@@ -475,7 +475,7 @@ export interface StartHttpOptions extends HttpAppOptions {
 }
 
 export interface RunningHttpServer {
-  server: ServerType;
+  server: unknown;
   app: Hono;
   url: string;
   close: () => Promise<void>;
@@ -509,26 +509,16 @@ export async function startHttpServer(options: StartHttpOptions): Promise<Runnin
   const appOptions: StartHttpOptions =
     options.audit && anonymousNonLoopback ? { ...options, audit: undefined } : options;
   const { app, close } = createHttpApp(appOptions);
-  const server = serve({ fetch: app.fetch, hostname: host, port });
-  await new Promise<void>((resolve, reject) => {
-    server.once("listening", () => resolve());
-    server.once("error", (error) => reject(error));
-  });
-  const address = server.address();
-  const actualPort =
-    address && typeof address === "object" && "port" in address ? address.port : port;
+  const handle = await serveHttp({ fetch: app.fetch, hostname: host, port });
   return {
-    server,
+    server: handle.server,
     app,
-    url: `http://${host.includes(":") ? `[${host}]` : host}:${actualPort}`,
+    url: handle.url,
     close: async () => {
       // Close MCP sessions first so any open GET/SSE streams end before the
       // HTTP server waits for its connections to drain.
       await close();
-      await new Promise<void>((resolve, reject) => {
-        server.close((error) => (error ? reject(error) : resolve()));
-        (server as unknown as { closeAllConnections?: () => void }).closeAllConnections?.();
-      });
+      await handle.close();
     },
   };
 }

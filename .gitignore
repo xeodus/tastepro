@@ -12,5 +12,7 @@ deploy/staging.env
 *.tgz
 *.tsbuildinfo
 bun.lockb
+dist-bin/
+*.bun-build
 .vitest/
 .taste-skill/

@@ -55,6 +55,8 @@
     "sources:update": "bun scripts/update-sources.ts",
     "smoke:http": "bun scripts/smoke-http.ts",
     "smoke:oauth": "bun scripts/smoke-oauth.ts",
+    "build:binaries": "bun scripts/build-binaries.ts",
+    "smoke:binary": "bun scripts/smoke-binary.ts",
     "prepublishOnly": "bun run build && bun run validate && bun run test"
   },
   "dependencies": {

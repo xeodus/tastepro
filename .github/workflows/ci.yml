@@ -51,6 +51,29 @@ jobs:
       - name: HTTP smoke test
         run: bun run smoke:http
 
+  binaries:
+    name: Standalone binary
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    needs: verify
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Bun
+        uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: 1.4.4
+
+      - name: Install
+        run: bun ci
+
+      - name: Build binary
+        run: bun run build:binaries
+
+      - name: Smoke binary
+        run: bun run smoke:binary
+
   coverage:
     name: Coverage
     runs-on: ubuntu-latest
