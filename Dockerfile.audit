@@ -42,7 +42,7 @@ ENV PLAYWRIGHT_BROWSERS_PATH=/ms-playwright \
     PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD=1
 COPY package.json bun.lock ./
 RUN bun add --no-save playwright@${PLAYWRIGHT_VERSION} \
-    && bunx playwright install --with-deps chromium
+    && bunx playwright install chromium
 
 FROM node:${NODE_VERSION}-bookworm-slim AS runtime
 WORKDIR /app
@@ -62,7 +62,11 @@ COPY --from=build /app/dist ./dist
 COPY package.json ./
 COPY content ./content
 COPY LICENSE NOTICE ATTRIBUTION.md README.md ./
-RUN chown -R node:node /app /ms-playwright
+# Install Chromium's OS libraries in the runtime image. The Bun builder only
+# downloads the browser; these packages must exist where Node runs it.
+RUN node node_modules/playwright/cli.js install-deps chromium \
+    && rm -rf /var/lib/apt/lists/* \
+    && chown -R node:node /app /ms-playwright
 
 USER node
 
