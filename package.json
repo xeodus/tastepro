@@ -1,6 +1,6 @@
 {
   "name": "tastepro",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Design taste, domain playbooks, references, and a web-interface audit rubric for coding agents. An MCP server for ChatGPT, Claude, and OpenCode.",
   "type": "module",
   "license": "Apache-2.0",

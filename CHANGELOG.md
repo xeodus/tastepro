@@ -4,6 +4,14 @@ All notable changes are recorded here. The project follows semantic versioning
 for the MCP tool surface, configuration, and package API. Content counts may
 change between minor releases without breaking the tool contract.
 
+## 1.0.1 - 2026-11-10
+
+### Fixed
+
+- The optional Playwright audit image now prepares Chromium in a Bun stage
+  instead of trying to install Bun inside the Node runtime. The v1.0.0
+  binaries and server image remain valid; this release adds the audit image.
+
 ## 1.0.0 - 2026-11-08
 
 ### Added
