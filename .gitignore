@@ -9,6 +9,7 @@ artifacts/
 deploy/staging.env
 .DS_Store
 *.log
+*.tgz
 *.tsbuildinfo
 .vitest/
 .taste-skill/

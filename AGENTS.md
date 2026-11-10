@@ -12,6 +12,14 @@ TastePro is a TypeScript MCP server (stdio and Streamable HTTP) serving a pinned
 - `npm run lint` runs Biome check (lint plus format); `lint:fix` applies safe fixes.
 - `npm run build` compiles only `src/` into gitignored `dist/`. Tests and scripts are typechecked by `npm run typecheck`, not built.
 
+## Cleanup after confirmed work
+
+Once a change is confirmed, qualified (tests/checks pass), and committed, remove the private/temp artifacts it created before starting the next item.
+
+- Remove: session scratch dirs, tarballs, `coverage/`, `.cache/research`, stale logs, and local Docker images/build cache created for verification.
+- Keep: tracked source, `dist/`, `node_modules/`, `.cache/sources` (offline ingest), current evidence, secrets, and user data.
+- Never delete uncommitted work or unrelated temp trees. Verify with `df -h` and `du -sh`; report what was removed.
+
 ## Architecture boundaries
 
 - `src/core/`: deterministic schemas, content loading, search, retrieval, budgeting. Keep transport and HTTP concerns out.
