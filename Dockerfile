@@ -4,14 +4,14 @@
 #   deps      -> full dependency tree for compiling TypeScript
 #   build     -> dist/
 #   prod-deps -> production-only node_modules
-#   runtime   -> non-root Node image with dist/, content/, and licenses
+#   runtime   -> non-root Bun image with dist/, content/, and licenses
 #
-# Bun installs and builds; the runtime stays Node 22 until the Bun runtime
-# parity gate passes. The content directory is committed, so the image does not
-# need network access at runtime and does not run ingest during the build.
+# Bun installs, builds, and runs the server. The separate Playwright audit image
+# stays on Node because Playwright's library support under Bun is not officially
+# guaranteed. The content directory is committed, so the image does not need
+# network access at runtime and does not run ingest during the build.
 
 ARG BUN_VERSION=1.4.4
-ARG NODE_VERSION=22
 
 FROM oven/bun:${BUN_VERSION} AS deps
 WORKDIR /app
@@ -30,7 +30,7 @@ WORKDIR /app
 COPY package.json bun.lock ./
 RUN bun install --frozen-lockfile --production
 
-FROM node:${NODE_VERSION}-bookworm-slim AS runtime
+FROM oven/bun:${BUN_VERSION} AS runtime
 WORKDIR /app
 
 ENV NODE_ENV=production \
@@ -44,14 +44,14 @@ COPY package.json ./
 COPY content ./content
 COPY LICENSE NOTICE ATTRIBUTION.md README.md ./
 
-# The official Node image ships an unprivileged `node` user. The server only
-# needs read access to the content and write access to /tmp (tmpfs in Compose).
-USER node
+# The Bun image ships an unprivileged `bun` user. The server only needs read
+# access to the content and write access to /tmp (tmpfs in Compose).
+USER bun
 
 EXPOSE 3000
 STOPSIGNAL SIGTERM
 
 HEALTHCHECK --interval=30s --timeout=5s --start-period=10s --retries=3 \
-  CMD node -e "fetch('http://127.0.0.1:'+(process.env.TASTEPRO_PORT||3000)+'/healthz').then((r)=>{if(!r.ok)process.exit(1)}).catch(()=>process.exit(1))"
+  CMD bun -e "fetch('http://127.0.0.1:'+(process.env.TASTEPRO_PORT||3000)+'/healthz').then((r)=>{if(!r.ok)process.exit(1)}).catch(()=>process.exit(1))"
 
-CMD ["node", "dist/cli.js", "--http"]
+CMD ["bun", "dist/cli.js", "--http"]

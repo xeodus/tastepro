@@ -12,7 +12,7 @@ The architecture optimizes for four things:
    they ask, with token budgets on every response.
 3. **Auditability.** Every pack carries source, commit, path, license, authors,
    and transformations. The catalog has a content hash.
-4. **Small operational surface.** One Node process, a read-only filesystem, and
+4. **Small operational surface.** One server process, a read-only filesystem, and
    no external services.
 
 ## Runtime topology

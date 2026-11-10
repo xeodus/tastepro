@@ -50,7 +50,8 @@ docker compose up --build
 
 The image:
 
-- Uses a multi-stage Node 22 build.
+- Uses a multi-stage Bun build; the runtime image runs Bun. The separate
+  Playwright audit image stays on Node 22.
 - Prunes development dependencies from the runtime layer.
 - Runs as the non-root `node` user.
 - Ships `dist/`, `content/`, and the attribution files.
@@ -168,6 +169,8 @@ Operational notes:
   introspect or revoke tokens.
 - The reference Keycloak realm is development-only (HTTP, known passwords).
   Replace it with your IdP and HTTPS in production.
+
+For a local JWKS check without Docker, run `bun run smoke:oauth:local`.
 
 For a local end-to-end check, the repository includes a reference Keycloak
 realm:

@@ -305,7 +305,14 @@ For a production-shaped self-host deployment, use
 
 ### OAuth with Keycloak
 
-The repository includes a reference Keycloak realm and an end-to-end smoke:
+For a local OAuth check without Docker, run:
+
+```bash
+bun run smoke:oauth:local
+```
+
+The repository also includes a reference Keycloak realm and an end-to-end
+smoke:
 
 ```bash
 docker compose -f deploy/keycloak.compose.yml up -d
