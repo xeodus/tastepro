@@ -5,6 +5,9 @@
 # substantially larger and must run with CPU/memory limits and a larger
 # /dev/shm. Prefer submitting HTML over enabling URL fetching.
 #
+# Bun installs and builds; the runtime stays Node 22 because Playwright's
+# library support under Bun is not officially guaranteed.
+#
 #   docker build -f Dockerfile.audit -t tastepro:audit .
 #   docker run --rm -p 127.0.0.1:3000:3000 \
 #     -e TASTEPRO_API_KEY="$(openssl rand -hex 32)" \
@@ -12,29 +15,26 @@
 #     --shm-size=1g --memory=2g --cpus=2 \
 #     tastepro:audit
 
+ARG BUN_VERSION=1.4.4
 ARG NODE_VERSION=22
 ARG PLAYWRIGHT_VERSION=1.65.0
 
-FROM node:${NODE_VERSION}-bookworm-slim AS deps
+FROM oven/bun:${BUN_VERSION} AS deps
 WORKDIR /app
-ENV NPM_CONFIG_UPDATE_NOTIFIER=false \
-    NPM_CONFIG_FUND=false
-COPY package.json package-lock.json ./
-RUN npm ci
+COPY package.json bun.lock ./
+RUN bun ci
 
-FROM node:${NODE_VERSION}-bookworm-slim AS build
+FROM oven/bun:${BUN_VERSION} AS build
 WORKDIR /app
 COPY --from=deps /app/node_modules ./node_modules
-COPY package.json package-lock.json tsconfig.json tsconfig.build.json ./
+COPY package.json bun.lock tsconfig.json tsconfig.build.json ./
 COPY src ./src
-RUN npm run build
+RUN bun run build
 
-FROM node:${NODE_VERSION}-bookworm-slim AS prod-deps
+FROM oven/bun:${BUN_VERSION} AS prod-deps
 WORKDIR /app
-ENV NPM_CONFIG_UPDATE_NOTIFIER=false \
-    NPM_CONFIG_FUND=false
-COPY package.json package-lock.json ./
-RUN npm ci --omit=dev
+COPY package.json bun.lock ./
+RUN bun install --frozen-lockfile --production
 
 FROM node:${NODE_VERSION}-bookworm-slim AS runtime
 WORKDIR /app
@@ -47,13 +47,14 @@ ENV NODE_ENV=production \
     PLAYWRIGHT_BROWSERS_PATH=/ms-playwright \
     PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD=1
 
+# Bun is used only to install the Playwright package; the server runs on Node.
+RUN curl -fsSL https://bun.sh/install | bash \
+    && ln -s /root/.bun/bin/bun /usr/local/bin/bun
+
 COPY --from=prod-deps /app/node_modules ./node_modules
-COPY package.json ./
-# Install the Playwright package and the matching Chromium build with OS
-# dependencies. Browsers live in /ms-playwright so the unprivileged user can
-# read them at runtime.
-RUN npm install --no-save --no-package-lock playwright@${PLAYWRIGHT_VERSION} \
-    && npx playwright install --with-deps chromium \
+COPY package.json bun.lock ./
+RUN bun add --no-save playwright@${PLAYWRIGHT_VERSION} \
+    && node node_modules/playwright/cli.js install --with-deps chromium \
     && rm -rf /var/lib/apt/lists/*
 
 COPY --from=build /app/dist ./dist

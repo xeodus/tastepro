@@ -1,0 +1,6 @@
+[install]
+# Commit the text lockfile; it is the source of truth.
+saveTextLockfile = true
+# Supply-chain guard: do not resolve packages published in the last 3 days.
+# Bun skips dependency lifecycle scripts unless they are trusted.
+minimumReleaseAge = 259200

@@ -13,15 +13,15 @@ an object store, or an LLM API key.
 ## Local HTTP
 
 ```bash
-npm ci
-npm run build
+bun ci
+bun run build
 node dist/cli.js --http --host 127.0.0.1 --port 3000
 ```
 
 Or:
 
 ```bash
-npm run dev:http
+bun run dev:http
 ```
 
 The server prints its URL and auth mode to stderr. Health:
@@ -174,7 +174,7 @@ realm:
 
 ```bash
 docker compose -f deploy/keycloak.compose.yml up -d
-npm run smoke:oauth
+bun run smoke:oauth
 docker compose -f deploy/keycloak.compose.yml down -v
 ```
 
@@ -305,11 +305,11 @@ bearer tokens. The server does not log request bodies.
 Content is baked into the image. To update:
 
 ```bash
-npm run sources:update          # check pins
-npm run ingest -- --refresh     # fetch and regenerate
-npm run validate
-npm test
-npm run build
+bun run sources:update          # check pins
+bun run ingest -- --refresh     # fetch and regenerate
+bun run validate
+bun run test
+bun run build
 docker build -t tastepro:staging .
 ```
 

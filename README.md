@@ -52,13 +52,13 @@ for them. Response budgets keep context use predictable.
 
 ## Quick start
 
-Requirements: Node.js 22 or newer and npm.
+Requirements: Bun 1.4.4 or newer. (Node 22 is used only for the optional Playwright audit image.)
 
 ```bash
-npm ci
-npm run build
-node dist/cli.js info
-node dist/cli.js --stdio
+bun ci
+bun run build
+bun dist/cli.js info
+bun dist/cli.js --stdio
 ```
 
 `--stdio` is the default transport. It is meant to be launched by an MCP client,
@@ -82,12 +82,12 @@ validation warning count.
 From a checkout:
 
 ```bash
-npm link
+bun link
 tastepro info
 tastepro --stdio
 ```
 
-When the package is published, `npx -y tastepro --stdio` will be the shortest
+When the package is published, `bunx -y tastepro --stdio` will be the shortest
 local setup.
 
 ### Connect a client
@@ -120,7 +120,7 @@ Quality mix: 550 verified, 313 reference, 10 incomplete. Incomplete packs are
 excluded by default and are never presented as complete.
 
 The content is committed under `content/generated/`, so the server works
-offline. It is generated from the pinned sources by `npm run ingest`; do not
+offline. It is generated from the pinned sources by `bun run ingest`; do not
 hand-edit generated files.
 
 ## Tools
@@ -293,7 +293,7 @@ The repository includes a reference Keycloak realm and an end-to-end smoke:
 
 ```bash
 docker compose -f deploy/keycloak.compose.yml up -d
-npm run smoke:oauth
+bun run smoke:oauth
 docker compose -f deploy/keycloak.compose.yml down -v
 ```
 
@@ -332,10 +332,10 @@ full list.
 The content pipeline is reproducible:
 
 ```bash
-npm run ingest            # fetch pinned sources, transform, write content/generated
-npm run ingest:offline    # use the local source cache only
-npm run validate          # validate schemas, counts, hash, provenance, licenses
-npm run sources:update    # check the four pins for newer commits
+bun run ingest            # fetch pinned sources, transform, write content/generated
+bun run ingest:offline    # use the local source cache only
+bun run validate          # validate schemas, counts, hash, provenance, licenses
+bun run sources:update    # check the four pins for newer commits
 ```
 
 Every pack carries:
@@ -355,7 +355,7 @@ Every pack carries:
 ```
 
 The `contentHash` in `content/generated/stats.json` covers the catalog, every
-full pack file, reference bodies, and source commits. `npm run validate`
+full pack file, reference bodies, and source commits. `bun run validate`
 recomputes it from the served files and fails if the committed content drifts.
 
 See [docs/content.md](docs/content.md) for the content model and authoring
@@ -364,14 +364,14 @@ rules.
 ## Development
 
 ```bash
-npm run typecheck        # TypeScript strict check
-npm run lint             # Biome
-npm run format           # Biome format
-npm test                 # all tests
-npm run test:integration # real stdio/HTTP MCP clients
-npm run validate         # content and provenance validation
-npm run build            # compile to dist/
-npm run smoke:http       # real HTTP MCP smoke test with auth
+bun run typecheck        # TypeScript strict check
+bun run lint             # Biome
+bun run format           # Biome format
+bun run test                 # all tests
+bun run test:integration # real stdio/HTTP MCP clients
+bun run validate         # content and provenance validation
+bun run build            # compile to dist/
+bun run smoke:http       # real HTTP MCP smoke test with auth
 ```
 
 Tests are organized in tiers:
@@ -448,5 +448,5 @@ assets.
 
 Read [CONTRIBUTING.md](CONTRIBUTING.md). In short: keep changes deterministic,
 add tests, preserve provenance, never add third-party screenshots or logos, and
-run `npm run typecheck && npm run lint && npm run validate && npm test` before
+run `bun run typecheck && bun run lint && bun run validate && bun run test` before
 opening a pull request.

@@ -4,8 +4,10 @@
   "description": "Design taste, domain playbooks, references, and a web-interface audit rubric for coding agents. An MCP server for ChatGPT, Claude, and OpenCode.",
   "type": "module",
   "license": "Apache-2.0",
+  "packageManager": "bun@1.4.4",
   "engines": {
-    "node": ">=22"
+    "node": ">=22",
+    "bun": ">=1.4.4"
   },
   "bin": {
     "tastepro": "./dist/cli.js"
@@ -36,8 +38,8 @@
     "ATTRIBUTION.md"
   ],
   "scripts": {
-    "dev": "tsx src/cli.ts --stdio",
-    "dev:http": "tsx src/cli.ts --http",
+    "dev": "bun src/cli.ts --stdio",
+    "dev:http": "bun src/cli.ts --http",
     "build": "tsc -p tsconfig.build.json",
     "typecheck": "tsc -p tsconfig.json --noEmit",
     "lint": "biome check .",
@@ -47,13 +49,13 @@
     "test:watch": "vitest",
     "test:coverage": "vitest run --coverage",
     "test:integration": "vitest run tests/integration",
-    "validate": "tsx scripts/validate.ts",
-    "ingest": "tsx scripts/ingest.ts",
-    "ingest:offline": "tsx scripts/ingest.ts --offline",
-    "sources:update": "tsx scripts/update-sources.ts",
-    "smoke:http": "tsx scripts/smoke-http.ts",
-    "smoke:oauth": "tsx scripts/smoke-oauth.ts",
-    "prepublishOnly": "npm run build && npm run validate && npm test"
+    "validate": "bun scripts/validate.ts",
+    "ingest": "bun scripts/ingest.ts",
+    "ingest:offline": "bun scripts/ingest.ts --offline",
+    "sources:update": "bun scripts/update-sources.ts",
+    "smoke:http": "bun scripts/smoke-http.ts",
+    "smoke:oauth": "bun scripts/smoke-oauth.ts",
+    "prepublishOnly": "bun run build && bun run validate && bun run test"
   },
   "dependencies": {
     "@hono/node-server": "^2.1.6",
