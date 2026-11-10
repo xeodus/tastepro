@@ -4,33 +4,31 @@
 #   deps      -> full dependency tree for compiling TypeScript
 #   build     -> dist/
 #   prod-deps -> production-only node_modules
-#   runtime   -> non-root image with dist/, content/, and licenses
+#   runtime   -> non-root Node image with dist/, content/, and licenses
 #
-# The content directory is committed, so the image does not need network access
-# at runtime and does not run ingest during the build.
+# Bun installs and builds; the runtime stays Node 22 until the Bun runtime
+# parity gate passes. The content directory is committed, so the image does not
+# need network access at runtime and does not run ingest during the build.
 
+ARG BUN_VERSION=1.4.4
 ARG NODE_VERSION=22
 
-FROM node:${NODE_VERSION}-bookworm-slim AS deps
+FROM oven/bun:${BUN_VERSION} AS deps
 WORKDIR /app
-ENV NPM_CONFIG_UPDATE_NOTIFIER=false \
-    NPM_CONFIG_FUND=false
-COPY package.json package-lock.json ./
-RUN npm ci
+COPY package.json bun.lock ./
+RUN bun ci
 
-FROM node:${NODE_VERSION}-bookworm-slim AS build
+FROM oven/bun:${BUN_VERSION} AS build
 WORKDIR /app
 COPY --from=deps /app/node_modules ./node_modules
-COPY package.json package-lock.json tsconfig.json tsconfig.build.json ./
+COPY package.json bun.lock tsconfig.json tsconfig.build.json ./
 COPY src ./src
-RUN npm run build
+RUN bun run build
 
-FROM node:${NODE_VERSION}-bookworm-slim AS prod-deps
+FROM oven/bun:${BUN_VERSION} AS prod-deps
 WORKDIR /app
-ENV NPM_CONFIG_UPDATE_NOTIFIER=false \
-    NPM_CONFIG_FUND=false
-COPY package.json package-lock.json ./
-RUN npm ci --omit=dev
+COPY package.json bun.lock ./
+RUN bun install --frozen-lockfile --production
 
 FROM node:${NODE_VERSION}-bookworm-slim AS runtime
 WORKDIR /app
