@@ -50,7 +50,6 @@ for (const target of targets) {
       __TASTEPRO_VERSION__: JSON.stringify(pkg.version),
     },
     minify: true,
-    sourcemap: "linked",
   });
   if (!result.success) {
     console.error(`Failed to build ${target}`);

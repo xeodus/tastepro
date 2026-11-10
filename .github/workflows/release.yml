@@ -20,38 +20,43 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Set up Node
-        uses: actions/setup-node@v4
+      - name: Set up Bun
+        uses: oven-sh/setup-bun@v2
         with:
-          node-version: 22
-          cache: npm
+          bun-version: 1.4.4
 
       - name: Install
-        run: npm ci
+        run: bun ci
 
       - name: Tag matches package version
-        run: test "v$(node -p "require('./package.json').version")" = "${GITHUB_REF_NAME}"
+        run: test "v$(jq -r .version package.json)" = "${GITHUB_REF_NAME}"
+
+      - name: Audit
+        run: bun audit
 
       - name: Typecheck
-        run: npm run typecheck
+        run: bun run typecheck
 
       - name: Lint
-        run: npm run lint
+        run: bun run lint
 
       - name: Validate content
-        run: npm run validate
+        run: bun run validate
 
       - name: Test
-        run: npm test
+        run: bun run test
 
       - name: Build
-        run: npm run build
+        run: bun run build
 
       - name: HTTP smoke
-        run: npm run smoke:http
+        run: bun run smoke:http
+
+      - name: OAuth smoke (local JWKS)
+        run: bun run smoke:oauth:local
 
       - name: Package contents
-        run: npm pack --dry-run
+        run: bun pm pack --dry-run
 
   oauth:
     name: Keycloak E2E
@@ -62,24 +67,65 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Set up Node
-        uses: actions/setup-node@v4
+      - name: Set up Bun
+        uses: oven-sh/setup-bun@v2
         with:
-          node-version: 22
-          cache: npm
+          bun-version: 1.4.4
 
       - name: Install
-        run: npm ci
+        run: bun ci
 
       - name: Start Keycloak
         run: docker compose -f deploy/keycloak.compose.yml up -d
 
       - name: OAuth smoke
-        run: npm run smoke:oauth
+        run: bun run smoke:oauth
 
       - name: Stop Keycloak
         if: always()
         run: docker compose -f deploy/keycloak.compose.yml down -v
+
+  binaries:
+    name: Publish binaries
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    needs: [verify, oauth]
+    permissions:
+      contents: write
+      id-token: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Bun
+        uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: 1.4.4
+
+      - name: Install
+        run: bun ci
+
+      - name: Build all targets
+        run: bun run build:binaries:all
+
+      - name: Smoke the Linux binary
+        run: TASTEPRO_BINARY=dist-bin/tastepro-linux-x64 bun run smoke:binary
+
+      - name: Install cosign
+        uses: sigstore/cosign-installer@v3
+
+      - name: Checksums and signature
+        run: |
+          cd dist-bin
+          sha256sum tastepro-* > SHA256SUMS
+          cosign sign-blob --yes --bundle SHA256SUMS.bundle SHA256SUMS
+
+      - name: Publish GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          name: TastePro ${{ github.ref_name }}
+          generate_release_notes: true
+          files: dist-bin/*
 
   image:
     name: Publish image
@@ -189,34 +235,3 @@ jobs:
 
       - name: Sign image
         run: cosign sign --yes "${{ env.IMAGE_NAME }}@${{ steps.push.outputs.digest }}"
-
-  npm:
-    name: Publish npm package
-    runs-on: ubuntu-latest
-    timeout-minutes: 20
-    needs: [verify, oauth]
-    permissions:
-      contents: read
-      id-token: write
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      - name: Set up Node
-        uses: actions/setup-node@v4
-        with:
-          node-version: 22
-          cache: npm
-          registry-url: https://registry.npmjs.org
-
-      - name: Install
-        run: npm ci
-
-      - name: Set repository metadata
-        run: |
-          node -e "const fs=require('fs');const p=JSON.parse(fs.readFileSync('package.json'));const repo='https://github.com/'+process.env.GITHUB_REPOSITORY;p.repository={type:'git',url:repo+'.git'};p.homepage=repo+'#readme';p.bugs={url:repo+'/issues'};fs.writeFileSync('package.json',JSON.stringify(p,null,2)+'\n')"
-
-      - name: Publish
-        run: npm publish --provenance --access public
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
