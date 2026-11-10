@@ -11,5 +11,6 @@ deploy/staging.env
 *.log
 *.tgz
 *.tsbuildinfo
+bun.lockb
 .vitest/
 .taste-skill/

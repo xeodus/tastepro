@@ -135,7 +135,7 @@ playbooks and a hint. The separate `suggest()` path is used only for missing
 4. `./content` from the current working directory.
 
 The first directory containing `generated/catalog.json` wins. This supports
-`tsx` from `src/`, compiled `dist/`, an npm install, a Docker image, and test
+`tsx` from `src/`, compiled `dist/`, an bun install, a Docker image, and test
 fixtures without separate code paths.
 
 The loader validates every file with Zod on first read and memoizes it. It

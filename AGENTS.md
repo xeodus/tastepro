@@ -4,13 +4,13 @@ TastePro is a TypeScript MCP server (stdio and Streamable HTTP) serving a pinned
 
 ## Verify changes
 
-- Node >=22 (CI: 22/24/26). ESM/NodeNext; local imports use `.js` suffixes.
-- CI order: `npm run typecheck && npm run lint && npm run validate && npm test && npm run build && npm run smoke:http`.
-- One test file: `npx vitest run tests/unit/budget.test.ts`; filter by name with `-t "<pattern>"`.
-- `npm run test:integration` runs the real stdio/HTTP MCP client suites (also included in `npm test`).
-- `npm run smoke:oauth` runs the real Keycloak E2E; start `deploy/keycloak.compose.yml` first. It is not part of the default gate.
-- `npm run lint` runs Biome check (lint plus format); `lint:fix` applies safe fixes.
-- `npm run build` compiles only `src/` into gitignored `dist/`. Tests and scripts are typechecked by `npm run typecheck`, not built.
+- Bun 1.4.4 (CI: Bun 1.4.4; Node 22 only for the Playwright audit image). ESM/NodeNext; local imports use `.js` suffixes.
+- CI order: `bun ci && bun audit && bun run typecheck && bun run lint && bun run validate && bun run test && bun run build && bun run smoke:http`.
+- One test file: `bunx vitest run tests/unit/budget.test.ts`; filter by name with `-t "<pattern>"`.
+- `bun run test:integration` runs the real stdio/HTTP MCP client suites (also included in `bun run test`).
+- `bun run smoke:oauth` runs the real Keycloak E2E; start `deploy/keycloak.compose.yml` first. It is not part of the default gate.
+- `bun run lint` runs Biome check (lint plus format); `lint:fix` applies safe fixes.
+- `bun run build` compiles only `src/` into gitignored `dist/`. Tests and scripts are typechecked by `bun run typecheck`, not built.
 
 ## Cleanup after confirmed work
 
@@ -32,12 +32,12 @@ Once a change is confirmed, qualified (tests/checks pass), and committed, remove
 
 - Authored inputs: `content/domains/seed.json`, `content/taxonomy/domains.json`, `content/sources.lock.json`.
 - Fetched or derived and committed: licenses, `content/generated/**`, `content/references/**`. Never hand-edit these; regenerate them.
-- `npm run ingest` fetches pinned sources; `ingest:offline` uses `.cache/sources`; add `-- --refresh` to ignore the cache.
+- `bun run ingest` fetches pinned sources; `ingest:offline` uses `.cache/sources`; add `-- --refresh` to ignore the cache.
 - Ingest stages a complete snapshot, runs the release validator, and swaps it into place. A failed fetch, transform, or validation leaves the live content untouched; still start from a clean tree and inspect the diff.
-- Root `sources.lock.json` is the human-edited pin source. `content/sources.lock.json` is derived; `npm run sources:update --write` edits the root, then ingest refreshes the packaged copy.
+- Root `sources.lock.json` is the human-edited pin source. `content/sources.lock.json` is derived; `bun run sources:update --write` edits the root, then ingest refreshes the packaged copy.
 - Source cache paths include the pinned commit, so changing a pin cannot reuse stale bytes.
 - Exact content counts are asserted in `scripts/lib/validate-content.ts`; the 873 catalog total is also hardcoded in `scripts/smoke-http.ts` and `.github/workflows/ci.yml`. Update all three deliberately when the snapshot changes.
-- `npm run validate` checks schemas, counts, provenance, licenses, and the snapshot hash. The hash covers the catalog, full pack files, reference bodies, and pins; validation passing therefore proves those served artifacts match.
+- `bun run validate` checks schemas, counts, provenance, licenses, and the snapshot hash. The hash covers the catalog, full pack files, reference bodies, and pins; validation passing therefore proves those served artifacts match.
 - Adding or updating an upstream source requires its license under `content/sources/licenses/` plus `NOTICE` and `ATTRIBUTION.md` updates.
 
 ## Tests and contracts
@@ -45,8 +45,8 @@ Once a change is confirmed, qualified (tests/checks pass), and committed, remove
 - Follow red, green, refactor: add a failing test for the intended contract, implement, then rerun focused and full checks.
 - Do not loosen assertions, skip tests, or lower coverage thresholds to make a build pass. If a contract intentionally changes, update the unit/integration test and matching smoke/CI assertions together.
 - Existing tests encode exact tool/prompt/resource counts, token budgets, and error behavior. Treat these as product contracts, not incidental snapshots.
-- `tests/production/` covers committed content, CLI behavior, and HTTP hardening; `tests/integration/` uses real MCP clients. Both run under `npm test` with 30s timeouts and a fork pool.
-- Coverage thresholds (80% lines/functions/statements, 70% branches) apply only to `npm run test:coverage`.
+- `tests/production/` covers committed content, CLI behavior, and HTTP hardening; `tests/integration/` uses real MCP clients. Both run under `bun run test` with 30s timeouts and a fork pool.
+- Coverage thresholds (80% lines/functions/statements, 70% branches) apply only to `bun run test:coverage`.
 
 ## Configuration traps
 
@@ -64,6 +64,6 @@ Once a change is confirmed, qualified (tests/checks pass), and committed, remove
 
 - `docs/architecture.md` for runtime and request lifecycle.
 - `docs/content.md` for the content model, provenance, and authoring rules.
-- `docs/release.md` for tagging, GHCR/npm publishing, and verification.
+- `docs/release.md` for tagging, GHCR/binary publishing, and verification.
 - `README.md` for scope, commands, and environment variables.
 - `SECURITY.md` for the documented security posture.

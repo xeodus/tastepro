@@ -7,12 +7,12 @@ supports.
 Build first:
 
 ```bash
-npm ci
-npm run build
+bun ci
+bun run build
 ```
 
 Then use the absolute path to `dist/cli.js` in the examples below. Replace
-`/absolute/path/to/tastepro` with the real path. If you ran `npm link`, you can
+`/absolute/path/to/tastepro` with the real path. If you ran `bun link`, you can
 use `tastepro` instead of `node .../dist/cli.js`.
 
 ## Claude Desktop (stdio)
@@ -42,8 +42,8 @@ If you have published or linked the package, the shorter form is:
 {
   "mcpServers": {
     "tastepro": {
-      "command": "npx",
-      "args": ["-y", "tastepro", "--stdio"]
+      "command": "bunx",
+      "args": ["tastepro", "--stdio"]
     }
   }
 }
