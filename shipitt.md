@@ -5,6 +5,16 @@ Owner: xeodus
 Started: 2026-11-26
 Baseline: `v1.0.2`, commit `636d6a4`
 
+## Progress
+
+- 2026-11-26: Phases 1–3.5 implemented on `ship/prod-grade` (PR #15): npm
+  packaging with provenance, `server.json` + OCI label, current client docs,
+  and `tastepro audit <file>`. CI gates green, including a clean-directory npm
+  tarball install.
+- Blocked on credentials: npm trusted publishing and the registry variables.
+- Next: Phase 4, protocol `2026-07-28`; spike result in
+  [`docs/protocol-v2.md`](docs/protocol-v2.md).
+
 ## North star
 
 A stranger on Claude Code, Codex, OpenCode, Cursor or VS Code installs TastePro
