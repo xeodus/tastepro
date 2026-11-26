@@ -26127,6 +26127,32 @@
     }
   },
   {
+    "id": "app-pattern/ant-buttons",
+    "kind": "app-pattern",
+    "name": "Button",
+    "summary": "## Design Principal - Guide users to achieve the desired actions. - Prevent user to make mistakes. ## Types ### Common Button Types #### ① Default Button {#default-button} Default buttons are used for non-primary actions.",
+    "domains": [
+      "b2b-saas",
+      "product-surfaces"
+    ],
+    "sectors": [
+      "enterprise"
+    ],
+    "tags": [
+      "ant-design",
+      "buttons",
+      "actions",
+      "buttons"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "ant-design",
+    "sourceUrl": "https://ant.design/docs/spec/buttons",
+    "metrics": {
+      "screen": "buttons"
+    }
+  },
+  {
     "id": "app-pattern/spectrum-card",
     "kind": "app-pattern",
     "name": "Card",
@@ -26458,6 +26484,32 @@
     }
   },
   {
+    "id": "app-pattern/ant-colors",
+    "kind": "app-pattern",
+    "name": "Colors",
+    "summary": "Ant Design interprets the color system into two levels: a system-level color system and a product-level color system.",
+    "domains": [
+      "b2b-saas",
+      "product-surfaces"
+    ],
+    "sectors": [
+      "enterprise"
+    ],
+    "tags": [
+      "ant-design",
+      "color",
+      "foundation",
+      "colors"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "ant-design",
+    "sourceUrl": "https://ant.design/docs/spec/colors",
+    "metrics": {
+      "screen": "colors"
+    }
+  },
+  {
     "id": "app-pattern/nhs-complete-multiple-tasks",
     "kind": "app-pattern",
     "name": "Complete multiple tasks",
@@ -26543,6 +26595,32 @@
     }
   },
   {
+    "id": "app-pattern/ant-contrast",
+    "kind": "app-pattern",
+    "name": "Contrast",
+    "summary": "Contrast is one of the effective ways to add visual interest to your page, and to create an organizational hierarchy among different elements that aid user in finding the information quickly. > Note: The important rule for contrast to be…",
+    "domains": [
+      "b2b-saas",
+      "product-surfaces"
+    ],
+    "sectors": [
+      "enterprise"
+    ],
+    "tags": [
+      "ant-design",
+      "contrast",
+      "accessibility",
+      "contrast"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "ant-design",
+    "sourceUrl": "https://ant.design/docs/spec/contrast",
+    "metrics": {
+      "screen": "contrast"
+    }
+  },
+  {
     "id": "app-pattern/pie-cookie-banner",
     "kind": "app-pattern",
     "name": "Cookie banner",
@@ -26568,6 +26646,33 @@
     "sourceUrl": "https://pie.design/patterns/cookie-banner/",
     "metrics": {
       "screen": "cookie-banner"
+    }
+  },
+  {
+    "id": "app-pattern/ant-copywriting",
+    "kind": "app-pattern",
+    "name": "Copywriting",
+    "summary": "In the interface, we need to resonate with users through dialogue.",
+    "domains": [
+      "b2b-saas",
+      "product-surfaces",
+      "ecommerce-dtc"
+    ],
+    "sectors": [
+      "enterprise"
+    ],
+    "tags": [
+      "ant-design",
+      "copywriting",
+      "content",
+      "copywriting"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "ant-design",
+    "sourceUrl": "https://ant.design/docs/spec/copywriting",
+    "metrics": {
+      "screen": "copywriting"
     }
   },
   {
@@ -26640,6 +26745,32 @@
     }
   },
   {
+    "id": "app-pattern/ant-dark",
+    "kind": "app-pattern",
+    "name": "Dark Mode",
+    "summary": "Dark mode is a theme where all UI elements are darkened. ## When to use - Dark mode is recommended when you are in a dark environment as it prevents eye strain. - Dark mode is great for highlighting important content > It works similarly…",
+    "domains": [
+      "b2b-saas",
+      "product-surfaces"
+    ],
+    "sectors": [
+      "enterprise"
+    ],
+    "tags": [
+      "ant-design",
+      "dark-mode",
+      "foundation",
+      "dark"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "ant-design",
+    "sourceUrl": "https://ant.design/docs/spec/dark",
+    "metrics": {
+      "screen": "dark"
+    }
+  },
+  {
     "id": "app-pattern/patternfly-dashboard",
     "kind": "app-pattern",
     "name": "Dashboard",
@@ -26690,6 +26821,85 @@
     "sourceUrl": "https://carbondesignsystem.com/data-visualization/dashboards/",
     "metrics": {
       "screen": "dashboards"
+    }
+  },
+  {
+    "id": "app-pattern/ant-data-display",
+    "kind": "app-pattern",
+    "name": "Data Display",
+    "summary": "The suitable way to display data helps users quickly locate and browse data, and work together more efficiently.",
+    "domains": [
+      "b2b-saas",
+      "data-analytics",
+      "product-surfaces"
+    ],
+    "sectors": [
+      "enterprise"
+    ],
+    "tags": [
+      "ant-design",
+      "data-display",
+      "tables",
+      "data-display"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "ant-design",
+    "sourceUrl": "https://ant.design/docs/spec/data-display",
+    "metrics": {
+      "screen": "data-display"
+    }
+  },
+  {
+    "id": "app-pattern/ant-data-entry",
+    "kind": "app-pattern",
+    "name": "Data Entry",
+    "summary": "Data Entry is an important interactive way to retrieve information of objects since users will frequently add, change or delete information.",
+    "domains": [
+      "b2b-saas",
+      "product-surfaces"
+    ],
+    "sectors": [
+      "enterprise"
+    ],
+    "tags": [
+      "ant-design",
+      "data-entry",
+      "forms",
+      "data-entry"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "ant-design",
+    "sourceUrl": "https://ant.design/docs/spec/data-entry",
+    "metrics": {
+      "screen": "data-entry"
+    }
+  },
+  {
+    "id": "app-pattern/ant-data-format",
+    "kind": "app-pattern",
+    "name": "Data format",
+    "summary": "## Design Goals Standardize data expression to ensure intuitive, accurate and consistent understanding of data. ## Types ### Numerical The numerical value is used to indicate the measurement size, it can be used alone or with digital…",
+    "domains": [
+      "b2b-saas",
+      "data-analytics"
+    ],
+    "sectors": [
+      "enterprise"
+    ],
+    "tags": [
+      "ant-design",
+      "data-format",
+      "content",
+      "data-format"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "ant-design",
+    "sourceUrl": "https://ant.design/docs/spec/data-format",
+    "metrics": {
+      "screen": "data-format"
     }
   },
   {
@@ -26883,6 +27093,33 @@
     }
   },
   {
+    "id": "app-pattern/ant-detail-page",
+    "kind": "app-pattern",
+    "name": "Detail Page",
+    "summary": "Detail Pages display the complete data to users.",
+    "domains": [
+      "b2b-saas",
+      "data-analytics",
+      "ecommerce-dtc"
+    ],
+    "sectors": [
+      "enterprise"
+    ],
+    "tags": [
+      "ant-design",
+      "detail-page",
+      "layout",
+      "detail-page"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "ant-design",
+    "sourceUrl": "https://ant.design/docs/spec/detail-page",
+    "metrics": {
+      "screen": "detail-page"
+    }
+  },
+  {
     "id": "app-pattern/carbon-dialog-pattern",
     "kind": "app-pattern",
     "name": "Dialogs",
@@ -27067,6 +27304,32 @@
     "sourceUrl": "https://designsystem.digital.gov/patterns/complete-a-complex-form/establish-trust/",
     "metrics": {
       "screen": "establish-trust"
+    }
+  },
+  {
+    "id": "app-pattern/ant-feedback",
+    "kind": "app-pattern",
+    "name": "Feedback",
+    "summary": "In order to help users understand what the application is currently doing, and to refer to the user's next behavior, and to understand the results of the operation, when the user need to interact with the system , use different modes to…",
+    "domains": [
+      "b2b-saas",
+      "product-surfaces"
+    ],
+    "sectors": [
+      "enterprise"
+    ],
+    "tags": [
+      "ant-design",
+      "feedback",
+      "states",
+      "feedback"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "ant-design",
+    "sourceUrl": "https://ant.design/docs/spec/feedback",
+    "metrics": {
+      "screen": "feedback"
     }
   },
   {
@@ -27634,6 +27897,32 @@
     }
   },
   {
+    "id": "app-pattern/ant-layout",
+    "kind": "app-pattern",
+    "name": "Layout",
+    "summary": "Spatial layout is the starting point of systematic visual design.",
+    "domains": [
+      "b2b-saas",
+      "data-analytics"
+    ],
+    "sectors": [
+      "enterprise"
+    ],
+    "tags": [
+      "ant-design",
+      "layout",
+      "foundation",
+      "layout"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "ant-design",
+    "sourceUrl": "https://ant.design/docs/spec/layout",
+    "metrics": {
+      "screen": "layout"
+    }
+  },
+  {
     "id": "app-pattern/carbon-legends",
     "kind": "app-pattern",
     "name": "Legends",
@@ -27935,6 +28224,32 @@
     "sourceUrl": "https://design-system.service.gov.uk/patterns/names/",
     "metrics": {
       "screen": "names"
+    }
+  },
+  {
+    "id": "app-pattern/ant-navigation",
+    "kind": "app-pattern",
+    "name": "Navigation",
+    "summary": "Broadly speaking, anything telling users where they are, where to go and how to get there can be called navigation.",
+    "domains": [
+      "b2b-saas",
+      "data-analytics"
+    ],
+    "sectors": [
+      "enterprise"
+    ],
+    "tags": [
+      "ant-design",
+      "navigation",
+      "layout",
+      "navigation"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "ant-design",
+    "sourceUrl": "https://ant.design/docs/spec/navigation",
+    "metrics": {
+      "screen": "navigation"
     }
   },
   {

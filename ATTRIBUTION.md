@@ -21,6 +21,7 @@ The complete upstream license texts are committed at:
 - `content/sources/licenses/pie.txt`
 - `content/sources/licenses/sap.txt`
 - `content/sources/licenses/patternfly.txt`
+- `content/sources/licenses/ant-design.txt`
 
 The machine-readable pins are in `sources.lock.json` and
 `content/sources.lock.json`. Every generated pack also carries a `provenance`
@@ -45,6 +46,7 @@ transformations applied.
 | [PIE Design System](https://github.com/justeattakeaway/pie)                                | Just Eat Takeaway.com | Apache-2.0 | `cf7021732ad8ded4c818e95205d15b601d80fe50` |
 | [SAP Fiori](https://github.com/SAP/fundamental-styles)                                     | SAP                   | Apache-2.0 | `0753390b563b4eafe4d90ec812205df1361941ac` |
 | [PatternFly](https://github.com/patternfly/patternfly-org)                                 | Red Hat               | MIT        | `7637a02a651895ca568938e71621ecc717224e44` |
+| [Ant Design](https://github.com/ant-design/ant-design)                                     | Ant Group             | MIT        | `768405c1019435763adab015d47bf503505340d6` |
 
 ## Taste Skill
 
@@ -333,6 +335,25 @@ and `.../content-design/**/*.md` in the pinned repository.
 
 **Not included:** Red Hat marks, images, or implementation code.
 
+## Ant Design
+
+**Used for:** twelve B2B design specifications — data display, data entry,
+data format, detail page, buttons, colors, contrast, dark mode, copywriting,
+layout, feedback, and navigation.
+
+**Paths:** `docs/spec/*.en-US.md` in the pinned repository.
+
+**License:** MIT.
+
+**TastePro transformations:**
+
+- Removed `ImagePreview` blocks, images, and link markup.
+- Used the English design-spec pages only.
+- Converted the remaining Markdown to `app-pattern` packs.
+- Added provenance, source URLs, and quality metadata.
+
+**Not included:** Ant Group marks, AlibabaSans, images, or CDN assets.
+
 ## Original TastePro content
 
 The following are original to TastePro and licensed under Apache-2.0:
@@ -348,7 +369,7 @@ Original packs use `provenance.source: "tastepro"` and
 
 ## MIT license text
 
-The four MIT-licensed sources are reproduced under the following copyright
+The five MIT-licensed sources are reproduced under the following copyright
 notices and the standard MIT terms.
 
 ```text
@@ -356,6 +377,7 @@ Copyright (c) 2026 Leonxlnx
 Copyright (c) 2026 VoltAgent
 Copyright (c) 2025 Vercel Labs
 Copyright (c) Red Hat
+Copyright (c) Ant Group
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

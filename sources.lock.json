@@ -254,6 +254,20 @@
         "patterns": "packages/documentation-site/patternfly-docs/content/patterns/*/*.md",
         "contentDesign": "packages/documentation-site/patternfly-docs/content/content-design/**/*.md"
       }
+    },
+    {
+      "id": "ant-design",
+      "name": "Ant Design",
+      "repo": "https://github.com/ant-design/ant-design",
+      "commit": "768405c1019435763adab015d47bf503505340d6",
+      "license": "MIT",
+      "licenseUrl": "https://raw.githubusercontent.com/ant-design/ant-design/768405c1019435763adab015d47bf503505340d6/LICENSE",
+      "authors": ["Ant Group"],
+      "url": "https://ant.design/docs/spec/introduce",
+      "notes": "B2B admin design specifications. English docs only; images, AlibabaSans, and Alibaba CDN assets are excluded.",
+      "paths": {
+        "spec": "docs/spec/*.en-US.md"
+      }
     }
   ]
 }

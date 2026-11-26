@@ -25,6 +25,7 @@ import { fetchCached, fetchJsonCached, mapLimit } from "./lib/fetch.js";
 import { parseGuidelines } from "./lib/guidelines.js";
 import { commitSnapshot, discardStaging, prepareStaging } from "./lib/snapshot.js";
 import { type LockSource, loadSourceLock, sourceCacheKey } from "./lib/source-lock.js";
+import { antAdapter } from "./lib/sources/antd.js";
 import { carbonAdapter } from "./lib/sources/carbon.js";
 import { cmsAdapter } from "./lib/sources/cms.js";
 import { ethereumAdapter } from "./lib/sources/ethereum.js";
@@ -681,6 +682,7 @@ async function main(): Promise<void> {
     "pie",
     "sap",
     "patternfly",
+    "ant-design",
   ];
   for (const id of required) {
     if (!byId.has(id)) throw new Error(`sources.lock.json is missing ${id}`);
@@ -833,6 +835,18 @@ async function main(): Promise<void> {
       writeLicense: () => fetchLicense(patternflySource, options, staging),
     };
     const patternfly = await patternFlyAdapter.fetch(patternflyContext);
+    const antSource = byId.get("ant-design")!;
+    const antContext: SourceContext = {
+      source: antSource,
+      fetchText: (path) =>
+        fetchCached(lockUrl(antSource, path), sourceCacheKey(antSource, path), options),
+      fetchJson: (path) =>
+        fetchJsonCached(lockUrl(antSource, path), sourceCacheKey(antSource, path), options),
+      provenance: (path, transformations) => provenanceFor(antSource, path, transformations),
+      sourceUrl: (path = "") => sourceUrl(antSource, path),
+      writeLicense: () => fetchLicense(antSource, options, staging),
+    };
+    const ant = await antAdapter.fetch(antContext);
     const domains = await buildDomains(options.contentDir);
 
     const warnings = [
@@ -848,6 +862,7 @@ async function main(): Promise<void> {
       ...pie.warnings,
       ...sap.warnings,
       ...patternfly.warnings,
+      ...ant.warnings,
     ];
     const allPacks: Pack[] = sortPacks([
       ...taste.packs,
@@ -863,6 +878,7 @@ async function main(): Promise<void> {
       ...pie.packs,
       ...sap.packs,
       ...patternfly.packs,
+      ...ant.packs,
       ...domains.packs,
     ]);
     const references: ReferencePack[] = sortPacks([
@@ -954,6 +970,7 @@ async function main(): Promise<void> {
       pie.sourceInfo,
       sap.sourceInfo,
       patternfly.sourceInfo,
+      ant.sourceInfo,
     ];
     const counts = countBy(allContent, (pack) => pack.kind);
     const quality = countBy(allContent, (pack) => pack.quality);

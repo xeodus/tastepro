@@ -874,6 +874,51 @@
     "phone": ""
   },
   {
+    "id": "app-pattern/ant-buttons",
+    "kind": "app-pattern",
+    "name": "Button",
+    "summary": "## Design Principal - Guide users to achieve the desired actions. - Prevent user to make mistakes. ## Types ### Common Button Types #### ① Default Button {#default-button} Default buttons are used for non-primary actions.",
+    "domains": [
+      "b2b-saas",
+      "product-surfaces"
+    ],
+    "sectors": [
+      "enterprise"
+    ],
+    "tags": [
+      "ant-design",
+      "buttons",
+      "actions",
+      "buttons"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "ant-design",
+      "repo": "https://github.com/ant-design/ant-design",
+      "commit": "768405c1019435763adab015d47bf503505340d6",
+      "path": "docs/spec/buttons.en-US.md",
+      "license": "MIT",
+      "authors": [
+        "Ant Group"
+      ],
+      "url": "https://ant.design/docs/spec/introduce",
+      "transformations": [
+        "removed ImagePreview blocks, images, and link markup",
+        "converted the remaining Markdown to text"
+      ]
+    },
+    "sourceUrl": "https://ant.design/docs/spec/buttons",
+    "screen": "buttons",
+    "kinds": [
+      "buttons",
+      "actions"
+    ],
+    "basis": "a button design guideline from Ant Design",
+    "blueprint": "## Design Principal\n\n- Guide users to achieve the desired actions.\n- Prevent user to make mistakes.\n\n## Types\n\n### Common Button Types\n\n#### ① Default Button {#default-button}\n\nDefault buttons are used for non-primary actions. If not sure which button type to choose from, the default button is always a safe bet.\n\n#### ② Primary Button {#primary-button}\n\nEmphasize on \"complete\" or \"recommend\" action. There is at most one primary button per a button group.\n\n#### ③ Text Button {#text-button}\n\nLow emphasis and light-weight button type, such as actions in a table.\n\n#### ④ Icon Button {#icon-button}\n\nIcon provides a visual clue.\n\n- It could fit more buttons in a small space.\n- Buttons with icon only need to provide Tooltip to indicate the meaning of the button.\n\n#### ⑤ Text Button with Icon {#text-button-with-icon}\n\nProvides supplementary meaning to the button.\n\n### Emphasis\n\nCommon button types could be used to showcase to different **emphasis**.\n\n### Do & Don't\n\n### Special Button Types\n\n#### Dashed Button\n\nGuide users to add content in an area.\n\n#### Danger Button\n\nWarns users that there are risks involved in the action.\n\n#### Ghost Button\n\nUsed in the dark or colored background.\n\n#### Call to Action\n\nUsually appeared alone and intend to used as a command. For example, it is used in the landing page or welcome banner. It could be as wide as its parent container. It is recommended to have just 1 \"Call to Action\" button in 1 screen.\n\n## Placement\n\nPlace buttons in the users' reading pattern for the ease of discovery, such as the \"F-Shaped Reading Pattern\" and \"Z-Shaped Reading Pattern\".\n\n### How to Decide Button Placement?\n\n#### Page/Card/Section presents a subject, where it could be broken into 3 areas: {#page-card-section-areas}\n\n- Header: subject's heading, summary and navigation\n- Body: detailed content\n- Footer: supplementary information or toolbar\n\nPlace buttons in different areas could have different meanings.\n\n### When to Put Buttons in the Footer? {#buttons-in-the-footer}\n\n- Body section has collapsed or hidden content, such as it could not show the entire content in one screen;\n- Body section has complex content. For example, it has multiple subgroups and each subgroup has its own actions. Now it is needed to separate \"Complete\" action from body section to avoid confusion.\n\nIn short, footer's purpose is to have a separation from body.\n\n## Ordering\n\n### Button Ordering\n\nRecommend to start from the reading flow, collapsed content should always be on the right.\n\n**How to Decide Button Ordering**\n\n- Conversation Flow: place buttons in the order similar to a conversation between computers and users. **Ask users the needed actions or your desired actions, then present the risks involved.**\n- Navigation Flow: for example, if a button represents going back, should be placed on the left implying it is going to the previous step.\n\n### Button Group\n\nWhen multiple buttons form a group, align buttons in one line with spaces in between.\n\n### Grouping Buttons\n\nWhen there are too many buttons on the screen, we could group relevant buttons together and use similar design for that group. If one of the buttons is primary action, we could still use emphasis.\n\n**Collapse buttons in the order of importance**\n\n**Flat display of all the buttons:** could separate different groups using space; or use divider to group similar buttons.\n\n## Label\n\nLabels should clearly indicate to users what would happen when buttons got clicked.\n\n- Should use verb (except dropdown buttons)\n- Should be relevant to the context and be concise.\n\nAnt Design use \"OK / Cancel\" as default label, but you could still use below methods to customize the label text:\n\n- Describe the action result.\n\n  > Publish, Login, Register.\n\n- If primary action means negative, stress the consequences.\n\n  > Are you sure to delete it? Delete / Cancel",
+    "phone": ""
+  },
+  {
     "id": "app-pattern/spectrum-card",
     "kind": "app-pattern",
     "name": "Card",
@@ -1430,6 +1475,51 @@
     "phone": ""
   },
   {
+    "id": "app-pattern/ant-colors",
+    "kind": "app-pattern",
+    "name": "Colors",
+    "summary": "Ant Design interprets the color system into two levels: a system-level color system and a product-level color system.",
+    "domains": [
+      "b2b-saas",
+      "product-surfaces"
+    ],
+    "sectors": [
+      "enterprise"
+    ],
+    "tags": [
+      "ant-design",
+      "color",
+      "foundation",
+      "colors"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "ant-design",
+      "repo": "https://github.com/ant-design/ant-design",
+      "commit": "768405c1019435763adab015d47bf503505340d6",
+      "path": "docs/spec/colors.en-US.md",
+      "license": "MIT",
+      "authors": [
+        "Ant Group"
+      ],
+      "url": "https://ant.design/docs/spec/introduce",
+      "transformations": [
+        "removed ImagePreview blocks, images, and link markup",
+        "converted the remaining Markdown to text"
+      ]
+    },
+    "sourceUrl": "https://ant.design/docs/spec/colors",
+    "screen": "colors",
+    "kinds": [
+      "color",
+      "foundation"
+    ],
+    "basis": "a colors design guideline from Ant Design",
+    "blueprint": "Ant Design interprets the color system into two levels: a system-level color system and a product-level color system.\n\nThe system-level color system mainly defines the basic color palette, neutral color palette and data visualization color palette in the design of Ant Financial. The product-level color system is in the specific design process, based on the color of the system to further define the tone of the product in accordance with the requirements and function of the color.\n\n---\n\n## Color Model\n\nAnt Design's design team preferred to design with the HSB color model, which makes it easier for designers to have a clear psychological expectation of color when adjusting colors, as well as facilitate communication in teams.\n\n## System-level Color System\n\nAnt Design system-level color system also comes from the \"natural\" design language. Designers abstract the natural scenes through the capture, combined with the technical gene of Ant Financial, forming a unique 12 colors. Further through a large number of observations, to capture the different colors of natural light under the law of change, with the art of drawing ideas, the 12 colors were derived. The definition of neutral color palette is balanced with readability, aesthetics and usability.\n\n### Base Color Palettes\n\nAnt Design's base color palette totals 120 colors, including 12 primary colors and their derivative colors. These colors can basically include the need for color in background applications design.\n\nAnt Design's color palette also has the ability to further extend. After careful elaboration by designers and programmers, we have come up with a set of color generation tools that combine the natural variation of colors. When there is a need for further color design, designers simply define the primary colors according to certain rules and will get a complete range of derived colors automatically.\n\n### Neutral Color Palette\n\n### Data Visualization Color Palette\n\nData visualization color palette is based on the basic color palette and neutral color palette, and based on the principle that AntV's \"effective, clear, accurate and beautiful\". View Palette\n\n### Palette Generation Tool\n\nIf the above palettes do not meet your needs, you can choose a main color below, and Ant Design's color generation algorithm will generate a palette for you.\n\n### Programmatic Usage\n\nWe provide JavaScript usage for developers.\n\n```bash\nnpm install @ant-design/colors\n```\n\n```js\nimport { blue } from '@ant-design/colors';\n\nconsole.log(blue); // ['#E6F4FF', '#BAE0FF', '#91CAFF', '#69B1FF', '#4096FF', '#1677FF', '#0958D9', '#003EB3', '#002C8C', '#001D66']\nconsole.log(blue.primary); // '#1677FF'\n```\n\nMore APIs: @ant-design/colors\n\n---\n\n## Product-level Color System\n\n### Brand Color\n\nThe brand color is one of the most intuitive visual elements used that is used to embody product characteristics and communicate ideas. When selecting colors, it is important to understand how the brand color is used in the user interface. In the basic color palette to choose the main color, we recommend choosing the color plate from the shallow depth of the sixth color as the main color. Ant Design's brand color comes from blue of the base color palette, it's Hex value is `#1677ff`, application scenarios include: key action point, the operation status, important information highlighting, graphics and other scenes.\n\n### Functional Color\n\nFunctional color represents a clear message as well as status, such as success, error, failure, reminder, link and so on. Functional color selection need to comply with the user's basic understanding of color. We suggest that the functional colors should be kept as consistent as possible under a set of product systems. Do not have too much customization to interfere with the user's cognitive experience. Ant Design's functional color palette is shown on the right:\n\n### Neutral Color\n\nNeutral color is mainly used in a large part of the text interface, in addition to the background, borders, dividing lines, and other scenes are also very common. Neutral color definition needs to consider the difference between dark background and light background, while incorporating the WCAG 2.0 standard. The neutral color of Ant Design is based on transparency, as shown on the right:\n\n---\n\n## Color Application In Enterprise Product Design {#color-in-enterprise-products}\n\nIn the design of background applications of Ant Financial, our attitude towards color is restrained. Color is used more based on information delivery, operational guidance and interactive feedback purposes. Above these principles that do not undermine operational efficiency and affect the clear communication of information, a rational choice of color is key. Of course, with illustrations and display page can be properly broken this idea.",
+    "phone": ""
+  },
+  {
     "id": "app-pattern/nhs-complete-multiple-tasks",
     "kind": "app-pattern",
     "name": "Complete multiple tasks",
@@ -1572,6 +1662,51 @@
     "phone": ""
   },
   {
+    "id": "app-pattern/ant-contrast",
+    "kind": "app-pattern",
+    "name": "Contrast",
+    "summary": "Contrast is one of the effective ways to add visual interest to your page, and to create an organizational hierarchy among different elements that aid user in finding the information quickly. > Note: The important rule for contrast to be…",
+    "domains": [
+      "b2b-saas",
+      "product-surfaces"
+    ],
+    "sectors": [
+      "enterprise"
+    ],
+    "tags": [
+      "ant-design",
+      "contrast",
+      "accessibility",
+      "contrast"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "ant-design",
+      "repo": "https://github.com/ant-design/ant-design",
+      "commit": "768405c1019435763adab015d47bf503505340d6",
+      "path": "docs/spec/contrast.en-US.md",
+      "license": "MIT",
+      "authors": [
+        "Ant Group"
+      ],
+      "url": "https://ant.design/docs/spec/introduce",
+      "transformations": [
+        "removed ImagePreview blocks, images, and link markup",
+        "converted the remaining Markdown to text"
+      ]
+    },
+    "sourceUrl": "https://ant.design/docs/spec/contrast",
+    "screen": "contrast",
+    "kinds": [
+      "contrast",
+      "accessibility"
+    ],
+    "basis": "a contrast design guideline from Ant Design",
+    "blueprint": "Contrast is one of the effective ways to add visual interest to your page, and to create an organizational hierarchy among different elements that aid user in finding the information quickly.\n\n> Note: The important rule for contrast to be effective, it must be strong. Don't be wimp.\n\n---\n\n## The Contrast of major and minor relationship {#major-minor-contrast}\n\nIn order to help user make a quick operation (something like the form, modal), a more important operation or an operation with higher frequency would be emphasized.\n\n> Notes: ways of emphasizing are not just to intensify the key item. It could also weaken the other items.\n\nWhen there's something needs users to make decision prudently, the system should remain neutral. It shouldn't make the decision for users or lead them to make judgement.\n\n---\n\n## Contrast of whole and part\n\nTaking advantage of changing the typesetting, the typeface and the size, we highlight the different levels and differentiate the ensemble and the part, which would make the page be more flexible and rhythmic.\n\n---\n\n## Contrast of the state relation\n\nTaking advantage of changing colors and adding assistant shapes, we realize the comparison of state relation, which could help users differentiate various information better\n\nThe forms we usually see include 「static contrast」 and 「dynamic contrast」.",
+    "phone": ""
+  },
+  {
     "id": "app-pattern/pie-cookie-banner",
     "kind": "app-pattern",
     "name": "Cookie banner",
@@ -1616,6 +1751,52 @@
     ],
     "basis": "a cookie banner pattern from PIE",
     "blueprint": "## Overview\n\nThe purpose of the cookie banner is to inform users about the use of cookies, obtain their consent, and customise their preferences.\n\nIt aids websites in complying with privacy regulations by offering transparency regarding data collection practices and empowering users to control their privacy settings.\n\n---\n\n## Anatomy\n\n---\n\n## Variants\n\n### Banner\n\n### Modal\n\n---\n\n## Modifiers\n\n### Banner\n\n#### Default\n\n#### Primary actions only\n\nThis version is used when legal compliance in the country requires you to do so. In countries that do not require this, the default variation is used.\n\n---\n\n## Interaction area\n\n---\n\n## Content\n\n---\n\n## Behaviours\n\n### Banner background\n\nThe background page of the cookie banner isn’t disabled, and is only disabled once the modal is opened. The “Select your country” popover from the top navigation should sit on top of the banner so that the users can change the locale.\n\n### Modal background\n\nThe background page is disabled when the modal is opened until the user has made a selection and is ready to continue with their flow, or returns to the banner. A scrim is applied and the banner disappears.\n\n### Turn all on / off\n\nOnce the overarching toggle is toggled on/off, the child toggles follow suit. The overarching toggle will not be toggled on unless all child toggles are selected.\n\n---\n\n## Size\n\n### Wide width\n\nThe wide cookie banner has a minimum width of 700px and a maximum width of 1024px.\n\n### Narrow width\n\nThe narrow cookie banner has a minimum width of 320px and a maximum width of 699px.\n\n---\n\n## Positioning\n\n### Banner positioning\n\nThe cookie banner is always positioned at the bottom of the screen with default bottom, left and right padding of 16px from the container of the banner.\n\n### Modal positioning\n\nThe modal is positioned in the centre of the screen with a scrim applied.\n\n---\n\n## Motion\n\n### Banner\n\nIllustrates the movement taking place when the cookie banner enters and exit from view. You can see an animated example in our drive.\n\n#### Enter transition\n\nAs the cookie banner enters the view, it ascends by 75% of the component’s height over 400 milliseconds from its final position, simultaneously fading into view without any delay.\n\n#### Exit transition\n\nWhen the cookie banner exits from view it moves down 75% of the component’s height at 150ms from the final position. At the same time it fades out of view. Exit transitions are always quicker than entry.\n\n### Modal\n\n#### Overlapping transitions\n\nAs the pattern consists of two components, the transition between the banner exiting and the modal entering should overlap, ensuring a smooth and seamless transition.\n\n---\n\n## Examples LTR\n\n### Narrow (left-to-right)\n\nAt the narrow breakpoints, the banner has a maximum height of 432px, and the modal is set to full screen. If the content overflows due to a change in language, the available height, the call to action buttons and header become sticky and the body content scrolls.\n\n#### Banner\n\n#### Modal\n\n## Examples RTL\n\nFor languages that read right-to-left, the layout and alignment of the content is reorganised so the readability of the component makes logical sense.\n\n### Wide\n\n### Narrow\n\n---\n\n## Resources",
+    "phone": ""
+  },
+  {
+    "id": "app-pattern/ant-copywriting",
+    "kind": "app-pattern",
+    "name": "Copywriting",
+    "summary": "In the interface, we need to resonate with users through dialogue.",
+    "domains": [
+      "b2b-saas",
+      "product-surfaces",
+      "ecommerce-dtc"
+    ],
+    "sectors": [
+      "enterprise"
+    ],
+    "tags": [
+      "ant-design",
+      "copywriting",
+      "content",
+      "copywriting"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "ant-design",
+      "repo": "https://github.com/ant-design/ant-design",
+      "commit": "768405c1019435763adab015d47bf503505340d6",
+      "path": "docs/spec/copywriting.en-US.md",
+      "license": "MIT",
+      "authors": [
+        "Ant Group"
+      ],
+      "url": "https://ant.design/docs/spec/introduce",
+      "transformations": [
+        "removed ImagePreview blocks, images, and link markup",
+        "converted the remaining Markdown to text"
+      ]
+    },
+    "sourceUrl": "https://ant.design/docs/spec/copywriting",
+    "screen": "copywriting",
+    "kinds": [
+      "copywriting",
+      "content"
+    ],
+    "basis": "a copywriting design guideline from Ant Design",
+    "blueprint": "In the interface, we need to resonate with users through dialogue. Accurate and clear words are easy to understand, and a suitable tone can build a sense of trust easily. Therefore, in the interface design, copywriting should be taken seriously. There are some points to note when using and writing copy:\n\n- Consider from the user's point of view\n- Express consistently\n- Place important information in prominent positions\n- Professional, accurate and complete\n- Concise, friendly and positive\n\n---\n\n## Language\n\nIn the interface, copywriting is the basis of our communication with users. Therefore, the expression of words should be carefully deliberate and designed. With clear, accurate, and concise copywriting, the user experience can be more user-friendly.\n\n### Articulate foothold\n\nWhen expressing content, the focus should be on users -- what they can do with your product? Not what you and your product are doing for them. The foothold of content representation is very important. Since it is user-centred design, copywriting should be user-centred as much as possible.\n\n> Note: Use \"we\" to communicate with users when they are reporting questions, suggestions or complaints to the systems, such as \"We will consider your complaint.\".\n\n### Concise statement\n\nOmit useless words and do not repeat facts known to users. In most situations, there is no need for the interface to describe all the details. Try to provide short and accessible content.\n\n### Use words familiar to the user\n\nUse simple, direct and easy-to-understand words. Indirect, ambiguous, obscure, and overly \"refined\" copywriting will increase user's cognitive load.\n\n### Express consistently\n\n- Use consistent words that describe the same thing;\n- Use consistent grammar, language and word orders of the context;\n- Use consistent operation names and page titles.\n\n### Place important information in a prominent position {#info-in-prominent-place}\n\nLet users see the most important content at first glance.\n\n> Note: When considering security issues, private information can be adjusted to \"visible after click\".\n\n### Express completely and directly\n\nWhen we want the user to take an action, we should focus on what the user can get and how he/she feels. Telling users the purpose or importance of the action can make them more willing to perform it.\n\nError reporting is a common feature in the UI, and it is an important part of user experience. When the user inputs  the wrong content, your error message should be consistent with the user's cognition, and expressed in an easy-to-understand way.\n\n### Use words precisely and completely {#use-words-precisely}\n\nUse general basic words normatively. Spell correctly, express completely. Professional terms should be accurate, according to industry standards; the expression of time must be clear.\n\n## Tone\n\nLanguage defines content, while emotions and atmosphere are expressed more in tone. The same content can be expressed in different tones to different users. Take an example, to professional operators and new users, we should use different copywriting.\n\n### Bring each other closer\n\nDon't refer to the user by using \"my\" and \"your\" in the same phrase.\n\n> Note: To avoid confusing the users, don't mix first person(\"I\", \"me\", or \"my\") and second person(\"you\", \"your\") in the same sentence.\n\n### Be friendly and respectful\n\nGive users support and encouragement, not commands or pressure. If you want to keep your users, don't blame them when things go wrong. Focus on solving problems, not blaming.\n\n### Do not be too extreme\n\nDon't use too absolute expression that will make the user uncomfortable.\n\n## Capitalization and punctuation\n\n### Uppercase and lowercase\n\nWhen using the full name of the product, capitalize the first letter of each word. Write the abbreviations of product names in capital, such as ESC, SLB, etc.\n\n> People are much more used to reading words in lowercase letters, those are what our brains find easiest to scan and instantly absorb. Please avoid capitalizing whole words or phrases.\n\nUse the correct case.\n\nUse sentence capital case in headlines, titles, labels, menu items, buttons, etc.\n\n### Arabic numbers\n\nUsers perceive numbers faster. Numbers transmit information more effectively than words.\n\n### Omit unnecessary punctuation\n\nTo help users scan the text more efficiently, unnecessary periods can be omitted. No need to use punctuation when the following elements appear alone:\n\n- Label\n- Title\n- Tips under the input box\n- Text in tooltip component\n- Sentences in the table\n\nThe following elements need to be punctuated when they appear separately:\n\n- Multiple sentences or paragraphs\n- Any sentence before a link\n\n### Use exclamation marks with caution {#use-exclamation-marks-with-care}\n\nThe exclamation mark will make the tone appear too excited, and it will easily make the atmosphere too tense.\n\n> Note: When expressing greetings or congratulations to the user, use \"!\" is reasonable, such as\" Welcome back to the community! \".",
     "phone": ""
   },
   {
@@ -1742,6 +1923,51 @@
     "phone": "The live deployment card becomes a stack of label-value rows; the KPIs a 2x2 grid; the chart full width with its markers; the explanation under it; deployments as two-line rows with region and duration on line 2."
   },
   {
+    "id": "app-pattern/ant-dark",
+    "kind": "app-pattern",
+    "name": "Dark Mode",
+    "summary": "Dark mode is a theme where all UI elements are darkened. ## When to use - Dark mode is recommended when you are in a dark environment as it prevents eye strain. - Dark mode is great for highlighting important content > It works similarly…",
+    "domains": [
+      "b2b-saas",
+      "product-surfaces"
+    ],
+    "sectors": [
+      "enterprise"
+    ],
+    "tags": [
+      "ant-design",
+      "dark-mode",
+      "foundation",
+      "dark"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "ant-design",
+      "repo": "https://github.com/ant-design/ant-design",
+      "commit": "768405c1019435763adab015d47bf503505340d6",
+      "path": "docs/spec/dark.en-US.md",
+      "license": "MIT",
+      "authors": [
+        "Ant Group"
+      ],
+      "url": "https://ant.design/docs/spec/introduce",
+      "transformations": [
+        "removed ImagePreview blocks, images, and link markup",
+        "converted the remaining Markdown to text"
+      ]
+    },
+    "sourceUrl": "https://ant.design/docs/spec/dark",
+    "screen": "dark",
+    "kinds": [
+      "dark-mode",
+      "foundation"
+    ],
+    "basis": "a dark mode design guideline from Ant Design",
+    "blueprint": "Dark mode is a theme where all UI elements are darkened.\n\n## When to use\n\n- Dark mode is recommended when you are in a dark environment as it prevents eye strain.\n- Dark mode is great for highlighting important content\n  > It works similarly to turning off the lights in a movie theater.\n\n## Design Principles\n\n1. **Comfort of content**\n\nAvoid using highly contrasting colors or content in dark mode. Continuous use will bring fatigue.\n\n2. **Consistency of Information**\n\nThe information content in the dark mode needs to be consistent with the light mode, and the initialization hierarchical relationship should not be broken.\n\n## Color\n\nIn the application of colors, we are based on 12 sets of basic swatches and combine longer rule processing to make colors better blend under different environmental colors.\n\n### Color Palette\n\n### Color Palette Generator\n\nAdditionally, we also provide a set of tools for generating color palettes in dark colors. You need to select your primary color and the background color of the page. We will generate a dark mode color palette for you.",
+    "phone": ""
+  },
+  {
     "id": "app-pattern/patternfly-dashboard",
     "kind": "app-pattern",
     "name": "Dashboard",
@@ -1829,6 +2055,142 @@
     ],
     "basis": "data-visualization guidance from IBM Carbon",
     "blueprint": "Context is everything. Dashboards will vary widely depending on the context they\nare designed for and must be carefully considered.\n\n**Note:** This guidance is a work in progress. To see our roadmap, make feature\nrequests, or contribute, please go to carbon-charts\n[GitHub repository](https://github.com/carbon-design-system/carbon-charts).\n\n## Presentation dashboard\n\nPresentation dashboards show viewers the current status of key performance\nindicators (KPIs) relevant to the business problem. A good presentation\ndashboard provides a big-picture view of the data while serving as a guide for\nthe audience to decide what areas they would like to focus on and explore.\n\nExamples include a car dashboard, a stock market ticker board, or a route map\nwith the locations of nearby gas stations layered on top.\n\n### Best practices\n\n#### Establish a strong hierarchy\n\nPrioritize data by importance, then create a clear visual hierarchy. The most\nimportant data should have the highest contrast and occupy the largest area.\n\nMost people in the west read left to right, then top to bottom. This is known as\nthe\n[F-shaped pattern](https://www.nngroup.com/articles/f-shaped-pattern-reading-web-content/).\nPlace the most important at the top of the page and follow the F-pattern for the\nremaining elements, finishing with the least important information.\n\n#### Limit the number of metrics\n\nNon-essential information should be provided as needed. Design a dashboard to\nreduce a page's complexity by stripping away anything that could distract a user\nfrom interpreting the information.\n\n#### Use consistent color assignments\n\nAlways use consistent colors for each data set within a dashboard.\n\n#### Use white space to enhance clarity\n\nWhite space either sets elements apart or brings them together to distinguish a\npoint's priority. Space acts as a visual separator and guides a user's eye\nthrough a page. It provides relief and breathing room. According to\n[research](http://www.humanfactors.com/newsletters/yeah_but_can_you_give_me_a_reference.asp)\nconducted by Human Factors International, white space increases comprehension by\nalmost 20 percent.\n\n## Exploration dashboard\n\nExploration dashboards allow users to interact with the data to discover\ninsights and identify patterns. Examples of actions a user may perform on data\ninclude search, sort and filter data, roll up, and drill down. Exploration\ndashboards are intended for people who seek to look beyond a primary view and\nhave to be very interactive.\n\nExamples include financial reports with roll up and drill down capabilities or\ninteractive maps that include zooming in and out. Others include business\npreviews with a search bar and additional data available on demand like opening\nhours and reviews.\n\n### Best practices\n\n#### Consistency is key\n\nAll charts should use the same layout and spacing, and have legends in the same\nposition relative to the charting area. Do not switch measurement systems, like\nimperial to metric.\n\n#### Linked charts\n\nMirror chart modifications like filter and zoom. When a user manipulates one\nchart, other charts showing related data sets should automatically update to\nprovide multi-dimensional views of the user’s action.\n\n#### Annotation\n\nUse annotations to highlight trends, averages, peaks, and valleys to provide\nadditional information. Annotations should help users interpret fluctuations in\nthe data. Avoid annotations that obstruct the view of data.",
+    "phone": ""
+  },
+  {
+    "id": "app-pattern/ant-data-display",
+    "kind": "app-pattern",
+    "name": "Data Display",
+    "summary": "The suitable way to display data helps users quickly locate and browse data, and work together more efficiently.",
+    "domains": [
+      "b2b-saas",
+      "data-analytics",
+      "product-surfaces"
+    ],
+    "sectors": [
+      "enterprise"
+    ],
+    "tags": [
+      "ant-design",
+      "data-display",
+      "tables",
+      "data-display"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "ant-design",
+      "repo": "https://github.com/ant-design/ant-design",
+      "commit": "768405c1019435763adab015d47bf503505340d6",
+      "path": "docs/spec/data-display.en-US.md",
+      "license": "MIT",
+      "authors": [
+        "Ant Group"
+      ],
+      "url": "https://ant.design/docs/spec/introduce",
+      "transformations": [
+        "removed ImagePreview blocks, images, and link markup",
+        "converted the remaining Markdown to text"
+      ]
+    },
+    "sourceUrl": "https://ant.design/docs/spec/data-display",
+    "screen": "data-display",
+    "kinds": [
+      "data-display",
+      "tables"
+    ],
+    "basis": "a data display design guideline from Ant Design",
+    "blueprint": "The suitable way to display data helps users quickly locate and browse data, and work together more efficiently. There are the following points to note when designing:\n\n- Organize the order of presentations according to the importance level of the information, the frequency of operation, and the degree of association.\n- Pay attention to the guidance in extreme situations. For example, the data information is too long, and the initial state when content is empty.\n\n---\n\n## Table\n\nThe table is recognized as one of the clearest and most efficient forms of presentation data. It is often used in conjunction with other interface elements such as sorting, searching, filtering, and paging, and is suitable for information collection and display, data analysis and induction, and manipulation of structured data. Its structure is simple, its separation and induction are clear, the information is easier to compare, and the user's receiving efficiency and understanding of the information is greatly improved.\n\n> Note:\n>\n> 1. The time, status, and action bar in the table need to keep the words intact without occupying multiple lines.\n> 2. When table cell is empty, use `-` to indicate that there is no data.\n\n## Collapse\n\nCollapse guides the user to obtain information in a progressive manner by folding and arranging information, so that the interface is kept clean and the space is effectively utilized.\n\nThese components are used extensively in navigation and are also suitable for lengthy, irregular content management.\n\n> Note: If the collapsed content has little conjunction to each other, you can use the more space-saving \"accordion\" mode - \"accordion\" is a special collapse that allows only a single content area to be unfolded.\n\n---\n\n## Card\n\nA card is a container for carrying information. There is not too much limit to the types of content that can be carried. It makes a type of information centralized, enhances the sense of block and is easier to operate. Cards are usually arranged in a grid or matrix to convey the hierarchical relationship between each other. Cards are suitable for lighter and more personalized information block display.\n\n> Note:\n>\n> 1. Cards are usually arranged according to the grid, and a maximum of four lines is recommended.\n> 2. In the limited card space, you need to pay attention to the spacing between the information. If the information is too long, you can cut off the information. For example, \"Ant Design is suitable for the middle station...\"\n\n---\n\n## Carousel\n\nAs a set of same hierarchy content parallel display mode, often used for picture or card carousel, can be triggered by the user or the system automatically rotates. It is suitable for display blocks such as the official website home page and product introduction page.\n\n> Note:\n>\n> 1. The number of carousels should not be too much to avoid user boredom, it is best to control between 3 and 5.\n> 2. It is recommended to provide hints on the design to allow users to maintain a clear understanding of the number and direction of the carousel.\n\n---\n\n## Tree\n\n\"Tree\" displays the hierarchical relationship of information in the form of a step-by-step outline, which is efficient and has excellent visual visibility, making the overall information framework clear at a glance.\n\nUsers can view and process multiple tree-level content at the same time. Tree is applicable to any information scenarios that need to be organized through a hierarchy, such as folders, organizational structures, taxonomy, country regions, and more.\n\n---\n\n## Timeline\n\nTimeline is used to display time-flow information vertically, generally recording events in time by flashback, tracking what the user is doing now and what he has done in the past.\n\nEach piece of information is time-based, and the content can cover topics, types, related additional content, and so on. Suitable for including events, tasks, calendar annotations, and other related data presentations.",
+    "phone": ""
+  },
+  {
+    "id": "app-pattern/ant-data-entry",
+    "kind": "app-pattern",
+    "name": "Data Entry",
+    "summary": "Data Entry is an important interactive way to retrieve information of objects since users will frequently add, change or delete information.",
+    "domains": [
+      "b2b-saas",
+      "product-surfaces"
+    ],
+    "sectors": [
+      "enterprise"
+    ],
+    "tags": [
+      "ant-design",
+      "data-entry",
+      "forms",
+      "data-entry"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "ant-design",
+      "repo": "https://github.com/ant-design/ant-design",
+      "commit": "768405c1019435763adab015d47bf503505340d6",
+      "path": "docs/spec/data-entry.en-US.md",
+      "license": "MIT",
+      "authors": [
+        "Ant Group"
+      ],
+      "url": "https://ant.design/docs/spec/introduce",
+      "transformations": [
+        "removed ImagePreview blocks, images, and link markup",
+        "converted the remaining Markdown to text"
+      ]
+    },
+    "sourceUrl": "https://ant.design/docs/spec/data-entry",
+    "screen": "data-entry",
+    "kinds": [
+      "data-entry",
+      "forms"
+    ],
+    "basis": "a data entry design guideline from Ant Design",
+    "blueprint": "Data Entry is an important interactive way to retrieve information of objects since users will frequently add, change or delete information. Diverse ways for text input entry and selection entry help users finish interactions more clearly and efficiently. Designers should pay attention to things as follows:\n\n- Straightforward text should be provided as \"Label\" for novice users and users that access occasionally, while terminology should be provided as \"Label\" for domain experts. When sensitive information should be provided by users, hints can be used to specify why the system need to do so. For example, when it's necessary to retrieve a user's identity (ID) or phone number.\n- Allow users to get information via context to help completing their input. It avoids users to have wild guesses from the empty input through approaches like \"good default values\", \"structured formats\", \"hints\", \"input tips\" etc.\n\n---\n\n## Text Input Entry\n\nInput is the basic and common way for data entry, which provides a text editable component for users.\n\n### Input\n\nIt uses a single line for text input with limited length.\n\n> Note: Specific styles can be applied to some text (e.g. numbers, URL). Please refer to Input.\n\n### Textarea\n\nIt's a multi-line text input for single long text.\n\n### Tips and helps\n\nHints is usually added in Input to help remind users, which can increase efficiency for the data entry.\n\n> Note: Input usually works together with label which is to the left of input by default, while it can be on top as well when the text is too long or in English context. However, it should be consistent within the same system.\n\n### Search\n\nSearch can help users reduce the range for target and retrieve the necessary information quickly from a huge information pool.\n\n---\n\n## Selection entry\n\nAllow users to select from a specific range\n\n#### Radio Button\n\nRadio button allows a user to select only one value from several options. Radio options should not be too many because all the options are default visible to a user so that the user can make the selection via comparison.\n\n> Note: Radio Button must be more than two options, and normally less than five.\n\n### Checkbox\n\nCheckbox is used to select multiple values from several options.\n\n> Note:\n>\n> 1. Checkbox often works together with submit action for state.\n> 2. A single checkbox can represent the switch of two states.\n\n### Switch\n\nIt's used to switch the state of a single option. The inline label of \"Switch\" should be displayed clearly, e.g. Disable/Enable, Disallow/Allow etc.\n\n> Note: It will trigger the state change directly when a user toggles the \"Switch\".\n\n### Dropdown\n\nDropdown provides more flexibility for the number of options, allowing a user to select one or multiple values from a list of options.\n\n> Note:\n>\n> 1. Used when there are more than five options.\n> 2. Options is listed with logical sorting and content should be fully displayed.\n\n### Slider\n\nSlider allows to select a suitable value by moving the anchor in a continuous or discontinuous range. It's a better choice for reflecting options of intensities or grades, e.g. volume, brightness, color saturation etc.\n\n> Note: Operations can be more flexible and convenient using \"Slider\" when precise value is not required. \"NumberInput\" can be worked together with Slider for precise values.\n\n### Transfer\n\nTransfer the elements between two columns in an intuitive and efficient way.\n\n### DatePicker\n\nDatePicker provides a visual way to browse and select a date or date range for users.\n\n---\n\n## Upload\n\nUpload is the process of publishing information (from local or cloud storage) to a remote server via a web page or an upload tool.\n\n### Upload by simple clicks\n\nNormally used to upload a single file which doesn't require preview. Click the button will prompt the file selection window.\n\n### Upload by displaying thumbnails\n\nNormally used to upload images. Users can upload images and display thumbnails in the list. The upload button will disappear when the number of images is up to a threshold.\n\n### Upload by drag-and-drop\n\nDrag files into a specific area to upload, while it supports upload by clicking as well.\n\n> Note: Specific file size and format is required for file upload, e.g.: Please select text files (support PDF, ZIP, EXL) with size no more than 5M. Progress of uploading should be displayed.",
+    "phone": ""
+  },
+  {
+    "id": "app-pattern/ant-data-format",
+    "kind": "app-pattern",
+    "name": "Data format",
+    "summary": "## Design Goals Standardize data expression to ensure intuitive, accurate and consistent understanding of data. ## Types ### Numerical The numerical value is used to indicate the measurement size, it can be used alone or with digital…",
+    "domains": [
+      "b2b-saas",
+      "data-analytics"
+    ],
+    "sectors": [
+      "enterprise"
+    ],
+    "tags": [
+      "ant-design",
+      "data-format",
+      "content",
+      "data-format"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "ant-design",
+      "repo": "https://github.com/ant-design/ant-design",
+      "commit": "768405c1019435763adab015d47bf503505340d6",
+      "path": "docs/spec/data-format.en-US.md",
+      "license": "MIT",
+      "authors": [
+        "Ant Group"
+      ],
+      "url": "https://ant.design/docs/spec/introduce",
+      "transformations": [
+        "removed ImagePreview blocks, images, and link markup",
+        "converted the remaining Markdown to text"
+      ]
+    },
+    "sourceUrl": "https://ant.design/docs/spec/data-format",
+    "screen": "data-format",
+    "kinds": [
+      "data-format",
+      "content"
+    ],
+    "basis": "a data format design guideline from Ant Design",
+    "blueprint": "## Design Goals\n\nStandardize data expression to ensure intuitive, accurate and consistent understanding of data.\n\n## Types\n\n### Numerical\n\nThe numerical value is used to indicate the measurement size, it can be used alone or with digital symbols.\n\n| Symbol Format | How and When to Use | Example |\n| --- | --- | --- |\n| Decimal separator | Use commas to separate groups of thousands to help users read. | 123,123,220 |\n| Unit of measurement | Put units of measurement in lowercase. | 123,220kg |\n| Percentage | To present proportionality, etc. | 12.32% |\n| Forward slash | To express progress with fractions. | 12/30 |\n\n**Position**: To let users read the data intuitively and accurately, it is necessary to make it clear and concise. In a table with numerical values, \"right-aligned\" method is usually adopted, which not only facilitates the user to quickly read, but also allows the user to compare the longitudinal data.\n\n### Amount\n\n**Amount Format**: The standard format is \"currency symbol + number\". For example, \"CNY1,123.00\". **Currency Symbol**: There are two types: abbreviations letters and characters. You can check symbols for different currencies from CURRENCY SYMBOLS.\n\n| Currency Symbol | How and When to Use | Example |\n| --- | --- | --- |\n| Character | Take RMB as example, its character symbol is `¥`, placed in front of the amount. | ¥123.00 |\n| Letter | Take RMB as example, it is recommended to use `CNY`, which is the international currency code. | CNY123.00 |\n\nLarge amount: If an amount is large, \"M/Mill.\" (abbreviation of million) and \"B/Bill.\" (abbreviation of billion) can be used.\n\n### Date/Time\n\n#### Absolute Time\n\nAbsolute time is for users with high time accuracy requirements, it emphasizes the precise time point of information release. Through absolute time, users can retrieve information and review the past content.\n\n**Date Format:**\n\nWe suggest the following formats:\n\n| Format | How and when to use | Examples |\n| --- | --- | --- |\n| Year, month, day | In China `YYYY-MM-DD` format is used by default. | 2019-12-08 |\n| Terms | When a special term containing a date expressed with numbers, display a `.` between the month and the day, and quotation marks should be added before and after the term. | 6.1 children's day |\n| Date range | Put `~` or `-` between the date or time range (space is required before and after). | 2018-12-08 ~ 2019-12-07 |\n\n**Time Format:**\n\n| Time System | How and when to use | Examples |\n| --- | --- | --- |\n| 24-hour clock | The format is `HH:MM:SS`. Omit hours or second if not apply. Use the 24-hour clock by default. | 14:08:00 |\n| 12-hour clock | Use the format `H:MM:SS AM/PM` (or am/pm).  | 2:08:00 PM ~ 2:08:00 AM |\n\n**Standard format**: When put a date and a time together, show a space between them, e.g. \"2019-12-08 06:00:00\".\n\n#### Relative Time\n\nTo the users, the accuracy of time is not so important as the immediacy of the information. In the console platform, relative time is generally used for message and notification. And users tend to pay more attention to the unit of time, instead of working out the specific time point of publication.\n\n| Time                 | Display form                                |\n| -------------------- | ------------------------------------------- |\n| Less than 1 minute   | just now                                    |\n| Less than 1 hour     | N minutes ago                               |\n| Within 24 hours      | N hours ago                                 |\n| Longer than 24 hours | `MM-DD HH:MM`, e.g. \"12-08 08:00\"           |\n| Longer than one year | `YYYY-MM-DD HH:MM`, e.g. \"2019-12-08 08:00\" |\n\n### Data Redaction\n\nData redaction refers to representing truncated data to protect sensitive privacy information. The rules presented here are general guidelines, which can be adjusted according to business scenarios with strong data security.\n\n#### Complete Redaction\n\nGenerally used for particularly important and sensitive information such as amount and time. All the numbers need to be hidden. And the data is replaced by `***`.\n\n#### Partial Redaction\n\nGenerally used for situations that require partial information for identification. In such cases, some part of the information is truncated, but the numerical digits of the numbers need to retain. The truncated data is replaced by `*`.\n\n| Data Type | How and When to Use | Example |\n| --- | --- | --- |\n| Name | Two-character name: display the first character, followed by a `*`. | L\\* |\n|  | Names with three characters or more: display the first character and the last character, replace the middle character(s) with `*`. | A\\*i  A\\*\\*e |\n| Mobile number | Keep the first three and the last four digits of the mobile number. | 186\\*\\*\\*\\*1402 |\n| ID number | The Chinese citizenship number consists of six address codes, eight birthdate codes, three sequential codes and one check code.Redaction rules are classified into high, medium and low levels: **High**: Show the first and last digits, and replace the others with `*`.**Medium**: Show the first three and the last three. Replace the others with `*`.**Low**: Show the first six and the last four. Replace the others with `*`. | 6\\*\\*\\*\\*\\*\\*\\*\\*\\*\\*\\*\\*\\*2213\\*\\*\\*\\*\\*\\*\\*\\*\\*\\*\\*203212912\\*\\*\\*\\*\\*\\*2233 |\n| Address | Keep the provinces, cities and district information, followed by several `*`. | Zhejiang Province, Hangzhou, Xihu District \\*\\*\\*\\*\\*\\*\\*\\* |\n| Email | Keep the host name of the mail and the first three characters, indicate the rest information with `*`. | 123\\***\\*\\*\\*\\*\\*\\***@163.com |\n| Bank card number | The bank card number consists of the issuing bank identification code (ranging from 6 to 12 digits), personal account identification (ranging from 6 to 12 digits), and a check code. Redaction rules are classified into high, medium and low levels: **High**: Display the last four digits, and replace the others with `*`.**Medium**: Display the first six and the last four digits, replace the others with `*`. **Low**: Display the first six and the last six digits, display the remaining digits with `*`. | \\*\\*\\*\\*\\*\\*\\*\\*1208620121\\*\\*1208620121\\*\\*\\*\\*111208 |\n\n### Data Status\n\n#### Empty State\n\nDisplay `--` to express no-data status.\n\n#### Loading\n\nUse Skeleton screen when loading data.\n\n## Reference\n\n- Currency Symbol List\n- Time Data Formats for Different Countries\n- Digital Specification for Publications",
     "phone": ""
   },
   {
@@ -2153,6 +2515,52 @@
     "phone": ""
   },
   {
+    "id": "app-pattern/ant-detail-page",
+    "kind": "app-pattern",
+    "name": "Detail Page",
+    "summary": "Detail Pages display the complete data to users.",
+    "domains": [
+      "b2b-saas",
+      "data-analytics",
+      "ecommerce-dtc"
+    ],
+    "sectors": [
+      "enterprise"
+    ],
+    "tags": [
+      "ant-design",
+      "detail-page",
+      "layout",
+      "detail-page"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "ant-design",
+      "repo": "https://github.com/ant-design/ant-design",
+      "commit": "768405c1019435763adab015d47bf503505340d6",
+      "path": "docs/spec/detail-page.en-US.md",
+      "license": "MIT",
+      "authors": [
+        "Ant Group"
+      ],
+      "url": "https://ant.design/docs/spec/introduce",
+      "transformations": [
+        "removed ImagePreview blocks, images, and link markup",
+        "converted the remaining Markdown to text"
+      ]
+    },
+    "sourceUrl": "https://ant.design/docs/spec/detail-page",
+    "screen": "detail-page",
+    "kinds": [
+      "detail-page",
+      "layout"
+    ],
+    "basis": "a detail page design guideline from Ant Design",
+    "blueprint": "Detail Pages display the complete data to users. Users can edit the information or do other operations.\n\n## Design Goals\n\nTo increase the information viewing and searching efficiency. To raise the convenience of operation.\n\n## Design Principles\n\n      Direct\n      Try to display the information as flat as possible. Do not hide or fold up the content if not necessary.\n\n      Clear hierarchy\n      In order to decrease the information complexity on each page, put information in levels and groups, following the principle of proximity.\n\n      Concise\n      Reduce the use of complex structures, try to use similar layouts and modules to reduce the interference of structural differences to users, and let them focus on information itself.\n\n## Typical Templates\n\n### Basic Layouts\n\nBasic Detail Pages directly show all the information at the same level of hierarchy. We suggest such method of displaying data.\n\n#### Basic Detail Templates {#basic-detail-template}\n\nBasic layout templates display the main information on one whole card, using non-column split lines to separate the content into groups.\n\n**When to use**\n\nTo display information with less content and low complexity.\n\n#### Document Detail Templates\n\nDocument Detail Templates display the detailed information of approval documents. They use cards to separate the modules with complex content.\n\n**When to use**\n\nTo display approval process and detailed approval information, as well as some approval operations.\n\n**Related operations**\n\nPass, reject, transfer, sign, suspend and withdraw.\n\n### Complex Layouts\n\nDeal with complex details in the following way: Divide information with high complexity and weak correlation into multiple parts. And put the parts into groups according to their relativities, with tabs, steps, cards, etc.\n\n#### Advanced Detail Templates {#advanced-detail-template}\n\n**When to use**\n\nWhen the detail page has large and complex content, it has to be split into multiple tabs to guide users to browse information.\n\n#### Publish Process Templates\n\nDivide the content into steps, letting users to browse and operate step by step.\n\n**When to use**\n\nSuch templates are suitable for developing and collaborating processes.\n\n## Design Suggestions\n\n### How to choose template\n\nBased on information complexity and correlation model, choose related modes to present the information, and select suitable layouts to display the contents of detail pages.\n\n### Separation Methods\n\nConclude the closeness of each information module according to the relevance among them. Usually, the more relevant the contents are, the closer they are to each other.\n\n- Non-column split lines: to separate relevant contents;\n- Full-column split lines: to divide the content into multiple parts;\n- Cards: to display information on one topic;\n- Tabs: to put the information into groups according to some feature, such as version, intention, phase, etc.\n\n### Content Components\n\nSelect presentation modes of the information according to its types and complexity. Based on the complexity from low to high, the following components are available:\n\n## Read more\n\n### Related Global Rules\n\n- Data Format\n- Button\n\n### Related Modules or Components\n\n- Description\n- Collapse\n- Table\n\n### Reference\n\n- Fiori – How to Design an Object Page\n- SAP Fiori 2.0: The Object Page —— Part 1: It's History\n- Object Page Floorplan\n- Principle of Product Display in Supermarkets",
+    "phone": ""
+  },
+  {
     "id": "app-pattern/carbon-dialog-pattern",
     "kind": "app-pattern",
     "name": "Dialogs",
@@ -2469,6 +2877,51 @@
     ],
     "basis": "a establish trust pattern from USWDS",
     "blueprint": "## About this pattern\n\n### What problem does this solve?\n\nGovernment forms can be very stressful and overwhelming for users to complete. If they are in the midst of a crisis or recovering from trauma, form completion can be very challenging. Respect for their life experiences and time, and reassurances about process and privacy, can help reduce user stress and frustration.\n\n### When to use this pattern\n\nUse this pattern when you are asking users to provide more than basic contact information, especially if you are collecting information that may require disclosing sensitive personal, financial, health, or safety details in a digital form.\n\n### What’s the solution\n\nProvide clear information on why it is necessary to complete the form, what information is needed to successfully complete the form, and how the information will be kept secure. Be as transparent as possible.\n\n## Guidance\n\n### What to do\n\n- Do provide information on why information is being collected and how it is being used.\n\n- Do use plain language.\n\n- Do use people-first language. Emphasize people’s abilities, not their limitations, and choose words that emphasize the need for accessibility, not the disability. For example, use accessible parking, not handicapped parking.\n\n- Do use inclusive language. Choose gender neutral words when possible. Avoid using citizen, unless you are specifically addressing that audience. Choose words that include the broadest appropriate group.\n\n- Do provide a list of what information your user will need to successfully complete the form.\n\n- Do provide an approximate amount of time it will take the user to complete the form.\n\n- Do allow the user to save and resume if possible. Some users may need to take breaks as they complete a form on a difficult topic. If users can save and resume the form, tell them so up front, so they know this is an option.\n\n- Do provide the user with a summary of their answers before they submit the form.\n\n### What not to do\n\n- Do not overwhelm your user. Provide enough background information to communicate the purpose and requirements of the form, but use principles of progressive disclosure to gradually move from simple to more difficult questions.\n\n- Do not ask for information that may be disturbing to the user without context. Explain why you need the information. For example, if you are going to ask about mental health or substance use issues or details on the illness or death of a loved one, explain why that information is required for the program or service.\n\n- Do not create a false sense of urgency. People under stress — even just the stress of filling out a long government form — do not need added pressure.\n\n- Use care to avoid making gender, pronoun, or biological sex assumptions based on previous answers.\n\n- Don’t provide examples that may make some groups feel excluded or targeted, such as including images or illustrations that reinforce stereotypes or stigma.",
+    "phone": ""
+  },
+  {
+    "id": "app-pattern/ant-feedback",
+    "kind": "app-pattern",
+    "name": "Feedback",
+    "summary": "In order to help users understand what the application is currently doing, and to refer to the user's next behavior, and to understand the results of the operation, when the user need to interact with the system , use different modes to…",
+    "domains": [
+      "b2b-saas",
+      "product-surfaces"
+    ],
+    "sectors": [
+      "enterprise"
+    ],
+    "tags": [
+      "ant-design",
+      "feedback",
+      "states",
+      "feedback"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "ant-design",
+      "repo": "https://github.com/ant-design/ant-design",
+      "commit": "768405c1019435763adab015d47bf503505340d6",
+      "path": "docs/spec/feedback.en-US.md",
+      "license": "MIT",
+      "authors": [
+        "Ant Group"
+      ],
+      "url": "https://ant.design/docs/spec/introduce",
+      "transformations": [
+        "removed ImagePreview blocks, images, and link markup",
+        "converted the remaining Markdown to text"
+      ]
+    },
+    "sourceUrl": "https://ant.design/docs/spec/feedback",
+    "screen": "feedback",
+    "kinds": [
+      "feedback",
+      "states"
+    ],
+    "basis": "a feedback design guideline from Ant Design",
+    "blueprint": "In order to help users understand what the application is currently doing, and to refer to the user's next behavior, and to understand the results of the operation, when the user need to interact with the system , use different modes to feedback information or results. When the designer uses feedback or customizes some feedback, please note:\n\n- Provide users with necessary, positive and immediate feedback at all stages;\n- Avoid excessive feedback, so as not to cause unnecessary disturbance to the user, you can omit the feedback prompt at the results users can see immediately and simple operation.\n\n---\n\n## Prompt message\n\nAny product can not be separated from user guidance and information prompts even if the user interface is doing well. The prompt information is used to tell the user what needs to be known and what action to take.\n\n### Alert\n\n#### Alert\n\nIt is a non-blocking information display. It does not interrupt the user's current operation. It usually stays at a certain position on the page (top preferentially). The static display form of the non-floating layer is always displayed and will not disappear automatically. The user can click shut down.\n\n> Note: The close button can be added or hidden according to business needs.\n\n### Notification\n\n#### Notification\n\nThe important global notification information actively pushed by the system is displayed in the upper right corner of the system.\n\n#### Badge\n\nThe message prompt for the aggregate type, generally appearing in the upper right corner of the notification icon or avatar, attracts the user's eye through a striking visual form.\n\n> Note: Relatively important and user-related information prompts, use digital precision prompts; weights are not high and are not the user's special concern message prompts, use red dot to make tips.\n\n### Help\n\n#### Popover\n\nWhen the target element has further description and related operations, it can be stored in the card and displayed according to the user's operation behavior.\n\n> Note: The difference between Tooltip and Popover is that Popover can carry more complex content, such as links or buttons.\n\n#### Tooltip\n\nUsed to accurately describe the pointed object, such as icons, graphics, links, etc. When the mouse is moved in, the prompt is displayed, when the mouse is moved out, the prompt is disappeared. And the complex text and operations are not carried.\n\n---\n\n## Process feedback\n\nFeedback of the status is given to the user as much as possible during the operation, and the immediate response will give the user a sense of trust.\n\n### Loading status progress feedback\n\nWhen the operation takes a while (usually more than 2 seconds) to complete, the system should immediately give a reminder, clearly inform the loading status or loading progress bar, and maintain communication with the user.\n\n> Note: If the loading time is long, a cancel operation should be provided.\n\n### Input feedback\n\nDuring the operation, different verification rules and forms can be used to allow users to find and correct errors in time.\n\n> Note: The feedback text is followed by the block to be explained (the feedback content is generally an error description) and does not disappear automatically (it disappears when the user performs the corresponding interaction).\n\n#### Popconfirm\n\nWhen the operation of the target element requires further confirmation by the user, a floating layer prompt is ejected near the target element to inquire the user.\n\n---\n\n## Result feedback\n\nFeedback of the status is given to the user as much as possible during the operation, and the immediate response will give the user a sense of trust.\n\n### Message\n\nThe feedback floating layer triggered by an operation is centered on the top and disappears automatically, which is a lightweight reminder that does not interrupt the user's operation.\n\nSince the feedback floating layer has a short presentation time (default 3s), for more important failure notifications, it is recommended to use a dialog box to notify you to avoid missing information.\n\n### Dialog feedback\n\nThe feedback floating layer triggered by an operation is located at the center of the page, and the feedback content can be closed by the confirmation or cancel button. The user cannot perform any operation when the feedback layer appears, it's for important feedback.\n\n> Note: Avoid displaying unnecessary reminders except it fails. Dialog is a strong feedback mechanism that is only needed when passing on very important and actionable information.",
     "phone": ""
   },
   {
@@ -3413,6 +3866,51 @@
     "phone": "KPI tabs become a 2-up grid above the chart, with the selected cell marked by a fill (never an underline floating inside the grid) or a row of tabs that scrolls sideways; the chart is full width, 160-200px tall, with 4 x labels; the comparison table keeps its two right-aligned columns."
   },
   {
+    "id": "app-pattern/ant-layout",
+    "kind": "app-pattern",
+    "name": "Layout",
+    "summary": "Spatial layout is the starting point of systematic visual design.",
+    "domains": [
+      "b2b-saas",
+      "data-analytics"
+    ],
+    "sectors": [
+      "enterprise"
+    ],
+    "tags": [
+      "ant-design",
+      "layout",
+      "foundation",
+      "layout"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "ant-design",
+      "repo": "https://github.com/ant-design/ant-design",
+      "commit": "768405c1019435763adab015d47bf503505340d6",
+      "path": "docs/spec/layout.en-US.md",
+      "license": "MIT",
+      "authors": [
+        "Ant Group"
+      ],
+      "url": "https://ant.design/docs/spec/introduce",
+      "transformations": [
+        "removed ImagePreview blocks, images, and link markup",
+        "converted the remaining Markdown to text"
+      ]
+    },
+    "sourceUrl": "https://ant.design/docs/spec/layout",
+    "screen": "layout",
+    "kinds": [
+      "layout",
+      "foundation"
+    ],
+    "basis": "a layout design guideline from Ant Design",
+    "blueprint": "Spatial layout is the starting point of systematic visual design. The difference from traditional graphic design is that the layout space of UI interface should be based on the dynamic and systematic perspective. We were inspired by the architectural ethic of the architect Le Corbusier and explored the dynamic spatial order in UI design and formed the interface layout of Ant Design based on the principle of 'beauty of order', making it possible for designers to create spatial layout that comes with rational beauty.\n\nWhile defining the layout system in a visual system, we propose to start from the following 5 aspects:：\n\n1. Unified Canvas Dimension\n2. Adaptation\n3. Grid Unit\n4. Raster\n5. Common Scales\n\n## Unified Design Board Dimension\n\nIn order to minimize communication cost, it is necessary to unify the size of the design board within the organization. E.g., the unified design board width of the ant design team is 1440.\n\n## Adaptation\n\nIn the design process, the designer also needs to establish the concept of adaptation. Decision needs to made for things like whether a system needs to be adapted depends on the specific situation, and/or what are the blocks that needs dynamic layout. According to statistics, mainstream screen resolution includes 1920, 1440, and 1366. Some devices still have resolution of 1280.\n\nAnt Design's two typical adaptation type:\n\n### 1. Left-Right Layout {#left-right-layout}\n\nCommonly used in design schemes for left and right layouts, the common practice is to fix the left navigation bar and dynamically scale the right work area.\n\n### 2. Top-Bottom Layout {#top-bottom-layout}\n\nCommon used in design schemes for top and bottom layouts. The practice is to define the minimum value for the marginal areas on both sides. After the blanking area reaches the limit value, the intermediate main content area is dynamically scaled.\n\nThe above are just two simple adaptation ideas, the actual design of a perfect adaptation program requires the designer to have front end perspective, plane composition perspective and interactive perspective.\n\n## Grid Unit\n\nAnt Design uses the grid system to achieve the order of the visual system. The base unit of the grid is 8, which not only matches the even number of ideas but also matches most mainstream display devices. Grid system thinking can help designers quickly achieve design decisions in the layout space while simplifying communication between designers developers.\n\n## Raster\n\nAnt Design uses a 24-grid architecture. Taking the structure of the 1440 top-bottom layout as an example, the content area with a width of 1168 is divided into 24 grids, as shown in the following picture. We set the value of the Gutter of the grid in the page, such that when the browser expands or shrinks in a certain range, the column width of the grid will expand or shrink accordingly, but the width of Gutter is always fixed.\n\nFor developers, the grid is a way to achieve dynamic layout, however the designer's understanding of the grid is derived from the grid in the graphic design. Differences of the perspectives are likely to cause deviations that ultimately affect the degree of visual restoration, which in turn increases communication costs.\n\nAnt Design's designers keep the following 4 things in mind in the communication with engineers:\n\n1. Clear definition of dynamic layout area\n2. Try to always use even numbers\n3. Delivery of critical numbers (Gutter, Column)\n4. Always use beginning column and ending column to define blocks.\n\n## Common Scales\n\nAntFin's projects cover a large number of products of different types and even different orders of magnitude. In order to help designers of various levels to have consistency and similar rhythm in designing page layout, to unify designing language and reduce the restoration losses, Ant Design proposed the concept of UI common scales. From a large amount of practices, we have extracted a set of arrays that can be used as dimensions for UI layout decision. All the numbers are multiples of 8 and have a dynamic sense of rhythm. After verification, it can help us to achieve a faster and better design decision making of layout design.\n\n## Inspiration, But Not Limitation\n\nThe result of Ant Design in layout space is not to limit design output, but to guide designers to do it better. The two 8-fold array can be made into a myriad of possibilities by permutations and combinations, but there is a difference between \"simply applying a permutation\" and \"really well designed\". We need to consider availability in the pursuit of beauty, and we're still on our way to achieve a design system that is both reasonable and elegant. There are still plenty of things to explore for enterprise-level application interface layout. translate-layout",
+    "phone": ""
+  },
+  {
     "id": "app-pattern/carbon-legends",
     "kind": "app-pattern",
     "name": "Legends",
@@ -3920,6 +4418,51 @@
     ],
     "basis": "a names pattern from the GOV.UK Design System",
     "blueprint": "## When to use this pattern\n\nYou should follow this pattern whenever you need to ask for a user’s name as part of your service.\nOnly ask for people’s names if you need that information to deliver a service.\n\n## How it works\n\nMake it as easy as possible for a user to enter their name.\n\n### Make sure the fields work for most of your users\n\nFields must be long enough to accommodate the names of your users. You should use population data or data about your existing users to do this.\n\nSupport all the characters users may need to enter, including numbers and symbols.\n\n### Single or multiple name fields\n\nUse single or multiple fields depending on your user’s needs. Not everyone’s name fits the first-name, last-name format. Using multiple name fields mean there’s more risk that a person’s name will not fit the format you’ve chosen and that it is entered incorrectly.\n\nA single name field can accommodate the broadest range of name types, but means you cannot reliably extract parts of a name.\n\n### Labelling name fields\n\nLabel single name fields:\n\n- ‘Full name’\n\nFor multiple name fields, use:\n\n- ‘First name’\n- ‘Last name’\n\nIf users are from outside the UK, use the labels:\n\n- ‘Given names’\n- ‘Family name’\n\nMake it clear whether you need someone’s common name, or their name as it's written on official documents such as a passport or driving licence.\n\n#### Middle names\n\nOnly ask for middle names if your service requires them.\n\nUse the label:\n\n- ’Middle names‘\n\nMake sure middle names are optional, as not everyone has them.\n\nThe label should not include `(optional)`. Users will enter their middle names if they have them and skip the field if they do not.\n\n### Use the autocomplete attribute on name fields\n\nUse the `autocomplete` attribute on the text input component when you're asking for a user's name. This lets browsers autofill the information on a user's behalf if they’ve entered it previously.\n\nIf you are asking for a user's full name in a single field, set the `autocomplete` attribute to `name`.\n\nIf you are asking users to enter their name in multiple fields, set the `autocomplete` attribute on both fields using:\n\n- `given-name` for fields labelled 'First name' or 'Given name'\n- `family-name` for fields labelled 'Last name' or 'Family name'\n\nIf you are working in production you’ll need to do this to meet WCAG 2.2 success criterion 1.3.5 Identify input purpose.\n\nYou will not normally need to use the `autocomplete` attribute in prototypes, as users will not generally be using their own devices.\n\n### Do not spellcheck user's names\n\nSometimes, browsers will spellcheck the information a user enters into a text input. To make sure user's names will not be spellchecked, set the `spellcheck` attribute to `false` as shown in this example.\n\n### Avoid asking for a person’s title\n\nAvoid asking users for their title.\n\nIt’s extra work for them and you’re asking them to potentially reveal their gender and marital status, which they may not want to do.\n\nIt’s also hard to predict the range of titles your users will have. If you have to ask for someone’s title, use an optional Text input component not a Select component.\n\nRemember to correctly use people’s names in any resulting correspondence.\n\n### Allow users to change their name\n\nIf your service stores personal information, you should allow users to update their details, including their name.\n\nAllowing users to change their name helps your service respect their personal identity. It also means they can continue using your service without having to start over.\n\nPeople change their name for many reasons. For example, because of a change in marital status, family situation or gender.\n\nAvoid making it hard for users to change their name. As well as causing them distress, it may make them reluctant to use your service.\n\n### Error messages\n\nError messages should be styled like this:\n\nMake sure errors follow the guidance in the Error message component and have specific error messages for specific error states.\n\n## Research on this pattern\n\nIf you’ve used this pattern, get in touch to share your user research findings.\n\nYou can also read these articles to learn more about asking for users’ names:\n\n- Personal names around the world (W3C)\n- Avoid splitting single input entities (Baymard)\n- Falsehoods about names (Kalzumeus)",
+    "phone": ""
+  },
+  {
+    "id": "app-pattern/ant-navigation",
+    "kind": "app-pattern",
+    "name": "Navigation",
+    "summary": "Broadly speaking, anything telling users where they are, where to go and how to get there can be called navigation.",
+    "domains": [
+      "b2b-saas",
+      "data-analytics"
+    ],
+    "sectors": [
+      "enterprise"
+    ],
+    "tags": [
+      "ant-design",
+      "navigation",
+      "layout",
+      "navigation"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "ant-design",
+      "repo": "https://github.com/ant-design/ant-design",
+      "commit": "768405c1019435763adab015d47bf503505340d6",
+      "path": "docs/spec/navigation.en-US.md",
+      "license": "MIT",
+      "authors": [
+        "Ant Group"
+      ],
+      "url": "https://ant.design/docs/spec/introduce",
+      "transformations": [
+        "removed ImagePreview blocks, images, and link markup",
+        "converted the remaining Markdown to text"
+      ]
+    },
+    "sourceUrl": "https://ant.design/docs/spec/navigation",
+    "screen": "navigation",
+    "kinds": [
+      "navigation",
+      "layout"
+    ],
+    "basis": "a navigation design guideline from Ant Design",
+    "blueprint": "Broadly speaking, anything telling users where they are, where to go and how to get there can be called navigation. When using navigation or customizing navigational structures, please pay attention to following common pitfalls:\n\n- Provide visual and contextual cues as many as possible, to prevent users from getting lost\n- Maintain consistency between form and behavior, or reduce the number of items in navigation, to decrease user's learning cost\n- Minimize page transitions (i.e. reduce the number of page transitions required by a task from several to just once or twice), to ensure that user travels only a short distance from any page to another\n\n---\n\n## Menu\n\nNavigation menu is an effective and user-friendly way for representing site structure to users. A proper form of navigation should be utilized, once the information architecture of your site becomes clear and stable.\n\n### Top Navigation\n\nTop navigation menu put hyperlinks in a row and present information in a simple and straightforward way. It is suitable for landing pages and consumer facing web apps. The number of first level menu items should be between 2 and 7. Title for each menu item should contain less than 15 characters.\n\n### Side Navigation\n\nVertical navigation is more flexible than horizontal one, menu items are easily extensible downward, and longer labels can be allowed. With help from a scrollbar, unlimited number of menu items can be supported. It is suitable for multi-level, operation intensive and dashboard-like web apps.\n\n- More layouts with navigation: Layout.\n\n---\n\n## Breadcrumb\n\nBreadcrumb tell users where they are now among page hierarchy, and parent-child relationships between pages.\n\n> Notes:\n>\n> 1. When hierarchy is deep, it is recommended to hide certain pages. Depth of pages shown should at best be lower than 3, and should not exceed 5.\n> 2. Avoid using breadcrumb as much as you can, especially when page contains other navigation components sufficiently telling where users are.\n\n---\n\n## Tabs\n\nTabs categorize content, in order to present large amount of information in a limited space. User can easily switch among tab panels without transitioning from one page to another. Categories can be determined via business logics or states, label for each category should contain less than 15 characters.\n\n### Basic\n\nControl content of the entire page. Usually used for switching among core functionalities.\n\n### Card\n\nControl part of page content. Bordered container naturally separate it from other parts of the page.\n\n### Pill\n\nSwitch among options in a card. Usually used along with other types of tabs, so that user can navigate to intended content via quick tab switching.\n\n### Vertical\n\nUsed for large number of tab options. It can be easily extended to contain an unlimited number of categories.\n\n---\n\n## Steps\n\nSteps is a navigation bar guiding users to perform a task following a predefined workflow. It gives users a rough estimate about how long the task is going take, tells them which step they are in, and showcases users' progress in an explicit way. It is always a good idea to break complex and procedural task into steps.\n\n### Horizontal\n\nUsed for more than 2 but less than 5 steps. Title for each step should contain less than 12 characters.\n\n### Vertical\n\nUsually float at the left side of pages, in a fixed position. Multi-line description can be attached to each step. Suitable for large or dynamic number of steps, i.e. time-based steps with dynamic descriptions.\n\n---\n\n## Pagination\n\nUsed for paginating large amount of content. Users can clearly know the total amount of content, how much they have already browsed and how much remains to be browsed.\n\n### Basic\n\nWhen there is a large number of rows, page size can be made customizable by users, so that users can query and browse information more flexibly and effectively.\n\n### Mini\n\nCommonly used in a Card or a floating layer.\n\n### Simple\n\nCommonly used in a Card or a data table, for no more than 10 pages.",
     "phone": ""
   },
   {

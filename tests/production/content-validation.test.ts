@@ -28,10 +28,10 @@ async function fileExists(path: string): Promise<boolean> {
 describe("committed content", () => {
   it("matches the catalog snapshot", async () => {
     const [catalog, stats] = await Promise.all([loader.catalog(), loader.stats()]);
-    expect(catalog).toHaveLength(985);
-    expect(stats.catalogEntries).toBe(985);
+    expect(catalog).toHaveLength(997);
+    expect(stats.catalogEntries).toBe(997);
     expect(stats.counts).toEqual({
-      "app-pattern": 137,
+      "app-pattern": 149,
       "app-shell": 5,
       "app-style": 7,
       brand: 84,
@@ -47,7 +47,7 @@ describe("committed content", () => {
       type: 44,
     });
     expect(stats.quality).toEqual({
-      verified: 662,
+      verified: 674,
       reference: 313,
       incomplete: 10,
     });
@@ -92,7 +92,7 @@ describe("committed content", () => {
       expect((await stat(path)).size).toBeGreaterThan(0);
     }
     const sources = await loader.sources();
-    expect(sources).toHaveLength(14);
+    expect(sources).toHaveLength(15);
     for (const source of sources) {
       const path = join(contentDir, source.licenseFile);
       expect(await fileExists(path), path).toBe(true);
@@ -235,6 +235,7 @@ describe("committed content", () => {
       "pie",
       "sap",
       "patternfly",
+      "ant-design",
     ]);
     for (const source of lock.sources) {
       expect(source.commit).toMatch(/^[0-9a-f]{40}$/);
@@ -444,5 +445,25 @@ describe("committed content", () => {
     expect(dashboard?.provenance.commit).toHaveLength(40);
     expect(dashboard?.blueprint).toContain("dashboard");
     expect(packs.some((pack) => pack.id === "app-pattern/patternfly-error-messages")).toBe(true);
+  });
+
+  it("ships the Ant Design B2B specifications", async () => {
+    const packs = JSON.parse(
+      await readFile(join(contentDir, "generated", "kinds", "app-patterns.json"), "utf8"),
+    ) as Array<{
+      id: string;
+      blueprint: string;
+      provenance: { source: string; license: string; commit: string };
+    }>;
+    const ant = packs.filter((pack) => pack.id.startsWith("app-pattern/ant-"));
+    expect(ant).toHaveLength(12);
+
+    const display = packs.find((pack) => pack.id === "app-pattern/ant-data-display");
+    expect(display).toBeDefined();
+    expect(display?.provenance.source).toBe("ant-design");
+    expect(display?.provenance.license).toBe("MIT");
+    expect(display?.provenance.commit).toHaveLength(40);
+    expect(display?.blueprint).toContain("Table");
+    expect(display?.blueprint).not.toContain("ImagePreview");
   });
 });
