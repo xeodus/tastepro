@@ -10,15 +10,17 @@ TastePro speaks **stdio** for local clients and **Streamable HTTP** for hosted
 clients. The same server works with ChatGPT, Claude, OpenCode, Cursor, and any
 MCP-compatible agent.
 
-## Status: 1.1
+## Status: 1.2
 
-The current build ships the read-only foundation, the hosted audit, and the
-distribution path:
+The current build ships the read-only foundation, the hosted audit, the
+distribution path, and domain-specific public-sector patterns:
 
 - `npx -y tastepro` (npm, with provenance) and signed standalone binaries.
 - `tastepro audit <file>` for a local verdict with rule ids, evidence, fixes,
   and `--fail-on error` for CI.
-- 905 committed content packs across 14 kinds.
+- 905 committed content packs across 14 kinds, including 57 app patterns.
+- GOV.UK, USWDS, CMS, and NHS.UK form and service patterns for payments,
+  identity, eligibility, onboarding, and care journeys.
 - 40-domain taxonomy with 15 deep seed playbooks and same-family fallback for
   uncovered domains.
 - 104-rule web-interface audit rubric with severity and category filters.
