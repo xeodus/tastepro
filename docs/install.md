@@ -24,7 +24,7 @@ Bun users can replace `npx -y` with `bunx`.
 npx -y tastepro info
 ```
 
-Expected: the current version, `Catalog entries: 942`, and a 64-character
+Expected: the current version, `Catalog entries: 947`, and a 64-character
 content hash. If that works, the package and its embedded content are intact.
 
 ## First 60 seconds

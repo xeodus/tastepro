@@ -25606,6 +25606,34 @@
     "sourceUrl": "https://github.com/Leonxlnx/taste-skill"
   },
   {
+    "id": "app-pattern/ethereum-heuristics-for-web3",
+    "kind": "app-pattern",
+    "name": "7 heuristics for Web3 interface design",
+    "summary": "Principles to improve the usability of Web3",
+    "domains": [
+      "crypto-web3",
+      "fintech-payments",
+      "product-surfaces"
+    ],
+    "sectors": [
+      "web3",
+      "finance"
+    ],
+    "tags": [
+      "ethereum",
+      "web3",
+      "heuristics",
+      "heuristics-for-web3"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "ethereum-org",
+    "sourceUrl": "https://ethereum.org/en/developers/docs/design-and-ux/heuristics-for-web3/",
+    "metrics": {
+      "screen": "heuristics-for-web3"
+    }
+  },
+  {
     "id": "app-pattern/cms-accordion",
     "kind": "app-pattern",
     "name": "Accordion",
@@ -26467,6 +26495,34 @@
     }
   },
   {
+    "id": "app-pattern/ethereum-dex-design-best-practice",
+    "kind": "app-pattern",
+    "name": "Decentralized exchange (DEX) design best practices",
+    "summary": "A guide explaining UX/UI decisions for swapping tokens.",
+    "domains": [
+      "crypto-web3",
+      "fintech-payments",
+      "product-surfaces"
+    ],
+    "sectors": [
+      "web3",
+      "finance"
+    ],
+    "tags": [
+      "ethereum",
+      "web3",
+      "dex",
+      "dex-design-best-practice"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "ethereum-org",
+    "sourceUrl": "https://ethereum.org/en/developers/docs/design-and-ux/dex-design-best-practice/",
+    "metrics": {
+      "screen": "dex-design-best-practice"
+    }
+  },
+  {
     "id": "app-pattern/nhs-help-users-decide-when-and-where-to-get-care",
     "kind": "app-pattern",
     "name": "Decide when and where to get care (care cards)",
@@ -26489,6 +26545,34 @@
     "sourceUrl": "https://service-manual.nhs.uk/design-system/patterns/help-users-decide-when-and-where-to-get-care",
     "metrics": {
       "screen": "help-users-decide-when-and-where-to-get-care"
+    }
+  },
+  {
+    "id": "app-pattern/ethereum-design-and-ux",
+    "kind": "app-pattern",
+    "name": "Design and UX in web3",
+    "summary": "An introduction to design and UX in web3: research, patterns and resources to help you build Ethereum apps that are easy, safe and clear to use.",
+    "domains": [
+      "crypto-web3",
+      "fintech-payments",
+      "product-surfaces"
+    ],
+    "sectors": [
+      "web3",
+      "finance"
+    ],
+    "tags": [
+      "ethereum",
+      "web3",
+      "overview",
+      "design-and-ux"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "ethereum-org",
+    "sourceUrl": "https://ethereum.org/en/developers/docs/design-and-ux/",
+    "metrics": {
+      "screen": "design-and-ux"
     }
   },
   {
@@ -26758,6 +26842,34 @@
     "sourceUrl": "https://carbondesignsystem.com/patterns/forms-pattern/",
     "metrics": {
       "screen": "forms-pattern"
+    }
+  },
+  {
+    "id": "app-pattern/ethereum-gas",
+    "kind": "app-pattern",
+    "name": "Gas and fees",
+    "summary": "Learn about Ethereum gas fees, how they're calculated, and their role in network security and transaction processing.",
+    "domains": [
+      "crypto-web3",
+      "fintech-payments",
+      "product-surfaces"
+    ],
+    "sectors": [
+      "web3",
+      "finance"
+    ],
+    "tags": [
+      "ethereum",
+      "web3",
+      "fees",
+      "gas"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "ethereum-org",
+    "sourceUrl": "https://ethereum.org/en/developers/docs/gas/",
+    "metrics": {
+      "screen": "gas"
     }
   },
   {
@@ -28140,6 +28252,34 @@
     "sourceUrl": "https://spectrum.adobe.com/page/tooltip/",
     "metrics": {
       "screen": "tooltip"
+    }
+  },
+  {
+    "id": "app-pattern/ethereum-transactions",
+    "kind": "app-pattern",
+    "name": "Transactions",
+    "summary": "An overview of Ethereum transactions – how they work, their data structure, and how to send them via an application.",
+    "domains": [
+      "crypto-web3",
+      "fintech-payments",
+      "product-surfaces"
+    ],
+    "sectors": [
+      "web3",
+      "finance"
+    ],
+    "tags": [
+      "ethereum",
+      "web3",
+      "transaction",
+      "transactions"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "ethereum-org",
+    "sourceUrl": "https://ethereum.org/en/developers/docs/transactions/",
+    "metrics": {
+      "screen": "transactions"
     }
   },
   {

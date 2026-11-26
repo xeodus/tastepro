@@ -17,6 +17,7 @@ The complete upstream license texts are committed at:
 - `content/sources/licenses/nhs-uk.txt`
 - `content/sources/licenses/carbon.txt`
 - `content/sources/licenses/spectrum.txt`
+- `content/sources/licenses/ethereum-org.txt`
 
 The machine-readable pins are in `sources.lock.json` and
 `content/sources.lock.json`. Every generated pack also carries a `provenance`
@@ -25,18 +26,19 @@ transformations applied.
 
 ## Pinned sources
 
-| Source                                                                                     | Author      | License    | Commit                                     |
-| ------------------------------------------------------------------------------------------ | ----------- | ---------- | ------------------------------------------ |
-| [Taste Skill](https://github.com/Leonxlnx/taste-skill)                                     | Leonxlnx    | MIT        | `12af471f627f866411b4bd785b19646d3672784c` |
-| [Awesome DESIGN.md](https://github.com/VoltAgent/awesome-design-md)                        | VoltAgent   | MIT        | `3b605329240ce735b510037cca322f1831fdd7f8` |
-| [Vercel Web Interface Guidelines](https://github.com/vercel-labs/web-interface-guidelines) | Vercel Labs | MIT        | `434b7f91364665f2f733b310ec54809bf8f37937` |
-| [Microsoft Playwright CLI](https://github.com/microsoft/playwright-cli)                    | Microsoft   | Apache-2.0 | `b1a5903c5b633b8c9f843ad7b629c2a78437040c` |
-| [GOV.UK Design System](https://github.com/alphagov/govuk-design-system)                    | GDS         | OGL-3.0    | `0c6de5736a4e755a3808fb31d3a7723a33b7c705` |
-| [USWDS](https://github.com/uswds/uswds-site)                                               | GSA         | CC0-1.0    | `af13d80f071c3d897bee422f51954d9d7d156474` |
-| [CMS Design System](https://github.com/CMSgov/design-system)                               | CMS         | CC0-1.0    | `269a1abeb3159824800e134064db8a7b35821ccd` |
-| [NHS.UK Design System](https://github.com/nhsuk/nhsuk-service-manual)                      | NHS England | OGL-3.0    | `4a37578c4d8fa2c5bbf11b1039d806bebce59234` |
-| [IBM Carbon](https://github.com/carbon-design-system/carbon-website)                       | IBM         | Apache-2.0 | `5e9cd1da43c32d3d3b991dc947b427f674da61a8` |
-| [Adobe Spectrum](https://github.com/adobe/spectrum-design-data)                            | Adobe       | Apache-2.0 | `1818e9c1035fd38f361a0698fb3453477b702552` |
+| Source                                                                                     | Author              | License    | Commit                                     |
+| ------------------------------------------------------------------------------------------ | ------------------- | ---------- | ------------------------------------------ |
+| [Taste Skill](https://github.com/Leonxlnx/taste-skill)                                     | Leonxlnx            | MIT        | `12af471f627f866411b4bd785b19646d3672784c` |
+| [Awesome DESIGN.md](https://github.com/VoltAgent/awesome-design-md)                        | VoltAgent           | MIT        | `3b605329240ce735b510037cca322f1831fdd7f8` |
+| [Vercel Web Interface Guidelines](https://github.com/vercel-labs/web-interface-guidelines) | Vercel Labs         | MIT        | `434b7f91364665f2f733b310ec54809bf8f37937` |
+| [Microsoft Playwright CLI](https://github.com/microsoft/playwright-cli)                    | Microsoft           | Apache-2.0 | `b1a5903c5b633b8c9f843ad7b629c2a78437040c` |
+| [GOV.UK Design System](https://github.com/alphagov/govuk-design-system)                    | GDS                 | OGL-3.0    | `0c6de5736a4e755a3808fb31d3a7723a33b7c705` |
+| [USWDS](https://github.com/uswds/uswds-site)                                               | GSA                 | CC0-1.0    | `af13d80f071c3d897bee422f51954d9d7d156474` |
+| [CMS Design System](https://github.com/CMSgov/design-system)                               | CMS                 | CC0-1.0    | `269a1abeb3159824800e134064db8a7b35821ccd` |
+| [NHS.UK Design System](https://github.com/nhsuk/nhsuk-service-manual)                      | NHS England         | OGL-3.0    | `4a37578c4d8fa2c5bbf11b1039d806bebce59234` |
+| [IBM Carbon](https://github.com/carbon-design-system/carbon-website)                       | IBM                 | Apache-2.0 | `5e9cd1da43c32d3d3b991dc947b427f674da61a8` |
+| [Adobe Spectrum](https://github.com/adobe/spectrum-design-data)                            | Adobe               | Apache-2.0 | `1818e9c1035fd38f361a0698fb3453477b702552` |
+| [ethereum.org](https://github.com/ethereum/ethereum-org-website)                           | Ethereum Foundation | CC-BY-4.0  | `4302e8c0a8e51d161c124e8c57d8d93da2995da1` |
 
 ## Taste Skill
 
@@ -245,6 +247,26 @@ is validated at ingest.
 
 **Not included:** Adobe marks, fonts, images, or screenshots.
 
+## ethereum.org
+
+**Used for:** Web3 design overview, seven usability heuristics, DEX design
+guidance, transaction lifecycle, and gas/fee explanation.
+
+**Paths:** `public/content/developers/docs/design-and-ux/**/*.md` and the
+transactions and gas documentation pages in the pinned repository.
+
+**License:** CC BY 4.0 for content; MIT for repository code.
+
+**TastePro transformations:**
+
+- Removed images and outbound link markup.
+- Converted the remaining Markdown to `app-pattern` packs.
+- Mapped each page to the crypto-web3 domain and Web3 kinds.
+- Added provenance, source URLs, and quality metadata.
+
+**Not included:** third-party images, outbound research, Ethereum marks, or
+screenshots.
+
 ## Original TastePro content
 
 The following are original to TastePro and licensed under Apache-2.0:
@@ -314,6 +336,13 @@ USWDS and the CMS Design System are released under CC0 1.0 Universal (public
 domain). The full texts are committed at
 `content/sources/licenses/uswds.txt` and
 `content/sources/licenses/cms-design-system.txt`.
+
+## CC BY 4.0
+
+The ethereum.org guidance is used under the Creative Commons Attribution 4.0
+International licence. Changes: images and link markup removed, pages
+normalized into app-pattern packs. The full licence text is committed at
+`content/sources/licenses/ethereum-org.txt`.
 
 ## Reporting an attribution problem
 

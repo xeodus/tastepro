@@ -27,6 +27,7 @@ import { commitSnapshot, discardStaging, prepareStaging } from "./lib/snapshot.j
 import { type LockSource, loadSourceLock, sourceCacheKey } from "./lib/source-lock.js";
 import { carbonAdapter } from "./lib/sources/carbon.js";
 import { cmsAdapter } from "./lib/sources/cms.js";
+import { ethereumAdapter } from "./lib/sources/ethereum.js";
 import { govukAdapter } from "./lib/sources/govuk.js";
 import { nhsAdapter } from "./lib/sources/nhs.js";
 import { spectrumAdapter } from "./lib/sources/spectrum.js";
@@ -673,6 +674,7 @@ async function main(): Promise<void> {
     "nhs-uk",
     "carbon",
     "spectrum",
+    "ethereum-org",
   ];
   for (const id of required) {
     if (!byId.has(id)) throw new Error(`sources.lock.json is missing ${id}`);
@@ -765,6 +767,22 @@ async function main(): Promise<void> {
       writeLicense: () => fetchLicense(spectrumSource, options, staging),
     };
     const spectrum = await spectrumAdapter.fetch(spectrumContext);
+    const ethereumSource = byId.get("ethereum-org")!;
+    const ethereumContext: SourceContext = {
+      source: ethereumSource,
+      fetchText: (path) =>
+        fetchCached(lockUrl(ethereumSource, path), sourceCacheKey(ethereumSource, path), options),
+      fetchJson: (path) =>
+        fetchJsonCached(
+          lockUrl(ethereumSource, path),
+          sourceCacheKey(ethereumSource, path),
+          options,
+        ),
+      provenance: (path, transformations) => provenanceFor(ethereumSource, path, transformations),
+      sourceUrl: (path = "") => sourceUrl(ethereumSource, path),
+      writeLicense: () => fetchLicense(ethereumSource, options, staging),
+    };
+    const ethereum = await ethereumAdapter.fetch(ethereumContext);
     const domains = await buildDomains(options.contentDir);
 
     const warnings = [
@@ -776,6 +794,7 @@ async function main(): Promise<void> {
       ...nhs.warnings,
       ...carbon.warnings,
       ...spectrum.warnings,
+      ...ethereum.warnings,
     ];
     const allPacks: Pack[] = sortPacks([
       ...taste.packs,
@@ -787,6 +806,7 @@ async function main(): Promise<void> {
       ...nhs.packs,
       ...carbon.packs,
       ...spectrum.packs,
+      ...ethereum.packs,
       ...domains.packs,
     ]);
     const references: ReferencePack[] = sortPacks([
@@ -874,6 +894,7 @@ async function main(): Promise<void> {
       nhs.sourceInfo,
       carbon.sourceInfo,
       spectrum.sourceInfo,
+      ethereum.sourceInfo,
     ];
     const counts = countBy(allContent, (pack) => pack.kind);
     const quality = countBy(allContent, (pack) => pack.quality);

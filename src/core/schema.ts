@@ -54,6 +54,7 @@ export const SOURCE_IDS = [
   "nhs-uk",
   "carbon",
   "spectrum",
+  "ethereum-org",
   "tastepro",
 ] as const;
 

@@ -186,6 +186,24 @@
         "components": "packages/design-data/components/*.json",
         "guidelines": "packages/design-data/guidelines/*.json"
       }
+    },
+    {
+      "id": "ethereum-org",
+      "name": "ethereum.org",
+      "repo": "https://github.com/ethereum/ethereum-org-website",
+      "commit": "4302e8c0a8e51d161c124e8c57d8d93da2995da1",
+      "license": "CC-BY-4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/legalcode.txt",
+      "authors": ["Ethereum Foundation"],
+      "url": "https://ethereum.org/en/developers/docs/design-and-ux/",
+      "notes": "Web3 design, DEX, transaction, and gas guidance. Content is CC BY 4.0; repository code is MIT. Images and outbound third-party research are excluded.",
+      "paths": {
+        "design-and-ux": "public/content/developers/docs/design-and-ux/index.md",
+        "heuristics": "public/content/developers/docs/design-and-ux/heuristics-for-web3/index.md",
+        "dex": "public/content/developers/docs/design-and-ux/dex-design-best-practice/index.md",
+        "transactions": "public/content/developers/docs/transactions/index.md",
+        "gas": "public/content/developers/docs/gas/index.md"
+      }
     }
   ]
 }

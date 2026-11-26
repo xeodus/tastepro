@@ -197,7 +197,7 @@ anonymous.
 
 - The client launches `npx -y tastepro --stdio` (or a binary path) with
   `--stdio`.
-- `npx -y tastepro info` prints 942 catalog entries.
+- `npx -y tastepro info` prints 947 catalog entries.
 - For HTTP, the URL ends in `/mcp`, not `/`.
 - For HTTP with auth, every `/mcp` request carries the `Authorization` header.
 - The client tolerates a stateless server with no session id.

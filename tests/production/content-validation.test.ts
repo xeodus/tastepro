@@ -28,10 +28,10 @@ async function fileExists(path: string): Promise<boolean> {
 describe("committed content", () => {
   it("matches the catalog snapshot", async () => {
     const [catalog, stats] = await Promise.all([loader.catalog(), loader.stats()]);
-    expect(catalog).toHaveLength(942);
-    expect(stats.catalogEntries).toBe(942);
+    expect(catalog).toHaveLength(947);
+    expect(stats.catalogEntries).toBe(947);
     expect(stats.counts).toEqual({
-      "app-pattern": 94,
+      "app-pattern": 99,
       "app-shell": 5,
       "app-style": 7,
       brand: 84,
@@ -47,7 +47,7 @@ describe("committed content", () => {
       type: 44,
     });
     expect(stats.quality).toEqual({
-      verified: 619,
+      verified: 624,
       reference: 313,
       incomplete: 10,
     });
@@ -92,7 +92,7 @@ describe("committed content", () => {
       expect((await stat(path)).size).toBeGreaterThan(0);
     }
     const sources = await loader.sources();
-    expect(sources).toHaveLength(10);
+    expect(sources).toHaveLength(11);
     for (const source of sources) {
       const path = join(contentDir, source.licenseFile);
       expect(await fileExists(path), path).toBe(true);
@@ -231,6 +231,7 @@ describe("committed content", () => {
       "nhs-uk",
       "carbon",
       "spectrum",
+      "ethereum-org",
     ]);
     for (const source of lock.sources) {
       expect(source.commit).toMatch(/^[0-9a-f]{40}$/);
@@ -359,5 +360,25 @@ describe("committed content", () => {
     expect(button?.provenance.commit).toHaveLength(40);
     expect(button?.blueprint).toContain("Button");
     expect(packs.some((pack) => pack.id === "app-pattern/spectrum-attention-hierarchy")).toBe(true);
+  });
+
+  it("ships the ethereum.org web3 guidance", async () => {
+    const packs = JSON.parse(
+      await readFile(join(contentDir, "generated", "kinds", "app-patterns.json"), "utf8"),
+    ) as Array<{
+      id: string;
+      blueprint: string;
+      provenance: { source: string; license: string; commit: string };
+    }>;
+    const ethereum = packs.filter((pack) => pack.id.startsWith("app-pattern/ethereum-"));
+    expect(ethereum).toHaveLength(5);
+
+    const heuristics = packs.find((pack) => pack.id === "app-pattern/ethereum-heuristics-for-web3");
+    expect(heuristics).toBeDefined();
+    expect(heuristics?.provenance.source).toBe("ethereum-org");
+    expect(heuristics?.provenance.license).toBe("CC-BY-4.0");
+    expect(heuristics?.provenance.commit).toHaveLength(40);
+    expect(heuristics?.blueprint).toContain("usability");
+    expect(heuristics?.blueprint).not.toContain("![");
   });
 });
