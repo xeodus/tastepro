@@ -4,6 +4,27 @@ All notable changes are recorded here. The project follows semantic versioning
 for the MCP tool surface, configuration, and package API. Content counts may
 change between minor releases without breaking the tool contract.
 
+## 1.3.0 - 2026-11-27
+
+### Added
+
+- IBM Carbon: 23 enterprise component, pattern, and data-visualization packs.
+- Adobe Spectrum: 14 component and foundation packs from the Spectrum 2 JSON.
+- SAP Fiori: 20 components with when-to-use, when-to-avoid, and best practices.
+- PatternFly: 7 enterprise patterns and 3 content-design guides.
+- Ant Design: 12 B2B design specifications.
+- GitHub Primer: 10 UI patterns.
+- ethereum.org: 5 Web3 design, transaction, and gas packs.
+- PIE: 8 food-delivery and marketplace patterns.
+- Catalog grows from 905 to 1007 entries; app patterns from 57 to 159.
+
+### Changed
+
+- A shared HTML-to-text renderer now serves the USWDS, NHS, CMS, Carbon, and
+  other adapters.
+- `NOTICE` and `ATTRIBUTION.md` record the new Apache-2.0, MIT, and CC BY 4.0
+  sources and their asset exclusions.
+
 ## 1.2.0 - 2026-11-26
 
 ### Added
