@@ -25,6 +25,7 @@ import { fetchCached, fetchJsonCached, mapLimit } from "./lib/fetch.js";
 import { parseGuidelines } from "./lib/guidelines.js";
 import { commitSnapshot, discardStaging, prepareStaging } from "./lib/snapshot.js";
 import { type LockSource, loadSourceLock, sourceCacheKey } from "./lib/source-lock.js";
+import { cmsAdapter } from "./lib/sources/cms.js";
 import { govukAdapter } from "./lib/sources/govuk.js";
 import type { SourceContext } from "./lib/sources/types.js";
 import { uswdsAdapter } from "./lib/sources/uswds.js";
@@ -665,6 +666,7 @@ async function main(): Promise<void> {
     "playwright-cli",
     "govuk-design-system",
     "uswds",
+    "cms-design-system",
   ];
   for (const id of required) {
     if (!byId.has(id)) throw new Error(`sources.lock.json is missing ${id}`);
@@ -705,6 +707,18 @@ async function main(): Promise<void> {
       writeLicense: () => fetchLicense(uswdsSource, options, staging),
     };
     const uswds = await uswdsAdapter.fetch(uswdsContext);
+    const cmsSource = byId.get("cms-design-system")!;
+    const cmsContext: SourceContext = {
+      source: cmsSource,
+      fetchText: (path) =>
+        fetchCached(lockUrl(cmsSource, path), sourceCacheKey(cmsSource, path), options),
+      fetchJson: (path) =>
+        fetchJsonCached(lockUrl(cmsSource, path), sourceCacheKey(cmsSource, path), options),
+      provenance: (path, transformations) => provenanceFor(cmsSource, path, transformations),
+      sourceUrl: (path = "") => sourceUrl(cmsSource, path),
+      writeLicense: () => fetchLicense(cmsSource, options, staging),
+    };
+    const cms = await cmsAdapter.fetch(cmsContext);
     const domains = await buildDomains(options.contentDir);
 
     const warnings = [
@@ -712,6 +726,7 @@ async function main(): Promise<void> {
       ...domains.warnings,
       ...govuk.warnings,
       ...uswds.warnings,
+      ...cms.warnings,
     ];
     const allPacks: Pack[] = sortPacks([
       ...taste.packs,
@@ -719,6 +734,7 @@ async function main(): Promise<void> {
       ...guidelines.packs,
       ...govuk.packs,
       ...uswds.packs,
+      ...cms.packs,
       ...domains.packs,
     ]);
     const references: ReferencePack[] = sortPacks([
@@ -802,6 +818,7 @@ async function main(): Promise<void> {
       playwright.sourceInfo,
       govuk.sourceInfo,
       uswds.sourceInfo,
+      cms.sourceInfo,
     ];
     const counts = countBy(allContent, (pack) => pack.kind);
     const quality = countBy(allContent, (pack) => pack.quality);

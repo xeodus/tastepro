@@ -1,5 +1,51 @@
 [
   {
+    "id": "app-pattern/cms-accordion",
+    "kind": "app-pattern",
+    "name": "Accordion",
+    "summary": "An accordion is a list of headers that hide or reveal additional content when selected.",
+    "domains": [
+      "product-surfaces",
+      "government-public"
+    ],
+    "sectors": [
+      "government",
+      "healthcare"
+    ],
+    "tags": [
+      "cms",
+      "navigation",
+      "disclosure",
+      "accordion"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "cms-design-system",
+      "repo": "https://github.com/CMSgov/design-system",
+      "commit": "269a1abeb3159824800e134064db8a7b35821ccd",
+      "path": "packages/docs/content/components/accordion.mdx",
+      "license": "CC0-1.0",
+      "authors": [
+        "Centers for Medicare & Medicaid Services"
+      ],
+      "url": "https://design.cms.gov/",
+      "transformations": [
+        "removed MDX imports, examples, and JSX wrappers",
+        "kept the guidance section only"
+      ]
+    },
+    "sourceUrl": "https://design.cms.gov/components/accordion/",
+    "screen": "accordion",
+    "kinds": [
+      "navigation",
+      "disclosure"
+    ],
+    "basis": "a accordion pattern from the CMS Design System",
+    "blueprint": "## Guidance\n\n### When to use\n\n- Use an accordion to see an overview of multiple, related sections of content\n- Use an accordion to show and hide sections as needed\n\n### When to consider alternatives\n\nAccordions hide content from users and not everyone will notice them or understand how they work.\nAccordions increase cognitive load and interaction cost, as users have to make decisions about what headers to click on.\n\n- Don't use an accordion if users need to see most or all of the information on a page.\n- Don't use an accordion if there is not enough content to warrant condensing.\n\n### Usage\n\n- Make the entire header selectable. Allow users to click anywhere in the header area to expand or collapse the content; a larger target is easier to manipulate.\n- Give interactive elements enough space. Make sure interactive elements within the collapsible region are far enough from the headers that users don’t accidentally trigger a collapse.\n\n## Accessibility\n\nTo verify keyboard support for the Accordion header, press `Enter` or `Spacebar`. This toggles the collapsed/expanded state of the associated accordion panel.\n\n### Accessibility testing\n\n#### Screen reader testing\n\nWhen using a screen reader:\n\n##### Focus states\n\n- Focus moves in a logical order when using a screen reader. When you use a screen reader and navigate between accordion panels, the order in which the focus proceeds from item to item is logical. (For example, the focus doesn’t skip a link or accordion heading.)\n- Focus indicator is visible when using a screen reader. When you use a screen reader and navigate between accordion panels, the virtual cursor (or JAWS focus) moves from one header to the next.\n- Heading levels are logical. When you use a screen reader and navigate through the accordion panel headings, the heading levels are the correct level for the page outline.\n\n##### Headings\n\n- Heading levels are consistent. When you use a screen reader and navigate through the accordion panel headings, each accordion panel’s heading level is the same. (Typically this is a heading level 2 or 3.)\n- Screen reader announces “collapsed” state. When you use a screen reader and navigate to a closed panel, the screen reader announces that the content is “collapsed.”\n- Screen reader announces “expanded” state. When you use a screen reader and navigate to an open panel, the screen reader announces that the content is “expanded.”\n- Screen reader announces “expanded” state with expected keys. When you use a screen reader and use the `Enter` key or the `Spacebar` on a closed panel, the screen reader announces that the content is “expanded.”\n- Screen reader announces “collapsed” state with expected keys. When you use a screen reader and use the `Enter` key or the `Spacebar` on an open panel, the screen reader announces that the content is “collapsed.”\n\n#### Keyboard testing\n\nWhen navigating with a keyboard:\n\n##### Accordion panel behavior\n\n- Accordion panel opens with keyboard interaction. When you use the `Enter` key or the `Spacebar` on a closed panel, the panel opens (expands).\n- Accordion panel closes with keyboard interaction. When you use the `Enter` key or the `Spacebar` on an open panel, the panel closes (collapses).\n- Accordion panel does not toggle on hover. When you hover or focus on any accordion panel, the panel neither opens nor closes.\n\n##### Interactive elements\n\n- Interactive elements work after tabbing. When you use the `Tab` key to navigate into an open accordion panel, each interactive item inside that panel (like a link) is selectable.\n\n##### Focus states\n\n- Focus moves out of the accordion without closing the panel. When you navigate out of the accordion, it does not close.\n- Focus moves forward with keyboard interaction. When you navigate through items with the `Tab` key, the order in which the visible focus proceeds from item to item is logical. (For example, the focus doesn’t skip a link or accordion heading.)\n- Focus moves backwards with keyboard interaction. When you navigate through items with `Shift` + `Tab`, the visible focus moves to the previous focusable elements without skipping any items.\n- Focus stays on the panel header. When you use the `Enter` key or the `Spacebar` on a closed panel, the focus highlight stays on the panel header.\n- Focus indicator is clear on the accordion panel. When you `Tab` onto an accordion panel, the focus highlight is clear and visible.\n- Focus indicator is clear on interactive items. When you navigate through interactive content items (like links) with the `Tab` key, each item has a focus highlight that is clear and visible.\n\nFrom [USWDS’ Accordion accessibility tests](https://designsystem.digital.gov/components/accordion/accessibility-tests/)\n\n## Code\n\n### React\n\n### Web Component\n\n#### Spacing when using framework wrappers\n\nWrapping each `ds-accordion-item` in a framework-specific component changes the items’ sibling relationship and may prevent the default spacing between accordion headings from being applied. When this happens, apply the `ds-u-margin-top--1` utility class to the heading of each item after the first.\n\n```html\n\n  ...\n\n```\n\n### Style customization\n\nThe following CSS variables can be overridden to customize Accordion components:\n\n## Component maturity",
+    "phone": ""
+  },
+  {
     "id": "app-pattern/uswds-address",
     "kind": "app-pattern",
     "name": "Address",
@@ -86,6 +132,53 @@
     ],
     "basis": "a addresses pattern from the GOV.UK Design System",
     "blueprint": "Help users provide an address using one of the following:\n\n- address lookup\n- multiple text inputs\n- textarea\n\n## Address lookup\n\nAn address lookup helps users find a full address from partial information such as a postcode.\n\n### When to use an address lookup\n\nUse an address lookup to collect UK addresses where possible.\n\n### When not to use an address lookup\n\nAddress lookups generally only work for UK addresses.\n\nIf you expect both UK and international addresses, give users the option to either search for a UK address or manually enter an international address.\n\n### How an address lookup works\n\nAn address lookup lets users specify a UK address by entering their postcode and selecting their address from a list. There is also an option to enter a street name or number.\n\nWhen using an address lookup, you should:\n\n- make it clear that it will only work for UK addresses\n- provide a manual option for people with international addresses or addresses that are missing or not properly listed in the address lookup\n- let people enter their postcodes in upper or lower case and with or without spaces\n\n### Identify and match addresses with UPRN identifiers\n\nUse an address lookup that can identify addresses with Unique Property Reference Numbers (UPRNs). UPRNs are 12-digit unique identifiers for every addressable location across the UK.\n\nOpen standards for government mandate that services that store property information must use UPRN identifiers.\n\nUsing UPRN identifiers helps users enter addresses accurately. This helps your service by making address data more consistent and easier to handle, which reduces errors and removes the need for manual address matching in the future.\n\nSee a post on The power of UPRNs in linking data on the Geospatial Insights blog.\n\nYour address lookup should only use data from a single API. One option for this is the Ordnance Survey Places API. Public sector organisations can get access to OS Places API as part of the Public Sector Geospatial Agreement (PSGA).\n\n### Allow different postcode formats\n\nIt's easier for users if you accept and ignore unwanted characters. This is better than rejecting the input and telling the user they have not provided a valid postcode.\n\nYou should let users enter postcodes that contain:\n\n- upper and lower case letters\n- no spaces\n- additional spaces at the beginning, middle or end\n- punctuation like hyphens, brackets, dashes and full stops\n\n## Multiple text inputs\n\n### When to use multiple text inputs\n\nOnly use multiple text inputs to offer users a manual input option when you both:\n\n- know which countries the addresses will come from\n- can find a format that supports them all – this can be difficult to know if you’re asking for addresses outside of the UK\n\nUsing multiple text inputs means:\n\n- you can easily extract and use specific parts of an address\n- you can give help for individual text inputs\n- you can validate each part of the address separately\n- users can complete the form using their browser’s autocomplete function\n\nThe disadvantages of using multiple text inputs are that:\n\n- it’s hard to find a single format that works for all addresses\n- there’s no guarantee that users will use the text inputs the way you think they will\n- users cannot easily paste addresses from their clipboards\n\n### How multiple text inputs work\n\nIf you use multiple text inputs, you should:\n\n- only make individual text inputs mandatory if you really need the information\n- make the text inputs the appropriate length for the content – it helps people understand the form, for example, make postcode text inputs shorter than street text inputs\n- <a href=\"#allow-different-postcode-formats\">let users enter postcodes in different formats</a>\n\nMake sure there are enough text inputs to accommodate longer addresses if you know your users will need them. For example, allow users to include a company name or flat&nbsp;number.\n\nMake it optional for users to enter their county (such as Berkshire or Cumbria). It’s not part of a correct UK address, according to Royal Mail, and it’s not used to deliver post.\n\nRemove the county field if you’re sure your users will not need it, and your service will not use it.\n\n#### Use the autocomplete attribute on multiple address fields\n\nUse the `autocomplete` attribute on each individual address field to help users enter their address more quickly. This lets you specify each input’s purpose so browsers can autofill the information on a user’s behalf if they’ve entered it previously.\n\nCheck which input purpose to use for each field.\n\nIn production, you’ll need to do this to meet WCAG 2.2 success criterion 1.3.5 Identify input purpose. You will not normally need to use the `autocomplete` attribute in prototypes, as users will not generally be using their own devices.\n\n#### Error messages\n\nError messages should be styled like this:\n\nIf a postcode entered is not a real postcode, use a message like this:\n\nMake sure errors follow the guidance in the Error message component and have specific error messages for specific error states.\n\n## Textarea\n\n### When to use a textarea\n\nUse a textarea to offer users a manual option to enter an address, such as for international addresses or when users cannot find their address using an address lookup.\n\nA textarea is useful when you expect a broad range of address formats and you do not need to format the address for print or use specific sub-parts of the address (for example, street or postcode).\n\n### When not to use a textarea\n\nYou should not use a textarea if you need to separate an address into accurate sub-parts (for example, street or postcode).\n\n### How a textarea works\n\nTextareas let users enter an address in any format and make it easy to copy and paste addresses from their clipboard.\n\n#### Use the autocomplete attribute on a textarea\n\nUse the `autocomplete` attribute on the textarea component when you're asking for an address. This lets browsers autofill the information on a user's behalf if they’ve entered it previously.\n\nTo do this, set the `autocomplete` attribute to `street-address` as shown in the HTML and Nunjucks tabs in the textarea example above.\n\nIf you are working in production you’ll need to do this to meet WCAG 2.2 success criterion 1.3.5 Identify input purpose.\n\nYou will not normally need to use the `autocomplete` attribute in prototypes, as users will not generally be using their own devices.",
+    "phone": ""
+  },
+  {
+    "id": "app-pattern/cms-alert",
+    "kind": "app-pattern",
+    "name": "Alert",
+    "summary": "Alerts give feedback to users, provide critical information, and/or offer key supplementary details about a task.",
+    "domains": [
+      "product-surfaces",
+      "government-public",
+      "healthcare-wellness"
+    ],
+    "sectors": [
+      "government",
+      "healthcare"
+    ],
+    "tags": [
+      "cms",
+      "feedback",
+      "status",
+      "alert"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "cms-design-system",
+      "repo": "https://github.com/CMSgov/design-system",
+      "commit": "269a1abeb3159824800e134064db8a7b35821ccd",
+      "path": "packages/docs/content/components/alert.mdx",
+      "license": "CC0-1.0",
+      "authors": [
+        "Centers for Medicare & Medicaid Services"
+      ],
+      "url": "https://design.cms.gov/",
+      "transformations": [
+        "removed MDX imports, examples, and JSX wrappers",
+        "kept the guidance section only"
+      ]
+    },
+    "sourceUrl": "https://design.cms.gov/components/alert/",
+    "screen": "alert",
+    "kinds": [
+      "feedback",
+      "status"
+    ],
+    "basis": "a alert pattern from the CMS Design System",
+    "blueprint": "## Guidance\n\n### When to use\n\n#### Informational\n\n**On Forms**: To provide key supplementary or contextual information to support the successful completion of tasks or aid overall comprehension.\n**On Static Pages**: To highlight recent, critical changes.\n\nExamples:\n\n- To provide additional information such as explanations of criteria the user needs to meet\n- To highlight new information available\n\nLightweight informational alert may be used if information is helpful, but not critical or necessary to complete the task.\n\n#### Error\n\n**On Forms**: To draw focus to an error or an incomplete task by prompting the user to review or take other action.\n\nExamples:\n\n- To alert a user of missing form entry\n- To alert a user of incorrect form entry\n- To alert a user of broader system issues\n\nNever use error alerts on static pages.\n\n#### Warning\n\n**On Forms**: To call out or notify a user of risk or important information prior to completing the action.\n\n**On Static Pages**: To notify users of scheduled website maintenance or unexpected system outage.\n\nExamples:\n\n- To warn a user of potential negative consequences of a certain action\n- To warn a user of unintended results\n- To encourage a user to double check their choices\n- To highlight information that a user should be aware of\n\n#### Success\n\n**On Forms**: To confirm that a task was completed successfully.\n\nExamples:\n\n- To confirm submission of an application\n- To offer a user positive feedback, such as a congratulatory note\n- To guide the user to the next step in a multi-step process\n\nNever use success alerts on static pages.\n\n### Guidelines\n\n- Don’t overdo it—Limit alerts to no more than 2 per screen. Too many notifications won’t be read, as they can overwhelm and annoy the user.\n- Only include notifications that relate to the user’s current goal.\n- Be mindful of other elements on the page that may compete for the user’s attention.\n- On forms, always include in-line validation in addition to any error alerts that\n  appear at the top of the form.\n- If the error alert relates to specific text fields, also display the impacted fields in an\n  error state.\n\n### When to consider alternatives\n\n- For less critical messages or less-urgent information, consider tooltips, hint text, or inline help text.\n- When the goal is to guide user input, utilizing hint text or inline help can be more effective in providing real-time guidance within form fields.\n- If an action will result in destroying a user’s work (for example, deleting an application) use a more intrusive pattern, such as a confirmation modal dialogue, to allow the user to confirm that this is what they want.\n- When you need to display content that isn't related to the user’s current goal.\n\n### Display & behavior\n\n- Alerts may be displayed statically on a page, appearing immediately when the webpage is first loaded, or dynamically loaded on a page, appearing based on specific conditions or user interactions, like clicking a button, submitting a form, or fulfilling certain criteria on the page.\n- Alerts with icons are preferred. An alert doesn’t need to include an icon if it requires a large amount of content. Such instances should be rare. Validate the design and spacing on mobile to help make this decision.\n- When the user is required to do something in response to an alert, let them know what they need to do and make that task as easy as possible.\n- Don’t use alerts with a timer or dismiss button.\n\n### Content guidelines\n\n#### Guidelines\n\n- Keep alerts short—Use the fewest words possible to convey the concept or issue.\n  - Best practice is no more than 2-3 short sentences.\n  - If longer, consider adding a link to a help drawer to provide more details.\n- Use plain language, active voice, and imperative style when providing directions.\n- Avoid jargon and computer code, like “Message 1234,” or code snippets, such as -h, -\n  p 8080, -d /var/www/html.\n- Alert content can include:\n  - A heading (not required)\n  - Navigational links\n  - “Trigger words” to open help drawer for more details o Bulleted or numbered lists\n- [Plain Language Guide: Writing (Digital.gov)](https://digital.gov/guides/plain-language/writing)\n\n#### Heading content\n\n- Alert headings are optional, but preferred. They draw attention and frame the information in the alert.\n- Bold alert headings and use sentence case.\n- Don’t include punctuation, unless it’s a question.\n\n#### Content for error alerts\n\n- Help the user correct the error —Don’t place blame on the user.\n- Keep error alerts short, using the fewest words possible to describe what went\n  wrong and what the user needs to do.\n- Alerts support various types and lengths of content from ~45 to ~80 characters\n  wide.\n- When writing error alerts, use:\n  - Plain language and active voice. Use contractions.\n  - Imperative style for directions to correct the error or action to take.\n  - Don’t use words like \"please\" or \"sorry,\" or informal language like “oops.”\n  - Sentence case and include punctuation. Don’t use exclamation points.\n- If action to correct error has multiple steps or is complex, consider adding trigger text for a help drawer to provide more details.\n- [Get details about inline error messages that pair with error alerts.](https://design.cms.gov/components/inline-error/)\n\n### Accessibility\n\n#### Accessibility\n\n- Use alerts sparingly to avoid creating too much \"noise\" in screen readers, making it difficult to understand the overall layout of the page.\n- Place alerts in an effective location to draw attention even when CSS is turned off. Content helps also to make the importance of the message clear.\n- Immediately notify users relying on assistive tech, like screen readers, when an alert appears.\n- Users who are using a keyboard to navigate the page must be able to access the alert and its content in the right order.\n- Don’t visually hide alert messages on the page and then make them visible when needed. Users of older assistive technologies may still be able to perceive the alert messages even if they aren’t currently applicable.\n- If you have multiple alert components on a page, tailor the accessible text to differentiate between each by using an aria-label or aria-labeled by attribute.\n\n#### Accessibility for dynamic alerts\n\n- If dynamically loading an alert, be mindful of when the alert displays on the page.\n  - For example, an alert could appear on a page due to an error or progressive disclosure. Synchronize the visual presentation of dynamically loaded content with its auditory presentation by screen readers.\n  - Errors need immediate attention, but content through progressive disclosure may not.\n- When a user's actions require dynamically displaying an alert, such as with success or error states, inject the alert inside an already existing `` with `aria-live=\"polite\"` and `aria-relevant=\"additions removals\"` or `role=\"alert\"`. These ARIA attributes ensure screen readers will announce alerts that have been added or updated dynamically.\n\n  - Your empty `` on page load would appear as:\n\n  ```html\n\n  ```\n\n  - When the user performs an action that displays an alert, add the alert to the existing ``:\n\n  ```html\n\n    ...\n\n  ```\n\n- The value of the `aria-live` attribute is used to update assistive technologies on the degree of importance.\n  - `aria-live=\"polite\"` will notify users of updates but generally do not interrupt the current task, with the updates having a low priority.\n  - `aria-live=\"assertive\"` will immediately notify the user, potentially clearing the speech queue of previous updates. Don't use the assertive value unless the interruption is imperative.\n  - `aria-relevant=\"additions removals\"` (tailored to the appropriate value) will communicate the types of changes that occurred to an aria-live region. You only need to inform assistive technologies of content removal when the removal represents an important change.\n- If you choose to shift focus to the alert, be mindful that using other techniques like `role=\"alert\"`, and `aria-live=\"polite\"` will cause some browser and screen reader combinations to read out the content more than once. Typically, shifting focus alone will be enough to alert screen readers of the content.\n\n#### Accessibility testing\n\n##### General\n\n- The alert should have a [unique, accessible name](https://www.w3.org/WAI/ARIA/apg/practices/names-and-descriptions/).\n- The alert purpose should be clear in the context of the whole page.\n\n##### Keyboard testing\n\n- When using features that trigger the display of an alert, I should see or hear the alert announced, but focus DOESN'T transfer automatically when the alert appears.\n- When using features that trigger the display of an [alert dialog (modal)](/components/modal-dialog/), I should see or hear the alert announced, and focus DOES transfer automatically when the alert appears.\n\n##### Screen reader testing\n\nWhen using a screen reader (NVDA, JAWS, VoiceOver, TalkBack):\n\n- Using features that trigger the display of an alert:\n  - The alert is announced when it appears\n  - It identifies itself as an alert\n- Navigating the page announces the accessible name of the alert, followed by the alert content.\n\n### Report an accessibility bug\n\nIf you have access to CMS internal tools, report accessibility issues through the [CMSDS bug reporting workflow in Confluence](https://confluence.cms.gov/pages/viewpage.action?pageId=1138979323).\n\nIf you do not have access to CMS internal tools, report accessibility issues using the [public GitHub issue template](https://github.com/CMSgov/design-system/issues/new?template=propose-a-new-item-for-the-cms-design-system.md).\n\n## Code\n\n### React\n\n### Web Component\n\n### Style customization\n\nThe following CSS variables can be overridden to customize Alert components:\n\n### Analytics\n\nThis component has analytics tracking available. Please see our developer documentation about [using analytics in the design system](/getting-started/for-developers/#analytics).\n\n## Component maturity",
     "phone": ""
   },
   {
@@ -991,6 +1084,53 @@
     "phone": "KPI tabs become a 2-up grid above the chart, with the selected cell marked by a fill (never an underline floating inside the grid) or a row of tabs that scrolls sideways; the chart is full width, 160-200px tall, with 4 x labels; the comparison table keeps its two right-aligned columns."
   },
   {
+    "id": "app-pattern/cms-multi-input-date-field",
+    "kind": "app-pattern",
+    "name": "Multi-Input Date Field",
+    "summary": "Date field (multi-input) provides date entry, spaced over three separate inputs for month, day, and year.",
+    "domains": [
+      "government-public",
+      "healthcare-wellness",
+      "product-surfaces"
+    ],
+    "sectors": [
+      "government",
+      "healthcare"
+    ],
+    "tags": [
+      "cms",
+      "form",
+      "date",
+      "multi-input-date-field"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "cms-design-system",
+      "repo": "https://github.com/CMSgov/design-system",
+      "commit": "269a1abeb3159824800e134064db8a7b35821ccd",
+      "path": "packages/docs/content/components/date-field/multi-input-date-field.mdx",
+      "license": "CC0-1.0",
+      "authors": [
+        "Centers for Medicare & Medicaid Services"
+      ],
+      "url": "https://design.cms.gov/",
+      "transformations": [
+        "removed MDX imports, examples, and JSX wrappers",
+        "kept the guidance section only"
+      ]
+    },
+    "sourceUrl": "https://design.cms.gov/components/date-field/multi-input-date-field/",
+    "screen": "multi-input-date-field",
+    "kinds": [
+      "form",
+      "date"
+    ],
+    "basis": "a multi-input date field pattern from the CMS Design System",
+    "blueprint": "## Guidance\n\n### When to use\n\nUse this date field when:\n\n- User flow requires inputs be separated\n- Functionality/back-end systems can't support a single date field entry\n\nGenerally used for more memorable dates like date of birth, marriage date, or income start date.\n\n### When to consider alternatives\n\n- Don't use this date field if either [single-input](/components/single-input-date-field/) or [date picker](/components/date-picker/) are feasible. This pattern is least effective with users.\n\n### Usage\n\n- Allow users to enter one-digit numbers with or without the \"0\" prior to the number. Example: \"1\" as well as \"01\" for a month or day.\n\n## Accessibility\n\nThe multi-input date field component has been tested against, and meets, WCAG 2.1 standards for text size, color contrast, and screen reader usage.\n\n- These text fields should follow the [accessibility guidelines for all text inputs](/components/text-field/text-field/#guidance).\n- Our component does not auto-advance the focus from one field to another. This is by design to make sure that keyboard users are able to correct mistakes.\n- Utilize the required `label` prop to provide a meaningful description of the multi-input date field. Optionally, you can use the `hint` prop to provide additional contextual information or clearer directions for use. Using the label and hint props provide a number of benefits to users such as lowering the cognitive burden and increasing the interaction area when using the multi-input date field.\n\n### Accessibility testing\n\n#### Screen reader testing\n\n- Screen readers should announce that each individual field is editable.\n- If the field already has content within it, the screen reader should announce the existing contents.\n- Whether the field is required or not should be announced by the screen reader.\n- The text content supplied to the label prop should be read first, then any text supplied to the hint prop should be read, then finally the content within the date field.\n\n#### Keyboard testing\n\n- Using only a keyboard, you can navigate to each text field, type in it, and navigate away from it.\n- Each field should have a visible focus indicator, and highlight any existing contents, when navigated to.\n\n#### Zoom magnification\n\n- When zoomed to 200%, text fields must remain legible, functional, and properly sized.\n\n## Code\n\n### React\n\n### Style customization\n\nThe following CSS variables can be overridden to customize Input/Form components:\n\n### Related patterns\n\n- [Date field (single-input)](/components/date-field/single-input-date-field/)\n- [Date field (with calendar)](/components/date-field/date-picker/)\n\n## Component maturity",
+    "phone": ""
+  },
+  {
     "id": "app-pattern/uswds-name",
     "kind": "app-pattern",
     "name": "Name",
@@ -1127,6 +1267,51 @@
     "basis": "an event's analytics tab",
     "blueprint": "The page header is the object itself: one card (88px, 14px padding) holding a 50x62 cover, the 18/600 name with 28px icon buttons beside it (open, copy, share), a 13px grey meta line (date, time, place) and outlined 36px actions on the right. Under it, underline tabs on a full-width 1px rule, then a 36px row with a segmented time range on the left and a refresh button on the right. The body is one 6-column grid with one gutter (14px) in both directions whose spans change by row while every edge lands on the same lines: 3 KPI tiles of 2 columns, the main chart in 4 columns beside a side chart in 2, two progress cards of 3, a full-width trend of 6. Give the widest card to the screen's question, and do not give 824px to one ring and one legend row (flagged).",
     "phone": "The header card keeps cover, name and meta, with actions in a kebab; every grid item takes the full width in the same order."
+  },
+  {
+    "id": "app-pattern/cms-pagination",
+    "kind": "app-pattern",
+    "name": "Pagination",
+    "summary": "Pagination is navigation for paginated content.",
+    "domains": [
+      "product-surfaces",
+      "ecommerce-dtc",
+      "marketplaces"
+    ],
+    "sectors": [
+      "government",
+      "commerce"
+    ],
+    "tags": [
+      "cms",
+      "navigation",
+      "pagination"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "cms-design-system",
+      "repo": "https://github.com/CMSgov/design-system",
+      "commit": "269a1abeb3159824800e134064db8a7b35821ccd",
+      "path": "packages/docs/content/components/pagination.mdx",
+      "license": "CC0-1.0",
+      "authors": [
+        "Centers for Medicare & Medicaid Services"
+      ],
+      "url": "https://design.cms.gov/",
+      "transformations": [
+        "removed MDX imports, examples, and JSX wrappers",
+        "kept the guidance section only"
+      ]
+    },
+    "sourceUrl": "https://design.cms.gov/components/pagination/",
+    "screen": "pagination",
+    "kinds": [
+      "navigation"
+    ],
+    "basis": "a pagination pattern from the CMS Design System",
+    "blueprint": "## Guidance\n\nPaginated content is any content split into multiple pages determined by a specific amount of content per page, not split by any meaningful attribute, like feature or subject or step. Search results and article collections are often paginated. Readers use the pagination component to move from page to page in paginated content, or directly to the first or last page of the paginated set.\n\n### When to use\n\n- Typically used for paginated search results.\n- Can be used for multi-page collections of related items, including articles related to a category or tag, content archives, and history or activity. Splitting a large collection of related items into individual pages can improve browsability and scannability.\n\n### When to consider alternatives\n\n- If you need to indicate progress in a series of steps that must be completed in succession, like an onboarding or checkout flow, this isn't the component for you.\n- If the length of the entire collection is less than 3-4 screen lengths long, consider showing all the items at once instead of paginating.\n\n### Usage\n\n- Users want to know the length of a paginated section, so show the size of the paginated set.\n- Highlight the current page the user is on in relation to the entire collection of pages.\n- Don't split the navigation items over multiple lines as this can make individual pages more difficult to understand and select.\n- Don't include out-of-sequence items directly adjacent to one another. Wherever there are missing pages, an ellipses should be used.\n- Avoid adding complexity by focusing on the essentials and avoid adding more items to Pagination just to fill the space.\n- Use touch targets that are big enough to select with any finger and have enough separation to avoid mistakes.\n- Do not use buttons for URL-based pagination. Because the URL is updated, the browser history stack updates and a link is the correct tag to use.\n- Consider page load, performance, and the user's scrolling preferences when determining how many items are displayed on each page.\n\n## Accessibility\nThe Pagination component has been tested against, and meets, WCAG 2.1 standards for text size, color contrast, and screenreader usage.\n\n### Accessibility Guidance\n\n- The Pagination component uses a wrapping `` element to identify it as a navigation section to screen readers and other assistive technologies.\n- Itʼs likely that you will have more than one `` on a page. If you do, Pagination **must** have an ARIA label attribute defined on the `` element that describes its purpose. To do this, supply a string value to the `ariaLabel` prop on the component adequately describing the purpose. “Pagination resultsˮ is a possible option.\n- The component sets `aria-current=\"page\"` on the `` element containing the current page value to properly voice the current page for screen readers.\n- The component adds an `aria-label` to the pagination item with the word “pageˮ and the page number so that screen readers will voice the word \"page\" before the page numbers automatically.\n- Once a pagination link has been clicked, the user should be redirected to that content and focus should shift to the top-level piece of content on that page, usually an ``, but this depends on content being paginated over.\n- Uses an `` element for the non-current pages. They are announced consistently by screen readers, and function as anchor links do normally (i.e. interactive and link to content).\n- Avoid large horizontal gaps between pagination elements, as this may cause users with limited vision or mobility to miss items when scanning. For mobile devices and devices with smaller screens we offer the `compact` boolean prop which changes the layout from using a series of anchor links for each page to instead rendering the text “Page X of Yˮ.\n\n### Accessibility Testing\n\n#### Keyboard navigation\n\n- If the \"Previous\" navigation link has keyboard focus, pressing the **TAB** key should move focus to the first pagination page link.\n- If a pagination page link has keyboard focus, pressing **TAB** should move focus to the next pagination link in sequence.\n- If the last pagination page link has keyboard focus, pressing **TAB** should move focus to the \"Next\" navigation link.\n- The currently active page link should not receive keyboard focus when pressing **TAB**.\n- Verify that keyboard focus is not trapped in the pagination and that users can tab into and out of the component.\n- Confirm a visible focus indicator appears on each pagination link when using a keyboard.\n\n#### Zoom magnification\n\n- When zoomed to 200%, pagination content must remain legible, functional, and properly sized. The component should automatically adjust to mobile styling.\n\n#### Screen reader\n\n- Screen readers must announce pagination links in the correct visual and numerical order.\n- Screen readers must announce the role and label of each link (e.g., 'link, page 10').\n\n## Code\n\n### React\n\nPagination requires three properties: `totalPages`, which is the total number of pages, `currentPage`, which acts a means to track the current page, and `onPageChange`, which is a function used to handle state changes when the user clicks a page.\n\nPagination also comes in two styles: default, which is compact on mobile viewports and expands to reveal individual pages on larger viewports, and `compact`, which maintains the compact layout regardless of viewport size.\n\n### Web Component\n\n### Style customization\n\nThe following CSS variables can be overridden to customize Pagination components:\n\n## Component maturity",
+    "phone": ""
   },
   {
     "id": "app-pattern/govuk-payment-card-details",
@@ -1268,6 +1453,53 @@
     ],
     "basis": "a phone number pattern from USWDS",
     "blueprint": "## About this pattern\n\n### What problem does this solve?\n\nPeople format their phone number in varying ways — with or without extra spaces, hyphens, periods, and parentheses. Some may be more accustomed to providing only seven digits. This pattern was designed to reduce confusion and frustration and ensure accurate entry.\n\n### When to use this pattern\n\nUse this pattern if you need to collect the user’s phone number. Only ask for the phone number if you need it. This pattern is designed to support U.S. phone numbers and their specific format.\n\n### What's the solution?\n\nHelp users enter their phone numbers in a consistent, correct, usable format. Use the form label and hint text to show users the expected format, and if you specifically need a U.S. or SMS-capable mobile phone number. When possible, use input masking and both client- and server-side validation to ensure the phone number they enter can be successfully used to contact them if needed.\n\n## Guidance\n\n### What to do\n\n- Tell users why you need their phone number, why you might contact them, and when.\n\n- Do clearly state if you need a U.S. telephone number.\n\n- Do clearly state if you need an SMS-capable mobile phone number, such as when you need to text a security code for validation.\n\n- Use clear hint text and input masking to ensure proper formatting.\n\n- Do use a \"text\" vs \"numeric\" input type.\n\n- Do use fieldset and legend to group related radio buttons together, and clear labels and attributes on these form elements.\n\n- Consider using the autocomplete attribute on telephone number inputs, to allow the browser to autofill information if it has been previously entered.\n\n- Offer very clear validation messages to help users successfully meet format requirements.\n\n- Allow a user to supply multiple phone numbers, labeling options Primary and Secondary.\n\n- Consider offering an extension field for a business line or other temporary residences/shelters.\n\n- Do consider the safety implications of users who share phones and voicemail boxes. Ask for permission to leave potentially sensitive messages.\n\n### What not to do\n\n- Do not require users to enter hyphens or other characters.\n\n- Do not split the phone number into separate fields. Separate fields have a high user interaction cost\n\n- Do not assume that voicemail boxes are private unless explicitly stated through permission-based settings or in the message itself.",
+    "phone": ""
+  },
+  {
+    "id": "app-pattern/cms-phone-numbers",
+    "kind": "app-pattern",
+    "name": "Phone numbers",
+    "summary": "## Guidance - Content authors, designers, and developers must ensure that phone numbers are shown as links. - If the phone number has a letter format, then only the number format of the phone number would be linked. - If the phone number…",
+    "domains": [
+      "government-public",
+      "healthcare-wellness",
+      "fintech-payments"
+    ],
+    "sectors": [
+      "government",
+      "healthcare"
+    ],
+    "tags": [
+      "cms",
+      "form",
+      "contact",
+      "phone-numbers"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "cms-design-system",
+      "repo": "https://github.com/CMSgov/design-system",
+      "commit": "269a1abeb3159824800e134064db8a7b35821ccd",
+      "path": "packages/docs/content/patterns/phone-numbers.mdx",
+      "license": "CC0-1.0",
+      "authors": [
+        "Centers for Medicare & Medicaid Services"
+      ],
+      "url": "https://design.cms.gov/",
+      "transformations": [
+        "removed MDX imports, examples, and JSX wrappers",
+        "kept the guidance section only"
+      ]
+    },
+    "sourceUrl": "https://design.cms.gov/patterns/phone-numbers/",
+    "screen": "phone-numbers",
+    "kinds": [
+      "form",
+      "contact"
+    ],
+    "basis": "a phone numbers pattern from the CMS Design System",
+    "blueprint": "## Guidance\n\n- Content authors, designers, and developers must ensure that phone numbers are shown as links.\n- If the phone number has a letter format, then only the number format of the phone number would be linked.\n- If the phone number only shows up as letters, then the letter format of the phone number would be linked.\n- All numbers need to be followed by details for Teletypewriter (TTY) users.",
     "phone": ""
   },
   {
@@ -1762,6 +1994,53 @@
     "phone": "Breadcrumb shortens to a back link and the h1; tabs scroll; KPI cards stack as label-value rows; charts full width."
   },
   {
+    "id": "app-pattern/cms-table",
+    "kind": "app-pattern",
+    "name": "Table",
+    "summary": "Tables show tabular data in columns and rows.",
+    "domains": [
+      "b2b-saas",
+      "data-analytics",
+      "government-public"
+    ],
+    "sectors": [
+      "government",
+      "healthcare"
+    ],
+    "tags": [
+      "cms",
+      "data",
+      "table",
+      "table"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "cms-design-system",
+      "repo": "https://github.com/CMSgov/design-system",
+      "commit": "269a1abeb3159824800e134064db8a7b35821ccd",
+      "path": "packages/docs/content/components/table.mdx",
+      "license": "CC0-1.0",
+      "authors": [
+        "Centers for Medicare & Medicaid Services"
+      ],
+      "url": "https://design.cms.gov/",
+      "transformations": [
+        "removed MDX imports, examples, and JSX wrappers",
+        "kept the guidance section only"
+      ]
+    },
+    "sourceUrl": "https://design.cms.gov/components/table/",
+    "screen": "table",
+    "kinds": [
+      "data",
+      "table"
+    ],
+    "basis": "a table pattern from the CMS Design System",
+    "blueprint": "## Guidance\n\n### When to use\n\n- When you need tabular information, such as statistical data.\n- When users need to compare sets of information.\n\n### When to consider alternatives\n\n- Depending on the type of content, consider using other presentation formats such as definition lists or hierarchical lists.\n- If you're writing out name / value pairs, there's often a more compact way compared to using a table.\n\n### Usage\n\n- Right-align numerical data in tables. You can use the `align` prop on the TableCell to accomplish this. Right alignment makes it easier to scan and compare numerical values.\n\n### Accessibility\n\n- Tables can have two levels of headers. Each header cell should have `scope=\"col\"` or `scope=\"row\"`. [Learn more about the \"scope\" attribute.](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/th#attr-scope)\n- Complex tables are tables with more than two levels of headers. Each header should be given a unique `id` and each data cell should have a `headers` attribute with each related header cell’s `id` listed.\n- When adding a title to a table, include it in a `` tag inside of the `` element.\n\n## Learn more\n\n- [W3C Web Accessibility Tutorial \\- Table Concepts](https://www.w3.org/WAI/tutorials/tables/)\n- [Design Better Data Tables](https://medium.com/mission-log/design-better-data-tables-430a30a00d8c)\n\n## Component maturity",
+    "phone": ""
+  },
+  {
     "id": "app-pattern/table-filter-bar",
     "kind": "app-pattern",
     "name": "Table with tabs and a filter bar",
@@ -1816,6 +2095,52 @@
     "basis": "an events back office, a tracks studio, a sessions overview",
     "blueprint": "Title row: an 18-24px title on the left, at most an outlined secondary and the one primary (36px) on the right. Underline tabs for the list's states on a full-width 1px rule with a 2px indicator as wide as the label; 22-32px below, the toolbar: a search of about 252-316 x 32-36 on the left, the count ('7 events') and the sort on the right. The table sits on the panel or page ground with no card around it: a header of 12-13px grey sentence-case labels with no fill and no rule, rows on a 48-56px pitch for one line or 72-92px with a thumbnail (media height plus 24-32px), 1px rules 3-7% darker than the ground or no rules at all, the identity column given the most width, numbers right-aligned in tabular figures with the unit muted ('5 /10'), one status mark per row and one kebab at the far right. Drop a column that is empty in every row (a blank co-host column left a 300px dead band). On an overview, cap the rows and link to the full list; on the full list, state the total and load more at the end.",
     "phone": "Rows become two-line items: identity and the key number on line 1, the secondary fields in 13px grey on line 2, the kebab at the right. Tabs scroll in their own row; the search becomes a full-width field."
+  },
+  {
+    "id": "app-pattern/cms-tabs",
+    "kind": "app-pattern",
+    "name": "Tabs",
+    "summary": "Tabs are a secondary navigation pattern, allowing a user to view only the content they're interested in. They build upon a real world metaphor, and the selected state simulates a folder being physically in front of others in the group.",
+    "domains": [
+      "product-surfaces",
+      "b2b-saas"
+    ],
+    "sectors": [
+      "government",
+      "healthcare"
+    ],
+    "tags": [
+      "cms",
+      "navigation",
+      "disclosure",
+      "tabs"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "cms-design-system",
+      "repo": "https://github.com/CMSgov/design-system",
+      "commit": "269a1abeb3159824800e134064db8a7b35821ccd",
+      "path": "packages/docs/content/components/tabs.mdx",
+      "license": "CC0-1.0",
+      "authors": [
+        "Centers for Medicare & Medicaid Services"
+      ],
+      "url": "https://design.cms.gov/",
+      "transformations": [
+        "removed MDX imports, examples, and JSX wrappers",
+        "kept the guidance section only"
+      ]
+    },
+    "sourceUrl": "https://design.cms.gov/components/tabs/",
+    "screen": "tabs",
+    "kinds": [
+      "navigation",
+      "disclosure"
+    ],
+    "basis": "a tabs pattern from the CMS Design System",
+    "blueprint": "## Guidance\n\n### When to use\n\n- If you have sub-sections of a page, and there's the need to only show one sub-section at a time.\n\n### When to consider alternatives\n\n- If you have more than four tabs. Consider using a different pattern if your content requires being split into more than four panels.\n- If the panel contents can be displayed at once. This will improve the scanability of your page's content and it's more likely the user will be able to find what they're looking for. Typography, including clear section headers, should be enough to allow the user to navigate the page.\n\n### Usage\n\n- Avoid overflowing tabs to new lines. If the tabs can't fit on one row on small screens, consider using utility classes to apply additional responsive styles or use a different pattern.\n- Tab labels should be descriptive of their content and set the user's expectations.\n- Tab labels should be short — aim for no more than two words.\n\n## Accessibility\n\n- Use anchor links (``) to create tabs. This allows direct linking, supports progressive enhancement, and preserves default browser behavior like opening tabs in a new window.\n  *Note: You’ll need to implement logic to select the appropriate tab based on the current URL.*\n- Markup should include proper ARIA roles and attributes to ensure accessibility:\n  - **Each tab** (``):\n    `role=\"tab\"`, `aria-selected`, `aria-controls`\n  - **Tablist container**:\n    `role=\"tablist\"`, `aria-label` (not applied by default — use the `ariaLabel` prop.)\n  - **Each tab panel**:\n    `role=\"tabpanel\"`, `aria-labelledby`\n\n  When you use our `Tabs` and `TabPanel` components together, ARIA roles are handled automatically. The `Tabs` component sets the appropriate `aria-controls` and manages selection state, while `TabPanel` sets its own `role` and receives a generated `tabId`. We recommend using both components together to ensure accessibility is correctly implemented.\n\n## Accessibility testing\n\n### Keyboard navigation\n\n- Users should be able to navigate to each tab using the `Tab` key and navigate backwards using `Shift + Tab`.\n- Pressing `Enter` should activate the focused tab.\n- When a tab has focus, arrow keys (`←`/`→`) should move focus between tabs.\n- A visible focus indicator should clearly show which tab is currently focused or selected.\n\n### Screen reader\n\nOur `Tabs` component applies the correct semantic roles (`tablist`, `tab`, and `tabpanel`) to ensure proper screen reader support.\nWhen implemented correctly, screen readers announce:\n- The label for each tab which is derived by the `tab` prop on each `TabPanel`.\n- Its `role` (e.g., \"tab\").\n- Its position within the set (e.g., \"Tab 1 of 3\").\n- Whether the tab is selected.\n- An accessible name is how browsers and the [accessibility tree](https://developer.mozilla.org/en-US/docs/Glossary/Accessibility_tree) identify it. Accessible names provide information for assistive technology, such as screen readers, and so icon tab must include an accessible name. If there is no text beside the icon then you must set the `ariaHidden` prop (or `aria-hidden` attribute) to `false`. Icons have built in title attributes which are the default accessible name. However you can set your own accessible name for the icon by passing in a `string` to the `description` prop on the icon component.\n\n### Zoom magnification\n\nTo ensure tab content remains visible when the screen is magnified, the widths of tabs and tab panels are defined using percentages. As the page is magnified, the height of the tabs increases and content reflows to fit the new dimensions.\n\n## Code\n\n### React\n\n### Web Component\n\n### Style customization\n\nThe following CSS variables can be overridden to customize Tab components:\n\n### Related patterns\n\n- [Vertical navigation](/components/vertical-nav/)\n\n## Learn more\n\n- [How Tabs Should Work](https://24ways.org/2015/how-tabs-should-work/)\n- [Simple ARIA tab interface](http://heydonworks.com/practical_aria_examples/#tab-interface)\n\n## Component maturity",
+    "phone": ""
   },
   {
     "id": "app-pattern/leave-timeline",
@@ -1899,5 +2224,52 @@
     "basis": "a team workspace home; a personal insights home",
     "blueprint": "A centred column on a real 12-column grid (77px columns, 16px gutters, 1100px), about 72px from the top. The greeting is the h1 (48/700 in a serif, or 24/400 in the sans), with the date after it or in a grey line under it, never as a tracked eyebrow, and no emoji. 50px below, 4 count tiles spanning 3 columns each (128px tall, 16px padding): label, value at regular weight in tabular or mono figures, a plain caption ('Ready when you are'), no deltas. Then spans that change by row but share column lines (9 + 3, then 6 + 6, so each internal edge meets one above it) for the main objects: panels with 20px padding, a 14/600 title, a count chip and a 'View all' link, holding row cards 63px tall with 8px gaps, one step lighter than the panel with a border one step darker. Pale tints may code the panels, each in the hue of the tile that counts it. Only a floating composer, if there is one, carries a shadow, and it must not cover the last rows.",
     "phone": "Greeting at 24-28px; tiles in a 2 x 2 grid; panels stack in reading order."
+  },
+  {
+    "id": "app-pattern/cms-zip-codes",
+    "kind": "app-pattern",
+    "name": "ZIP codes",
+    "summary": "There are approximately 41k ZIP codes in the United States. We use ZIP codes in various ways; to determine eligibility, as a way to search for services, or as part of an address.",
+    "domains": [
+      "government-public",
+      "healthcare-wellness",
+      "ecommerce-dtc"
+    ],
+    "sectors": [
+      "government",
+      "healthcare"
+    ],
+    "tags": [
+      "cms",
+      "form",
+      "address",
+      "zip-codes"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "cms-design-system",
+      "repo": "https://github.com/CMSgov/design-system",
+      "commit": "269a1abeb3159824800e134064db8a7b35821ccd",
+      "path": "packages/docs/content/patterns/zip-codes.mdx",
+      "license": "CC0-1.0",
+      "authors": [
+        "Centers for Medicare & Medicaid Services"
+      ],
+      "url": "https://design.cms.gov/",
+      "transformations": [
+        "removed MDX imports, examples, and JSX wrappers",
+        "kept the guidance section only"
+      ]
+    },
+    "sourceUrl": "https://design.cms.gov/patterns/zip-codes/",
+    "screen": "zip-codes",
+    "kinds": [
+      "form",
+      "address"
+    ],
+    "basis": "a zip codes pattern from the CMS Design System",
+    "blueprint": "## Guidance\n\n### 5-digit ZIP code pattern\n\nUse the `small` input size when data validation uses a 5-digit ZIP format.\n\n### 9-digit ZIP code pattern\n\nUse the `medium` input size when validating against a stricter data set, such as the 9-digit format.\n\n### ZIP code with geolocation information\n\nUse the default (`large`) input size when the user must confirm or enter data containing County, State, and ZIP code.\n\nConsider user pain points when choosing a ZIP code input field size.\n\n## Interactions\n\n- To reduce cognitive load, use the 5-digit pattern which supports a mental model that widely exists.\n- Specific validation of numeric values 0–9, spaces, and dashes.\n- Let the user pick the ZIP code and county/state option from an autocomplete option. In some use cases the ZIP code alone is ambiguous because some ZIP codes are in more than one county.\n- Display the option the user selects from the autocomplete option list\n- Error prevention clearly indicates the user needs to enter a valid ZIP code before moving to the next item.\n\n## User pain points\n\n- A small-sized input field works for a 5-digit ZIP code but hides a 9-digit format.\n- A medium-sized input field accommodates a 9-digit ZIP format but hides additional data such as county and/or state.\n- Some users' browsers auto-populate the 9-digit  ZIP code, including the dash. This interaction can be problematic when using the small input field.\n- ZIP codes are not always consistent. They may not reflect the current geography, which can lead to problems when services rely on the accuracy of the ZIP code.",
+    "phone": ""
   }
 ]

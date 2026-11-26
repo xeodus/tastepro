@@ -25606,6 +25606,33 @@
     "sourceUrl": "https://github.com/Leonxlnx/taste-skill"
   },
   {
+    "id": "app-pattern/cms-accordion",
+    "kind": "app-pattern",
+    "name": "Accordion",
+    "summary": "An accordion is a list of headers that hide or reveal additional content when selected.",
+    "domains": [
+      "product-surfaces",
+      "government-public"
+    ],
+    "sectors": [
+      "government",
+      "healthcare"
+    ],
+    "tags": [
+      "cms",
+      "navigation",
+      "disclosure",
+      "accordion"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "cms-design-system",
+    "sourceUrl": "https://design.cms.gov/components/accordion/",
+    "metrics": {
+      "screen": "accordion"
+    }
+  },
+  {
     "id": "app-pattern/uswds-address",
     "kind": "app-pattern",
     "name": "Address",
@@ -25656,6 +25683,34 @@
     "sourceUrl": "https://design-system.service.gov.uk/patterns/addresses/",
     "metrics": {
       "screen": "addresses"
+    }
+  },
+  {
+    "id": "app-pattern/cms-alert",
+    "kind": "app-pattern",
+    "name": "Alert",
+    "summary": "Alerts give feedback to users, provide critical information, and/or offer key supplementary details about a task.",
+    "domains": [
+      "product-surfaces",
+      "government-public",
+      "healthcare-wellness"
+    ],
+    "sectors": [
+      "government",
+      "healthcare"
+    ],
+    "tags": [
+      "cms",
+      "feedback",
+      "status",
+      "alert"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "cms-design-system",
+    "sourceUrl": "https://design.cms.gov/components/alert/",
+    "metrics": {
+      "screen": "alert"
     }
   },
   {
@@ -26196,6 +26251,34 @@
     }
   },
   {
+    "id": "app-pattern/cms-multi-input-date-field",
+    "kind": "app-pattern",
+    "name": "Multi-Input Date Field",
+    "summary": "Date field (multi-input) provides date entry, spaced over three separate inputs for month, day, and year.",
+    "domains": [
+      "government-public",
+      "healthcare-wellness",
+      "product-surfaces"
+    ],
+    "sectors": [
+      "government",
+      "healthcare"
+    ],
+    "tags": [
+      "cms",
+      "form",
+      "date",
+      "multi-input-date-field"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "cms-design-system",
+    "sourceUrl": "https://design.cms.gov/components/date-field/multi-input-date-field/",
+    "metrics": {
+      "screen": "multi-input-date-field"
+    }
+  },
+  {
     "id": "app-pattern/uswds-name",
     "kind": "app-pattern",
     "name": "Name",
@@ -26276,6 +26359,33 @@
     "sourceUrl": "https://github.com/Leonxlnx/taste-skill",
     "metrics": {
       "screen": "detail"
+    }
+  },
+  {
+    "id": "app-pattern/cms-pagination",
+    "kind": "app-pattern",
+    "name": "Pagination",
+    "summary": "Pagination is navigation for paginated content.",
+    "domains": [
+      "product-surfaces",
+      "ecommerce-dtc",
+      "marketplaces"
+    ],
+    "sectors": [
+      "government",
+      "commerce"
+    ],
+    "tags": [
+      "cms",
+      "navigation",
+      "pagination"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "cms-design-system",
+    "sourceUrl": "https://design.cms.gov/components/pagination/",
+    "metrics": {
+      "screen": "pagination"
     }
   },
   {
@@ -26362,6 +26472,34 @@
     "sourceUrl": "https://designsystem.digital.gov/patterns/create-a-user-profile/phone-number/",
     "metrics": {
       "screen": "phone-number"
+    }
+  },
+  {
+    "id": "app-pattern/cms-phone-numbers",
+    "kind": "app-pattern",
+    "name": "Phone numbers",
+    "summary": "## Guidance - Content authors, designers, and developers must ensure that phone numbers are shown as links. - If the phone number has a letter format, then only the number format of the phone number would be linked. - If the phone number…",
+    "domains": [
+      "government-public",
+      "healthcare-wellness",
+      "fintech-payments"
+    ],
+    "sectors": [
+      "government",
+      "healthcare"
+    ],
+    "tags": [
+      "cms",
+      "form",
+      "contact",
+      "phone-numbers"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "cms-design-system",
+    "sourceUrl": "https://design.cms.gov/patterns/phone-numbers/",
+    "metrics": {
+      "screen": "phone-numbers"
     }
   },
   {
@@ -26661,6 +26799,34 @@
     }
   },
   {
+    "id": "app-pattern/cms-table",
+    "kind": "app-pattern",
+    "name": "Table",
+    "summary": "Tables show tabular data in columns and rows.",
+    "domains": [
+      "b2b-saas",
+      "data-analytics",
+      "government-public"
+    ],
+    "sectors": [
+      "government",
+      "healthcare"
+    ],
+    "tags": [
+      "cms",
+      "data",
+      "table",
+      "table"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "cms-design-system",
+    "sourceUrl": "https://design.cms.gov/components/table/",
+    "metrics": {
+      "screen": "table"
+    }
+  },
+  {
     "id": "app-pattern/table-filter-bar",
     "kind": "app-pattern",
     "name": "Table with tabs and a filter bar",
@@ -26693,6 +26859,33 @@
     "sourceUrl": "https://github.com/Leonxlnx/taste-skill",
     "metrics": {
       "screen": "list"
+    }
+  },
+  {
+    "id": "app-pattern/cms-tabs",
+    "kind": "app-pattern",
+    "name": "Tabs",
+    "summary": "Tabs are a secondary navigation pattern, allowing a user to view only the content they're interested in. They build upon a real world metaphor, and the selected state simulates a folder being physically in front of others in the group.",
+    "domains": [
+      "product-surfaces",
+      "b2b-saas"
+    ],
+    "sectors": [
+      "government",
+      "healthcare"
+    ],
+    "tags": [
+      "cms",
+      "navigation",
+      "disclosure",
+      "tabs"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "cms-design-system",
+    "sourceUrl": "https://design.cms.gov/components/tabs/",
+    "metrics": {
+      "screen": "tabs"
     }
   },
   {
@@ -26740,6 +26933,34 @@
     "sourceUrl": "https://github.com/Leonxlnx/taste-skill",
     "metrics": {
       "screen": "home"
+    }
+  },
+  {
+    "id": "app-pattern/cms-zip-codes",
+    "kind": "app-pattern",
+    "name": "ZIP codes",
+    "summary": "There are approximately 41k ZIP codes in the United States. We use ZIP codes in various ways; to determine eligibility, as a way to search for services, or as part of an address.",
+    "domains": [
+      "government-public",
+      "healthcare-wellness",
+      "ecommerce-dtc"
+    ],
+    "sectors": [
+      "government",
+      "healthcare"
+    ],
+    "tags": [
+      "cms",
+      "form",
+      "address",
+      "zip-codes"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "cms-design-system",
+    "sourceUrl": "https://design.cms.gov/patterns/zip-codes/",
+    "metrics": {
+      "screen": "zip-codes"
     }
   },
   {

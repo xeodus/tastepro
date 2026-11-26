@@ -13,6 +13,7 @@ The complete upstream license texts are committed at:
 - `content/sources/licenses/playwright-cli.txt`
 - `content/sources/licenses/govuk-design-system.txt`
 - `content/sources/licenses/uswds.txt`
+- `content/sources/licenses/cms-design-system.txt`
 
 The machine-readable pins are in `sources.lock.json` and
 `content/sources.lock.json`. Every generated pack also carries a `provenance`
@@ -29,6 +30,7 @@ transformations applied.
 | [Microsoft Playwright CLI](https://github.com/microsoft/playwright-cli)                    | Microsoft   | Apache-2.0 | `b1a5903c5b633b8c9f843ad7b629c2a78437040c` |
 | [GOV.UK Design System](https://github.com/alphagov/govuk-design-system)                    | GDS         | OGL-3.0    | `0c6de5736a4e755a3808fb31d3a7723a33b7c705` |
 | [USWDS](https://github.com/uswds/uswds-site)                                               | GSA         | CC0-1.0    | `af13d80f071c3d897bee422f51954d9d7d156474` |
+| [CMS Design System](https://github.com/CMSgov/design-system)                               | CMS         | CC0-1.0    | `269a1abeb3159824800e134064db8a7b35821ccd` |
 
 ## Taste Skill
 
@@ -149,6 +151,27 @@ establish trust.
 **Not included:** agency logos, third-party fonts and icons, screenshots, or
 example markup.
 
+## CMS Design System
+
+**Used for:** eight Medicare/Medicaid component and pattern pages — alert,
+table, accordion, pagination, tabs, multi-input date field, ZIP codes, and
+phone numbers.
+
+**Paths:** `packages/docs/content/components/**/*.mdx` and
+`packages/docs/content/patterns/*.mdx` in the pinned repository.
+
+**License:** CC0 1.0 Universal for the project, with third-party fonts and
+icons under their own licenses.
+
+**TastePro transformations:**
+
+- Kept the guidance section and removed MDX imports, examples, and JSX wrappers.
+- Converted the remaining guidance into `app-pattern` packs.
+- Mapped each pattern to the TastePro domain taxonomy and form kinds.
+- Added provenance, source URLs, and quality metadata.
+
+**Not included:** fonts, icons, agency logos, screenshots, or example markup.
+
 ## Original TastePro content
 
 The following are original to TastePro and licensed under Apache-2.0:
@@ -211,8 +234,10 @@ https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/.
 
 ## CC0 1.0
 
-USWDS is released under CC0 1.0 Universal (public domain). The full text is
-committed at `content/sources/licenses/uswds.txt`.
+USWDS and the CMS Design System are released under CC0 1.0 Universal (public
+domain). The full texts are committed at
+`content/sources/licenses/uswds.txt` and
+`content/sources/licenses/cms-design-system.txt`.
 
 ## Reporting an attribution problem
 

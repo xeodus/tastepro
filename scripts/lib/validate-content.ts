@@ -15,7 +15,7 @@ import { computeContentHash } from "./content-hash.js";
 import type { SourceLock } from "./source-lock.js";
 
 const EXPECTED_COUNTS: Record<ContentKind, number> = {
-  "app-pattern": 41,
+  "app-pattern": 49,
   "app-shell": 5,
   "app-style": 7,
   brand: 84,
@@ -38,6 +38,7 @@ const EXPECTED_SOURCES = [
   "playwright-cli",
   "govuk-design-system",
   "uswds",
+  "cms-design-system",
 ] as const;
 
 const errors: string[] = [];

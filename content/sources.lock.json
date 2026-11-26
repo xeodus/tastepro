@@ -113,6 +113,27 @@
         "keep-a-record": "pages/patterns/complex-form/keep-a-record.md",
         "establish-trust": "pages/patterns/complex-form/establish-trust.md"
       }
+    },
+    {
+      "id": "cms-design-system",
+      "name": "CMS Design System",
+      "repo": "https://github.com/CMSgov/design-system",
+      "commit": "269a1abeb3159824800e134064db8a7b35821ccd",
+      "license": "CC0-1.0",
+      "licenseUrl": "https://raw.githubusercontent.com/CMSgov/design-system/269a1abeb3159824800e134064db8a7b35821ccd/LICENSE.md",
+      "authors": ["Centers for Medicare & Medicaid Services"],
+      "url": "https://design.cms.gov/",
+      "notes": "Medicare/Medicaid component and pattern guidance. CC0 with third-party font/icon exceptions; only text guidance is ingested.",
+      "paths": {
+        "alert": "packages/docs/content/components/alert.mdx",
+        "table": "packages/docs/content/components/table.mdx",
+        "accordion": "packages/docs/content/components/accordion.mdx",
+        "pagination": "packages/docs/content/components/pagination.mdx",
+        "tabs": "packages/docs/content/components/tabs.mdx",
+        "multi-input-date-field": "packages/docs/content/components/date-field/multi-input-date-field.mdx",
+        "zip-codes": "packages/docs/content/patterns/zip-codes.mdx",
+        "phone-numbers": "packages/docs/content/patterns/phone-numbers.mdx"
+      }
     }
   ]
 }
