@@ -27,6 +27,7 @@ import { commitSnapshot, discardStaging, prepareStaging } from "./lib/snapshot.j
 import { type LockSource, loadSourceLock, sourceCacheKey } from "./lib/source-lock.js";
 import { cmsAdapter } from "./lib/sources/cms.js";
 import { govukAdapter } from "./lib/sources/govuk.js";
+import { nhsAdapter } from "./lib/sources/nhs.js";
 import type { SourceContext } from "./lib/sources/types.js";
 import { uswdsAdapter } from "./lib/sources/uswds.js";
 import { parseReference, parseTasteLibrary } from "./lib/taste.js";
@@ -667,6 +668,7 @@ async function main(): Promise<void> {
     "govuk-design-system",
     "uswds",
     "cms-design-system",
+    "nhs-uk",
   ];
   for (const id of required) {
     if (!byId.has(id)) throw new Error(`sources.lock.json is missing ${id}`);
@@ -719,6 +721,18 @@ async function main(): Promise<void> {
       writeLicense: () => fetchLicense(cmsSource, options, staging),
     };
     const cms = await cmsAdapter.fetch(cmsContext);
+    const nhsSource = byId.get("nhs-uk")!;
+    const nhsContext: SourceContext = {
+      source: nhsSource,
+      fetchText: (path) =>
+        fetchCached(lockUrl(nhsSource, path), sourceCacheKey(nhsSource, path), options),
+      fetchJson: (path) =>
+        fetchJsonCached(lockUrl(nhsSource, path), sourceCacheKey(nhsSource, path), options),
+      provenance: (path, transformations) => provenanceFor(nhsSource, path, transformations),
+      sourceUrl: (path = "") => sourceUrl(nhsSource, path),
+      writeLicense: () => fetchLicense(nhsSource, options, staging),
+    };
+    const nhs = await nhsAdapter.fetch(nhsContext);
     const domains = await buildDomains(options.contentDir);
 
     const warnings = [
@@ -727,6 +741,7 @@ async function main(): Promise<void> {
       ...govuk.warnings,
       ...uswds.warnings,
       ...cms.warnings,
+      ...nhs.warnings,
     ];
     const allPacks: Pack[] = sortPacks([
       ...taste.packs,
@@ -735,6 +750,7 @@ async function main(): Promise<void> {
       ...govuk.packs,
       ...uswds.packs,
       ...cms.packs,
+      ...nhs.packs,
       ...domains.packs,
     ]);
     const references: ReferencePack[] = sortPacks([
@@ -819,6 +835,7 @@ async function main(): Promise<void> {
       govuk.sourceInfo,
       uswds.sourceInfo,
       cms.sourceInfo,
+      nhs.sourceInfo,
     ];
     const counts = countBy(allContent, (pack) => pack.kind);
     const quality = countBy(allContent, (pack) => pack.quality);

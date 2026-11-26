@@ -134,6 +134,27 @@
         "zip-codes": "packages/docs/content/patterns/zip-codes.mdx",
         "phone-numbers": "packages/docs/content/patterns/phone-numbers.mdx"
       }
+    },
+    {
+      "id": "nhs-uk",
+      "name": "NHS.UK Design System",
+      "repo": "https://github.com/nhsuk/nhsuk-service-manual",
+      "commit": "4a37578c4d8fa2c5bbf11b1039d806bebce59234",
+      "license": "OGL-3.0",
+      "licenseUrl": "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
+      "authors": ["NHS England"],
+      "url": "https://service-manual.nhs.uk/design-system",
+      "notes": "Healthcare service patterns. Repository code is MIT; the published guidance is OGL-3.0. NHS marks, Frutiger, images, and design examples are excluded.",
+      "paths": {
+        "ask-for-nhs-numbers": "app/views/design-system/patterns/ask-for-nhs-numbers/index.njk",
+        "check-answers": "app/views/design-system/patterns/check-answers/index.njk",
+        "confirmation-page": "app/views/design-system/patterns/confirmation-page/index.njk",
+        "question-pages": "app/views/design-system/patterns/question-pages/index.njk",
+        "start-page": "app/views/design-system/patterns/start-page/index.njk",
+        "complete-multiple-tasks": "app/views/design-system/patterns/complete-multiple-tasks/index.njk",
+        "help-users-decide-when-and-where-to-get-care": "app/views/design-system/patterns/help-users-decide-when-and-where-to-get-care/index.njk",
+        "interruption-page": "app/views/design-system/patterns/interruption-page/index.njk"
+      }
     }
   ]
 }

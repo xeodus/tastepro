@@ -28,10 +28,10 @@ async function fileExists(path: string): Promise<boolean> {
 describe("committed content", () => {
   it("matches the catalog snapshot", async () => {
     const [catalog, stats] = await Promise.all([loader.catalog(), loader.stats()]);
-    expect(catalog).toHaveLength(897);
-    expect(stats.catalogEntries).toBe(897);
+    expect(catalog).toHaveLength(905);
+    expect(stats.catalogEntries).toBe(905);
     expect(stats.counts).toEqual({
-      "app-pattern": 49,
+      "app-pattern": 57,
       "app-shell": 5,
       "app-style": 7,
       brand: 84,
@@ -47,7 +47,7 @@ describe("committed content", () => {
       type: 44,
     });
     expect(stats.quality).toEqual({
-      verified: 574,
+      verified: 582,
       reference: 313,
       incomplete: 10,
     });
@@ -92,7 +92,7 @@ describe("committed content", () => {
       expect((await stat(path)).size).toBeGreaterThan(0);
     }
     const sources = await loader.sources();
-    expect(sources).toHaveLength(7);
+    expect(sources).toHaveLength(8);
     for (const source of sources) {
       const path = join(contentDir, source.licenseFile);
       expect(await fileExists(path), path).toBe(true);
@@ -228,6 +228,7 @@ describe("committed content", () => {
       "govuk-design-system",
       "uswds",
       "cms-design-system",
+      "nhs-uk",
     ]);
     for (const source of lock.sources) {
       expect(source.commit).toMatch(/^[0-9a-f]{40}$/);
@@ -295,5 +296,25 @@ describe("committed content", () => {
     expect(alert?.provenance.commit).toHaveLength(40);
     expect(alert?.blueprint).toContain("alert");
     expect(alert?.blueprint).not.toContain("<");
+  });
+
+  it("ships the NHS.UK healthcare patterns with provenance", async () => {
+    const packs = JSON.parse(
+      await readFile(join(contentDir, "generated", "kinds", "app-patterns.json"), "utf8"),
+    ) as Array<{
+      id: string;
+      blueprint: string;
+      provenance: { source: string; license: string; commit: string };
+    }>;
+    const nhs = packs.filter((pack) => pack.id.startsWith("app-pattern/nhs-"));
+    expect(nhs).toHaveLength(8);
+
+    const nhsNumber = packs.find((pack) => pack.id === "app-pattern/nhs-ask-for-nhs-numbers");
+    expect(nhsNumber).toBeDefined();
+    expect(nhsNumber?.provenance.source).toBe("nhs-uk");
+    expect(nhsNumber?.provenance.license).toBe("OGL-3.0");
+    expect(nhsNumber?.provenance.commit).toHaveLength(40);
+    expect(nhsNumber?.blueprint).toContain("NHS number");
+    expect(nhsNumber?.blueprint).not.toContain("{%");
   });
 });

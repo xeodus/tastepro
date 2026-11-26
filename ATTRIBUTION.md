@@ -14,6 +14,7 @@ The complete upstream license texts are committed at:
 - `content/sources/licenses/govuk-design-system.txt`
 - `content/sources/licenses/uswds.txt`
 - `content/sources/licenses/cms-design-system.txt`
+- `content/sources/licenses/nhs-uk.txt`
 
 The machine-readable pins are in `sources.lock.json` and
 `content/sources.lock.json`. Every generated pack also carries a `provenance`
@@ -31,6 +32,7 @@ transformations applied.
 | [GOV.UK Design System](https://github.com/alphagov/govuk-design-system)                    | GDS         | OGL-3.0    | `0c6de5736a4e755a3808fb31d3a7723a33b7c705` |
 | [USWDS](https://github.com/uswds/uswds-site)                                               | GSA         | CC0-1.0    | `af13d80f071c3d897bee422f51954d9d7d156474` |
 | [CMS Design System](https://github.com/CMSgov/design-system)                               | CMS         | CC0-1.0    | `269a1abeb3159824800e134064db8a7b35821ccd` |
+| [NHS.UK Design System](https://github.com/nhsuk/nhsuk-service-manual)                      | NHS England | OGL-3.0    | `4a37578c4d8fa2c5bbf11b1039d806bebce59234` |
 
 ## Taste Skill
 
@@ -172,6 +174,27 @@ icons under their own licenses.
 
 **Not included:** fonts, icons, agency logos, screenshots, or example markup.
 
+## NHS.UK Design System
+
+**Used for:** eight healthcare service patterns — NHS numbers, check answers,
+confirmation pages, question pages, start pages, complete multiple tasks,
+help users decide when and where to get care, and interruption pages.
+
+**Paths:** `app/views/design-system/patterns/*/index.njk` in the pinned
+repository.
+
+**License:** repository code is MIT; the published guidance is licensed under
+the Open Government Licence v3.0.
+
+**TastePro transformations:**
+
+- Removed Nunjucks template tags, macros, and design examples.
+- Converted the guidance HTML to `app-pattern` packs.
+- Mapped each pattern to the TastePro domain taxonomy and form kinds.
+- Added provenance, source URLs, and quality metadata.
+
+**Not included:** NHS marks, Frutiger, images, screenshots, or example markup.
+
 ## Original TastePro content
 
 The following are original to TastePro and licensed under Apache-2.0:
@@ -228,8 +251,9 @@ v3.0:
 > Contains public sector information licensed under the Open Government Licence
 > v3.0.
 
-The full licence text is committed at
-`content/sources/licenses/govuk-design-system.txt` and published at
+The full licence texts are committed at
+`content/sources/licenses/govuk-design-system.txt` and
+`content/sources/licenses/nhs-uk.txt`, and published at
 https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/.
 
 ## CC0 1.0

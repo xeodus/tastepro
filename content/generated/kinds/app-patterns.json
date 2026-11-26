@@ -405,6 +405,147 @@
     "phone": ""
   },
   {
+    "id": "app-pattern/nhs-check-answers",
+    "kind": "app-pattern",
+    "name": "Check answers",
+    "summary": "Use this pattern to let users check their answers before sending information to a service.",
+    "domains": [
+      "healthcare-wellness",
+      "government-public",
+      "product-surfaces"
+    ],
+    "sectors": [
+      "healthcare",
+      "government"
+    ],
+    "tags": [
+      "nhs",
+      "form",
+      "review",
+      "check-answers"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "nhs-uk",
+      "repo": "https://github.com/nhsuk/nhsuk-service-manual",
+      "commit": "4a37578c4d8fa2c5bbf11b1039d806bebce59234",
+      "path": "app/views/design-system/patterns/check-answers/index.njk",
+      "license": "OGL-3.0",
+      "authors": [
+        "NHS England"
+      ],
+      "url": "https://service-manual.nhs.uk/design-system",
+      "transformations": [
+        "removed Nunjucks template tags and design examples",
+        "converted the guidance HTML to text"
+      ]
+    },
+    "sourceUrl": "https://service-manual.nhs.uk/design-system/patterns/check-answers",
+    "screen": "check-answers",
+    "kinds": [
+      "form",
+      "review"
+    ],
+    "basis": "a check answers pattern from the NHS.UK service manual",
+    "blueprint": "This pattern uses a summary list component for each group of answers on the page.\n\n## When to use this pattern\n\nShow a single check answers page immediately before the confirmation screen for small to medium-size transactions.\n\nWhen designing a very large transaction with multiple sections, it may help to include a check answers page at the end of each section.\n\nThis can be valuable for services where different users might be completing each section. You should test this approach with your users to find out if it's helpful.\n\n## How this pattern works\n\nCheck answers pages help to:\n\n- increase users' confidence as they can clearly see that they have completed all the sections and that their data has been captured\n\n- reduce error rates as users are given a chance to notice and correct errors before sending data\n\n### Choose the right layout for the page\n\nMany services ask users for short answers, which are suitable for a layout that takes up two-thirds of the screen on desktop devices. For example, the \"Check your answers before sending your application\" page included in this guidance.\n\nUsing a two-thirds layout stops lines of text getting so long that the page becomes difficult to read. To learn more about line length, see \"Layout\". It also means the links are closer to the other content on the page. Users with screen magnifiers are less likely to miss them.\n\nHowever, if your service asks users for longer or more detailed answers, a full width layout may be more suitable.\n\n### Make the page easy to understand\n\nUse the page title to tell the user what they need to do, otherwise they might miss the \"send\" button at the end of the page.\n\nOn the page, you should also:\n\n- make it clear the transaction will not be complete until a user confirms their information is correct\n\n- break the content up into sections when you can\n\n- only show sections that are relevant to users – for example, if they've said they do not have one or more health conditions, do not show them sections for questions they have not answered about health conditions\n\n- rephrase questions if you need to – for example, you do not need to label every individual line of an address, and you can rewrite long questions as shorter statements\n\n- make sure the \"send\" button clearly shows the action it performs – for example, \"Confirm and send\" if data is being sent somewhere, or \"Confirm and save\" if data is being updated, for example, in a staff-facing system\n\n### Let users go back and change their answers\n\nYou should provide a \"Change\" link next to each section on your check answers page so that users can add or change the information. \"Change\" links contain hidden text to make them accessible to screen reader users. Update the hidden text to describe what each \"Change\" link is for.\n\nThe answers pages should look the same way they did when the user last used them, with information they have already entered pre-populated.\n\nWhen they've finished, the \"Continue\" button should return them to the check answers page. They should not need to go through the rest of the transaction again.\n\nIf a user changes their response in a way that means you need to ask them more questions, do this before returning them to the check answers page.\n\nIf you have questions that are optional, let users know that they've skipped them without giving an answer by showing their response as \"Not provided\".",
+    "phone": ""
+  },
+  {
+    "id": "app-pattern/nhs-complete-multiple-tasks",
+    "kind": "app-pattern",
+    "name": "Complete multiple tasks",
+    "summary": "Use this pattern to give users more control over how they complete long, complex services.",
+    "domains": [
+      "healthcare-wellness",
+      "government-public",
+      "nonprofit-civic"
+    ],
+    "sectors": [
+      "healthcare",
+      "government"
+    ],
+    "tags": [
+      "nhs",
+      "navigation",
+      "task-list",
+      "complete-multiple-tasks"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "nhs-uk",
+      "repo": "https://github.com/nhsuk/nhsuk-service-manual",
+      "commit": "4a37578c4d8fa2c5bbf11b1039d806bebce59234",
+      "path": "app/views/design-system/patterns/complete-multiple-tasks/index.njk",
+      "license": "OGL-3.0",
+      "authors": [
+        "NHS England"
+      ],
+      "url": "https://service-manual.nhs.uk/design-system",
+      "transformations": [
+        "removed Nunjucks template tags and design examples",
+        "converted the guidance HTML to text"
+      ]
+    },
+    "sourceUrl": "https://service-manual.nhs.uk/design-system/patterns/complete-multiple-tasks",
+    "screen": "complete-multiple-tasks",
+    "kinds": [
+      "navigation",
+      "task-list"
+    ],
+    "basis": "a complete multiple tasks pattern from the NHS.UK service manual",
+    "blueprint": "Help users understand:\n\n- the tasks involved in completing a transaction\n\n- whether they've completed tasks\n\nThis pattern uses a task list component for each group of tasks on the page.\n\n## When to use this pattern\n\nIf your users have to get through a long or complex service, use the complete multiple tasks page to give them more control. For example, if some users cannot complete the tasks in one sitting.\n\n## When not to use this pattern\n\nTry to simplify the service before you use a complete multiple tasks page. If you're able to reduce the number of tasks or steps involved, you might not need one.\n\nDo not use the complete multiple tasks page as a way of showing users their answers. For this, use a summary list instead.\n\n## How this pattern works\n\nShow a complete multiple tasks page:\n\n- at the start of the transaction\n\n- at the start of each returning session\n\nIf you use a complete multiple tasks page in your service, you'll need to:\n\n- group related actions into tasks\n\n- show the status of the tasks\n\nIf there are lots of tasks to complete, you might also need to group tasks together.\n\n### Show related actions as a task\n\nSummarise a set of related activities and questions into a task, for example, \"Give medical information\". This will help users understand and plan what they need to do.\n\n### Show the status of the tasks\n\nMake it clear to users which tasks they have completed and which still need their attention, by labelling them using statuses.\n\nStart with the smallest number of different statuses you think might work, for example \"Completed\" and \"Incomplete\", then add more if your user research shows there's a need for them. The more you add, the harder it is for users to remember them.\n\nOnce the user has completed the task, show the status as \"Completed\" in black text with no background colour. This will draw more attention to tasks that require action.\n\n#### Tasks that are in progress\n\nYou may find you need additional statuses if your user research shows that users want to be able to distinguish between the tasks they have not started at all, and those they've started but not completed.\n\nIn this instance, instead of \"Incomplete\", you may want to use \"Not yet started\" to show which tasks they are yet to start. Use \"In progress\" for tasks they have started but are yet to complete.\n\n\"Not yet started\" uses a light blue background, and \"In progress\" uses a white background.\n\n#### Tasks that cannot yet be started\n\nIf the user cannot start the task yet, for example because another task must be completed first, use the \"Cannot start yet\" status. Use grey text with no background colour, and do not link the \"task row\".\n\n#### Tasks containing an error\n\nAvoid tasks having an error status by using the error summary and error messages displayed at the point that the error is made, so that the user can fix it straight away.\n\nIf it is unavoidable that a task may end up saved but containing an error, use the status text \"There is a problem\" and a red background.\n\nDo not use the red background colour for any status text except errors.\n\n#### Status text\n\nAlthough we recommend using consistent wording across task lists, you can change it if research shows that different text is more suitable to your service or users.\n\nIf you are creating your own statuses, use adjectives rather than verbs. Use sentence case and keep it short, so that it can be easily read and understood.\n\n#### Additional statuses\n\nIf your user research shows that there is a need for additional status tags, you can use other colours to help distinguish between them.\n\n### Group related tasks together\n\nIf your transaction involves lots of tasks, make it manageable by grouping them.\n\nFor example, you could group all tasks which ask for related information under a heading, such as \"Your details\".\n\nWhere possible, allow users to complete tasks in any order. This will help them plan their time and complete sections as and when they can.\n\n### Marking tasks as completed\n\nSometimes, it's better to let the user decide when a task is completed.\n\nThis can be helpful when a task involves:\n\n- some questions that are optional\n\n- writing a long answer (such as in a textarea)\n\n- looking up information, such as details about previous jobs\n\n- answers that need to be checked carefully with someone else\n\nDo this by asking a radio question at the end of the task. If the task is on:\n\n- a single page, do it as the last question\n\n- on multiple question pages, do it on a check answers page\n\nAsk \"Have you completed this section?\" with the radio options \"Yes, I've completed this section\" or \"No, I'll come back later\".\n\nIf the user selects \"No, I'll come back to it later\", mark the task as \"Incomplete\" or \"In progress\".\n\nIf the user selects \"Yes, I've completed this section\", mark the task as \"Completed\".\n\nAlways allow users to go back into a task to change their answer, make sure information they have already entered is pre-populated.\n\n#### Error messages\n\nIf the user does not select an option, show an error message to say: \"Select whether you've completed this section\".\n\n## Research on this pattern\n\nThis pattern is based on the pattern in the GOV.UK design system.\n\nFind out about the GOV.UK research on the task list component page, including known issues and gaps.",
+    "phone": ""
+  },
+  {
+    "id": "app-pattern/nhs-confirmation-page",
+    "kind": "app-pattern",
+    "name": "Confirmation page",
+    "summary": "Use a confirmation page to show users they have completed a task.",
+    "domains": [
+      "healthcare-wellness",
+      "government-public",
+      "product-surfaces"
+    ],
+    "sectors": [
+      "healthcare",
+      "government"
+    ],
+    "tags": [
+      "nhs",
+      "form",
+      "confirmation",
+      "confirmation-page"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "nhs-uk",
+      "repo": "https://github.com/nhsuk/nhsuk-service-manual",
+      "commit": "4a37578c4d8fa2c5bbf11b1039d806bebce59234",
+      "path": "app/views/design-system/patterns/confirmation-page/index.njk",
+      "license": "OGL-3.0",
+      "authors": [
+        "NHS England"
+      ],
+      "url": "https://service-manual.nhs.uk/design-system",
+      "transformations": [
+        "removed Nunjucks template tags and design examples",
+        "converted the guidance HTML to text"
+      ]
+    },
+    "sourceUrl": "https://service-manual.nhs.uk/design-system/patterns/confirmation-page",
+    "screen": "confirmation-page",
+    "kinds": [
+      "form",
+      "confirmation"
+    ],
+    "basis": "a confirmation page pattern from the NHS.UK service manual",
+    "blueprint": "## When to use a confirmation page\n\nYou should use a confirmation page at the end of a transactional journey.\n\n## How to use a confirmation page\n\nConfirmation pages must include:\n\n- a green confirmation panel, with a heading that confirms what the user has done\n\n- details about what will happen next and when\n\nYou may also find a need to include:\n\n- an application or reference number, if there is one – include this in the description text in the green panel\n\n- instructions about other steps the user needs to take\n\n- a summary of the details they have submitted\n\n- a way to give feedback about the service\n\n- links to more information or related services that may be helpful\n\n### Explain any reference numbers\n\nTell people:\n\n- what the reference number is\n\n- why they need it\n\n- if they should keep it (only show a number if people need to keep it)\n\n## How not to use a confirmation page\n\nAvoid including too many different components on a confirmation page. Research suggests they can overwhelm people.\n\n## Accessibility\n\nIf you add any interactive elements, make sure the panel or focus state are still accessible.\n\n## Research\n\nIn our research, people found the green panel at the top of the confirmation page reassuring. They quickly understood the key message. The left-aligned heading text tested well with people who had visual impairments and used screen readers.\n\nWe also tested the green panel with people who had colour blindness. They were able to read the text clearly. They were also able to recognise the shade of green and understood that this was a confirmation page.\n\nSome people became confused about the next step when presented with several different components on a confirmation page. This was especially the case for people who used screen readers.\n\n### Known gaps\n\nWe need more evidence to understand whether people:\n\n- find it helpful to save the information on confirmation pages\n\n- try to return to confirmation pages after completing their transaction\n\nIn testing, we used a confirmation page at the end of a GP appointment booking journey. Some people said they would take a screenshot of the confirmation page on their phone. GOV.UK found that some users bookmark and return to confirmation pages.\n\nSome people wanted more reassurance that there was nothing more for them to do before their appointment. It may be helpful to say this in the content, when relevant.\n\nWe are also looking for more evidence about the green panel at the top of confirmation pages. Particularly:\n\n- any issues with colour contrast\n\n- suitability for people who use reverse colours or are sensitive to light",
+    "phone": ""
+  },
+  {
     "id": "app-pattern/count-cards-filter",
     "kind": "app-pattern",
     "name": "Count cards that filter",
@@ -614,6 +755,50 @@
     ],
     "basis": "a dates pattern from the GOV.UK Design System",
     "blueprint": "Help users enter or select a date.\n\n## When to use this pattern\n\nFollow this pattern whenever you need users to provide or select a date as part of your&nbsp;service.\n\n## How it works\n\nThe way you should ask users for dates depends on the types of date you’re asking for.\n\nDates you may need users to provide include:\n\n- memorable dates, like a date of birth or marriage\n- dates from documents or cards, like a passport or credit card\n- approximate dates, like ‘December 2017’\n- relative dates, like ‘4 days from today’\n\nIn some cases you might need users to pick a date from a given selection.\n\n### Asking for memorable dates\n\nAsk for memorable dates, like dates of birth, using the Date input component component.\n\n### Asking for dates from documents and cards\n\nWhen asking for a date exactly as it’s shown on a passport, credit card or other document, make the fields match the format of the original. This makes it easier for users to copy the date across accurately.\n\n### Asking for approximate dates\n\nAllow users to enter an approximate date when you are asking them for information they may not know or may struggle to remember. For example, allow users to enter ‘December 2017’ for a field that says ‘the date you lost your passport’.\n\n### Asking for relative dates\n\nYou may need to ask for dates that are relative to today’s date or another date - this is common if a user is setting a reminder.\n\nTo do this let users enter or select relative dates like ‘tomorrow’ or ‘1 day before’. If the day of the week is important, show this as well.\n\n### Helping users to pick a date\n\nUsers might need to pick a date from a selection, for example, to book an appointment.\n\nTo do this, you can present dates in a calendar format using a calendar control. Users are typically shown one month’s worth of dates at a time, and can skip through months and&nbsp;years.\n\nOnly use a calendar control if users need to:\n\n- pick a date in the near future or recent past\n- know the day of the week, or the week of the month, as well as the date\n- be able to see dates in relation to other dates\n\nNever make a calendar control that depends on JavaScript as the only input option.&nbsp;Allow users to enter the date into a text input as well as use the control.\n\n### How to write dates\n\nSee the GOV.UK style for writing dates and date ranges.\n\nIf you give an example date, use 13 or more for the day and 9 or less for the month - for example ‘27 3 2007’. This helps users enter the date in the correct order and shows them they do not need to include leading zeroes.\n\n## Research on this pattern\n\nRead a blog post about asking for a date of birth.\n\nIf you’ve used this pattern, get in touch to share your user research findings.\n\nMore research is needed to determine the extent to which users struggle to enter months as numbers, and whether allowing them to enter months as text is helpful.",
+    "phone": ""
+  },
+  {
+    "id": "app-pattern/nhs-help-users-decide-when-and-where-to-get-care",
+    "kind": "app-pattern",
+    "name": "Decide when and where to get care (care cards)",
+    "summary": "Care cards help users identify and understand the care they need, who to contact and how quickly.",
+    "domains": [
+      "healthcare-wellness"
+    ],
+    "sectors": [
+      "healthcare"
+    ],
+    "tags": [
+      "nhs",
+      "triage",
+      "content",
+      "help-users-decide-when-and-where-to-get-care"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "nhs-uk",
+      "repo": "https://github.com/nhsuk/nhsuk-service-manual",
+      "commit": "4a37578c4d8fa2c5bbf11b1039d806bebce59234",
+      "path": "app/views/design-system/patterns/help-users-decide-when-and-where-to-get-care/index.njk",
+      "license": "OGL-3.0",
+      "authors": [
+        "NHS England"
+      ],
+      "url": "https://service-manual.nhs.uk/design-system",
+      "transformations": [
+        "removed Nunjucks template tags and design examples",
+        "converted the guidance HTML to text"
+      ]
+    },
+    "sourceUrl": "https://service-manual.nhs.uk/design-system/patterns/help-users-decide-when-and-where-to-get-care",
+    "screen": "help-users-decide-when-and-where-to-get-care",
+    "kinds": [
+      "triage",
+      "content"
+    ],
+    "basis": "a decide when and where to get care (care cards) pattern from the NHS.UK service manual",
+    "blueprint": "## When to use this pattern\n\nUse this pattern if you need to tell users to take action to get medical advice or help.\n\n## When not to use this pattern\n\nDo not use this pattern:\n\n- for information which is not about helping users understand the care they need now\n\n- in question pages in a transactional journey\n\n- to warn users about something – use a warning callout instead\n\n- to stop users in a journey, unless it's to tell them to get medical help now – consider using an interruption page instead\n\n- to signpost users to the start of a digital service – use an action link, for example, to find a pharmacy\n\n- to point users to another organisation, like a charity – use inset text or just link from a line of text\n\n- to give users a brief summary of content or a task, often with a link to more detail – use a card\n\n## How it works\n\nWe have 3 care cards for 3 levels of care:\n\n- non-urgent care card (blue)\n\n- urgent care card (red)\n\n- emergency care card (red and dark grey)\n\nYou can use more than 1 care card on a page, for example if people need different kinds of care depending on how severe their symptoms are.\n\nAvoid having too many care cards on the page. We want to give essential information and reassure people, not to scare them. Only include more than 1 of each type if you can show a clear clinical or user need.\n\nIf you have 2 care cards close together, order them according to the likelihood and seriousness of symptoms. For example:\n\n- for headaches, start with a non-urgent care card\n\n- for head injury, start with an emergency care card\n\nBe aware that users often overlook text between components, for example if you have:\n\n- 2 care cards close together\n\n- a care card near another component such as a warning callout\n\n### Non-urgent care card (blue)\n\nUse the non-urgent care card when you want users to contact a health professional such as their GP.\n\nYou can also use it to tell people to get advice from a pharmacist or to go to a clinic, for example for a chlamydia test.\n\n### Urgent care card (red)\n\nUse the urgent care card if you want users to act quickly but it's not an emergency.\n\nYou can, for example, use the urgent care card to tell people to:\n\n- make an urgent GP appointment\n\n- contact 111\n\n- go to a walk-in centre or minor injuries centre\n\nIf appropriate, tell users to ask for an urgent appointment when they ring their GP practice. It can help make sure they see someone quickly.\n\n### Emergency care card (red and dark grey)\n\nIf users need to get emergency help straight away, use the emergency care card. Depending on clinical advice, tell them to call 999 now, go to A&E now or mention both.\n\nYou can add an action link to help users find their nearest A&E. Do not include other links in an emergency care card.\n\nOnly use this card for emergencies.\n\n## Care card content\n\n### Use short clear headings\n\nThe card's heading should be 1 clear call to action. Use the format: \"Call 111 if:\" or \"Speak to a GP if:\" followed by a bulleted list in the body of the card.\n\nPeople with visual disabilities may not recognise care cards by their colour. Use the card's heading to tell them what to do. This will also help people who are stressed or need to act quickly.\n\nTo help care cards stand out from other components, you can put them under a heading. For example, \"When and where to get medical help\".\n\nIf you have any text below a care card, screen reader users may assume that it's part of the care card, unless you give it its own heading.\n\nFollow our guidance on headings, including heading structure.\n\n### Keep the card content brief and specific\n\nTry to keep bullet points short and to limit your list to the most likely symptoms or scenarios, but follow clinical advice. In an urgent care card, you can add a final catch-all bullet point such as \"you or your child have any other symptoms you're worried about\".\n\nAvoid vague or subjective language. Instead of \"a young child\", for example, say \"a child aged 5 years or younger\".\n\n### Put the detail in the body of the card\n\nDo not overload the heading. Use the space in the body of the card, but keep it short.\n\nEven if your care card includes only 1 symptom, use a bullet point under the \"if:\" in the heading. It's clearer than including a stand-alone sentence in the card.\n\nIt's also OK to have 2 colons, 1 in the heading and 1 in the body of the card, as in this example.\n\n### Keep signposting simple\n\nIdeally you should signpost to just 1 service in the heading but you can signpost to 2 (the top 2 services). If you need to, add more services at the end of the body of the care card.\n\n## Accessibility\n\nEach care card includes hidden text to make the level of urgency clear to people who use screen readers. This also helps people who use headings to navigate the page as the text is part of the heading.\n\n<h3><span class=\"visually-hidden\">Non-urgent advice</span> Speak to a GP if:<h3>\n\n## Research\n\nWe tested care cards with 1 call to action, for example \"Speak to a GP if:\". We found that users scanning the page stopped to read the care cards and understood what action to take.\n\nWe tested the cards again in 2026 and updated the guidance about how the pattern works and writing care card content.",
     "phone": ""
   },
   {
@@ -939,6 +1124,53 @@
     "phone": "KPIs become a 2 x 3 grid; the chart is full width; the share tables stack in one column and keep their row bars."
   },
   {
+    "id": "app-pattern/nhs-interruption-page",
+    "kind": "app-pattern",
+    "name": "Interruption page",
+    "summary": "If you need to pause a user's journey with important information, use an interruption page.",
+    "domains": [
+      "healthcare-wellness",
+      "government-public",
+      "product-surfaces"
+    ],
+    "sectors": [
+      "healthcare",
+      "government"
+    ],
+    "tags": [
+      "nhs",
+      "navigation",
+      "interruption",
+      "interruption-page"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "nhs-uk",
+      "repo": "https://github.com/nhsuk/nhsuk-service-manual",
+      "commit": "4a37578c4d8fa2c5bbf11b1039d806bebce59234",
+      "path": "app/views/design-system/patterns/interruption-page/index.njk",
+      "license": "OGL-3.0",
+      "authors": [
+        "NHS England"
+      ],
+      "url": "https://service-manual.nhs.uk/design-system",
+      "transformations": [
+        "removed Nunjucks template tags and design examples",
+        "converted the guidance HTML to text"
+      ]
+    },
+    "sourceUrl": "https://service-manual.nhs.uk/design-system/patterns/interruption-page",
+    "screen": "interruption-page",
+    "kinds": [
+      "navigation",
+      "interruption"
+    ],
+    "basis": "a interruption page pattern from the NHS.UK service manual",
+    "blueprint": "## When to use an interruption page\n\nThe interruption page is visually different from other components and patterns in order to draw a user's attention to something important.\n\nOnly use an interruption page when you need to make sure that the user is not about to make a mistake.\n\nUse interruption pages sparingly. The more often a user sees them, the more likely they are to skip over the content.\n\nTry using a regular page first, and only use the interruption page if you find in research that users are often missing the content. Please feed back any user research you do on this pattern.\n\nFor example use it to:\n\n- ask users to check a likely mistake\n\n- ask users to confirm something which cannot be undone\n\n- warn professionals they are about to do something risky\n\n### Check a likely mistake\n\nIf the user has entered some information which is likely to be a mistake, but is not impossible, you can use an interruption card to ask them to check if what they have entered is correct.\n\nUnlike a validation error in an error summary, they can continue without changing their answer.\n\n### Confirm something which cannot be undone\n\nIf the user is about to do something unusual which cannot be undone and could have serious consequences, such as cancelling a hospital appointment, you can use an interruption page to check with them first.\n\nDo not use this pattern if the outcome is less serious, such as unsubscribing from notifications.\n\nDo not use this pattern to ask a user to check all their answers as part of a regular journey. Use the check answers pattern instead.\n\n### Warn professionals they are about to do something risky\n\nIn a staff-facing service you can use an interruption page to make professionals, for example clinicians, aware that they're doing something unusual and potentially risky, but that they can choose to go ahead based upon their professional judgement.\n\nIf the action should never be taken, you should prevent it from happening.\n\nUse this warning sparingly.\n\n## When not to use an interruption page\n\nDo not use an interruption card to:\n\n- highlight important text on a page of content – consider using inset text instead\n\n- warn users on a page of long-form content – use a warning callout instead\n\n- ask users to agree to terms of use or other legal terms\n\n- display content that the user will see repeatedly\n\n- show users they have completed a task – use a confirmation page instead\n\n## How to use an interruption page\n\nThe interruption page uses the panel component with the addition of a nhsuk-panel--interruption class to make it blue. The button should have a nhsuk-button--reverse class to make it appear white.\n\nKeep the content on the interruption page as brief as possible.\n\n### Back links and cancel buttons\n\nInclude a back link at the top of the page to allow users to go back 1 step. Also allow users to use their browser back button.\n\nIf it's helpful to cancel the journey and jump back multiple steps or to a different part of the service, use an additional link grouped with the primary button. Label the link so that users know what will happen and where it will take them. To do this, add a <div class=\"nhsuk-button-group\"> container to group the button and the link together.\n\nDo not include a cancel link if it takes you back to the same page as the back link.",
+    "phone": ""
+  },
+  {
     "id": "app-pattern/uswds-keep-a-record",
     "kind": "app-pattern",
     "name": "Keep a record",
@@ -1217,6 +1449,53 @@
     ],
     "basis": "a names pattern from the GOV.UK Design System",
     "blueprint": "## When to use this pattern\n\nYou should follow this pattern whenever you need to ask for a user’s name as part of your service.\nOnly ask for people’s names if you need that information to deliver a service.\n\n## How it works\n\nMake it as easy as possible for a user to enter their name.\n\n### Make sure the fields work for most of your users\n\nFields must be long enough to accommodate the names of your users. You should use population data or data about your existing users to do this.\n\nSupport all the characters users may need to enter, including numbers and symbols.\n\n### Single or multiple name fields\n\nUse single or multiple fields depending on your user’s needs. Not everyone’s name fits the first-name, last-name format. Using multiple name fields mean there’s more risk that a person’s name will not fit the format you’ve chosen and that it is entered incorrectly.\n\nA single name field can accommodate the broadest range of name types, but means you cannot reliably extract parts of a name.\n\n### Labelling name fields\n\nLabel single name fields:\n\n- ‘Full name’\n\nFor multiple name fields, use:\n\n- ‘First name’\n- ‘Last name’\n\nIf users are from outside the UK, use the labels:\n\n- ‘Given names’\n- ‘Family name’\n\nMake it clear whether you need someone’s common name, or their name as it's written on official documents such as a passport or driving licence.\n\n#### Middle names\n\nOnly ask for middle names if your service requires them.\n\nUse the label:\n\n- ’Middle names‘\n\nMake sure middle names are optional, as not everyone has them.\n\nThe label should not include `(optional)`. Users will enter their middle names if they have them and skip the field if they do not.\n\n### Use the autocomplete attribute on name fields\n\nUse the `autocomplete` attribute on the text input component when you're asking for a user's name. This lets browsers autofill the information on a user's behalf if they’ve entered it previously.\n\nIf you are asking for a user's full name in a single field, set the `autocomplete` attribute to `name`.\n\nIf you are asking users to enter their name in multiple fields, set the `autocomplete` attribute on both fields using:\n\n- `given-name` for fields labelled 'First name' or 'Given name'\n- `family-name` for fields labelled 'Last name' or 'Family name'\n\nIf you are working in production you’ll need to do this to meet WCAG 2.2 success criterion 1.3.5 Identify input purpose.\n\nYou will not normally need to use the `autocomplete` attribute in prototypes, as users will not generally be using their own devices.\n\n### Do not spellcheck user's names\n\nSometimes, browsers will spellcheck the information a user enters into a text input. To make sure user's names will not be spellchecked, set the `spellcheck` attribute to `false` as shown in this example.\n\n### Avoid asking for a person’s title\n\nAvoid asking users for their title.\n\nIt’s extra work for them and you’re asking them to potentially reveal their gender and marital status, which they may not want to do.\n\nIt’s also hard to predict the range of titles your users will have. If you have to ask for someone’s title, use an optional Text input component not a Select component.\n\nRemember to correctly use people’s names in any resulting correspondence.\n\n### Allow users to change their name\n\nIf your service stores personal information, you should allow users to update their details, including their name.\n\nAllowing users to change their name helps your service respect their personal identity. It also means they can continue using your service without having to start over.\n\nPeople change their name for many reasons. For example, because of a change in marital status, family situation or gender.\n\nAvoid making it hard for users to change their name. As well as causing them distress, it may make them reluctant to use your service.\n\n### Error messages\n\nError messages should be styled like this:\n\nMake sure errors follow the guidance in the Error message component and have specific error messages for specific error states.\n\n## Research on this pattern\n\nIf you’ve used this pattern, get in touch to share your user research findings.\n\nYou can also read these articles to learn more about asking for users’ names:\n\n- Personal names around the world (W3C)\n- Avoid splitting single input entities (Baymard)\n- Falsehoods about names (Kalzumeus)",
+    "phone": ""
+  },
+  {
+    "id": "app-pattern/nhs-ask-for-nhs-numbers",
+    "kind": "app-pattern",
+    "name": "NHS numbers",
+    "summary": "Use this pattern to ask people for their NHS number and help them find it.",
+    "domains": [
+      "healthcare-wellness",
+      "government-public",
+      "product-surfaces"
+    ],
+    "sectors": [
+      "healthcare",
+      "government"
+    ],
+    "tags": [
+      "nhs",
+      "form",
+      "identity",
+      "ask-for-nhs-numbers"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "nhs-uk",
+      "repo": "https://github.com/nhsuk/nhsuk-service-manual",
+      "commit": "4a37578c4d8fa2c5bbf11b1039d806bebce59234",
+      "path": "app/views/design-system/patterns/ask-for-nhs-numbers/index.njk",
+      "license": "OGL-3.0",
+      "authors": [
+        "NHS England"
+      ],
+      "url": "https://service-manual.nhs.uk/design-system",
+      "transformations": [
+        "removed Nunjucks template tags and design examples",
+        "converted the guidance HTML to text"
+      ]
+    },
+    "sourceUrl": "https://service-manual.nhs.uk/design-system/patterns/ask-for-nhs-numbers",
+    "screen": "ask-for-nhs-numbers",
+    "kinds": [
+      "form",
+      "identity"
+    ],
+    "basis": "a nhs numbers pattern from the NHS.UK service manual",
+    "blueprint": "## When to use the NHS number pattern\n\nFollow this pattern when you need to ask for an NHS number.\n\nWeigh up user and business needs and clinical risk in deciding whether to ask users for their NHS number. Asking users for their NHS number is the best way to identify a patient and minimise the risks of matching the wrong person but:\n\n- users do not need to know their NHS number to get care\n\n- some users do not know their number and cannot find it easily\n\nUse this pattern if users are more likely to succeed in their journey by giving you their NHS number. Provide another route for users who cannot.\n\nTo minimise the risks of a wrong match, do not rely on an NHS number on its own.\n\n## When not to use the NHS number pattern\n\nWeigh up user and business needs and clinical risk. If users are more likely to succeed by providing other details instead of their NHS number, it may be better not to use this pattern.\n\nDo not use this pattern if you need to digitally authenticate members of the public logging into a product or service. Use NHS login instead.\n\n## How to use the NHS number pattern\n\nThere are 3 ways of asking users for their NHS number:\n\n- single text input\n\n- filter question before input\n\n- filter question before input with a 3rd option\n\n### Single text input\n\nUse a single text input if the only way users can get the service is by entering their NHS number.\n\nHowever, avoid building a service that relies on users entering their NHS number. If possible, give users another way to continue with their journey, and use a filter question instead.\n\nIf you have no other option and must use a single text input:\n\n- label it \"What is your NHS number?\" or \"Enter your NHS number\"\n\n- help users recognise their NHS number and know the correct details to enter, for example with hint text\n\n- tell users where they can find their NHS number before they start the service, as well as during the journey\n\n### Filter question before single text input\n\nUse a filter question before a single text input if there is another way for users to continue without an NHS number.\n\nUse a 2-option radio button that asks the user if they know their NHS number.\n\nIf users know their NHS number, direct them to a page that asks for it.\n\nIf users do not know their NHS number, direct them to a page that asks for the alternative details your service needs, for example postcode and date of birth. It may help to set expectations on the filter question page by telling users what details you will ask them for so they can complete their journey.\n\n### Filter question before input with 3rd option\n\nSome users may benefit from a 3rd option: \"I'm not sure\".\n\nOnly use this if:\n\n- you can demonstrate a clear user need and business value\n\n- your service can offer an alternative journey for \"not sure\" users\n\nDo not use a 3rd option to signpost to general information about NHS numbers.\n\n### How to build the NHS number pattern\n\nWhen asking for an NHS number:\n\n- use a text input that allows for spaces and other characters between numbers, as users will enter it in different ways (for example with dashes)\n\n- allow at least 12 characters in your NHS number input\n\n- check that the NHS number is valid by using a modulus 11 algorithm (explained on the NHS number page in the NHS Data Model and Dictionary)\n\n- keep the NHS number on 1 line – if you use the NHS frontend library or prototype kit, use this HTML code to stop the number from breaking up over 2 lines: <span class=\"nhsuk-u-nowrap\">999 123 4567</span>\n\n- add the inputmode=\"numeric\" attribute to your input so people can use a numeric keyboard on mobile browsers\n\n- add <meta name=\"format-detection\" content=\"telephone=no\"> to your page to turn off automatic detection of possible phone numbers (including the NHS number) in Safari\n\n### Help users find and recognise their NHS number\n\nExplain where users can find their NHS number and what it looks like. Use hint text on the filter question page and the single text input page.\n\nUsers are more successful the earlier you mention that you will ask for their NHS number and where to find it. For example, explain on your service start page that having their NHS number is useful, but they do not need it.\n\nYou do not need your NHS number but entering it will give us the best chance of matching you to your NHS record. You can find your NHS number on an NHS letter, prescription or in the NHS App.\n\n### Use the correct NHS number format\n\nWrite the NHS number as 3 groups of numbers, with a single space between them, like this: 999 123 4567.\n\nWe include an example NHS number in this pattern. 999 123 4567 is the preferred example number. If you include an example number, you must use a number that starts with 9 as these numbers are used for testing, not for real patients. Use the same number for all examples.\n\nIf you are displaying an NHS number a user has entered, show it in this format, not the way the user entered it.\n\nRead more about how to format the NHS number in the A to Z of NHS health writing.\n\n### Write clear error messages\n\nMake sure you use clear error messages and error summaries when you ask users for their NHS number.\n\nYou should tell users if:\n\n- they have included letters\n\n- they have entered a number that is too short or too long (not including spaces)\n\nYou should check:\n\n- if the user has entered a National Insurance number and tell them if they have\n\n- if their NHS number is valid against a modulus 11 algorithm\n\n## Matching patient data\n\nIf you're building products and services that need to access or manage patient demographic data, you must use the Personal Demographic Service (PDS). Read more about PDS.\n\n## Research\n\nOur research showed that many people know their NHS number, can find it quickly and would rather enter it than other details. But some users:\n\n- do not know what their NHS number looks like\n\n- cannot easily find it\n\n- try to enter their National Insurance number or a Scottish CHI (Community Health Index) number",
     "phone": ""
   },
   {
@@ -1585,6 +1864,51 @@
     "phone": "The four nodes become a 2x2 grid in the same order (Sun, House / Battery, Grid) with the flow sentence under it (\"Sun 2.4 kW: house 0.7, battery 1.7\"), no connectors."
   },
   {
+    "id": "app-pattern/nhs-question-pages",
+    "kind": "app-pattern",
+    "name": "Question pages",
+    "summary": "This pattern explains when to use question pages and the elements they can include.",
+    "domains": [
+      "healthcare-wellness",
+      "government-public",
+      "product-surfaces"
+    ],
+    "sectors": [
+      "healthcare",
+      "government"
+    ],
+    "tags": [
+      "nhs",
+      "form",
+      "question-pages"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "nhs-uk",
+      "repo": "https://github.com/nhsuk/nhsuk-service-manual",
+      "commit": "4a37578c4d8fa2c5bbf11b1039d806bebce59234",
+      "path": "app/views/design-system/patterns/question-pages/index.njk",
+      "license": "OGL-3.0",
+      "authors": [
+        "NHS England"
+      ],
+      "url": "https://service-manual.nhs.uk/design-system",
+      "transformations": [
+        "removed Nunjucks template tags and design examples",
+        "converted the guidance HTML to text"
+      ]
+    },
+    "sourceUrl": "https://service-manual.nhs.uk/design-system/patterns/question-pages",
+    "screen": "question-pages",
+    "kinds": [
+      "form"
+    ],
+    "basis": "a question pages pattern from the NHS.UK service manual",
+    "blueprint": "## When to use a question page\n\nFollow this pattern whenever you need to ask users questions in your service.\n\nMake sure you know why you're asking every question and only ask users for information you really need.\n\nOn every question page you should:\n\n- make sure it's clear to users why you're asking each question\n\n- allow users to answer \"I do not know\" or \"I'm not sure\" if they are valid responses\n\nRead more about:\n\n- making sure you need each question (in our guidance on How to write good questions for forms), which also covers essential and optional questions\n\n- designing good questions (GOV.UK service manual)\n\n- the question protocol (by Caroline Jarrett on Effortmark website)\n\n## How to use a question page\n\n### Start by asking 1 question per page\n\nAsking just 1 question per page helps users:\n\n- understand what you're asking them to do\n\n- focus on the specific question and its answer\n\nSometimes it makes sense to group related questions on the same page. User research will tell you when to do this. See the section on asking multiple questions on a page.\n\n### Elements you must include\n\nQuestion pages must include a:\n\n- back link\n\n- page heading\n\n- way for users to input information\n\n- continue button\n\n#### Back link\n\nSome users do not trust browser back buttons when they're entering data.\n\nAlways include a back link component at the top of question pages to reassure users it's possible to go back and change previous answers.\n\nHowever, do not break the browser back button. Make sure it takes users to the previous page they were on, in the state they last saw it.\n\nAn exception to this is when the user has performed an action they should only do once, like make a payment or complete an application. The browser back button should still work, but show the user a sensible message rather than letting them perform the action again.\n\n#### Page heading\n\nUsually the page heading should be the question. Do this by placing the heading (<h1>) into the label or legend. Find out about using legends, labels and captions.\n\nSometimes the page heading will be a statement. Find out more about when to use statements in the sections on:\n\n- asking complex questions without using hint text\n\n- asking multiple questions on a page\n\n#### Input\n\nFor example, a text input box, radios or checkboxes.\n\nMake sure to only ask for a piece of information once within a single journey.\n\nIf the same type of information is needed more than once, make it easier to reuse previously entered answers by:\n\n- pre-populating the relevant fields\n\n- showing carried-forward responses as an option for the user to select\n\n#### Continue button\n\nMake sure your Continue button is:\n\n- labelled \"Continue\", not \"Next\"\n\n- aligned to the left so users do not miss it\n\n### Using legends, labels and captions\n\nFor single question pages, using a <legend> or <label> as the page heading is good practice as it means that screen reader users will only hear the contents once. (Use a legend for a group or set of elements as a whole and a label for a specific element, like a text input.)\n\nRead more about why and how to make labels and legends headings (on GOV.UK) or see the examples below.\n\nLearn how to set label and legend sizes on the typography page.\n\nHere's an example of a question page with a legend as the page heading.\n\nThis is an example of a question page with a label as the page heading.\n\nDo not use the same page heading across multiple pages. The page heading should relate specifically to the information being asked for on the current page, not any higher-level section the page is part of.\n\nIf you need to show the high-level section, you can use an nhsuk-caption style. See headings with captions (on the Typography page).\n\nIn this example, the heading has the caption \"About you\" above it.\n\n### Helping users answer questions\n\n#### Using hint text\n\nUse hint text to show information that helps the majority of users answer the question, like how their information will be used or where to find it.\n\n#### Asking complex questions without using hint text\n\nIf you're asking a question that needs a detailed explanation, use:\n\n- an <h1> heading that's a statement (for example, \"If we need to contact you\") rather than a question\n\n- whatever mix of text, paragraphs, lists and examples best explains your question to users\n\n- a label, above the form input, that asks users a specific question, for example, \"Do you have any communication needs?\"\n\n### Asking multiple questions on a page\n\nSometimes it makes sense to group related questions on the same page. For example, if you're designing an internal service for staff who need to repeat and switch between tasks quickly.\n\nIf you need to ask for multiple related things on a page, use a statement as the heading.\n\nYou can style each <legend> or <label> to make the questions easier to scan. Read more about why and how to style labels and legends headings (on GOV.UK).\n\n### Using progress indicators\n\nStart by testing your form without a progress indicator to see if it's simple enough that users do not need one.\n\nTry improving the order, type or number of questions before adding a progress indicator. If people still have difficulty, try adding a simple step or question indicator like this one.\n\nOnly include the total number of questions if you can do so reliably. As the user moves through the form, make sure the indicator updates to tell them which question they are on and the total number remaining.\n\nDo not use progress indicators, like this one, that show all the questions at once.\n\nThese can be problematic because they:\n\n- are often not noticed\n\n- take up lots of space\n\n- do not scale well on small screens\n\n- can distract and confuse some users\n\n- make it hard to write good labels for the steps\n\n- make it hard to handle conditional sections\n\n### Using range sliders\n\nAvoid using range slider questions, where the user needs to click and drag a selector across a range of answers or values. These types of controls are difficult for some users to interact with.\n\nIf you do use a range slider, you must provide a method for selecting an answer that does not rely on click and drag movements. This relates to WCAG 2.2 success criterion 2.5.7 Dragging movements (W3C).",
+    "phone": ""
+  },
+  {
     "id": "app-pattern/govuk-validation",
     "kind": "app-pattern",
     "name": "Recover from validation errors",
@@ -1936,6 +2260,53 @@
     ],
     "basis": "a social security number pattern from USWDS",
     "blueprint": "## About this pattern\n\n### What problem does this solve?\n\nA Social Security Number is often a critical piece for validating identity when applying for government services or benefits, but can be confusing for users to enter correctly.\n\n### When to use this pattern\n\nOnly use this pattern when you need to confirm a user's identity by asking for their Social Security Number. This information may be important when determining eligibility for many federal programs, such as federal student loans, public assistance, and Medicare.\n\n### When to consider something else\n\nIf you do not specifically need a person’s Social Security Number, do not ask for or collect this information. The Social Security Number is intricately linked to a person’s identity, and should only be used when absolutely required for identification purposes.\n\nWhile most U.S. citizens and eligible U.S. residents have a Social Security Number, some people may not know their Social Security Number, or may lack the necessary documentation to obtain one easily.\n\n### What's the solution?\n\nProvide a single text field to enter the Social Security Number.\n\n## Guidance\n\n### What to do\n\n- Do allow users to enter a Social Security Number with as much fault tolerance as possible. Hyphens and blank spaces in the Social Security Number field should be accommodated if at all possible, since users may be accustomed to entering separators to the numeric groups that make up a Social Security Number.\n\n- Do use a \"text\" vs \"numeric\" input type.\n\n- Do consider using input masking to guide correct entry of the Social Security Number.\n\n- Do use both client-side and server-side validation if possible to enforce format consistency and flag invalid Social Security Numbers.\n\n### What not to do\n\n- Do not separate the Social Security Number entry into three separate fields.\n\n- Do not use placeholder text.",
+    "phone": ""
+  },
+  {
+    "id": "app-pattern/nhs-start-page",
+    "kind": "app-pattern",
+    "name": "Start page",
+    "summary": "Use this pattern to help users start a service.",
+    "domains": [
+      "healthcare-wellness",
+      "government-public",
+      "nonprofit-civic"
+    ],
+    "sectors": [
+      "healthcare",
+      "government"
+    ],
+    "tags": [
+      "nhs",
+      "navigation",
+      "entry",
+      "start-page"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "nhs-uk",
+      "repo": "https://github.com/nhsuk/nhsuk-service-manual",
+      "commit": "4a37578c4d8fa2c5bbf11b1039d806bebce59234",
+      "path": "app/views/design-system/patterns/start-page/index.njk",
+      "license": "OGL-3.0",
+      "authors": [
+        "NHS England"
+      ],
+      "url": "https://service-manual.nhs.uk/design-system",
+      "transformations": [
+        "removed Nunjucks template tags and design examples",
+        "converted the guidance HTML to text"
+      ]
+    },
+    "sourceUrl": "https://service-manual.nhs.uk/design-system/patterns/start-page",
+    "screen": "start-page",
+    "kinds": [
+      "navigation",
+      "entry"
+    ],
+    "basis": "a start page pattern from the NHS.UK service manual",
+    "blueprint": "## When to use a start page\n\nAt the start of a service which involves the user inputting information in order to get something. For example, at the start of an application form.\n\nTo get a start page on the NHS website, contact the NHS website information architecture team on the #information-architecture channel on the service manual public Slack workspace.\n\n## How to use a start page\n\nStart pages include 4 main elements. These are:\n\n- the service name: this helps people understand what your service does and whether they need to use it, like Find your NHS number – read more about naming your service on GOV.UK\n\n- a list of things most users need to know: for example, what your service is, what will happen, what users will get or how much it'll cost\n\n- the \"Start now\" call-to-action button\n\n- a list of other ways to access the service: for example, phone or text relay\n\nKeep your start page focused on helping users get started and successfully complete the service.\n\nA good start page:\n\n- lets users know they're in the right place\n\n- sets expectations: users know what to expect before clicking anything, including whether they're eligible and what the outcome will be\n\n- helps users succeed by telling them what information they must give or documents they need to have\n\n- gives users options if the service is not for them, because it's connected to a wider topic\n\n- is easy to find and ranks highly in search engines, because it uses the language of its users\n\nRead more about designing how content and transactions work together, on GOV.UK.\n\n### Put your start page in the right place\n\nConsider where your transaction sits in a wider topic, service or website. Do not disconnect it from its wider context. Place it in a broader information architecture with elements such as the main navigation, internal search and breadcrumbs. This helps users:\n\n- feel confident they're on the right start page\n\n- know if the service is for them and that they're eligible\n\n- avoid dead ends, if they're in the wrong place, and find what they need through surrounding navigation elements\n\nThe Book, change or cancel a COVID-19 vaccination appointment service on the NHS website is in the section about vaccination and booking services.\n\nThe start page links to other information people want to know about COVID-19 vaccines.\n\nIf possible:\n\n- run an open card sort to see how users group and label pages around your start page, including the start page\n\n- run tree tests to check users find the start page in your proposed structure\n\n- follow up with usability testing\n\n### Keep important information above the button\n\nMany users do not look at information below the start button.\n\nIf information applies to everyone and they need it to complete the service, put it above the button.\n\nSometimes it's necessary to put information that only some users need below the button to stop the page getting too long for the majority of users.\n\n### Set a helpful URL\n\nSet up a URL that embeds your start page in the wider service, topic or website. Use a verb that reflects the name of the task or service.\n\nHere is a good example: https://www.nhs.uk/nhs-services/hospitals/book-an-appointment. It's the URL for booking an appointment using the NHS e-Referral service. It shows the start page's relationship to the wider topic and the website it sits in: book an appointment, for hospitals that are part of NHS services.\n\nIf you need to, create a short vanity URL to promote the service in letters or other offline activities which direct people to the service start page. For example, this is the vanity URL for e-Referral service bookings: https://www.nhs.uk/referrals.\n\n### Make it easy to update your start page\n\nSome start pages need to be updated regularly, sometimes at short notice.\n\nIf possible, put your start page in a content management system (CMS) so it's easy for a number of people to amend. It can be difficult to manage if you have it in a separate application and rely on a developer to make changes.\n\n### Check your start page includes the correct links\n\nMany websites (including the NHS website) have policy and contact information links in the footer that relate to the website as a whole. These may not be the right links for your service.\n\nIf your start page sits in a wider website, but your service is on an external domain, make sure users can access service-specific policy and contact information, for example by placing links to them within the start page.\n\n### What not to include on a start page\n\nAvoid telling people all about the service on the start page. Too much information will distract them.\n\nIf you can, check eligibility as part of the service to avoid overloading the start page with criteria.\n\nDo not use an action link on a start page instead of a button.\n\n## Accessibility\n\nIt's particularly important to keep your start page brief for users with access needs. Consider:\n\n- how a screen reader will read out the content\n\n- how much time it takes for the user to get to the main call to action\n\n- how much information they have to process\n\nLots of people miss information below the start button, especially:\n\n- people who zoom in or magnify content on the page\n\n- people with screen readers who navigate the page by headings and interactive elements (such as buttons)\n\n## Research\n\nThis pattern is based on the start page in the GOV.UK Design System, which has been tested over a number of years in a wide range of contexts.\n\n### Start now button\n\nWe follow the GOV.UK start page pattern and word the start button \"Start now\".\n\nThere are good reasons to use context-specific verbs, like \"Book now\", \"Check now\" or \"Start booking\", but we do not have enough research to recommend these yet. Please let us know if you have research to share.\n\n### Average time to complete\n\nSome services have found that telling users how long it takes helps set expectations and increases the number of successful journeys.\n\nBut the time it takes varies a lot, especially for users with access needs. Users who take longer than average may feel pressurised or stupid. If you're researching this, test with a wide range of users, and let us know what you find.\n\n### Known issues and gaps\n\nWe do not yet have enough information about start pages in applications, such as services in the NHS App that appear after a user has signed in.\n\nWe also need to know more about services where the user needs to read content as part of the journey, as well as filling in a form.",
     "phone": ""
   },
   {

@@ -18,7 +18,7 @@ distribution path:
 - `npx -y tastepro` (npm, with provenance) and signed standalone binaries.
 - `tastepro audit <file>` for a local verdict with rule ids, evidence, fixes,
   and `--fail-on error` for CI.
-- 897 committed content packs across 14 kinds.
+- 905 committed content packs across 14 kinds.
 - 40-domain taxonomy with 15 deep seed playbooks and same-family fallback for
   uncovered domains.
 - 104-rule web-interface audit rubric with severity and category filters.
@@ -31,7 +31,7 @@ distribution path:
   transport.
 - `server.json` for the official MCP Registry, covering the npm package and the
   GHCR image.
-- Content ingestion from seven pinned upstream repositories.
+- Content ingestion from eight pinned upstream repositories.
 - Unit, integration, contract, and production-tier tests.
 - Docker and staging scaffolding.
 
@@ -147,9 +147,9 @@ With Bun: `bun add -g tastepro`. From a checkout: `bun link`.
 | `reference`   |    25 | Full reference documents                |
 | `app-style`   |     7 | App visual systems                      |
 | `app-shell`   |     5 | App shell blueprints                    |
-| `app-pattern` |    49 | App screen and form patterns            |
+| `app-pattern` |    57 | App screen and form patterns            |
 
-Quality mix: 574 verified, 313 reference, 10 incomplete. Incomplete packs are
+Quality mix: 582 verified, 313 reference, 10 incomplete. Incomplete packs are
 excluded by default and are never presented as complete.
 
 The content is committed under `content/generated/`, so the server works
