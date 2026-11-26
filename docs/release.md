@@ -5,10 +5,14 @@
 1. Create the GitHub repository and push `main`.
 2. Enable branch protection for `main`, Dependabot alerts, CodeQL, and secret
    scanning.
-3. **First publish only.** Create a granular npm token with publish rights and
-   store it as the `NPM_TOKEN` secret. Set the repository variable
-   `NPM_PUBLISH=true`. Trusted publishing cannot be configured before the
-   package exists: `npm trust` explicitly requires it.
+3. **First publish only.** Create a granular access token on npmjs.com:
+   **Bypass 2FA enabled**, **All Packages**, **Read and write (publish and
+   stage)**, **1-day expiry**. Store it as the `NPM_TOKEN` secret and set
+   `NPM_PUBLISH=true`.
+   npm's banner about bypass-2FA restrictions is expected: account changes are
+   already blocked, but direct publishing still works until **January 2027**.
+   This token is a one-time bridge; revoke it after the release. Trusted
+   publishing replaces it for 1.2.0+.
 4. After the first release is live, configure the trusted publisher:
 
    ```bash
