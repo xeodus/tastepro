@@ -30,6 +30,7 @@ import { cmsAdapter } from "./lib/sources/cms.js";
 import { ethereumAdapter } from "./lib/sources/ethereum.js";
 import { govukAdapter } from "./lib/sources/govuk.js";
 import { nhsAdapter } from "./lib/sources/nhs.js";
+import { patternFlyAdapter } from "./lib/sources/patternfly.js";
 import { pieAdapter } from "./lib/sources/pie.js";
 import { sapAdapter } from "./lib/sources/sap.js";
 import { spectrumAdapter } from "./lib/sources/spectrum.js";
@@ -679,6 +680,7 @@ async function main(): Promise<void> {
     "ethereum-org",
     "pie",
     "sap",
+    "patternfly",
   ];
   for (const id of required) {
     if (!byId.has(id)) throw new Error(`sources.lock.json is missing ${id}`);
@@ -811,6 +813,26 @@ async function main(): Promise<void> {
       writeLicense: () => fetchLicense(sapSource, options, staging),
     };
     const sap = await sapAdapter.fetch(sapContext);
+    const patternflySource = byId.get("patternfly")!;
+    const patternflyContext: SourceContext = {
+      source: patternflySource,
+      fetchText: (path) =>
+        fetchCached(
+          lockUrl(patternflySource, path),
+          sourceCacheKey(patternflySource, path),
+          options,
+        ),
+      fetchJson: (path) =>
+        fetchJsonCached(
+          lockUrl(patternflySource, path),
+          sourceCacheKey(patternflySource, path),
+          options,
+        ),
+      provenance: (path, transformations) => provenanceFor(patternflySource, path, transformations),
+      sourceUrl: (path = "") => sourceUrl(patternflySource, path),
+      writeLicense: () => fetchLicense(patternflySource, options, staging),
+    };
+    const patternfly = await patternFlyAdapter.fetch(patternflyContext);
     const domains = await buildDomains(options.contentDir);
 
     const warnings = [
@@ -825,6 +847,7 @@ async function main(): Promise<void> {
       ...ethereum.warnings,
       ...pie.warnings,
       ...sap.warnings,
+      ...patternfly.warnings,
     ];
     const allPacks: Pack[] = sortPacks([
       ...taste.packs,
@@ -839,6 +862,7 @@ async function main(): Promise<void> {
       ...ethereum.packs,
       ...pie.packs,
       ...sap.packs,
+      ...patternfly.packs,
       ...domains.packs,
     ]);
     const references: ReferencePack[] = sortPacks([
@@ -929,6 +953,7 @@ async function main(): Promise<void> {
       ethereum.sourceInfo,
       pie.sourceInfo,
       sap.sourceInfo,
+      patternfly.sourceInfo,
     ];
     const counts = countBy(allContent, (pack) => pack.kind);
     const quality = countBy(allContent, (pack) => pack.quality);

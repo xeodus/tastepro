@@ -57,6 +57,7 @@ export const SOURCE_IDS = [
   "ethereum-org",
   "pie",
   "sap",
+  "patternfly",
   "tastepro",
 ] as const;
 

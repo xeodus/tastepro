@@ -9,7 +9,7 @@ describe("catalog search", () => {
     const response = await context.search.search({ limit: 6 });
     expect(response.match).toBe("browse");
     expect(response.query).toBe("");
-    expect(response.total).toBe(965);
+    expect(response.total).toBe(975);
     expect(response.results).toHaveLength(6);
     expect(response.results[0]?.kind).toBe("domain");
     expect(response.results[0]?.status).not.toBe("planned");

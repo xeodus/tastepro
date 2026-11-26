@@ -25661,6 +25661,33 @@
     }
   },
   {
+    "id": "app-pattern/patternfly-actions",
+    "kind": "app-pattern",
+    "name": "Actions",
+    "summary": "An **action** is any process that a user can trigger by clicking or selecting a linked component.",
+    "domains": [
+      "b2b-saas",
+      "productivity",
+      "security"
+    ],
+    "sectors": [
+      "enterprise"
+    ],
+    "tags": [
+      "patternfly",
+      "pattern",
+      "actions",
+      "actions"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "patternfly",
+    "sourceUrl": "https://www.patternfly.org/patterns/actions/",
+    "metrics": {
+      "screen": "actions"
+    }
+  },
+  {
     "id": "app-pattern/uswds-address",
     "kind": "app-pattern",
     "name": "Address",
@@ -25907,6 +25934,32 @@
     }
   },
   {
+    "id": "app-pattern/patternfly-brand-voice-and-tone",
+    "kind": "app-pattern",
+    "name": "Brand voice and tone",
+    "summary": "In a business context, brand is the identity of a company that people recognize based on an emotional and psychological connection, as well as factual information.",
+    "domains": [
+      "b2b-saas",
+      "product-surfaces"
+    ],
+    "sectors": [
+      "enterprise"
+    ],
+    "tags": [
+      "patternfly",
+      "content-design",
+      "voice",
+      "brand-voice-and-tone"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "patternfly",
+    "sourceUrl": "https://www.patternfly.org/content-design/brand-voice-and-tone/",
+    "metrics": {
+      "screen": "brand-voice-and-tone"
+    }
+  },
+  {
     "id": "app-pattern/sap-breadcrumb",
     "kind": "app-pattern",
     "name": "Breadcrumb",
@@ -25959,6 +26012,33 @@
     "sourceUrl": "https://github.com/Leonxlnx/taste-skill",
     "metrics": {
       "screen": "builder"
+    }
+  },
+  {
+    "id": "app-pattern/patternfly-bulk-selection",
+    "kind": "app-pattern",
+    "name": "Bulk selection",
+    "summary": "import '../../components/components.css'; **Bulk selection** enables users to select or deselect multiple items in a content view, such as lists, tables, or card views. ## Bulk selector You can add a bulk selection control in the toolbar…",
+    "domains": [
+      "b2b-saas",
+      "data-analytics",
+      "security"
+    ],
+    "sectors": [
+      "enterprise"
+    ],
+    "tags": [
+      "patternfly",
+      "pattern",
+      "selection",
+      "bulk-selection"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "patternfly",
+    "sourceUrl": "https://www.patternfly.org/patterns/bulk-selection/",
+    "metrics": {
+      "screen": "bulk-selection"
     }
   },
   {
@@ -26102,6 +26182,32 @@
     "sourceUrl": "https://sap.github.io/fundamental-styles/",
     "metrics": {
       "screen": "card"
+    }
+  },
+  {
+    "id": "app-pattern/patternfly-card-view",
+    "kind": "app-pattern",
+    "name": "Card view",
+    "summary": "A **card view** is a grid of cards in a gallery to facilitate browsing.",
+    "domains": [
+      "b2b-saas",
+      "data-analytics"
+    ],
+    "sectors": [
+      "enterprise"
+    ],
+    "tags": [
+      "patternfly",
+      "pattern",
+      "cards",
+      "card-view"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "patternfly",
+    "sourceUrl": "https://www.patternfly.org/patterns/card-view/",
+    "metrics": {
+      "screen": "card-view"
     }
   },
   {
@@ -26534,6 +26640,34 @@
     }
   },
   {
+    "id": "app-pattern/patternfly-dashboard",
+    "kind": "app-pattern",
+    "name": "Dashboard",
+    "summary": "A dashboard provides overviews of key metrics or performance indicators relevant to an application, process, or business.",
+    "domains": [
+      "b2b-saas",
+      "data-analytics",
+      "telecom",
+      "security"
+    ],
+    "sectors": [
+      "enterprise"
+    ],
+    "tags": [
+      "patternfly",
+      "pattern",
+      "dashboard",
+      "dashboard"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "patternfly",
+    "sourceUrl": "https://www.patternfly.org/patterns/dashboard/",
+    "metrics": {
+      "screen": "dashboard"
+    }
+  },
+  {
     "id": "app-pattern/carbon-dashboards",
     "kind": "app-pattern",
     "name": "Dashboards",
@@ -26857,6 +26991,32 @@
     }
   },
   {
+    "id": "app-pattern/patternfly-error-messages",
+    "kind": "app-pattern",
+    "name": "Error messages",
+    "summary": "## Error message structure A user typically sees an error message when they attempt to perform an action but cannot continue because something isn’t right.",
+    "domains": [
+      "b2b-saas",
+      "product-surfaces"
+    ],
+    "sectors": [
+      "enterprise"
+    ],
+    "tags": [
+      "patternfly",
+      "content-design",
+      "errors",
+      "error-messages"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "patternfly",
+    "sourceUrl": "https://www.patternfly.org/content-design/writing-guides/error-messages/",
+    "metrics": {
+      "screen": "error-messages"
+    }
+  },
+  {
     "id": "app-pattern/govuk-error-summary",
     "kind": "app-pattern",
     "name": "Error summary",
@@ -26934,6 +27094,33 @@
     "sourceUrl": "https://carbondesignsystem.com/patterns/filtering/",
     "metrics": {
       "screen": "filtering"
+    }
+  },
+  {
+    "id": "app-pattern/patternfly-filters",
+    "kind": "app-pattern",
+    "name": "Filters",
+    "summary": "import \"../../components/components.css\" **Filters** allow users to narrow down content from data in tables, data lists or card views, among many others. ## Filter types Filters can contain 1 attribute or multiple attributes.",
+    "domains": [
+      "b2b-saas",
+      "data-analytics",
+      "ecommerce-dtc"
+    ],
+    "sectors": [
+      "enterprise"
+    ],
+    "tags": [
+      "patternfly",
+      "pattern",
+      "filters",
+      "filters"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "patternfly",
+    "sourceUrl": "https://www.patternfly.org/patterns/filters/",
+    "metrics": {
+      "screen": "filters"
     }
   },
   {
@@ -28194,6 +28381,32 @@
     "sourceUrl": "https://github.com/Leonxlnx/taste-skill"
   },
   {
+    "id": "app-pattern/patternfly-primary-detail",
+    "kind": "app-pattern",
+    "name": "Primary-detail",
+    "summary": "A **primary-detail layout** is an interface that shows a list of items and the corresponding details of the selected item. ## Elements A primary component sits in a container on the page, and detail components typically live in a…",
+    "domains": [
+      "b2b-saas",
+      "data-analytics"
+    ],
+    "sectors": [
+      "enterprise"
+    ],
+    "tags": [
+      "patternfly",
+      "pattern",
+      "navigation",
+      "primary-detail"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "patternfly",
+    "sourceUrl": "https://www.patternfly.org/patterns/primary-detail/",
+    "metrics": {
+      "screen": "primary-detail"
+    }
+  },
+  {
     "id": "app-pattern/nhs-question-pages",
     "kind": "app-pattern",
     "name": "Question pages",
@@ -28573,6 +28786,33 @@
     "sourceUrl": "https://service-manual.nhs.uk/design-system/patterns/start-page",
     "metrics": {
       "screen": "start-page"
+    }
+  },
+  {
+    "id": "app-pattern/patternfly-status-and-severity",
+    "kind": "app-pattern",
+    "name": "Status and severity",
+    "summary": "import { Button, Icon, Content, ContentVariants } from '@patternfly/react-core'; import './status-and-severity.css'; import RhUiSeverityCriticalFillIcon from '@patternfly/react-icons/dist/esm/icons/rh-ui-severity-critical-fill-icon';…",
+    "domains": [
+      "b2b-saas",
+      "security",
+      "data-analytics"
+    ],
+    "sectors": [
+      "enterprise"
+    ],
+    "tags": [
+      "patternfly",
+      "pattern",
+      "status",
+      "status-and-severity"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "patternfly",
+    "sourceUrl": "https://www.patternfly.org/patterns/status-and-severity/",
+    "metrics": {
+      "screen": "status-and-severity"
     }
   },
   {
@@ -29028,6 +29268,32 @@
     "sourceUrl": "https://spectrum.adobe.com/page/tooltip/",
     "metrics": {
       "screen": "tooltip"
+    }
+  },
+  {
+    "id": "app-pattern/patternfly-tooltips",
+    "kind": "app-pattern",
+    "name": "Tooltips",
+    "summary": "import RhUiSettingsIcon from '@patternfly/react-icons/dist/esm/icons/rh-ui-settings-icon'; import RhUiCopyIcon from '@patternfly/react-icons/dist/esm/icons/rh-ui-copy-icon'; import RhUiSearchIcon from…",
+    "domains": [
+      "b2b-saas",
+      "product-surfaces"
+    ],
+    "sectors": [
+      "enterprise"
+    ],
+    "tags": [
+      "patternfly",
+      "content-design",
+      "tooltips",
+      "tooltips"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "patternfly",
+    "sourceUrl": "https://www.patternfly.org/content-design/writing-guides/tooltips/",
+    "metrics": {
+      "screen": "tooltips"
     }
   },
   {

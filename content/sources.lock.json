@@ -239,6 +239,21 @@
       "paths": {
         "components": "docs/component-guidance.json"
       }
+    },
+    {
+      "id": "patternfly",
+      "name": "PatternFly",
+      "repo": "https://github.com/patternfly/patternfly-org",
+      "commit": "7637a02a651895ca568938e71621ecc717224e44",
+      "license": "MIT",
+      "licenseUrl": "https://raw.githubusercontent.com/patternfly/patternfly-org/7637a02a651895ca568938e71621ecc717224e44/LICENSE",
+      "authors": ["Red Hat"],
+      "url": "https://www.patternfly.org/",
+      "notes": "Enterprise dashboard, pattern, and content-design guidance. MIT; images and Red Hat marks are excluded.",
+      "paths": {
+        "patterns": "packages/documentation-site/patternfly-docs/content/patterns/*/*.md",
+        "contentDesign": "packages/documentation-site/patternfly-docs/content/content-design/**/*.md"
+      }
     }
   ]
 }

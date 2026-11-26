@@ -20,6 +20,7 @@ The complete upstream license texts are committed at:
 - `content/sources/licenses/ethereum-org.txt`
 - `content/sources/licenses/pie.txt`
 - `content/sources/licenses/sap.txt`
+- `content/sources/licenses/patternfly.txt`
 
 The machine-readable pins are in `sources.lock.json` and
 `content/sources.lock.json`. Every generated pack also carries a `provenance`
@@ -43,6 +44,7 @@ transformations applied.
 | [ethereum.org](https://github.com/ethereum/ethereum-org-website)                           | Ethereum Foundation   | CC-BY-4.0  | `4302e8c0a8e51d161c124e8c57d8d93da2995da1` |
 | [PIE Design System](https://github.com/justeattakeaway/pie)                                | Just Eat Takeaway.com | Apache-2.0 | `cf7021732ad8ded4c818e95205d15b601d80fe50` |
 | [SAP Fiori](https://github.com/SAP/fundamental-styles)                                     | SAP                   | Apache-2.0 | `0753390b563b4eafe4d90ec812205df1361941ac` |
+| [PatternFly](https://github.com/patternfly/patternfly-org)                                 | Red Hat               | MIT        | `7637a02a651895ca568938e71621ecc717224e44` |
 
 ## Taste Skill
 
@@ -311,6 +313,26 @@ toolbar, wizard, date picker, checkbox, radio, switch, and notification.
 
 **Not included:** SAP marks, images, or implementation code.
 
+## PatternFly
+
+**Used for:** seven enterprise patterns (actions, bulk selection, card view,
+dashboard, filters, primary-detail, status and severity) and three content-design
+guides (error messages, tooltips, voice and tone).
+
+**Paths:** `packages/documentation-site/patternfly-docs/content/patterns/**/*.md`
+and `.../content-design/**/*.md` in the pinned repository.
+
+**License:** MIT.
+
+**TastePro transformations:**
+
+- Removed images and link markup.
+- Converted the remaining Markdown to `app-pattern` packs.
+- Mapped each page to enterprise, analytics, security, and product domains.
+- Added provenance, source URLs, and quality metadata.
+
+**Not included:** Red Hat marks, images, or implementation code.
+
 ## Original TastePro content
 
 The following are original to TastePro and licensed under Apache-2.0:
@@ -326,13 +348,14 @@ Original packs use `provenance.source: "tastepro"` and
 
 ## MIT license text
 
-The three MIT-licensed sources are reproduced under the following copyright
+The four MIT-licensed sources are reproduced under the following copyright
 notices and the standard MIT terms.
 
 ```text
 Copyright (c) 2026 Leonxlnx
 Copyright (c) 2026 VoltAgent
 Copyright (c) 2025 Vercel Labs
+Copyright (c) Red Hat
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
