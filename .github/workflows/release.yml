@@ -319,6 +319,22 @@ jobs:
       - name: Validate server.json
         run: mcp-publisher validate
 
+      # The registry checks the exact npm version. A fresh publish can take a
+      # few seconds to appear, so wait instead of racing it.
+      - name: Wait for npm propagation
+        run: |
+          set -euo pipefail
+          version="$(jq -r .version server.json)"
+          for _ in $(seq 1 30); do
+            if curl -fsS "https://registry.npmjs.org/tastepro/${version}" >/dev/null; then
+              echo "tastepro@${version} is visible on npm"
+              exit 0
+            fi
+            sleep 5
+          done
+          echo "timed out waiting for tastepro@${version} on npm" >&2
+          exit 1
+
       - name: Authenticate with GitHub OIDC
         run: mcp-publisher login github-oidc
 
