@@ -10,10 +10,14 @@ TastePro speaks **stdio** for local clients and **Streamable HTTP** for hosted
 clients. The same server works with ChatGPT, Claude, OpenCode, Cursor, and any
 MCP-compatible agent.
 
-## Status: 1.0
+## Status: 1.1
 
-The current build ships the read-only foundation plus the hosted audit:
+The current build ships the read-only foundation, the hosted audit, and the
+distribution path:
 
+- `npx -y tastepro` (npm, with provenance) and signed standalone binaries.
+- `tastepro audit <file>` for a local verdict with rule ids, evidence, fixes,
+  and `--fail-on error` for CI.
 - 873 committed content packs across 14 kinds.
 - 40-domain taxonomy with 15 deep seed playbooks and same-family fallback for
   uncovered domains.
@@ -25,6 +29,8 @@ The current build ships the read-only foundation plus the hosted audit:
 - OAuth resource-server auth for hosted deployments, plus bearer auth, host
   allowlists, CORS, body limits, session TTL, and health checks for the HTTP
   transport.
+- `server.json` for the official MCP Registry, covering the npm package and the
+  GHCR image.
 - Content ingestion from four pinned upstream repositories.
 - Unit, integration, contract, and production-tier tests.
 - Docker and staging scaffolding.
