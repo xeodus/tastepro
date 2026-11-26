@@ -52,6 +52,7 @@ export const SOURCE_IDS = [
   "uswds",
   "cms-design-system",
   "nhs-uk",
+  "carbon",
   "tastepro",
 ] as const;
 

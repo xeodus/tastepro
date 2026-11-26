@@ -28,10 +28,10 @@ async function fileExists(path: string): Promise<boolean> {
 describe("committed content", () => {
   it("matches the catalog snapshot", async () => {
     const [catalog, stats] = await Promise.all([loader.catalog(), loader.stats()]);
-    expect(catalog).toHaveLength(905);
-    expect(stats.catalogEntries).toBe(905);
+    expect(catalog).toHaveLength(928);
+    expect(stats.catalogEntries).toBe(928);
     expect(stats.counts).toEqual({
-      "app-pattern": 57,
+      "app-pattern": 80,
       "app-shell": 5,
       "app-style": 7,
       brand: 84,
@@ -47,7 +47,7 @@ describe("committed content", () => {
       type: 44,
     });
     expect(stats.quality).toEqual({
-      verified: 582,
+      verified: 605,
       reference: 313,
       incomplete: 10,
     });
@@ -92,7 +92,7 @@ describe("committed content", () => {
       expect((await stat(path)).size).toBeGreaterThan(0);
     }
     const sources = await loader.sources();
-    expect(sources).toHaveLength(8);
+    expect(sources).toHaveLength(9);
     for (const source of sources) {
       const path = join(contentDir, source.licenseFile);
       expect(await fileExists(path), path).toBe(true);
@@ -229,6 +229,7 @@ describe("committed content", () => {
       "uswds",
       "cms-design-system",
       "nhs-uk",
+      "carbon",
     ]);
     for (const source of lock.sources) {
       expect(source.commit).toMatch(/^[0-9a-f]{40}$/);
@@ -316,5 +317,26 @@ describe("committed content", () => {
     expect(nhsNumber?.provenance.commit).toHaveLength(40);
     expect(nhsNumber?.blueprint).toContain("NHS number");
     expect(nhsNumber?.blueprint).not.toContain("{%");
+  });
+
+  it("ships the IBM Carbon enterprise and data-viz patterns", async () => {
+    const packs = JSON.parse(
+      await readFile(join(contentDir, "generated", "kinds", "app-patterns.json"), "utf8"),
+    ) as Array<{
+      id: string;
+      blueprint: string;
+      provenance: { source: string; license: string; commit: string };
+    }>;
+    const carbon = packs.filter((pack) => pack.id.startsWith("app-pattern/carbon-"));
+    expect(carbon).toHaveLength(23);
+
+    const tabs = packs.find((pack) => pack.id === "app-pattern/carbon-tabs");
+    expect(tabs).toBeDefined();
+    expect(tabs?.provenance.source).toBe("carbon");
+    expect(tabs?.provenance.license).toBe("Apache-2.0");
+    expect(tabs?.provenance.commit).toHaveLength(40);
+    expect(tabs?.blueprint).toContain("tabs");
+    expect(tabs?.blueprint).not.toContain("StorybookDemo");
+    expect(packs.some((pack) => pack.id === "app-pattern/carbon-chart-anatomy")).toBe(true);
   });
 });

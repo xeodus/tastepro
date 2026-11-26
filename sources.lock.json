@@ -155,6 +155,22 @@
         "help-users-decide-when-and-where-to-get-care": "app/views/design-system/patterns/help-users-decide-when-and-where-to-get-care/index.njk",
         "interruption-page": "app/views/design-system/patterns/interruption-page/index.njk"
       }
+    },
+    {
+      "id": "carbon",
+      "name": "IBM Carbon",
+      "repo": "https://github.com/carbon-design-system/carbon-website",
+      "commit": "5e9cd1da43c32d3d3b991dc947b427f674da61a8",
+      "license": "Apache-2.0",
+      "licenseUrl": "https://raw.githubusercontent.com/carbon-design-system/carbon-website/5e9cd1da43c32d3d3b991dc947b427f674da61a8/LICENSE",
+      "authors": ["IBM"],
+      "url": "https://carbondesignsystem.com/",
+      "notes": "Enterprise component, pattern, and data-visualization guidance. The docs repository was archived on 2026-09-30; this is a pinned snapshot. Text only; images and IBM marks are excluded.",
+      "paths": {
+        "components": "src/pages/components/*/usage.mdx",
+        "patterns": "src/pages/patterns/*/index.mdx",
+        "dataVisualization": "src/pages/data-visualization/*/index.mdx"
+      }
     }
   ]
 }

@@ -15,6 +15,7 @@ The complete upstream license texts are committed at:
 - `content/sources/licenses/uswds.txt`
 - `content/sources/licenses/cms-design-system.txt`
 - `content/sources/licenses/nhs-uk.txt`
+- `content/sources/licenses/carbon.txt`
 
 The machine-readable pins are in `sources.lock.json` and
 `content/sources.lock.json`. Every generated pack also carries a `provenance`
@@ -33,6 +34,7 @@ transformations applied.
 | [USWDS](https://github.com/uswds/uswds-site)                                               | GSA         | CC0-1.0    | `af13d80f071c3d897bee422f51954d9d7d156474` |
 | [CMS Design System](https://github.com/CMSgov/design-system)                               | CMS         | CC0-1.0    | `269a1abeb3159824800e134064db8a7b35821ccd` |
 | [NHS.UK Design System](https://github.com/nhsuk/nhsuk-service-manual)                      | NHS England | OGL-3.0    | `4a37578c4d8fa2c5bbf11b1039d806bebce59234` |
+| [IBM Carbon](https://github.com/carbon-design-system/carbon-website)                       | IBM         | Apache-2.0 | `5e9cd1da43c32d3d3b991dc947b427f674da61a8` |
 
 ## Taste Skill
 
@@ -195,6 +197,31 @@ the Open Government Licence v3.0.
 
 **Not included:** NHS marks, Frutiger, images, screenshots, or example markup.
 
+## IBM Carbon
+
+**Used for:** ten component usage pages, eight interface patterns, and five
+data-visualization guides — tabs, dropdown, data table, modal, form,
+notification, search, button, checkbox, text input; empty states, loading,
+forms, notifications, filtering, status indicators, search, dialog; chart
+anatomy, color palettes, dashboards, axes and labels, legends.
+
+**Paths:** `src/pages/components/*/usage.mdx`,
+`src/pages/patterns/*/index.mdx`, and
+`src/pages/data-visualization/*/index.mdx` in the pinned repository.
+
+**License:** Apache-2.0.
+
+**TastePro transformations:**
+
+- Removed MDX imports, Storybook demos, layout wrappers, and images.
+- Converted the remaining guidance to `app-pattern` packs.
+- Mapped each page to the TastePro domain taxonomy and component kinds.
+- Added provenance, source URLs, and quality metadata.
+- Marked the snapshot as archived: the docs repository was archived on
+  2026-09-30.
+
+**Not included:** IBM marks, screenshots, images, or example markup.
+
 ## Original TastePro content
 
 The following are original to TastePro and licensed under Apache-2.0:
@@ -239,9 +266,10 @@ SOFTWARE.
 
 ## Apache-2.0
 
-Microsoft Playwright CLI and TastePro's original code and content are licensed
-under the Apache License 2.0. The full text is in `LICENSE` and in
-`content/sources/licenses/playwright-cli.txt`.
+Microsoft Playwright CLI, IBM Carbon, and TastePro's original code and content
+are licensed under the Apache License 2.0. The full texts are in `LICENSE`,
+`content/sources/licenses/playwright-cli.txt`, and
+`content/sources/licenses/carbon.txt`.
 
 ## Open Government Licence v3.0
 

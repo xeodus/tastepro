@@ -25714,6 +25714,31 @@
     }
   },
   {
+    "id": "app-pattern/carbon-axes-and-labels",
+    "kind": "app-pattern",
+    "name": "Axes and labels",
+    "summary": "Axes and labels provide critical context for the information within a chart.",
+    "domains": [
+      "data-analytics",
+      "b2b-saas"
+    ],
+    "sectors": [
+      "enterprise"
+    ],
+    "tags": [
+      "carbon",
+      "data-viz",
+      "axes-and-labels"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "carbon",
+    "sourceUrl": "https://carbondesignsystem.com/data-visualization/axes-and-labels/",
+    "metrics": {
+      "screen": "axes-and-labels"
+    }
+  },
+  {
     "id": "app-pattern/wallet-balance-actions-assets",
     "kind": "app-pattern",
     "name": "Balance, actions and assets",
@@ -25822,6 +25847,58 @@
     }
   },
   {
+    "id": "app-pattern/carbon-button",
+    "kind": "app-pattern",
+    "name": "Button",
+    "summary": "Buttons are used to initialize an action. Button labels express what action will occur when the user interacts with it.",
+    "domains": [
+      "b2b-saas",
+      "product-surfaces",
+      "data-analytics"
+    ],
+    "sectors": [
+      "enterprise"
+    ],
+    "tags": [
+      "carbon",
+      "component",
+      "usage",
+      "button"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "carbon",
+    "sourceUrl": "https://carbondesignsystem.com/components/button/usage/",
+    "metrics": {
+      "screen": "button"
+    }
+  },
+  {
+    "id": "app-pattern/carbon-chart-anatomy",
+    "kind": "app-pattern",
+    "name": "Chart anatomy",
+    "summary": "The elements constructing each chart are designed to work in harmony. Each piece plays an important role in data communication.",
+    "domains": [
+      "data-analytics",
+      "b2b-saas"
+    ],
+    "sectors": [
+      "enterprise"
+    ],
+    "tags": [
+      "carbon",
+      "data-viz",
+      "chart-anatomy"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "carbon",
+    "sourceUrl": "https://carbondesignsystem.com/data-visualization/chart-anatomy/",
+    "metrics": {
+      "screen": "chart-anatomy"
+    }
+  },
+  {
     "id": "app-pattern/govuk-check-answers",
     "kind": "app-pattern",
     "name": "Check answers",
@@ -25873,6 +25950,58 @@
     "sourceUrl": "https://service-manual.nhs.uk/design-system/patterns/check-answers",
     "metrics": {
       "screen": "check-answers"
+    }
+  },
+  {
+    "id": "app-pattern/carbon-checkbox",
+    "kind": "app-pattern",
+    "name": "Checkbox",
+    "summary": "Checkboxes are used when there are multiple items to select in a list. Users can select zero, one, or any number of items.",
+    "domains": [
+      "b2b-saas",
+      "product-surfaces",
+      "data-analytics"
+    ],
+    "sectors": [
+      "enterprise"
+    ],
+    "tags": [
+      "carbon",
+      "component",
+      "usage",
+      "checkbox"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "carbon",
+    "sourceUrl": "https://carbondesignsystem.com/components/checkbox/usage/",
+    "metrics": {
+      "screen": "checkbox"
+    }
+  },
+  {
+    "id": "app-pattern/carbon-color-palettes",
+    "kind": "app-pattern",
+    "name": "Color palettes",
+    "summary": "The color palette for data visualization is a select subset of the IBM Design Language color palette.",
+    "domains": [
+      "data-analytics",
+      "b2b-saas"
+    ],
+    "sectors": [
+      "enterprise"
+    ],
+    "tags": [
+      "carbon",
+      "data-viz",
+      "color-palettes"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "carbon",
+    "sourceUrl": "https://carbondesignsystem.com/data-visualization/color-palettes/",
+    "metrics": {
+      "screen": "color-palettes"
     }
   },
   {
@@ -26001,6 +26130,58 @@
     }
   },
   {
+    "id": "app-pattern/carbon-dashboards",
+    "kind": "app-pattern",
+    "name": "Dashboards",
+    "summary": "Context is everything. Dashboards will vary widely depending on the context they are designed for and must be carefully considered.",
+    "domains": [
+      "data-analytics",
+      "b2b-saas"
+    ],
+    "sectors": [
+      "enterprise"
+    ],
+    "tags": [
+      "carbon",
+      "data-viz",
+      "dashboards"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "carbon",
+    "sourceUrl": "https://carbondesignsystem.com/data-visualization/dashboards/",
+    "metrics": {
+      "screen": "dashboards"
+    }
+  },
+  {
+    "id": "app-pattern/carbon-data-table",
+    "kind": "app-pattern",
+    "name": "Data table",
+    "summary": "The data table component allows for the flexible display and sorting of information.",
+    "domains": [
+      "b2b-saas",
+      "product-surfaces",
+      "data-analytics"
+    ],
+    "sectors": [
+      "enterprise"
+    ],
+    "tags": [
+      "carbon",
+      "component",
+      "usage",
+      "data-table"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "carbon",
+    "sourceUrl": "https://carbondesignsystem.com/components/data-table/usage/",
+    "metrics": {
+      "screen": "data-table"
+    }
+  },
+  {
     "id": "app-pattern/uswds-date-of-birth",
     "kind": "app-pattern",
     "name": "Date of birth",
@@ -26079,6 +26260,60 @@
     }
   },
   {
+    "id": "app-pattern/carbon-dialog-pattern",
+    "kind": "app-pattern",
+    "name": "Dialogs",
+    "summary": "A dialog is a “conversation” between the system and the user. It is prompted when the system needs input from the user or to give the user urgent information concerning their current workflow.",
+    "domains": [
+      "b2b-saas",
+      "product-surfaces",
+      "data-analytics"
+    ],
+    "sectors": [
+      "enterprise"
+    ],
+    "tags": [
+      "carbon",
+      "pattern",
+      "state",
+      "dialog-pattern"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "carbon",
+    "sourceUrl": "https://carbondesignsystem.com/patterns/dialog-pattern/",
+    "metrics": {
+      "screen": "dialog-pattern"
+    }
+  },
+  {
+    "id": "app-pattern/carbon-dropdown",
+    "kind": "app-pattern",
+    "name": "Dropdown",
+    "summary": "Dropdowns present a list of options that can be used to filter or sort existing content. They can also be used as menus.",
+    "domains": [
+      "b2b-saas",
+      "product-surfaces",
+      "data-analytics"
+    ],
+    "sectors": [
+      "enterprise"
+    ],
+    "tags": [
+      "carbon",
+      "component",
+      "usage",
+      "dropdown"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "carbon",
+    "sourceUrl": "https://carbondesignsystem.com/components/dropdown/usage/",
+    "metrics": {
+      "screen": "dropdown"
+    }
+  },
+  {
     "id": "app-pattern/uswds-email-address",
     "kind": "app-pattern",
     "name": "Email address",
@@ -26103,6 +26338,33 @@
     "sourceUrl": "https://designsystem.digital.gov/patterns/create-a-user-profile/email-address/",
     "metrics": {
       "screen": "email-address"
+    }
+  },
+  {
+    "id": "app-pattern/carbon-empty-states-pattern",
+    "kind": "app-pattern",
+    "name": "Empty states",
+    "summary": "Empty states are moments in an app where there is no data to display to the user.",
+    "domains": [
+      "b2b-saas",
+      "product-surfaces",
+      "data-analytics"
+    ],
+    "sectors": [
+      "enterprise"
+    ],
+    "tags": [
+      "carbon",
+      "pattern",
+      "state",
+      "empty-states-pattern"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "carbon",
+    "sourceUrl": "https://carbondesignsystem.com/patterns/empty-states-pattern/",
+    "metrics": {
+      "screen": "empty-states-pattern"
     }
   },
   {
@@ -26159,6 +26421,33 @@
     }
   },
   {
+    "id": "app-pattern/carbon-filtering",
+    "kind": "app-pattern",
+    "name": "Filtering",
+    "summary": "Filtering is the mechanism by which a user adds or removes data items from a displayed data set by turning on and off certain predefined attributes.",
+    "domains": [
+      "b2b-saas",
+      "product-surfaces",
+      "data-analytics"
+    ],
+    "sectors": [
+      "enterprise"
+    ],
+    "tags": [
+      "carbon",
+      "pattern",
+      "state",
+      "filtering"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "carbon",
+    "sourceUrl": "https://carbondesignsystem.com/patterns/filtering/",
+    "metrics": {
+      "screen": "filtering"
+    }
+  },
+  {
     "id": "app-pattern/finance-home-pinned-rail",
     "kind": "app-pattern",
     "name": "Finance home with a pinned accounts column",
@@ -26183,6 +26472,60 @@
     "sourceUrl": "https://github.com/Leonxlnx/taste-skill",
     "metrics": {
       "screen": "overview"
+    }
+  },
+  {
+    "id": "app-pattern/carbon-form",
+    "kind": "app-pattern",
+    "name": "Form",
+    "summary": "Forms are used for submitting data. Consider each field and what value the data will provide.",
+    "domains": [
+      "b2b-saas",
+      "product-surfaces",
+      "data-analytics"
+    ],
+    "sectors": [
+      "enterprise"
+    ],
+    "tags": [
+      "carbon",
+      "component",
+      "usage",
+      "form"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "carbon",
+    "sourceUrl": "https://carbondesignsystem.com/components/form/usage/",
+    "metrics": {
+      "screen": "form"
+    }
+  },
+  {
+    "id": "app-pattern/carbon-forms-pattern",
+    "kind": "app-pattern",
+    "name": "Forms",
+    "summary": "A form is a group of related input controls that allow users to provide data or configure options.",
+    "domains": [
+      "b2b-saas",
+      "product-surfaces",
+      "data-analytics"
+    ],
+    "sectors": [
+      "enterprise"
+    ],
+    "tags": [
+      "carbon",
+      "pattern",
+      "state",
+      "forms-pattern"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "carbon",
+    "sourceUrl": "https://carbondesignsystem.com/patterns/forms-pattern/",
+    "metrics": {
+      "screen": "forms-pattern"
     }
   },
   {
@@ -26388,6 +26731,85 @@
     }
   },
   {
+    "id": "app-pattern/carbon-legends",
+    "kind": "app-pattern",
+    "name": "Legends",
+    "summary": "Legends summarize the distinguishing visual properties such as colors or texture used in the visualization",
+    "domains": [
+      "data-analytics",
+      "b2b-saas"
+    ],
+    "sectors": [
+      "enterprise"
+    ],
+    "tags": [
+      "carbon",
+      "data-viz",
+      "legends"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "carbon",
+    "sourceUrl": "https://carbondesignsystem.com/data-visualization/legends/",
+    "metrics": {
+      "screen": "legends"
+    }
+  },
+  {
+    "id": "app-pattern/carbon-loading-pattern",
+    "kind": "app-pattern",
+    "name": "Loading",
+    "summary": "Loading patterns are used when information takes an extended amount of time to process and appear on screen.",
+    "domains": [
+      "b2b-saas",
+      "product-surfaces",
+      "data-analytics"
+    ],
+    "sectors": [
+      "enterprise"
+    ],
+    "tags": [
+      "carbon",
+      "pattern",
+      "state",
+      "loading-pattern"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "carbon",
+    "sourceUrl": "https://carbondesignsystem.com/patterns/loading-pattern/",
+    "metrics": {
+      "screen": "loading-pattern"
+    }
+  },
+  {
+    "id": "app-pattern/carbon-modal",
+    "kind": "app-pattern",
+    "name": "Modal",
+    "summary": "Modals focus the user’s attention exclusively on one task or piece of information via a window that sits on top of the page content.",
+    "domains": [
+      "b2b-saas",
+      "product-surfaces",
+      "data-analytics"
+    ],
+    "sectors": [
+      "enterprise"
+    ],
+    "tags": [
+      "carbon",
+      "component",
+      "usage",
+      "modal"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "carbon",
+    "sourceUrl": "https://carbondesignsystem.com/components/modal/usage/",
+    "metrics": {
+      "screen": "modal"
+    }
+  },
+  {
     "id": "app-pattern/cms-multi-input-date-field",
     "kind": "app-pattern",
     "name": "Multi-Input Date Field",
@@ -26494,6 +26916,60 @@
     "sourceUrl": "https://service-manual.nhs.uk/design-system/patterns/ask-for-nhs-numbers",
     "metrics": {
       "screen": "ask-for-nhs-numbers"
+    }
+  },
+  {
+    "id": "app-pattern/carbon-notification",
+    "kind": "app-pattern",
+    "name": "Notification",
+    "summary": "Notifications are messages that communicate information to the user. The two main variants of notifications are toast notifications and inline notifications.",
+    "domains": [
+      "b2b-saas",
+      "product-surfaces",
+      "data-analytics"
+    ],
+    "sectors": [
+      "enterprise"
+    ],
+    "tags": [
+      "carbon",
+      "component",
+      "usage",
+      "notification"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "carbon",
+    "sourceUrl": "https://carbondesignsystem.com/components/notification/usage/",
+    "metrics": {
+      "screen": "notification"
+    }
+  },
+  {
+    "id": "app-pattern/carbon-notification-pattern",
+    "kind": "app-pattern",
+    "name": "Notifications",
+    "summary": "Notifications are an important method of communicating with users and providing feedback.",
+    "domains": [
+      "b2b-saas",
+      "product-surfaces",
+      "data-analytics"
+    ],
+    "sectors": [
+      "enterprise"
+    ],
+    "tags": [
+      "carbon",
+      "pattern",
+      "state",
+      "notification-pattern"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "carbon",
+    "sourceUrl": "https://carbondesignsystem.com/patterns/notification-pattern/",
+    "metrics": {
+      "screen": "notification-pattern"
     }
   },
   {
@@ -26826,6 +27302,60 @@
     }
   },
   {
+    "id": "app-pattern/carbon-search",
+    "kind": "app-pattern",
+    "name": "Search",
+    "summary": "Search enables users to specify a word or a phrase to find relevant content without navigation.",
+    "domains": [
+      "b2b-saas",
+      "product-surfaces",
+      "data-analytics"
+    ],
+    "sectors": [
+      "enterprise"
+    ],
+    "tags": [
+      "carbon",
+      "component",
+      "usage",
+      "search"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "carbon",
+    "sourceUrl": "https://carbondesignsystem.com/components/search/usage/",
+    "metrics": {
+      "screen": "search"
+    }
+  },
+  {
+    "id": "app-pattern/carbon-search-pattern",
+    "kind": "app-pattern",
+    "name": "Search",
+    "summary": "Search enables users to specify a word or a phrase to find particular relevant pieces of content.",
+    "domains": [
+      "b2b-saas",
+      "product-surfaces",
+      "data-analytics"
+    ],
+    "sectors": [
+      "enterprise"
+    ],
+    "tags": [
+      "carbon",
+      "pattern",
+      "state",
+      "search-pattern"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "carbon",
+    "sourceUrl": "https://carbondesignsystem.com/patterns/search-pattern/",
+    "metrics": {
+      "screen": "search-pattern"
+    }
+  },
+  {
     "id": "app-pattern/sell-out-strip",
     "kind": "app-pattern",
     "name": "Sell-out time strip",
@@ -26984,6 +27514,33 @@
     }
   },
   {
+    "id": "app-pattern/carbon-status-indicator-pattern",
+    "kind": "app-pattern",
+    "name": "Status indicators",
+    "summary": "Status indicators are an important method of communicating severity level information to users. Different shapes and colors enable users to quickly assess and identify status and respond accordingly.",
+    "domains": [
+      "b2b-saas",
+      "product-surfaces",
+      "data-analytics"
+    ],
+    "sectors": [
+      "enterprise"
+    ],
+    "tags": [
+      "carbon",
+      "pattern",
+      "state",
+      "status-indicator-pattern"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "carbon",
+    "sourceUrl": "https://carbondesignsystem.com/patterns/status-indicator-pattern/",
+    "metrics": {
+      "screen": "status-indicator-pattern"
+    }
+  },
+  {
     "id": "app-pattern/tabbed-object-detail",
     "kind": "app-pattern",
     "name": "Tabbed object detail in a sheet",
@@ -27109,6 +27666,33 @@
     }
   },
   {
+    "id": "app-pattern/carbon-tabs",
+    "kind": "app-pattern",
+    "name": "Tabs",
+    "summary": "Use tabs to allow users to navigate easily between views within the same context.",
+    "domains": [
+      "b2b-saas",
+      "product-surfaces",
+      "data-analytics"
+    ],
+    "sectors": [
+      "enterprise"
+    ],
+    "tags": [
+      "carbon",
+      "component",
+      "usage",
+      "tabs"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "carbon",
+    "sourceUrl": "https://carbondesignsystem.com/components/tabs/usage/",
+    "metrics": {
+      "screen": "tabs"
+    }
+  },
+  {
     "id": "app-pattern/leave-timeline",
     "kind": "app-pattern",
     "name": "Team timeline with kind encoding",
@@ -27124,6 +27708,33 @@
     "quality": "verified",
     "source": "taste-skill",
     "sourceUrl": "https://github.com/Leonxlnx/taste-skill"
+  },
+  {
+    "id": "app-pattern/carbon-text-input",
+    "kind": "app-pattern",
+    "name": "Text input",
+    "summary": "Text inputs enable the user to interact with and input content and data. This component can be used for long and short form entries.",
+    "domains": [
+      "b2b-saas",
+      "product-surfaces",
+      "data-analytics"
+    ],
+    "sectors": [
+      "enterprise"
+    ],
+    "tags": [
+      "carbon",
+      "component",
+      "usage",
+      "text-input"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "carbon",
+    "sourceUrl": "https://carbondesignsystem.com/components/text-input/usage/",
+    "metrics": {
+      "screen": "text-input"
+    }
   },
   {
     "id": "app-pattern/workspace-home-greeting",

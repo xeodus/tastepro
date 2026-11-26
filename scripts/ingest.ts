@@ -25,6 +25,7 @@ import { fetchCached, fetchJsonCached, mapLimit } from "./lib/fetch.js";
 import { parseGuidelines } from "./lib/guidelines.js";
 import { commitSnapshot, discardStaging, prepareStaging } from "./lib/snapshot.js";
 import { type LockSource, loadSourceLock, sourceCacheKey } from "./lib/source-lock.js";
+import { carbonAdapter } from "./lib/sources/carbon.js";
 import { cmsAdapter } from "./lib/sources/cms.js";
 import { govukAdapter } from "./lib/sources/govuk.js";
 import { nhsAdapter } from "./lib/sources/nhs.js";
@@ -669,6 +670,7 @@ async function main(): Promise<void> {
     "uswds",
     "cms-design-system",
     "nhs-uk",
+    "carbon",
   ];
   for (const id of required) {
     if (!byId.has(id)) throw new Error(`sources.lock.json is missing ${id}`);
@@ -733,6 +735,18 @@ async function main(): Promise<void> {
       writeLicense: () => fetchLicense(nhsSource, options, staging),
     };
     const nhs = await nhsAdapter.fetch(nhsContext);
+    const carbonSource = byId.get("carbon")!;
+    const carbonContext: SourceContext = {
+      source: carbonSource,
+      fetchText: (path) =>
+        fetchCached(lockUrl(carbonSource, path), sourceCacheKey(carbonSource, path), options),
+      fetchJson: (path) =>
+        fetchJsonCached(lockUrl(carbonSource, path), sourceCacheKey(carbonSource, path), options),
+      provenance: (path, transformations) => provenanceFor(carbonSource, path, transformations),
+      sourceUrl: (path = "") => sourceUrl(carbonSource, path),
+      writeLicense: () => fetchLicense(carbonSource, options, staging),
+    };
+    const carbon = await carbonAdapter.fetch(carbonContext);
     const domains = await buildDomains(options.contentDir);
 
     const warnings = [
@@ -742,6 +756,7 @@ async function main(): Promise<void> {
       ...uswds.warnings,
       ...cms.warnings,
       ...nhs.warnings,
+      ...carbon.warnings,
     ];
     const allPacks: Pack[] = sortPacks([
       ...taste.packs,
@@ -751,6 +766,7 @@ async function main(): Promise<void> {
       ...uswds.packs,
       ...cms.packs,
       ...nhs.packs,
+      ...carbon.packs,
       ...domains.packs,
     ]);
     const references: ReferencePack[] = sortPacks([
@@ -836,6 +852,7 @@ async function main(): Promise<void> {
       uswds.sourceInfo,
       cms.sourceInfo,
       nhs.sourceInfo,
+      carbon.sourceInfo,
     ];
     const counts = countBy(allContent, (pack) => pack.kind);
     const quality = countBy(allContent, (pack) => pack.quality);

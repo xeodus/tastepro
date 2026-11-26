@@ -10,7 +10,7 @@
       "Leonxlnx"
     ],
     "url": "https://github.com/Leonxlnx/taste-skill",
-    "retrievedAt": "2026-11-26T16:36:05.101Z",
+    "retrievedAt": "2026-11-26T18:23:11.327Z",
     "notes": "Design directions, palettes, type pairings, hero and section blueprints, motion recipes, site studies, photo-set metadata, app-screen library, and reference essays.",
     "paths": {
       "skill": "skills/taste-skill/SKILL.md",
@@ -49,7 +49,7 @@
       "VoltAgent"
     ],
     "url": "https://github.com/VoltAgent/awesome-design-md",
-    "retrievedAt": "2026-11-26T16:36:05.163Z",
+    "retrievedAt": "2026-11-26T18:23:11.391Z",
     "notes": "84 brand design-system analyses with YAML tokens. Brand names are used as references with attribution; no logos or screenshots are redistributed.",
     "paths": {
       "readme": "README.md",
@@ -70,7 +70,7 @@
       "Vercel Labs"
     ],
     "url": "https://vercel.com/design/guidelines",
-    "retrievedAt": "2026-11-26T16:36:05.166Z",
+    "retrievedAt": "2026-11-26T18:23:11.394Z",
     "notes": "The audit rubric: accessibility, focus, forms, animation, typography, content handling, images, performance, navigation, touch, layout, dark mode, i18n, hydration, hover, copy, and anti-patterns.",
     "paths": {
       "rules": "command.md",
@@ -92,7 +92,7 @@
       "Microsoft"
     ],
     "url": "https://github.com/microsoft/playwright-cli",
-    "retrievedAt": "2026-11-26T16:36:05.170Z",
+    "retrievedAt": "2026-11-26T18:23:11.398Z",
     "notes": "Browser automation and session-management guidance for the audit loop. The TastePro audit implementation is original; this source informs the workflow and reference skill.",
     "paths": {
       "readme": "README.md",
@@ -114,7 +114,7 @@
       "Government Digital Service"
     ],
     "url": "https://design-system.service.gov.uk/",
-    "retrievedAt": "2026-11-26T16:36:05.172Z",
+    "retrievedAt": "2026-11-26T18:23:11.400Z",
     "notes": "Form and service patterns. Repository code is MIT; the published guidance is OGL-3.0. Images, Crown marks, and Nunjucks examples are excluded.",
     "paths": {
       "bank-details": "src/patterns/bank-details/index.md",
@@ -141,7 +141,7 @@
       "U.S. General Services Administration"
     ],
     "url": "https://designsystem.digital.gov/",
-    "retrievedAt": "2026-11-26T16:36:05.183Z",
+    "retrievedAt": "2026-11-26T18:23:11.411Z",
     "notes": "Identity and complex-form patterns. CC0; linked third-party fonts, icons, and agency marks are excluded.",
     "paths": {
       "name": "pages/patterns/create-a-profile/name.md",
@@ -168,7 +168,7 @@
       "Centers for Medicare & Medicaid Services"
     ],
     "url": "https://design.cms.gov/",
-    "retrievedAt": "2026-11-26T16:36:05.190Z",
+    "retrievedAt": "2026-11-26T18:23:11.418Z",
     "notes": "Medicare/Medicaid component and pattern guidance. CC0 with third-party font/icon exceptions; only text guidance is ingested.",
     "paths": {
       "alert": "packages/docs/content/components/alert.mdx",
@@ -195,7 +195,7 @@
       "NHS England"
     ],
     "url": "https://service-manual.nhs.uk/design-system",
-    "retrievedAt": "2026-11-26T16:36:05.193Z",
+    "retrievedAt": "2026-11-26T18:23:11.422Z",
     "notes": "Healthcare service patterns. Repository code is MIT; the published guidance is OGL-3.0. NHS marks, Frutiger, images, and design examples are excluded.",
     "paths": {
       "ask-for-nhs-numbers": "app/views/design-system/patterns/ask-for-nhs-numbers/index.njk",
@@ -209,6 +209,28 @@
     },
     "counts": {
       "app-pattern": 8
+    }
+  },
+  {
+    "id": "carbon",
+    "name": "IBM Carbon",
+    "repo": "https://github.com/carbon-design-system/carbon-website",
+    "commit": "5e9cd1da43c32d3d3b991dc947b427f674da61a8",
+    "license": "Apache-2.0",
+    "licenseFile": "sources/licenses/carbon.txt",
+    "authors": [
+      "IBM"
+    ],
+    "url": "https://carbondesignsystem.com/",
+    "retrievedAt": "2026-11-26T18:23:13.633Z",
+    "notes": "Enterprise component, pattern, and data-visualization guidance. The docs repository was archived on 2026-09-30; this is a pinned snapshot. Text only; images and IBM marks are excluded.",
+    "paths": {
+      "components": "src/pages/components/*/usage.mdx",
+      "patterns": "src/pages/patterns/*/index.mdx",
+      "dataVisualization": "src/pages/data-visualization/*/index.mdx"
+    },
+    "counts": {
+      "app-pattern": 23
     }
   }
 ]
