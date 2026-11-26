@@ -25606,6 +25606,114 @@
     "sourceUrl": "https://github.com/Leonxlnx/taste-skill"
   },
   {
+    "id": "app-pattern/cms-accordion",
+    "kind": "app-pattern",
+    "name": "Accordion",
+    "summary": "An accordion is a list of headers that hide or reveal additional content when selected.",
+    "domains": [
+      "product-surfaces",
+      "government-public"
+    ],
+    "sectors": [
+      "government",
+      "healthcare"
+    ],
+    "tags": [
+      "cms",
+      "navigation",
+      "disclosure",
+      "accordion"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "cms-design-system",
+    "sourceUrl": "https://design.cms.gov/components/accordion/",
+    "metrics": {
+      "screen": "accordion"
+    }
+  },
+  {
+    "id": "app-pattern/uswds-address",
+    "kind": "app-pattern",
+    "name": "Address",
+    "summary": "The physical and mailing address patterns help users enter their address successfully.",
+    "domains": [
+      "government-public",
+      "product-surfaces",
+      "ecommerce-dtc"
+    ],
+    "sectors": [
+      "government",
+      "identity"
+    ],
+    "tags": [
+      "uswds",
+      "form",
+      "identity",
+      "address"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "uswds",
+    "sourceUrl": "https://designsystem.digital.gov/patterns/create-a-user-profile/address/",
+    "metrics": {
+      "screen": "address"
+    }
+  },
+  {
+    "id": "app-pattern/govuk-addresses",
+    "kind": "app-pattern",
+    "name": "Addresses",
+    "summary": "Help users provide an address",
+    "domains": [
+      "government-public",
+      "product-surfaces"
+    ],
+    "sectors": [
+      "government"
+    ],
+    "tags": [
+      "govuk",
+      "form",
+      "addresses"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "govuk-design-system",
+    "sourceUrl": "https://design-system.service.gov.uk/patterns/addresses/",
+    "metrics": {
+      "screen": "addresses"
+    }
+  },
+  {
+    "id": "app-pattern/cms-alert",
+    "kind": "app-pattern",
+    "name": "Alert",
+    "summary": "Alerts give feedback to users, provide critical information, and/or offer key supplementary details about a task.",
+    "domains": [
+      "product-surfaces",
+      "government-public",
+      "healthcare-wellness"
+    ],
+    "sectors": [
+      "government",
+      "healthcare"
+    ],
+    "tags": [
+      "cms",
+      "feedback",
+      "status",
+      "alert"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "cms-design-system",
+    "sourceUrl": "https://design.cms.gov/components/alert/",
+    "metrics": {
+      "screen": "alert"
+    }
+  },
+  {
     "id": "app-pattern/wallet-balance-actions-assets",
     "kind": "app-pattern",
     "name": "Balance, actions and assets",
@@ -25631,6 +25739,34 @@
     "sourceUrl": "https://github.com/Leonxlnx/taste-skill",
     "metrics": {
       "screen": "wallet"
+    }
+  },
+  {
+    "id": "app-pattern/govuk-bank-details",
+    "kind": "app-pattern",
+    "name": "Bank details",
+    "summary": "How to ask users for their bank details",
+    "domains": [
+      "fintech-payments",
+      "government-public",
+      "product-surfaces"
+    ],
+    "sectors": [
+      "government",
+      "finance"
+    ],
+    "tags": [
+      "govuk",
+      "form",
+      "payments",
+      "bank-details"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "govuk-design-system",
+    "sourceUrl": "https://design-system.service.gov.uk/patterns/bank-details/",
+    "metrics": {
+      "screen": "bank-details"
     }
   },
   {
@@ -25683,6 +25819,116 @@
     "sourceUrl": "https://github.com/Leonxlnx/taste-skill",
     "metrics": {
       "screen": "builder"
+    }
+  },
+  {
+    "id": "app-pattern/govuk-check-answers",
+    "kind": "app-pattern",
+    "name": "Check answers",
+    "summary": "Let users check their answers before submitting information to a service",
+    "domains": [
+      "government-public",
+      "product-surfaces"
+    ],
+    "sectors": [
+      "government"
+    ],
+    "tags": [
+      "govuk",
+      "form",
+      "review",
+      "check-answers"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "govuk-design-system",
+    "sourceUrl": "https://design-system.service.gov.uk/patterns/check-answers/",
+    "metrics": {
+      "screen": "check-answers"
+    }
+  },
+  {
+    "id": "app-pattern/nhs-check-answers",
+    "kind": "app-pattern",
+    "name": "Check answers",
+    "summary": "Use this pattern to let users check their answers before sending information to a service.",
+    "domains": [
+      "healthcare-wellness",
+      "government-public",
+      "product-surfaces"
+    ],
+    "sectors": [
+      "healthcare",
+      "government"
+    ],
+    "tags": [
+      "nhs",
+      "form",
+      "review",
+      "check-answers"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "nhs-uk",
+    "sourceUrl": "https://service-manual.nhs.uk/design-system/patterns/check-answers",
+    "metrics": {
+      "screen": "check-answers"
+    }
+  },
+  {
+    "id": "app-pattern/nhs-complete-multiple-tasks",
+    "kind": "app-pattern",
+    "name": "Complete multiple tasks",
+    "summary": "Use this pattern to give users more control over how they complete long, complex services.",
+    "domains": [
+      "healthcare-wellness",
+      "government-public",
+      "nonprofit-civic"
+    ],
+    "sectors": [
+      "healthcare",
+      "government"
+    ],
+    "tags": [
+      "nhs",
+      "navigation",
+      "task-list",
+      "complete-multiple-tasks"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "nhs-uk",
+    "sourceUrl": "https://service-manual.nhs.uk/design-system/patterns/complete-multiple-tasks",
+    "metrics": {
+      "screen": "complete-multiple-tasks"
+    }
+  },
+  {
+    "id": "app-pattern/nhs-confirmation-page",
+    "kind": "app-pattern",
+    "name": "Confirmation page",
+    "summary": "Use a confirmation page to show users they have completed a task.",
+    "domains": [
+      "healthcare-wellness",
+      "government-public",
+      "product-surfaces"
+    ],
+    "sectors": [
+      "healthcare",
+      "government"
+    ],
+    "tags": [
+      "nhs",
+      "form",
+      "confirmation",
+      "confirmation-page"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "nhs-uk",
+    "sourceUrl": "https://service-manual.nhs.uk/design-system/patterns/confirmation-page",
+    "metrics": {
+      "screen": "confirmation-page"
     }
   },
   {
@@ -25752,6 +25998,164 @@
     "sourceUrl": "https://github.com/Leonxlnx/taste-skill",
     "metrics": {
       "screen": "overview"
+    }
+  },
+  {
+    "id": "app-pattern/uswds-date-of-birth",
+    "kind": "app-pattern",
+    "name": "Date of birth",
+    "summary": "Date of birth, and other memorable dates, can be an essential piece of information used to validate identity or eligibility for services or benefits. This pattern allows users to enter their date of birth or another memorable date (such as, birth of child, death of loved one) without friction.",
+    "domains": [
+      "government-public",
+      "product-surfaces",
+      "healthcare-wellness"
+    ],
+    "sectors": [
+      "government",
+      "identity"
+    ],
+    "tags": [
+      "uswds",
+      "form",
+      "identity",
+      "date-of-birth"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "uswds",
+    "sourceUrl": "https://designsystem.digital.gov/patterns/create-a-user-profile/date-of-birth/",
+    "metrics": {
+      "screen": "date-of-birth"
+    }
+  },
+  {
+    "id": "app-pattern/govuk-dates",
+    "kind": "app-pattern",
+    "name": "Dates",
+    "summary": "Help users enter or select a date",
+    "domains": [
+      "government-public",
+      "product-surfaces"
+    ],
+    "sectors": [
+      "government"
+    ],
+    "tags": [
+      "govuk",
+      "form",
+      "dates"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "govuk-design-system",
+    "sourceUrl": "https://design-system.service.gov.uk/patterns/dates/",
+    "metrics": {
+      "screen": "dates"
+    }
+  },
+  {
+    "id": "app-pattern/nhs-help-users-decide-when-and-where-to-get-care",
+    "kind": "app-pattern",
+    "name": "Decide when and where to get care (care cards)",
+    "summary": "Care cards help users identify and understand the care they need, who to contact and how quickly.",
+    "domains": [
+      "healthcare-wellness"
+    ],
+    "sectors": [
+      "healthcare"
+    ],
+    "tags": [
+      "nhs",
+      "triage",
+      "content",
+      "help-users-decide-when-and-where-to-get-care"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "nhs-uk",
+    "sourceUrl": "https://service-manual.nhs.uk/design-system/patterns/help-users-decide-when-and-where-to-get-care",
+    "metrics": {
+      "screen": "help-users-decide-when-and-where-to-get-care"
+    }
+  },
+  {
+    "id": "app-pattern/uswds-email-address",
+    "kind": "app-pattern",
+    "name": "Email address",
+    "summary": "The email address pattern allows users to confidently and accurately enter their email address and ensures that it is properly formatted.",
+    "domains": [
+      "government-public",
+      "product-surfaces"
+    ],
+    "sectors": [
+      "government",
+      "identity"
+    ],
+    "tags": [
+      "uswds",
+      "form",
+      "identity",
+      "email-address"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "uswds",
+    "sourceUrl": "https://designsystem.digital.gov/patterns/create-a-user-profile/email-address/",
+    "metrics": {
+      "screen": "email-address"
+    }
+  },
+  {
+    "id": "app-pattern/govuk-error-summary",
+    "kind": "app-pattern",
+    "name": "Error summary",
+    "summary": "Use an error summary when there is a validation error",
+    "domains": [
+      "product-surfaces",
+      "government-public"
+    ],
+    "sectors": [
+      "government"
+    ],
+    "tags": [
+      "govuk",
+      "form",
+      "errors",
+      "error-summary"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "govuk-design-system",
+    "sourceUrl": "https://design-system.service.gov.uk/components/error-summary/",
+    "metrics": {
+      "screen": "error-summary"
+    }
+  },
+  {
+    "id": "app-pattern/uswds-establish-trust",
+    "kind": "app-pattern",
+    "name": "Establish trust",
+    "summary": "Help users understand the purpose of a form and the time commitment needed to complete it, feel confident they have what they need, and trust that the information they provide will be safeguarded and used responsibly.",
+    "domains": [
+      "government-public",
+      "nonprofit-civic",
+      "product-surfaces"
+    ],
+    "sectors": [
+      "government"
+    ],
+    "tags": [
+      "uswds",
+      "form",
+      "trust",
+      "establish-trust"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "uswds",
+    "sourceUrl": "https://designsystem.digital.gov/patterns/complete-a-complex-form/establish-trust/",
+    "metrics": {
+      "screen": "establish-trust"
     }
   },
   {
@@ -25868,6 +26272,61 @@
     }
   },
   {
+    "id": "app-pattern/nhs-interruption-page",
+    "kind": "app-pattern",
+    "name": "Interruption page",
+    "summary": "If you need to pause a user's journey with important information, use an interruption page.",
+    "domains": [
+      "healthcare-wellness",
+      "government-public",
+      "product-surfaces"
+    ],
+    "sectors": [
+      "healthcare",
+      "government"
+    ],
+    "tags": [
+      "nhs",
+      "navigation",
+      "interruption",
+      "interruption-page"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "nhs-uk",
+    "sourceUrl": "https://service-manual.nhs.uk/design-system/patterns/interruption-page",
+    "metrics": {
+      "screen": "interruption-page"
+    }
+  },
+  {
+    "id": "app-pattern/uswds-keep-a-record",
+    "kind": "app-pattern",
+    "name": "Keep a record",
+    "summary": "Help users feel confident in their form submission by providing a record to download or print. A printed or downloaded record of their answers provides a reference for future use, and helps users confirm their successful form submission.",
+    "domains": [
+      "government-public",
+      "nonprofit-civic",
+      "product-surfaces"
+    ],
+    "sectors": [
+      "government"
+    ],
+    "tags": [
+      "uswds",
+      "form",
+      "trust",
+      "keep-a-record"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "uswds",
+    "sourceUrl": "https://designsystem.digital.gov/patterns/complete-a-complex-form/keep-a-record/",
+    "metrics": {
+      "screen": "keep-a-record"
+    }
+  },
+  {
     "id": "app-pattern/kpi-strip-chart-rail",
     "kind": "app-pattern",
     "name": "KPI strip, main chart and a side rail",
@@ -25929,6 +26388,115 @@
     }
   },
   {
+    "id": "app-pattern/cms-multi-input-date-field",
+    "kind": "app-pattern",
+    "name": "Multi-Input Date Field",
+    "summary": "Date field (multi-input) provides date entry, spaced over three separate inputs for month, day, and year.",
+    "domains": [
+      "government-public",
+      "healthcare-wellness",
+      "product-surfaces"
+    ],
+    "sectors": [
+      "government",
+      "healthcare"
+    ],
+    "tags": [
+      "cms",
+      "form",
+      "date",
+      "multi-input-date-field"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "cms-design-system",
+    "sourceUrl": "https://design.cms.gov/components/date-field/multi-input-date-field/",
+    "metrics": {
+      "screen": "multi-input-date-field"
+    }
+  },
+  {
+    "id": "app-pattern/uswds-name",
+    "kind": "app-pattern",
+    "name": "Name",
+    "summary": "The name pattern makes it as easy as possible for users to enter their name in the format required. This pattern is often used to validate identity and helps collect name elements in the most effective and least intrusive manner possible.",
+    "domains": [
+      "government-public",
+      "product-surfaces",
+      "healthcare-wellness"
+    ],
+    "sectors": [
+      "government",
+      "identity"
+    ],
+    "tags": [
+      "uswds",
+      "form",
+      "identity",
+      "name"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "uswds",
+    "sourceUrl": "https://designsystem.digital.gov/patterns/create-a-user-profile/name/",
+    "metrics": {
+      "screen": "name"
+    }
+  },
+  {
+    "id": "app-pattern/govuk-names",
+    "kind": "app-pattern",
+    "name": "Names",
+    "summary": "Help users correctly enter their name",
+    "domains": [
+      "government-public",
+      "product-surfaces"
+    ],
+    "sectors": [
+      "government"
+    ],
+    "tags": [
+      "govuk",
+      "form",
+      "names"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "govuk-design-system",
+    "sourceUrl": "https://design-system.service.gov.uk/patterns/names/",
+    "metrics": {
+      "screen": "names"
+    }
+  },
+  {
+    "id": "app-pattern/nhs-ask-for-nhs-numbers",
+    "kind": "app-pattern",
+    "name": "NHS numbers",
+    "summary": "Use this pattern to ask people for their NHS number and help them find it.",
+    "domains": [
+      "healthcare-wellness",
+      "government-public",
+      "product-surfaces"
+    ],
+    "sectors": [
+      "healthcare",
+      "government"
+    ],
+    "tags": [
+      "nhs",
+      "form",
+      "identity",
+      "ask-for-nhs-numbers"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "nhs-uk",
+    "sourceUrl": "https://service-manual.nhs.uk/design-system/patterns/ask-for-nhs-numbers",
+    "metrics": {
+      "screen": "ask-for-nhs-numbers"
+    }
+  },
+  {
     "id": "app-pattern/object-detail-header-grid",
     "kind": "app-pattern",
     "name": "Object header and a six-column grid",
@@ -25956,6 +26524,61 @@
     "sourceUrl": "https://github.com/Leonxlnx/taste-skill",
     "metrics": {
       "screen": "detail"
+    }
+  },
+  {
+    "id": "app-pattern/cms-pagination",
+    "kind": "app-pattern",
+    "name": "Pagination",
+    "summary": "Pagination is navigation for paginated content.",
+    "domains": [
+      "product-surfaces",
+      "ecommerce-dtc",
+      "marketplaces"
+    ],
+    "sectors": [
+      "government",
+      "commerce"
+    ],
+    "tags": [
+      "cms",
+      "navigation",
+      "pagination"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "cms-design-system",
+    "sourceUrl": "https://design.cms.gov/components/pagination/",
+    "metrics": {
+      "screen": "pagination"
+    }
+  },
+  {
+    "id": "app-pattern/govuk-payment-card-details",
+    "kind": "app-pattern",
+    "name": "Payment card details",
+    "summary": "How to ask users for their payment card details",
+    "domains": [
+      "fintech-payments",
+      "ecommerce-dtc",
+      "government-public"
+    ],
+    "sectors": [
+      "government",
+      "finance"
+    ],
+    "tags": [
+      "govuk",
+      "form",
+      "payments",
+      "payment-card-details"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "govuk-design-system",
+    "sourceUrl": "https://design-system.service.gov.uk/patterns/payment-card-details/",
+    "metrics": {
+      "screen": "payment-card-details"
     }
   },
   {
@@ -25987,6 +26610,61 @@
     "sourceUrl": "https://github.com/Leonxlnx/taste-skill",
     "metrics": {
       "screen": "analytics"
+    }
+  },
+  {
+    "id": "app-pattern/uswds-phone-number",
+    "kind": "app-pattern",
+    "name": "Phone number",
+    "summary": "The phone number pattern allows users to easily enter their phone number and ensures the phone number is properly formatted.",
+    "domains": [
+      "government-public",
+      "product-surfaces"
+    ],
+    "sectors": [
+      "government",
+      "identity"
+    ],
+    "tags": [
+      "uswds",
+      "form",
+      "identity",
+      "phone-number"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "uswds",
+    "sourceUrl": "https://designsystem.digital.gov/patterns/create-a-user-profile/phone-number/",
+    "metrics": {
+      "screen": "phone-number"
+    }
+  },
+  {
+    "id": "app-pattern/cms-phone-numbers",
+    "kind": "app-pattern",
+    "name": "Phone numbers",
+    "summary": "## Guidance - Content authors, designers, and developers must ensure that phone numbers are shown as links. - If the phone number has a letter format, then only the number format of the phone number would be linked. - If the phone number…",
+    "domains": [
+      "government-public",
+      "healthcare-wellness",
+      "fintech-payments"
+    ],
+    "sectors": [
+      "government",
+      "healthcare"
+    ],
+    "tags": [
+      "cms",
+      "form",
+      "contact",
+      "phone-numbers"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "cms-design-system",
+    "sourceUrl": "https://design.cms.gov/patterns/phone-numbers/",
+    "metrics": {
+      "screen": "phone-numbers"
     }
   },
   {
@@ -26034,6 +26712,59 @@
     "quality": "verified",
     "source": "taste-skill",
     "sourceUrl": "https://github.com/Leonxlnx/taste-skill"
+  },
+  {
+    "id": "app-pattern/nhs-question-pages",
+    "kind": "app-pattern",
+    "name": "Question pages",
+    "summary": "This pattern explains when to use question pages and the elements they can include.",
+    "domains": [
+      "healthcare-wellness",
+      "government-public",
+      "product-surfaces"
+    ],
+    "sectors": [
+      "healthcare",
+      "government"
+    ],
+    "tags": [
+      "nhs",
+      "form",
+      "question-pages"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "nhs-uk",
+    "sourceUrl": "https://service-manual.nhs.uk/design-system/patterns/question-pages",
+    "metrics": {
+      "screen": "question-pages"
+    }
+  },
+  {
+    "id": "app-pattern/govuk-validation",
+    "kind": "app-pattern",
+    "name": "Recover from validation errors",
+    "summary": "Check the answers users give to make sure they’re valid - and if there’s an error, tell them what's wrong and how to fix it",
+    "domains": [
+      "product-surfaces",
+      "government-public"
+    ],
+    "sectors": [
+      "government"
+    ],
+    "tags": [
+      "govuk",
+      "form",
+      "errors",
+      "validation"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "govuk-design-system",
+    "sourceUrl": "https://design-system.service.gov.uk/patterns/validation/",
+    "metrics": {
+      "screen": "validation"
+    }
   },
   {
     "id": "app-pattern/report-card-legend-table",
@@ -26197,6 +26928,62 @@
     }
   },
   {
+    "id": "app-pattern/uswds-social-security-number",
+    "kind": "app-pattern",
+    "name": "Social Security Number",
+    "summary": "The Social Security Number pattern allows users to easily enter their Social Security Number and ensures the Social Security Number is properly formatted.",
+    "domains": [
+      "government-public",
+      "fintech-payments",
+      "healthcare-wellness"
+    ],
+    "sectors": [
+      "government",
+      "identity"
+    ],
+    "tags": [
+      "uswds",
+      "form",
+      "identity",
+      "social-security-number"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "uswds",
+    "sourceUrl": "https://designsystem.digital.gov/patterns/create-a-user-profile/social-security-number/",
+    "metrics": {
+      "screen": "social-security-number"
+    }
+  },
+  {
+    "id": "app-pattern/nhs-start-page",
+    "kind": "app-pattern",
+    "name": "Start page",
+    "summary": "Use this pattern to help users start a service.",
+    "domains": [
+      "healthcare-wellness",
+      "government-public",
+      "nonprofit-civic"
+    ],
+    "sectors": [
+      "healthcare",
+      "government"
+    ],
+    "tags": [
+      "nhs",
+      "navigation",
+      "entry",
+      "start-page"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "nhs-uk",
+    "sourceUrl": "https://service-manual.nhs.uk/design-system/patterns/start-page",
+    "metrics": {
+      "screen": "start-page"
+    }
+  },
+  {
     "id": "app-pattern/tabbed-object-detail",
     "kind": "app-pattern",
     "name": "Tabbed object detail in a sheet",
@@ -26232,6 +27019,34 @@
     }
   },
   {
+    "id": "app-pattern/cms-table",
+    "kind": "app-pattern",
+    "name": "Table",
+    "summary": "Tables show tabular data in columns and rows.",
+    "domains": [
+      "b2b-saas",
+      "data-analytics",
+      "government-public"
+    ],
+    "sectors": [
+      "government",
+      "healthcare"
+    ],
+    "tags": [
+      "cms",
+      "data",
+      "table",
+      "table"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "cms-design-system",
+    "sourceUrl": "https://design.cms.gov/components/table/",
+    "metrics": {
+      "screen": "table"
+    }
+  },
+  {
     "id": "app-pattern/table-filter-bar",
     "kind": "app-pattern",
     "name": "Table with tabs and a filter bar",
@@ -26264,6 +27079,33 @@
     "sourceUrl": "https://github.com/Leonxlnx/taste-skill",
     "metrics": {
       "screen": "list"
+    }
+  },
+  {
+    "id": "app-pattern/cms-tabs",
+    "kind": "app-pattern",
+    "name": "Tabs",
+    "summary": "Tabs are a secondary navigation pattern, allowing a user to view only the content they're interested in. They build upon a real world metaphor, and the selected state simulates a folder being physically in front of others in the group.",
+    "domains": [
+      "product-surfaces",
+      "b2b-saas"
+    ],
+    "sectors": [
+      "government",
+      "healthcare"
+    ],
+    "tags": [
+      "cms",
+      "navigation",
+      "disclosure",
+      "tabs"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "cms-design-system",
+    "sourceUrl": "https://design.cms.gov/components/tabs/",
+    "metrics": {
+      "screen": "tabs"
     }
   },
   {
@@ -26311,6 +27153,34 @@
     "sourceUrl": "https://github.com/Leonxlnx/taste-skill",
     "metrics": {
       "screen": "home"
+    }
+  },
+  {
+    "id": "app-pattern/cms-zip-codes",
+    "kind": "app-pattern",
+    "name": "ZIP codes",
+    "summary": "There are approximately 41k ZIP codes in the United States. We use ZIP codes in various ways; to determine eligibility, as a way to search for services, or as part of an address.",
+    "domains": [
+      "government-public",
+      "healthcare-wellness",
+      "ecommerce-dtc"
+    ],
+    "sectors": [
+      "government",
+      "healthcare"
+    ],
+    "tags": [
+      "cms",
+      "form",
+      "address",
+      "zip-codes"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "cms-design-system",
+    "sourceUrl": "https://design.cms.gov/patterns/zip-codes/",
+    "metrics": {
+      "screen": "zip-codes"
     }
   },
   {

@@ -241,15 +241,15 @@ screens are `overview`, `analytics`, `list`, `detail`, `settings`, `wallet`,
 `builder`, `inbox`, `home` and `report`. The library holds seven styles, each distilled from the
 studied screens that share its move:
 
-| Style                | Theme | For                                          | The move                                                                             |
-| -------------------- | ----- | -------------------------------------------- | ------------------------------------------------------------------------------------ |
-| `achromatic-ledger`  | light | money homes, reports, settings with usage    | No colour in the chrome; charts in ink; one small signal where a figure changed      |
-| `framed-sheet`       | light | B2B analytics, developer platforms, builders | One tinted L-frame; the page on a white sheet inset 8px, no shadow                   |
-| `accent-ladder`      | light | creator and small-business admin with plans  | The full hue on small marks only; its pale tints on every area                       |
-| `editorial-greeting` | light | team and personal homes                      | The greeting as the h1 in a centred 12-column column; every figure at regular weight |
-| `pastel-consumer`    | light | wallets, budgeting                           | Pale same-hue tiles under one large radius; quiet money polarity                     |
-| `true-black-flat`    | dark  | community, events, media                     | Elevation by lightness alone; colour only on data                                    |
-| `data-terminal`      | dark  | markets, monitoring                          | Every selection is the same 1px accent line; signs, not colour, on numbers           |
+| Style | Theme | For | The move |
+| --- | --- | --- | --- |
+| `achromatic-ledger` | light | money homes, reports, settings with usage | No colour in the chrome; charts in ink; one small signal where a figure changed |
+| `framed-sheet` | light | B2B analytics, developer platforms, builders | One tinted L-frame; the page on a white sheet inset 8px, no shadow |
+| `accent-ladder` | light | creator and small-business admin with plans | The full hue on small marks only; its pale tints on every area |
+| `editorial-greeting` | light | team and personal homes | The greeting as the h1 in a centred 12-column column; every figure at regular weight |
+| `pastel-consumer` | light | wallets, budgeting | Pale same-hue tiles under one large radius; quiet money polarity |
+| `true-black-flat` | dark | community, events, media | Elevation by lightness alone; colour only on data |
+| `data-terminal` | dark | markets, monitoring | Every selection is the same 1px accent line; signs, not colour, on numbers |
 
 Choose by how the product is used (long sessions or a quick look, money or media, a team or one
 person, day or night), not by what is most familiar, and write one line on why. Then deal the sheet:
@@ -353,13 +353,13 @@ a row arriving. Nothing on the screen performs an entrance (house rule).
 
 ### 3.1 Five archetypes
 
-| Shell                         | In the study | What it is                                                                                                                                                                                                                                                                                                                                    |
-| ----------------------------- | ------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Open plane**                | 5 screens    | A labelled sidebar on the page ground (or within 1-2% of it), separated by nothing or by one 1px hairline. No top bar: the header and the cards sit on the ground. The canvas is fluid with a 24-64px gutter, or a centred column.                                                                                                            |
-| **Tinted frame, white sheet** | 8 screens    | Sidebar and top bar share one tinted ground (#f6f6f6-#f9fbfc) with no rule between them; the page sits on a white sheet inset 8px from the window's right and bottom edges, radius 10-16 (median 16), a 1px #eaeaea-#ededed edge and no shadow. Variants: a flush L-frame, the inset sheet, and floating panels inset 8-12px with a 12px gap. |
-| **Ruled T-frame**             | 4 screens    | A 210-240px sidebar and a 64px top bar on one ground, divided only by 1px rules. The workspace switcher sits at the top bar's right end behind a full-height divider. Three of the four are dark.                                                                                                                                             |
-| **Icon rail**                 | 3 screens    | An unlabelled rail 50-60px wide (median 55); 15-18px icons on a 34-49px pitch; the active item marked by colour or by a 2% tint band; groups split by 20px hairlines. It saves about 180px of width.                                                                                                                                          |
-| **No sidebar**                | 3 screens    | A 46-48px top bar over a centred 1088-1208px column with 152-212px gutters; the logo sits on the column's left edge. For reports, viewers and products with few destinations.                                                                                                                                                                 |
+| Shell | In the study | What it is |
+| --- | --- | --- |
+| **Open plane** | 5 screens | A labelled sidebar on the page ground (or within 1-2% of it), separated by nothing or by one 1px hairline. No top bar: the header and the cards sit on the ground. The canvas is fluid with a 24-64px gutter, or a centred column. |
+| **Tinted frame, white sheet** | 8 screens | Sidebar and top bar share one tinted ground (#f6f6f6-#f9fbfc) with no rule between them; the page sits on a white sheet inset 8px from the window's right and bottom edges, radius 10-16 (median 16), a 1px #eaeaea-#ededed edge and no shadow. Variants: a flush L-frame, the inset sheet, and floating panels inset 8-12px with a 12px gap. |
+| **Ruled T-frame** | 4 screens | A 210-240px sidebar and a 64px top bar on one ground, divided only by 1px rules. The workspace switcher sits at the top bar's right end behind a full-height divider. Three of the four are dark. |
+| **Icon rail** | 3 screens | An unlabelled rail 50-60px wide (median 55); 15-18px icons on a 34-49px pitch; the active item marked by colour or by a 2% tint band; groups split by 20px hairlines. It saves about 180px of width. |
+| **No sidebar** | 3 screens | A 46-48px top bar over a centred 1088-1208px column with 152-212px gutters; the logo sits on the column's left edge. For reports, viewers and products with few destinations. |
 
 All six dark screens use one ground everywhere, divided by 1px rules of #161616-#232323 or by nothing.
 No screen in the study puts a dark or saturated sidebar against a light canvas (0 of 17).
@@ -558,22 +558,22 @@ fewer, runs to about 760px at 1440 and pairs with the next block; stretched to 1
 
 ### 6.1 Which chart for which question
 
-| Question                             | Form                                                                                                                                                                                                           | In the study                     |
-| ------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- |
-| Is it moving over time?              | One line; an area only with a fill of 15% or less                                                                                                                                                              | 9 screens                        |
-| How much per period?                 | Columns with square corners                                                                                                                                                                                    | 3                                |
-| How is it distributed?               | A histogram with equal bins                                                                                                                                                                                    | 1 (its unequal bins are flagged) |
-| Who ranks?                           | A sorted horizontal bar list, or the row's fill as the bar in a one-figure list                                                                                                                                | 3                                |
-| What share?                          | A thin ring, or a 100% stacked bar with 2px seams; five parts at most                                                                                                                                          | 5                                |
-| How far to the target?               | A progress bar, both ends labelled, the fill the true ratio                                                                                                                                                    | 4                                |
-| How much of the plan is used?        | A track as long as the plan, the spent part filled, what is already committed as a lighter segment, an overrun past the track's end in the negative colour (`Charts.plan`)                                     | house rule                       |
-| Has it drifted from its target?      | One row per part: the current share as a bar with a 1px tick at the target (`Charts.bullet`); never two stacked bars to compare                                                                                | house rule                       |
-| Where?                               | A map with a list beside it; the list carries the magnitudes                                                                                                                                                   | 1                                |
-| Per period, and the running total?   | The two side by side at equal width, with the same dates                                                                                                                                                       | 1                                |
-| Which way did it flow, and how much? | Columns above and below one zero line on one scale, the axis signed and captioned on each side ("Sold" above, "Bought" below), a marked period in a second tone with its own legend entry (`Charts.diverging`) | house rule                       |
-| Who is away when?                    | A timeline of people by day, each kind of booking its own mark (`Charts.timeline`)                                                                                                                             | house rule                       |
-| Is there enough cover?               | A team-by-day matrix of slack against the minimum (+2, +1, 0, −1), one hue ramping toward the negative colour, the headcount on hover (`Charts.matrix`)                                                        | house rule                       |
-| When in the day, against last time?  | One row per item on a shared opening-to-closing axis: a 2px grey track, an ink dot for today, a hollow tick for the comparison day (`Charts.timeStrip`)                                                        | house rule                       |
+| Question | Form | In the study |
+| --- | --- | --- |
+| Is it moving over time? | One line; an area only with a fill of 15% or less | 9 screens |
+| How much per period? | Columns with square corners | 3 |
+| How is it distributed? | A histogram with equal bins | 1 (its unequal bins are flagged) |
+| Who ranks? | A sorted horizontal bar list, or the row's fill as the bar in a one-figure list | 3 |
+| What share? | A thin ring, or a 100% stacked bar with 2px seams; five parts at most | 5 |
+| How far to the target? | A progress bar, both ends labelled, the fill the true ratio | 4 |
+| How much of the plan is used? | A track as long as the plan, the spent part filled, what is already committed as a lighter segment, an overrun past the track's end in the negative colour (`Charts.plan`) | house rule |
+| Has it drifted from its target? | One row per part: the current share as a bar with a 1px tick at the target (`Charts.bullet`); never two stacked bars to compare | house rule |
+| Where? | A map with a list beside it; the list carries the magnitudes | 1 |
+| Per period, and the running total? | The two side by side at equal width, with the same dates | 1 |
+| Which way did it flow, and how much? | Columns above and below one zero line on one scale, the axis signed and captioned on each side ("Sold" above, "Bought" below), a marked period in a second tone with its own legend entry (`Charts.diverging`) | house rule |
+| Who is away when? | A timeline of people by day, each kind of booking its own mark (`Charts.timeline`) | house rule |
+| Is there enough cover? | A team-by-day matrix of slack against the minimum (+2, +1, 0, −1), one hue ramping toward the negative colour, the headcount on hover (`Charts.matrix`) | house rule |
+| When in the day, against last time? | One row per item on a shared opening-to-closing axis: a 2px grey track, an ink dot for today, a hollow tick for the comparison day (`Charts.timeStrip`) | house rule |
 
 Three more, from testing:
 
@@ -882,18 +882,18 @@ white with a 1px border; a tertiary is text. The controls in one row share one h
   warns at 34px and 48px).
 - **Sizes**:
 
-| Role                 | Range in the study | Median                 |
-| -------------------- | ------------------ | ---------------------- |
-| Page title           | 14-48              | 24                     |
-| KPI value            | 16-40              | 24                     |
-| Card title (500-600) | 14-24              | 16                     |
-| Body, nav, cells     | 13-16              | 14                     |
-| Labels, meta         | 11-14              | 12                     |
-| Axis ticks           | 11-16              | 12                     |
-| Pills, badges        | 9-14               | 11-12 (house floor 11) |
+| Role | Range in the study | Median |
+| --- | --- | --- |
+| Page title | 14-48 | 24 |
+| KPI value | 16-40 | 24 |
+| Card title (500-600) | 14-24 | 16 |
+| Body, nav, cells | 13-16 | 14 |
+| Labels, meta | 11-14 | 12 |
+| Axis ticks | 11-16 | 12 |
+| Pills, badges | 9-14 | 11-12 (house floor 11) |
 
-A screen uses 4-9 sizes, median 6. The cleanest scales in the study are 12/14/18/24, 12/14/16/30
-and 12/14/16/24.
+  A screen uses 4-9 sizes, median 6. The cleanest scales in the study are 12/14/18/24, 12/14/16/30
+  and 12/14/16/24.
 - **Weights**: a median of 3 per screen; 10 of 23 never go above 600; 700 does one job per screen
   (money, the greeting or the title).
 - **Figures**: tabular on every number in a table, in a KPI, or anywhere it updates. Check that the
@@ -978,73 +978,33 @@ rules built in and its colours read from these tokens.
 ```css
 :root {
   /* light */
-  --ground: #f9fafb;
-  --surface: #ffffff;
-  --raised: #f9f9f9;
-  --active: #eeeeee;
-  --border: #e8e8e8;
-  --rule: #f2f2f2;
-  --control: #d1d5db;
-  --text: #111111;
-  --muted: #5f6368;
-  --faint: #6b6b6b; /* placeholders use --faint */
-  --primary: #1d1f20; /* near-black fill, white label */
+  --ground: #f9fafb;  --surface: #ffffff;  --raised: #f9f9f9;  --active: #eeeeee;
+  --border: #e8e8e8;  --rule: #f2f2f2;     --control: #d1d5db;
+  --text: #111111;    --muted: #5f6368;    --faint: #6b6b6b;    /* placeholders use --faint */
+  --primary: #1d1f20;                      /* near-black fill, white label */
   --accent: /* one hue, about 3% of pixels: the data, plus at most one control */;
-  --positive: #247b50;
-  --pill-positive-bg: #dcfae5;
-  --pill-positive-ink: #04250e;
-  --negative: #c4242a;
-  --pill-negative-bg: #ffedea;
-  --pill-negative-ink: #831c1e;
-  --pill-warning-bg: #fffbeb;
-  --pill-warning-ink: #92400e; /* notice border #fde68a */
-  --grid: #e5e5e5;
-  --chart-span: 0.06; /* the opacity of a shaded span in a chart */
+  --positive: #247b50;  --pill-positive-bg: #dcfae5;  --pill-positive-ink: #04250e;
+  --negative: #c4242a;  --pill-negative-bg: #ffedea;  --pill-negative-ink: #831c1e;
+  --pill-warning-bg: #fffbeb;  --pill-warning-ink: #92400e;  /* notice border #fde68a */
+  --grid: #e5e5e5;  --chart-span: 0.06;  /* the opacity of a shaded span in a chart */
 
-  --radius-card: 8px;
-  --radius-control: 6px;
-  --radius-chip: 4px; /* soft styles: 20 / 14 / 999 */
-  --gap: 16px;
-  --card-pad: 20px;
-  --pad: 24px;
-  --nav-row: 34px;
-  --control-height: 32px;
-  --row-height: 48px;
-  --font: "Inter", system-ui, sans-serif; /* one grotesk */
-  --fs-title: 24px;
-  --fs-section: 16px;
-  --fs-kpi: 24px;
-  --fs-body: 14px;
-  --fs-small: 12px;
+  --radius-card: 8px;  --radius-control: 6px;  --radius-chip: 4px;  /* soft styles: 20 / 14 / 999 */
+  --gap: 16px;  --card-pad: 20px;  --pad: 24px;
+  --nav-row: 34px;  --control-height: 32px;  --row-height: 48px;
+  --font: "Inter", system-ui, sans-serif;                            /* one grotesk */
+  --fs-title: 24px;  --fs-section: 16px;  --fs-kpi: 24px;  --fs-body: 14px;  --fs-small: 12px;
 }
 :root[data-theme="dark"] {
-  --ground: #000000;
-  --surface: #111111;
-  --raised: #222222;
-  --active: #222222;
-  --border: #1a1a1a;
-  --rule: #161616;
-  --control: #444444; /* on a #111 ground the border is #2e2e2e */
-  --text: #ffffff;
-  --muted: #b4b4b4;
-  --faint: #949494; /* two greys that read apart */
-  --primary: #ffffff; /* inverted: white fill, black label */
-  --positive: #3fc07a;
-  --pill-positive-bg: #172a1d;
-  --pill-positive-ink: #3fc07a; /* a green accent replaces these */
-  --negative: #e5566f;
-  --pill-negative-bg: #2c1a20;
-  --pill-negative-ink: #e5566f; /* the study's #d4405d, lifted for 4.5:1 */
-  --grid: #2b2b2b;
-  --chart-span: 0.12;
+  --ground: #000000;  --surface: #111111;  --raised: #222222;  --active: #222222;
+  --border: #1a1a1a;  --rule: #161616;     --control: #444444;  /* on a #111 ground the border is #2e2e2e */
+  --text: #ffffff;    --muted: #b4b4b4;    --faint: #949494;  /* two greys that read apart */
+  --primary: #ffffff;                      /* inverted: white fill, black label */
+  --positive: #3fc07a;  --pill-positive-bg: #172a1d;  --pill-positive-ink: #3fc07a;  /* a green accent replaces these */
+  --negative: #e5566f;  --pill-negative-bg: #2c1a20;  --pill-negative-ink: #e5566f;  /* the study's #d4405d, lifted for 4.5:1 */
+  --grid: #2b2b2b;  --chart-span: 0.12;
 }
-.num {
-  font-variant-numeric: tabular-nums;
-}
-td.num,
-th.num {
-  text-align: right;
-}
+.num { font-variant-numeric: tabular-nums; }
+td.num, th.num { text-align: right; }
 ```
 
 ## 10. Density
@@ -1160,44 +1120,44 @@ takes more than 30% of a phone's width.
 The house rules in `SKILL.md` were written for pages that are read once. An app screen is read every
 day, and part of what those rules ban is the structure of a working screen. These relax, with limits:
 
-| Allowed on app screens                                | Limit                                                                                                                                                                                                                                           |
-| ----------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **1px borders** on cards, panels, tables and controls | About 1.1-1.3:1 against the ground on light (#e5e7eb-#ededed on white); #1a1a1a on #000, #2e2e2e on #111. Controls one step stronger. A border or a shadow, never both.                                                                         |
-| **Row rules** in tables and lists                     | 1px, 3-7% darker than the surface. No zebra, no header band.                                                                                                                                                                                    |
-| **Dashed lines**                                      | In chart grids and empty slots only.                                                                                                                                                                                                            |
-| **Small labels** above values                         | 12-14px, sentence case, grey at 4.5:1. Meta and axis text 11-12px. Nothing under 11px. At most one tracked uppercase label on a screen (a switcher's context label).                                                                            |
-| **Rows of identical cards**                           | Peer metrics or peer objects only: 3-6 across, equal widths, one gap, no orphan, edges aligned across rows, no icon on top. Prefer one divided card; mixed spans beat a uniform grid.                                                           |
-| **Monospace**                                         | IDs, keys and code; or every figure, as one style's decision. Otherwise tabular figures in the text face.                                                                                                                                       |
-| **Pills**                                             | Inside rows and beside a value only: 16-24px tall, a pale tint with dark text of the same hue. Never above a heading.                                                                                                                           |
-| **Index numbers**                                     | Only as data: a rank ("1."), a node number.                                                                                                                                                                                                     |
-| **Icons**                                             | 14-20px outline, one set, grey: in the nav, before a label, or as a single affordance (kebab, chevron, info). A container only if it is neutral, or node-type tiles in a builder (pass `--allow icon-chips` and give the reason in the report). |
-| **Shadows**                                           | On what floats: a menu, a popover, a tooltip, a composer, a dialog. A resting card gets at most a small blur under 8% black.                                                                                                                    |
-| **A second typeface**                                 | With one job: a mono for IDs or figures, a serif for one greeting.                                                                                                                                                                              |
-| **A gradient**                                        | Only as an area fade under one line chart; a flat tint of about 14% is safer.                                                                                                                                                                   |
+| Allowed on app screens | Limit |
+| --- | --- |
+| **1px borders** on cards, panels, tables and controls | About 1.1-1.3:1 against the ground on light (#e5e7eb-#ededed on white); #1a1a1a on #000, #2e2e2e on #111. Controls one step stronger. A border or a shadow, never both. |
+| **Row rules** in tables and lists | 1px, 3-7% darker than the surface. No zebra, no header band. |
+| **Dashed lines** | In chart grids and empty slots only. |
+| **Small labels** above values | 12-14px, sentence case, grey at 4.5:1. Meta and axis text 11-12px. Nothing under 11px. At most one tracked uppercase label on a screen (a switcher's context label). |
+| **Rows of identical cards** | Peer metrics or peer objects only: 3-6 across, equal widths, one gap, no orphan, edges aligned across rows, no icon on top. Prefer one divided card; mixed spans beat a uniform grid. |
+| **Monospace** | IDs, keys and code; or every figure, as one style's decision. Otherwise tabular figures in the text face. |
+| **Pills** | Inside rows and beside a value only: 16-24px tall, a pale tint with dark text of the same hue. Never above a heading. |
+| **Index numbers** | Only as data: a rank ("1."), a node number. |
+| **Icons** | 14-20px outline, one set, grey: in the nav, before a label, or as a single affordance (kebab, chevron, info). A container only if it is neutral, or node-type tiles in a builder (pass `--allow icon-chips` and give the reason in the report). |
+| **Shadows** | On what floats: a menu, a popover, a tooltip, a composer, a dialog. A resting card gets at most a small blur under 8% black. |
+| **A second typeface** | With one job: a mono for IDs or figures, a serif for one greeting. |
+| **A gradient** | Only as an area fade under one line chart; a flat tint of about 14% is safer. |
 
 Still banned, as on pages, and checked:
 
-| Banned                                                                                                   | Instead                                                                |
-| -------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------- |
-| Gradients on grounds, buttons, cards, text and KPI tiles (the study's two gradient buttons are flagged)  | Flat fills                                                             |
-| Glows, glass, backdrop blur                                                                              | Opaque surfaces one tone step from the ground                          |
-| An icon in a coloured circle or tinted square on every KPI or card (0 of 23)                             | A label and a number                                                   |
-| Rainbow charts: more than four hues, a hue per bar, one subject in two hues                              | One hue per chart, neutrals for the rest                               |
-| Sparklines on KPIs (0 of 23)                                                                             | The trend in its own chart, or nowhere                                 |
-| Emoji in greetings, labels, nav or empty states                                                          | Words                                                                  |
-| Lorem ipsum, Acme, John Doe, "User 1"; vanity figures ("10,000+ teams"); totals that do not add up       | Believable sample data computed from rows, listed in the report        |
-| Status colour on a zero or undefined change                                                              | Grey, or the change in words ("+4 (new)")                              |
-| A dark or saturated sidebar on a light screen; a navy or slate dark theme                                | The page ground for the sidebar; true neutral darks                    |
-| The accent on chrome: a tinted nav row with a left bar, coloured tab pills, a brand fill on every button | The accent on data and at most one control; a near-black primary       |
-| Uppercase tracked table headers, zebra rows, header bands                                                | 12px grey sentence-case headers; rules or space                        |
-| Left-aligned numbers, proportional figures in columns                                                    | Right-aligned tabular figures                                          |
-| A hero header, a greeting with an emoji, an illustrated welcome banner                                   | A noun title at 24px                                                   |
-| Pagination under a five-row overview list                                                                | Capped rows, "View all", the total                                     |
-| Violet and indigo accents; cream with terracotta                                                         | The dealt style's palette                                              |
-| A landing-page title (over 32px) or a figure at 48px or more                                             | An 18-32px title; figures at 16-40px                                   |
-| Icons in boxes repeated down a list or on top of every peer card, tinted or neutral                      | One plain 16px icon where it helps, or none                            |
-| Every row a different hue, a "left" amount in green on every budget row                                  | Grey for what is fine; colour only on the rows at risk or over         |
-| A screen that names no product and offers no action                                                      | The product's mark and scope in the shell; its main job one click away |
+| Banned | Instead |
+| --- | --- |
+| Gradients on grounds, buttons, cards, text and KPI tiles (the study's two gradient buttons are flagged) | Flat fills |
+| Glows, glass, backdrop blur | Opaque surfaces one tone step from the ground |
+| An icon in a coloured circle or tinted square on every KPI or card (0 of 23) | A label and a number |
+| Rainbow charts: more than four hues, a hue per bar, one subject in two hues | One hue per chart, neutrals for the rest |
+| Sparklines on KPIs (0 of 23) | The trend in its own chart, or nowhere |
+| Emoji in greetings, labels, nav or empty states | Words |
+| Lorem ipsum, Acme, John Doe, "User 1"; vanity figures ("10,000+ teams"); totals that do not add up | Believable sample data computed from rows, listed in the report |
+| Status colour on a zero or undefined change | Grey, or the change in words ("+4 (new)") |
+| A dark or saturated sidebar on a light screen; a navy or slate dark theme | The page ground for the sidebar; true neutral darks |
+| The accent on chrome: a tinted nav row with a left bar, coloured tab pills, a brand fill on every button | The accent on data and at most one control; a near-black primary |
+| Uppercase tracked table headers, zebra rows, header bands | 12px grey sentence-case headers; rules or space |
+| Left-aligned numbers, proportional figures in columns | Right-aligned tabular figures |
+| A hero header, a greeting with an emoji, an illustrated welcome banner | A noun title at 24px |
+| Pagination under a five-row overview list | Capped rows, "View all", the total |
+| Violet and indigo accents; cream with terracotta | The dealt style's palette |
+| A landing-page title (over 32px) or a figure at 48px or more | An 18-32px title; figures at 16-40px |
+| Icons in boxes repeated down a list or on top of every peer card, tinted or neutral | One plain 16px icon where it helps, or none |
+| Every row a different hue, a "left" amount in green on every budget row | Grey for what is fine; colour only on the rows at risk or over |
+| A screen that names no product and offers no action | The product's mark and scope in the shell; its main job one click away |
 
 **On violet and indigo.** 10 of the 23 studied screens use violet or indigo, always as a data hue or a
 single control. The ban is the owner's taste, not a finding of the study: the library deals other
@@ -1207,32 +1167,32 @@ hues for the styles that came from those screens, and the inspector's palette ch
 
 Each line sets a habit of generated dashboards against what the 23 screens do instead.
 
-| Tell                                                                                                              | What replaces it                                                                                                                                                                 |
-| ----------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| A dark navy or tinted sidebar with a coloured active pill and a left bar                                          | The sidebar on the page ground; a neutral grey pill, or the label brightening on dark. A left bar appears once in 23.                                                            |
-| "Welcome back, Alex" with a waving hand and a subtitle                                                            | A noun title at 24/600. Three screens greet; the one emoji goes.                                                                                                                 |
-| Four KPI cards, each with an icon in a tinted circle                                                              | One container split by hairlines, label over value. No icons on any of the 23.                                                                                                   |
-| A green "+12.5%" pill on every KPI                                                                                | A delta on 9 of 20 screens, in words with its window; grey for zero; "+4 (new)" from zero.                                                                                       |
-| A sparkline on every KPI                                                                                          | None on any of the 23. The trend has its own chart.                                                                                                                              |
-| KPI values at 36-48px, bold, in the brand colour                                                                  | 24-30px at 400-600 in ink; nothing at 48.                                                                                                                                        |
-| A gradient area chart with a smoothed spline and a dot on every point                                             | A 2px straight line, no fill on 7 of 10, no markers.                                                                                                                             |
-| A rainbow palette, a hue per bar or per chart                                                                     | One hue per chart; the accent on data only; four hues at most on a screen.                                                                                                       |
-| Gridlines every 20px, axis lines on both sides, a legend for one series                                           | 3-5 faint lines, no y-axis line, no legend for a single series; round ticks above the maximum.                                                                                   |
-| A fat donut with labels on the slices and a big total in the hole                                                 | A thin ring, no slice labels, the legend as a table with the values.                                                                                                             |
-| Cards with a 16-24px radius, a 1px border and a large soft shadow                                                 | A border or a tone step, no shadow; a tight or a soft radius, chosen once.                                                                                                       |
-| A zebra table under uppercase tracked headers, with a checkbox, an avatar, a status chip and a kebab on every row | Rules and alignment: 12px grey headers, one status mark, one action where it is needed.                                                                                          |
-| Left-aligned numbers in proportional digits                                                                       | Right-aligned tabular figures, fixed decimals, units in grey.                                                                                                                    |
-| Saturated status chips with white text                                                                            | Pale tints with dark text of the same hue.                                                                                                                                       |
-| The accent on every button, tab and link                                                                          | No filled primary on 12 of 23; near-black where there is one.                                                                                                                    |
-| A top bar with search, a bell and an avatar on every screen, or one left mostly empty                             | No top bar on 9 of 23; when there is one, it carries search, the switcher or the object's name.                                                                                  |
-| Export, Share and a date picker clustered by the title                                                            | Actions only when they are real; a freshness stamp instead.                                                                                                                      |
-| Placeholder people and companies, round vanity totals, growth on a week-old account                               | The product's own data, small numbers at their real size, totals summed from the rows.                                                                                           |
-| Pagination under a short list                                                                                     | Capped rows and "View all".                                                                                                                                                      |
-| An equal four-up grid whatever the data, with orphan cells and stretched cards                                    | A column count chosen by the item count; spans that change by row and land on the same lines.                                                                                    |
-| Neon on dark, glowing borders, glass                                                                              | True neutral darks, lightness steps, colour on the data.                                                                                                                         |
-| The kit's own face: Geist or Inter on #f8f8f8 with white 12px cards and no hue on the data, or lime on black      | One face taken from the brief (a ground from the product's world, a figure face with character, the brand's hue on the main data element) and one element only this product has. |
-| A coloured icon per category in a list                                                                            | One grey icon set; colour, if any, on the numbers.                                                                                                                               |
-| An illustration and "No data yet" in an empty chart                                                               | The zero line drawn, and one sentence in the frame.                                                                                                                              |
+| Tell | What replaces it |
+| --- | --- |
+| A dark navy or tinted sidebar with a coloured active pill and a left bar | The sidebar on the page ground; a neutral grey pill, or the label brightening on dark. A left bar appears once in 23. |
+| "Welcome back, Alex" with a waving hand and a subtitle | A noun title at 24/600. Three screens greet; the one emoji goes. |
+| Four KPI cards, each with an icon in a tinted circle | One container split by hairlines, label over value. No icons on any of the 23. |
+| A green "+12.5%" pill on every KPI | A delta on 9 of 20 screens, in words with its window; grey for zero; "+4 (new)" from zero. |
+| A sparkline on every KPI | None on any of the 23. The trend has its own chart. |
+| KPI values at 36-48px, bold, in the brand colour | 24-30px at 400-600 in ink; nothing at 48. |
+| A gradient area chart with a smoothed spline and a dot on every point | A 2px straight line, no fill on 7 of 10, no markers. |
+| A rainbow palette, a hue per bar or per chart | One hue per chart; the accent on data only; four hues at most on a screen. |
+| Gridlines every 20px, axis lines on both sides, a legend for one series | 3-5 faint lines, no y-axis line, no legend for a single series; round ticks above the maximum. |
+| A fat donut with labels on the slices and a big total in the hole | A thin ring, no slice labels, the legend as a table with the values. |
+| Cards with a 16-24px radius, a 1px border and a large soft shadow | A border or a tone step, no shadow; a tight or a soft radius, chosen once. |
+| A zebra table under uppercase tracked headers, with a checkbox, an avatar, a status chip and a kebab on every row | Rules and alignment: 12px grey headers, one status mark, one action where it is needed. |
+| Left-aligned numbers in proportional digits | Right-aligned tabular figures, fixed decimals, units in grey. |
+| Saturated status chips with white text | Pale tints with dark text of the same hue. |
+| The accent on every button, tab and link | No filled primary on 12 of 23; near-black where there is one. |
+| A top bar with search, a bell and an avatar on every screen, or one left mostly empty | No top bar on 9 of 23; when there is one, it carries search, the switcher or the object's name. |
+| Export, Share and a date picker clustered by the title | Actions only when they are real; a freshness stamp instead. |
+| Placeholder people and companies, round vanity totals, growth on a week-old account | The product's own data, small numbers at their real size, totals summed from the rows. |
+| Pagination under a short list | Capped rows and "View all". |
+| An equal four-up grid whatever the data, with orphan cells and stretched cards | A column count chosen by the item count; spans that change by row and land on the same lines. |
+| Neon on dark, glowing borders, glass | True neutral darks, lightness steps, colour on the data. |
+| The kit's own face: Geist or Inter on #f8f8f8 with white 12px cards and no hue on the data, or lime on black | One face taken from the brief (a ground from the product's world, a figure face with character, the brand's hue on the main data element) and one element only this product has. |
+| A coloured icon per category in a list | One grey icon set; colour, if any, on the numbers. |
+| An illustration and "No data yet" in an empty chart | The zero line drawn, and one sentence in the frame. |
 
 A screen with every tell removed and nothing put in their place is a tidy template. What fills the
 space is the product: its own data at its real size, the screen's one question answered by its

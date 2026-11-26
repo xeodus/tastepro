@@ -25,6 +25,28 @@ Microsoft Playwright CLI
   Apache License 2.0
   https://github.com/microsoft/playwright-cli
 
+GOV.UK Design System
+  Copyright (c) Government Digital Service
+  Open Government Licence v3.0 (published guidance)
+  MIT License (repository code)
+  https://design-system.service.gov.uk/
+
+USWDS
+  U.S. General Services Administration
+  CC0 1.0 Universal (public domain)
+  https://designsystem.digital.gov/
+
+CMS Design System
+  Centers for Medicare & Medicaid Services
+  CC0 1.0 Universal (public domain), with third-party font and icon exceptions
+  https://design.cms.gov/
+
+NHS.UK Design System
+  Copyright (c) NHS England
+  Open Government Licence v3.0 (published guidance)
+  MIT License (repository code)
+  https://service-manual.nhs.uk/design-system
+
 TastePro's original code, taxonomy, domain playbooks, and other original
 content are licensed under the Apache License 2.0 (see LICENSE).
 

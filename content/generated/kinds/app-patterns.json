@@ -1,5 +1,187 @@
 [
   {
+    "id": "app-pattern/cms-accordion",
+    "kind": "app-pattern",
+    "name": "Accordion",
+    "summary": "An accordion is a list of headers that hide or reveal additional content when selected.",
+    "domains": [
+      "product-surfaces",
+      "government-public"
+    ],
+    "sectors": [
+      "government",
+      "healthcare"
+    ],
+    "tags": [
+      "cms",
+      "navigation",
+      "disclosure",
+      "accordion"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "cms-design-system",
+      "repo": "https://github.com/CMSgov/design-system",
+      "commit": "269a1abeb3159824800e134064db8a7b35821ccd",
+      "path": "packages/docs/content/components/accordion.mdx",
+      "license": "CC0-1.0",
+      "authors": [
+        "Centers for Medicare & Medicaid Services"
+      ],
+      "url": "https://design.cms.gov/",
+      "transformations": [
+        "removed MDX imports, examples, and JSX wrappers",
+        "kept the guidance section only"
+      ]
+    },
+    "sourceUrl": "https://design.cms.gov/components/accordion/",
+    "screen": "accordion",
+    "kinds": [
+      "navigation",
+      "disclosure"
+    ],
+    "basis": "a accordion pattern from the CMS Design System",
+    "blueprint": "## Guidance\n\n### When to use\n\n- Use an accordion to see an overview of multiple, related sections of content\n- Use an accordion to show and hide sections as needed\n\n### When to consider alternatives\n\nAccordions hide content from users and not everyone will notice them or understand how they work.\nAccordions increase cognitive load and interaction cost, as users have to make decisions about what headers to click on.\n\n- Don't use an accordion if users need to see most or all of the information on a page.\n- Don't use an accordion if there is not enough content to warrant condensing.\n\n### Usage\n\n- Make the entire header selectable. Allow users to click anywhere in the header area to expand or collapse the content; a larger target is easier to manipulate.\n- Give interactive elements enough space. Make sure interactive elements within the collapsible region are far enough from the headers that users don’t accidentally trigger a collapse.\n\n## Accessibility\n\nTo verify keyboard support for the Accordion header, press `Enter` or `Spacebar`. This toggles the collapsed/expanded state of the associated accordion panel.\n\n### Accessibility testing\n\n#### Screen reader testing\n\nWhen using a screen reader:\n\n##### Focus states\n\n- Focus moves in a logical order when using a screen reader. When you use a screen reader and navigate between accordion panels, the order in which the focus proceeds from item to item is logical. (For example, the focus doesn’t skip a link or accordion heading.)\n- Focus indicator is visible when using a screen reader. When you use a screen reader and navigate between accordion panels, the virtual cursor (or JAWS focus) moves from one header to the next.\n- Heading levels are logical. When you use a screen reader and navigate through the accordion panel headings, the heading levels are the correct level for the page outline.\n\n##### Headings\n\n- Heading levels are consistent. When you use a screen reader and navigate through the accordion panel headings, each accordion panel’s heading level is the same. (Typically this is a heading level 2 or 3.)\n- Screen reader announces “collapsed” state. When you use a screen reader and navigate to a closed panel, the screen reader announces that the content is “collapsed.”\n- Screen reader announces “expanded” state. When you use a screen reader and navigate to an open panel, the screen reader announces that the content is “expanded.”\n- Screen reader announces “expanded” state with expected keys. When you use a screen reader and use the `Enter` key or the `Spacebar` on a closed panel, the screen reader announces that the content is “expanded.”\n- Screen reader announces “collapsed” state with expected keys. When you use a screen reader and use the `Enter` key or the `Spacebar` on an open panel, the screen reader announces that the content is “collapsed.”\n\n#### Keyboard testing\n\nWhen navigating with a keyboard:\n\n##### Accordion panel behavior\n\n- Accordion panel opens with keyboard interaction. When you use the `Enter` key or the `Spacebar` on a closed panel, the panel opens (expands).\n- Accordion panel closes with keyboard interaction. When you use the `Enter` key or the `Spacebar` on an open panel, the panel closes (collapses).\n- Accordion panel does not toggle on hover. When you hover or focus on any accordion panel, the panel neither opens nor closes.\n\n##### Interactive elements\n\n- Interactive elements work after tabbing. When you use the `Tab` key to navigate into an open accordion panel, each interactive item inside that panel (like a link) is selectable.\n\n##### Focus states\n\n- Focus moves out of the accordion without closing the panel. When you navigate out of the accordion, it does not close.\n- Focus moves forward with keyboard interaction. When you navigate through items with the `Tab` key, the order in which the visible focus proceeds from item to item is logical. (For example, the focus doesn’t skip a link or accordion heading.)\n- Focus moves backwards with keyboard interaction. When you navigate through items with `Shift` + `Tab`, the visible focus moves to the previous focusable elements without skipping any items.\n- Focus stays on the panel header. When you use the `Enter` key or the `Spacebar` on a closed panel, the focus highlight stays on the panel header.\n- Focus indicator is clear on the accordion panel. When you `Tab` onto an accordion panel, the focus highlight is clear and visible.\n- Focus indicator is clear on interactive items. When you navigate through interactive content items (like links) with the `Tab` key, each item has a focus highlight that is clear and visible.\n\nFrom [USWDS’ Accordion accessibility tests](https://designsystem.digital.gov/components/accordion/accessibility-tests/)\n\n## Code\n\n### React\n\n### Web Component\n\n#### Spacing when using framework wrappers\n\nWrapping each `ds-accordion-item` in a framework-specific component changes the items’ sibling relationship and may prevent the default spacing between accordion headings from being applied. When this happens, apply the `ds-u-margin-top--1` utility class to the heading of each item after the first.\n\n```html\n\n  ...\n\n```\n\n### Style customization\n\nThe following CSS variables can be overridden to customize Accordion components:\n\n## Component maturity",
+    "phone": ""
+  },
+  {
+    "id": "app-pattern/uswds-address",
+    "kind": "app-pattern",
+    "name": "Address",
+    "summary": "The physical and mailing address patterns help users enter their address successfully.",
+    "domains": [
+      "government-public",
+      "product-surfaces",
+      "ecommerce-dtc"
+    ],
+    "sectors": [
+      "government",
+      "identity"
+    ],
+    "tags": [
+      "uswds",
+      "form",
+      "identity",
+      "address"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "uswds",
+      "repo": "https://github.com/uswds/uswds-site",
+      "commit": "af13d80f071c3d897bee422f51954d9d7d156474",
+      "path": "pages/patterns/create-a-profile/address.md",
+      "license": "CC0-1.0",
+      "authors": [
+        "U.S. General Services Administration"
+      ],
+      "url": "https://designsystem.digital.gov/",
+      "transformations": [
+        "converted HTML guidance to text",
+        "removed Jekyll includes, previews, and examples"
+      ]
+    },
+    "sourceUrl": "https://designsystem.digital.gov/patterns/create-a-user-profile/address/",
+    "screen": "address",
+    "kinds": [
+      "form",
+      "identity"
+    ],
+    "basis": "a address pattern from USWDS",
+    "blueprint": "## About these patterns\n\n### What problems do these patterns solve?\n\nWhile most addresses in the U.S. follow a specific pattern, there are unique variations in some rural areas, U.S. territories, and military posts. In addition, some people are unhoused or in temporary housing, and may need to specify a mailing address that is different from their physical address —  particularly in disaster relief and recovery situations.\n\n## Physical address\n\n### When to use this pattern\n\nUse this pattern when you need the physical location of a person and you need to parse out the specific parts of the address. This may be important when determining benefits eligibility, for disaster recovery purposes, or other reasons. Since physical addresses may be new, temporary, or not currently served by the USPS consider asking for a mailing address, too. Physical addresses may be where a building or property is located, or potentially where a displaced individual is currently located. Mailing addresses are where postal mail must be sent.\n\n### When to consider something else\n\nThis pattern supports domestic U.S. addresses, including the U.S. territories and military outposts. If you need to collect addresses that may not fit this format, such as international addresses for citizens living overseas, you will need to [use something else](https://www.upu.int/en/Postal-Solutions/Programmes-Services/Addressing-Solutions).\n\n### What’s the solution\n\nProvide all the fields needed for a user to provide a physical address, even less conventional attributes like a [Google Plus Code](https://maps.google.com/pluscodes/).\n\n### Guidance\n\n#### What to do\n\n- Do support long text fields.\n\n- Do support a rich array of diacritics, accents, and alternative characters.\n\n- Do allow both upper and lowercase letters throughout each field.\n\n- Allow users to enter hyphens, apostrophes, special characters, and blank spaces in each name field.\n\n- Consider using the autocomplete attribute on address input fields to allow the browser to autofill information that has been previously entered.\n\n- Provide rich information cues in dropdowns. For example, for state dropdowns, use MD - Maryland and TX - Texas, rather than the state code alone.\n\n- Do provide the Puerto Rican Urbanization field, unless your program does not serve Puerto Rico.\n\n- If your program does not serve the armed forces or U.S. territories, you may want to provide links to related resources for these users if such resources exist.\n\n#### What not to do\n\n- Don't auto-advance focus from one field to the next. This makes it difficult for keyboard-only users to navigate and correct mistakes.\n\n- Do not limit addresses to conventionally formatted addresses. Some rural areas and the U.S. territories have unusually formatted addresses.\n\n- Do not assume that people can receive mail at their physical location. People in some communities can only receive mail at post office boxes.",
+    "phone": ""
+  },
+  {
+    "id": "app-pattern/govuk-addresses",
+    "kind": "app-pattern",
+    "name": "Addresses",
+    "summary": "Help users provide an address",
+    "domains": [
+      "government-public",
+      "product-surfaces"
+    ],
+    "sectors": [
+      "government"
+    ],
+    "tags": [
+      "govuk",
+      "form",
+      "addresses"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "govuk-design-system",
+      "repo": "https://github.com/alphagov/govuk-design-system",
+      "commit": "0c6de5736a4e755a3808fb31d3a7723a33b7c705",
+      "path": "src/patterns/addresses/index.md",
+      "license": "OGL-3.0",
+      "authors": [
+        "Government Digital Service"
+      ],
+      "url": "https://design-system.service.gov.uk/",
+      "transformations": [
+        "stripped Nunjucks, images, and links"
+      ]
+    },
+    "sourceUrl": "https://design-system.service.gov.uk/patterns/addresses/",
+    "screen": "addresses",
+    "kinds": [
+      "form"
+    ],
+    "basis": "a addresses pattern from the GOV.UK Design System",
+    "blueprint": "Help users provide an address using one of the following:\n\n- address lookup\n- multiple text inputs\n- textarea\n\n## Address lookup\n\nAn address lookup helps users find a full address from partial information such as a postcode.\n\n### When to use an address lookup\n\nUse an address lookup to collect UK addresses where possible.\n\n### When not to use an address lookup\n\nAddress lookups generally only work for UK addresses.\n\nIf you expect both UK and international addresses, give users the option to either search for a UK address or manually enter an international address.\n\n### How an address lookup works\n\nAn address lookup lets users specify a UK address by entering their postcode and selecting their address from a list. There is also an option to enter a street name or number.\n\nWhen using an address lookup, you should:\n\n- make it clear that it will only work for UK addresses\n- provide a manual option for people with international addresses or addresses that are missing or not properly listed in the address lookup\n- let people enter their postcodes in upper or lower case and with or without spaces\n\n### Identify and match addresses with UPRN identifiers\n\nUse an address lookup that can identify addresses with Unique Property Reference Numbers (UPRNs). UPRNs are 12-digit unique identifiers for every addressable location across the UK.\n\nOpen standards for government mandate that services that store property information must use UPRN identifiers.\n\nUsing UPRN identifiers helps users enter addresses accurately. This helps your service by making address data more consistent and easier to handle, which reduces errors and removes the need for manual address matching in the future.\n\nSee a post on The power of UPRNs in linking data on the Geospatial Insights blog.\n\nYour address lookup should only use data from a single API. One option for this is the Ordnance Survey Places API. Public sector organisations can get access to OS Places API as part of the Public Sector Geospatial Agreement (PSGA).\n\n### Allow different postcode formats\n\nIt's easier for users if you accept and ignore unwanted characters. This is better than rejecting the input and telling the user they have not provided a valid postcode.\n\nYou should let users enter postcodes that contain:\n\n- upper and lower case letters\n- no spaces\n- additional spaces at the beginning, middle or end\n- punctuation like hyphens, brackets, dashes and full stops\n\n## Multiple text inputs\n\n### When to use multiple text inputs\n\nOnly use multiple text inputs to offer users a manual input option when you both:\n\n- know which countries the addresses will come from\n- can find a format that supports them all – this can be difficult to know if you’re asking for addresses outside of the UK\n\nUsing multiple text inputs means:\n\n- you can easily extract and use specific parts of an address\n- you can give help for individual text inputs\n- you can validate each part of the address separately\n- users can complete the form using their browser’s autocomplete function\n\nThe disadvantages of using multiple text inputs are that:\n\n- it’s hard to find a single format that works for all addresses\n- there’s no guarantee that users will use the text inputs the way you think they will\n- users cannot easily paste addresses from their clipboards\n\n### How multiple text inputs work\n\nIf you use multiple text inputs, you should:\n\n- only make individual text inputs mandatory if you really need the information\n- make the text inputs the appropriate length for the content – it helps people understand the form, for example, make postcode text inputs shorter than street text inputs\n- <a href=\"#allow-different-postcode-formats\">let users enter postcodes in different formats</a>\n\nMake sure there are enough text inputs to accommodate longer addresses if you know your users will need them. For example, allow users to include a company name or flat&nbsp;number.\n\nMake it optional for users to enter their county (such as Berkshire or Cumbria). It’s not part of a correct UK address, according to Royal Mail, and it’s not used to deliver post.\n\nRemove the county field if you’re sure your users will not need it, and your service will not use it.\n\n#### Use the autocomplete attribute on multiple address fields\n\nUse the `autocomplete` attribute on each individual address field to help users enter their address more quickly. This lets you specify each input’s purpose so browsers can autofill the information on a user’s behalf if they’ve entered it previously.\n\nCheck which input purpose to use for each field.\n\nIn production, you’ll need to do this to meet WCAG 2.2 success criterion 1.3.5 Identify input purpose. You will not normally need to use the `autocomplete` attribute in prototypes, as users will not generally be using their own devices.\n\n#### Error messages\n\nError messages should be styled like this:\n\nIf a postcode entered is not a real postcode, use a message like this:\n\nMake sure errors follow the guidance in the Error message component and have specific error messages for specific error states.\n\n## Textarea\n\n### When to use a textarea\n\nUse a textarea to offer users a manual option to enter an address, such as for international addresses or when users cannot find their address using an address lookup.\n\nA textarea is useful when you expect a broad range of address formats and you do not need to format the address for print or use specific sub-parts of the address (for example, street or postcode).\n\n### When not to use a textarea\n\nYou should not use a textarea if you need to separate an address into accurate sub-parts (for example, street or postcode).\n\n### How a textarea works\n\nTextareas let users enter an address in any format and make it easy to copy and paste addresses from their clipboard.\n\n#### Use the autocomplete attribute on a textarea\n\nUse the `autocomplete` attribute on the textarea component when you're asking for an address. This lets browsers autofill the information on a user's behalf if they’ve entered it previously.\n\nTo do this, set the `autocomplete` attribute to `street-address` as shown in the HTML and Nunjucks tabs in the textarea example above.\n\nIf you are working in production you’ll need to do this to meet WCAG 2.2 success criterion 1.3.5 Identify input purpose.\n\nYou will not normally need to use the `autocomplete` attribute in prototypes, as users will not generally be using their own devices.",
+    "phone": ""
+  },
+  {
+    "id": "app-pattern/cms-alert",
+    "kind": "app-pattern",
+    "name": "Alert",
+    "summary": "Alerts give feedback to users, provide critical information, and/or offer key supplementary details about a task.",
+    "domains": [
+      "product-surfaces",
+      "government-public",
+      "healthcare-wellness"
+    ],
+    "sectors": [
+      "government",
+      "healthcare"
+    ],
+    "tags": [
+      "cms",
+      "feedback",
+      "status",
+      "alert"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "cms-design-system",
+      "repo": "https://github.com/CMSgov/design-system",
+      "commit": "269a1abeb3159824800e134064db8a7b35821ccd",
+      "path": "packages/docs/content/components/alert.mdx",
+      "license": "CC0-1.0",
+      "authors": [
+        "Centers for Medicare & Medicaid Services"
+      ],
+      "url": "https://design.cms.gov/",
+      "transformations": [
+        "removed MDX imports, examples, and JSX wrappers",
+        "kept the guidance section only"
+      ]
+    },
+    "sourceUrl": "https://design.cms.gov/components/alert/",
+    "screen": "alert",
+    "kinds": [
+      "feedback",
+      "status"
+    ],
+    "basis": "a alert pattern from the CMS Design System",
+    "blueprint": "## Guidance\n\n### When to use\n\n#### Informational\n\n**On Forms**: To provide key supplementary or contextual information to support the successful completion of tasks or aid overall comprehension.\n**On Static Pages**: To highlight recent, critical changes.\n\nExamples:\n\n- To provide additional information such as explanations of criteria the user needs to meet\n- To highlight new information available\n\nLightweight informational alert may be used if information is helpful, but not critical or necessary to complete the task.\n\n#### Error\n\n**On Forms**: To draw focus to an error or an incomplete task by prompting the user to review or take other action.\n\nExamples:\n\n- To alert a user of missing form entry\n- To alert a user of incorrect form entry\n- To alert a user of broader system issues\n\nNever use error alerts on static pages.\n\n#### Warning\n\n**On Forms**: To call out or notify a user of risk or important information prior to completing the action.\n\n**On Static Pages**: To notify users of scheduled website maintenance or unexpected system outage.\n\nExamples:\n\n- To warn a user of potential negative consequences of a certain action\n- To warn a user of unintended results\n- To encourage a user to double check their choices\n- To highlight information that a user should be aware of\n\n#### Success\n\n**On Forms**: To confirm that a task was completed successfully.\n\nExamples:\n\n- To confirm submission of an application\n- To offer a user positive feedback, such as a congratulatory note\n- To guide the user to the next step in a multi-step process\n\nNever use success alerts on static pages.\n\n### Guidelines\n\n- Don’t overdo it—Limit alerts to no more than 2 per screen. Too many notifications won’t be read, as they can overwhelm and annoy the user.\n- Only include notifications that relate to the user’s current goal.\n- Be mindful of other elements on the page that may compete for the user’s attention.\n- On forms, always include in-line validation in addition to any error alerts that\n  appear at the top of the form.\n- If the error alert relates to specific text fields, also display the impacted fields in an\n  error state.\n\n### When to consider alternatives\n\n- For less critical messages or less-urgent information, consider tooltips, hint text, or inline help text.\n- When the goal is to guide user input, utilizing hint text or inline help can be more effective in providing real-time guidance within form fields.\n- If an action will result in destroying a user’s work (for example, deleting an application) use a more intrusive pattern, such as a confirmation modal dialogue, to allow the user to confirm that this is what they want.\n- When you need to display content that isn't related to the user’s current goal.\n\n### Display & behavior\n\n- Alerts may be displayed statically on a page, appearing immediately when the webpage is first loaded, or dynamically loaded on a page, appearing based on specific conditions or user interactions, like clicking a button, submitting a form, or fulfilling certain criteria on the page.\n- Alerts with icons are preferred. An alert doesn’t need to include an icon if it requires a large amount of content. Such instances should be rare. Validate the design and spacing on mobile to help make this decision.\n- When the user is required to do something in response to an alert, let them know what they need to do and make that task as easy as possible.\n- Don’t use alerts with a timer or dismiss button.\n\n### Content guidelines\n\n#### Guidelines\n\n- Keep alerts short—Use the fewest words possible to convey the concept or issue.\n  - Best practice is no more than 2-3 short sentences.\n  - If longer, consider adding a link to a help drawer to provide more details.\n- Use plain language, active voice, and imperative style when providing directions.\n- Avoid jargon and computer code, like “Message 1234,” or code snippets, such as -h, -\n  p 8080, -d /var/www/html.\n- Alert content can include:\n  - A heading (not required)\n  - Navigational links\n  - “Trigger words” to open help drawer for more details o Bulleted or numbered lists\n- [Plain Language Guide: Writing (Digital.gov)](https://digital.gov/guides/plain-language/writing)\n\n#### Heading content\n\n- Alert headings are optional, but preferred. They draw attention and frame the information in the alert.\n- Bold alert headings and use sentence case.\n- Don’t include punctuation, unless it’s a question.\n\n#### Content for error alerts\n\n- Help the user correct the error —Don’t place blame on the user.\n- Keep error alerts short, using the fewest words possible to describe what went\n  wrong and what the user needs to do.\n- Alerts support various types and lengths of content from ~45 to ~80 characters\n  wide.\n- When writing error alerts, use:\n  - Plain language and active voice. Use contractions.\n  - Imperative style for directions to correct the error or action to take.\n  - Don’t use words like \"please\" or \"sorry,\" or informal language like “oops.”\n  - Sentence case and include punctuation. Don’t use exclamation points.\n- If action to correct error has multiple steps or is complex, consider adding trigger text for a help drawer to provide more details.\n- [Get details about inline error messages that pair with error alerts.](https://design.cms.gov/components/inline-error/)\n\n### Accessibility\n\n#### Accessibility\n\n- Use alerts sparingly to avoid creating too much \"noise\" in screen readers, making it difficult to understand the overall layout of the page.\n- Place alerts in an effective location to draw attention even when CSS is turned off. Content helps also to make the importance of the message clear.\n- Immediately notify users relying on assistive tech, like screen readers, when an alert appears.\n- Users who are using a keyboard to navigate the page must be able to access the alert and its content in the right order.\n- Don’t visually hide alert messages on the page and then make them visible when needed. Users of older assistive technologies may still be able to perceive the alert messages even if they aren’t currently applicable.\n- If you have multiple alert components on a page, tailor the accessible text to differentiate between each by using an aria-label or aria-labeled by attribute.\n\n#### Accessibility for dynamic alerts\n\n- If dynamically loading an alert, be mindful of when the alert displays on the page.\n  - For example, an alert could appear on a page due to an error or progressive disclosure. Synchronize the visual presentation of dynamically loaded content with its auditory presentation by screen readers.\n  - Errors need immediate attention, but content through progressive disclosure may not.\n- When a user's actions require dynamically displaying an alert, such as with success or error states, inject the alert inside an already existing `` with `aria-live=\"polite\"` and `aria-relevant=\"additions removals\"` or `role=\"alert\"`. These ARIA attributes ensure screen readers will announce alerts that have been added or updated dynamically.\n\n  - Your empty `` on page load would appear as:\n\n  ```html\n\n  ```\n\n  - When the user performs an action that displays an alert, add the alert to the existing ``:\n\n  ```html\n\n    ...\n\n  ```\n\n- The value of the `aria-live` attribute is used to update assistive technologies on the degree of importance.\n  - `aria-live=\"polite\"` will notify users of updates but generally do not interrupt the current task, with the updates having a low priority.\n  - `aria-live=\"assertive\"` will immediately notify the user, potentially clearing the speech queue of previous updates. Don't use the assertive value unless the interruption is imperative.\n  - `aria-relevant=\"additions removals\"` (tailored to the appropriate value) will communicate the types of changes that occurred to an aria-live region. You only need to inform assistive technologies of content removal when the removal represents an important change.\n- If you choose to shift focus to the alert, be mindful that using other techniques like `role=\"alert\"`, and `aria-live=\"polite\"` will cause some browser and screen reader combinations to read out the content more than once. Typically, shifting focus alone will be enough to alert screen readers of the content.\n\n#### Accessibility testing\n\n##### General\n\n- The alert should have a [unique, accessible name](https://www.w3.org/WAI/ARIA/apg/practices/names-and-descriptions/).\n- The alert purpose should be clear in the context of the whole page.\n\n##### Keyboard testing\n\n- When using features that trigger the display of an alert, I should see or hear the alert announced, but focus DOESN'T transfer automatically when the alert appears.\n- When using features that trigger the display of an [alert dialog (modal)](/components/modal-dialog/), I should see or hear the alert announced, and focus DOES transfer automatically when the alert appears.\n\n##### Screen reader testing\n\nWhen using a screen reader (NVDA, JAWS, VoiceOver, TalkBack):\n\n- Using features that trigger the display of an alert:\n  - The alert is announced when it appears\n  - It identifies itself as an alert\n- Navigating the page announces the accessible name of the alert, followed by the alert content.\n\n### Report an accessibility bug\n\nIf you have access to CMS internal tools, report accessibility issues through the [CMSDS bug reporting workflow in Confluence](https://confluence.cms.gov/pages/viewpage.action?pageId=1138979323).\n\nIf you do not have access to CMS internal tools, report accessibility issues using the [public GitHub issue template](https://github.com/CMSgov/design-system/issues/new?template=propose-a-new-item-for-the-cms-design-system.md).\n\n## Code\n\n### React\n\n### Web Component\n\n### Style customization\n\nThe following CSS variables can be overridden to customize Alert components:\n\n### Analytics\n\nThis component has analytics tracking available. Please see our developer documentation about [using analytics in the design system](/getting-started/for-developers/#analytics).\n\n## Component maturity",
+    "phone": ""
+  },
+  {
     "id": "app-pattern/wallet-balance-actions-assets",
     "kind": "app-pattern",
     "name": "Balance, actions and assets",
@@ -44,6 +226,52 @@
     "basis": "a wallet home",
     "blueprint": "One column whose every element snaps to its two edges. A balance card (1px border, 16px radius, about 134px tall) holding one 32px figure and one line under it in which only the change is coloured ('-$0.09 in the last 30 days'); the title says what the figure is, so it needs no label. 32px below, 4 equal action tiles in a pale tint with dark same-hue icon and 12-14px label (4 x 144 + 3 x 16 = 624 in the study; scale the column and keep the arithmetic). 32-40px below, text tabs for the asset kinds on a 1px rule with a 2px ink indicator as wide as the word, a network or account select on the right of the same row. Then the asset table: 72px rows (48px round icon plus 24px), no dividers, two-line cells pairing a 16px value with a 14px grey unit amount, numeric columns right-aligned to shared edges, change as a small solid triangle and a coloured percentage, zero change grey, a missing share a grey em dash. On a desktop do not leave the column at phone width: the study's 624px column was flagged as a stretched phone screen; widen it to 864-1100 or give it a second column.",
     "phone": "This pattern is phone-first: the same column at full width with 16px margins, the 4 tiles in one row, the table as two-line rows with the value right-aligned."
+  },
+  {
+    "id": "app-pattern/govuk-bank-details",
+    "kind": "app-pattern",
+    "name": "Bank details",
+    "summary": "How to ask users for their bank details",
+    "domains": [
+      "fintech-payments",
+      "government-public",
+      "product-surfaces"
+    ],
+    "sectors": [
+      "government",
+      "finance"
+    ],
+    "tags": [
+      "govuk",
+      "form",
+      "payments",
+      "bank-details"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "govuk-design-system",
+      "repo": "https://github.com/alphagov/govuk-design-system",
+      "commit": "0c6de5736a4e755a3808fb31d3a7723a33b7c705",
+      "path": "src/patterns/bank-details/index.md",
+      "license": "OGL-3.0",
+      "authors": [
+        "Government Digital Service"
+      ],
+      "url": "https://design-system.service.gov.uk/",
+      "transformations": [
+        "stripped Nunjucks, images, and links"
+      ]
+    },
+    "sourceUrl": "https://design-system.service.gov.uk/patterns/bank-details/",
+    "screen": "bank-details",
+    "kinds": [
+      "form",
+      "payments"
+    ],
+    "basis": "a bank details pattern from the GOV.UK Design System",
+    "blueprint": "## When to use this pattern\n\nFollow this pattern if you need users to provide their bank details so you can pay them.\n\nOnly ask for bank details securely within your service. For example, do not ask users to send their bank details by email.\n\nThis pattern does yet not cover asking users for bank details so they can pay by Direct Debit.\n\nIf your service lets users set up Direct Debit payments, first check if you can use GOV.UK Pay.\n\n## How it works\n\nInclude extra fields if your payment service provider needs additional information.\n\n### Do not ask users for their account type\n\nDo not ask users if they have a bank account or building society account as not all users know this.\n\nIf your service does not support building society accounts, remove building society from the content and do not ask for a roll number.\n\n### Asking for building society roll numbers\n\nRoll numbers are only used by some building societies for certain types of account, so make this field optional.\n\nHowever, you need a user’s roll number when they have one. This is why the label says ‘(if you have one)’.\n\n### Allow different formats for the sort code\n\nLet users enter their sort code in whatever format is familiar to them. Allow additional spaces, hyphens and dashes.\n\nUse one input for the sort code. It allows users to enter their sort code more quickly, and avoids them needing to read and understand multiple input labels.\n\n### Use a branching question if users can choose how to get paid\n\nNot everyone has a bank account or wants to share their account details online.\n\nLet users choose to get paid by an alternative method.\n\nAdapt this question depending on what payment options your users need and what your service can support.\n\n### International bank account details\n\nIf you expect your users will have a non-UK bank account, you’ll need to:\n\n- use different fields to sort code and account number - usually BIC code (also known as 'SWIFT code') and IBAN\n- do research on other fields you may need to add for the countries your service supports\n- only show the fields for the country your user selects\n\nIf you expect your users to have a non-UK bank account, give them an option to select this.\n\nInternational bank accounts require different fields to sort code and account number.\n\nDifferent countries ask for additional details. This guidance does not cover all possibilities. You will need to research what information is needed by the countries your service supports.\n\nOnly show the fields that relate to that country.\n\nMost countries need the IBAN and BIC, sometimes known as the SWIFT code.\n\n### Error messages\n\nError messages should be styled like this:\n\nMake sure errors follow the guidance in the Error message component and have specific error messages for specific error states.\n\n#### If the name on the account is empty\n\nSay 'Enter the name on the account'.\n\n#### If the sort code is empty\n\nSay 'Enter a sort code'.\n\n#### If the sort code is not in the correct format\n\nSay 'Enter a valid sort code like 309430'.\n\n#### If the account number is empty\n\nSay 'Enter an account number'\n\n#### If the account number is not in the correct format\n\nSay 'Enter a valid account number like 00733445'.\n\n#### If the account number is too long or too short\n\nSay 'Account number must be between 6 and 8 digits'.\n\n#### If the building society roll number is too long\n\nSay 'Building society roll number must be between 1 and 18 characters'.\n\n#### If the building society roll number uses characters that are not allowed\n\nSay 'Building society roll number must only include letters a to z, numbers, hyphens, spaces, forward slashes and full stops'.\n\n## Research on this pattern\n\nThis pattern was originally contributed by a team at the Ministry of Justice.\n\nIt has not been tested in user research yet. It's closely based on the pattern used by GOV.UK Pay, and patterns used by the following government services.\n\n**Department for Work and Pensions**<br>\nUniversal Credit<br>\nGet Jobseeker’s Allowance<br>\nGet your State Pension\n\n**HM Revenue & Customs**<br>\nRegister your anti-money laundering supervision<br>\nTax-Free Childcare\n\n**Office of the Public Guardian**<br>\nClaim a power of attorney refund\n\n**Ministry of Justice**<br>\nClaim for costs of a child’s funeral\n\nIf you’ve used this pattern, get in touch to share your user research findings.\n\n### Next steps\n\nThe team that developed this pattern only found one service, Claim power of attorney refund, that warns users their bank details will be hidden for their security.\n\nBut GoCardless says to display a user's bank details again before the user submits them.\n\nSome users with older bank or building society accounts might have account numbers that are 9 or 10 digits long. Research is needed to confirm that these users know how to shorten their account number to fit into the field.\n\nMore research is also needed on:\n\n- how to ask users for their bank details in the context of setting up Direct Debit payments\n- whether bank details should be shown or not on a ‘Check your answers’ page and how that affects this pattern\n- how to handle international bank accounts so users are only asked for information that’s needed based on the location of their bank account\n- the information required to pay credit union accounts and how to ask credit union members for that information",
+    "phone": ""
   },
   {
     "id": "app-pattern/bar-list-ranking",
@@ -131,6 +359,191 @@
     "basis": "a flow builder in analytics mode",
     "blueprint": "No global navigation: a 44px top bar on the window ground with no rule (an exit arrow, the object's name at 16/600 with a status pill, and on the right 16px icon buttons on a 40px pitch, a secondary and a near-black primary, split by 1px dividers). Below, two panels on the ground with 8px outer margins and a 12px gap, both with a 1px border, 16px radius and no shadow: a 232px palette (16px padding, groups under 14px labels, items on a 40px pitch with a small type tile, a label and a drag grip) and the canvas, a flat well one step darker than the ground (#f4f6f8 on #f9fbfc) with no dot grid. Nodes share one width (338px in the study), 12px radius, a 1px hairline, padding 16 on top and 12 at the sides, a type tile and a 16/600 title, and their metrics in a well as key-value rows on a 32px pitch with right-aligned tabular or mono values ('0% (0)'). Nodes stack on one spine 64px apart with a 38px round insert button centred in each gap; connectors are 1px orthogonal lines with 6px rounded elbows. Overlays (date range, zoom, minimap) are small white controls pinned 16px inside the canvas corners. Canvas content is one size larger than the chrome (16 against 14). Node-type tiles may be tinted, one pastel per type, the same in the palette and on the canvas: pass --allow icon-chips to the inspector and say why.",
     "phone": "Editing a graph on a phone is rarely the job: show the flow read-only as a vertical list of nodes with their metrics, and the palette as a bottom sheet if editing is kept."
+  },
+  {
+    "id": "app-pattern/govuk-check-answers",
+    "kind": "app-pattern",
+    "name": "Check answers",
+    "summary": "Let users check their answers before submitting information to a service",
+    "domains": [
+      "government-public",
+      "product-surfaces"
+    ],
+    "sectors": [
+      "government"
+    ],
+    "tags": [
+      "govuk",
+      "form",
+      "review",
+      "check-answers"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "govuk-design-system",
+      "repo": "https://github.com/alphagov/govuk-design-system",
+      "commit": "0c6de5736a4e755a3808fb31d3a7723a33b7c705",
+      "path": "src/patterns/check-answers/index.md",
+      "license": "OGL-3.0",
+      "authors": [
+        "Government Digital Service"
+      ],
+      "url": "https://design-system.service.gov.uk/",
+      "transformations": [
+        "stripped Nunjucks, images, and links"
+      ]
+    },
+    "sourceUrl": "https://design-system.service.gov.uk/patterns/check-answers/",
+    "screen": "check-answers",
+    "kinds": [
+      "form",
+      "review"
+    ],
+    "basis": "a check answers pattern from the GOV.UK Design System",
+    "blueprint": "Let users check their answers before submitting information to a service.\n\n## When to use this pattern\n\nShow a single check answers page immediately before the confirmation screen for small to medium-sized transactions.\n\nWhen designing a very large transaction with multiple sections, it may help to include a check answers pages at the end of each section.\n\nThis can be valuable for services where different users might be completing each section. You should test this approach with your users to find out if it’s helpful.\n\nUse the Summary card component when users need to check multiple things of the same type. For example to review a series of interview appointments or application choices.\n\n## How it works\n\nCheck answers pages help to:\n\n- increase users’ confidence as they can clearly see that they have completed all the sections and that their data has been captured\n- reduce error rates as users are given a second chance to notice and correct errors before submitting data\n\n### Choose the right layout for the page\n\nMany services ask users for short answers, which are suitable for a layout that takes up two-thirds of the screen on desktop devices. For example, the 'Check your answers before submitting your application' page included in this guidance.\n\nUsing a two-thirds layout stops lines of text getting so long that the page becomes difficult to read. To learn more about line length, see 'Layout'. It also means the action links are closer to the other content on the page. Users with screen magnifiers are less likely to miss them.\n\nHowever, if your service asks users for longer or more detailed answers, a full width layout may be more suitable.\n\n### Make the page easy to understand\n\nUse the page title to tell the user what they need to do – otherwise, they might miss the 'submit' button at the end of the page.\n\nOn the page, you should also:\n\n- make it clear the transaction will not be complete until a user confirms their information is correct\n- break the content up into sections when you can\n- only show sections that are relevant to users &ndash; for example, if they’ve said they’re from the UK, do not show sections for questions they have not answered about locations outside of the UK\n- rephrase questions if you need to &ndash; for example, you do not need to label every individual line of an address, and you can rewrite long questions as shorter statements\n- make sure the 'submit' button clearly shows the action it performs &ndash; for example, ‘Change your tax details’ or ‘Send your claim form’\n\n### Let users go back and change their answers\n\nYou should provide a ‘Change’ link next to each section on your check answers page so that users can add or change the information. 'Change' links contain hidden text to make them accessible to screen reader users. Update the hidden text to describe what each 'change' link is for.\n\nIf a user decides to go back to a previous answer, make sure information they've already entered is pre-populated.\n\nThe answers pages should look the same way they did when the user last used them.\n\nWhen they’ve finished, the ‘Continue’ button should return them to the check answers page. They should not need to go through the rest of the transaction again.\n\nIf a user changes their response in a way that means you need to ask them more questions, do this before returning them to the check answers page.\n\nIf you have questions that are optional, let users know that they've skipped it without giving an answer by showing their response as ‘Not provided’.\n\n## Research on this pattern\n\nRead a blog about how the Carer’s Allowance Service used check answers to improve its users’ experience.",
+    "phone": ""
+  },
+  {
+    "id": "app-pattern/nhs-check-answers",
+    "kind": "app-pattern",
+    "name": "Check answers",
+    "summary": "Use this pattern to let users check their answers before sending information to a service.",
+    "domains": [
+      "healthcare-wellness",
+      "government-public",
+      "product-surfaces"
+    ],
+    "sectors": [
+      "healthcare",
+      "government"
+    ],
+    "tags": [
+      "nhs",
+      "form",
+      "review",
+      "check-answers"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "nhs-uk",
+      "repo": "https://github.com/nhsuk/nhsuk-service-manual",
+      "commit": "4a37578c4d8fa2c5bbf11b1039d806bebce59234",
+      "path": "app/views/design-system/patterns/check-answers/index.njk",
+      "license": "OGL-3.0",
+      "authors": [
+        "NHS England"
+      ],
+      "url": "https://service-manual.nhs.uk/design-system",
+      "transformations": [
+        "removed Nunjucks template tags and design examples",
+        "converted the guidance HTML to text"
+      ]
+    },
+    "sourceUrl": "https://service-manual.nhs.uk/design-system/patterns/check-answers",
+    "screen": "check-answers",
+    "kinds": [
+      "form",
+      "review"
+    ],
+    "basis": "a check answers pattern from the NHS.UK service manual",
+    "blueprint": "This pattern uses a summary list component for each group of answers on the page.\n\n## When to use this pattern\n\nShow a single check answers page immediately before the confirmation screen for small to medium-size transactions.\n\nWhen designing a very large transaction with multiple sections, it may help to include a check answers page at the end of each section.\n\nThis can be valuable for services where different users might be completing each section. You should test this approach with your users to find out if it's helpful.\n\n## How this pattern works\n\nCheck answers pages help to:\n\n- increase users' confidence as they can clearly see that they have completed all the sections and that their data has been captured\n\n- reduce error rates as users are given a chance to notice and correct errors before sending data\n\n### Choose the right layout for the page\n\nMany services ask users for short answers, which are suitable for a layout that takes up two-thirds of the screen on desktop devices. For example, the \"Check your answers before sending your application\" page included in this guidance.\n\nUsing a two-thirds layout stops lines of text getting so long that the page becomes difficult to read. To learn more about line length, see \"Layout\". It also means the links are closer to the other content on the page. Users with screen magnifiers are less likely to miss them.\n\nHowever, if your service asks users for longer or more detailed answers, a full width layout may be more suitable.\n\n### Make the page easy to understand\n\nUse the page title to tell the user what they need to do, otherwise they might miss the \"send\" button at the end of the page.\n\nOn the page, you should also:\n\n- make it clear the transaction will not be complete until a user confirms their information is correct\n\n- break the content up into sections when you can\n\n- only show sections that are relevant to users – for example, if they've said they do not have one or more health conditions, do not show them sections for questions they have not answered about health conditions\n\n- rephrase questions if you need to – for example, you do not need to label every individual line of an address, and you can rewrite long questions as shorter statements\n\n- make sure the \"send\" button clearly shows the action it performs – for example, \"Confirm and send\" if data is being sent somewhere, or \"Confirm and save\" if data is being updated, for example, in a staff-facing system\n\n### Let users go back and change their answers\n\nYou should provide a \"Change\" link next to each section on your check answers page so that users can add or change the information. \"Change\" links contain hidden text to make them accessible to screen reader users. Update the hidden text to describe what each \"Change\" link is for.\n\nThe answers pages should look the same way they did when the user last used them, with information they have already entered pre-populated.\n\nWhen they've finished, the \"Continue\" button should return them to the check answers page. They should not need to go through the rest of the transaction again.\n\nIf a user changes their response in a way that means you need to ask them more questions, do this before returning them to the check answers page.\n\nIf you have questions that are optional, let users know that they've skipped them without giving an answer by showing their response as \"Not provided\".",
+    "phone": ""
+  },
+  {
+    "id": "app-pattern/nhs-complete-multiple-tasks",
+    "kind": "app-pattern",
+    "name": "Complete multiple tasks",
+    "summary": "Use this pattern to give users more control over how they complete long, complex services.",
+    "domains": [
+      "healthcare-wellness",
+      "government-public",
+      "nonprofit-civic"
+    ],
+    "sectors": [
+      "healthcare",
+      "government"
+    ],
+    "tags": [
+      "nhs",
+      "navigation",
+      "task-list",
+      "complete-multiple-tasks"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "nhs-uk",
+      "repo": "https://github.com/nhsuk/nhsuk-service-manual",
+      "commit": "4a37578c4d8fa2c5bbf11b1039d806bebce59234",
+      "path": "app/views/design-system/patterns/complete-multiple-tasks/index.njk",
+      "license": "OGL-3.0",
+      "authors": [
+        "NHS England"
+      ],
+      "url": "https://service-manual.nhs.uk/design-system",
+      "transformations": [
+        "removed Nunjucks template tags and design examples",
+        "converted the guidance HTML to text"
+      ]
+    },
+    "sourceUrl": "https://service-manual.nhs.uk/design-system/patterns/complete-multiple-tasks",
+    "screen": "complete-multiple-tasks",
+    "kinds": [
+      "navigation",
+      "task-list"
+    ],
+    "basis": "a complete multiple tasks pattern from the NHS.UK service manual",
+    "blueprint": "Help users understand:\n\n- the tasks involved in completing a transaction\n\n- whether they've completed tasks\n\nThis pattern uses a task list component for each group of tasks on the page.\n\n## When to use this pattern\n\nIf your users have to get through a long or complex service, use the complete multiple tasks page to give them more control. For example, if some users cannot complete the tasks in one sitting.\n\n## When not to use this pattern\n\nTry to simplify the service before you use a complete multiple tasks page. If you're able to reduce the number of tasks or steps involved, you might not need one.\n\nDo not use the complete multiple tasks page as a way of showing users their answers. For this, use a summary list instead.\n\n## How this pattern works\n\nShow a complete multiple tasks page:\n\n- at the start of the transaction\n\n- at the start of each returning session\n\nIf you use a complete multiple tasks page in your service, you'll need to:\n\n- group related actions into tasks\n\n- show the status of the tasks\n\nIf there are lots of tasks to complete, you might also need to group tasks together.\n\n### Show related actions as a task\n\nSummarise a set of related activities and questions into a task, for example, \"Give medical information\". This will help users understand and plan what they need to do.\n\n### Show the status of the tasks\n\nMake it clear to users which tasks they have completed and which still need their attention, by labelling them using statuses.\n\nStart with the smallest number of different statuses you think might work, for example \"Completed\" and \"Incomplete\", then add more if your user research shows there's a need for them. The more you add, the harder it is for users to remember them.\n\nOnce the user has completed the task, show the status as \"Completed\" in black text with no background colour. This will draw more attention to tasks that require action.\n\n#### Tasks that are in progress\n\nYou may find you need additional statuses if your user research shows that users want to be able to distinguish between the tasks they have not started at all, and those they've started but not completed.\n\nIn this instance, instead of \"Incomplete\", you may want to use \"Not yet started\" to show which tasks they are yet to start. Use \"In progress\" for tasks they have started but are yet to complete.\n\n\"Not yet started\" uses a light blue background, and \"In progress\" uses a white background.\n\n#### Tasks that cannot yet be started\n\nIf the user cannot start the task yet, for example because another task must be completed first, use the \"Cannot start yet\" status. Use grey text with no background colour, and do not link the \"task row\".\n\n#### Tasks containing an error\n\nAvoid tasks having an error status by using the error summary and error messages displayed at the point that the error is made, so that the user can fix it straight away.\n\nIf it is unavoidable that a task may end up saved but containing an error, use the status text \"There is a problem\" and a red background.\n\nDo not use the red background colour for any status text except errors.\n\n#### Status text\n\nAlthough we recommend using consistent wording across task lists, you can change it if research shows that different text is more suitable to your service or users.\n\nIf you are creating your own statuses, use adjectives rather than verbs. Use sentence case and keep it short, so that it can be easily read and understood.\n\n#### Additional statuses\n\nIf your user research shows that there is a need for additional status tags, you can use other colours to help distinguish between them.\n\n### Group related tasks together\n\nIf your transaction involves lots of tasks, make it manageable by grouping them.\n\nFor example, you could group all tasks which ask for related information under a heading, such as \"Your details\".\n\nWhere possible, allow users to complete tasks in any order. This will help them plan their time and complete sections as and when they can.\n\n### Marking tasks as completed\n\nSometimes, it's better to let the user decide when a task is completed.\n\nThis can be helpful when a task involves:\n\n- some questions that are optional\n\n- writing a long answer (such as in a textarea)\n\n- looking up information, such as details about previous jobs\n\n- answers that need to be checked carefully with someone else\n\nDo this by asking a radio question at the end of the task. If the task is on:\n\n- a single page, do it as the last question\n\n- on multiple question pages, do it on a check answers page\n\nAsk \"Have you completed this section?\" with the radio options \"Yes, I've completed this section\" or \"No, I'll come back later\".\n\nIf the user selects \"No, I'll come back to it later\", mark the task as \"Incomplete\" or \"In progress\".\n\nIf the user selects \"Yes, I've completed this section\", mark the task as \"Completed\".\n\nAlways allow users to go back into a task to change their answer, make sure information they have already entered is pre-populated.\n\n#### Error messages\n\nIf the user does not select an option, show an error message to say: \"Select whether you've completed this section\".\n\n## Research on this pattern\n\nThis pattern is based on the pattern in the GOV.UK design system.\n\nFind out about the GOV.UK research on the task list component page, including known issues and gaps.",
+    "phone": ""
+  },
+  {
+    "id": "app-pattern/nhs-confirmation-page",
+    "kind": "app-pattern",
+    "name": "Confirmation page",
+    "summary": "Use a confirmation page to show users they have completed a task.",
+    "domains": [
+      "healthcare-wellness",
+      "government-public",
+      "product-surfaces"
+    ],
+    "sectors": [
+      "healthcare",
+      "government"
+    ],
+    "tags": [
+      "nhs",
+      "form",
+      "confirmation",
+      "confirmation-page"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "nhs-uk",
+      "repo": "https://github.com/nhsuk/nhsuk-service-manual",
+      "commit": "4a37578c4d8fa2c5bbf11b1039d806bebce59234",
+      "path": "app/views/design-system/patterns/confirmation-page/index.njk",
+      "license": "OGL-3.0",
+      "authors": [
+        "NHS England"
+      ],
+      "url": "https://service-manual.nhs.uk/design-system",
+      "transformations": [
+        "removed Nunjucks template tags and design examples",
+        "converted the guidance HTML to text"
+      ]
+    },
+    "sourceUrl": "https://service-manual.nhs.uk/design-system/patterns/confirmation-page",
+    "screen": "confirmation-page",
+    "kinds": [
+      "form",
+      "confirmation"
+    ],
+    "basis": "a confirmation page pattern from the NHS.UK service manual",
+    "blueprint": "## When to use a confirmation page\n\nYou should use a confirmation page at the end of a transactional journey.\n\n## How to use a confirmation page\n\nConfirmation pages must include:\n\n- a green confirmation panel, with a heading that confirms what the user has done\n\n- details about what will happen next and when\n\nYou may also find a need to include:\n\n- an application or reference number, if there is one – include this in the description text in the green panel\n\n- instructions about other steps the user needs to take\n\n- a summary of the details they have submitted\n\n- a way to give feedback about the service\n\n- links to more information or related services that may be helpful\n\n### Explain any reference numbers\n\nTell people:\n\n- what the reference number is\n\n- why they need it\n\n- if they should keep it (only show a number if people need to keep it)\n\n## How not to use a confirmation page\n\nAvoid including too many different components on a confirmation page. Research suggests they can overwhelm people.\n\n## Accessibility\n\nIf you add any interactive elements, make sure the panel or focus state are still accessible.\n\n## Research\n\nIn our research, people found the green panel at the top of the confirmation page reassuring. They quickly understood the key message. The left-aligned heading text tested well with people who had visual impairments and used screen readers.\n\nWe also tested the green panel with people who had colour blindness. They were able to read the text clearly. They were also able to recognise the shade of green and understood that this was a confirmation page.\n\nSome people became confused about the next step when presented with several different components on a confirmation page. This was especially the case for people who used screen readers.\n\n### Known gaps\n\nWe need more evidence to understand whether people:\n\n- find it helpful to save the information on confirmation pages\n\n- try to return to confirmation pages after completing their transaction\n\nIn testing, we used a confirmation page at the end of a GP appointment booking journey. Some people said they would take a screenshot of the confirmation page on their phone. GOV.UK found that some users bookmark and return to confirmation pages.\n\nSome people wanted more reassurance that there was nothing more for them to do before their appointment. It may be helpful to say this in the content, when relevant.\n\nWe are also looking for more evidence about the green panel at the top of confirmation pages. Particularly:\n\n- any issues with colour contrast\n\n- suitability for people who use reverse colours or are sensitive to light",
+    "phone": ""
   },
   {
     "id": "app-pattern/count-cards-filter",
@@ -254,6 +667,275 @@
     "basis": "house pattern from testing: built after a flat 24-hour chart filled a whole first screen and lost to a richer layout",
     "blueprint": "Title row: the project's name as the h1 with a status pill (Healthy, Degraded) and a breadcrumb of team and product above it; repository, branch and a freshness stamp in a 14px grey line under it; the one primary action (Redeploy, or View logs when the latest deploy failed) on the right. Then a full-width card for what is live now: the production deployment's commit message at 16/600, its branch, short SHA in mono, author and age on the left, and three or four facts in divided cells on the right (domain, live since, build time, regions). Then the health strip: three or four KPIs in one divided container, each with its change in words and in the polarity colour when it moved the wrong way. Then a two-column row: the 24-hour chart at two-thirds (deploy markers as 1px ticks with their short SHA, the budget or SLO as a dashed reference line) and, at one-third, the block that explains the worst number (the spike and what reverted it, the status codes behind the error rate). Then the deployments table capped at 6 rows, a failed row carrying its failing step and a View logs action, a building row its elapsed time.",
     "phone": "The live deployment card becomes a stack of label-value rows; the KPIs a 2x2 grid; the chart full width with its markers; the explanation under it; deployments as two-line rows with region and duration on line 2."
+  },
+  {
+    "id": "app-pattern/uswds-date-of-birth",
+    "kind": "app-pattern",
+    "name": "Date of birth",
+    "summary": "Date of birth, and other memorable dates, can be an essential piece of information used to validate identity or eligibility for services or benefits. This pattern allows users to enter their date of birth or another memorable date (such as, birth of child, death of loved one) without friction.",
+    "domains": [
+      "government-public",
+      "product-surfaces",
+      "healthcare-wellness"
+    ],
+    "sectors": [
+      "government",
+      "identity"
+    ],
+    "tags": [
+      "uswds",
+      "form",
+      "identity",
+      "date-of-birth"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "uswds",
+      "repo": "https://github.com/uswds/uswds-site",
+      "commit": "af13d80f071c3d897bee422f51954d9d7d156474",
+      "path": "pages/patterns/create-a-profile/date-of-birth.md",
+      "license": "CC0-1.0",
+      "authors": [
+        "U.S. General Services Administration"
+      ],
+      "url": "https://designsystem.digital.gov/",
+      "transformations": [
+        "converted HTML guidance to text",
+        "removed Jekyll includes, previews, and examples"
+      ]
+    },
+    "sourceUrl": "https://designsystem.digital.gov/patterns/create-a-user-profile/date-of-birth/",
+    "screen": "date-of-birth",
+    "kinds": [
+      "form",
+      "identity"
+    ],
+    "basis": "a date of birth pattern from USWDS",
+    "blueprint": "## About this pattern\n\n### What problem does this solve?\n\nWith many competing patterns for date formatting, users may become frustrated, confused, and more prone to make mistakes when entering a date of birth or other memorable date.\n\n### When to use this pattern\n\nUse this pattern when you need a user's date of birth or another memorable date.\n\n### What's the solution?\n\nAllowing a user to enter a memorable date using three clearly labeled fields provides the simplest and most inclusive digital experience. This is especially helpful when the date is in the past like a date of birth. By providing the Select component for month, and clearly labeled text input for date and year, users will understand what is being asked and not struggle to input the information or question what order the information should be entered in.\n\nMobile device users in particular may benefit from being able to type a year rather than using a scrolling date picker for date of birth or other memorable dates.\n\n## Guidance\n\n### What to do\n\n- Do provide text entry fields for day and year inputs, and the Select component for month.\n\n- Do label the fields clearly, including the month select. Some countries use a day/month/year format and it’s important that date and month are clearly distinguished to ensure correct date entry.\n\n- Do use a \"text\" vs \"numeric\" input type.\n\n- Do limit individual field character length.\n\n- Do consider your data requirements. Use both client-side and server-side validation to support properly formatted dates if possible. If you are unable to parse date without two digits, provide an example that reflects a leading zero and use clear validation messaging if a single digit without a leading zero is entered.\n\n- Do consider requiring a four-digit year to avoid potential confusion.\n\n### What not to do\n\n- Don't auto-advance focus from one field to the next. This makes it difficult for keyboard-only users to navigate and correct mistakes.\n\n- Do not use visual separators between fields.\n\n- Do not auto-advance focus from field to field.\n\n- Do not require leading zeros if possible.\n\n- Do not use a date picker.",
+    "phone": ""
+  },
+  {
+    "id": "app-pattern/govuk-dates",
+    "kind": "app-pattern",
+    "name": "Dates",
+    "summary": "Help users enter or select a date",
+    "domains": [
+      "government-public",
+      "product-surfaces"
+    ],
+    "sectors": [
+      "government"
+    ],
+    "tags": [
+      "govuk",
+      "form",
+      "dates"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "govuk-design-system",
+      "repo": "https://github.com/alphagov/govuk-design-system",
+      "commit": "0c6de5736a4e755a3808fb31d3a7723a33b7c705",
+      "path": "src/patterns/dates/index.md",
+      "license": "OGL-3.0",
+      "authors": [
+        "Government Digital Service"
+      ],
+      "url": "https://design-system.service.gov.uk/",
+      "transformations": [
+        "stripped Nunjucks, images, and links"
+      ]
+    },
+    "sourceUrl": "https://design-system.service.gov.uk/patterns/dates/",
+    "screen": "dates",
+    "kinds": [
+      "form"
+    ],
+    "basis": "a dates pattern from the GOV.UK Design System",
+    "blueprint": "Help users enter or select a date.\n\n## When to use this pattern\n\nFollow this pattern whenever you need users to provide or select a date as part of your&nbsp;service.\n\n## How it works\n\nThe way you should ask users for dates depends on the types of date you’re asking for.\n\nDates you may need users to provide include:\n\n- memorable dates, like a date of birth or marriage\n- dates from documents or cards, like a passport or credit card\n- approximate dates, like ‘December 2017’\n- relative dates, like ‘4 days from today’\n\nIn some cases you might need users to pick a date from a given selection.\n\n### Asking for memorable dates\n\nAsk for memorable dates, like dates of birth, using the Date input component component.\n\n### Asking for dates from documents and cards\n\nWhen asking for a date exactly as it’s shown on a passport, credit card or other document, make the fields match the format of the original. This makes it easier for users to copy the date across accurately.\n\n### Asking for approximate dates\n\nAllow users to enter an approximate date when you are asking them for information they may not know or may struggle to remember. For example, allow users to enter ‘December 2017’ for a field that says ‘the date you lost your passport’.\n\n### Asking for relative dates\n\nYou may need to ask for dates that are relative to today’s date or another date - this is common if a user is setting a reminder.\n\nTo do this let users enter or select relative dates like ‘tomorrow’ or ‘1 day before’. If the day of the week is important, show this as well.\n\n### Helping users to pick a date\n\nUsers might need to pick a date from a selection, for example, to book an appointment.\n\nTo do this, you can present dates in a calendar format using a calendar control. Users are typically shown one month’s worth of dates at a time, and can skip through months and&nbsp;years.\n\nOnly use a calendar control if users need to:\n\n- pick a date in the near future or recent past\n- know the day of the week, or the week of the month, as well as the date\n- be able to see dates in relation to other dates\n\nNever make a calendar control that depends on JavaScript as the only input option.&nbsp;Allow users to enter the date into a text input as well as use the control.\n\n### How to write dates\n\nSee the GOV.UK style for writing dates and date ranges.\n\nIf you give an example date, use 13 or more for the day and 9 or less for the month - for example ‘27 3 2007’. This helps users enter the date in the correct order and shows them they do not need to include leading zeroes.\n\n## Research on this pattern\n\nRead a blog post about asking for a date of birth.\n\nIf you’ve used this pattern, get in touch to share your user research findings.\n\nMore research is needed to determine the extent to which users struggle to enter months as numbers, and whether allowing them to enter months as text is helpful.",
+    "phone": ""
+  },
+  {
+    "id": "app-pattern/nhs-help-users-decide-when-and-where-to-get-care",
+    "kind": "app-pattern",
+    "name": "Decide when and where to get care (care cards)",
+    "summary": "Care cards help users identify and understand the care they need, who to contact and how quickly.",
+    "domains": [
+      "healthcare-wellness"
+    ],
+    "sectors": [
+      "healthcare"
+    ],
+    "tags": [
+      "nhs",
+      "triage",
+      "content",
+      "help-users-decide-when-and-where-to-get-care"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "nhs-uk",
+      "repo": "https://github.com/nhsuk/nhsuk-service-manual",
+      "commit": "4a37578c4d8fa2c5bbf11b1039d806bebce59234",
+      "path": "app/views/design-system/patterns/help-users-decide-when-and-where-to-get-care/index.njk",
+      "license": "OGL-3.0",
+      "authors": [
+        "NHS England"
+      ],
+      "url": "https://service-manual.nhs.uk/design-system",
+      "transformations": [
+        "removed Nunjucks template tags and design examples",
+        "converted the guidance HTML to text"
+      ]
+    },
+    "sourceUrl": "https://service-manual.nhs.uk/design-system/patterns/help-users-decide-when-and-where-to-get-care",
+    "screen": "help-users-decide-when-and-where-to-get-care",
+    "kinds": [
+      "triage",
+      "content"
+    ],
+    "basis": "a decide when and where to get care (care cards) pattern from the NHS.UK service manual",
+    "blueprint": "## When to use this pattern\n\nUse this pattern if you need to tell users to take action to get medical advice or help.\n\n## When not to use this pattern\n\nDo not use this pattern:\n\n- for information which is not about helping users understand the care they need now\n\n- in question pages in a transactional journey\n\n- to warn users about something – use a warning callout instead\n\n- to stop users in a journey, unless it's to tell them to get medical help now – consider using an interruption page instead\n\n- to signpost users to the start of a digital service – use an action link, for example, to find a pharmacy\n\n- to point users to another organisation, like a charity – use inset text or just link from a line of text\n\n- to give users a brief summary of content or a task, often with a link to more detail – use a card\n\n## How it works\n\nWe have 3 care cards for 3 levels of care:\n\n- non-urgent care card (blue)\n\n- urgent care card (red)\n\n- emergency care card (red and dark grey)\n\nYou can use more than 1 care card on a page, for example if people need different kinds of care depending on how severe their symptoms are.\n\nAvoid having too many care cards on the page. We want to give essential information and reassure people, not to scare them. Only include more than 1 of each type if you can show a clear clinical or user need.\n\nIf you have 2 care cards close together, order them according to the likelihood and seriousness of symptoms. For example:\n\n- for headaches, start with a non-urgent care card\n\n- for head injury, start with an emergency care card\n\nBe aware that users often overlook text between components, for example if you have:\n\n- 2 care cards close together\n\n- a care card near another component such as a warning callout\n\n### Non-urgent care card (blue)\n\nUse the non-urgent care card when you want users to contact a health professional such as their GP.\n\nYou can also use it to tell people to get advice from a pharmacist or to go to a clinic, for example for a chlamydia test.\n\n### Urgent care card (red)\n\nUse the urgent care card if you want users to act quickly but it's not an emergency.\n\nYou can, for example, use the urgent care card to tell people to:\n\n- make an urgent GP appointment\n\n- contact 111\n\n- go to a walk-in centre or minor injuries centre\n\nIf appropriate, tell users to ask for an urgent appointment when they ring their GP practice. It can help make sure they see someone quickly.\n\n### Emergency care card (red and dark grey)\n\nIf users need to get emergency help straight away, use the emergency care card. Depending on clinical advice, tell them to call 999 now, go to A&E now or mention both.\n\nYou can add an action link to help users find their nearest A&E. Do not include other links in an emergency care card.\n\nOnly use this card for emergencies.\n\n## Care card content\n\n### Use short clear headings\n\nThe card's heading should be 1 clear call to action. Use the format: \"Call 111 if:\" or \"Speak to a GP if:\" followed by a bulleted list in the body of the card.\n\nPeople with visual disabilities may not recognise care cards by their colour. Use the card's heading to tell them what to do. This will also help people who are stressed or need to act quickly.\n\nTo help care cards stand out from other components, you can put them under a heading. For example, \"When and where to get medical help\".\n\nIf you have any text below a care card, screen reader users may assume that it's part of the care card, unless you give it its own heading.\n\nFollow our guidance on headings, including heading structure.\n\n### Keep the card content brief and specific\n\nTry to keep bullet points short and to limit your list to the most likely symptoms or scenarios, but follow clinical advice. In an urgent care card, you can add a final catch-all bullet point such as \"you or your child have any other symptoms you're worried about\".\n\nAvoid vague or subjective language. Instead of \"a young child\", for example, say \"a child aged 5 years or younger\".\n\n### Put the detail in the body of the card\n\nDo not overload the heading. Use the space in the body of the card, but keep it short.\n\nEven if your care card includes only 1 symptom, use a bullet point under the \"if:\" in the heading. It's clearer than including a stand-alone sentence in the card.\n\nIt's also OK to have 2 colons, 1 in the heading and 1 in the body of the card, as in this example.\n\n### Keep signposting simple\n\nIdeally you should signpost to just 1 service in the heading but you can signpost to 2 (the top 2 services). If you need to, add more services at the end of the body of the care card.\n\n## Accessibility\n\nEach care card includes hidden text to make the level of urgency clear to people who use screen readers. This also helps people who use headings to navigate the page as the text is part of the heading.\n\n<h3><span class=\"visually-hidden\">Non-urgent advice</span> Speak to a GP if:<h3>\n\n## Research\n\nWe tested care cards with 1 call to action, for example \"Speak to a GP if:\". We found that users scanning the page stopped to read the care cards and understood what action to take.\n\nWe tested the cards again in 2026 and updated the guidance about how the pattern works and writing care card content.",
+    "phone": ""
+  },
+  {
+    "id": "app-pattern/uswds-email-address",
+    "kind": "app-pattern",
+    "name": "Email address",
+    "summary": "The email address pattern allows users to confidently and accurately enter their email address and ensures that it is properly formatted.",
+    "domains": [
+      "government-public",
+      "product-surfaces"
+    ],
+    "sectors": [
+      "government",
+      "identity"
+    ],
+    "tags": [
+      "uswds",
+      "form",
+      "identity",
+      "email-address"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "uswds",
+      "repo": "https://github.com/uswds/uswds-site",
+      "commit": "af13d80f071c3d897bee422f51954d9d7d156474",
+      "path": "pages/patterns/create-a-profile/email-address.md",
+      "license": "CC0-1.0",
+      "authors": [
+        "U.S. General Services Administration"
+      ],
+      "url": "https://designsystem.digital.gov/",
+      "transformations": [
+        "converted HTML guidance to text",
+        "removed Jekyll includes, previews, and examples"
+      ]
+    },
+    "sourceUrl": "https://designsystem.digital.gov/patterns/create-a-user-profile/email-address/",
+    "screen": "email-address",
+    "kinds": [
+      "form",
+      "identity"
+    ],
+    "basis": "a email address pattern from USWDS",
+    "blueprint": "## About this pattern\n\n### What problem does this solve?\n\nEmail addresses can be confusing to enter and users often make mistakes. Some users find it very frustrating to try to identify problems in email formatting.\n\n### When to use this pattern\n\nUse this pattern whenever you are collecting email addresses.\n\n### What's the solution?\n\nA text input field with validation and robust error messaging to guide users in providing the correct information.\n\n## Guidance\n\n### What to do\n\n- Tell users why you need their email address, why you might contact them, and when.\n\n- Do validate formatting by checking for an at symbol (@) that is preceded and followed by one or more characters (not spaces).\n\n- Do use both client-side and server-side validation to support properly formatted email addresses if possible.\n\n- Do consider checking for common misspellings of popular email providers. Warn users if you detect a likely misspelling, but allow them to continue since it might be a genuine email address.\n\n- Do accommodate up to 256 characters. Email addresses cannot be longer than 256 characters.\n\n- Do allow users to paste their email address.\n\n- Do consider enabling autocomplete to allow autofill to enter the email address if they’ve entered it previously.\n\n- Do use fieldset and legend to group related fields together, and clear labels and attributes on these form elements.\n\n- Do provide meaningful error messages that suggest the correct format for an email address.\n\n- Do consider the safety implications of users who share email addresses with others. Consider asking for permission to leave potentially sensitive messages.\n\n### What not to do\n\n- Do not require users to re-enter their email address, unless you have a good reason for doing so.\n\n- Do not set arbitrary minimum lengths for the local portion of the email address (occurring before the @ symbol) or domain (after the @ symbol) parts.\n\n- Do not invalidate characters frequently seen in email addresses including hyphens (-), underscores (_), plus signs (+), or periods (.) in the local portion of an email address. See RFC 822 for the exhaustive list of permitted characters in the local portion of an email address.\n\n- Do not restrict top-level domains for email address unless your use case is very specific, for example, only .gov or .mil addresses.\n\n- Do not assume that email messages are private unless explicitly stated through permission-based settings.",
+    "phone": ""
+  },
+  {
+    "id": "app-pattern/govuk-error-summary",
+    "kind": "app-pattern",
+    "name": "Error summary",
+    "summary": "Use an error summary when there is a validation error",
+    "domains": [
+      "product-surfaces",
+      "government-public"
+    ],
+    "sectors": [
+      "government"
+    ],
+    "tags": [
+      "govuk",
+      "form",
+      "errors",
+      "error-summary"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "govuk-design-system",
+      "repo": "https://github.com/alphagov/govuk-design-system",
+      "commit": "0c6de5736a4e755a3808fb31d3a7723a33b7c705",
+      "path": "src/components/error-summary/index.md",
+      "license": "OGL-3.0",
+      "authors": [
+        "Government Digital Service"
+      ],
+      "url": "https://design-system.service.gov.uk/",
+      "transformations": [
+        "stripped Nunjucks, images, and links"
+      ]
+    },
+    "sourceUrl": "https://design-system.service.gov.uk/components/error-summary/",
+    "screen": "error-summary",
+    "kinds": [
+      "form",
+      "errors"
+    ],
+    "basis": "a error summary pattern from the GOV.UK Design System",
+    "blueprint": "Use this component at the top of a page to summarise any errors a user has made.\n\nWhen a user makes an error, you must show both an error summary and an Error message component next to each answer that contains an error.\n\n## When to use this component\n\nAlways show an error summary when there is a validation error, even if there’s only one.\n\n## How it works\n\nYou must:\n\n- move keyboard focus to the error summary (the govuk-frontend javascript will do this for you)\n- include the heading ‘There is a problem’\n- link to each of the answers that have validation errors\n- make sure the error messages in the error summary are worded the same as those which appear next to the inputs with errors\n\nAs well as showing an error summary, follow the Validation pattern - for example, by adding ‘Error: ’ to the beginning of the page `<title>` so screen readers read it out as soon as possible.\n\nAnd make your error messages clear and concise.\n\nThere are 2 ways to use the error summary component. You can use HTML or, if you are using Nunjucks or the GOV.UK Prototype Kit, you can use the Nunjucks macro.\n\n### Linking from the error summary to each answer\n\nYou must link the errors in the error summary to the answer they relate to.\n\nFor questions that require a user to answer using a single field, like a file upload, select, textarea, text input or character count, link to the field.\n\nWhen a user has to enter their answer into multiple fields, such as the day, month and year fields in the date input component, link to the first field that contains an error.\n\nIf you do not know which field contains an error, link to the first field.\n\nFor questions that require a user to select one or more options from a list using radios or checkboxes, link to the first radio or checkbox.\n\n### Where to put the error summary\n\nPut the error summary at the top of the `main` container. If your page includes breadcrumbs or a back link, place it below these, but above the `<h1>`.",
+    "phone": ""
+  },
+  {
+    "id": "app-pattern/uswds-establish-trust",
+    "kind": "app-pattern",
+    "name": "Establish trust",
+    "summary": "Help users understand the purpose of a form and the time commitment needed to complete it, feel confident they have what they need, and trust that the information they provide will be safeguarded and used responsibly.",
+    "domains": [
+      "government-public",
+      "nonprofit-civic",
+      "product-surfaces"
+    ],
+    "sectors": [
+      "government"
+    ],
+    "tags": [
+      "uswds",
+      "form",
+      "trust",
+      "establish-trust"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "uswds",
+      "repo": "https://github.com/uswds/uswds-site",
+      "commit": "af13d80f071c3d897bee422f51954d9d7d156474",
+      "path": "pages/patterns/complex-form/establish-trust.md",
+      "license": "CC0-1.0",
+      "authors": [
+        "U.S. General Services Administration"
+      ],
+      "url": "https://designsystem.digital.gov/",
+      "transformations": [
+        "converted HTML guidance to text",
+        "removed Jekyll includes, previews, and examples"
+      ]
+    },
+    "sourceUrl": "https://designsystem.digital.gov/patterns/complete-a-complex-form/establish-trust/",
+    "screen": "establish-trust",
+    "kinds": [
+      "form",
+      "trust"
+    ],
+    "basis": "a establish trust pattern from USWDS",
+    "blueprint": "## About this pattern\n\n### What problem does this solve?\n\nGovernment forms can be very stressful and overwhelming for users to complete. If they are in the midst of a crisis or recovering from trauma, form completion can be very challenging. Respect for their life experiences and time, and reassurances about process and privacy, can help reduce user stress and frustration.\n\n### When to use this pattern\n\nUse this pattern when you are asking users to provide more than basic contact information, especially if you are collecting information that may require disclosing sensitive personal, financial, health, or safety details in a digital form.\n\n### What’s the solution\n\nProvide clear information on why it is necessary to complete the form, what information is needed to successfully complete the form, and how the information will be kept secure. Be as transparent as possible.\n\n## Guidance\n\n### What to do\n\n- Do provide information on why information is being collected and how it is being used.\n\n- Do use plain language.\n\n- Do use people-first language. Emphasize people’s abilities, not their limitations, and choose words that emphasize the need for accessibility, not the disability. For example, use accessible parking, not handicapped parking.\n\n- Do use inclusive language. Choose gender neutral words when possible. Avoid using citizen, unless you are specifically addressing that audience. Choose words that include the broadest appropriate group.\n\n- Do provide a list of what information your user will need to successfully complete the form.\n\n- Do provide an approximate amount of time it will take the user to complete the form.\n\n- Do allow the user to save and resume if possible. Some users may need to take breaks as they complete a form on a difficult topic. If users can save and resume the form, tell them so up front, so they know this is an option.\n\n- Do provide the user with a summary of their answers before they submit the form.\n\n### What not to do\n\n- Do not overwhelm your user. Provide enough background information to communicate the purpose and requirements of the form, but use principles of progressive disclosure to gradually move from simple to more difficult questions.\n\n- Do not ask for information that may be disturbing to the user without context. Explain why you need the information. For example, if you are going to ask about mental health or substance use issues or details on the illness or death of a loved one, explain why that information is required for the program or service.\n\n- Do not create a false sense of urgency. People under stress — even just the stress of filling out a long government form — do not need added pressure.\n\n- Use care to avoid making gender, pronoun, or biological sex assumptions based on previous answers.\n\n- Don’t provide examples that may make some groups feel excluded or targeted, such as including images or illustrations that reinforce stereotypes or stigma.",
+    "phone": ""
   },
   {
     "id": "app-pattern/finance-home-pinned-rail",
@@ -442,6 +1124,99 @@
     "phone": "KPIs become a 2 x 3 grid; the chart is full width; the share tables stack in one column and keep their row bars."
   },
   {
+    "id": "app-pattern/nhs-interruption-page",
+    "kind": "app-pattern",
+    "name": "Interruption page",
+    "summary": "If you need to pause a user's journey with important information, use an interruption page.",
+    "domains": [
+      "healthcare-wellness",
+      "government-public",
+      "product-surfaces"
+    ],
+    "sectors": [
+      "healthcare",
+      "government"
+    ],
+    "tags": [
+      "nhs",
+      "navigation",
+      "interruption",
+      "interruption-page"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "nhs-uk",
+      "repo": "https://github.com/nhsuk/nhsuk-service-manual",
+      "commit": "4a37578c4d8fa2c5bbf11b1039d806bebce59234",
+      "path": "app/views/design-system/patterns/interruption-page/index.njk",
+      "license": "OGL-3.0",
+      "authors": [
+        "NHS England"
+      ],
+      "url": "https://service-manual.nhs.uk/design-system",
+      "transformations": [
+        "removed Nunjucks template tags and design examples",
+        "converted the guidance HTML to text"
+      ]
+    },
+    "sourceUrl": "https://service-manual.nhs.uk/design-system/patterns/interruption-page",
+    "screen": "interruption-page",
+    "kinds": [
+      "navigation",
+      "interruption"
+    ],
+    "basis": "a interruption page pattern from the NHS.UK service manual",
+    "blueprint": "## When to use an interruption page\n\nThe interruption page is visually different from other components and patterns in order to draw a user's attention to something important.\n\nOnly use an interruption page when you need to make sure that the user is not about to make a mistake.\n\nUse interruption pages sparingly. The more often a user sees them, the more likely they are to skip over the content.\n\nTry using a regular page first, and only use the interruption page if you find in research that users are often missing the content. Please feed back any user research you do on this pattern.\n\nFor example use it to:\n\n- ask users to check a likely mistake\n\n- ask users to confirm something which cannot be undone\n\n- warn professionals they are about to do something risky\n\n### Check a likely mistake\n\nIf the user has entered some information which is likely to be a mistake, but is not impossible, you can use an interruption card to ask them to check if what they have entered is correct.\n\nUnlike a validation error in an error summary, they can continue without changing their answer.\n\n### Confirm something which cannot be undone\n\nIf the user is about to do something unusual which cannot be undone and could have serious consequences, such as cancelling a hospital appointment, you can use an interruption page to check with them first.\n\nDo not use this pattern if the outcome is less serious, such as unsubscribing from notifications.\n\nDo not use this pattern to ask a user to check all their answers as part of a regular journey. Use the check answers pattern instead.\n\n### Warn professionals they are about to do something risky\n\nIn a staff-facing service you can use an interruption page to make professionals, for example clinicians, aware that they're doing something unusual and potentially risky, but that they can choose to go ahead based upon their professional judgement.\n\nIf the action should never be taken, you should prevent it from happening.\n\nUse this warning sparingly.\n\n## When not to use an interruption page\n\nDo not use an interruption card to:\n\n- highlight important text on a page of content – consider using inset text instead\n\n- warn users on a page of long-form content – use a warning callout instead\n\n- ask users to agree to terms of use or other legal terms\n\n- display content that the user will see repeatedly\n\n- show users they have completed a task – use a confirmation page instead\n\n## How to use an interruption page\n\nThe interruption page uses the panel component with the addition of a nhsuk-panel--interruption class to make it blue. The button should have a nhsuk-button--reverse class to make it appear white.\n\nKeep the content on the interruption page as brief as possible.\n\n### Back links and cancel buttons\n\nInclude a back link at the top of the page to allow users to go back 1 step. Also allow users to use their browser back button.\n\nIf it's helpful to cancel the journey and jump back multiple steps or to a different part of the service, use an additional link grouped with the primary button. Label the link so that users know what will happen and where it will take them. To do this, add a <div class=\"nhsuk-button-group\"> container to group the button and the link together.\n\nDo not include a cancel link if it takes you back to the same page as the back link.",
+    "phone": ""
+  },
+  {
+    "id": "app-pattern/uswds-keep-a-record",
+    "kind": "app-pattern",
+    "name": "Keep a record",
+    "summary": "Help users feel confident in their form submission by providing a record to download or print. A printed or downloaded record of their answers provides a reference for future use, and helps users confirm their successful form submission.",
+    "domains": [
+      "government-public",
+      "nonprofit-civic",
+      "product-surfaces"
+    ],
+    "sectors": [
+      "government"
+    ],
+    "tags": [
+      "uswds",
+      "form",
+      "trust",
+      "keep-a-record"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "uswds",
+      "repo": "https://github.com/uswds/uswds-site",
+      "commit": "af13d80f071c3d897bee422f51954d9d7d156474",
+      "path": "pages/patterns/complex-form/keep-a-record.md",
+      "license": "CC0-1.0",
+      "authors": [
+        "U.S. General Services Administration"
+      ],
+      "url": "https://designsystem.digital.gov/",
+      "transformations": [
+        "converted HTML guidance to text",
+        "removed Jekyll includes, previews, and examples"
+      ]
+    },
+    "sourceUrl": "https://designsystem.digital.gov/patterns/complete-a-complex-form/keep-a-record/",
+    "screen": "keep-a-record",
+    "kinds": [
+      "form",
+      "trust"
+    ],
+    "basis": "a keep a record pattern from USWDS",
+    "blueprint": "## About this pattern\n\n### What problem does this solve?\n\nHitting the “Submit” button on a form can be terrifying, especially if the form is complex or contains deeply personal information. Providing the user with a record of the answers provided, questions skipped, and the URL and date stamp of form submission can reduce fear, increase confidence, and improve the user’s trust in your program.\n\nThis record also provides a quick reference to submitted answers that might influence eligibility, helping program support personnel work with users to identify potential misunderstandings or mistakes for easier resolution and improved service.\n\n### When to use this pattern\n\nUse this pattern when you are collecting information from users that extends beyond basic contact information, especially if you are collecting information in a long, complex form.\n\n### What’s the solution\n\nProvide the user with a printable record of their answers using a print style sheet designed to provide a streamlined record of the user’s submission, while conserving paper and ink.\n\n## Guidance\n\n### What to do\n\n- Use a print style sheet to create a summary of submitted information in a print-optimized format.\n\n- Do optimize for print by removing unnecessary graphics, minimizing color usage, and making effective use of page dimensions.\n\n- Provide a “title block” that includes the site name, URL, date, and record of successful submission.\n\n- Add any next steps, time frames, or reference numbers like case or record identifiers to the title block, if possible.\n\n- Include a complete recap of all questions and their submitted answers.\n\n- Consider whether any of the submitted values might benefit from partial masking when printed (e.g., a Social Security Number field). If you do mask, display no more than the last four (4) digits to ensure the user can still recognize their entry as the proper value.\n\n- Include a “Print” button on the summary page.\n\n- Strongly consider building in PDF generation. Print-to-PDF functionality is not widely understood in general, and can be particularly cumbersome on mobile devices.\n\n- Do use good semantic structures to aid in creating more accessible PDFs.\n\n### What not to do\n\n- Don't arbitrarily choose which questions and answers are displayed on the record of submitted information. If a question was important enough to ask, it's important enough to keep in the user's record of their form submission.\n\n- Don't include images that are not important to understanding the content.\n\n- Do not print-disable pages or try to suppress page numbering.",
+    "phone": ""
+  },
+  {
     "id": "app-pattern/kpi-strip-chart-rail",
     "kind": "app-pattern",
     "name": "KPI strip, main chart and a side rail",
@@ -541,6 +1316,189 @@
     "phone": "KPI tabs become a 2-up grid above the chart, with the selected cell marked by a fill (never an underline floating inside the grid) or a row of tabs that scrolls sideways; the chart is full width, 160-200px tall, with 4 x labels; the comparison table keeps its two right-aligned columns."
   },
   {
+    "id": "app-pattern/cms-multi-input-date-field",
+    "kind": "app-pattern",
+    "name": "Multi-Input Date Field",
+    "summary": "Date field (multi-input) provides date entry, spaced over three separate inputs for month, day, and year.",
+    "domains": [
+      "government-public",
+      "healthcare-wellness",
+      "product-surfaces"
+    ],
+    "sectors": [
+      "government",
+      "healthcare"
+    ],
+    "tags": [
+      "cms",
+      "form",
+      "date",
+      "multi-input-date-field"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "cms-design-system",
+      "repo": "https://github.com/CMSgov/design-system",
+      "commit": "269a1abeb3159824800e134064db8a7b35821ccd",
+      "path": "packages/docs/content/components/date-field/multi-input-date-field.mdx",
+      "license": "CC0-1.0",
+      "authors": [
+        "Centers for Medicare & Medicaid Services"
+      ],
+      "url": "https://design.cms.gov/",
+      "transformations": [
+        "removed MDX imports, examples, and JSX wrappers",
+        "kept the guidance section only"
+      ]
+    },
+    "sourceUrl": "https://design.cms.gov/components/date-field/multi-input-date-field/",
+    "screen": "multi-input-date-field",
+    "kinds": [
+      "form",
+      "date"
+    ],
+    "basis": "a multi-input date field pattern from the CMS Design System",
+    "blueprint": "## Guidance\n\n### When to use\n\nUse this date field when:\n\n- User flow requires inputs be separated\n- Functionality/back-end systems can't support a single date field entry\n\nGenerally used for more memorable dates like date of birth, marriage date, or income start date.\n\n### When to consider alternatives\n\n- Don't use this date field if either [single-input](/components/single-input-date-field/) or [date picker](/components/date-picker/) are feasible. This pattern is least effective with users.\n\n### Usage\n\n- Allow users to enter one-digit numbers with or without the \"0\" prior to the number. Example: \"1\" as well as \"01\" for a month or day.\n\n## Accessibility\n\nThe multi-input date field component has been tested against, and meets, WCAG 2.1 standards for text size, color contrast, and screen reader usage.\n\n- These text fields should follow the [accessibility guidelines for all text inputs](/components/text-field/text-field/#guidance).\n- Our component does not auto-advance the focus from one field to another. This is by design to make sure that keyboard users are able to correct mistakes.\n- Utilize the required `label` prop to provide a meaningful description of the multi-input date field. Optionally, you can use the `hint` prop to provide additional contextual information or clearer directions for use. Using the label and hint props provide a number of benefits to users such as lowering the cognitive burden and increasing the interaction area when using the multi-input date field.\n\n### Accessibility testing\n\n#### Screen reader testing\n\n- Screen readers should announce that each individual field is editable.\n- If the field already has content within it, the screen reader should announce the existing contents.\n- Whether the field is required or not should be announced by the screen reader.\n- The text content supplied to the label prop should be read first, then any text supplied to the hint prop should be read, then finally the content within the date field.\n\n#### Keyboard testing\n\n- Using only a keyboard, you can navigate to each text field, type in it, and navigate away from it.\n- Each field should have a visible focus indicator, and highlight any existing contents, when navigated to.\n\n#### Zoom magnification\n\n- When zoomed to 200%, text fields must remain legible, functional, and properly sized.\n\n## Code\n\n### React\n\n### Style customization\n\nThe following CSS variables can be overridden to customize Input/Form components:\n\n### Related patterns\n\n- [Date field (single-input)](/components/date-field/single-input-date-field/)\n- [Date field (with calendar)](/components/date-field/date-picker/)\n\n## Component maturity",
+    "phone": ""
+  },
+  {
+    "id": "app-pattern/uswds-name",
+    "kind": "app-pattern",
+    "name": "Name",
+    "summary": "The name pattern makes it as easy as possible for users to enter their name in the format required. This pattern is often used to validate identity and helps collect name elements in the most effective and least intrusive manner possible.",
+    "domains": [
+      "government-public",
+      "product-surfaces",
+      "healthcare-wellness"
+    ],
+    "sectors": [
+      "government",
+      "identity"
+    ],
+    "tags": [
+      "uswds",
+      "form",
+      "identity",
+      "name"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "uswds",
+      "repo": "https://github.com/uswds/uswds-site",
+      "commit": "af13d80f071c3d897bee422f51954d9d7d156474",
+      "path": "pages/patterns/create-a-profile/name.md",
+      "license": "CC0-1.0",
+      "authors": [
+        "U.S. General Services Administration"
+      ],
+      "url": "https://designsystem.digital.gov/",
+      "transformations": [
+        "converted HTML guidance to text",
+        "removed Jekyll includes, previews, and examples"
+      ]
+    },
+    "sourceUrl": "https://designsystem.digital.gov/patterns/create-a-user-profile/name/",
+    "screen": "name",
+    "kinds": [
+      "form",
+      "identity"
+    ],
+    "basis": "a name pattern from USWDS",
+    "blueprint": "## About this pattern\n\n### What problem does this solve?\n\nPeople have a wide variety of names in various formats. It can be confusing and alienating for them to enter their name if it doesn’t conform to the form fields provided, or if the form fields don’t support the characters, length, or language they require. At the same time, the name fields are often used as a primary form of identity validation, so the agency — and privacy issues — require the information be entered in a specific and consistent way.\n\n### When to use this pattern\n\nFollow this pattern when you need to ask for a user’s name as part of your service. Only ask for a name if you need it.\n\n### What's the solution?\n\nProvide multiple text entry fields that support a rich array of special characters and accents. Provide direction on how to complete the form and what to do if the name doesn’t fit into the provided format.\n\n## Guidance\n\n### What to do\n\n- Do support long text fields for each name. Allow users to enter up to 128 characters per field, but follow form norms for field display size.\n\n- Do support names as short as a single character.\n\n- Do consider confirming very short or empty name fields.\n\n- Do support a rich array of diacritics, accents, and alternative characters.\n\n- Allow users to enter more than one name in each field. Spanish-speaking people will often have two family names. Brazilians may have three or four family names.\n\n- Do allow both upper- and lowercase letters throughout each field.\n\n- Allow users to enter hyphens, apostrophes, and blank spaces in each name field.\n\n- Consider using the autocomplete attribute on name fields to allow the browser to autofill information that has been previously entered.\n\n- Do use fieldset and legend to group related fields together, and clear labels and attributes on these form elements.\n\n- Do display the complete name wherever the information is displayed (even if it is long), including on a confirmation page. You may need to truncate a name when used to convey logged-in status in the site header.\n\n- Do use hint text to help users understand which name should be used in each field.\n\n### What not to do\n\n- Do not require users to enter something in each field. In some cultures, such as Indonesian and Icelandic, people may have only one name.\n\n- If you need to request a middle name, don’t request just an initial. In some cultures, people often have multiple middle names and may not typically abbreviate them with initials.\n\n- Do not assume that a single character is an initial. Some names are one character long.\n\n- Do not normalize casing in names. In some names, such as McNamara and van der Waals, casing is part of the name.\n\n- Do not ask for maiden name. Women are not the only ones who change their names. Ask for previous name.",
+    "phone": ""
+  },
+  {
+    "id": "app-pattern/govuk-names",
+    "kind": "app-pattern",
+    "name": "Names",
+    "summary": "Help users correctly enter their name",
+    "domains": [
+      "government-public",
+      "product-surfaces"
+    ],
+    "sectors": [
+      "government"
+    ],
+    "tags": [
+      "govuk",
+      "form",
+      "names"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "govuk-design-system",
+      "repo": "https://github.com/alphagov/govuk-design-system",
+      "commit": "0c6de5736a4e755a3808fb31d3a7723a33b7c705",
+      "path": "src/patterns/names/index.md",
+      "license": "OGL-3.0",
+      "authors": [
+        "Government Digital Service"
+      ],
+      "url": "https://design-system.service.gov.uk/",
+      "transformations": [
+        "stripped Nunjucks, images, and links"
+      ]
+    },
+    "sourceUrl": "https://design-system.service.gov.uk/patterns/names/",
+    "screen": "names",
+    "kinds": [
+      "form"
+    ],
+    "basis": "a names pattern from the GOV.UK Design System",
+    "blueprint": "## When to use this pattern\n\nYou should follow this pattern whenever you need to ask for a user’s name as part of your service.\nOnly ask for people’s names if you need that information to deliver a service.\n\n## How it works\n\nMake it as easy as possible for a user to enter their name.\n\n### Make sure the fields work for most of your users\n\nFields must be long enough to accommodate the names of your users. You should use population data or data about your existing users to do this.\n\nSupport all the characters users may need to enter, including numbers and symbols.\n\n### Single or multiple name fields\n\nUse single or multiple fields depending on your user’s needs. Not everyone’s name fits the first-name, last-name format. Using multiple name fields mean there’s more risk that a person’s name will not fit the format you’ve chosen and that it is entered incorrectly.\n\nA single name field can accommodate the broadest range of name types, but means you cannot reliably extract parts of a name.\n\n### Labelling name fields\n\nLabel single name fields:\n\n- ‘Full name’\n\nFor multiple name fields, use:\n\n- ‘First name’\n- ‘Last name’\n\nIf users are from outside the UK, use the labels:\n\n- ‘Given names’\n- ‘Family name’\n\nMake it clear whether you need someone’s common name, or their name as it's written on official documents such as a passport or driving licence.\n\n#### Middle names\n\nOnly ask for middle names if your service requires them.\n\nUse the label:\n\n- ’Middle names‘\n\nMake sure middle names are optional, as not everyone has them.\n\nThe label should not include `(optional)`. Users will enter their middle names if they have them and skip the field if they do not.\n\n### Use the autocomplete attribute on name fields\n\nUse the `autocomplete` attribute on the text input component when you're asking for a user's name. This lets browsers autofill the information on a user's behalf if they’ve entered it previously.\n\nIf you are asking for a user's full name in a single field, set the `autocomplete` attribute to `name`.\n\nIf you are asking users to enter their name in multiple fields, set the `autocomplete` attribute on both fields using:\n\n- `given-name` for fields labelled 'First name' or 'Given name'\n- `family-name` for fields labelled 'Last name' or 'Family name'\n\nIf you are working in production you’ll need to do this to meet WCAG 2.2 success criterion 1.3.5 Identify input purpose.\n\nYou will not normally need to use the `autocomplete` attribute in prototypes, as users will not generally be using their own devices.\n\n### Do not spellcheck user's names\n\nSometimes, browsers will spellcheck the information a user enters into a text input. To make sure user's names will not be spellchecked, set the `spellcheck` attribute to `false` as shown in this example.\n\n### Avoid asking for a person’s title\n\nAvoid asking users for their title.\n\nIt’s extra work for them and you’re asking them to potentially reveal their gender and marital status, which they may not want to do.\n\nIt’s also hard to predict the range of titles your users will have. If you have to ask for someone’s title, use an optional Text input component not a Select component.\n\nRemember to correctly use people’s names in any resulting correspondence.\n\n### Allow users to change their name\n\nIf your service stores personal information, you should allow users to update their details, including their name.\n\nAllowing users to change their name helps your service respect their personal identity. It also means they can continue using your service without having to start over.\n\nPeople change their name for many reasons. For example, because of a change in marital status, family situation or gender.\n\nAvoid making it hard for users to change their name. As well as causing them distress, it may make them reluctant to use your service.\n\n### Error messages\n\nError messages should be styled like this:\n\nMake sure errors follow the guidance in the Error message component and have specific error messages for specific error states.\n\n## Research on this pattern\n\nIf you’ve used this pattern, get in touch to share your user research findings.\n\nYou can also read these articles to learn more about asking for users’ names:\n\n- Personal names around the world (W3C)\n- Avoid splitting single input entities (Baymard)\n- Falsehoods about names (Kalzumeus)",
+    "phone": ""
+  },
+  {
+    "id": "app-pattern/nhs-ask-for-nhs-numbers",
+    "kind": "app-pattern",
+    "name": "NHS numbers",
+    "summary": "Use this pattern to ask people for their NHS number and help them find it.",
+    "domains": [
+      "healthcare-wellness",
+      "government-public",
+      "product-surfaces"
+    ],
+    "sectors": [
+      "healthcare",
+      "government"
+    ],
+    "tags": [
+      "nhs",
+      "form",
+      "identity",
+      "ask-for-nhs-numbers"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "nhs-uk",
+      "repo": "https://github.com/nhsuk/nhsuk-service-manual",
+      "commit": "4a37578c4d8fa2c5bbf11b1039d806bebce59234",
+      "path": "app/views/design-system/patterns/ask-for-nhs-numbers/index.njk",
+      "license": "OGL-3.0",
+      "authors": [
+        "NHS England"
+      ],
+      "url": "https://service-manual.nhs.uk/design-system",
+      "transformations": [
+        "removed Nunjucks template tags and design examples",
+        "converted the guidance HTML to text"
+      ]
+    },
+    "sourceUrl": "https://service-manual.nhs.uk/design-system/patterns/ask-for-nhs-numbers",
+    "screen": "ask-for-nhs-numbers",
+    "kinds": [
+      "form",
+      "identity"
+    ],
+    "basis": "a nhs numbers pattern from the NHS.UK service manual",
+    "blueprint": "## When to use the NHS number pattern\n\nFollow this pattern when you need to ask for an NHS number.\n\nWeigh up user and business needs and clinical risk in deciding whether to ask users for their NHS number. Asking users for their NHS number is the best way to identify a patient and minimise the risks of matching the wrong person but:\n\n- users do not need to know their NHS number to get care\n\n- some users do not know their number and cannot find it easily\n\nUse this pattern if users are more likely to succeed in their journey by giving you their NHS number. Provide another route for users who cannot.\n\nTo minimise the risks of a wrong match, do not rely on an NHS number on its own.\n\n## When not to use the NHS number pattern\n\nWeigh up user and business needs and clinical risk. If users are more likely to succeed by providing other details instead of their NHS number, it may be better not to use this pattern.\n\nDo not use this pattern if you need to digitally authenticate members of the public logging into a product or service. Use NHS login instead.\n\n## How to use the NHS number pattern\n\nThere are 3 ways of asking users for their NHS number:\n\n- single text input\n\n- filter question before input\n\n- filter question before input with a 3rd option\n\n### Single text input\n\nUse a single text input if the only way users can get the service is by entering their NHS number.\n\nHowever, avoid building a service that relies on users entering their NHS number. If possible, give users another way to continue with their journey, and use a filter question instead.\n\nIf you have no other option and must use a single text input:\n\n- label it \"What is your NHS number?\" or \"Enter your NHS number\"\n\n- help users recognise their NHS number and know the correct details to enter, for example with hint text\n\n- tell users where they can find their NHS number before they start the service, as well as during the journey\n\n### Filter question before single text input\n\nUse a filter question before a single text input if there is another way for users to continue without an NHS number.\n\nUse a 2-option radio button that asks the user if they know their NHS number.\n\nIf users know their NHS number, direct them to a page that asks for it.\n\nIf users do not know their NHS number, direct them to a page that asks for the alternative details your service needs, for example postcode and date of birth. It may help to set expectations on the filter question page by telling users what details you will ask them for so they can complete their journey.\n\n### Filter question before input with 3rd option\n\nSome users may benefit from a 3rd option: \"I'm not sure\".\n\nOnly use this if:\n\n- you can demonstrate a clear user need and business value\n\n- your service can offer an alternative journey for \"not sure\" users\n\nDo not use a 3rd option to signpost to general information about NHS numbers.\n\n### How to build the NHS number pattern\n\nWhen asking for an NHS number:\n\n- use a text input that allows for spaces and other characters between numbers, as users will enter it in different ways (for example with dashes)\n\n- allow at least 12 characters in your NHS number input\n\n- check that the NHS number is valid by using a modulus 11 algorithm (explained on the NHS number page in the NHS Data Model and Dictionary)\n\n- keep the NHS number on 1 line – if you use the NHS frontend library or prototype kit, use this HTML code to stop the number from breaking up over 2 lines: <span class=\"nhsuk-u-nowrap\">999 123 4567</span>\n\n- add the inputmode=\"numeric\" attribute to your input so people can use a numeric keyboard on mobile browsers\n\n- add <meta name=\"format-detection\" content=\"telephone=no\"> to your page to turn off automatic detection of possible phone numbers (including the NHS number) in Safari\n\n### Help users find and recognise their NHS number\n\nExplain where users can find their NHS number and what it looks like. Use hint text on the filter question page and the single text input page.\n\nUsers are more successful the earlier you mention that you will ask for their NHS number and where to find it. For example, explain on your service start page that having their NHS number is useful, but they do not need it.\n\nYou do not need your NHS number but entering it will give us the best chance of matching you to your NHS record. You can find your NHS number on an NHS letter, prescription or in the NHS App.\n\n### Use the correct NHS number format\n\nWrite the NHS number as 3 groups of numbers, with a single space between them, like this: 999 123 4567.\n\nWe include an example NHS number in this pattern. 999 123 4567 is the preferred example number. If you include an example number, you must use a number that starts with 9 as these numbers are used for testing, not for real patients. Use the same number for all examples.\n\nIf you are displaying an NHS number a user has entered, show it in this format, not the way the user entered it.\n\nRead more about how to format the NHS number in the A to Z of NHS health writing.\n\n### Write clear error messages\n\nMake sure you use clear error messages and error summaries when you ask users for their NHS number.\n\nYou should tell users if:\n\n- they have included letters\n\n- they have entered a number that is too short or too long (not including spaces)\n\nYou should check:\n\n- if the user has entered a National Insurance number and tell them if they have\n\n- if their NHS number is valid against a modulus 11 algorithm\n\n## Matching patient data\n\nIf you're building products and services that need to access or manage patient demographic data, you must use the Personal Demographic Service (PDS). Read more about PDS.\n\n## Research\n\nOur research showed that many people know their NHS number, can find it quickly and would rather enter it than other details. But some users:\n\n- do not know what their NHS number looks like\n\n- cannot easily find it\n\n- try to enter their National Insurance number or a Scottish CHI (Community Health Index) number",
+    "phone": ""
+  },
+  {
     "id": "app-pattern/object-detail-header-grid",
     "kind": "app-pattern",
     "name": "Object header and a six-column grid",
@@ -588,6 +1546,97 @@
     "basis": "an event's analytics tab",
     "blueprint": "The page header is the object itself: one card (88px, 14px padding) holding a 50x62 cover, the 18/600 name with 28px icon buttons beside it (open, copy, share), a 13px grey meta line (date, time, place) and outlined 36px actions on the right. Under it, underline tabs on a full-width 1px rule, then a 36px row with a segmented time range on the left and a refresh button on the right. The body is one 6-column grid with one gutter (14px) in both directions whose spans change by row while every edge lands on the same lines: 3 KPI tiles of 2 columns, the main chart in 4 columns beside a side chart in 2, two progress cards of 3, a full-width trend of 6. Give the widest card to the screen's question, and do not give 824px to one ring and one legend row (flagged).",
     "phone": "The header card keeps cover, name and meta, with actions in a kebab; every grid item takes the full width in the same order."
+  },
+  {
+    "id": "app-pattern/cms-pagination",
+    "kind": "app-pattern",
+    "name": "Pagination",
+    "summary": "Pagination is navigation for paginated content.",
+    "domains": [
+      "product-surfaces",
+      "ecommerce-dtc",
+      "marketplaces"
+    ],
+    "sectors": [
+      "government",
+      "commerce"
+    ],
+    "tags": [
+      "cms",
+      "navigation",
+      "pagination"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "cms-design-system",
+      "repo": "https://github.com/CMSgov/design-system",
+      "commit": "269a1abeb3159824800e134064db8a7b35821ccd",
+      "path": "packages/docs/content/components/pagination.mdx",
+      "license": "CC0-1.0",
+      "authors": [
+        "Centers for Medicare & Medicaid Services"
+      ],
+      "url": "https://design.cms.gov/",
+      "transformations": [
+        "removed MDX imports, examples, and JSX wrappers",
+        "kept the guidance section only"
+      ]
+    },
+    "sourceUrl": "https://design.cms.gov/components/pagination/",
+    "screen": "pagination",
+    "kinds": [
+      "navigation"
+    ],
+    "basis": "a pagination pattern from the CMS Design System",
+    "blueprint": "## Guidance\n\nPaginated content is any content split into multiple pages determined by a specific amount of content per page, not split by any meaningful attribute, like feature or subject or step. Search results and article collections are often paginated. Readers use the pagination component to move from page to page in paginated content, or directly to the first or last page of the paginated set.\n\n### When to use\n\n- Typically used for paginated search results.\n- Can be used for multi-page collections of related items, including articles related to a category or tag, content archives, and history or activity. Splitting a large collection of related items into individual pages can improve browsability and scannability.\n\n### When to consider alternatives\n\n- If you need to indicate progress in a series of steps that must be completed in succession, like an onboarding or checkout flow, this isn't the component for you.\n- If the length of the entire collection is less than 3-4 screen lengths long, consider showing all the items at once instead of paginating.\n\n### Usage\n\n- Users want to know the length of a paginated section, so show the size of the paginated set.\n- Highlight the current page the user is on in relation to the entire collection of pages.\n- Don't split the navigation items over multiple lines as this can make individual pages more difficult to understand and select.\n- Don't include out-of-sequence items directly adjacent to one another. Wherever there are missing pages, an ellipses should be used.\n- Avoid adding complexity by focusing on the essentials and avoid adding more items to Pagination just to fill the space.\n- Use touch targets that are big enough to select with any finger and have enough separation to avoid mistakes.\n- Do not use buttons for URL-based pagination. Because the URL is updated, the browser history stack updates and a link is the correct tag to use.\n- Consider page load, performance, and the user's scrolling preferences when determining how many items are displayed on each page.\n\n## Accessibility\nThe Pagination component has been tested against, and meets, WCAG 2.1 standards for text size, color contrast, and screenreader usage.\n\n### Accessibility Guidance\n\n- The Pagination component uses a wrapping `` element to identify it as a navigation section to screen readers and other assistive technologies.\n- Itʼs likely that you will have more than one `` on a page. If you do, Pagination **must** have an ARIA label attribute defined on the `` element that describes its purpose. To do this, supply a string value to the `ariaLabel` prop on the component adequately describing the purpose. “Pagination resultsˮ is a possible option.\n- The component sets `aria-current=\"page\"` on the `` element containing the current page value to properly voice the current page for screen readers.\n- The component adds an `aria-label` to the pagination item with the word “pageˮ and the page number so that screen readers will voice the word \"page\" before the page numbers automatically.\n- Once a pagination link has been clicked, the user should be redirected to that content and focus should shift to the top-level piece of content on that page, usually an ``, but this depends on content being paginated over.\n- Uses an `` element for the non-current pages. They are announced consistently by screen readers, and function as anchor links do normally (i.e. interactive and link to content).\n- Avoid large horizontal gaps between pagination elements, as this may cause users with limited vision or mobility to miss items when scanning. For mobile devices and devices with smaller screens we offer the `compact` boolean prop which changes the layout from using a series of anchor links for each page to instead rendering the text “Page X of Yˮ.\n\n### Accessibility Testing\n\n#### Keyboard navigation\n\n- If the \"Previous\" navigation link has keyboard focus, pressing the **TAB** key should move focus to the first pagination page link.\n- If a pagination page link has keyboard focus, pressing **TAB** should move focus to the next pagination link in sequence.\n- If the last pagination page link has keyboard focus, pressing **TAB** should move focus to the \"Next\" navigation link.\n- The currently active page link should not receive keyboard focus when pressing **TAB**.\n- Verify that keyboard focus is not trapped in the pagination and that users can tab into and out of the component.\n- Confirm a visible focus indicator appears on each pagination link when using a keyboard.\n\n#### Zoom magnification\n\n- When zoomed to 200%, pagination content must remain legible, functional, and properly sized. The component should automatically adjust to mobile styling.\n\n#### Screen reader\n\n- Screen readers must announce pagination links in the correct visual and numerical order.\n- Screen readers must announce the role and label of each link (e.g., 'link, page 10').\n\n## Code\n\n### React\n\nPagination requires three properties: `totalPages`, which is the total number of pages, `currentPage`, which acts a means to track the current page, and `onPageChange`, which is a function used to handle state changes when the user clicks a page.\n\nPagination also comes in two styles: default, which is compact on mobile viewports and expands to reveal individual pages on larger viewports, and `compact`, which maintains the compact layout regardless of viewport size.\n\n### Web Component\n\n### Style customization\n\nThe following CSS variables can be overridden to customize Pagination components:\n\n## Component maturity",
+    "phone": ""
+  },
+  {
+    "id": "app-pattern/govuk-payment-card-details",
+    "kind": "app-pattern",
+    "name": "Payment card details",
+    "summary": "How to ask users for their payment card details",
+    "domains": [
+      "fintech-payments",
+      "ecommerce-dtc",
+      "government-public"
+    ],
+    "sectors": [
+      "government",
+      "finance"
+    ],
+    "tags": [
+      "govuk",
+      "form",
+      "payments",
+      "payment-card-details"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "govuk-design-system",
+      "repo": "https://github.com/alphagov/govuk-design-system",
+      "commit": "0c6de5736a4e755a3808fb31d3a7723a33b7c705",
+      "path": "src/patterns/payment-card-details/index.md",
+      "license": "OGL-3.0",
+      "authors": [
+        "Government Digital Service"
+      ],
+      "url": "https://design-system.service.gov.uk/",
+      "transformations": [
+        "stripped Nunjucks, images, and links"
+      ]
+    },
+    "sourceUrl": "https://design-system.service.gov.uk/patterns/payment-card-details/",
+    "screen": "payment-card-details",
+    "kinds": [
+      "form",
+      "payments"
+    ],
+    "basis": "a payment card details pattern from the GOV.UK Design System",
+    "blueprint": "## When to use this pattern\n\nBefore using this pattern, check if GOV.UK Pay is suitable for your service.\n\nIf you cannot use GOV.UK Pay and need to build your own payment service, follow this pattern to collect payment card details from your users.\n\n## How it works\n\n### Allow different formats\n\nLet users enter payment card numbers in whatever format is familiar to them. Allow additional spaces, hyphens and dashes.\n\n### Help users enter valid card information\n\nPresent all fields on a single page, in the order in which they appear on a credit or debit card. This makes it easy for users to transcribe the information from their payment card.\n\nShow logos for the cards you accept as icons so users can see whether their card is supported.\n\nUse Issuer Identification Number (IIN) lookups to validate the card number as the user enters it. Once you’ve been able to identify the user’s card type, leave only the relevant logo highlighted and grey out the others.\n\n<div class=\"app-video\">\n  <video class=\"app-video__player\" role=\"region\" aria-labelledby=\"card-number-video-description\" controls muted>\n    <source src=\"card-number.mp4\" type=\"video/mp4\">\n  </video>\n  <p class=\"app-video__description\" id=\"card-number-video-description\">\n    This video shows the card number validation in practice. It does not have any audio.\n  </p>\n</div>\n\nIf JavaScript is not available, display all of the logos anyway, as they still help users to understand which card types you support.\n\nWhen you validate the card number, the card security code information should update according to the type of card being used. For example, if a user enters an American Express card, the hint text and icon should change to match the front of the card.\n\nDo not use CVV or other acronyms for the card security code.\n\nIf you need to ask for a user's name elsewhere in your service, do not assume that the name on their card will be the same.\n\n## Research on this pattern\n\nThis pattern is based on the one used in GOV.UK Pay, which has been live since November 2016.\n\nThe GOV.UK Pay team tests this pattern quarterly as part of its user research.\n\n### Services using this pattern\n\nAs of August 2018 the following services were using this pattern as part of GOV.UK Pay.\n\n**Office of the Public Guardian**<br>\nLasting Power of Attorney\n\n**Ministry of Justice**<br>\nSend money to a prisoner\n\n**Border Force**<br>\nRegistered Traveller: faster entry through the UK border<br>\nGlobal Entry: apply for faster entry to the USA<br>\nElectronic Visa Waiver\n\n**Disclosure and Barring Service**<br>\nBasic Disclosure<br>\nDisclosure Scotland\n\n**HM Courts and Tribunals**<br>\nProbate Fees<br>\nCivil Money Claims<br>\nDivorce Fees\n\n**Foreign and Commonwealth Office**<br>\nEmergency Travel Documents\n\n**Ministry of Defence**<br>\nDefence Academy\n\n**Department for Digital, Culture, Media & Sport**<br>\nGovernment Art Collection<br>\nPress Accreditation\n\n**Department for International Trade**<br>\nOverseas Market Introduction Service\n\n**Nottingham University Hospitals NHS Trust**<br>\nPrivate Care\n\n**Land Registry**<br>\nLocal Land Charges\n\n**Environment Agency**<br>\nWaste Permitting",
+    "phone": ""
   },
   {
     "id": "app-pattern/chart-pairs",
@@ -638,6 +1687,99 @@
     "basis": "a network analytics overview",
     "blueprint": "Title at 24-32px with one sentence under it saying what the filters do, then one filter row of 36-38px controls (one filled or near-black, the rest borderless or text, a reset link last) and 16-24px to the KPIs. KPI row: 3 equal cards in the content column (3 x 372 + 2 x 17 = 1152 in the study) or one divided container; a 16px label over the value with the change written as a phrase on the value's baseline ('+8 in the last 90 days'), grey when it is zero. Then one row per metric: the per-period column chart on the left and its cumulative line on the right, at equal width (2 x 568 + 16 = 1152) and with the same x ticks; square bars, a 2px straight line, integer ticks from zero, no legend because each chart has one series. One gap value horizontally and vertically.",
     "phone": "Pairs stack, the cumulative chart directly under its per-period chart; KPI cards become a single column of label-value rows."
+  },
+  {
+    "id": "app-pattern/uswds-phone-number",
+    "kind": "app-pattern",
+    "name": "Phone number",
+    "summary": "The phone number pattern allows users to easily enter their phone number and ensures the phone number is properly formatted.",
+    "domains": [
+      "government-public",
+      "product-surfaces"
+    ],
+    "sectors": [
+      "government",
+      "identity"
+    ],
+    "tags": [
+      "uswds",
+      "form",
+      "identity",
+      "phone-number"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "uswds",
+      "repo": "https://github.com/uswds/uswds-site",
+      "commit": "af13d80f071c3d897bee422f51954d9d7d156474",
+      "path": "pages/patterns/create-a-profile/phone-number.md",
+      "license": "CC0-1.0",
+      "authors": [
+        "U.S. General Services Administration"
+      ],
+      "url": "https://designsystem.digital.gov/",
+      "transformations": [
+        "converted HTML guidance to text",
+        "removed Jekyll includes, previews, and examples"
+      ]
+    },
+    "sourceUrl": "https://designsystem.digital.gov/patterns/create-a-user-profile/phone-number/",
+    "screen": "phone-number",
+    "kinds": [
+      "form",
+      "identity"
+    ],
+    "basis": "a phone number pattern from USWDS",
+    "blueprint": "## About this pattern\n\n### What problem does this solve?\n\nPeople format their phone number in varying ways — with or without extra spaces, hyphens, periods, and parentheses. Some may be more accustomed to providing only seven digits. This pattern was designed to reduce confusion and frustration and ensure accurate entry.\n\n### When to use this pattern\n\nUse this pattern if you need to collect the user’s phone number. Only ask for the phone number if you need it. This pattern is designed to support U.S. phone numbers and their specific format.\n\n### What's the solution?\n\nHelp users enter their phone numbers in a consistent, correct, usable format. Use the form label and hint text to show users the expected format, and if you specifically need a U.S. or SMS-capable mobile phone number. When possible, use input masking and both client- and server-side validation to ensure the phone number they enter can be successfully used to contact them if needed.\n\n## Guidance\n\n### What to do\n\n- Tell users why you need their phone number, why you might contact them, and when.\n\n- Do clearly state if you need a U.S. telephone number.\n\n- Do clearly state if you need an SMS-capable mobile phone number, such as when you need to text a security code for validation.\n\n- Use clear hint text and input masking to ensure proper formatting.\n\n- Do use a \"text\" vs \"numeric\" input type.\n\n- Do use fieldset and legend to group related radio buttons together, and clear labels and attributes on these form elements.\n\n- Consider using the autocomplete attribute on telephone number inputs, to allow the browser to autofill information if it has been previously entered.\n\n- Offer very clear validation messages to help users successfully meet format requirements.\n\n- Allow a user to supply multiple phone numbers, labeling options Primary and Secondary.\n\n- Consider offering an extension field for a business line or other temporary residences/shelters.\n\n- Do consider the safety implications of users who share phones and voicemail boxes. Ask for permission to leave potentially sensitive messages.\n\n### What not to do\n\n- Do not require users to enter hyphens or other characters.\n\n- Do not split the phone number into separate fields. Separate fields have a high user interaction cost\n\n- Do not assume that voicemail boxes are private unless explicitly stated through permission-based settings or in the message itself.",
+    "phone": ""
+  },
+  {
+    "id": "app-pattern/cms-phone-numbers",
+    "kind": "app-pattern",
+    "name": "Phone numbers",
+    "summary": "## Guidance - Content authors, designers, and developers must ensure that phone numbers are shown as links. - If the phone number has a letter format, then only the number format of the phone number would be linked. - If the phone number…",
+    "domains": [
+      "government-public",
+      "healthcare-wellness",
+      "fintech-payments"
+    ],
+    "sectors": [
+      "government",
+      "healthcare"
+    ],
+    "tags": [
+      "cms",
+      "form",
+      "contact",
+      "phone-numbers"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "cms-design-system",
+      "repo": "https://github.com/CMSgov/design-system",
+      "commit": "269a1abeb3159824800e134064db8a7b35821ccd",
+      "path": "packages/docs/content/patterns/phone-numbers.mdx",
+      "license": "CC0-1.0",
+      "authors": [
+        "Centers for Medicare & Medicaid Services"
+      ],
+      "url": "https://design.cms.gov/",
+      "transformations": [
+        "removed MDX imports, examples, and JSX wrappers",
+        "kept the guidance section only"
+      ]
+    },
+    "sourceUrl": "https://design.cms.gov/patterns/phone-numbers/",
+    "screen": "phone-numbers",
+    "kinds": [
+      "form",
+      "contact"
+    ],
+    "basis": "a phone numbers pattern from the CMS Design System",
+    "blueprint": "## Guidance\n\n- Content authors, designers, and developers must ensure that phone numbers are shown as links.\n- If the phone number has a letter format, then only the number format of the phone number would be linked.\n- If the phone number only shows up as letters, then the letter format of the phone number would be linked.\n- All numbers need to be followed by details for Teletypewriter (TTY) users.",
+    "phone": ""
   },
   {
     "id": "app-pattern/platform-overview-tray",
@@ -720,6 +1862,95 @@
     "basis": "house pattern from round-4 testing: a home-energy overview without it read as the stock dark dashboard; real energy apps lead with this flow",
     "blueprint": "A strip under the title row that answers \"where is the power going now?\": four nodes in one row (Sun, House, Battery, Grid), each a 14px label over its live figure at 20-24px with the unit as a grey suffix (2.4 kW), the battery's charge under its figure (88%). Between neighbours, a 2px connector only where power flows now, with its direction and amount in words above it (\"to battery 1.7 kW\"); an idle link is a 1px dashed rule in the grid colour. Solar and export carry the one data hue, import from the grid is grey, the house is ink. The flows balance and are built from one live-state object that also feeds the top bar and the charts: sun + grid import + battery out = house + battery in + export. A freshness stamp at the strip's right (\"Live · 20:34\").",
     "phone": "The four nodes become a 2x2 grid in the same order (Sun, House / Battery, Grid) with the flow sentence under it (\"Sun 2.4 kW: house 0.7, battery 1.7\"), no connectors."
+  },
+  {
+    "id": "app-pattern/nhs-question-pages",
+    "kind": "app-pattern",
+    "name": "Question pages",
+    "summary": "This pattern explains when to use question pages and the elements they can include.",
+    "domains": [
+      "healthcare-wellness",
+      "government-public",
+      "product-surfaces"
+    ],
+    "sectors": [
+      "healthcare",
+      "government"
+    ],
+    "tags": [
+      "nhs",
+      "form",
+      "question-pages"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "nhs-uk",
+      "repo": "https://github.com/nhsuk/nhsuk-service-manual",
+      "commit": "4a37578c4d8fa2c5bbf11b1039d806bebce59234",
+      "path": "app/views/design-system/patterns/question-pages/index.njk",
+      "license": "OGL-3.0",
+      "authors": [
+        "NHS England"
+      ],
+      "url": "https://service-manual.nhs.uk/design-system",
+      "transformations": [
+        "removed Nunjucks template tags and design examples",
+        "converted the guidance HTML to text"
+      ]
+    },
+    "sourceUrl": "https://service-manual.nhs.uk/design-system/patterns/question-pages",
+    "screen": "question-pages",
+    "kinds": [
+      "form"
+    ],
+    "basis": "a question pages pattern from the NHS.UK service manual",
+    "blueprint": "## When to use a question page\n\nFollow this pattern whenever you need to ask users questions in your service.\n\nMake sure you know why you're asking every question and only ask users for information you really need.\n\nOn every question page you should:\n\n- make sure it's clear to users why you're asking each question\n\n- allow users to answer \"I do not know\" or \"I'm not sure\" if they are valid responses\n\nRead more about:\n\n- making sure you need each question (in our guidance on How to write good questions for forms), which also covers essential and optional questions\n\n- designing good questions (GOV.UK service manual)\n\n- the question protocol (by Caroline Jarrett on Effortmark website)\n\n## How to use a question page\n\n### Start by asking 1 question per page\n\nAsking just 1 question per page helps users:\n\n- understand what you're asking them to do\n\n- focus on the specific question and its answer\n\nSometimes it makes sense to group related questions on the same page. User research will tell you when to do this. See the section on asking multiple questions on a page.\n\n### Elements you must include\n\nQuestion pages must include a:\n\n- back link\n\n- page heading\n\n- way for users to input information\n\n- continue button\n\n#### Back link\n\nSome users do not trust browser back buttons when they're entering data.\n\nAlways include a back link component at the top of question pages to reassure users it's possible to go back and change previous answers.\n\nHowever, do not break the browser back button. Make sure it takes users to the previous page they were on, in the state they last saw it.\n\nAn exception to this is when the user has performed an action they should only do once, like make a payment or complete an application. The browser back button should still work, but show the user a sensible message rather than letting them perform the action again.\n\n#### Page heading\n\nUsually the page heading should be the question. Do this by placing the heading (<h1>) into the label or legend. Find out about using legends, labels and captions.\n\nSometimes the page heading will be a statement. Find out more about when to use statements in the sections on:\n\n- asking complex questions without using hint text\n\n- asking multiple questions on a page\n\n#### Input\n\nFor example, a text input box, radios or checkboxes.\n\nMake sure to only ask for a piece of information once within a single journey.\n\nIf the same type of information is needed more than once, make it easier to reuse previously entered answers by:\n\n- pre-populating the relevant fields\n\n- showing carried-forward responses as an option for the user to select\n\n#### Continue button\n\nMake sure your Continue button is:\n\n- labelled \"Continue\", not \"Next\"\n\n- aligned to the left so users do not miss it\n\n### Using legends, labels and captions\n\nFor single question pages, using a <legend> or <label> as the page heading is good practice as it means that screen reader users will only hear the contents once. (Use a legend for a group or set of elements as a whole and a label for a specific element, like a text input.)\n\nRead more about why and how to make labels and legends headings (on GOV.UK) or see the examples below.\n\nLearn how to set label and legend sizes on the typography page.\n\nHere's an example of a question page with a legend as the page heading.\n\nThis is an example of a question page with a label as the page heading.\n\nDo not use the same page heading across multiple pages. The page heading should relate specifically to the information being asked for on the current page, not any higher-level section the page is part of.\n\nIf you need to show the high-level section, you can use an nhsuk-caption style. See headings with captions (on the Typography page).\n\nIn this example, the heading has the caption \"About you\" above it.\n\n### Helping users answer questions\n\n#### Using hint text\n\nUse hint text to show information that helps the majority of users answer the question, like how their information will be used or where to find it.\n\n#### Asking complex questions without using hint text\n\nIf you're asking a question that needs a detailed explanation, use:\n\n- an <h1> heading that's a statement (for example, \"If we need to contact you\") rather than a question\n\n- whatever mix of text, paragraphs, lists and examples best explains your question to users\n\n- a label, above the form input, that asks users a specific question, for example, \"Do you have any communication needs?\"\n\n### Asking multiple questions on a page\n\nSometimes it makes sense to group related questions on the same page. For example, if you're designing an internal service for staff who need to repeat and switch between tasks quickly.\n\nIf you need to ask for multiple related things on a page, use a statement as the heading.\n\nYou can style each <legend> or <label> to make the questions easier to scan. Read more about why and how to style labels and legends headings (on GOV.UK).\n\n### Using progress indicators\n\nStart by testing your form without a progress indicator to see if it's simple enough that users do not need one.\n\nTry improving the order, type or number of questions before adding a progress indicator. If people still have difficulty, try adding a simple step or question indicator like this one.\n\nOnly include the total number of questions if you can do so reliably. As the user moves through the form, make sure the indicator updates to tell them which question they are on and the total number remaining.\n\nDo not use progress indicators, like this one, that show all the questions at once.\n\nThese can be problematic because they:\n\n- are often not noticed\n\n- take up lots of space\n\n- do not scale well on small screens\n\n- can distract and confuse some users\n\n- make it hard to write good labels for the steps\n\n- make it hard to handle conditional sections\n\n### Using range sliders\n\nAvoid using range slider questions, where the user needs to click and drag a selector across a range of answers or values. These types of controls are difficult for some users to interact with.\n\nIf you do use a range slider, you must provide a method for selecting an answer that does not rely on click and drag movements. This relates to WCAG 2.2 success criterion 2.5.7 Dragging movements (W3C).",
+    "phone": ""
+  },
+  {
+    "id": "app-pattern/govuk-validation",
+    "kind": "app-pattern",
+    "name": "Recover from validation errors",
+    "summary": "Check the answers users give to make sure they’re valid - and if there’s an error, tell them what's wrong and how to fix it",
+    "domains": [
+      "product-surfaces",
+      "government-public"
+    ],
+    "sectors": [
+      "government"
+    ],
+    "tags": [
+      "govuk",
+      "form",
+      "errors",
+      "validation"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "govuk-design-system",
+      "repo": "https://github.com/alphagov/govuk-design-system",
+      "commit": "0c6de5736a4e755a3808fb31d3a7723a33b7c705",
+      "path": "src/patterns/validation/index.md",
+      "license": "OGL-3.0",
+      "authors": [
+        "Government Digital Service"
+      ],
+      "url": "https://design-system.service.gov.uk/",
+      "transformations": [
+        "stripped Nunjucks, images, and links"
+      ]
+    },
+    "sourceUrl": "https://design-system.service.gov.uk/patterns/validation/",
+    "screen": "validation",
+    "kinds": [
+      "form",
+      "errors"
+    ],
+    "basis": "a recover from validation errors pattern from the GOV.UK Design System",
+    "blueprint": "Check the information the user gives you to make sure it’s valid. If there's a validation error, tell the user what's gone wrong and how to fix it. Turn off HTML5 validation.\n\n## When to use this pattern\n\nUse validation to identify when the user tried to provide information that you're not able to use. Then show the user an error message that helps them to fix the problem.\n\nBut minimise your chances of needing to show an error message in the first place by:\n\n- making sure your questions are well designed\n- accepting information in different formats, as long as it’s not ambiguous (for example, accept postcodes with or without spaces - and names that include a non-alphabetical character or an apostrophe, accent or other diacritic)\n\n## When not to use this pattern\n\nDo not use validation to check whether the user is eligible to use the service or has permission to do something. Instead, take them to a page which tells them they’re not eligible and gives them useful information about what to do next.\n\nThere are separate patterns for:\n\n- ‘There is a problem with the service’ pages\n- ‘Page not found’ pages\n- ‘Service unavailable’ pages\n\n## How it works\n\nValidation should refuse to accept:\n\n- information that cannot be correct\n- information that’s too ambiguous for you to use\n- missing information, if the information is required\n\nFor example, if you’re asking for someone’s date of birth you should not accept ‘13’ in the month field.\n\nUse validation to ignore unwanted characters, unless it would make the information too unclear for you to use. For example, any spaces, invisible characters or punctuation, like hyphens, brackets, dashes and full stops.\n\nIf these characters caused a validation error, it would be difficult for the user to see and fix – especially if added by accident.\n\nYou should ignore unwanted characters entered:\n\n- as part of numbers and codes, such as postcodes or card details\n- before or after an answer, as users might have copied and pasted them in by accident\n- by dictation software – this is particularly common when dictating numbers\n\n### How to tell the user about validation errors\n\nIf the user's answers fail validation:\n\n- show them the page again, with the form fields as the user filled them in\n- add ‘Error: ’ to the beginning of the page `<title>` so screen readers read it out as soon as possible\n- show an Error summary component at the top of the page, and move keyboard focus to it\n- show Error message components next to fields with errors\n\nRead guidance on writing good error messages.\n\nKeeping information that failed validation helps users to:\n\n- see what went wrong\n- edit their previous answer\n- avoid re-entering information\n\n### When to tell the user about validation errors\n\nDo not validate when the user moves away from a field. Wait until they try to move to the next part of the service - usually by clicking the ‘continue’ or ‘submit’ button at the bottom of the page.\n\nGenerally speaking, avoid validating the information in a field before the user has finished entering it. This sort of validation can cause problems - especially for users who type more slowly.\n\nOnly add this sort of validation if your user research shows that, on balance, it solves more problems for users than it causes. For example, the Character count component shows users an error message when they go over the character limit. Because it’s important that users do not spend time and effort writing out a response that turns out to be too long.\n\nIf you do use this sort of validation, make sure you validate in a way that’s accessible.\n\n## Client side and server side validation\n\nThere are 2 ways to carry out validation:\n\n- server side validation\n- client side validation (in the browser, using either JavaScript or HTML)\n\nYou’ll always need to carry out server side validation, even if you use client side validation. This is because there’s no guarantee that client side validation will work in all circumstances. For example, the user can bypass client side validation, or JavaScript can fail to load.\n\nOnly add client side validation if you find a user need for it. For example, because research shows it helps the user if you validate the information they're providing as they type.\n\nBefore you add client side validation, consider that:\n\n- it's hard to tell the user about errors in a way that works reliably across different browsers and assistive technologies\n- carrying out both kinds of validation means you have to check their rules do not conflict\n\n## Turn off HTML5 validation\n\nHTML5 validation is a type of client side validation built into browsers. Do not use it because:\n\n- the visual style, placement and content of HTML5 error messages cannot be made consistent with the GOV.UK Design System\n- we know that the GOV.UK Design System error message and error summary components are accessible\n\nTo turn off HTML5 validation, add ‘novalidate’ to your form tags.\n\nDo not add ‘required’ to your input fields.\n\n## Research on this pattern\n\nThis approach to validation has been used on a number of services over an extended period of time. For example, Renew or replace your adult passport.\n\nBut we'd like to expand the guidance, and we're especially interested in hearing from teams whose research has identified a need to use client side validation.\n\nWe'd also like to know about any research into whether not adding ‘required‘ to form fields causes problems for screen reader users.",
+    "phone": ""
   },
   {
     "id": "app-pattern/report-card-legend-table",
@@ -985,6 +2216,100 @@
     "phone": "The usage row becomes a 2-column grid of label-value pairs; settings rows stack."
   },
   {
+    "id": "app-pattern/uswds-social-security-number",
+    "kind": "app-pattern",
+    "name": "Social Security Number",
+    "summary": "The Social Security Number pattern allows users to easily enter their Social Security Number and ensures the Social Security Number is properly formatted.",
+    "domains": [
+      "government-public",
+      "fintech-payments",
+      "healthcare-wellness"
+    ],
+    "sectors": [
+      "government",
+      "identity"
+    ],
+    "tags": [
+      "uswds",
+      "form",
+      "identity",
+      "social-security-number"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "uswds",
+      "repo": "https://github.com/uswds/uswds-site",
+      "commit": "af13d80f071c3d897bee422f51954d9d7d156474",
+      "path": "pages/patterns/create-a-profile/social-security-number.md",
+      "license": "CC0-1.0",
+      "authors": [
+        "U.S. General Services Administration"
+      ],
+      "url": "https://designsystem.digital.gov/",
+      "transformations": [
+        "converted HTML guidance to text",
+        "removed Jekyll includes, previews, and examples"
+      ]
+    },
+    "sourceUrl": "https://designsystem.digital.gov/patterns/create-a-user-profile/social-security-number/",
+    "screen": "social-security-number",
+    "kinds": [
+      "form",
+      "identity"
+    ],
+    "basis": "a social security number pattern from USWDS",
+    "blueprint": "## About this pattern\n\n### What problem does this solve?\n\nA Social Security Number is often a critical piece for validating identity when applying for government services or benefits, but can be confusing for users to enter correctly.\n\n### When to use this pattern\n\nOnly use this pattern when you need to confirm a user's identity by asking for their Social Security Number. This information may be important when determining eligibility for many federal programs, such as federal student loans, public assistance, and Medicare.\n\n### When to consider something else\n\nIf you do not specifically need a person’s Social Security Number, do not ask for or collect this information. The Social Security Number is intricately linked to a person’s identity, and should only be used when absolutely required for identification purposes.\n\nWhile most U.S. citizens and eligible U.S. residents have a Social Security Number, some people may not know their Social Security Number, or may lack the necessary documentation to obtain one easily.\n\n### What's the solution?\n\nProvide a single text field to enter the Social Security Number.\n\n## Guidance\n\n### What to do\n\n- Do allow users to enter a Social Security Number with as much fault tolerance as possible. Hyphens and blank spaces in the Social Security Number field should be accommodated if at all possible, since users may be accustomed to entering separators to the numeric groups that make up a Social Security Number.\n\n- Do use a \"text\" vs \"numeric\" input type.\n\n- Do consider using input masking to guide correct entry of the Social Security Number.\n\n- Do use both client-side and server-side validation if possible to enforce format consistency and flag invalid Social Security Numbers.\n\n### What not to do\n\n- Do not separate the Social Security Number entry into three separate fields.\n\n- Do not use placeholder text.",
+    "phone": ""
+  },
+  {
+    "id": "app-pattern/nhs-start-page",
+    "kind": "app-pattern",
+    "name": "Start page",
+    "summary": "Use this pattern to help users start a service.",
+    "domains": [
+      "healthcare-wellness",
+      "government-public",
+      "nonprofit-civic"
+    ],
+    "sectors": [
+      "healthcare",
+      "government"
+    ],
+    "tags": [
+      "nhs",
+      "navigation",
+      "entry",
+      "start-page"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "nhs-uk",
+      "repo": "https://github.com/nhsuk/nhsuk-service-manual",
+      "commit": "4a37578c4d8fa2c5bbf11b1039d806bebce59234",
+      "path": "app/views/design-system/patterns/start-page/index.njk",
+      "license": "OGL-3.0",
+      "authors": [
+        "NHS England"
+      ],
+      "url": "https://service-manual.nhs.uk/design-system",
+      "transformations": [
+        "removed Nunjucks template tags and design examples",
+        "converted the guidance HTML to text"
+      ]
+    },
+    "sourceUrl": "https://service-manual.nhs.uk/design-system/patterns/start-page",
+    "screen": "start-page",
+    "kinds": [
+      "navigation",
+      "entry"
+    ],
+    "basis": "a start page pattern from the NHS.UK service manual",
+    "blueprint": "## When to use a start page\n\nAt the start of a service which involves the user inputting information in order to get something. For example, at the start of an application form.\n\nTo get a start page on the NHS website, contact the NHS website information architecture team on the #information-architecture channel on the service manual public Slack workspace.\n\n## How to use a start page\n\nStart pages include 4 main elements. These are:\n\n- the service name: this helps people understand what your service does and whether they need to use it, like Find your NHS number – read more about naming your service on GOV.UK\n\n- a list of things most users need to know: for example, what your service is, what will happen, what users will get or how much it'll cost\n\n- the \"Start now\" call-to-action button\n\n- a list of other ways to access the service: for example, phone or text relay\n\nKeep your start page focused on helping users get started and successfully complete the service.\n\nA good start page:\n\n- lets users know they're in the right place\n\n- sets expectations: users know what to expect before clicking anything, including whether they're eligible and what the outcome will be\n\n- helps users succeed by telling them what information they must give or documents they need to have\n\n- gives users options if the service is not for them, because it's connected to a wider topic\n\n- is easy to find and ranks highly in search engines, because it uses the language of its users\n\nRead more about designing how content and transactions work together, on GOV.UK.\n\n### Put your start page in the right place\n\nConsider where your transaction sits in a wider topic, service or website. Do not disconnect it from its wider context. Place it in a broader information architecture with elements such as the main navigation, internal search and breadcrumbs. This helps users:\n\n- feel confident they're on the right start page\n\n- know if the service is for them and that they're eligible\n\n- avoid dead ends, if they're in the wrong place, and find what they need through surrounding navigation elements\n\nThe Book, change or cancel a COVID-19 vaccination appointment service on the NHS website is in the section about vaccination and booking services.\n\nThe start page links to other information people want to know about COVID-19 vaccines.\n\nIf possible:\n\n- run an open card sort to see how users group and label pages around your start page, including the start page\n\n- run tree tests to check users find the start page in your proposed structure\n\n- follow up with usability testing\n\n### Keep important information above the button\n\nMany users do not look at information below the start button.\n\nIf information applies to everyone and they need it to complete the service, put it above the button.\n\nSometimes it's necessary to put information that only some users need below the button to stop the page getting too long for the majority of users.\n\n### Set a helpful URL\n\nSet up a URL that embeds your start page in the wider service, topic or website. Use a verb that reflects the name of the task or service.\n\nHere is a good example: https://www.nhs.uk/nhs-services/hospitals/book-an-appointment. It's the URL for booking an appointment using the NHS e-Referral service. It shows the start page's relationship to the wider topic and the website it sits in: book an appointment, for hospitals that are part of NHS services.\n\nIf you need to, create a short vanity URL to promote the service in letters or other offline activities which direct people to the service start page. For example, this is the vanity URL for e-Referral service bookings: https://www.nhs.uk/referrals.\n\n### Make it easy to update your start page\n\nSome start pages need to be updated regularly, sometimes at short notice.\n\nIf possible, put your start page in a content management system (CMS) so it's easy for a number of people to amend. It can be difficult to manage if you have it in a separate application and rely on a developer to make changes.\n\n### Check your start page includes the correct links\n\nMany websites (including the NHS website) have policy and contact information links in the footer that relate to the website as a whole. These may not be the right links for your service.\n\nIf your start page sits in a wider website, but your service is on an external domain, make sure users can access service-specific policy and contact information, for example by placing links to them within the start page.\n\n### What not to include on a start page\n\nAvoid telling people all about the service on the start page. Too much information will distract them.\n\nIf you can, check eligibility as part of the service to avoid overloading the start page with criteria.\n\nDo not use an action link on a start page instead of a button.\n\n## Accessibility\n\nIt's particularly important to keep your start page brief for users with access needs. Consider:\n\n- how a screen reader will read out the content\n\n- how much time it takes for the user to get to the main call to action\n\n- how much information they have to process\n\nLots of people miss information below the start button, especially:\n\n- people who zoom in or magnify content on the page\n\n- people with screen readers who navigate the page by headings and interactive elements (such as buttons)\n\n## Research\n\nThis pattern is based on the start page in the GOV.UK Design System, which has been tested over a number of years in a wide range of contexts.\n\n### Start now button\n\nWe follow the GOV.UK start page pattern and word the start button \"Start now\".\n\nThere are good reasons to use context-specific verbs, like \"Book now\", \"Check now\" or \"Start booking\", but we do not have enough research to recommend these yet. Please let us know if you have research to share.\n\n### Average time to complete\n\nSome services have found that telling users how long it takes helps set expectations and increases the number of successful journeys.\n\nBut the time it takes varies a lot, especially for users with access needs. Users who take longer than average may feel pressurised or stupid. If you're researching this, test with a wide range of users, and let us know what you find.\n\n### Known issues and gaps\n\nWe do not yet have enough information about start pages in applications, such as services in the NHS App that appear after a user has signed in.\n\nWe also need to know more about services where the user needs to read content as part of the journey, as well as filling in a form.",
+    "phone": ""
+  },
+  {
     "id": "app-pattern/tabbed-object-detail",
     "kind": "app-pattern",
     "name": "Tabbed object detail in a sheet",
@@ -1038,6 +2363,53 @@
     "basis": "a list's engagement tab; a reports dashboard",
     "blueprint": "Inside the sheet: a breadcrumb row at 16/600 (the parent in grey, the current page as the h1, a 24px grey type chip after it) with its actions on the right (a text button and an outlined 32px dropdown). Under it, the object's tabs at 14px with a 2px ink underline that runs 8px past the label, on a 1px rule that spans the sheet. 30px below, the filter row: a label above a 300x32 select on the left; the freshness stamp ('Last updated July 21, 2026') and a 40px refresh button on the right, centred on the select's line. Then 3 KPI cards (value 36/400, its label at 16/600 under it, the period in words) and 2 chart cards, all on one 24px gutter so the rows share column lines. Do not stretch a short card to its neighbour's height (it left 250px of dead white) and do not list legend series that have no data.",
     "phone": "Breadcrumb shortens to a back link and the h1; tabs scroll; KPI cards stack as label-value rows; charts full width."
+  },
+  {
+    "id": "app-pattern/cms-table",
+    "kind": "app-pattern",
+    "name": "Table",
+    "summary": "Tables show tabular data in columns and rows.",
+    "domains": [
+      "b2b-saas",
+      "data-analytics",
+      "government-public"
+    ],
+    "sectors": [
+      "government",
+      "healthcare"
+    ],
+    "tags": [
+      "cms",
+      "data",
+      "table",
+      "table"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "cms-design-system",
+      "repo": "https://github.com/CMSgov/design-system",
+      "commit": "269a1abeb3159824800e134064db8a7b35821ccd",
+      "path": "packages/docs/content/components/table.mdx",
+      "license": "CC0-1.0",
+      "authors": [
+        "Centers for Medicare & Medicaid Services"
+      ],
+      "url": "https://design.cms.gov/",
+      "transformations": [
+        "removed MDX imports, examples, and JSX wrappers",
+        "kept the guidance section only"
+      ]
+    },
+    "sourceUrl": "https://design.cms.gov/components/table/",
+    "screen": "table",
+    "kinds": [
+      "data",
+      "table"
+    ],
+    "basis": "a table pattern from the CMS Design System",
+    "blueprint": "## Guidance\n\n### When to use\n\n- When you need tabular information, such as statistical data.\n- When users need to compare sets of information.\n\n### When to consider alternatives\n\n- Depending on the type of content, consider using other presentation formats such as definition lists or hierarchical lists.\n- If you're writing out name / value pairs, there's often a more compact way compared to using a table.\n\n### Usage\n\n- Right-align numerical data in tables. You can use the `align` prop on the TableCell to accomplish this. Right alignment makes it easier to scan and compare numerical values.\n\n### Accessibility\n\n- Tables can have two levels of headers. Each header cell should have `scope=\"col\"` or `scope=\"row\"`. [Learn more about the \"scope\" attribute.](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/th#attr-scope)\n- Complex tables are tables with more than two levels of headers. Each header should be given a unique `id` and each data cell should have a `headers` attribute with each related header cell’s `id` listed.\n- When adding a title to a table, include it in a `` tag inside of the `` element.\n\n## Learn more\n\n- [W3C Web Accessibility Tutorial \\- Table Concepts](https://www.w3.org/WAI/tutorials/tables/)\n- [Design Better Data Tables](https://medium.com/mission-log/design-better-data-tables-430a30a00d8c)\n\n## Component maturity",
+    "phone": ""
   },
   {
     "id": "app-pattern/table-filter-bar",
@@ -1094,6 +2466,52 @@
     "basis": "an events back office, a tracks studio, a sessions overview",
     "blueprint": "Title row: an 18-24px title on the left, at most an outlined secondary and the one primary (36px) on the right. Underline tabs for the list's states on a full-width 1px rule with a 2px indicator as wide as the label; 22-32px below, the toolbar: a search of about 252-316 x 32-36 on the left, the count ('7 events') and the sort on the right. The table sits on the panel or page ground with no card around it: a header of 12-13px grey sentence-case labels with no fill and no rule, rows on a 48-56px pitch for one line or 72-92px with a thumbnail (media height plus 24-32px), 1px rules 3-7% darker than the ground or no rules at all, the identity column given the most width, numbers right-aligned in tabular figures with the unit muted ('5 /10'), one status mark per row and one kebab at the far right. Drop a column that is empty in every row (a blank co-host column left a 300px dead band). On an overview, cap the rows and link to the full list; on the full list, state the total and load more at the end.",
     "phone": "Rows become two-line items: identity and the key number on line 1, the secondary fields in 13px grey on line 2, the kebab at the right. Tabs scroll in their own row; the search becomes a full-width field."
+  },
+  {
+    "id": "app-pattern/cms-tabs",
+    "kind": "app-pattern",
+    "name": "Tabs",
+    "summary": "Tabs are a secondary navigation pattern, allowing a user to view only the content they're interested in. They build upon a real world metaphor, and the selected state simulates a folder being physically in front of others in the group.",
+    "domains": [
+      "product-surfaces",
+      "b2b-saas"
+    ],
+    "sectors": [
+      "government",
+      "healthcare"
+    ],
+    "tags": [
+      "cms",
+      "navigation",
+      "disclosure",
+      "tabs"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "cms-design-system",
+      "repo": "https://github.com/CMSgov/design-system",
+      "commit": "269a1abeb3159824800e134064db8a7b35821ccd",
+      "path": "packages/docs/content/components/tabs.mdx",
+      "license": "CC0-1.0",
+      "authors": [
+        "Centers for Medicare & Medicaid Services"
+      ],
+      "url": "https://design.cms.gov/",
+      "transformations": [
+        "removed MDX imports, examples, and JSX wrappers",
+        "kept the guidance section only"
+      ]
+    },
+    "sourceUrl": "https://design.cms.gov/components/tabs/",
+    "screen": "tabs",
+    "kinds": [
+      "navigation",
+      "disclosure"
+    ],
+    "basis": "a tabs pattern from the CMS Design System",
+    "blueprint": "## Guidance\n\n### When to use\n\n- If you have sub-sections of a page, and there's the need to only show one sub-section at a time.\n\n### When to consider alternatives\n\n- If you have more than four tabs. Consider using a different pattern if your content requires being split into more than four panels.\n- If the panel contents can be displayed at once. This will improve the scanability of your page's content and it's more likely the user will be able to find what they're looking for. Typography, including clear section headers, should be enough to allow the user to navigate the page.\n\n### Usage\n\n- Avoid overflowing tabs to new lines. If the tabs can't fit on one row on small screens, consider using utility classes to apply additional responsive styles or use a different pattern.\n- Tab labels should be descriptive of their content and set the user's expectations.\n- Tab labels should be short — aim for no more than two words.\n\n## Accessibility\n\n- Use anchor links (``) to create tabs. This allows direct linking, supports progressive enhancement, and preserves default browser behavior like opening tabs in a new window.\n  *Note: You’ll need to implement logic to select the appropriate tab based on the current URL.*\n- Markup should include proper ARIA roles and attributes to ensure accessibility:\n  - **Each tab** (``):\n    `role=\"tab\"`, `aria-selected`, `aria-controls`\n  - **Tablist container**:\n    `role=\"tablist\"`, `aria-label` (not applied by default — use the `ariaLabel` prop.)\n  - **Each tab panel**:\n    `role=\"tabpanel\"`, `aria-labelledby`\n\n  When you use our Tabs and TabPanel components together, ARIA roles are handled automatically. The Tabs component sets the appropriate aria-controls and manages selection state, while TabPanel sets its own role and receives a generated tabId. We recommend using both components together to ensure accessibility is correctly implemented.\n\n## Accessibility testing\n\n### Keyboard navigation\n\n- Users should be able to navigate to each tab using the `Tab` key and navigate backwards using `Shift + Tab`.\n- Pressing `Enter` should activate the focused tab.\n- When a tab has focus, arrow keys (`←`/`→`) should move focus between tabs.\n- A visible focus indicator should clearly show which tab is currently focused or selected.\n\n### Screen reader\n\nOur `Tabs` component applies the correct semantic roles (`tablist`, `tab`, and `tabpanel`) to ensure proper screen reader support.\nWhen implemented correctly, screen readers announce:\n- The label for each tab which is derived by the `tab` prop on each `TabPanel`.\n- Its `role` (e.g., \"tab\").\n- Its position within the set (e.g., \"Tab 1 of 3\").\n- Whether the tab is selected.\n- An accessible name is how browsers and the [accessibility tree](https://developer.mozilla.org/en-US/docs/Glossary/Accessibility_tree) identify it. Accessible names provide information for assistive technology, such as screen readers, and so icon tab must include an accessible name. If there is no text beside the icon then you must set the `ariaHidden` prop (or `aria-hidden` attribute) to `false`. Icons have built in title attributes which are the default accessible name. However you can set your own accessible name for the icon by passing in a `string` to the `description` prop on the icon component.\n\n### Zoom magnification\n\nTo ensure tab content remains visible when the screen is magnified, the widths of tabs and tab panels are defined using percentages. As the page is magnified, the height of the tabs increases and content reflows to fit the new dimensions.\n\n## Code\n\n### React\n\n### Web Component\n\n### Style customization\n\nThe following CSS variables can be overridden to customize Tab components:\n\n### Related patterns\n\n- [Vertical navigation](/components/vertical-nav/)\n\n## Learn more\n\n- [How Tabs Should Work](https://24ways.org/2015/how-tabs-should-work/)\n- [Simple ARIA tab interface](http://heydonworks.com/practical_aria_examples/#tab-interface)\n\n## Component maturity",
+    "phone": ""
   },
   {
     "id": "app-pattern/leave-timeline",
@@ -1177,5 +2595,52 @@
     "basis": "a team workspace home; a personal insights home",
     "blueprint": "A centred column on a real 12-column grid (77px columns, 16px gutters, 1100px), about 72px from the top. The greeting is the h1 (48/700 in a serif, or 24/400 in the sans), with the date after it or in a grey line under it, never as a tracked eyebrow, and no emoji. 50px below, 4 count tiles spanning 3 columns each (128px tall, 16px padding): label, value at regular weight in tabular or mono figures, a plain caption ('Ready when you are'), no deltas. Then spans that change by row but share column lines (9 + 3, then 6 + 6, so each internal edge meets one above it) for the main objects: panels with 20px padding, a 14/600 title, a count chip and a 'View all' link, holding row cards 63px tall with 8px gaps, one step lighter than the panel with a border one step darker. Pale tints may code the panels, each in the hue of the tile that counts it. Only a floating composer, if there is one, carries a shadow, and it must not cover the last rows.",
     "phone": "Greeting at 24-28px; tiles in a 2 x 2 grid; panels stack in reading order."
+  },
+  {
+    "id": "app-pattern/cms-zip-codes",
+    "kind": "app-pattern",
+    "name": "ZIP codes",
+    "summary": "There are approximately 41k ZIP codes in the United States. We use ZIP codes in various ways; to determine eligibility, as a way to search for services, or as part of an address.",
+    "domains": [
+      "government-public",
+      "healthcare-wellness",
+      "ecommerce-dtc"
+    ],
+    "sectors": [
+      "government",
+      "healthcare"
+    ],
+    "tags": [
+      "cms",
+      "form",
+      "address",
+      "zip-codes"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "cms-design-system",
+      "repo": "https://github.com/CMSgov/design-system",
+      "commit": "269a1abeb3159824800e134064db8a7b35821ccd",
+      "path": "packages/docs/content/patterns/zip-codes.mdx",
+      "license": "CC0-1.0",
+      "authors": [
+        "Centers for Medicare & Medicaid Services"
+      ],
+      "url": "https://design.cms.gov/",
+      "transformations": [
+        "removed MDX imports, examples, and JSX wrappers",
+        "kept the guidance section only"
+      ]
+    },
+    "sourceUrl": "https://design.cms.gov/patterns/zip-codes/",
+    "screen": "zip-codes",
+    "kinds": [
+      "form",
+      "address"
+    ],
+    "basis": "a zip codes pattern from the CMS Design System",
+    "blueprint": "## Guidance\n\n### 5-digit ZIP code pattern\n\nUse the `small` input size when data validation uses a 5-digit ZIP format.\n\n### 9-digit ZIP code pattern\n\nUse the `medium` input size when validating against a stricter data set, such as the 9-digit format.\n\n### ZIP code with geolocation information\n\nUse the default (`large`) input size when the user must confirm or enter data containing County, State, and ZIP code.\n\nConsider user pain points when choosing a ZIP code input field size.\n\n## Interactions\n\n- To reduce cognitive load, use the 5-digit pattern which supports a mental model that widely exists.\n- Specific validation of numeric values 0–9, spaces, and dashes.\n- Let the user pick the ZIP code and county/state option from an autocomplete option. In some use cases the ZIP code alone is ambiguous because some ZIP codes are in more than one county.\n- Display the option the user selects from the autocomplete option list\n- Error prevention clearly indicates the user needs to enter a valid ZIP code before moving to the next item.\n\n## User pain points\n\n- A small-sized input field works for a 5-digit ZIP code but hides a 9-digit format.\n- A medium-sized input field accommodates a 9-digit ZIP format but hides additional data such as county and/or state.\n- Some users' browsers auto-populate the 9-digit  ZIP code, including the dash. This interaction can be problematic when using the small input field.\n- ZIP codes are not always consistent. They may not reflect the current geography, which can lead to problems when services rely on the accuracy of the ZIP code.",
+    "phone": ""
   }
 ]

@@ -171,7 +171,7 @@ describe("stdio MCP server", () => {
       stats: { catalogEntries: number };
       domains: unknown[];
     };
-    expect(catalogBody.stats.catalogEntries).toBe(873);
+    expect(catalogBody.stats.catalogEntries).toBe(905);
     expect(catalogBody.domains).toHaveLength(40);
 
     const skill = await client.readResource({ uri: "tastepro://skill" });

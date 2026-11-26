@@ -25,6 +25,11 @@ import { fetchCached, fetchJsonCached, mapLimit } from "./lib/fetch.js";
 import { parseGuidelines } from "./lib/guidelines.js";
 import { commitSnapshot, discardStaging, prepareStaging } from "./lib/snapshot.js";
 import { type LockSource, loadSourceLock, sourceCacheKey } from "./lib/source-lock.js";
+import { cmsAdapter } from "./lib/sources/cms.js";
+import { govukAdapter } from "./lib/sources/govuk.js";
+import { nhsAdapter } from "./lib/sources/nhs.js";
+import type { SourceContext } from "./lib/sources/types.js";
+import { uswdsAdapter } from "./lib/sources/uswds.js";
 import { parseReference, parseTasteLibrary } from "./lib/taste.js";
 import { validateContent } from "./lib/validate-content.js";
 
@@ -660,6 +665,10 @@ async function main(): Promise<void> {
     "awesome-design-md",
     "web-interface-guidelines",
     "playwright-cli",
+    "govuk-design-system",
+    "uswds",
+    "cms-design-system",
+    "nhs-uk",
   ];
   for (const id of required) {
     if (!byId.has(id)) throw new Error(`sources.lock.json is missing ${id}`);
@@ -676,13 +685,72 @@ async function main(): Promise<void> {
       staging,
     );
     const playwright = await fetchPlaywright(byId.get("playwright-cli")!, options, staging);
+    const govukSource = byId.get("govuk-design-system")!;
+    const govukContext: SourceContext = {
+      source: govukSource,
+      fetchText: (path) =>
+        fetchCached(lockUrl(govukSource, path), sourceCacheKey(govukSource, path), options),
+      fetchJson: (path) =>
+        fetchJsonCached(lockUrl(govukSource, path), sourceCacheKey(govukSource, path), options),
+      provenance: (path, transformations) => provenanceFor(govukSource, path, transformations),
+      sourceUrl: (path = "") => sourceUrl(govukSource, path),
+      writeLicense: () => fetchLicense(govukSource, options, staging),
+    };
+    const govuk = await govukAdapter.fetch(govukContext);
+    const uswdsSource = byId.get("uswds")!;
+    const uswdsContext: SourceContext = {
+      source: uswdsSource,
+      fetchText: (path) =>
+        fetchCached(lockUrl(uswdsSource, path), sourceCacheKey(uswdsSource, path), options),
+      fetchJson: (path) =>
+        fetchJsonCached(lockUrl(uswdsSource, path), sourceCacheKey(uswdsSource, path), options),
+      provenance: (path, transformations) => provenanceFor(uswdsSource, path, transformations),
+      sourceUrl: (path = "") => sourceUrl(uswdsSource, path),
+      writeLicense: () => fetchLicense(uswdsSource, options, staging),
+    };
+    const uswds = await uswdsAdapter.fetch(uswdsContext);
+    const cmsSource = byId.get("cms-design-system")!;
+    const cmsContext: SourceContext = {
+      source: cmsSource,
+      fetchText: (path) =>
+        fetchCached(lockUrl(cmsSource, path), sourceCacheKey(cmsSource, path), options),
+      fetchJson: (path) =>
+        fetchJsonCached(lockUrl(cmsSource, path), sourceCacheKey(cmsSource, path), options),
+      provenance: (path, transformations) => provenanceFor(cmsSource, path, transformations),
+      sourceUrl: (path = "") => sourceUrl(cmsSource, path),
+      writeLicense: () => fetchLicense(cmsSource, options, staging),
+    };
+    const cms = await cmsAdapter.fetch(cmsContext);
+    const nhsSource = byId.get("nhs-uk")!;
+    const nhsContext: SourceContext = {
+      source: nhsSource,
+      fetchText: (path) =>
+        fetchCached(lockUrl(nhsSource, path), sourceCacheKey(nhsSource, path), options),
+      fetchJson: (path) =>
+        fetchJsonCached(lockUrl(nhsSource, path), sourceCacheKey(nhsSource, path), options),
+      provenance: (path, transformations) => provenanceFor(nhsSource, path, transformations),
+      sourceUrl: (path = "") => sourceUrl(nhsSource, path),
+      writeLicense: () => fetchLicense(nhsSource, options, staging),
+    };
+    const nhs = await nhsAdapter.fetch(nhsContext);
     const domains = await buildDomains(options.contentDir);
 
-    const warnings = [...brands.warnings, ...domains.warnings];
+    const warnings = [
+      ...brands.warnings,
+      ...domains.warnings,
+      ...govuk.warnings,
+      ...uswds.warnings,
+      ...cms.warnings,
+      ...nhs.warnings,
+    ];
     const allPacks: Pack[] = sortPacks([
       ...taste.packs,
       ...brands.packs,
       ...guidelines.packs,
+      ...govuk.packs,
+      ...uswds.packs,
+      ...cms.packs,
+      ...nhs.packs,
       ...domains.packs,
     ]);
     const references: ReferencePack[] = sortPacks([
@@ -764,6 +832,10 @@ async function main(): Promise<void> {
       brands.sourceInfo,
       guidelines.sourceInfo,
       playwright.sourceInfo,
+      govuk.sourceInfo,
+      uswds.sourceInfo,
+      cms.sourceInfo,
+      nhs.sourceInfo,
     ];
     const counts = countBy(allContent, (pack) => pack.kind);
     const quality = countBy(allContent, (pack) => pack.quality);

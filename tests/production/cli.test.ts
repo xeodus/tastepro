@@ -69,14 +69,14 @@ describe("CLI", () => {
       stats: { catalogEntries: number; contentHash: string; warnings: string[] };
       sources: Array<{ id: string }>;
     };
-    expect(body.stats.catalogEntries).toBe(873);
+    expect(body.stats.catalogEntries).toBe(905);
     expect(body.stats.contentHash).toHaveLength(64);
     expect(body.stats.warnings).toHaveLength(29);
     expect(body.sources.map((source) => source.id)).toContain("taste-skill");
 
     const human = await run(["info"]);
     expect(human.code).toBe(0);
-    expect(human.stdout).toContain("Catalog entries: 873");
+    expect(human.stdout).toContain("Catalog entries: 905");
     expect(human.stdout).toContain("awesome-design-md");
     expect(human.stdout).toContain("Warnings: 29");
   });
@@ -106,6 +106,13 @@ describe("CLI", () => {
       results: Array<{ kind: string }>;
     };
     expect(filteredBody.results.every((card) => card.kind === "direction")).toBe(true);
+
+    const govuk = await run(["search", "bank", "details", "--json", "--limit", "5"]);
+    expect(govuk.code).toBe(0);
+    const govukBody = JSON.parse(govuk.stdout) as { results: Array<{ id: string }> };
+    expect(govukBody.results.some((card) => card.id === "app-pattern/govuk-bank-details")).toBe(
+      true,
+    );
   });
 
   it("fetches packs as JSON and Markdown", async () => {
@@ -243,7 +250,7 @@ describe("CLI", () => {
       expect(health.status).toBe(200);
       const body = (await health.json()) as { status: string; catalogEntries: number };
       expect(body.status).toBe("ok");
-      expect(body.catalogEntries).toBe(873);
+      expect(body.catalogEntries).toBe(905);
     } finally {
       child.kill("SIGTERM");
       const exit = await new Promise<{ code: number | null; signal: NodeJS.Signals | null }>(

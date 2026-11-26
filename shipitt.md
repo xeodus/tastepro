@@ -88,7 +88,7 @@ Rules:
 - Version `1.1.0` for packaging + registry + protocol changes.
 
 **Gate:** `npm pack --dry-run` shows only runtime files; clean-dir
-`npx -y tastepro info` prints 873 entries; `npm audit signatures` verifies.
+`npx -y tastepro info` prints 905 entries; `npm audit signatures` verifies.
 
 **Rollback:** unpublish is not possible after 72h; publish a patch instead.
 
@@ -201,6 +201,25 @@ surface changes, otherwise 1.2.0.
 
 Cap: +200–250 packs. Every pack: source, repo, commit, path, license, authors,
 transformations.
+
+### Wave plan (current)
+
+- **1.2.0 — public sector (done):** GOV.UK, USWDS, CMS, NHS.UK.
+- **1.3.0 — enterprise and regulated domains:** Carbon, Spectrum, SAP Fiori,
+  PatternFly, Ant Design, Primer, **ethereum.org, RainbowKit / ENS / EIPs /
+  CAIPs, BigDesign, PIE, Skyscanner Backpack**.
+- **1.4.0 — remaining domain sources:** Open edX Paragon, Guardian Source,
+  GitHub Communities / opensource.guide / Bluesky / Zulip / Flarum / Matrix,
+  Android TV / Video.js / Shaka / Media Chrome.
+- **1.5.0 — original playbooks:** the 20 domains with no permissive source,
+  plus SVOD and social-feed specifics.
+
+The five moved sources — ethereum.org, RainbowKit / ENS / EIPs / CAIPs,
+BigDesign, PIE, and Skyscanner Backpack — are deliberately part of **1.3.0**.
+Backpack is archived and must be pinned and marked as a snapshot.
+
+The tier lists below remain the source reference; the wave plan is the release
+order.
 
 ### Tier 1
 

@@ -10,15 +10,17 @@ TastePro speaks **stdio** for local clients and **Streamable HTTP** for hosted
 clients. The same server works with ChatGPT, Claude, OpenCode, Cursor, and any
 MCP-compatible agent.
 
-## Status: 1.1
+## Status: 1.2
 
-The current build ships the read-only foundation, the hosted audit, and the
-distribution path:
+The current build ships the read-only foundation, the hosted audit, the
+distribution path, and domain-specific public-sector patterns:
 
 - `npx -y tastepro` (npm, with provenance) and signed standalone binaries.
 - `tastepro audit <file>` for a local verdict with rule ids, evidence, fixes,
   and `--fail-on error` for CI.
-- 873 committed content packs across 14 kinds.
+- 905 committed content packs across 14 kinds, including 57 app patterns.
+- GOV.UK, USWDS, CMS, and NHS.UK form and service patterns for payments,
+  identity, eligibility, onboarding, and care journeys.
 - 40-domain taxonomy with 15 deep seed playbooks and same-family fallback for
   uncovered domains.
 - 104-rule web-interface audit rubric with severity and category filters.
@@ -31,7 +33,7 @@ distribution path:
   transport.
 - `server.json` for the official MCP Registry, covering the npm package and the
   GHCR image.
-- Content ingestion from four pinned upstream repositories.
+- Content ingestion from eight pinned upstream repositories.
 - Unit, integration, contract, and production-tier tests.
 - Docker and staging scaffolding.
 
@@ -147,9 +149,9 @@ With Bun: `bun add -g tastepro`. From a checkout: `bun link`.
 | `reference`   |    25 | Full reference documents                |
 | `app-style`   |     7 | App visual systems                      |
 | `app-shell`   |     5 | App shell blueprints                    |
-| `app-pattern` |    25 | App screen patterns                     |
+| `app-pattern` |    57 | App screen and form patterns            |
 
-Quality mix: 550 verified, 313 reference, 10 incomplete. Incomplete packs are
+Quality mix: 582 verified, 313 reference, 10 incomplete. Incomplete packs are
 excluded by default and are never presented as complete.
 
 The content is committed under `content/generated/`, so the server works

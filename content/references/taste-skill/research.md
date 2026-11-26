@@ -44,13 +44,13 @@ others.
 
 ## 2. Scores
 
-|                | All 235        | One Page Love (151) | Awwwards (84) |
-| -------------- | -------------- | ------------------- | ------------- |
-| Median overall | 7.2            | 7.1                 | 7.5           |
-| Middle half    | 6.8–7.6        |                     |               |
-| 8.0 or higher  | 25 sites (11%) |                     |               |
-| 7.5 or higher  | 90 sites (38%) |                     |               |
-| Under 6.5      | 29 sites       |                     |               |
+| | All 235 | One Page Love (151) | Awwwards (84) |
+| --- | --- | --- | --- |
+| Median overall | 7.2 | 7.1 | 7.5 |
+| Middle half | 6.8–7.6 | | |
+| 8.0 or higher | 25 sites (11%) | | |
+| 7.5 or higher | 90 sites (38%) | | |
+| Under 6.5 | 29 sites | | |
 
 Median by criterion: design 8, usability 7, creativity 7, content 7. Among the top 25: design 9,
 usability 7, creativity 8, content 8. Usability is the one line that does not rise with the rest: the
@@ -88,15 +88,15 @@ sites' signature layout.
 
 ## 4. Headlines
 
-| Hero headline               | All | Top | Weak |
-| --------------------------- | --- | --- | ---- |
-| Words, median               | 5   | 5   | 5    |
-| Words, middle half          | 3–9 | 2–8 | 3–8  |
-| Characters, median          | 32  |     |      |
-| One line at 1440            | 47% |     |      |
-| Two lines or fewer at 1440  | 70% | 71% | 83%  |
-| Two lines or fewer at 390   | 57% |     |      |
-| Three lines or fewer at 390 | 82% |     |      |
+| Hero headline | All | Top | Weak |
+| --- | --- | --- | --- |
+| Words, median | 5 | 5 | 5 |
+| Words, middle half | 3–9 | 2–8 | 3–8 |
+| Characters, median | 32 | | |
+| One line at 1440 | 47% | | |
+| Two lines or fewer at 1440 | 70% | 71% | 83% |
+| Two lines or fewer at 390 | 57% | | |
+| Three lines or fewer at 390 | 82% | | |
 
 Awwwards heroes are shorter (median 4 words, 76% within two lines) than One Page Love's (6 words, 66%).
 Section headings have a median of 3 words. Length does not separate strong from weak; nearly everyone
@@ -105,19 +105,19 @@ the gallery already meets on desktop and that takes care to meet on a phone.
 
 ## 5. Type
 
-|                                       | All                         | Top       | Weak      |
-| ------------------------------------- | --------------------------- | --------- | --------- |
-| Hero size, median                     | 72px (5.0vw)                | 6.0vw     | 4.7vw     |
-| Hero size, middle half                | 3.0–7.6vw                   | 2.5–9.7vw | 2.7–6.1vw |
-| Largest text on the page, median      | 6.4vw                       | 8.4vw     | 5.0vw     |
-| Largest text, upper quarter starts at | 10.4vw                      | 12.5vw    | 6.7vw     |
-| Hero on a phone, median               | 40px                        |           |           |
-| Hero tracking, median (middle half)   | -0.01em (-0.03 to 0)        |           |           |
-| Hero leading, median (middle half)    | 1.0 (0.95–1.1)              |           |           |
-| Body size, median (middle half)       | 16px (14–18)                |           |           |
-| Headline ÷ body, median               | 4.3                         | 4.7       | 4.0       |
-| Typefaces carrying 3%+ of text        | one 31%, two 45%, three 22% |           |           |
-| Distinct font sizes, median           | 8                           |           |           |
+| | All | Top | Weak |
+| --- | --- | --- | --- |
+| Hero size, median | 72px (5.0vw) | 6.0vw | 4.7vw |
+| Hero size, middle half | 3.0–7.6vw | 2.5–9.7vw | 2.7–6.1vw |
+| Largest text on the page, median | 6.4vw | 8.4vw | 5.0vw |
+| Largest text, upper quarter starts at | 10.4vw | 12.5vw | 6.7vw |
+| Hero on a phone, median | 40px | | |
+| Hero tracking, median (middle half) | -0.01em (-0.03 to 0) | | |
+| Hero leading, median (middle half) | 1.0 (0.95–1.1) | | |
+| Body size, median (middle half) | 16px (14–18) | | |
+| Headline ÷ body, median | 4.3 | 4.7 | 4.0 |
+| Typefaces carrying 3%+ of text | one 31%, two 45%, three 22% | | |
+| Distinct font sizes, median | 8 | | |
 
 Hero weight: regular 48%, medium 18%, semibold 6%, bold or heavier 22%, light 6%. Capitals 24%.
 Centred 39% overall, 52% on weak sites. Display classes by the panel: neo-grotesk 48%, transitional
@@ -132,36 +132,36 @@ Measured in the page unless marked (panel).
 
 **More common on weak sites (the data supports avoiding them):**
 
-| Device                                               | Top | Weak |
-| ---------------------------------------------------- | --- | ---- |
-| Icon-topped feature cards (panel)                    | 1%  | 28%  |
-| Rows of identical cards with a small icon (measured) | 7%  | 26%  |
-| Pill badges (panel)                                  | 14% | 34%  |
-| Pill-shaped label above a heading (measured)         | 5%  | 26%  |
-| Tiny uppercase letter-spaced labels, any             | 16% | 57%  |
-| Tiny uppercase letter-spaced labels, three or more   | 6%  | 43%  |
-| Gradient fills (not counting scrims)                 | 22% | 52%  |
-| Gradient text                                        | 2%  | 13%  |
-| Shadows on resting elements, any                     | 24% | 48%  |
-| Shadows, five or more                                | 10% | 30%  |
-| Emoji in the page                                    | 10% | 26%  |
-| Eyebrow labels (panel)                               | 32% | 45%  |
+| Device | Top | Weak |
+| --- | --- | --- |
+| Icon-topped feature cards (panel) | 1% | 28% |
+| Rows of identical cards with a small icon (measured) | 7% | 26% |
+| Pill badges (panel) | 14% | 34% |
+| Pill-shaped label above a heading (measured) | 5% | 26% |
+| Tiny uppercase letter-spaced labels, any | 16% | 57% |
+| Tiny uppercase letter-spaced labels, three or more | 6% | 43% |
+| Gradient fills (not counting scrims) | 22% | 52% |
+| Gradient text | 2% | 13% |
+| Shadows on resting elements, any | 24% | 48% |
+| Shadows, five or more | 10% | 30% |
+| Emoji in the page | 10% | 26% |
+| Eyebrow labels (panel) | 32% | 45% |
 
 **No real difference:**
 
-| Device                           | Top | Weak |
-| -------------------------------- | --- | ---- |
-| Backdrop blur anywhere           | 32% | 39%  |
-| Italic-serif accent word (panel) | 4%  | 7%   |
-| Thin rules, any                  | 61% | 52%  |
+| Device | Top | Weak |
+| --- | --- | --- |
+| Backdrop blur anywhere | 32% | 39% |
+| Italic-serif accent word (panel) | 4% | 7% |
+| Thin rules, any | 61% | 52% |
 
 **More common on strong sites (banned here anyway, as house style):**
 
-| Device                                     | Top | Weak |
-| ------------------------------------------ | --- | ---- |
-| Monospace labels (panel)                   | 44% | 24%  |
-| Monospace anywhere outside code (measured) | 45% | 26%  |
-| Index numbering (panel)                    | 38% | 21%  |
+| Device | Top | Weak |
+| --- | --- | --- |
+| Monospace labels (panel) | 44% | 24% |
+| Monospace anywhere outside code (measured) | 45% | 26% |
+| Index numbering (panel) | 38% | 21% |
 
 Monospace captions, index numbers and ruled grids are the present fashion of award sites. They are
 excluded from this skill by the owner's choice, not by the data: they are the devices generators copy
@@ -245,33 +245,33 @@ without the ornaments that have since become a uniform.
 The panel's one-sentence reading of each. Notice that every one names something only that subject
 could own. (Several use devices this skill bans; take the idea, not the ornament.)
 
-| Site                     | Source        | Score | Idea                                                                                                                                                                                                        |
-| ------------------------ | ------------- | ----- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| PP Neue Montreal         | Awwwards      | 8.6   | A typeface specimen dressed as a vintage city travel guide: the font named after Montreal is sold through guidebook titling, postcards and old tourist footage.                                             |
-| Seasats                  | Awwwards      | 8.4   | Calm, dusk-lit seascapes sell autonomous boats as serene instruments, and the navigation is a column of stacked colour swatches taken from that sea-and-sand palette.                                       |
-| AI in Design Report 2026 | Awwwards      | 8.4   | A research report laid out like a colour-blocked print annual: a video collage on top, an oversized tight grotesk title, and flat orange, lilac, sage and black blocks carrying stats, quotes and chapters. |
-| House of Honey           | Awwwards      | 8.4   | A block-heavy wordmark pierced by a fine script: the bold-against-delicate contrast is repeated at every scale, with giant pink script behind quiet serif statements.                                       |
-| White Desert             | Awwwards      | 8.4   | One word, the destination, set a third of the screen tall over footage like a film title card; sheer scale stands in for remoteness.                                                                        |
-| Applied Imagination      | One Page Love | 8.3   | An essay conceived on a flight is read as a descent: an altimeter ticks from 30,000 ft to zero while you scroll down through clouds to mountains at ground level.                                           |
-| Cursor Compile           | One Page Love | 8.3   | The event name drawn as seven looping one-line curves in seven colours, more signature than logotype, on an otherwise whisper-quiet off-white page.                                                         |
-| The New Industrials      | One Page Love | 8.3   | A long-read essay laid out inside a drafting grid, where colour fields shift as you read and machine parts drift through the margins and finally assemble into the publisher's initials.                    |
-| Wild                     | One Page Love | 8.3   | A studio essay in which everything decorative is drawn on one square-pixel grid: the hero heatmap, the icons, the diagrams, the lettering and the footer.                                                   |
-| Hildén & Kaira           | Awwwards      | 8.3   | The agency name is cast in liquid chrome across the full width, and the same chrome becomes the objects that float through the page, tying the pitch to one material.                                       |
-| PX Push                  | Awwwards      | 8.2   | A design subscription presented as a retro broadcast: the entire site is seen through a CRT screen, with a chrome logo token as its mascot.                                                                 |
-| Illoca                   | Awwwards      | 8.2   | Software for architects sold as a drafting table: a two-colour illustrated studio on graph paper that the scroll pushes into until the drawing fills the screen.                                            |
-| Aspen Search             | Awwwards      | 8.2   | The page is a tile system with no margins: the two-word name is split across cells that alternate type, dithered image, black and one mint green.                                                           |
-| Dragonfly Redux          | Awwwards      | 8.2   | A crypto fund presented as a terminal artefact: every picture is rendered in characters, framed by four letters of the name pinned to the viewport corners.                                                 |
-| Monolog                  | Awwwards      | 8.2   | A studio pitch run as an asymmetric sheet: a narrow left column carries the sales talk while a wide right column stacks a very heavy headline and the proof.                                                |
-| The Queue                | One Page Love | 8.1   | An essay on queueing where the queue is the ornament: a line of drawn figures stands along the bottom of the hero and returns between chapters in changing period dress.                                    |
-| Paul Kalkbrenner         | Awwwards      | 8.1   | Swiss poster typography for a techno artist: the name as one black line with a photo set inside it like a glyph, then every chapter gets its own flat colour.                                               |
-| Vero New York            | Awwwards      | 8.1   | A keepsake treated like couture: a slow close-up film opens, then a white sculpture of a dress stays pinned at centre while one sentence passes over it.                                                    |
-| Depo Luxe                | Awwwards      | 8.1   | A film production roster shown as a full-screen reel in which every step is one film with only a title, a director and a client, set like credits at body size.                                             |
-| Longbow                  | Awwwards      | 8.1   | The page is built on a visible four-column construction grid, and cars, cards and a giant condensed marquee are slotted into its cells like objects on an artboard.                                         |
-| Mosby's Files            | Awwwards      | 8.0   | An archive of architects presented as a physical stack of coloured index-tab file folders that you flip through.                                                                                            |
-| Sarah & Matt Wedding     | One Page Love | 8.0   | The site is the invitation: a letterpress-style card opens the page, and its ornaments and small typographic parts become the components for everything after it.                                           |
-| Zara Webb                | One Page Love | 8.0   | A one-woman newborn-care practice presented like a hand-made keepsake: a mascot rabbit, scalloped and flower-shaped cut-outs, candid film photographs.                                                      |
-| Noho                     | Awwwards      | 8.0   | Furniture sold through people misusing it (wearing, balancing on, hiding behind chairs on flat colour backdrops) while the interface stays quiet.                                                           |
-| Juggle                   | One Page Love | 8.0   | The headline literally drowns: a flat blue field rises to half height and the lines below the waterline change colour.                                                                                      |
+| Site | Source | Score | Idea |
+| --- | --- | --- | --- |
+| PP Neue Montreal | Awwwards | 8.6 | A typeface specimen dressed as a vintage city travel guide: the font named after Montreal is sold through guidebook titling, postcards and old tourist footage. |
+| Seasats | Awwwards | 8.4 | Calm, dusk-lit seascapes sell autonomous boats as serene instruments, and the navigation is a column of stacked colour swatches taken from that sea-and-sand palette. |
+| AI in Design Report 2026 | Awwwards | 8.4 | A research report laid out like a colour-blocked print annual: a video collage on top, an oversized tight grotesk title, and flat orange, lilac, sage and black blocks carrying stats, quotes and chapters. |
+| House of Honey | Awwwards | 8.4 | A block-heavy wordmark pierced by a fine script: the bold-against-delicate contrast is repeated at every scale, with giant pink script behind quiet serif statements. |
+| White Desert | Awwwards | 8.4 | One word, the destination, set a third of the screen tall over footage like a film title card; sheer scale stands in for remoteness. |
+| Applied Imagination | One Page Love | 8.3 | An essay conceived on a flight is read as a descent: an altimeter ticks from 30,000 ft to zero while you scroll down through clouds to mountains at ground level. |
+| Cursor Compile | One Page Love | 8.3 | The event name drawn as seven looping one-line curves in seven colours, more signature than logotype, on an otherwise whisper-quiet off-white page. |
+| The New Industrials | One Page Love | 8.3 | A long-read essay laid out inside a drafting grid, where colour fields shift as you read and machine parts drift through the margins and finally assemble into the publisher's initials. |
+| Wild | One Page Love | 8.3 | A studio essay in which everything decorative is drawn on one square-pixel grid: the hero heatmap, the icons, the diagrams, the lettering and the footer. |
+| Hildén & Kaira | Awwwards | 8.3 | The agency name is cast in liquid chrome across the full width, and the same chrome becomes the objects that float through the page, tying the pitch to one material. |
+| PX Push | Awwwards | 8.2 | A design subscription presented as a retro broadcast: the entire site is seen through a CRT screen, with a chrome logo token as its mascot. |
+| Illoca | Awwwards | 8.2 | Software for architects sold as a drafting table: a two-colour illustrated studio on graph paper that the scroll pushes into until the drawing fills the screen. |
+| Aspen Search | Awwwards | 8.2 | The page is a tile system with no margins: the two-word name is split across cells that alternate type, dithered image, black and one mint green. |
+| Dragonfly Redux | Awwwards | 8.2 | A crypto fund presented as a terminal artefact: every picture is rendered in characters, framed by four letters of the name pinned to the viewport corners. |
+| Monolog | Awwwards | 8.2 | A studio pitch run as an asymmetric sheet: a narrow left column carries the sales talk while a wide right column stacks a very heavy headline and the proof. |
+| The Queue | One Page Love | 8.1 | An essay on queueing where the queue is the ornament: a line of drawn figures stands along the bottom of the hero and returns between chapters in changing period dress. |
+| Paul Kalkbrenner | Awwwards | 8.1 | Swiss poster typography for a techno artist: the name as one black line with a photo set inside it like a glyph, then every chapter gets its own flat colour. |
+| Vero New York | Awwwards | 8.1 | A keepsake treated like couture: a slow close-up film opens, then a white sculpture of a dress stays pinned at centre while one sentence passes over it. |
+| Depo Luxe | Awwwards | 8.1 | A film production roster shown as a full-screen reel in which every step is one film with only a title, a director and a client, set like credits at body size. |
+| Longbow | Awwwards | 8.1 | The page is built on a visible four-column construction grid, and cars, cards and a giant condensed marquee are slotted into its cells like objects on an artboard. |
+| Mosby's Files | Awwwards | 8.0 | An archive of architects presented as a physical stack of coloured index-tab file folders that you flip through. |
+| Sarah & Matt Wedding | One Page Love | 8.0 | The site is the invitation: a letterpress-style card opens the page, and its ornaments and small typographic parts become the components for everything after it. |
+| Zara Webb | One Page Love | 8.0 | A one-woman newborn-care practice presented like a hand-made keepsake: a mascot rabbit, scalloped and flower-shaped cut-outs, candid film photographs. |
+| Noho | Awwwards | 8.0 | Furniture sold through people misusing it (wearing, balancing on, hiding behind chairs on flat colour backdrops) while the interface stays quiet. |
+| Juggle | One Page Love | 8.0 | The headline literally drowns: a flat blue field rises to half height and the lines below the waterline change colour. |
 
 Full notes on any studied site: `node scripts/draw.mjs --site <id>` (ids appear on direction sheets).
 
@@ -284,13 +284,13 @@ and with this skill. Every build was photographed by `inspect.mjs` in the same w
 by a separate agent with the juror brief (Awwwards weights, anonymous A/B/C folders, screenshots
 only). The skill was revised after each round from the jurors' reasons and the builders' notes.
 
-| Round             | Briefs | This skill | Baseline | Atelier | Wins   |
-| ----------------- | ------ | ---------- | -------- | ------- | ------ |
-| 1                 | 4      | 6.6        | 7.7      | 6.8     | 1 of 4 |
-| 2                 | 3      | 7.1        | 8.0      |         | 0 of 3 |
-| 3                 | 3      | 7.5        | 7.5      |         | 1 of 3 |
-| 4 (unseen briefs) | 3      | 6.9        | 7.9      | 7.5     | 0 of 3 |
-| 5 (same three)    | 3      | 7.7        | 7.8      | 7.2     | 2 of 3 |
+| Round | Briefs | This skill | Baseline | Atelier | Wins |
+| --- | --- | --- | --- | --- | --- |
+| 1 | 4 | 6.6 | 7.7 | 6.8 | 1 of 4 |
+| 2 | 3 | 7.1 | 8.0 | | 0 of 3 |
+| 3 | 3 | 7.5 | 7.5 | | 1 of 3 |
+| 4 (unseen briefs) | 3 | 6.9 | 7.9 | 7.5 | 0 of 3 |
+| 5 (same three) | 3 | 7.7 | 7.8 | 7.2 | 2 of 3 |
 
 Under the inspector, the final builds measured 0 FAIL each; the baselines measured 8 to 13 FAIL each
 (eyebrows, monospace labels, 01/02/03 numbering, hairlines, gradients, shadows, three-line headlines,

@@ -18,19 +18,19 @@ The direction sheet deals you a type system (faces, weights, settings). This fil
 
 From 202 measurable sites out of the 247 studied (Chrome, 1440×900 and 390×844):
 
-|                          | Median                                       | Middle half                     | Note                                     |
-| ------------------------ | -------------------------------------------- | ------------------------------- | ---------------------------------------- |
-| Hero headline size       | 72px (5.0vw)                                 | 43–109px                        | Top-scored sites: 6.0vw median           |
-| Largest type on the page | 6.4vw                                        | up to 10.4vw                    | Top-scored sites 8.4vw, weak sites 5.0vw |
-| Hero headline on a phone | 40px                                         | 32–59px                         |                                          |
-| Hero tracking            | -0.01em                                      | -0.03 to 0                      | Tighter as size grows                    |
-| Hero leading             | 1.0                                          | 0.95–1.1                        |                                          |
-| Body size                | 16px                                         | 14–18px                         |                                          |
-| Headline ÷ body size     | 4.3                                          |                                 | Top-scored sites 4.7                     |
-| Typefaces in real use    | 2                                            | 31% use one, 45% two, 22% three |                                          |
-| Hero weight              | regular 48%, medium 18%, bold or heavier 22% |                                 | Big type does not need to be bold        |
-| Hero in capitals         | 24%                                          |                                 |                                          |
-| Hero centred             | 39%                                          |                                 | 52% on the weak sites                    |
+| | Median | Middle half | Note |
+| --- | --- | --- | --- |
+| Hero headline size | 72px (5.0vw) | 43–109px | Top-scored sites: 6.0vw median |
+| Largest type on the page | 6.4vw | up to 10.4vw | Top-scored sites 8.4vw, weak sites 5.0vw |
+| Hero headline on a phone | 40px | 32–59px | |
+| Hero tracking | -0.01em | -0.03 to 0 | Tighter as size grows |
+| Hero leading | 1.0 | 0.95–1.1 | |
+| Body size | 16px | 14–18px | |
+| Headline ÷ body size | 4.3 | | Top-scored sites 4.7 |
+| Typefaces in real use | 2 | 31% use one, 45% two, 22% three | |
+| Hero weight | regular 48%, medium 18%, bold or heavier 22% | | Big type does not need to be bold |
+| Hero in capitals | 24% | | |
+| Hero centred | 39% | | 52% on the weak sites |
 
 Two things to take from it. First, size contrast is the main lever and the best sites pull it harder.
 Second, weight is not: half of the heroes are set in a regular weight. Scale and spacing make type
@@ -46,11 +46,11 @@ is the ceiling. The common failure is nine sizes that are all near each other (1
 
 ```css
 :root {
-  --step-small: clamp(0.8125rem, 0.79rem + 0.1vw, 0.875rem); /* 13–14px  captions, legal */
-  --step-body: clamp(1.0625rem, 1rem + 0.25vw, 1.1875rem); /* 17–19px  paragraphs */
-  --step-lead: clamp(1.25rem, 1.1rem + 0.7vw, 1.625rem); /* 20–26px  supporting line, large body */
-  --step-head: clamp(2rem, 1.3rem + 3.2vw, 4rem); /* 32–64px  section headings */
-  --step-display: clamp(3rem, 1rem + 9vw, 9rem); /* set by the hero blueprint */
+  --step-small: clamp(0.8125rem, 0.79rem + 0.1vw, 0.875rem);   /* 13–14px  captions, legal */
+  --step-body:  clamp(1.0625rem, 1rem + 0.25vw, 1.1875rem);    /* 17–19px  paragraphs */
+  --step-lead:  clamp(1.25rem, 1.1rem + 0.7vw, 1.625rem);      /* 20–26px  supporting line, large body */
+  --step-head:  clamp(2rem, 1.3rem + 3.2vw, 4rem);             /* 32–64px  section headings */
+  --step-display: clamp(3rem, 1rem + 9vw, 9rem);               /* set by the hero blueprint */
 }
 ```
 
@@ -69,11 +69,11 @@ Large type exposes spacing that is invisible at text size. Apply all of these to
 ```css
 .display {
   font-size: var(--step-display);
-  line-height: 0.95; /* 0.85–1.05; tighter for capitals and condensed faces */
-  letter-spacing: -0.035em; /* -0.02 to -0.05em; use the value on the direction sheet */
+  line-height: 0.95;              /* 0.85–1.05; tighter for capitals and condensed faces */
+  letter-spacing: -0.035em;       /* -0.02 to -0.05em; use the value on the direction sheet */
   font-kerning: normal;
   text-wrap: balance;
-  max-width: 14ch; /* choose the measure so lines break where you want */
+  max-width: 14ch;                /* choose the measure so lines break where you want */
   margin: 0;
 }
 ```
@@ -95,30 +95,11 @@ Large type exposes spacing that is invisible at text size. Apply all of these to
 ## 4. Setting text
 
 ```css
-body {
-  font-size: var(--step-body);
-  line-height: 1.5;
-  font-kerning: normal;
-  text-rendering: optimizeLegibility;
-}
-p {
-  max-width: 62ch;
-  text-wrap: pretty;
-  margin: 0;
-}
-p + p {
-  margin-top: 0.9em;
-}
-.lead {
-  font-size: var(--step-lead);
-  line-height: 1.35;
-  max-width: 40ch;
-}
-small,
-.caption {
-  font-size: var(--step-small);
-  line-height: 1.45;
-}
+body { font-size: var(--step-body); line-height: 1.5; font-kerning: normal; text-rendering: optimizeLegibility; }
+p { max-width: 62ch; text-wrap: pretty; margin: 0; }
+p + p { margin-top: 0.9em; }
+.lead { font-size: var(--step-lead); line-height: 1.35; max-width: 40ch; }
+small, .caption { font-size: var(--step-small); line-height: 1.45; }
 ```
 
 - Measure: 45–75 characters. Wider than that and the eye loses the next line; the inspector warns

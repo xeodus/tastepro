@@ -28,10 +28,10 @@ async function fileExists(path: string): Promise<boolean> {
 describe("committed content", () => {
   it("matches the catalog snapshot", async () => {
     const [catalog, stats] = await Promise.all([loader.catalog(), loader.stats()]);
-    expect(catalog).toHaveLength(873);
-    expect(stats.catalogEntries).toBe(873);
+    expect(catalog).toHaveLength(905);
+    expect(stats.catalogEntries).toBe(905);
     expect(stats.counts).toEqual({
-      "app-pattern": 25,
+      "app-pattern": 57,
       "app-shell": 5,
       "app-style": 7,
       brand: 84,
@@ -47,7 +47,7 @@ describe("committed content", () => {
       type: 44,
     });
     expect(stats.quality).toEqual({
-      verified: 550,
+      verified: 582,
       reference: 313,
       incomplete: 10,
     });
@@ -92,7 +92,7 @@ describe("committed content", () => {
       expect((await stat(path)).size).toBeGreaterThan(0);
     }
     const sources = await loader.sources();
-    expect(sources).toHaveLength(4);
+    expect(sources).toHaveLength(8);
     for (const source of sources) {
       const path = join(contentDir, source.licenseFile);
       expect(await fileExists(path), path).toBe(true);
@@ -225,10 +225,96 @@ describe("committed content", () => {
       "awesome-design-md",
       "web-interface-guidelines",
       "playwright-cli",
+      "govuk-design-system",
+      "uswds",
+      "cms-design-system",
+      "nhs-uk",
     ]);
     for (const source of lock.sources) {
       expect(source.commit).toMatch(/^[0-9a-f]{40}$/);
       expect(source.license.length).toBeGreaterThan(0);
     }
+  });
+
+  it("ships the GOV.UK form patterns with provenance", async () => {
+    const packs = JSON.parse(
+      await readFile(join(contentDir, "generated", "kinds", "app-patterns.json"), "utf8"),
+    ) as Array<{
+      id: string;
+      blueprint: string;
+      domains: string[];
+      provenance: { source: string; license: string; commit: string };
+    }>;
+    const govuk = packs.filter((pack) => pack.id.startsWith("app-pattern/govuk-"));
+    expect(govuk).toHaveLength(8);
+
+    const bank = packs.find((pack) => pack.id === "app-pattern/govuk-bank-details");
+    expect(bank).toBeDefined();
+    expect(bank?.provenance.source).toBe("govuk-design-system");
+    expect(bank?.provenance.license).toBe("OGL-3.0");
+    expect(bank?.provenance.commit).toHaveLength(40);
+    expect(bank?.blueprint).toContain("sort code");
+    expect(bank?.blueprint).not.toContain("{{");
+    expect(bank?.domains).toContain("fintech-payments");
+  });
+
+  it("ships the USWDS identity patterns with provenance", async () => {
+    const packs = JSON.parse(
+      await readFile(join(contentDir, "generated", "kinds", "app-patterns.json"), "utf8"),
+    ) as Array<{
+      id: string;
+      blueprint: string;
+      provenance: { source: string; license: string; commit: string };
+    }>;
+    const uswds = packs.filter((pack) => pack.id.startsWith("app-pattern/uswds-"));
+    expect(uswds).toHaveLength(8);
+
+    const name = packs.find((pack) => pack.id === "app-pattern/uswds-name");
+    expect(name).toBeDefined();
+    expect(name?.provenance.source).toBe("uswds");
+    expect(name?.provenance.license).toBe("CC0-1.0");
+    expect(name?.provenance.commit).toHaveLength(40);
+    expect(name?.blueprint).toContain("names");
+    expect(name?.blueprint).not.toContain("{%");
+  });
+
+  it("ships the CMS form and feedback patterns with provenance", async () => {
+    const packs = JSON.parse(
+      await readFile(join(contentDir, "generated", "kinds", "app-patterns.json"), "utf8"),
+    ) as Array<{
+      id: string;
+      blueprint: string;
+      provenance: { source: string; license: string; commit: string };
+    }>;
+    const cms = packs.filter((pack) => pack.id.startsWith("app-pattern/cms-"));
+    expect(cms).toHaveLength(8);
+
+    const alert = packs.find((pack) => pack.id === "app-pattern/cms-alert");
+    expect(alert).toBeDefined();
+    expect(alert?.provenance.source).toBe("cms-design-system");
+    expect(alert?.provenance.license).toBe("CC0-1.0");
+    expect(alert?.provenance.commit).toHaveLength(40);
+    expect(alert?.blueprint).toContain("alert");
+    expect(alert?.blueprint).not.toContain("<");
+  });
+
+  it("ships the NHS.UK healthcare patterns with provenance", async () => {
+    const packs = JSON.parse(
+      await readFile(join(contentDir, "generated", "kinds", "app-patterns.json"), "utf8"),
+    ) as Array<{
+      id: string;
+      blueprint: string;
+      provenance: { source: string; license: string; commit: string };
+    }>;
+    const nhs = packs.filter((pack) => pack.id.startsWith("app-pattern/nhs-"));
+    expect(nhs).toHaveLength(8);
+
+    const nhsNumber = packs.find((pack) => pack.id === "app-pattern/nhs-ask-for-nhs-numbers");
+    expect(nhsNumber).toBeDefined();
+    expect(nhsNumber?.provenance.source).toBe("nhs-uk");
+    expect(nhsNumber?.provenance.license).toBe("OGL-3.0");
+    expect(nhsNumber?.provenance.commit).toHaveLength(40);
+    expect(nhsNumber?.blueprint).toContain("NHS number");
+    expect(nhsNumber?.blueprint).not.toContain("{%");
   });
 });

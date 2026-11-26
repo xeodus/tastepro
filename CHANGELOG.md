@@ -4,6 +4,28 @@ All notable changes are recorded here. The project follows semantic versioning
 for the MCP tool surface, configuration, and package API. Content counts may
 change between minor releases without breaking the tool contract.
 
+## 1.2.0 - 2026-11-26
+
+### Added
+
+- GOV.UK form patterns: bank details, payment card details, validation, error
+  summary, addresses, names, dates, and check answers.
+- USWDS identity patterns: name, address, date of birth, email, phone, Social
+  Security Number, keep a record, and establish trust.
+- CMS Medicare and Medicaid patterns: alert, table, accordion, pagination,
+  tabs, multi-input date field, ZIP codes, and phone numbers.
+- NHS.UK healthcare patterns: NHS numbers, check answers, confirmation,
+  question pages, start page, multiple tasks, care decisions, and interruption
+  pages.
+- A `SourceAdapter` interface; new sources are isolated, fixture-tested, and
+  carry their own license and provenance.
+- Catalog grows from 873 to 905 entries; app patterns from 25 to 57.
+
+### Changed
+
+- `NOTICE` and `ATTRIBUTION.md` now record OGL-3.0 and CC0 sources, including
+  the third-party asset exclusions.
+
 ## 1.1.0 - 2026-11-26
 
 ### Added

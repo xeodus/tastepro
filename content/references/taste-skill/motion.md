@@ -104,28 +104,18 @@ the gallery does something the house rules ban, the house version follows.
 
 ```css
 :root {
-  --ease-out: cubic-bezier(0.22, 1, 0.36, 1); /* entrances, moving hovers, UI under 600ms */
-  --ease-expo: cubic-bezier(
-    0.16,
-    1,
-    0.3,
-    1
-  ); /* new: reveals of 800ms and longer, line rises, openings */
-  --ease-in-out: cubic-bezier(
-    0.76,
-    0,
-    0.24,
-    1
-  ); /* wipes, panels, things that travel while visible */
-  --ease-soft: cubic-bezier(0.33, 1, 0.68, 1); /* slow scale and drift on photographs */
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);        /* entrances, moving hovers, UI under 600ms */
+  --ease-expo: cubic-bezier(0.16, 1, 0.3, 1);        /* new: reveals of 800ms and longer, line rises, openings */
+  --ease-in-out: cubic-bezier(0.76, 0, 0.24, 1);     /* wipes, panels, things that travel while visible */
+  --ease-soft: cubic-bezier(0.33, 1, 0.68, 1);       /* slow scale and drift on photographs */
   --ease-exit: cubic-bezier(0.55, 0.055, 0.675, 0.19); /* new: something leaving for good, short */
   --t-press: 140ms;
   --t-hover: 180ms;
   --t-ui: 240ms;
   --t-reveal: 800ms;
-  --t-open: 1200ms; /* new: picture openings and clip wipes */
-  --stagger-line: 90ms; /* new */
-  --stagger-item: 70ms; /* new */
+  --t-open: 1200ms;                                  /* new: picture openings and clip wipes */
+  --stagger-line: 90ms;                              /* new */
+  --stagger-item: 70ms;                              /* new */
 }
 ```
 
@@ -152,27 +142,27 @@ How the study bears on each:
 
 ## 5. Scroll behaviours, ranked
 
-| Behaviour                                              | Pages of 99 | What it serves                                               | House version                                                                                                                               |
-| ------------------------------------------------------ | ----------- | ------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------- |
-| Smooth-scroll library                                  | 67          | A feeling of weight; makes scrubbed scenes easier to build   | Optional, through `Stage.smooth()`: Lenis at lerp 0.1-0.14, off for touch and reduced motion                                                |
-| Held (sticky or pinned) stage                          | 44          | One picture or object carries several claims; chapters       | Yes: the scroll scenes (`references/scenes.md`), two or three per page, one to four screens each; other sticky stages three screens at most |
-| Split text                                             | 40          | Lines and words arriving as they are read; hover rolls       | Lines for headings and statements; words only for the ink fill; characters only for a heading of one to three words                         |
-| Colour by chapter                                      | 34          | Tells chapters apart without padding bands                   | Yes, as hard cuts at section edges; the header ink follows in 300ms                                                                         |
-| Scroll-scrubbed scene (camera, object, image sequence) | 26          | Explains a product by moving it                              | Yes, from the scene library, built on the shared stage with a finished composition for reduced motion                                       |
-| Parallax depth                                         | 24          | Depth in collages; pictures drifting inside oversized frames | Travel under 8% of the element, pictures held at 106-110% in their frames                                                                   |
-| Marquee                                                | 21          | Life on a static band                                        | Existing "Edge-to-edge marquee": one per page, pausable                                                                                     |
-| Masked line or word rise                               | 18          | Headings that arrive like set type                           | Yes: "Masked line reveal" on load, "Lines that rise on scroll" below the fold                                                               |
-| Wheel drives a scene, no page scroll                   | 16          | Browsing one object                                          | Not used (see 2.6)                                                                                                                          |
-| Blur-in                                                | 15          | Soft arrival                                                 | At most 8px of blur, 600ms, gone once settled; never on body text                                                                           |
-| Picture from inset frame to full-bleed                 | 14          | The hand-over from a type screen to the big picture          | Yes: "Opening window", about one screen of scroll                                                                                           |
-| Grey-to-ink text fill                                  | 14          | Paces one statement                                          | Yes, once per page, starting at 45% ink: "Ink fill"                                                                                         |
-| Sheet slides over a held layer                         | 11          | Page-turn rhythm between chapters                            | Yes: new move "Sheet over a held picture"                                                                                                   |
-| Scramble or decode                                     | 11          | A "code" voice                                               | Not used (see 2.6)                                                                                                                          |
-| Header ink by chapter                                  | 10          | The fixed header stays legible                               | Yes, with colour by chapter                                                                                                                 |
-| Horizontal track pinned to vertical scroll             | 8           | Walking through rooms or a collection                        | Native drag row first; pinned only when the row is under three screens long, with keyboard support: "Sideways gallery"                      |
-| Curtain footer                                         | 8           | The page ends as a scene                                     | Existing move                                                                                                                               |
-| Rolling digits                                         | 6           | Figures that arrive                                          | Yes, for pages whose case is a handful of numbers: "Rolling figures"                                                                        |
-| Index with hover preview                               | 5           | Navigating work by name                                      | Existing move, upgraded recipe                                                                                                              |
+| Behaviour | Pages of 99 | What it serves | House version |
+| --- | --- | --- | --- |
+| Smooth-scroll library | 67 | A feeling of weight; makes scrubbed scenes easier to build | Optional, through `Stage.smooth()`: Lenis at lerp 0.1-0.14, off for touch and reduced motion |
+| Held (sticky or pinned) stage | 44 | One picture or object carries several claims; chapters | Yes: the scroll scenes (`references/scenes.md`), two or three per page, one to four screens each; other sticky stages three screens at most |
+| Split text | 40 | Lines and words arriving as they are read; hover rolls | Lines for headings and statements; words only for the ink fill; characters only for a heading of one to three words |
+| Colour by chapter | 34 | Tells chapters apart without padding bands | Yes, as hard cuts at section edges; the header ink follows in 300ms |
+| Scroll-scrubbed scene (camera, object, image sequence) | 26 | Explains a product by moving it | Yes, from the scene library, built on the shared stage with a finished composition for reduced motion |
+| Parallax depth | 24 | Depth in collages; pictures drifting inside oversized frames | Travel under 8% of the element, pictures held at 106-110% in their frames |
+| Marquee | 21 | Life on a static band | Existing "Edge-to-edge marquee": one per page, pausable |
+| Masked line or word rise | 18 | Headings that arrive like set type | Yes: "Masked line reveal" on load, "Lines that rise on scroll" below the fold |
+| Wheel drives a scene, no page scroll | 16 | Browsing one object | Not used (see 2.6) |
+| Blur-in | 15 | Soft arrival | At most 8px of blur, 600ms, gone once settled; never on body text |
+| Picture from inset frame to full-bleed | 14 | The hand-over from a type screen to the big picture | Yes: "Opening window", about one screen of scroll |
+| Grey-to-ink text fill | 14 | Paces one statement | Yes, once per page, starting at 45% ink: "Ink fill" |
+| Sheet slides over a held layer | 11 | Page-turn rhythm between chapters | Yes: new move "Sheet over a held picture" |
+| Scramble or decode | 11 | A "code" voice | Not used (see 2.6) |
+| Header ink by chapter | 10 | The fixed header stays legible | Yes, with colour by chapter |
+| Horizontal track pinned to vertical scroll | 8 | Walking through rooms or a collection | Native drag row first; pinned only when the row is under three screens long, with keyboard support: "Sideways gallery" |
+| Curtain footer | 8 | The page ends as a scene | Existing move |
+| Rolling digits | 6 | Figures that arrive | Yes, for pages whose case is a handful of numbers: "Rolling figures" |
+| Index with hover preview | 5 | Navigating work by name | Existing move, upgraded recipe |
 
 Text, split by unit: characters on about 20 pages, lines on about 14, words on about 11. Character
 splits serve short headings and button rolls; on long statements they leave fragments mid-scroll.
@@ -215,52 +205,17 @@ waits for the load event, and nothing in the navigation animates.
 ```
 
 ```css
-.hero__picture {
-  overflow: clip;
-  margin: 0;
-}
+.hero__picture { overflow: clip; margin: 0; }
 @media (prefers-reduced-motion: no-preference) {
-  .js .hero [data-line] {
-    transform: translateY(105%);
-    animation: load-line 800ms var(--ease-expo) forwards;
-    animation-delay: calc(100ms + var(--i) * var(--stagger-line));
-  }
-  .js .hero [data-load] {
-    opacity: 0;
-    transform: translateY(12px);
-    animation: load-rise 500ms var(--ease-out) forwards;
-    animation-delay: var(--d);
-  }
-  .js .hero [data-open] {
-    clip-path: inset(0 0 100% 0);
-    animation: load-open 1000ms var(--ease-in-out) 150ms forwards;
-  }
-  .js .hero [data-open] img {
-    transform: scale(1.08);
-    animation: load-settle 1100ms var(--ease-expo) 100ms forwards;
-  }
+  .js .hero [data-line] { transform: translateY(105%); animation: load-line 800ms var(--ease-expo) forwards; animation-delay: calc(100ms + var(--i) * var(--stagger-line)); }
+  .js .hero [data-load] { opacity: 0; transform: translateY(12px); animation: load-rise 500ms var(--ease-out) forwards; animation-delay: var(--d); }
+  .js .hero [data-open] { clip-path: inset(0 0 100% 0); animation: load-open 1000ms var(--ease-in-out) 150ms forwards; }
+  .js .hero [data-open] img { transform: scale(1.08); animation: load-settle 1100ms var(--ease-expo) 100ms forwards; }
 }
-@keyframes load-line {
-  to {
-    transform: none;
-  }
-}
-@keyframes load-rise {
-  to {
-    opacity: 1;
-    transform: none;
-  }
-}
-@keyframes load-open {
-  to {
-    clip-path: inset(0);
-  }
-}
-@keyframes load-settle {
-  to {
-    transform: none;
-  }
-}
+@keyframes load-line { to { transform: none; } }
+@keyframes load-rise { to { opacity: 1; transform: none; } }
+@keyframes load-open { to { clip-path: inset(0); } }
+@keyframes load-settle { to { transform: none; } }
 ```
 
 The timeline: the headline's lines rise from 100 to 990 ms, the picture opens from 150 to 1,150 ms,
@@ -284,15 +239,8 @@ the line breaks yourself and wrap each line.
 ```
 
 ```css
-.lines .line {
-  display: block;
-  overflow: hidden;
-  padding-bottom: 0.08em;
-  margin-bottom: -0.08em;
-}
-.lines [data-line] {
-  display: block;
-}
+.lines .line { display: block; overflow: hidden; padding-bottom: 0.08em; margin-bottom: -0.08em; }
+.lines [data-line] { display: block; }
 @media (prefers-reduced-motion: no-preference) {
   .js .lines [data-line] {
     transform: translateY(105%);
@@ -300,11 +248,7 @@ the line breaks yourself and wrap each line.
     animation-delay: calc(var(--i) * 110ms + 150ms);
   }
 }
-@keyframes line-up {
-  to {
-    transform: none;
-  }
-}
+@keyframes line-up { to { transform: none; } }
 ```
 
 The `padding-bottom` / negative margin pair stops descenders (g, y, p) being clipped by the mask.
@@ -317,32 +261,16 @@ For the two or three sections that deserve it, not for every block.
 
 ```css
 @media (prefers-reduced-motion: no-preference) {
-  .js [data-reveal] {
-    opacity: 0;
-    transform: translateY(24px);
-    transition:
-      opacity 700ms var(--ease-out),
-      transform 900ms var(--ease-out);
-  }
-  .js [data-reveal].is-in {
-    opacity: 1;
-    transform: none;
-  }
+  .js [data-reveal] { opacity: 0; transform: translateY(24px); transition: opacity 700ms var(--ease-out), transform 900ms var(--ease-out); }
+  .js [data-reveal].is-in { opacity: 1; transform: none; }
 }
 ```
 
 ```js
-const io = new IntersectionObserver(
-  (entries) => {
-    for (const e of entries)
-      if (e.isIntersecting) {
-        e.target.classList.add("is-in");
-        io.unobserve(e.target);
-      }
-  },
-  { rootMargin: "0px 0px -12% 0px", threshold: 0.1 },
-);
-document.querySelectorAll("[data-reveal]").forEach((el) => io.observe(el));
+const io = new IntersectionObserver((entries) => {
+  for (const e of entries) if (e.isIntersecting) { e.target.classList.add('is-in'); io.unobserve(e.target); }
+}, { rootMargin: '0px 0px -12% 0px', threshold: 0.1 });
+document.querySelectorAll('[data-reveal]').forEach((el) => io.observe(el));
 ```
 
 Never attach reveals with a scroll listener, never replay them when the element re-enters, and never
@@ -355,53 +283,24 @@ An image opens from one edge while scaling down slightly inside its frame. Galle
 the one hero or showcase image.
 
 ```css
-.shutter {
-  overflow: hidden;
-}
+.shutter { overflow: hidden; }
 @media (prefers-reduced-motion: no-preference) {
-  .js .shutter {
-    clip-path: inset(0 0 100% 0);
-    transition: clip-path 1100ms var(--ease-in-out);
-  }
-  .js .shutter img {
-    transform: scale(1.12);
-    transition: transform 1500ms var(--ease-soft);
-  }
-  .js .shutter.is-in {
-    clip-path: inset(0);
-  }
-  .js .shutter.is-in img {
-    transform: none;
-  }
+  .js .shutter { clip-path: inset(0 0 100% 0); transition: clip-path 1100ms var(--ease-in-out); }
+  .js .shutter img { transform: scale(1.12); transition: transform 1500ms var(--ease-soft); }
+  .js .shutter.is-in { clip-path: inset(0); }
+  .js .shutter.is-in img { transform: none; }
 }
 ```
 
 ### Press and hover
 
 ```css
-.button {
-  transition:
-    transform var(--t-press) var(--ease-out),
-    background-color var(--t-hover) ease,
-    color var(--t-hover) ease;
-}
-.button:active {
-  transform: scale(0.97);
-}
-.link {
-  text-decoration: underline;
-  text-decoration-color: transparent;
-  text-underline-offset: 0.2em;
-  text-decoration-thickness: 0.07em;
-  transition: text-decoration-color var(--t-hover) ease;
-}
+.button { transition: transform var(--t-press) var(--ease-out), background-color var(--t-hover) ease, color var(--t-hover) ease; }
+.button:active { transform: scale(0.97); }
+.link { text-decoration: underline; text-decoration-color: transparent; text-underline-offset: 0.2em; text-decoration-thickness: 0.07em; transition: text-decoration-color var(--t-hover) ease; }
 @media (hover: hover) and (pointer: fine) {
-  .button:hover {
-    background-color: var(--accent-strong);
-  }
-  .link:hover {
-    text-decoration-color: currentColor;
-  }
+  .button:hover { background-color: var(--accent-strong); }
+  .link:hover { text-decoration-color: currentColor; }
 }
 ```
 
@@ -417,19 +316,8 @@ Wrap in `@supports` so browsers without scroll timelines get the static state.
 ```css
 @supports (animation-timeline: view()) {
   @media (prefers-reduced-motion: no-preference) {
-    .drift {
-      animation: drift linear both;
-      animation-timeline: view();
-      animation-range: entry 0% exit 100%;
-    }
-    @keyframes drift {
-      from {
-        transform: translateY(-4%);
-      }
-      to {
-        transform: translateY(4%);
-      }
-    }
+    .drift { animation: drift linear both; animation-timeline: view(); animation-range: entry 0% exit 100%; }
+    @keyframes drift { from { transform: translateY(-4%); } to { transform: translateY(4%); } }
   }
 }
 ```
@@ -442,24 +330,9 @@ dated.
 A section whose heading stays put while items pass. Use `position: sticky`; do not hijack scrolling.
 
 ```css
-.story {
-  display: grid;
-  grid-template-columns: 5fr 7fr;
-  gap: var(--gutter);
-  align-items: start;
-}
-.story__title {
-  position: sticky;
-  top: 18vh;
-}
-@media (max-width: 800px) {
-  .story {
-    grid-template-columns: 1fr;
-  }
-  .story__title {
-    position: static;
-  }
-}
+.story { display: grid; grid-template-columns: 5fr 7fr; gap: var(--gutter); align-items: start; }
+.story__title { position: sticky; top: 18vh; }
+@media (max-width: 800px) { .story { grid-template-columns: 1fr; } .story__title { position: static; } }
 ```
 
 ### Index with preview, anchored to the row
@@ -481,114 +354,49 @@ follows the row, never the pointer.
 ```
 
 ```css
-.index {
-  position: relative;
-}
-.index__list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-.index__row {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: baseline;
-  gap: 0 var(--gutter);
-  padding-block: 0.3em;
-  font-size: var(--step-head);
-  color: inherit;
-  text-decoration: none;
-  transition: opacity var(--t-hover) ease;
-}
-.index__thumb {
-  order: -1;
-  flex-basis: 100%;
-  width: 100%;
-  height: auto;
-  margin-bottom: 0.4rem;
-}
-.index__frame {
-  display: none;
-}
+.index { position: relative; }
+.index__list { list-style: none; margin: 0; padding: 0; }
+.index__row { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 0 var(--gutter); padding-block: 0.3em; font-size: var(--step-head); color: inherit; text-decoration: none; transition: opacity var(--t-hover) ease; }
+.index__thumb { order: -1; flex-basis: 100%; width: 100%; height: auto; margin-bottom: 0.4rem; }
+.index__frame { display: none; }
 @media (hover: hover) and (pointer: fine) {
-  .index__list {
-    max-width: 62%;
-  }
-  .index__thumb {
-    display: none;
-  }
-  .index__list:has(.index__row:hover, .index__row:focus-visible)
-    .index__row:not(:hover, :focus-visible) {
-    opacity: 0.4;
-  }
-  .index__frame {
-    display: block;
-    position: absolute;
-    top: 0;
-    right: var(--margin);
-    width: 30%;
-    aspect-ratio: 4 / 3;
-    z-index: 1;
-    pointer-events: none;
-    clip-path: inset(100% 0 0 0);
-    transition:
-      clip-path 320ms var(--ease-out),
-      transform 360ms var(--ease-out);
-  }
-  .index__frame.is-open {
-    clip-path: inset(0);
-  }
-  .index__frame img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
+  .index__list { max-width: 62%; }
+  .index__thumb { display: none; }
+  .index__list:has(.index__row:hover, .index__row:focus-visible) .index__row:not(:hover, :focus-visible) { opacity: 0.4; }
+  .index__frame { display: block; position: absolute; top: 0; right: var(--margin); width: 30%; aspect-ratio: 4 / 3; z-index: 1; pointer-events: none; clip-path: inset(100% 0 0 0); transition: clip-path 320ms var(--ease-out), transform 360ms var(--ease-out); }
+  .index__frame.is-open { clip-path: inset(0); }
+  .index__frame img { width: 100%; height: 100%; object-fit: cover; }
 }
-@media (prefers-reduced-motion: reduce) {
-  .index__frame {
-    transition: none;
-  }
-}
+@media (prefers-reduced-motion: reduce) { .index__frame { transition: none; } }
 ```
 
 ```js
 (() => {
-  const root = document.querySelector(".index");
+  const root = document.querySelector('.index');
   if (!root) return;
-  const frame = root.querySelector(".index__frame");
-  const picture = frame.querySelector("img");
-  const fine = matchMedia("(hover: hover) and (pointer: fine)");
+  const frame = root.querySelector('.index__frame');
+  const picture = frame.querySelector('img');
+  const fine = matchMedia('(hover: hover) and (pointer: fine)');
   let warmed = false;
   const show = (row) => {
     if (!fine.matches) return;
-    if (!warmed) {
-      warmed = true;
-      root.querySelectorAll("[data-preview]").forEach((a) => {
-        new Image().src = a.dataset.preview;
-      });
-    }
+    if (!warmed) { warmed = true; root.querySelectorAll('[data-preview]').forEach((a) => { new Image().src = a.dataset.preview; }); }
     picture.src = row.dataset.preview;
     const y = row.offsetTop + row.offsetHeight / 2 - frame.offsetHeight / 2;
     const max = root.offsetHeight - frame.offsetHeight;
-    const opening = !frame.classList.contains("is-open");
-    if (opening) frame.style.transitionProperty = "clip-path"; // open in place, do not slide in from the top
+    const opening = !frame.classList.contains('is-open');
+    if (opening) frame.style.transitionProperty = 'clip-path';   // open in place, do not slide in from the top
     frame.style.transform = `translateY(${Math.min(max, Math.max(0, y))}px)`;
-    if (opening) {
-      frame.getBoundingClientRect();
-      frame.style.transitionProperty = "";
-    }
-    frame.classList.add("is-open");
+    if (opening) { frame.getBoundingClientRect(); frame.style.transitionProperty = ''; }
+    frame.classList.add('is-open');
   };
-  const hide = () => frame.classList.remove("is-open");
-  root.querySelectorAll(".index__row").forEach((row) => {
-    row.addEventListener("pointerenter", () => show(row));
-    row.addEventListener("focus", () => show(row));
+  const hide = () => frame.classList.remove('is-open');
+  root.querySelectorAll('.index__row').forEach((row) => {
+    row.addEventListener('pointerenter', () => show(row));
+    row.addEventListener('focus', () => show(row));
   });
-  root.addEventListener("pointerleave", hide);
-  root.addEventListener("focusout", (e) => {
-    if (!root.contains(e.relatedTarget)) hide();
-  });
+  root.addEventListener('pointerleave', hide);
+  root.addEventListener('focusout', (e) => { if (!root.contains(e.relatedTarget)) hide(); });
 })();
 ```
 
@@ -607,97 +415,63 @@ emphasis inside).
 ```
 
 ```css
-[data-lines] .line {
-  display: block;
-  overflow: clip;
-  padding-bottom: 0.12em;
-  margin-bottom: -0.12em;
-}
-[data-lines] .line > span {
-  display: block;
-}
+[data-lines] .line { display: block; overflow: clip; padding-bottom: 0.12em; margin-bottom: -0.12em; }
+[data-lines] .line > span { display: block; }
 @media (prefers-reduced-motion: no-preference) {
-  .is-split .line > span {
-    transform: translateY(110%);
-  }
-  .is-split.is-in .line > span {
-    transform: none;
-    transition: transform 900ms var(--ease-expo) calc(var(--i) * var(--stagger-line));
-  }
+  .is-split .line > span { transform: translateY(110%); }
+  .is-split.is-in .line > span { transform: none; transition: transform 900ms var(--ease-expo) calc(var(--i) * var(--stagger-line)); }
 }
 ```
 
 ```js
 (() => {
-  const els = [...document.querySelectorAll("[data-lines]")];
-  if (
-    !els.length ||
-    !("IntersectionObserver" in window) ||
-    matchMedia("(prefers-reduced-motion: reduce)").matches
-  )
-    return;
-  const restore = (el) => {
-    el.textContent = el.dataset.text;
-    el.classList.remove("is-split", "is-in");
-  };
+  const els = [...document.querySelectorAll('[data-lines]')];
+  if (!els.length || !('IntersectionObserver' in window) || matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  const restore = (el) => { el.textContent = el.dataset.text; el.classList.remove('is-split', 'is-in'); };
   const split = (el) => {
-    const text = el.textContent.trim().replace(/\s+/g, " ");
+    const text = el.textContent.trim().replace(/\s+/g, ' ');
     el.dataset.text = text;
-    el.textContent = "";
-    const words = text.split(" ").map((word) => {
-      const s = document.createElement("span");
-      s.style.display = "inline-block";
+    el.textContent = '';
+    const words = text.split(' ').map((word) => {
+      const s = document.createElement('span');
+      s.style.display = 'inline-block';
       s.textContent = word;
-      el.append(s, " ");
+      el.append(s, ' ');
       return s;
     });
-    const lines = []; // group the words by the line they landed on
+    const lines = [];                                   // group the words by the line they landed on
     for (const w of words) {
       const last = lines.at(-1);
       if (last && Math.abs(last.top - w.offsetTop) < 4) last.words.push(w.textContent);
       else lines.push({ top: w.offsetTop, words: [w.textContent] });
     }
-    el.textContent = "";
+    el.textContent = '';
     lines.forEach((line, i) => {
-      const mask = document.createElement("span");
-      const inner = document.createElement("span");
-      mask.className = "line";
-      inner.style.setProperty("--i", i);
-      inner.textContent = line.words.join(" ");
+      const mask = document.createElement('span');
+      const inner = document.createElement('span');
+      mask.className = 'line';
+      inner.style.setProperty('--i', i);
+      inner.textContent = line.words.join(' ');
       mask.append(inner);
-      el.append(mask, " ");
+      el.append(mask, ' ');
     });
-    el.classList.add("is-split");
+    el.classList.add('is-split');
   };
-  const io = new IntersectionObserver(
-    (entries) => {
-      for (const e of entries) {
-        if (!e.isIntersecting) continue;
-        io.unobserve(e.target);
-        e.target.classList.add("is-in");
-        e.target
-          .querySelector(".line:last-of-type > span")
-          .addEventListener("transitionend", () => restore(e.target), { once: true });
-      }
-    },
-    { rootMargin: "0px 0px -12% 0px" },
-  );
-  document.fonts.ready.then(() =>
-    els.forEach((el) => {
-      split(el);
-      io.observe(el);
-    }),
-  );
-  let width = innerWidth; // a width change before the reveal: give the text back
-  addEventListener("resize", () => {
+  const io = new IntersectionObserver((entries) => {
+    for (const e of entries) {
+      if (!e.isIntersecting) continue;
+      io.unobserve(e.target);
+      e.target.classList.add('is-in');
+      e.target.querySelector('.line:last-of-type > span')
+        .addEventListener('transitionend', () => restore(e.target), { once: true });
+    }
+  }, { rootMargin: '0px 0px -12% 0px' });
+  document.fonts.ready.then(() => els.forEach((el) => { split(el); io.observe(el); }));
+  let width = innerWidth;                               // a width change before the reveal: give the text back
+  addEventListener('resize', () => {
     if (innerWidth === width) return;
     width = innerWidth;
-    els
-      .filter((el) => el.matches(".is-split:not(.is-in)"))
-      .forEach((el) => {
-        io.unobserve(el);
-        restore(el);
-      });
+    els.filter((el) => el.matches('.is-split:not(.is-in)')).forEach((el) => { io.unobserve(el); restore(el); });
   });
 })();
 ```
@@ -719,60 +493,18 @@ middle of a held stage and opens to full-bleed over about one screen of scroll.
 ```
 
 ```css
-.opening__stage {
-  height: 100svh;
-  overflow: clip;
-}
-.opening__stage img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
+.opening__stage { height: 100svh; overflow: clip; }
+.opening__stage img { display: block; width: 100%; height: 100%; object-fit: cover; }
 @supports (animation-timeline: view()) {
   @media (prefers-reduced-motion: no-preference) {
-    .opening {
-      height: 200svh;
-      view-timeline-name: --opening;
-      --inset-y: 20%;
-      --inset-x: 28%;
-    }
-    .opening__stage {
-      position: sticky;
-      top: 0;
-      animation: opening-window linear both;
-      animation-timeline: --opening;
-      animation-range: contain 0% contain 75%;
-    }
-    .opening__stage img {
-      animation: opening-settle linear both;
-      animation-timeline: --opening;
-      animation-range: contain 0% contain 75%;
-    }
+    .opening { height: 200svh; view-timeline-name: --opening; --inset-y: 20%; --inset-x: 28%; }
+    .opening__stage { position: sticky; top: 0; animation: opening-window linear both; animation-timeline: --opening; animation-range: contain 0% contain 75%; }
+    .opening__stage img { animation: opening-settle linear both; animation-timeline: --opening; animation-range: contain 0% contain 75%; }
   }
 }
-@media (max-width: 700px) {
-  .opening {
-    --inset-y: 18%;
-    --inset-x: 8%;
-  }
-}
-@keyframes opening-window {
-  from {
-    clip-path: inset(var(--inset-y) var(--inset-x));
-  }
-  to {
-    clip-path: inset(0);
-  }
-}
-@keyframes opening-settle {
-  from {
-    transform: scale(1.15);
-  }
-  to {
-    transform: none;
-  }
-}
+@media (max-width: 700px) { .opening { --inset-y: 18%; --inset-x: 8%; } }
+@keyframes opening-window { from { clip-path: inset(var(--inset-y) var(--inset-x)); } to { clip-path: inset(0); } }
+@keyframes opening-settle { from { transform: scale(1.15); } to { transform: none; } }
 ```
 
 The section is two screens tall; the stage is held for one, and the window is fully open after three
@@ -804,107 +536,41 @@ the other; the caption at the middle of the screen is lit and its picture is sho
 ```
 
 ```css
-.steps {
-  display: grid;
-  grid-template-columns: 7fr 5fr;
-  column-gap: var(--gutter);
-}
-.steps__media {
-  margin: 0;
-  align-self: start;
-} /* a stretched grid item cannot stick */
-.steps__pictures img {
-  display: block;
-  width: 100%;
-  height: auto;
-}
-.steps__list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-.steps__item {
-  min-height: 80svh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-.js .steps__media {
-  position: sticky;
-  top: 0;
-  height: 100svh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 0.75rem;
-}
-.js .steps__pictures {
-  position: relative;
-  aspect-ratio: 4 / 5;
-  max-height: 80svh;
-}
-.js .steps__pictures img {
-  position: absolute;
-  inset: 0;
-  height: 100%;
-  object-fit: cover;
-  opacity: 0;
-  transition: opacity 500ms ease;
-}
-.js .steps__pictures img.is-on {
-  opacity: 1;
-}
-.js .steps__item {
-  opacity: 0.4;
-  transition: opacity var(--t-ui) ease;
-}
-.js .steps__item.is-active {
-  opacity: 1;
-}
+.steps { display: grid; grid-template-columns: 7fr 5fr; column-gap: var(--gutter); }
+.steps__media { margin: 0; align-self: start; }           /* a stretched grid item cannot stick */
+.steps__pictures img { display: block; width: 100%; height: auto; }
+.steps__list { list-style: none; margin: 0; padding: 0; }
+.steps__item { min-height: 80svh; display: flex; flex-direction: column; justify-content: center; }
+.js .steps__media { position: sticky; top: 0; height: 100svh; display: flex; flex-direction: column; justify-content: center; gap: 0.75rem; }
+.js .steps__pictures { position: relative; aspect-ratio: 4 / 5; max-height: 80svh; }
+.js .steps__pictures img { position: absolute; inset: 0; height: 100%; object-fit: cover; opacity: 0; transition: opacity 500ms ease; }
+.js .steps__pictures img.is-on { opacity: 1; }
+.js .steps__item { opacity: 0.4; transition: opacity var(--t-ui) ease; }
+.js .steps__item.is-active { opacity: 1; }
 @media (max-width: 800px) {
-  .steps {
-    display: block;
-  } /* the section, not a grid area, contains the sticky picture */
-  .js .steps__media {
-    height: auto;
-    z-index: 1;
-    background: var(--bg);
-    padding-block: 0.5rem;
-  }
-  .js .steps__pictures {
-    aspect-ratio: 3 / 2;
-    max-height: 42svh;
-  }
-  .steps__item {
-    min-height: 60svh;
-  }
+  .steps { display: block; }                               /* the section, not a grid area, contains the sticky picture */
+  .js .steps__media { height: auto; z-index: 1; background: var(--bg); padding-block: 0.5rem; }
+  .js .steps__pictures { aspect-ratio: 3 / 2; max-height: 42svh; }
+  .steps__item { min-height: 60svh; }
 }
-@media (prefers-reduced-motion: reduce) {
-  .js .steps__pictures img,
-  .js .steps__item {
-    transition: none;
-  }
-}
+@media (prefers-reduced-motion: reduce) { .js .steps__pictures img, .js .steps__item { transition: none; } }
 ```
 
 ```js
 (() => {
-  const root = document.querySelector(".steps");
-  if (!root || !("IntersectionObserver" in window)) return;
-  const items = [...root.querySelectorAll(".steps__item")];
-  const pictures = [...root.querySelectorAll(".steps__pictures img")];
-  const count = root.querySelector(".steps__count");
+  const root = document.querySelector('.steps');
+  if (!root || !('IntersectionObserver' in window)) return;
+  const items = [...root.querySelectorAll('.steps__item')];
+  const pictures = [...root.querySelectorAll('.steps__pictures img')];
+  const count = root.querySelector('.steps__count');
   const show = (i) => {
-    items.forEach((el, k) => el.classList.toggle("is-active", k === i));
-    pictures.forEach((el, k) => el.classList.toggle("is-on", k === i));
+    items.forEach((el, k) => el.classList.toggle('is-active', k === i));
+    pictures.forEach((el, k) => el.classList.toggle('is-on', k === i));
     if (count) count.textContent = `${i + 1} of ${items.length}`;
   };
-  const io = new IntersectionObserver(
-    (entries) => {
-      for (const e of entries) if (e.isIntersecting) show(items.indexOf(e.target));
-    },
-    { rootMargin: "-45% 0px -45% 0px" },
-  ); // a band across the middle of the screen
+  const io = new IntersectionObserver((entries) => {
+    for (const e of entries) if (e.isIntersecting) show(items.indexOf(e.target));
+  }, { rootMargin: '-45% 0px -45% 0px' });                 // a band across the middle of the screen
   items.forEach((el) => io.observe(el));
   show(0);
 })();
@@ -934,92 +600,46 @@ on wide screens with motion allowed, and only when the row is under three screen
 ```
 
 ```css
-.gallery__track {
-  display: flex;
-  gap: var(--gutter);
-  list-style: none;
-  margin: 0;
-  padding: 0 var(--margin);
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  scroll-padding-inline: var(--margin);
-}
-.gallery__item {
-  flex: 0 0 min(72vw, 28rem);
-  scroll-snap-align: start;
-}
-.gallery__item img {
-  display: block;
-  width: 100%;
-  height: auto;
-  aspect-ratio: 4 / 5;
-  object-fit: cover;
-}
-.gallery.is-pinned .gallery__stage {
-  position: sticky;
-  top: 0;
-  height: 100svh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 2rem;
-  overflow: clip;
-}
-.gallery.is-pinned .gallery__track {
-  overflow: visible;
-  scroll-snap-type: none;
-}
-.gallery.is-pinned .gallery__item {
-  flex-basis: calc(62svh * 0.8);
-}
+.gallery__track { display: flex; gap: var(--gutter); list-style: none; margin: 0; padding: 0 var(--margin); overflow-x: auto; scroll-snap-type: x mandatory; scroll-padding-inline: var(--margin); }
+.gallery__item { flex: 0 0 min(72vw, 28rem); scroll-snap-align: start; }
+.gallery__item img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; }
+.gallery.is-pinned .gallery__stage { position: sticky; top: 0; height: 100svh; display: flex; flex-direction: column; justify-content: center; gap: 2rem; overflow: clip; }
+.gallery.is-pinned .gallery__track { overflow: visible; scroll-snap-type: none; }
+.gallery.is-pinned .gallery__item { flex-basis: calc(62svh * 0.8); }
 ```
 
 ```js
 (() => {
-  const root = document.querySelector(".gallery");
+  const root = document.querySelector('.gallery');
   if (!root) return;
-  const track = root.querySelector(".gallery__track");
-  const wide = matchMedia("(min-width: 900px) and (prefers-reduced-motion: no-preference)");
-  let dx = 0,
-    queued = false;
+  const track = root.querySelector('.gallery__track');
+  const wide = matchMedia('(min-width: 900px) and (prefers-reduced-motion: no-preference)');
+  let dx = 0, queued = false;
   const place = () => {
     queued = false;
-    if (!root.classList.contains("is-pinned")) return;
+    if (!root.classList.contains('is-pinned')) return;
     const p = Math.min(1, Math.max(0, -root.getBoundingClientRect().top / dx));
     track.style.transform = `translate3d(${(-p * dx).toFixed(1)}px, 0, 0)`;
   };
   const measure = () => {
-    root.classList.add("is-pinned"); // measure the row as it would be when pinned
-    track.style.transform = "";
+    root.classList.add('is-pinned');                     // measure the row as it would be when pinned
+    track.style.transform = '';
     dx = track.scrollWidth - track.clientWidth;
     const pin = wide.matches && dx > 0 && dx < innerHeight * 3;
-    root.classList.toggle("is-pinned", pin);
-    root.style.height = pin ? `${innerHeight + dx}px` : ""; // one pixel of scroll moves the row one pixel
+    root.classList.toggle('is-pinned', pin);
+    root.style.height = pin ? `${innerHeight + dx}px` : ''; // one pixel of scroll moves the row one pixel
     place();
   };
-  track.addEventListener("focusin", (e) => {
-    // keyboard: bring the focused item into view
-    if (!root.classList.contains("is-pinned")) return;
-    const item = e.target.closest(".gallery__item");
-    const x = Math.min(
-      dx,
-      Math.max(0, item.offsetLeft - parseFloat(getComputedStyle(track).paddingLeft)),
-    );
-    scrollTo({ top: root.getBoundingClientRect().top + scrollY + x, behavior: "instant" });
+  track.addEventListener('focusin', (e) => {             // keyboard: bring the focused item into view
+    if (!root.classList.contains('is-pinned')) return;
+    const item = e.target.closest('.gallery__item');
+    const x = Math.min(dx, Math.max(0, item.offsetLeft - parseFloat(getComputedStyle(track).paddingLeft)));
+    scrollTo({ top: root.getBoundingClientRect().top + scrollY + x, behavior: 'instant' });
   });
-  addEventListener(
-    "scroll",
-    () => {
-      if (!queued) {
-        queued = true;
-        requestAnimationFrame(place);
-      }
-    },
-    { passive: true },
-  );
-  addEventListener("resize", measure);
-  addEventListener("load", measure);
-  wide.addEventListener("change", measure);
+  addEventListener('scroll', () => { if (!queued) { queued = true; requestAnimationFrame(place); } }, { passive: true });
+  addEventListener('resize', measure);
+  addEventListener('load', measure);
+  wide.addEventListener('change', measure);
   measure();
 })();
 ```
@@ -1043,69 +663,20 @@ faster, so the hero recedes instead of simply scrolling off.
 ```
 
 ```css
-.hero {
-  position: relative;
-  min-height: 100svh;
-  overflow: clip;
-  display: grid;
-  align-items: end;
-  view-timeline-name: --hero;
-}
-.hero__picture {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-.hero::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: var(--ink);
-  opacity: 0;
-  pointer-events: none;
-}
-.hero__copy {
-  position: relative;
-  z-index: 1;
-  padding: var(--margin);
-}
+.hero { position: relative; min-height: 100svh; overflow: clip; display: grid; align-items: end; view-timeline-name: --hero; }
+.hero__picture { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.hero::after { content: ''; position: absolute; inset: 0; background: var(--ink); opacity: 0; pointer-events: none; }
+.hero__copy { position: relative; z-index: 1; padding: var(--margin); }
 @supports (animation-timeline: view()) {
   @media (prefers-reduced-motion: no-preference) {
-    .hero__picture {
-      animation: hero-sink linear both;
-      animation-timeline: --hero;
-      animation-range: exit 0% exit 100%;
-    }
-    .hero::after {
-      animation: hero-dim linear both;
-      animation-timeline: --hero;
-      animation-range: exit 0% exit 100%;
-    }
-    .hero__copy {
-      animation: hero-lift linear both;
-      animation-timeline: --hero;
-      animation-range: exit 0% exit 70%;
-    }
+    .hero__picture { animation: hero-sink linear both; animation-timeline: --hero; animation-range: exit 0% exit 100%; }
+    .hero::after { animation: hero-dim linear both; animation-timeline: --hero; animation-range: exit 0% exit 100%; }
+    .hero__copy { animation: hero-lift linear both; animation-timeline: --hero; animation-range: exit 0% exit 70%; }
   }
 }
-@keyframes hero-sink {
-  to {
-    transform: translateY(8%) scale(1.06);
-  }
-}
-@keyframes hero-dim {
-  to {
-    opacity: 0.35;
-  }
-}
-@keyframes hero-lift {
-  to {
-    transform: translateY(-6%);
-    opacity: 0;
-  }
-}
+@keyframes hero-sink { to { transform: translateY(8%) scale(1.06); } }
+@keyframes hero-dim { to { opacity: 0.35; } }
+@keyframes hero-lift { to { transform: translateY(-6%); opacity: 0; } }
 ```
 
 The `exit` range runs from the moment the hero's top meets the top of the screen until its bottom
@@ -1126,43 +697,15 @@ page's hero. No library, no full-screen curtain.
 
 ```css
 /* on every page */
-@view-transition {
-  navigation: auto;
-}
-@media (prefers-reduced-motion: reduce) {
-  @view-transition {
-    navigation: none;
-  }
-}
-::view-transition-old(root) {
-  animation: vt-leave 200ms var(--ease-exit) both;
-}
-::view-transition-new(root) {
-  animation: vt-arrive 380ms var(--ease-out) 60ms both;
-}
-::view-transition-group(*) {
-  animation-duration: 480ms;
-  animation-timing-function: var(--ease-in-out);
-}
-::view-transition-image-pair(*.picture) {
-  overflow: clip;
-}
-::view-transition-old(*.picture),
-::view-transition-new(*.picture) {
-  height: 100%;
-  object-fit: cover;
-}
-@keyframes vt-leave {
-  to {
-    opacity: 0;
-  }
-}
-@keyframes vt-arrive {
-  from {
-    opacity: 0;
-    transform: translateY(16px);
-  }
-}
+@view-transition { navigation: auto; }
+@media (prefers-reduced-motion: reduce) { @view-transition { navigation: none; } }
+::view-transition-old(root) { animation: vt-leave 200ms var(--ease-exit) both; }
+::view-transition-new(root) { animation: vt-arrive 380ms var(--ease-out) 60ms both; }
+::view-transition-group(*) { animation-duration: 480ms; animation-timing-function: var(--ease-in-out); }
+::view-transition-image-pair(*.picture) { overflow: clip; }
+::view-transition-old(*.picture), ::view-transition-new(*.picture) { height: 100%; object-fit: cover; }
+@keyframes vt-leave { to { opacity: 0; } }
+@keyframes vt-arrive { from { opacity: 0; transform: translateY(16px); } }
 ```
 
 ```html
@@ -1186,44 +729,27 @@ readable before it fills; the fill only sets the pace.
 ```
 
 ```css
-[data-fill] {
-  --fill: var(--ink);
-  color: var(--fill);
-}
+[data-fill] { --fill: var(--ink); color: var(--fill); }
 @supports (animation-timeline: view()) {
   @media (prefers-reduced-motion: no-preference) {
-    .is-filling > span {
-      display: inline-block;
-      color: color-mix(in oklab, var(--fill) 45%, transparent);
-      animation: ink-fill linear both;
-      animation-timeline: view();
-      animation-range: cover 20% cover 45%;
-    }
+    .is-filling > span { display: inline-block; color: color-mix(in oklab, var(--fill) 45%, transparent); animation: ink-fill linear both; animation-timeline: view(); animation-range: cover 20% cover 45%; }
   }
 }
-@keyframes ink-fill {
-  to {
-    color: var(--fill);
-  }
-}
+@keyframes ink-fill { to { color: var(--fill); } }
 ```
 
 ```js
 (() => {
-  if (
-    !CSS.supports("animation-timeline: view()") ||
-    matchMedia("(prefers-reduced-motion: reduce)").matches
-  )
-    return;
-  document.querySelectorAll("[data-fill]").forEach((el) => {
+  if (!CSS.supports('animation-timeline: view()') || matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  document.querySelectorAll('[data-fill]').forEach((el) => {
     const words = el.textContent.trim().split(/\s+/);
-    el.textContent = "";
+    el.textContent = '';
     words.forEach((word, i) => {
-      const s = document.createElement("span");
+      const s = document.createElement('span');
       s.textContent = word;
-      el.append(s, i < words.length - 1 ? " " : "");
+      el.append(s, i < words.length - 1 ? ' ' : '');
     });
-    el.classList.add("is-filling");
+    el.classList.add('is-filling');
   });
 })();
 ```
@@ -1245,78 +771,43 @@ beat apart. The real number stays in the text for screen readers and search.
 ```
 
 ```css
-.roll__digits {
-  display: inline-flex;
-  font-variant-numeric: tabular-nums;
-  line-height: 1;
-}
-.roll__col {
-  display: inline-block;
-  height: 1em;
-  overflow: clip;
-}
-.roll__strip {
-  display: flex;
-  flex-direction: column;
-  transform: translateY(calc(var(--d) * -1em));
-}
-.roll__strip > span {
-  height: 1em;
-}
+.roll__digits { display: inline-flex; font-variant-numeric: tabular-nums; line-height: 1; }
+.roll__col { display: inline-block; height: 1em; overflow: clip; }
+.roll__strip { display: flex; flex-direction: column; transform: translateY(calc(var(--d) * -1em)); }
+.roll__strip > span { height: 1em; }
 @media (prefers-reduced-motion: no-preference) {
-  .roll:not(.is-in) .roll__strip {
-    transform: none;
-  }
-  .roll.is-in .roll__strip {
-    transition: transform 1100ms var(--ease-expo) calc(var(--i) * var(--stagger-item));
-  }
+  .roll:not(.is-in) .roll__strip { transform: none; }
+  .roll.is-in .roll__strip { transition: transform 1100ms var(--ease-expo) calc(var(--i) * var(--stagger-item)); }
 }
 ```
 
 ```js
 (() => {
-  const els = [...document.querySelectorAll("[data-roll]")];
+  const els = [...document.querySelectorAll('[data-roll]')];
   if (!els.length) return;
   els.forEach((el) => {
     const value = el.textContent.trim();
-    const said = Object.assign(document.createElement("span"), {
-      className: "sr-only",
-      textContent: value,
-    });
-    const shown = Object.assign(document.createElement("span"), { className: "roll__digits" });
-    shown.setAttribute("aria-hidden", "true");
+    const said = Object.assign(document.createElement('span'), { className: 'sr-only', textContent: value });
+    const shown = Object.assign(document.createElement('span'), { className: 'roll__digits' });
+    shown.setAttribute('aria-hidden', 'true');
     let i = 0;
     for (const ch of value) {
-      if (!/\d/.test(ch)) {
-        shown.append(ch);
-        continue;
-      }
-      const col = Object.assign(document.createElement("span"), { className: "roll__col" });
-      const strip = Object.assign(document.createElement("span"), { className: "roll__strip" });
-      strip.style.setProperty("--d", ch);
-      strip.style.setProperty("--i", i++);
-      for (let n = 0; n < 10; n++)
-        strip.append(Object.assign(document.createElement("span"), { textContent: n }));
+      if (!/\d/.test(ch)) { shown.append(ch); continue; }
+      const col = Object.assign(document.createElement('span'), { className: 'roll__col' });
+      const strip = Object.assign(document.createElement('span'), { className: 'roll__strip' });
+      strip.style.setProperty('--d', ch);
+      strip.style.setProperty('--i', i++);
+      for (let n = 0; n < 10; n++) strip.append(Object.assign(document.createElement('span'), { textContent: n }));
       col.append(strip);
       shown.append(col);
     }
-    el.classList.add("roll");
+    el.classList.add('roll');
     el.replaceChildren(said, shown);
   });
-  if (!("IntersectionObserver" in window)) {
-    els.forEach((el) => el.classList.add("is-in"));
-    return;
-  }
-  const io = new IntersectionObserver(
-    (entries) => {
-      for (const e of entries)
-        if (e.isIntersecting) {
-          e.target.classList.add("is-in");
-          io.unobserve(e.target);
-        }
-    },
-    { rootMargin: "0px 0px -15% 0px" },
-  );
+  if (!('IntersectionObserver' in window)) { els.forEach((el) => el.classList.add('is-in')); return; }
+  const io = new IntersectionObserver((entries) => {
+    for (const e of entries) if (e.isIntersecting) { e.target.classList.add('is-in'); io.unobserve(e.target); }
+  }, { rootMargin: '0px 0px -15% 0px' });
   els.forEach((el) => io.observe(el));
 })();
 ```
@@ -1328,18 +819,9 @@ and never for a value that changes after load. Reduced motion: the figure is set
 ### Accordion
 
 ```css
-.acc__panel {
-  display: grid;
-  grid-template-rows: 0fr;
-  transition: grid-template-rows 320ms var(--ease-out);
-}
-.acc__panel > div {
-  overflow: hidden;
-}
-.acc[open] .acc__panel,
-.acc__item.is-open .acc__panel {
-  grid-template-rows: 1fr;
-}
+.acc__panel { display: grid; grid-template-rows: 0fr; transition: grid-template-rows 320ms var(--ease-out); }
+.acc__panel > div { overflow: hidden; }
+.acc[open] .acc__panel, .acc__item.is-open .acc__panel { grid-template-rows: 1fr; }
 ```
 
 Animating `grid-template-rows` from `0fr` to `1fr` opens to the content's real height without measuring
@@ -1348,18 +830,8 @@ it in JavaScript.
 ### Menu or dialog
 
 ```css
-.menu {
-  transform-origin: top right;
-  transition:
-    opacity var(--t-ui) var(--ease-out),
-    transform var(--t-ui) var(--ease-out);
-}
-.menu[hidden],
-.menu.is-closed {
-  opacity: 0;
-  transform: scale(0.97) translateY(-6px);
-  pointer-events: none;
-}
+.menu { transform-origin: top right; transition: opacity var(--t-ui) var(--ease-out), transform var(--t-ui) var(--ease-out); }
+.menu[hidden], .menu.is-closed { opacity: 0; transform: scale(0.97) translateY(-6px); pointer-events: none; }
 ```
 
 Things open from where they were triggered (`transform-origin` at the trigger). Nothing enters from
@@ -1369,25 +841,25 @@ Things open from where they were triggered (`transform-origin` at the trigger). 
 
 The direction sheet names one. Each of these was seen repeatedly on the studied gallery sites.
 
-| Move                      | What happens                                                                                                                                 | Build with                                                                                                                 |
-| ------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
-| Masked headline           | Lines rise from behind their baselines on load                                                                                               | Masked line reveal recipe                                                                                                  |
-| Shutter image             | Hero or showcase image opens from an edge, settling from 1.12 scale                                                                          | Image shutter recipe                                                                                                       |
-| Scaling wordmark          | A giant wordmark shrinks or grows a few percent as the hero scrolls out                                                                      | Scroll-linked recipe on `scale`                                                                                            |
-| Pinned story              | A heading holds while its items scroll past                                                                                                  | Sticky recipe                                                                                                              |
-| Index with preview        | Text rows; the hovered row shows its image                                                                                                   | Index with preview, anchored to the row                                                                                    |
-| Curtain footer            | The last section is revealed from under the page as you reach the end                                                                        | `position: sticky; bottom: 0` footer under a main with a background and `z-index`                                          |
-| Slow crossfade            | Hero image crossfades through 3–4 photographs, 5–6s each                                                                                     | Stacked images, opacity keyframes, pause when the tab is hidden                                                            |
-| Edge-to-edge marquee      | One line of very large type travels sideways, slowly                                                                                         | Duplicate the content, `translateX(-50%)` linear loop, pause on hover and under reduced motion                             |
-| Drag row                  | A horizontally scrollable row of large images with scroll snapping                                                                           | `overflow-x: auto; scroll-snap-type: x mandatory`, no library                                                              |
-| Colour by chapter         | Each chapter is its own full-bleed colour field, so the ground changes at section edges; a fixed header takes the ink of the chapter beneath | Section backgrounds in CSS; `base.js` sets `--header-ink` from `data-ink`. Never recolour the whole page from an observer  |
-| Opening window            | A type screen hands over to the big picture: a window in the middle of a held stage opens to full-bleed over about one screen                | Opening window recipe                                                                                                      |
-| Ink-fill statement        | One statement fills from 45% to full ink as it rises through the screen                                                                      | Ink fill recipe                                                                                                            |
-| Sheet over a held picture | A full-bleed photograph holds for one screen; the next chapter slides up over it as an opaque sheet                                          | A 100svh `position: sticky; top: 0` figure followed by a section with its own background and a higher `z-index`; no script |
-| Sideways gallery          | A short row of pictures moves sideways while the vertical scroll holds the stage                                                             | Sideways gallery recipe                                                                                                    |
-| Pushed line               | One line of very large type is pushed sideways by the scroll, reading whole at the middle of its run                                         | `animation-timeline: view()` on the line, `translateX` from 12% to -12%, linear; static where unsupported                  |
-| Rolling figures           | The few figures that make the case roll up to their values once                                                                              | Rolling figures recipe                                                                                                     |
-| Carried picture           | The picture clicked in a list travels into place as the next page's hero                                                                     | Page to page recipe                                                                                                        |
+| Move | What happens | Build with |
+| --- | --- | --- |
+| Masked headline | Lines rise from behind their baselines on load | Masked line reveal recipe |
+| Shutter image | Hero or showcase image opens from an edge, settling from 1.12 scale | Image shutter recipe |
+| Scaling wordmark | A giant wordmark shrinks or grows a few percent as the hero scrolls out | Scroll-linked recipe on `scale` |
+| Pinned story | A heading holds while its items scroll past | Sticky recipe |
+| Index with preview | Text rows; the hovered row shows its image | Index with preview, anchored to the row |
+| Curtain footer | The last section is revealed from under the page as you reach the end | `position: sticky; bottom: 0` footer under a main with a background and `z-index` |
+| Slow crossfade | Hero image crossfades through 3–4 photographs, 5–6s each | Stacked images, opacity keyframes, pause when the tab is hidden |
+| Edge-to-edge marquee | One line of very large type travels sideways, slowly | Duplicate the content, `translateX(-50%)` linear loop, pause on hover and under reduced motion |
+| Drag row | A horizontally scrollable row of large images with scroll snapping | `overflow-x: auto; scroll-snap-type: x mandatory`, no library |
+| Colour by chapter | Each chapter is its own full-bleed colour field, so the ground changes at section edges; a fixed header takes the ink of the chapter beneath | Section backgrounds in CSS; `base.js` sets `--header-ink` from `data-ink`. Never recolour the whole page from an observer |
+| Opening window | A type screen hands over to the big picture: a window in the middle of a held stage opens to full-bleed over about one screen | Opening window recipe |
+| Ink-fill statement | One statement fills from 45% to full ink as it rises through the screen | Ink fill recipe |
+| Sheet over a held picture | A full-bleed photograph holds for one screen; the next chapter slides up over it as an opaque sheet | A 100svh `position: sticky; top: 0` figure followed by a section with its own background and a higher `z-index`; no script |
+| Sideways gallery | A short row of pictures moves sideways while the vertical scroll holds the stage | Sideways gallery recipe |
+| Pushed line | One line of very large type is pushed sideways by the scroll, reading whole at the middle of its run | `animation-timeline: view()` on the line, `translateX` from 12% to -12%, linear; static where unsupported |
+| Rolling figures | The few figures that make the case roll up to their values once | Rolling figures recipe |
+| Carried picture | The picture clicked in a list travels into place as the next page's hero | Page to page recipe |
 
 Pick by subject. A portfolio wants the index with preview; a restaurant wants the slow crossfade; a
 product wants the shutter on its hero object. If the move says nothing about the subject, it is

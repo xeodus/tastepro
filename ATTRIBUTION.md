@@ -11,6 +11,10 @@ The complete upstream license texts are committed at:
 - `content/sources/licenses/awesome-design-md.txt`
 - `content/sources/licenses/web-interface-guidelines.txt`
 - `content/sources/licenses/playwright-cli.txt`
+- `content/sources/licenses/govuk-design-system.txt`
+- `content/sources/licenses/uswds.txt`
+- `content/sources/licenses/cms-design-system.txt`
+- `content/sources/licenses/nhs-uk.txt`
 
 The machine-readable pins are in `sources.lock.json` and
 `content/sources.lock.json`. Every generated pack also carries a `provenance`
@@ -25,6 +29,10 @@ transformations applied.
 | [Awesome DESIGN.md](https://github.com/VoltAgent/awesome-design-md)                        | VoltAgent   | MIT        | `3b605329240ce735b510037cca322f1831fdd7f8` |
 | [Vercel Web Interface Guidelines](https://github.com/vercel-labs/web-interface-guidelines) | Vercel Labs | MIT        | `434b7f91364665f2f733b310ec54809bf8f37937` |
 | [Microsoft Playwright CLI](https://github.com/microsoft/playwright-cli)                    | Microsoft   | Apache-2.0 | `b1a5903c5b633b8c9f843ad7b629c2a78437040c` |
+| [GOV.UK Design System](https://github.com/alphagov/govuk-design-system)                    | GDS         | OGL-3.0    | `0c6de5736a4e755a3808fb31d3a7723a33b7c705` |
+| [USWDS](https://github.com/uswds/uswds-site)                                               | GSA         | CC0-1.0    | `af13d80f071c3d897bee422f51954d9d7d156474` |
+| [CMS Design System](https://github.com/CMSgov/design-system)                               | CMS         | CC0-1.0    | `269a1abeb3159824800e134064db8a7b35821ccd` |
+| [NHS.UK Design System](https://github.com/nhsuk/nhsuk-service-manual)                      | NHS England | OGL-3.0    | `4a37578c4d8fa2c5bbf11b1039d806bebce59234` |
 
 ## Taste Skill
 
@@ -102,6 +110,91 @@ planned audit loop, plus reference skill documents.
 The TastePro audit implementation is original. M0 ships the audit rubric and
 prompt; it does not execute a browser. Browser execution is a later milestone.
 
+## GOV.UK Design System
+
+**Used for:** eight form and service patterns — bank details, payment card
+details, validation, error summary, addresses, names, dates, and check answers.
+
+**Paths:** `src/patterns/*/index.md` and `src/components/error-summary/index.md`
+in the pinned repository.
+
+**License:** repository code is MIT; the published guidance is licensed under
+the Open Government Licence v3.0.
+
+**TastePro transformations:**
+
+- Converted the published Markdown into `app-pattern` packs.
+- Stripped Nunjucks examples, links, and image references from the guidance.
+- Mapped each pattern to the TastePro domain taxonomy and form kinds.
+- Added provenance, source URLs, and quality metadata.
+- Did not copy Crown marks, screenshots, or example markup.
+
+**Not included:** the GOV.UK crown, Royal Coat of Arms, screenshots, card-scheme
+marks, or any binary asset.
+
+## USWDS
+
+**Used for:** eight identity and complex-form patterns — name, address, date of
+birth, email address, phone number, Social Security Number, keep a record, and
+establish trust.
+
+**Paths:** `pages/patterns/create-a-profile/*.md` and
+`pages/patterns/complex-form/*.md` in the pinned repository.
+
+**License:** CC0 1.0 Universal (public domain).
+
+**TastePro transformations:**
+
+- Converted the HTML guidance blocks into `app-pattern` packs.
+- Removed Jekyll includes, previews, code samples, and example markup.
+- Mapped each pattern to the TastePro domain taxonomy and form kinds.
+- Added provenance, source URLs, and quality metadata.
+
+**Not included:** agency logos, third-party fonts and icons, screenshots, or
+example markup.
+
+## CMS Design System
+
+**Used for:** eight Medicare/Medicaid component and pattern pages — alert,
+table, accordion, pagination, tabs, multi-input date field, ZIP codes, and
+phone numbers.
+
+**Paths:** `packages/docs/content/components/**/*.mdx` and
+`packages/docs/content/patterns/*.mdx` in the pinned repository.
+
+**License:** CC0 1.0 Universal for the project, with third-party fonts and
+icons under their own licenses.
+
+**TastePro transformations:**
+
+- Kept the guidance section and removed MDX imports, examples, and JSX wrappers.
+- Converted the remaining guidance into `app-pattern` packs.
+- Mapped each pattern to the TastePro domain taxonomy and form kinds.
+- Added provenance, source URLs, and quality metadata.
+
+**Not included:** fonts, icons, agency logos, screenshots, or example markup.
+
+## NHS.UK Design System
+
+**Used for:** eight healthcare service patterns — NHS numbers, check answers,
+confirmation pages, question pages, start pages, complete multiple tasks,
+help users decide when and where to get care, and interruption pages.
+
+**Paths:** `app/views/design-system/patterns/*/index.njk` in the pinned
+repository.
+
+**License:** repository code is MIT; the published guidance is licensed under
+the Open Government Licence v3.0.
+
+**TastePro transformations:**
+
+- Removed Nunjucks template tags, macros, and design examples.
+- Converted the guidance HTML to `app-pattern` packs.
+- Mapped each pattern to the TastePro domain taxonomy and form kinds.
+- Added provenance, source URLs, and quality metadata.
+
+**Not included:** NHS marks, Frutiger, images, screenshots, or example markup.
+
 ## Original TastePro content
 
 The following are original to TastePro and licensed under Apache-2.0:
@@ -149,6 +242,26 @@ SOFTWARE.
 Microsoft Playwright CLI and TastePro's original code and content are licensed
 under the Apache License 2.0. The full text is in `LICENSE` and in
 `content/sources/licenses/playwright-cli.txt`.
+
+## Open Government Licence v3.0
+
+The GOV.UK Design System guidance is used under the Open Government Licence
+v3.0:
+
+> Contains public sector information licensed under the Open Government Licence
+> v3.0.
+
+The full licence texts are committed at
+`content/sources/licenses/govuk-design-system.txt` and
+`content/sources/licenses/nhs-uk.txt`, and published at
+https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/.
+
+## CC0 1.0
+
+USWDS and the CMS Design System are released under CC0 1.0 Universal (public
+domain). The full texts are committed at
+`content/sources/licenses/uswds.txt` and
+`content/sources/licenses/cms-design-system.txt`.
 
 ## Reporting an attribution problem
 

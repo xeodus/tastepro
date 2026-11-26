@@ -1,6 +1,6 @@
 {
   "name": "tastepro",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Deterministic design taste, domain playbooks, references, and a web-interface audit rubric for coding agents.",
   "type": "module",
   "license": "Apache-2.0",

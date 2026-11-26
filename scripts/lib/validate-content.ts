@@ -15,7 +15,7 @@ import { computeContentHash } from "./content-hash.js";
 import type { SourceLock } from "./source-lock.js";
 
 const EXPECTED_COUNTS: Record<ContentKind, number> = {
-  "app-pattern": 25,
+  "app-pattern": 57,
   "app-shell": 5,
   "app-style": 7,
   brand: 84,
@@ -36,6 +36,10 @@ const EXPECTED_SOURCES = [
   "awesome-design-md",
   "web-interface-guidelines",
   "playwright-cli",
+  "govuk-design-system",
+  "uswds",
+  "cms-design-system",
+  "nhs-uk",
 ] as const;
 
 const errors: string[] = [];
@@ -284,7 +288,10 @@ export async function validateContent(contentDir: string): Promise<ValidationRep
   );
 
   // Sources, commits, and licenses.
-  check(sources.length === EXPECTED_SOURCES.length, `expected four sources, got ${sources.length}`);
+  check(
+    sources.length === EXPECTED_SOURCES.length,
+    `expected ${EXPECTED_SOURCES.length} sources, got ${sources.length}`,
+  );
   for (const id of EXPECTED_SOURCES) {
     const source = sources.find((candidate) => candidate.id === id);
     check(Boolean(source), `missing source ${id}`);

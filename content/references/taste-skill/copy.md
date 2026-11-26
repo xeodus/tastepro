@@ -53,13 +53,13 @@ k ≈ 0.50  most grotesks and serifs at display size, tight tracking
 k ≈ 0.58  wide / extended faces, all-caps settings
 ```
 
-| Where                   | Line width | Size  | Per line | Two-line budget    |
-| ----------------------- | ---------- | ----- | -------- | ------------------ |
-| Phone 390, 20px gutters | 350px      | 44px  | ~16      | **~32 characters** |
-| Phone 390, 20px gutters | 350px      | 34px  | ~21      | ~42 characters     |
-| Tablet 768              | 690px      | 64px  | ~22      | ~44 characters     |
-| Desktop, 12-col measure | 1100px     | 104px | ~21      | ~42 characters     |
-| Desktop, half width     | 620px      | 72px  | ~17      | ~34 characters     |
+| Where | Line width | Size | Per line | Two-line budget |
+| --- | --- | --- | --- | --- |
+| Phone 390, 20px gutters | 350px | 44px | ~16 | **~32 characters** |
+| Phone 390, 20px gutters | 350px | 34px | ~21 | ~42 characters |
+| Tablet 768 | 690px | 64px | ~22 | ~44 characters |
+| Desktop, 12-col measure | 1100px | 104px | ~21 | ~42 characters |
+| Desktop, half width | 620px | 72px | ~17 | ~34 characters |
 
 So a hero headline of **about 32 characters or fewer** (four to six words) survives everywhere at a
 confident size. Up to about 42 works if the phone size comes down to the mid-30s. Past that you are

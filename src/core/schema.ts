@@ -48,6 +48,10 @@ export const SOURCE_IDS = [
   "awesome-design-md",
   "web-interface-guidelines",
   "playwright-cli",
+  "govuk-design-system",
+  "uswds",
+  "cms-design-system",
+  "nhs-uk",
   "tastepro",
 ] as const;
 
