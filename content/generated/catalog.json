@@ -26930,6 +26930,33 @@
     }
   },
   {
+    "id": "app-pattern/primer-data-visualization",
+    "kind": "app-pattern",
+    "name": "Data visualization",
+    "summary": "Data visualizations are helpful tools for conveying complex data in an engaging and understandable way. They're commonly used in dashboards and insights pages.",
+    "domains": [
+      "developer-tools",
+      "data-analytics",
+      "b2b-saas"
+    ],
+    "sectors": [
+      "developer-tools"
+    ],
+    "tags": [
+      "primer",
+      "data-viz",
+      "guidance",
+      "data-visualization"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "primer",
+    "sourceUrl": "https://primer.style/ui-patterns/data-visualization/",
+    "metrics": {
+      "screen": "data-visualization"
+    }
+  },
+  {
     "id": "app-pattern/uswds-date-of-birth",
     "kind": "app-pattern",
     "name": "Date of birth",
@@ -27062,6 +27089,33 @@
     "sourceUrl": "https://service-manual.nhs.uk/design-system/patterns/help-users-decide-when-and-where-to-get-care",
     "metrics": {
       "screen": "help-users-decide-when-and-where-to-get-care"
+    }
+  },
+  {
+    "id": "app-pattern/primer-degraded-experiences",
+    "kind": "app-pattern",
+    "name": "Degraded experiences",
+    "summary": "Ensuring that a page still renders and primary experiences are still available during downtime of optional service dependencies.",
+    "domains": [
+      "developer-tools",
+      "b2b-saas",
+      "security"
+    ],
+    "sectors": [
+      "developer-tools"
+    ],
+    "tags": [
+      "primer",
+      "resilience",
+      "states",
+      "degraded-experiences"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "primer",
+    "sourceUrl": "https://primer.style/ui-patterns/degraded-experiences/",
+    "metrics": {
+      "screen": "degraded-experiences"
     }
   },
   {
@@ -27228,6 +27282,33 @@
     }
   },
   {
+    "id": "app-pattern/primer-empty-states",
+    "kind": "app-pattern",
+    "name": "Empty states",
+    "summary": "Empty states are used to fill spaces when no content has been added yet, or is temporarily empty due to the nature of the feature.",
+    "domains": [
+      "developer-tools",
+      "b2b-saas",
+      "product-surfaces"
+    ],
+    "sectors": [
+      "developer-tools"
+    ],
+    "tags": [
+      "primer",
+      "empty-state",
+      "states",
+      "empty-states"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "primer",
+    "sourceUrl": "https://primer.style/ui-patterns/empty-states/",
+    "metrics": {
+      "screen": "empty-states"
+    }
+  },
+  {
     "id": "app-pattern/patternfly-error-messages",
     "kind": "app-pattern",
     "name": "Error messages",
@@ -27304,6 +27385,33 @@
     "sourceUrl": "https://designsystem.digital.gov/patterns/complete-a-complex-form/establish-trust/",
     "metrics": {
       "screen": "establish-trust"
+    }
+  },
+  {
+    "id": "app-pattern/primer-feature-onboarding",
+    "kind": "app-pattern",
+    "name": "Feature onboarding",
+    "summary": "Onboarding is a virtual unboxing experience that helps users get started with a feature. This is a guide for designing onboarding for the product and does not include what to do for marketing pages, email announcements, social media, etc.",
+    "domains": [
+      "developer-tools",
+      "b2b-saas",
+      "product-surfaces"
+    ],
+    "sectors": [
+      "developer-tools"
+    ],
+    "tags": [
+      "primer",
+      "onboarding",
+      "guidance",
+      "feature-onboarding"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "primer",
+    "sourceUrl": "https://primer.style/ui-patterns/feature-onboarding/",
+    "metrics": {
+      "screen": "feature-onboarding"
     }
   },
   {
@@ -27520,6 +27628,33 @@
     "quality": "verified",
     "source": "pie",
     "sourceUrl": "https://pie.design/patterns/forms/",
+    "metrics": {
+      "screen": "forms"
+    }
+  },
+  {
+    "id": "app-pattern/primer-forms",
+    "kind": "app-pattern",
+    "name": "Forms",
+    "summary": "Primer's form design guidelines aim to minimize the effort and cognitive load required to complete a task that requires data input from the user. For example, creating a new repo configuring settings, and logging in.",
+    "domains": [
+      "developer-tools",
+      "b2b-saas",
+      "product-surfaces"
+    ],
+    "sectors": [
+      "developer-tools"
+    ],
+    "tags": [
+      "primer",
+      "forms",
+      "guidance",
+      "forms"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "primer",
+    "sourceUrl": "https://primer.style/ui-patterns/forms/overview/",
     "metrics": {
       "screen": "forms"
     }
@@ -28004,6 +28139,33 @@
     }
   },
   {
+    "id": "app-pattern/primer-loading",
+    "kind": "app-pattern",
+    "name": "Loading",
+    "summary": "How to use loading states to help users stay informed and engaged while waiting.",
+    "domains": [
+      "developer-tools",
+      "b2b-saas",
+      "product-surfaces"
+    ],
+    "sectors": [
+      "developer-tools"
+    ],
+    "tags": [
+      "primer",
+      "loading",
+      "states",
+      "loading"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "primer",
+    "sourceUrl": "https://primer.style/ui-patterns/loading/",
+    "metrics": {
+      "screen": "loading"
+    }
+  },
+  {
     "id": "app-pattern/spectrum-menu",
     "kind": "app-pattern",
     "name": "Menu",
@@ -28253,6 +28415,32 @@
     }
   },
   {
+    "id": "app-pattern/primer-navigation",
+    "kind": "app-pattern",
+    "name": "Navigation",
+    "summary": "Navigation patterns help users understand where they are and where they can go next.",
+    "domains": [
+      "developer-tools",
+      "b2b-saas"
+    ],
+    "sectors": [
+      "developer-tools"
+    ],
+    "tags": [
+      "primer",
+      "navigation",
+      "layout",
+      "navigation"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "primer",
+    "sourceUrl": "https://primer.style/ui-patterns/navigation/",
+    "metrics": {
+      "screen": "navigation"
+    }
+  },
+  {
     "id": "app-pattern/nhs-ask-for-nhs-numbers",
     "kind": "app-pattern",
     "name": "NHS numbers",
@@ -28334,6 +28522,33 @@
     "sourceUrl": "https://sap.github.io/fundamental-styles/",
     "metrics": {
       "screen": "notification"
+    }
+  },
+  {
+    "id": "app-pattern/primer-notification-messaging",
+    "kind": "app-pattern",
+    "name": "Notification messaging",
+    "summary": "Messaging components are used to provide important and relevant information to the user, including feedback, contextual information, product updates, and more.",
+    "domains": [
+      "developer-tools",
+      "b2b-saas",
+      "community-social"
+    ],
+    "sectors": [
+      "developer-tools"
+    ],
+    "tags": [
+      "primer",
+      "notifications",
+      "messaging",
+      "notification-messaging"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "primer",
+    "sourceUrl": "https://primer.style/ui-patterns/notification-messaging/",
+    "metrics": {
+      "screen": "notification-messaging"
     }
   },
   {
@@ -28722,6 +28937,33 @@
     }
   },
   {
+    "id": "app-pattern/primer-progressive-disclosure",
+    "kind": "app-pattern",
+    "name": "Progressive disclosure",
+    "summary": "These guidelines summarize how GitHub implements progressive disclosure—an interaction design pattern that hides/shows information—as well as guiding principles, best practices, and implementation support.",
+    "domains": [
+      "developer-tools",
+      "b2b-saas",
+      "product-surfaces"
+    ],
+    "sectors": [
+      "developer-tools"
+    ],
+    "tags": [
+      "primer",
+      "disclosure",
+      "layout",
+      "progressive-disclosure"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "primer",
+    "sourceUrl": "https://primer.style/ui-patterns/progressive-disclosure/",
+    "metrics": {
+      "screen": "progressive-disclosure"
+    }
+  },
+  {
     "id": "app-pattern/nhs-question-pages",
     "kind": "app-pattern",
     "name": "Question pages",
@@ -28860,6 +29102,33 @@
     "sourceUrl": "https://github.com/Leonxlnx/taste-skill",
     "metrics": {
       "screen": "analytics"
+    }
+  },
+  {
+    "id": "app-pattern/primer-saving",
+    "kind": "app-pattern",
+    "name": "Saving",
+    "summary": "Save patterns help users store and update their content and configuration throughout GitHub. These changes should be represented in the UI accurately, quickly, and obviously. Their behavior should inspire confidence and trust.",
+    "domains": [
+      "developer-tools",
+      "b2b-saas",
+      "product-surfaces"
+    ],
+    "sectors": [
+      "developer-tools"
+    ],
+    "tags": [
+      "primer",
+      "saving",
+      "states",
+      "saving"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "primer",
+    "sourceUrl": "https://primer.style/ui-patterns/saving/",
+    "metrics": {
+      "screen": "saving"
     }
   },
   {

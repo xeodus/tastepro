@@ -268,6 +268,20 @@
       "paths": {
         "spec": "docs/spec/*.en-US.md"
       }
+    },
+    {
+      "id": "primer",
+      "name": "GitHub Primer",
+      "repo": "https://github.com/primer/design",
+      "commit": "87f799f202ec95df15c99f473c9c0c803da8e6b3",
+      "license": "MIT",
+      "licenseUrl": "https://raw.githubusercontent.com/primer/design/87f799f202ec95df15c99f473c9c0c803da8e6b3/LICENSE",
+      "authors": ["GitHub"],
+      "url": "https://primer.style/",
+      "notes": "UI pattern guidance. The docs repository was archived in 2025; this is a pinned snapshot. Text only; images and GitHub marks are excluded.",
+      "paths": {
+        "uiPatterns": "content/ui-patterns/**/*.mdx"
+      }
     }
   ]
 }

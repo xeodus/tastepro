@@ -33,6 +33,7 @@ import { govukAdapter } from "./lib/sources/govuk.js";
 import { nhsAdapter } from "./lib/sources/nhs.js";
 import { patternFlyAdapter } from "./lib/sources/patternfly.js";
 import { pieAdapter } from "./lib/sources/pie.js";
+import { primerAdapter } from "./lib/sources/primer.js";
 import { sapAdapter } from "./lib/sources/sap.js";
 import { spectrumAdapter } from "./lib/sources/spectrum.js";
 import type { SourceContext } from "./lib/sources/types.js";
@@ -683,6 +684,7 @@ async function main(): Promise<void> {
     "sap",
     "patternfly",
     "ant-design",
+    "primer",
   ];
   for (const id of required) {
     if (!byId.has(id)) throw new Error(`sources.lock.json is missing ${id}`);
@@ -847,6 +849,18 @@ async function main(): Promise<void> {
       writeLicense: () => fetchLicense(antSource, options, staging),
     };
     const ant = await antAdapter.fetch(antContext);
+    const primerSource = byId.get("primer")!;
+    const primerContext: SourceContext = {
+      source: primerSource,
+      fetchText: (path) =>
+        fetchCached(lockUrl(primerSource, path), sourceCacheKey(primerSource, path), options),
+      fetchJson: (path) =>
+        fetchJsonCached(lockUrl(primerSource, path), sourceCacheKey(primerSource, path), options),
+      provenance: (path, transformations) => provenanceFor(primerSource, path, transformations),
+      sourceUrl: (path = "") => sourceUrl(primerSource, path),
+      writeLicense: () => fetchLicense(primerSource, options, staging),
+    };
+    const primer = await primerAdapter.fetch(primerContext);
     const domains = await buildDomains(options.contentDir);
 
     const warnings = [
@@ -863,6 +877,7 @@ async function main(): Promise<void> {
       ...sap.warnings,
       ...patternfly.warnings,
       ...ant.warnings,
+      ...primer.warnings,
     ];
     const allPacks: Pack[] = sortPacks([
       ...taste.packs,
@@ -879,6 +894,7 @@ async function main(): Promise<void> {
       ...sap.packs,
       ...patternfly.packs,
       ...ant.packs,
+      ...primer.packs,
       ...domains.packs,
     ]);
     const references: ReferencePack[] = sortPacks([
@@ -971,6 +987,7 @@ async function main(): Promise<void> {
       sap.sourceInfo,
       patternfly.sourceInfo,
       ant.sourceInfo,
+      primer.sourceInfo,
     ];
     const counts = countBy(allContent, (pack) => pack.kind);
     const quality = countBy(allContent, (pack) => pack.quality);

@@ -71,7 +71,7 @@ describe("streamable HTTP transport", () => {
       warnings: number;
     };
     expect(body.status).toBe("ok");
-    expect(body.catalogEntries).toBe(997);
+    expect(body.catalogEntries).toBe(1007);
     expect(body.contentHash).toHaveLength(64);
     expect(body.warnings).toBe(29);
 

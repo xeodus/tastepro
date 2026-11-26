@@ -59,6 +59,7 @@ export const SOURCE_IDS = [
   "sap",
   "patternfly",
   "ant-design",
+  "primer",
   "tastepro",
 ] as const;
 

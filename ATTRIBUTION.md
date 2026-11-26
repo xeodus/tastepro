@@ -22,6 +22,7 @@ The complete upstream license texts are committed at:
 - `content/sources/licenses/sap.txt`
 - `content/sources/licenses/patternfly.txt`
 - `content/sources/licenses/ant-design.txt`
+- `content/sources/licenses/primer.txt`
 
 The machine-readable pins are in `sources.lock.json` and
 `content/sources.lock.json`. Every generated pack also carries a `provenance`
@@ -47,6 +48,7 @@ transformations applied.
 | [SAP Fiori](https://github.com/SAP/fundamental-styles)                                     | SAP                   | Apache-2.0 | `0753390b563b4eafe4d90ec812205df1361941ac` |
 | [PatternFly](https://github.com/patternfly/patternfly-org)                                 | Red Hat               | MIT        | `7637a02a651895ca568938e71621ecc717224e44` |
 | [Ant Design](https://github.com/ant-design/ant-design)                                     | Ant Group             | MIT        | `768405c1019435763adab015d47bf503505340d6` |
+| [GitHub Primer](https://github.com/primer/design)                                          | GitHub                | MIT        | `87f799f202ec95df15c99f473c9c0c803da8e6b3` |
 
 ## Taste Skill
 
@@ -354,6 +356,26 @@ layout, feedback, and navigation.
 
 **Not included:** Ant Group marks, AlibabaSans, images, or CDN assets.
 
+## GitHub Primer
+
+**Used for:** ten UI patterns — empty states, loading, navigation, saving,
+feature onboarding, degraded experiences, data visualization, notification and
+messaging, progressive disclosure, and forms.
+
+**Paths:** `content/ui-patterns/**/*.mdx` in the pinned repository.
+
+**License:** MIT.
+
+**TastePro transformations:**
+
+- Removed MDX imports, layout wrappers, images, and link markup.
+- Converted the remaining guidance to `app-pattern` packs.
+- Mapped each pattern to developer-tools, B2B, analytics, and social domains.
+- Added provenance, source URLs, and quality metadata.
+- Marked the snapshot as archived: the docs repository was archived in 2025.
+
+**Not included:** GitHub marks, images, or implementation code.
+
 ## Original TastePro content
 
 The following are original to TastePro and licensed under Apache-2.0:
@@ -369,7 +391,7 @@ Original packs use `provenance.source: "tastepro"` and
 
 ## MIT license text
 
-The five MIT-licensed sources are reproduced under the following copyright
+The six MIT-licensed sources are reproduced under the following copyright
 notices and the standard MIT terms.
 
 ```text
@@ -378,6 +400,7 @@ Copyright (c) 2026 VoltAgent
 Copyright (c) 2025 Vercel Labs
 Copyright (c) Red Hat
 Copyright (c) Ant Group
+Copyright (c) GitHub
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

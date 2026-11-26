@@ -10,7 +10,7 @@
       "Leonxlnx"
     ],
     "url": "https://github.com/Leonxlnx/taste-skill",
-    "retrievedAt": "2026-11-26T18:52:16.019Z",
+    "retrievedAt": "2026-11-26T18:56:41.672Z",
     "notes": "Design directions, palettes, type pairings, hero and section blueprints, motion recipes, site studies, photo-set metadata, app-screen library, and reference essays.",
     "paths": {
       "skill": "skills/taste-skill/SKILL.md",
@@ -49,7 +49,7 @@
       "VoltAgent"
     ],
     "url": "https://github.com/VoltAgent/awesome-design-md",
-    "retrievedAt": "2026-11-26T18:52:16.081Z",
+    "retrievedAt": "2026-11-26T18:56:41.736Z",
     "notes": "84 brand design-system analyses with YAML tokens. Brand names are used as references with attribution; no logos or screenshots are redistributed.",
     "paths": {
       "readme": "README.md",
@@ -70,7 +70,7 @@
       "Vercel Labs"
     ],
     "url": "https://vercel.com/design/guidelines",
-    "retrievedAt": "2026-11-26T18:52:16.085Z",
+    "retrievedAt": "2026-11-26T18:56:41.740Z",
     "notes": "The audit rubric: accessibility, focus, forms, animation, typography, content handling, images, performance, navigation, touch, layout, dark mode, i18n, hydration, hover, copy, and anti-patterns.",
     "paths": {
       "rules": "command.md",
@@ -92,7 +92,7 @@
       "Microsoft"
     ],
     "url": "https://github.com/microsoft/playwright-cli",
-    "retrievedAt": "2026-11-26T18:52:16.089Z",
+    "retrievedAt": "2026-11-26T18:56:41.744Z",
     "notes": "Browser automation and session-management guidance for the audit loop. The TastePro audit implementation is original; this source informs the workflow and reference skill.",
     "paths": {
       "readme": "README.md",
@@ -114,7 +114,7 @@
       "Government Digital Service"
     ],
     "url": "https://design-system.service.gov.uk/",
-    "retrievedAt": "2026-11-26T18:52:16.091Z",
+    "retrievedAt": "2026-11-26T18:56:41.746Z",
     "notes": "Form and service patterns. Repository code is MIT; the published guidance is OGL-3.0. Images, Crown marks, and Nunjucks examples are excluded.",
     "paths": {
       "bank-details": "src/patterns/bank-details/index.md",
@@ -141,7 +141,7 @@
       "U.S. General Services Administration"
     ],
     "url": "https://designsystem.digital.gov/",
-    "retrievedAt": "2026-11-26T18:52:16.102Z",
+    "retrievedAt": "2026-11-26T18:56:41.757Z",
     "notes": "Identity and complex-form patterns. CC0; linked third-party fonts, icons, and agency marks are excluded.",
     "paths": {
       "name": "pages/patterns/create-a-profile/name.md",
@@ -168,7 +168,7 @@
       "Centers for Medicare & Medicaid Services"
     ],
     "url": "https://design.cms.gov/",
-    "retrievedAt": "2026-11-26T18:52:16.110Z",
+    "retrievedAt": "2026-11-26T18:56:41.765Z",
     "notes": "Medicare/Medicaid component and pattern guidance. CC0 with third-party font/icon exceptions; only text guidance is ingested.",
     "paths": {
       "alert": "packages/docs/content/components/alert.mdx",
@@ -195,7 +195,7 @@
       "NHS England"
     ],
     "url": "https://service-manual.nhs.uk/design-system",
-    "retrievedAt": "2026-11-26T18:52:16.114Z",
+    "retrievedAt": "2026-11-26T18:56:41.769Z",
     "notes": "Healthcare service patterns. Repository code is MIT; the published guidance is OGL-3.0. NHS marks, Frutiger, images, and design examples are excluded.",
     "paths": {
       "ask-for-nhs-numbers": "app/views/design-system/patterns/ask-for-nhs-numbers/index.njk",
@@ -222,7 +222,7 @@
       "IBM"
     ],
     "url": "https://carbondesignsystem.com/",
-    "retrievedAt": "2026-11-26T18:52:16.126Z",
+    "retrievedAt": "2026-11-26T18:56:41.781Z",
     "notes": "Enterprise component, pattern, and data-visualization guidance. The docs repository was archived on 2026-09-30; this is a pinned snapshot. Text only; images and IBM marks are excluded.",
     "paths": {
       "components": "src/pages/components/*/usage.mdx",
@@ -244,7 +244,7 @@
       "Adobe"
     ],
     "url": "https://spectrum.adobe.com/",
-    "retrievedAt": "2026-11-26T18:52:16.130Z",
+    "retrievedAt": "2026-11-26T18:56:41.785Z",
     "notes": "Spectrum 2 component and foundation guidance in JSON. Schema is 1.0.0-draft; pin and validate. Text only; images, fonts, and Adobe marks are excluded.",
     "paths": {
       "components": "packages/design-data/components/*.json",
@@ -265,7 +265,7 @@
       "Ethereum Foundation"
     ],
     "url": "https://ethereum.org/en/developers/docs/design-and-ux/",
-    "retrievedAt": "2026-11-26T18:52:16.132Z",
+    "retrievedAt": "2026-11-26T18:56:41.786Z",
     "notes": "Web3 design, DEX, transaction, and gas guidance. Content is CC BY 4.0; repository code is MIT. Images and outbound third-party research are excluded.",
     "paths": {
       "design-and-ux": "public/content/developers/docs/design-and-ux/index.md",
@@ -289,7 +289,7 @@
       "Just Eat Takeaway.com"
     ],
     "url": "https://pie.design/",
-    "retrievedAt": "2026-11-26T18:52:16.136Z",
+    "retrievedAt": "2026-11-26T18:56:41.790Z",
     "notes": "Food-delivery and marketplace patterns. Apache-2.0; brand palette, logos, food photography, and fonts are excluded.",
     "paths": {
       "onboarding": "apps/pie-docs/src/patterns/onboarding-and-guided-tour/web-guidance/web-guidance.md",
@@ -316,7 +316,7 @@
       "SAP"
     ],
     "url": "https://sap.github.io/fundamental-styles/",
-    "retrievedAt": "2026-11-26T18:52:16.137Z",
+    "retrievedAt": "2026-11-26T18:56:41.792Z",
     "notes": "SAP Fiori component guidance. Apache-2.0; text only, SAP marks and images excluded.",
     "paths": {
       "components": "docs/component-guidance.json"
@@ -336,7 +336,7 @@
       "Red Hat"
     ],
     "url": "https://www.patternfly.org/",
-    "retrievedAt": "2026-11-26T18:52:16.140Z",
+    "retrievedAt": "2026-11-26T18:56:41.795Z",
     "notes": "Enterprise dashboard, pattern, and content-design guidance. MIT; images and Red Hat marks are excluded.",
     "paths": {
       "patterns": "packages/documentation-site/patternfly-docs/content/patterns/*/*.md",
@@ -357,13 +357,33 @@
       "Ant Group"
     ],
     "url": "https://ant.design/docs/spec/introduce",
-    "retrievedAt": "2026-11-26T18:52:21.988Z",
+    "retrievedAt": "2026-11-26T18:56:41.798Z",
     "notes": "B2B admin design specifications. English docs only; images, AlibabaSans, and Alibaba CDN assets are excluded.",
     "paths": {
       "spec": "docs/spec/*.en-US.md"
     },
     "counts": {
       "app-pattern": 12
+    }
+  },
+  {
+    "id": "primer",
+    "name": "GitHub Primer",
+    "repo": "https://github.com/primer/design",
+    "commit": "87f799f202ec95df15c99f473c9c0c803da8e6b3",
+    "license": "MIT",
+    "licenseFile": "sources/licenses/primer.txt",
+    "authors": [
+      "GitHub"
+    ],
+    "url": "https://primer.style/",
+    "retrievedAt": "2026-11-26T18:56:46.386Z",
+    "notes": "UI pattern guidance. The docs repository was archived in 2025; this is a pinned snapshot. Text only; images and GitHub marks are excluded.",
+    "paths": {
+      "uiPatterns": "content/ui-patterns/**/*.mdx"
+    },
+    "counts": {
+      "app-pattern": 10
     }
   }
 ]

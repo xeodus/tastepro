@@ -28,10 +28,10 @@ async function fileExists(path: string): Promise<boolean> {
 describe("committed content", () => {
   it("matches the catalog snapshot", async () => {
     const [catalog, stats] = await Promise.all([loader.catalog(), loader.stats()]);
-    expect(catalog).toHaveLength(997);
-    expect(stats.catalogEntries).toBe(997);
+    expect(catalog).toHaveLength(1007);
+    expect(stats.catalogEntries).toBe(1007);
     expect(stats.counts).toEqual({
-      "app-pattern": 149,
+      "app-pattern": 159,
       "app-shell": 5,
       "app-style": 7,
       brand: 84,
@@ -47,7 +47,7 @@ describe("committed content", () => {
       type: 44,
     });
     expect(stats.quality).toEqual({
-      verified: 674,
+      verified: 684,
       reference: 313,
       incomplete: 10,
     });
@@ -92,7 +92,7 @@ describe("committed content", () => {
       expect((await stat(path)).size).toBeGreaterThan(0);
     }
     const sources = await loader.sources();
-    expect(sources).toHaveLength(15);
+    expect(sources).toHaveLength(16);
     for (const source of sources) {
       const path = join(contentDir, source.licenseFile);
       expect(await fileExists(path), path).toBe(true);
@@ -236,6 +236,7 @@ describe("committed content", () => {
       "sap",
       "patternfly",
       "ant-design",
+      "primer",
     ]);
     for (const source of lock.sources) {
       expect(source.commit).toMatch(/^[0-9a-f]{40}$/);
@@ -465,5 +466,24 @@ describe("committed content", () => {
     expect(display?.provenance.commit).toHaveLength(40);
     expect(display?.blueprint).toContain("Table");
     expect(display?.blueprint).not.toContain("ImagePreview");
+  });
+
+  it("ships the GitHub Primer UI patterns", async () => {
+    const packs = JSON.parse(
+      await readFile(join(contentDir, "generated", "kinds", "app-patterns.json"), "utf8"),
+    ) as Array<{
+      id: string;
+      blueprint: string;
+      provenance: { source: string; license: string; commit: string };
+    }>;
+    const primer = packs.filter((pack) => pack.id.startsWith("app-pattern/primer-"));
+    expect(primer).toHaveLength(10);
+
+    const empty = packs.find((pack) => pack.id === "app-pattern/primer-empty-states");
+    expect(empty).toBeDefined();
+    expect(empty?.provenance.source).toBe("primer");
+    expect(empty?.provenance.license).toBe("MIT");
+    expect(empty?.provenance.commit).toHaveLength(40);
+    expect(empty?.blueprint).toContain("Blankslate");
   });
 });
