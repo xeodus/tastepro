@@ -155,6 +155,133 @@
         "help-users-decide-when-and-where-to-get-care": "app/views/design-system/patterns/help-users-decide-when-and-where-to-get-care/index.njk",
         "interruption-page": "app/views/design-system/patterns/interruption-page/index.njk"
       }
+    },
+    {
+      "id": "carbon",
+      "name": "IBM Carbon",
+      "repo": "https://github.com/carbon-design-system/carbon-website",
+      "commit": "5e9cd1da43c32d3d3b991dc947b427f674da61a8",
+      "license": "Apache-2.0",
+      "licenseUrl": "https://raw.githubusercontent.com/carbon-design-system/carbon-website/5e9cd1da43c32d3d3b991dc947b427f674da61a8/LICENSE",
+      "authors": ["IBM"],
+      "url": "https://carbondesignsystem.com/",
+      "notes": "Enterprise component, pattern, and data-visualization guidance. The docs repository was archived on 2026-09-30; this is a pinned snapshot. Text only; images and IBM marks are excluded.",
+      "paths": {
+        "components": "src/pages/components/*/usage.mdx",
+        "patterns": "src/pages/patterns/*/index.mdx",
+        "dataVisualization": "src/pages/data-visualization/*/index.mdx"
+      }
+    },
+    {
+      "id": "spectrum",
+      "name": "Adobe Spectrum",
+      "repo": "https://github.com/adobe/spectrum-design-data",
+      "commit": "1818e9c1035fd38f361a0698fb3453477b702552",
+      "license": "Apache-2.0",
+      "licenseUrl": "https://raw.githubusercontent.com/adobe/spectrum-design-data/1818e9c1035fd38f361a0698fb3453477b702552/LICENSE",
+      "authors": ["Adobe"],
+      "url": "https://spectrum.adobe.com/",
+      "notes": "Spectrum 2 component and foundation guidance in JSON. Schema is 1.0.0-draft; pin and validate. Text only; images, fonts, and Adobe marks are excluded.",
+      "paths": {
+        "components": "packages/design-data/components/*.json",
+        "guidelines": "packages/design-data/guidelines/*.json"
+      }
+    },
+    {
+      "id": "ethereum-org",
+      "name": "ethereum.org",
+      "repo": "https://github.com/ethereum/ethereum-org-website",
+      "commit": "4302e8c0a8e51d161c124e8c57d8d93da2995da1",
+      "license": "CC-BY-4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/legalcode.txt",
+      "authors": ["Ethereum Foundation"],
+      "url": "https://ethereum.org/en/developers/docs/design-and-ux/",
+      "notes": "Web3 design, DEX, transaction, and gas guidance. Content is CC BY 4.0; repository code is MIT. Images and outbound third-party research are excluded.",
+      "paths": {
+        "design-and-ux": "public/content/developers/docs/design-and-ux/index.md",
+        "heuristics": "public/content/developers/docs/design-and-ux/heuristics-for-web3/index.md",
+        "dex": "public/content/developers/docs/design-and-ux/dex-design-best-practice/index.md",
+        "transactions": "public/content/developers/docs/transactions/index.md",
+        "gas": "public/content/developers/docs/gas/index.md"
+      }
+    },
+    {
+      "id": "pie",
+      "name": "PIE Design System",
+      "repo": "https://github.com/justeattakeaway/pie",
+      "commit": "cf7021732ad8ded4c818e95205d15b601d80fe50",
+      "license": "Apache-2.0",
+      "licenseUrl": "https://raw.githubusercontent.com/justeattakeaway/pie/cf7021732ad8ded4c818e95205d15b601d80fe50/LICENSE",
+      "authors": ["Just Eat Takeaway.com"],
+      "url": "https://pie.design/",
+      "notes": "Food-delivery and marketplace patterns. Apache-2.0; brand palette, logos, food photography, and fonts are excluded.",
+      "paths": {
+        "onboarding": "apps/pie-docs/src/patterns/onboarding-and-guided-tour/web-guidance/web-guidance.md",
+        "overlays": "apps/pie-docs/src/patterns/overlay-patterns/overview/overview.md",
+        "forms": "apps/pie-docs/src/patterns/forms/overview/overview.md",
+        "messaging": "apps/pie-docs/src/patterns/messaging-and-chatbots/overview/overview.md",
+        "jet-ai": "apps/pie-docs/src/patterns/jet-ai/overview/overview.md",
+        "just-eat-plus": "apps/pie-docs/src/patterns/just-eat-plus/overview/overview.md",
+        "cookie-banner": "apps/pie-docs/src/patterns/cookie-banner/overview/overview.md",
+        "haptic-feedback": "apps/pie-docs/src/patterns/haptic-feedback/overview/overview.md"
+      }
+    },
+    {
+      "id": "sap",
+      "name": "SAP Fiori",
+      "repo": "https://github.com/SAP/fundamental-styles",
+      "commit": "0753390b563b4eafe4d90ec812205df1361941ac",
+      "license": "Apache-2.0",
+      "licenseUrl": "https://raw.githubusercontent.com/SAP/fundamental-styles/0753390b563b4eafe4d90ec812205df1361941ac/LICENSE",
+      "authors": ["SAP"],
+      "url": "https://sap.github.io/fundamental-styles/",
+      "notes": "SAP Fiori component guidance. Apache-2.0; text only, SAP marks and images excluded.",
+      "paths": {
+        "components": "docs/component-guidance.json"
+      }
+    },
+    {
+      "id": "patternfly",
+      "name": "PatternFly",
+      "repo": "https://github.com/patternfly/patternfly-org",
+      "commit": "7637a02a651895ca568938e71621ecc717224e44",
+      "license": "MIT",
+      "licenseUrl": "https://raw.githubusercontent.com/patternfly/patternfly-org/7637a02a651895ca568938e71621ecc717224e44/LICENSE",
+      "authors": ["Red Hat"],
+      "url": "https://www.patternfly.org/",
+      "notes": "Enterprise dashboard, pattern, and content-design guidance. MIT; images and Red Hat marks are excluded.",
+      "paths": {
+        "patterns": "packages/documentation-site/patternfly-docs/content/patterns/*/*.md",
+        "contentDesign": "packages/documentation-site/patternfly-docs/content/content-design/**/*.md"
+      }
+    },
+    {
+      "id": "ant-design",
+      "name": "Ant Design",
+      "repo": "https://github.com/ant-design/ant-design",
+      "commit": "768405c1019435763adab015d47bf503505340d6",
+      "license": "MIT",
+      "licenseUrl": "https://raw.githubusercontent.com/ant-design/ant-design/768405c1019435763adab015d47bf503505340d6/LICENSE",
+      "authors": ["Ant Group"],
+      "url": "https://ant.design/docs/spec/introduce",
+      "notes": "B2B admin design specifications. English docs only; images, AlibabaSans, and Alibaba CDN assets are excluded.",
+      "paths": {
+        "spec": "docs/spec/*.en-US.md"
+      }
+    },
+    {
+      "id": "primer",
+      "name": "GitHub Primer",
+      "repo": "https://github.com/primer/design",
+      "commit": "87f799f202ec95df15c99f473c9c0c803da8e6b3",
+      "license": "MIT",
+      "licenseUrl": "https://raw.githubusercontent.com/primer/design/87f799f202ec95df15c99f473c9c0c803da8e6b3/LICENSE",
+      "authors": ["GitHub"],
+      "url": "https://primer.style/",
+      "notes": "UI pattern guidance. The docs repository was archived in 2025; this is a pinned snapshot. Text only; images and GitHub marks are excluded.",
+      "paths": {
+        "uiPatterns": "content/ui-patterns/**/*.mdx"
+      }
     }
   ]
 }

@@ -15,6 +15,14 @@ The complete upstream license texts are committed at:
 - `content/sources/licenses/uswds.txt`
 - `content/sources/licenses/cms-design-system.txt`
 - `content/sources/licenses/nhs-uk.txt`
+- `content/sources/licenses/carbon.txt`
+- `content/sources/licenses/spectrum.txt`
+- `content/sources/licenses/ethereum-org.txt`
+- `content/sources/licenses/pie.txt`
+- `content/sources/licenses/sap.txt`
+- `content/sources/licenses/patternfly.txt`
+- `content/sources/licenses/ant-design.txt`
+- `content/sources/licenses/primer.txt`
 
 The machine-readable pins are in `sources.lock.json` and
 `content/sources.lock.json`. Every generated pack also carries a `provenance`
@@ -23,16 +31,24 @@ transformations applied.
 
 ## Pinned sources
 
-| Source                                                                                     | Author      | License    | Commit                                     |
-| ------------------------------------------------------------------------------------------ | ----------- | ---------- | ------------------------------------------ |
-| [Taste Skill](https://github.com/Leonxlnx/taste-skill)                                     | Leonxlnx    | MIT        | `12af471f627f866411b4bd785b19646d3672784c` |
-| [Awesome DESIGN.md](https://github.com/VoltAgent/awesome-design-md)                        | VoltAgent   | MIT        | `3b605329240ce735b510037cca322f1831fdd7f8` |
-| [Vercel Web Interface Guidelines](https://github.com/vercel-labs/web-interface-guidelines) | Vercel Labs | MIT        | `434b7f91364665f2f733b310ec54809bf8f37937` |
-| [Microsoft Playwright CLI](https://github.com/microsoft/playwright-cli)                    | Microsoft   | Apache-2.0 | `b1a5903c5b633b8c9f843ad7b629c2a78437040c` |
-| [GOV.UK Design System](https://github.com/alphagov/govuk-design-system)                    | GDS         | OGL-3.0    | `0c6de5736a4e755a3808fb31d3a7723a33b7c705` |
-| [USWDS](https://github.com/uswds/uswds-site)                                               | GSA         | CC0-1.0    | `af13d80f071c3d897bee422f51954d9d7d156474` |
-| [CMS Design System](https://github.com/CMSgov/design-system)                               | CMS         | CC0-1.0    | `269a1abeb3159824800e134064db8a7b35821ccd` |
-| [NHS.UK Design System](https://github.com/nhsuk/nhsuk-service-manual)                      | NHS England | OGL-3.0    | `4a37578c4d8fa2c5bbf11b1039d806bebce59234` |
+| Source                                                                                     | Author                | License    | Commit                                     |
+| ------------------------------------------------------------------------------------------ | --------------------- | ---------- | ------------------------------------------ |
+| [Taste Skill](https://github.com/Leonxlnx/taste-skill)                                     | Leonxlnx              | MIT        | `12af471f627f866411b4bd785b19646d3672784c` |
+| [Awesome DESIGN.md](https://github.com/VoltAgent/awesome-design-md)                        | VoltAgent             | MIT        | `3b605329240ce735b510037cca322f1831fdd7f8` |
+| [Vercel Web Interface Guidelines](https://github.com/vercel-labs/web-interface-guidelines) | Vercel Labs           | MIT        | `434b7f91364665f2f733b310ec54809bf8f37937` |
+| [Microsoft Playwright CLI](https://github.com/microsoft/playwright-cli)                    | Microsoft             | Apache-2.0 | `b1a5903c5b633b8c9f843ad7b629c2a78437040c` |
+| [GOV.UK Design System](https://github.com/alphagov/govuk-design-system)                    | GDS                   | OGL-3.0    | `0c6de5736a4e755a3808fb31d3a7723a33b7c705` |
+| [USWDS](https://github.com/uswds/uswds-site)                                               | GSA                   | CC0-1.0    | `af13d80f071c3d897bee422f51954d9d7d156474` |
+| [CMS Design System](https://github.com/CMSgov/design-system)                               | CMS                   | CC0-1.0    | `269a1abeb3159824800e134064db8a7b35821ccd` |
+| [NHS.UK Design System](https://github.com/nhsuk/nhsuk-service-manual)                      | NHS England           | OGL-3.0    | `4a37578c4d8fa2c5bbf11b1039d806bebce59234` |
+| [IBM Carbon](https://github.com/carbon-design-system/carbon-website)                       | IBM                   | Apache-2.0 | `5e9cd1da43c32d3d3b991dc947b427f674da61a8` |
+| [Adobe Spectrum](https://github.com/adobe/spectrum-design-data)                            | Adobe                 | Apache-2.0 | `1818e9c1035fd38f361a0698fb3453477b702552` |
+| [ethereum.org](https://github.com/ethereum/ethereum-org-website)                           | Ethereum Foundation   | CC-BY-4.0  | `4302e8c0a8e51d161c124e8c57d8d93da2995da1` |
+| [PIE Design System](https://github.com/justeattakeaway/pie)                                | Just Eat Takeaway.com | Apache-2.0 | `cf7021732ad8ded4c818e95205d15b601d80fe50` |
+| [SAP Fiori](https://github.com/SAP/fundamental-styles)                                     | SAP                   | Apache-2.0 | `0753390b563b4eafe4d90ec812205df1361941ac` |
+| [PatternFly](https://github.com/patternfly/patternfly-org)                                 | Red Hat               | MIT        | `7637a02a651895ca568938e71621ecc717224e44` |
+| [Ant Design](https://github.com/ant-design/ant-design)                                     | Ant Group             | MIT        | `768405c1019435763adab015d47bf503505340d6` |
+| [GitHub Primer](https://github.com/primer/design)                                          | GitHub                | MIT        | `87f799f202ec95df15c99f473c9c0c803da8e6b3` |
 
 ## Taste Skill
 
@@ -195,6 +211,171 @@ the Open Government Licence v3.0.
 
 **Not included:** NHS marks, Frutiger, images, screenshots, or example markup.
 
+## IBM Carbon
+
+**Used for:** ten component usage pages, eight interface patterns, and five
+data-visualization guides — tabs, dropdown, data table, modal, form,
+notification, search, button, checkbox, text input; empty states, loading,
+forms, notifications, filtering, status indicators, search, dialog; chart
+anatomy, color palettes, dashboards, axes and labels, legends.
+
+**Paths:** `src/pages/components/*/usage.mdx`,
+`src/pages/patterns/*/index.mdx`, and
+`src/pages/data-visualization/*/index.mdx` in the pinned repository.
+
+**License:** Apache-2.0.
+
+**TastePro transformations:**
+
+- Removed MDX imports, Storybook demos, layout wrappers, and images.
+- Converted the remaining guidance to `app-pattern` packs.
+- Mapped each page to the TastePro domain taxonomy and component kinds.
+- Added provenance, source URLs, and quality metadata.
+- Marked the snapshot as archived: the docs repository was archived on
+  2026-09-30.
+
+**Not included:** IBM marks, screenshots, images, or example markup.
+
+## Adobe Spectrum
+
+**Used for:** nine components (button, card, table, tabs, toast, text field,
+checkbox, menu, tooltip) and five foundations (attention hierarchy, colors,
+type system, component spacing, cognitive load).
+
+**Paths:** `packages/design-data/components/*.json` and
+`packages/design-data/guidelines/*.json` in the pinned repository.
+
+**License:** Apache-2.0. The data schema is `1.0.0-draft`; the pinned snapshot
+is validated at ingest.
+
+**TastePro transformations:**
+
+- Flattened `documentBlocks` into guidance text.
+- Dropped embedded images, fonts, and token references.
+- Mapped each entry to the TastePro domain taxonomy.
+- Added provenance, source URLs, and quality metadata.
+
+**Not included:** Adobe marks, fonts, images, or screenshots.
+
+## ethereum.org
+
+**Used for:** Web3 design overview, seven usability heuristics, DEX design
+guidance, transaction lifecycle, and gas/fee explanation.
+
+**Paths:** `public/content/developers/docs/design-and-ux/**/*.md` and the
+transactions and gas documentation pages in the pinned repository.
+
+**License:** CC BY 4.0 for content; MIT for repository code.
+
+**TastePro transformations:**
+
+- Removed images and outbound link markup.
+- Converted the remaining Markdown to `app-pattern` packs.
+- Mapped each page to the crypto-web3 domain and Web3 kinds.
+- Added provenance, source URLs, and quality metadata.
+
+**Not included:** third-party images, outbound research, Ethereum marks, or
+screenshots.
+
+## PIE Design System
+
+**Used for:** eight food-delivery and marketplace patterns — onboarding and
+guided tour, overlays, forms, messaging and chatbots, JET AI, Just Eat Plus,
+cookie banner, and haptic feedback.
+
+**Paths:** `apps/pie-docs/src/patterns/*/{overview,guidance,web-guidance,apps-guidance}/*.md`
+in the pinned repository.
+
+**License:** Apache-2.0.
+
+**TastePro transformations:**
+
+- Removed Nunjucks includes, images, and link markup.
+- Joined overview and platform guidance into one pack per pattern.
+- Mapped each pattern to food-delivery, marketplace, and commerce domains.
+- Added provenance, source URLs, and quality metadata.
+
+**Not included:** the JET brand palette, logos, food photography, or fonts.
+
+## SAP Fiori
+
+**Used for:** twenty enterprise components — button, table, form group, input,
+select, popover, message box, card, tab bar, breadcrumb, pagination, list, menu,
+toolbar, wizard, date picker, checkbox, radio, switch, and notification.
+
+**Paths:** `docs/component-guidance.json` in the pinned repository.
+
+**License:** Apache-2.0.
+
+**TastePro transformations:**
+
+- Selected `description`, `whenToUse`, `whenToAvoid`, and `bestPractices`.
+- Dropped implementation, token, and API fields.
+- Mapped each component to enterprise, analytics, manufacturing, logistics, and
+  fintech domains.
+- Added provenance, source URLs, and quality metadata.
+
+**Not included:** SAP marks, images, or implementation code.
+
+## PatternFly
+
+**Used for:** seven enterprise patterns (actions, bulk selection, card view,
+dashboard, filters, primary-detail, status and severity) and three content-design
+guides (error messages, tooltips, voice and tone).
+
+**Paths:** `packages/documentation-site/patternfly-docs/content/patterns/**/*.md`
+and `.../content-design/**/*.md` in the pinned repository.
+
+**License:** MIT.
+
+**TastePro transformations:**
+
+- Removed images and link markup.
+- Converted the remaining Markdown to `app-pattern` packs.
+- Mapped each page to enterprise, analytics, security, and product domains.
+- Added provenance, source URLs, and quality metadata.
+
+**Not included:** Red Hat marks, images, or implementation code.
+
+## Ant Design
+
+**Used for:** twelve B2B design specifications — data display, data entry,
+data format, detail page, buttons, colors, contrast, dark mode, copywriting,
+layout, feedback, and navigation.
+
+**Paths:** `docs/spec/*.en-US.md` in the pinned repository.
+
+**License:** MIT.
+
+**TastePro transformations:**
+
+- Removed `ImagePreview` blocks, images, and link markup.
+- Used the English design-spec pages only.
+- Converted the remaining Markdown to `app-pattern` packs.
+- Added provenance, source URLs, and quality metadata.
+
+**Not included:** Ant Group marks, AlibabaSans, images, or CDN assets.
+
+## GitHub Primer
+
+**Used for:** ten UI patterns — empty states, loading, navigation, saving,
+feature onboarding, degraded experiences, data visualization, notification and
+messaging, progressive disclosure, and forms.
+
+**Paths:** `content/ui-patterns/**/*.mdx` in the pinned repository.
+
+**License:** MIT.
+
+**TastePro transformations:**
+
+- Removed MDX imports, layout wrappers, images, and link markup.
+- Converted the remaining guidance to `app-pattern` packs.
+- Mapped each pattern to developer-tools, B2B, analytics, and social domains.
+- Added provenance, source URLs, and quality metadata.
+- Marked the snapshot as archived: the docs repository was archived in 2025.
+
+**Not included:** GitHub marks, images, or implementation code.
+
 ## Original TastePro content
 
 The following are original to TastePro and licensed under Apache-2.0:
@@ -210,13 +391,16 @@ Original packs use `provenance.source: "tastepro"` and
 
 ## MIT license text
 
-The three MIT-licensed sources are reproduced under the following copyright
+The six MIT-licensed sources are reproduced under the following copyright
 notices and the standard MIT terms.
 
 ```text
 Copyright (c) 2026 Leonxlnx
 Copyright (c) 2026 VoltAgent
 Copyright (c) 2025 Vercel Labs
+Copyright (c) Red Hat
+Copyright (c) Ant Group
+Copyright (c) GitHub
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -239,9 +423,13 @@ SOFTWARE.
 
 ## Apache-2.0
 
-Microsoft Playwright CLI and TastePro's original code and content are licensed
-under the Apache License 2.0. The full text is in `LICENSE` and in
-`content/sources/licenses/playwright-cli.txt`.
+Microsoft Playwright CLI, IBM Carbon, Adobe Spectrum, PIE, SAP Fiori, and
+TastePro's original code and content are licensed under the Apache License 2.0.
+The full texts are in `LICENSE`, `content/sources/licenses/playwright-cli.txt`,
+`content/sources/licenses/carbon.txt`,
+`content/sources/licenses/spectrum.txt`,
+`content/sources/licenses/pie.txt`, and
+`content/sources/licenses/sap.txt`.
 
 ## Open Government Licence v3.0
 
@@ -262,6 +450,13 @@ USWDS and the CMS Design System are released under CC0 1.0 Universal (public
 domain). The full texts are committed at
 `content/sources/licenses/uswds.txt` and
 `content/sources/licenses/cms-design-system.txt`.
+
+## CC BY 4.0
+
+The ethereum.org guidance is used under the Creative Commons Attribution 4.0
+International licence. Changes: images and link markup removed, pages
+normalized into app-pattern packs. The full licence text is committed at
+`content/sources/licenses/ethereum-org.txt`.
 
 ## Reporting an attribution problem
 

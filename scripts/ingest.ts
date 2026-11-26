@@ -25,9 +25,17 @@ import { fetchCached, fetchJsonCached, mapLimit } from "./lib/fetch.js";
 import { parseGuidelines } from "./lib/guidelines.js";
 import { commitSnapshot, discardStaging, prepareStaging } from "./lib/snapshot.js";
 import { type LockSource, loadSourceLock, sourceCacheKey } from "./lib/source-lock.js";
+import { antAdapter } from "./lib/sources/antd.js";
+import { carbonAdapter } from "./lib/sources/carbon.js";
 import { cmsAdapter } from "./lib/sources/cms.js";
+import { ethereumAdapter } from "./lib/sources/ethereum.js";
 import { govukAdapter } from "./lib/sources/govuk.js";
 import { nhsAdapter } from "./lib/sources/nhs.js";
+import { patternFlyAdapter } from "./lib/sources/patternfly.js";
+import { pieAdapter } from "./lib/sources/pie.js";
+import { primerAdapter } from "./lib/sources/primer.js";
+import { sapAdapter } from "./lib/sources/sap.js";
+import { spectrumAdapter } from "./lib/sources/spectrum.js";
 import type { SourceContext } from "./lib/sources/types.js";
 import { uswdsAdapter } from "./lib/sources/uswds.js";
 import { parseReference, parseTasteLibrary } from "./lib/taste.js";
@@ -669,6 +677,14 @@ async function main(): Promise<void> {
     "uswds",
     "cms-design-system",
     "nhs-uk",
+    "carbon",
+    "spectrum",
+    "ethereum-org",
+    "pie",
+    "sap",
+    "patternfly",
+    "ant-design",
+    "primer",
   ];
   for (const id of required) {
     if (!byId.has(id)) throw new Error(`sources.lock.json is missing ${id}`);
@@ -733,6 +749,118 @@ async function main(): Promise<void> {
       writeLicense: () => fetchLicense(nhsSource, options, staging),
     };
     const nhs = await nhsAdapter.fetch(nhsContext);
+    const carbonSource = byId.get("carbon")!;
+    const carbonContext: SourceContext = {
+      source: carbonSource,
+      fetchText: (path) =>
+        fetchCached(lockUrl(carbonSource, path), sourceCacheKey(carbonSource, path), options),
+      fetchJson: (path) =>
+        fetchJsonCached(lockUrl(carbonSource, path), sourceCacheKey(carbonSource, path), options),
+      provenance: (path, transformations) => provenanceFor(carbonSource, path, transformations),
+      sourceUrl: (path = "") => sourceUrl(carbonSource, path),
+      writeLicense: () => fetchLicense(carbonSource, options, staging),
+    };
+    const carbon = await carbonAdapter.fetch(carbonContext);
+    const spectrumSource = byId.get("spectrum")!;
+    const spectrumContext: SourceContext = {
+      source: spectrumSource,
+      fetchText: (path) =>
+        fetchCached(lockUrl(spectrumSource, path), sourceCacheKey(spectrumSource, path), options),
+      fetchJson: (path) =>
+        fetchJsonCached(
+          lockUrl(spectrumSource, path),
+          sourceCacheKey(spectrumSource, path),
+          options,
+        ),
+      provenance: (path, transformations) => provenanceFor(spectrumSource, path, transformations),
+      sourceUrl: (path = "") => sourceUrl(spectrumSource, path),
+      writeLicense: () => fetchLicense(spectrumSource, options, staging),
+    };
+    const spectrum = await spectrumAdapter.fetch(spectrumContext);
+    const ethereumSource = byId.get("ethereum-org")!;
+    const ethereumContext: SourceContext = {
+      source: ethereumSource,
+      fetchText: (path) =>
+        fetchCached(lockUrl(ethereumSource, path), sourceCacheKey(ethereumSource, path), options),
+      fetchJson: (path) =>
+        fetchJsonCached(
+          lockUrl(ethereumSource, path),
+          sourceCacheKey(ethereumSource, path),
+          options,
+        ),
+      provenance: (path, transformations) => provenanceFor(ethereumSource, path, transformations),
+      sourceUrl: (path = "") => sourceUrl(ethereumSource, path),
+      writeLicense: () => fetchLicense(ethereumSource, options, staging),
+    };
+    const ethereum = await ethereumAdapter.fetch(ethereumContext);
+    const pieSource = byId.get("pie")!;
+    const pieContext: SourceContext = {
+      source: pieSource,
+      fetchText: (path) =>
+        fetchCached(lockUrl(pieSource, path), sourceCacheKey(pieSource, path), options),
+      fetchJson: (path) =>
+        fetchJsonCached(lockUrl(pieSource, path), sourceCacheKey(pieSource, path), options),
+      provenance: (path, transformations) => provenanceFor(pieSource, path, transformations),
+      sourceUrl: (path = "") => sourceUrl(pieSource, path),
+      writeLicense: () => fetchLicense(pieSource, options, staging),
+    };
+    const pie = await pieAdapter.fetch(pieContext);
+    const sapSource = byId.get("sap")!;
+    const sapContext: SourceContext = {
+      source: sapSource,
+      fetchText: (path) =>
+        fetchCached(lockUrl(sapSource, path), sourceCacheKey(sapSource, path), options),
+      fetchJson: (path) =>
+        fetchJsonCached(lockUrl(sapSource, path), sourceCacheKey(sapSource, path), options),
+      provenance: (path, transformations) => provenanceFor(sapSource, path, transformations),
+      sourceUrl: (path = "") => sourceUrl(sapSource, path),
+      writeLicense: () => fetchLicense(sapSource, options, staging),
+    };
+    const sap = await sapAdapter.fetch(sapContext);
+    const patternflySource = byId.get("patternfly")!;
+    const patternflyContext: SourceContext = {
+      source: patternflySource,
+      fetchText: (path) =>
+        fetchCached(
+          lockUrl(patternflySource, path),
+          sourceCacheKey(patternflySource, path),
+          options,
+        ),
+      fetchJson: (path) =>
+        fetchJsonCached(
+          lockUrl(patternflySource, path),
+          sourceCacheKey(patternflySource, path),
+          options,
+        ),
+      provenance: (path, transformations) => provenanceFor(patternflySource, path, transformations),
+      sourceUrl: (path = "") => sourceUrl(patternflySource, path),
+      writeLicense: () => fetchLicense(patternflySource, options, staging),
+    };
+    const patternfly = await patternFlyAdapter.fetch(patternflyContext);
+    const antSource = byId.get("ant-design")!;
+    const antContext: SourceContext = {
+      source: antSource,
+      fetchText: (path) =>
+        fetchCached(lockUrl(antSource, path), sourceCacheKey(antSource, path), options),
+      fetchJson: (path) =>
+        fetchJsonCached(lockUrl(antSource, path), sourceCacheKey(antSource, path), options),
+      provenance: (path, transformations) => provenanceFor(antSource, path, transformations),
+      sourceUrl: (path = "") => sourceUrl(antSource, path),
+      writeLicense: () => fetchLicense(antSource, options, staging),
+    };
+    const ant = await antAdapter.fetch(antContext);
+    const primerSource = byId.get("primer")!;
+    const primerContext: SourceContext = {
+      source: primerSource,
+      fetchText: (path) =>
+        fetchCached(lockUrl(primerSource, path), sourceCacheKey(primerSource, path), options),
+      fetchJson: (path) =>
+        fetchJsonCached(lockUrl(primerSource, path), sourceCacheKey(primerSource, path), options),
+      provenance: (path, transformations) => provenanceFor(primerSource, path, transformations),
+      sourceUrl: (path = "") => sourceUrl(primerSource, path),
+      writeLicense: () => fetchLicense(primerSource, options, staging),
+    };
+    const primer = await primerAdapter.fetch(primerContext);
     const domains = await buildDomains(options.contentDir);
 
     const warnings = [
@@ -742,6 +870,14 @@ async function main(): Promise<void> {
       ...uswds.warnings,
       ...cms.warnings,
       ...nhs.warnings,
+      ...carbon.warnings,
+      ...spectrum.warnings,
+      ...ethereum.warnings,
+      ...pie.warnings,
+      ...sap.warnings,
+      ...patternfly.warnings,
+      ...ant.warnings,
+      ...primer.warnings,
     ];
     const allPacks: Pack[] = sortPacks([
       ...taste.packs,
@@ -751,6 +887,14 @@ async function main(): Promise<void> {
       ...uswds.packs,
       ...cms.packs,
       ...nhs.packs,
+      ...carbon.packs,
+      ...spectrum.packs,
+      ...ethereum.packs,
+      ...pie.packs,
+      ...sap.packs,
+      ...patternfly.packs,
+      ...ant.packs,
+      ...primer.packs,
       ...domains.packs,
     ]);
     const references: ReferencePack[] = sortPacks([
@@ -836,6 +980,14 @@ async function main(): Promise<void> {
       uswds.sourceInfo,
       cms.sourceInfo,
       nhs.sourceInfo,
+      carbon.sourceInfo,
+      spectrum.sourceInfo,
+      ethereum.sourceInfo,
+      pie.sourceInfo,
+      sap.sourceInfo,
+      patternfly.sourceInfo,
+      ant.sourceInfo,
+      primer.sourceInfo,
     ];
     const counts = countBy(allContent, (pack) => pack.kind);
     const quality = countBy(allContent, (pack) => pack.quality);

@@ -52,6 +52,14 @@ export const SOURCE_IDS = [
   "uswds",
   "cms-design-system",
   "nhs-uk",
+  "carbon",
+  "spectrum",
+  "ethereum-org",
+  "pie",
+  "sap",
+  "patternfly",
+  "ant-design",
+  "primer",
   "tastepro",
 ] as const;
 

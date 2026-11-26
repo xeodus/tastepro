@@ -25606,6 +25606,34 @@
     "sourceUrl": "https://github.com/Leonxlnx/taste-skill"
   },
   {
+    "id": "app-pattern/ethereum-heuristics-for-web3",
+    "kind": "app-pattern",
+    "name": "7 heuristics for Web3 interface design",
+    "summary": "Principles to improve the usability of Web3",
+    "domains": [
+      "crypto-web3",
+      "fintech-payments",
+      "product-surfaces"
+    ],
+    "sectors": [
+      "web3",
+      "finance"
+    ],
+    "tags": [
+      "ethereum",
+      "web3",
+      "heuristics",
+      "heuristics-for-web3"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "ethereum-org",
+    "sourceUrl": "https://ethereum.org/en/developers/docs/design-and-ux/heuristics-for-web3/",
+    "metrics": {
+      "screen": "heuristics-for-web3"
+    }
+  },
+  {
     "id": "app-pattern/cms-accordion",
     "kind": "app-pattern",
     "name": "Accordion",
@@ -25630,6 +25658,33 @@
     "sourceUrl": "https://design.cms.gov/components/accordion/",
     "metrics": {
       "screen": "accordion"
+    }
+  },
+  {
+    "id": "app-pattern/patternfly-actions",
+    "kind": "app-pattern",
+    "name": "Actions",
+    "summary": "An **action** is any process that a user can trigger by clicking or selecting a linked component.",
+    "domains": [
+      "b2b-saas",
+      "productivity",
+      "security"
+    ],
+    "sectors": [
+      "enterprise"
+    ],
+    "tags": [
+      "patternfly",
+      "pattern",
+      "actions",
+      "actions"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "patternfly",
+    "sourceUrl": "https://www.patternfly.org/patterns/actions/",
+    "metrics": {
+      "screen": "actions"
     }
   },
   {
@@ -25711,6 +25766,89 @@
     "sourceUrl": "https://design.cms.gov/components/alert/",
     "metrics": {
       "screen": "alert"
+    }
+  },
+  {
+    "id": "app-pattern/spectrum-applying-the-type-system",
+    "kind": "app-pattern",
+    "name": "Applying the type system",
+    "summary": "Applying the type system The following are some general examples to show how the Spectrum 2 typography system all comes together, and how type styles can be used together to create visual hierarchy.",
+    "domains": [
+      "b2b-saas",
+      "product-surfaces",
+      "data-analytics",
+      "developer-tools"
+    ],
+    "sectors": [
+      "enterprise"
+    ],
+    "tags": [
+      "spectrum",
+      "guideline",
+      "foundation",
+      "designing",
+      "applying-the-type-system"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "spectrum",
+    "sourceUrl": "https://spectrum.adobe.com/foundations/typography/applying-the-type-system",
+    "metrics": {
+      "screen": "applying-the-type-system"
+    }
+  },
+  {
+    "id": "app-pattern/spectrum-attention-hierarchy",
+    "kind": "app-pattern",
+    "name": "Attention hierarchy",
+    "summary": "Attention hierarchy Attention hierarchy is a core concept in Spectrum 2.",
+    "domains": [
+      "b2b-saas",
+      "product-surfaces",
+      "data-analytics",
+      "developer-tools"
+    ],
+    "sectors": [
+      "enterprise"
+    ],
+    "tags": [
+      "spectrum",
+      "guideline",
+      "foundation",
+      "designing",
+      "attention-hierarchy"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "spectrum",
+    "sourceUrl": "https://spectrum.adobe.com/foundations/attention-hierarchy",
+    "metrics": {
+      "screen": "attention-hierarchy"
+    }
+  },
+  {
+    "id": "app-pattern/carbon-axes-and-labels",
+    "kind": "app-pattern",
+    "name": "Axes and labels",
+    "summary": "Axes and labels provide critical context for the information within a chart.",
+    "domains": [
+      "data-analytics",
+      "b2b-saas"
+    ],
+    "sectors": [
+      "enterprise"
+    ],
+    "tags": [
+      "carbon",
+      "data-viz",
+      "axes-and-labels"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "carbon",
+    "sourceUrl": "https://carbondesignsystem.com/data-visualization/axes-and-labels/",
+    "metrics": {
+      "screen": "axes-and-labels"
     }
   },
   {
@@ -25796,6 +25934,61 @@
     }
   },
   {
+    "id": "app-pattern/patternfly-brand-voice-and-tone",
+    "kind": "app-pattern",
+    "name": "Brand voice and tone",
+    "summary": "In a business context, brand is the identity of a company that people recognize based on an emotional and psychological connection, as well as factual information.",
+    "domains": [
+      "b2b-saas",
+      "product-surfaces"
+    ],
+    "sectors": [
+      "enterprise"
+    ],
+    "tags": [
+      "patternfly",
+      "content-design",
+      "voice",
+      "brand-voice-and-tone"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "patternfly",
+    "sourceUrl": "https://www.patternfly.org/content-design/brand-voice-and-tone/",
+    "metrics": {
+      "screen": "brand-voice-and-tone"
+    }
+  },
+  {
+    "id": "app-pattern/sap-breadcrumb",
+    "kind": "app-pattern",
+    "name": "Breadcrumb",
+    "summary": "A breadcrumb (or breadcrumb trail) is a type of secondary navigation that indicates the position of a page in its application hierarchy. It is typically used for drilldown scenarios where users navigate through related object pages, tables, and charts.",
+    "domains": [
+      "b2b-saas",
+      "data-analytics",
+      "manufacturing",
+      "logistics",
+      "fintech-payments"
+    ],
+    "sectors": [
+      "enterprise"
+    ],
+    "tags": [
+      "sap",
+      "component",
+      "Navigation",
+      "breadcrumb"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "sap",
+    "sourceUrl": "https://sap.github.io/fundamental-styles/",
+    "metrics": {
+      "screen": "breadcrumb"
+    }
+  },
+  {
     "id": "app-pattern/builder-canvas",
     "kind": "app-pattern",
     "name": "Builder canvas",
@@ -25819,6 +26012,253 @@
     "sourceUrl": "https://github.com/Leonxlnx/taste-skill",
     "metrics": {
       "screen": "builder"
+    }
+  },
+  {
+    "id": "app-pattern/patternfly-bulk-selection",
+    "kind": "app-pattern",
+    "name": "Bulk selection",
+    "summary": "import '../../components/components.css'; **Bulk selection** enables users to select or deselect multiple items in a content view, such as lists, tables, or card views. ## Bulk selector You can add a bulk selection control in the toolbar…",
+    "domains": [
+      "b2b-saas",
+      "data-analytics",
+      "security"
+    ],
+    "sectors": [
+      "enterprise"
+    ],
+    "tags": [
+      "patternfly",
+      "pattern",
+      "selection",
+      "bulk-selection"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "patternfly",
+    "sourceUrl": "https://www.patternfly.org/patterns/bulk-selection/",
+    "metrics": {
+      "screen": "bulk-selection"
+    }
+  },
+  {
+    "id": "app-pattern/carbon-button",
+    "kind": "app-pattern",
+    "name": "Button",
+    "summary": "Buttons are used to initialize an action. Button labels express what action will occur when the user interacts with it.",
+    "domains": [
+      "b2b-saas",
+      "product-surfaces",
+      "data-analytics"
+    ],
+    "sectors": [
+      "enterprise"
+    ],
+    "tags": [
+      "carbon",
+      "component",
+      "usage",
+      "button"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "carbon",
+    "sourceUrl": "https://carbondesignsystem.com/components/button/usage/",
+    "metrics": {
+      "screen": "button"
+    }
+  },
+  {
+    "id": "app-pattern/spectrum-button",
+    "kind": "app-pattern",
+    "name": "Button",
+    "summary": "Buttons allow users to perform an action or to navigate to another page.",
+    "domains": [
+      "b2b-saas",
+      "product-surfaces",
+      "data-analytics",
+      "developer-tools"
+    ],
+    "sectors": [
+      "enterprise"
+    ],
+    "tags": [
+      "spectrum",
+      "component",
+      "usage",
+      "actions",
+      "button"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "spectrum",
+    "sourceUrl": "https://spectrum.adobe.com/page/button/",
+    "metrics": {
+      "screen": "button"
+    }
+  },
+  {
+    "id": "app-pattern/sap-button",
+    "kind": "app-pattern",
+    "name": "Button",
+    "summary": "Buttons enable users to trigger actions in applications, from submitting data to opening menus or toggling views. They are available in different types and visual styles to reflect purpose, priority, and intent. Button behavior and appearance can change depending on user interaction, layout context, or the type of task.",
+    "domains": [
+      "b2b-saas",
+      "data-analytics",
+      "manufacturing",
+      "logistics",
+      "fintech-payments"
+    ],
+    "sectors": [
+      "enterprise"
+    ],
+    "tags": [
+      "sap",
+      "component",
+      "Actions & Controls",
+      "button"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "sap",
+    "sourceUrl": "https://sap.github.io/fundamental-styles/",
+    "metrics": {
+      "screen": "button"
+    }
+  },
+  {
+    "id": "app-pattern/ant-buttons",
+    "kind": "app-pattern",
+    "name": "Button",
+    "summary": "## Design Principal - Guide users to achieve the desired actions. - Prevent user to make mistakes. ## Types ### Common Button Types #### ① Default Button {#default-button} Default buttons are used for non-primary actions.",
+    "domains": [
+      "b2b-saas",
+      "product-surfaces"
+    ],
+    "sectors": [
+      "enterprise"
+    ],
+    "tags": [
+      "ant-design",
+      "buttons",
+      "actions",
+      "buttons"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "ant-design",
+    "sourceUrl": "https://ant.design/docs/spec/buttons",
+    "metrics": {
+      "screen": "buttons"
+    }
+  },
+  {
+    "id": "app-pattern/spectrum-card",
+    "kind": "app-pattern",
+    "name": "Card",
+    "summary": "Groups related content, such as a preview, a title and a description, on one surface. A card can be selectable and can be clickable as a whole.",
+    "domains": [
+      "b2b-saas",
+      "product-surfaces",
+      "data-analytics",
+      "developer-tools"
+    ],
+    "sectors": [
+      "enterprise"
+    ],
+    "tags": [
+      "spectrum",
+      "component",
+      "usage",
+      "containers",
+      "card"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "spectrum",
+    "sourceUrl": "https://spectrum.adobe.com/page/card/",
+    "metrics": {
+      "screen": "card"
+    }
+  },
+  {
+    "id": "app-pattern/sap-card",
+    "kind": "app-pattern",
+    "name": "Card",
+    "summary": "A card is a container that represents an app or page, providing easy access and content preview. It consists of optional building blocks: Header, Extended Header, Numeric Content, Content, Footer, and Media Block. Cards display various content types including charts, lists, tables, objects, and text.",
+    "domains": [
+      "b2b-saas",
+      "data-analytics",
+      "manufacturing",
+      "logistics",
+      "fintech-payments"
+    ],
+    "sectors": [
+      "enterprise"
+    ],
+    "tags": [
+      "sap",
+      "component",
+      "Layout & Containers",
+      "card"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "sap",
+    "sourceUrl": "https://sap.github.io/fundamental-styles/",
+    "metrics": {
+      "screen": "card"
+    }
+  },
+  {
+    "id": "app-pattern/patternfly-card-view",
+    "kind": "app-pattern",
+    "name": "Card view",
+    "summary": "A **card view** is a grid of cards in a gallery to facilitate browsing.",
+    "domains": [
+      "b2b-saas",
+      "data-analytics"
+    ],
+    "sectors": [
+      "enterprise"
+    ],
+    "tags": [
+      "patternfly",
+      "pattern",
+      "cards",
+      "card-view"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "patternfly",
+    "sourceUrl": "https://www.patternfly.org/patterns/card-view/",
+    "metrics": {
+      "screen": "card-view"
+    }
+  },
+  {
+    "id": "app-pattern/carbon-chart-anatomy",
+    "kind": "app-pattern",
+    "name": "Chart anatomy",
+    "summary": "The elements constructing each chart are designed to work in harmony. Each piece plays an important role in data communication.",
+    "domains": [
+      "data-analytics",
+      "b2b-saas"
+    ],
+    "sectors": [
+      "enterprise"
+    ],
+    "tags": [
+      "carbon",
+      "data-viz",
+      "chart-anatomy"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "carbon",
+    "sourceUrl": "https://carbondesignsystem.com/data-visualization/chart-anatomy/",
+    "metrics": {
+      "screen": "chart-anatomy"
     }
   },
   {
@@ -25876,6 +26316,200 @@
     }
   },
   {
+    "id": "app-pattern/carbon-checkbox",
+    "kind": "app-pattern",
+    "name": "Checkbox",
+    "summary": "Checkboxes are used when there are multiple items to select in a list. Users can select zero, one, or any number of items.",
+    "domains": [
+      "b2b-saas",
+      "product-surfaces",
+      "data-analytics"
+    ],
+    "sectors": [
+      "enterprise"
+    ],
+    "tags": [
+      "carbon",
+      "component",
+      "usage",
+      "checkbox"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "carbon",
+    "sourceUrl": "https://carbondesignsystem.com/components/checkbox/usage/",
+    "metrics": {
+      "screen": "checkbox"
+    }
+  },
+  {
+    "id": "app-pattern/spectrum-checkbox",
+    "kind": "app-pattern",
+    "name": "Checkbox",
+    "summary": "Checkboxes allow users to select multiple items from a list of individual items, or to mark one individual item as selected.",
+    "domains": [
+      "b2b-saas",
+      "product-surfaces",
+      "data-analytics",
+      "developer-tools"
+    ],
+    "sectors": [
+      "enterprise"
+    ],
+    "tags": [
+      "spectrum",
+      "component",
+      "usage",
+      "inputs",
+      "checkbox"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "spectrum",
+    "sourceUrl": "https://spectrum.adobe.com/page/checkbox/",
+    "metrics": {
+      "screen": "checkbox"
+    }
+  },
+  {
+    "id": "app-pattern/sap-checkbox",
+    "kind": "app-pattern",
+    "name": "Checkbox",
+    "summary": "A checkbox lets users set a binary value (true/false). When selected, it toggles between checked (state applies), unchecked (state doesn't apply), and optionally tri-state/indeterminate (mixed selection of dependent fields). All options are visible, and users can make one or more independent selections.",
+    "domains": [
+      "b2b-saas",
+      "data-analytics",
+      "manufacturing",
+      "logistics",
+      "fintech-payments"
+    ],
+    "sectors": [
+      "enterprise"
+    ],
+    "tags": [
+      "sap",
+      "component",
+      "Forms & Inputs",
+      "checkbox"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "sap",
+    "sourceUrl": "https://sap.github.io/fundamental-styles/",
+    "metrics": {
+      "screen": "checkbox"
+    }
+  },
+  {
+    "id": "app-pattern/spectrum-cognitive",
+    "kind": "app-pattern",
+    "name": "Cognitive",
+    "summary": "Neurodivergence encompasses a wide range of cognitive, behavioral, and developmental differences.",
+    "domains": [
+      "b2b-saas",
+      "product-surfaces",
+      "data-analytics",
+      "developer-tools"
+    ],
+    "sectors": [
+      "enterprise"
+    ],
+    "tags": [
+      "spectrum",
+      "guideline",
+      "foundation",
+      "designing",
+      "cognitive"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "spectrum",
+    "sourceUrl": "https://main--spectrum-hub--adobe.aem.live/foundations/inclusivity/cognitive",
+    "metrics": {
+      "screen": "cognitive"
+    }
+  },
+  {
+    "id": "app-pattern/carbon-color-palettes",
+    "kind": "app-pattern",
+    "name": "Color palettes",
+    "summary": "The color palette for data visualization is a select subset of the IBM Design Language color palette.",
+    "domains": [
+      "data-analytics",
+      "b2b-saas"
+    ],
+    "sectors": [
+      "enterprise"
+    ],
+    "tags": [
+      "carbon",
+      "data-viz",
+      "color-palettes"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "carbon",
+    "sourceUrl": "https://carbondesignsystem.com/data-visualization/color-palettes/",
+    "metrics": {
+      "screen": "color-palettes"
+    }
+  },
+  {
+    "id": "app-pattern/spectrum-colors",
+    "kind": "app-pattern",
+    "name": "Colors",
+    "summary": "Colors Image: A green gradient circle icon, half outlined and half filled, representing accessibility. (source: https://spectrum.adobe.com/foundations/color/media_1c94508d2c8164b33419f7de3b02ce8d1743a2884.png?width=750&format=png&optimize=…",
+    "domains": [
+      "b2b-saas",
+      "product-surfaces",
+      "data-analytics",
+      "developer-tools"
+    ],
+    "sectors": [
+      "enterprise"
+    ],
+    "tags": [
+      "spectrum",
+      "guideline",
+      "foundation",
+      "designing",
+      "colors"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "spectrum",
+    "sourceUrl": "https://spectrum.adobe.com/foundations/color/colors",
+    "metrics": {
+      "screen": "colors"
+    }
+  },
+  {
+    "id": "app-pattern/ant-colors",
+    "kind": "app-pattern",
+    "name": "Colors",
+    "summary": "Ant Design interprets the color system into two levels: a system-level color system and a product-level color system.",
+    "domains": [
+      "b2b-saas",
+      "product-surfaces"
+    ],
+    "sectors": [
+      "enterprise"
+    ],
+    "tags": [
+      "ant-design",
+      "color",
+      "foundation",
+      "colors"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "ant-design",
+    "sourceUrl": "https://ant.design/docs/spec/colors",
+    "metrics": {
+      "screen": "colors"
+    }
+  },
+  {
     "id": "app-pattern/nhs-complete-multiple-tasks",
     "kind": "app-pattern",
     "name": "Complete multiple tasks",
@@ -25904,6 +26538,35 @@
     }
   },
   {
+    "id": "app-pattern/spectrum-component-spacing",
+    "kind": "app-pattern",
+    "name": "Component spacing",
+    "summary": "Component spacing Internal component spacing governs the space within components.",
+    "domains": [
+      "b2b-saas",
+      "product-surfaces",
+      "data-analytics",
+      "developer-tools"
+    ],
+    "sectors": [
+      "enterprise"
+    ],
+    "tags": [
+      "spectrum",
+      "guideline",
+      "foundation",
+      "designing",
+      "component-spacing"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "spectrum",
+    "sourceUrl": "https://spectrum.adobe.com/foundations/layout-and-structure/spacing/component-spacing",
+    "metrics": {
+      "screen": "component-spacing"
+    }
+  },
+  {
     "id": "app-pattern/nhs-confirmation-page",
     "kind": "app-pattern",
     "name": "Confirmation page",
@@ -25929,6 +26592,87 @@
     "sourceUrl": "https://service-manual.nhs.uk/design-system/patterns/confirmation-page",
     "metrics": {
       "screen": "confirmation-page"
+    }
+  },
+  {
+    "id": "app-pattern/ant-contrast",
+    "kind": "app-pattern",
+    "name": "Contrast",
+    "summary": "Contrast is one of the effective ways to add visual interest to your page, and to create an organizational hierarchy among different elements that aid user in finding the information quickly. > Note: The important rule for contrast to be…",
+    "domains": [
+      "b2b-saas",
+      "product-surfaces"
+    ],
+    "sectors": [
+      "enterprise"
+    ],
+    "tags": [
+      "ant-design",
+      "contrast",
+      "accessibility",
+      "contrast"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "ant-design",
+    "sourceUrl": "https://ant.design/docs/spec/contrast",
+    "metrics": {
+      "screen": "contrast"
+    }
+  },
+  {
+    "id": "app-pattern/pie-cookie-banner",
+    "kind": "app-pattern",
+    "name": "Cookie banner",
+    "summary": "## Overview The purpose of the cookie banner is to inform users about the use of cookies, obtain their consent, and customise their preferences.",
+    "domains": [
+      "restaurants-food",
+      "government-public",
+      "product-surfaces"
+    ],
+    "sectors": [
+      "food-delivery",
+      "commerce"
+    ],
+    "tags": [
+      "pie",
+      "consent",
+      "guidance",
+      "cookie-banner"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "pie",
+    "sourceUrl": "https://pie.design/patterns/cookie-banner/",
+    "metrics": {
+      "screen": "cookie-banner"
+    }
+  },
+  {
+    "id": "app-pattern/ant-copywriting",
+    "kind": "app-pattern",
+    "name": "Copywriting",
+    "summary": "In the interface, we need to resonate with users through dialogue.",
+    "domains": [
+      "b2b-saas",
+      "product-surfaces",
+      "ecommerce-dtc"
+    ],
+    "sectors": [
+      "enterprise"
+    ],
+    "tags": [
+      "ant-design",
+      "copywriting",
+      "content",
+      "copywriting"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "ant-design",
+    "sourceUrl": "https://ant.design/docs/spec/copywriting",
+    "metrics": {
+      "screen": "copywriting"
     }
   },
   {
@@ -26001,6 +26745,218 @@
     }
   },
   {
+    "id": "app-pattern/ant-dark",
+    "kind": "app-pattern",
+    "name": "Dark Mode",
+    "summary": "Dark mode is a theme where all UI elements are darkened. ## When to use - Dark mode is recommended when you are in a dark environment as it prevents eye strain. - Dark mode is great for highlighting important content > It works similarly…",
+    "domains": [
+      "b2b-saas",
+      "product-surfaces"
+    ],
+    "sectors": [
+      "enterprise"
+    ],
+    "tags": [
+      "ant-design",
+      "dark-mode",
+      "foundation",
+      "dark"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "ant-design",
+    "sourceUrl": "https://ant.design/docs/spec/dark",
+    "metrics": {
+      "screen": "dark"
+    }
+  },
+  {
+    "id": "app-pattern/patternfly-dashboard",
+    "kind": "app-pattern",
+    "name": "Dashboard",
+    "summary": "A dashboard provides overviews of key metrics or performance indicators relevant to an application, process, or business.",
+    "domains": [
+      "b2b-saas",
+      "data-analytics",
+      "telecom",
+      "security"
+    ],
+    "sectors": [
+      "enterprise"
+    ],
+    "tags": [
+      "patternfly",
+      "pattern",
+      "dashboard",
+      "dashboard"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "patternfly",
+    "sourceUrl": "https://www.patternfly.org/patterns/dashboard/",
+    "metrics": {
+      "screen": "dashboard"
+    }
+  },
+  {
+    "id": "app-pattern/carbon-dashboards",
+    "kind": "app-pattern",
+    "name": "Dashboards",
+    "summary": "Context is everything. Dashboards will vary widely depending on the context they are designed for and must be carefully considered.",
+    "domains": [
+      "data-analytics",
+      "b2b-saas"
+    ],
+    "sectors": [
+      "enterprise"
+    ],
+    "tags": [
+      "carbon",
+      "data-viz",
+      "dashboards"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "carbon",
+    "sourceUrl": "https://carbondesignsystem.com/data-visualization/dashboards/",
+    "metrics": {
+      "screen": "dashboards"
+    }
+  },
+  {
+    "id": "app-pattern/ant-data-display",
+    "kind": "app-pattern",
+    "name": "Data Display",
+    "summary": "The suitable way to display data helps users quickly locate and browse data, and work together more efficiently.",
+    "domains": [
+      "b2b-saas",
+      "data-analytics",
+      "product-surfaces"
+    ],
+    "sectors": [
+      "enterprise"
+    ],
+    "tags": [
+      "ant-design",
+      "data-display",
+      "tables",
+      "data-display"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "ant-design",
+    "sourceUrl": "https://ant.design/docs/spec/data-display",
+    "metrics": {
+      "screen": "data-display"
+    }
+  },
+  {
+    "id": "app-pattern/ant-data-entry",
+    "kind": "app-pattern",
+    "name": "Data Entry",
+    "summary": "Data Entry is an important interactive way to retrieve information of objects since users will frequently add, change or delete information.",
+    "domains": [
+      "b2b-saas",
+      "product-surfaces"
+    ],
+    "sectors": [
+      "enterprise"
+    ],
+    "tags": [
+      "ant-design",
+      "data-entry",
+      "forms",
+      "data-entry"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "ant-design",
+    "sourceUrl": "https://ant.design/docs/spec/data-entry",
+    "metrics": {
+      "screen": "data-entry"
+    }
+  },
+  {
+    "id": "app-pattern/ant-data-format",
+    "kind": "app-pattern",
+    "name": "Data format",
+    "summary": "## Design Goals Standardize data expression to ensure intuitive, accurate and consistent understanding of data. ## Types ### Numerical The numerical value is used to indicate the measurement size, it can be used alone or with digital…",
+    "domains": [
+      "b2b-saas",
+      "data-analytics"
+    ],
+    "sectors": [
+      "enterprise"
+    ],
+    "tags": [
+      "ant-design",
+      "data-format",
+      "content",
+      "data-format"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "ant-design",
+    "sourceUrl": "https://ant.design/docs/spec/data-format",
+    "metrics": {
+      "screen": "data-format"
+    }
+  },
+  {
+    "id": "app-pattern/carbon-data-table",
+    "kind": "app-pattern",
+    "name": "Data table",
+    "summary": "The data table component allows for the flexible display and sorting of information.",
+    "domains": [
+      "b2b-saas",
+      "product-surfaces",
+      "data-analytics"
+    ],
+    "sectors": [
+      "enterprise"
+    ],
+    "tags": [
+      "carbon",
+      "component",
+      "usage",
+      "data-table"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "carbon",
+    "sourceUrl": "https://carbondesignsystem.com/components/data-table/usage/",
+    "metrics": {
+      "screen": "data-table"
+    }
+  },
+  {
+    "id": "app-pattern/primer-data-visualization",
+    "kind": "app-pattern",
+    "name": "Data visualization",
+    "summary": "Data visualizations are helpful tools for conveying complex data in an engaging and understandable way. They're commonly used in dashboards and insights pages.",
+    "domains": [
+      "developer-tools",
+      "data-analytics",
+      "b2b-saas"
+    ],
+    "sectors": [
+      "developer-tools"
+    ],
+    "tags": [
+      "primer",
+      "data-viz",
+      "guidance",
+      "data-visualization"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "primer",
+    "sourceUrl": "https://primer.style/ui-patterns/data-visualization/",
+    "metrics": {
+      "screen": "data-visualization"
+    }
+  },
+  {
     "id": "app-pattern/uswds-date-of-birth",
     "kind": "app-pattern",
     "name": "Date of birth",
@@ -26029,6 +26985,35 @@
     }
   },
   {
+    "id": "app-pattern/sap-date-picker",
+    "kind": "app-pattern",
+    "name": "Date Picker",
+    "summary": "Date Picker lets users select localized date using touch, mouse, or keyboard input. Responsive behavior for all devices - compact mode (smaller) and cozy mode (touch-friendly). Two parts: Input Field (direct entry or picker) and Date Picker (day/month/year/year ranges views).",
+    "domains": [
+      "b2b-saas",
+      "data-analytics",
+      "manufacturing",
+      "logistics",
+      "fintech-payments"
+    ],
+    "sectors": [
+      "enterprise"
+    ],
+    "tags": [
+      "sap",
+      "component",
+      "Forms & Inputs",
+      "date-picker"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "sap",
+    "sourceUrl": "https://sap.github.io/fundamental-styles/",
+    "metrics": {
+      "screen": "date-picker"
+    }
+  },
+  {
     "id": "app-pattern/govuk-dates",
     "kind": "app-pattern",
     "name": "Dates",
@@ -26051,6 +27036,34 @@
     "sourceUrl": "https://design-system.service.gov.uk/patterns/dates/",
     "metrics": {
       "screen": "dates"
+    }
+  },
+  {
+    "id": "app-pattern/ethereum-dex-design-best-practice",
+    "kind": "app-pattern",
+    "name": "Decentralized exchange (DEX) design best practices",
+    "summary": "A guide explaining UX/UI decisions for swapping tokens.",
+    "domains": [
+      "crypto-web3",
+      "fintech-payments",
+      "product-surfaces"
+    ],
+    "sectors": [
+      "web3",
+      "finance"
+    ],
+    "tags": [
+      "ethereum",
+      "web3",
+      "dex",
+      "dex-design-best-practice"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "ethereum-org",
+    "sourceUrl": "https://ethereum.org/en/developers/docs/design-and-ux/dex-design-best-practice/",
+    "metrics": {
+      "screen": "dex-design-best-practice"
     }
   },
   {
@@ -26079,6 +27092,142 @@
     }
   },
   {
+    "id": "app-pattern/primer-degraded-experiences",
+    "kind": "app-pattern",
+    "name": "Degraded experiences",
+    "summary": "Ensuring that a page still renders and primary experiences are still available during downtime of optional service dependencies.",
+    "domains": [
+      "developer-tools",
+      "b2b-saas",
+      "security"
+    ],
+    "sectors": [
+      "developer-tools"
+    ],
+    "tags": [
+      "primer",
+      "resilience",
+      "states",
+      "degraded-experiences"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "primer",
+    "sourceUrl": "https://primer.style/ui-patterns/degraded-experiences/",
+    "metrics": {
+      "screen": "degraded-experiences"
+    }
+  },
+  {
+    "id": "app-pattern/ethereum-design-and-ux",
+    "kind": "app-pattern",
+    "name": "Design and UX in web3",
+    "summary": "An introduction to design and UX in web3: research, patterns and resources to help you build Ethereum apps that are easy, safe and clear to use.",
+    "domains": [
+      "crypto-web3",
+      "fintech-payments",
+      "product-surfaces"
+    ],
+    "sectors": [
+      "web3",
+      "finance"
+    ],
+    "tags": [
+      "ethereum",
+      "web3",
+      "overview",
+      "design-and-ux"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "ethereum-org",
+    "sourceUrl": "https://ethereum.org/en/developers/docs/design-and-ux/",
+    "metrics": {
+      "screen": "design-and-ux"
+    }
+  },
+  {
+    "id": "app-pattern/ant-detail-page",
+    "kind": "app-pattern",
+    "name": "Detail Page",
+    "summary": "Detail Pages display the complete data to users.",
+    "domains": [
+      "b2b-saas",
+      "data-analytics",
+      "ecommerce-dtc"
+    ],
+    "sectors": [
+      "enterprise"
+    ],
+    "tags": [
+      "ant-design",
+      "detail-page",
+      "layout",
+      "detail-page"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "ant-design",
+    "sourceUrl": "https://ant.design/docs/spec/detail-page",
+    "metrics": {
+      "screen": "detail-page"
+    }
+  },
+  {
+    "id": "app-pattern/carbon-dialog-pattern",
+    "kind": "app-pattern",
+    "name": "Dialogs",
+    "summary": "A dialog is a “conversation” between the system and the user. It is prompted when the system needs input from the user or to give the user urgent information concerning their current workflow.",
+    "domains": [
+      "b2b-saas",
+      "product-surfaces",
+      "data-analytics"
+    ],
+    "sectors": [
+      "enterprise"
+    ],
+    "tags": [
+      "carbon",
+      "pattern",
+      "state",
+      "dialog-pattern"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "carbon",
+    "sourceUrl": "https://carbondesignsystem.com/patterns/dialog-pattern/",
+    "metrics": {
+      "screen": "dialog-pattern"
+    }
+  },
+  {
+    "id": "app-pattern/carbon-dropdown",
+    "kind": "app-pattern",
+    "name": "Dropdown",
+    "summary": "Dropdowns present a list of options that can be used to filter or sort existing content. They can also be used as menus.",
+    "domains": [
+      "b2b-saas",
+      "product-surfaces",
+      "data-analytics"
+    ],
+    "sectors": [
+      "enterprise"
+    ],
+    "tags": [
+      "carbon",
+      "component",
+      "usage",
+      "dropdown"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "carbon",
+    "sourceUrl": "https://carbondesignsystem.com/components/dropdown/usage/",
+    "metrics": {
+      "screen": "dropdown"
+    }
+  },
+  {
     "id": "app-pattern/uswds-email-address",
     "kind": "app-pattern",
     "name": "Email address",
@@ -26103,6 +27252,86 @@
     "sourceUrl": "https://designsystem.digital.gov/patterns/create-a-user-profile/email-address/",
     "metrics": {
       "screen": "email-address"
+    }
+  },
+  {
+    "id": "app-pattern/carbon-empty-states-pattern",
+    "kind": "app-pattern",
+    "name": "Empty states",
+    "summary": "Empty states are moments in an app where there is no data to display to the user.",
+    "domains": [
+      "b2b-saas",
+      "product-surfaces",
+      "data-analytics"
+    ],
+    "sectors": [
+      "enterprise"
+    ],
+    "tags": [
+      "carbon",
+      "pattern",
+      "state",
+      "empty-states-pattern"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "carbon",
+    "sourceUrl": "https://carbondesignsystem.com/patterns/empty-states-pattern/",
+    "metrics": {
+      "screen": "empty-states-pattern"
+    }
+  },
+  {
+    "id": "app-pattern/primer-empty-states",
+    "kind": "app-pattern",
+    "name": "Empty states",
+    "summary": "Empty states are used to fill spaces when no content has been added yet, or is temporarily empty due to the nature of the feature.",
+    "domains": [
+      "developer-tools",
+      "b2b-saas",
+      "product-surfaces"
+    ],
+    "sectors": [
+      "developer-tools"
+    ],
+    "tags": [
+      "primer",
+      "empty-state",
+      "states",
+      "empty-states"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "primer",
+    "sourceUrl": "https://primer.style/ui-patterns/empty-states/",
+    "metrics": {
+      "screen": "empty-states"
+    }
+  },
+  {
+    "id": "app-pattern/patternfly-error-messages",
+    "kind": "app-pattern",
+    "name": "Error messages",
+    "summary": "## Error message structure A user typically sees an error message when they attempt to perform an action but cannot continue because something isn’t right.",
+    "domains": [
+      "b2b-saas",
+      "product-surfaces"
+    ],
+    "sectors": [
+      "enterprise"
+    ],
+    "tags": [
+      "patternfly",
+      "content-design",
+      "errors",
+      "error-messages"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "patternfly",
+    "sourceUrl": "https://www.patternfly.org/content-design/writing-guides/error-messages/",
+    "metrics": {
+      "screen": "error-messages"
     }
   },
   {
@@ -26159,6 +27388,113 @@
     }
   },
   {
+    "id": "app-pattern/primer-feature-onboarding",
+    "kind": "app-pattern",
+    "name": "Feature onboarding",
+    "summary": "Onboarding is a virtual unboxing experience that helps users get started with a feature. This is a guide for designing onboarding for the product and does not include what to do for marketing pages, email announcements, social media, etc.",
+    "domains": [
+      "developer-tools",
+      "b2b-saas",
+      "product-surfaces"
+    ],
+    "sectors": [
+      "developer-tools"
+    ],
+    "tags": [
+      "primer",
+      "onboarding",
+      "guidance",
+      "feature-onboarding"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "primer",
+    "sourceUrl": "https://primer.style/ui-patterns/feature-onboarding/",
+    "metrics": {
+      "screen": "feature-onboarding"
+    }
+  },
+  {
+    "id": "app-pattern/ant-feedback",
+    "kind": "app-pattern",
+    "name": "Feedback",
+    "summary": "In order to help users understand what the application is currently doing, and to refer to the user's next behavior, and to understand the results of the operation, when the user need to interact with the system , use different modes to…",
+    "domains": [
+      "b2b-saas",
+      "product-surfaces"
+    ],
+    "sectors": [
+      "enterprise"
+    ],
+    "tags": [
+      "ant-design",
+      "feedback",
+      "states",
+      "feedback"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "ant-design",
+    "sourceUrl": "https://ant.design/docs/spec/feedback",
+    "metrics": {
+      "screen": "feedback"
+    }
+  },
+  {
+    "id": "app-pattern/carbon-filtering",
+    "kind": "app-pattern",
+    "name": "Filtering",
+    "summary": "Filtering is the mechanism by which a user adds or removes data items from a displayed data set by turning on and off certain predefined attributes.",
+    "domains": [
+      "b2b-saas",
+      "product-surfaces",
+      "data-analytics"
+    ],
+    "sectors": [
+      "enterprise"
+    ],
+    "tags": [
+      "carbon",
+      "pattern",
+      "state",
+      "filtering"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "carbon",
+    "sourceUrl": "https://carbondesignsystem.com/patterns/filtering/",
+    "metrics": {
+      "screen": "filtering"
+    }
+  },
+  {
+    "id": "app-pattern/patternfly-filters",
+    "kind": "app-pattern",
+    "name": "Filters",
+    "summary": "import \"../../components/components.css\" **Filters** allow users to narrow down content from data in tables, data lists or card views, among many others. ## Filter types Filters can contain 1 attribute or multiple attributes.",
+    "domains": [
+      "b2b-saas",
+      "data-analytics",
+      "ecommerce-dtc"
+    ],
+    "sectors": [
+      "enterprise"
+    ],
+    "tags": [
+      "patternfly",
+      "pattern",
+      "filters",
+      "filters"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "patternfly",
+    "sourceUrl": "https://www.patternfly.org/patterns/filters/",
+    "metrics": {
+      "screen": "filters"
+    }
+  },
+  {
     "id": "app-pattern/finance-home-pinned-rail",
     "kind": "app-pattern",
     "name": "Finance home with a pinned accounts column",
@@ -26183,6 +27519,172 @@
     "sourceUrl": "https://github.com/Leonxlnx/taste-skill",
     "metrics": {
       "screen": "overview"
+    }
+  },
+  {
+    "id": "app-pattern/carbon-form",
+    "kind": "app-pattern",
+    "name": "Form",
+    "summary": "Forms are used for submitting data. Consider each field and what value the data will provide.",
+    "domains": [
+      "b2b-saas",
+      "product-surfaces",
+      "data-analytics"
+    ],
+    "sectors": [
+      "enterprise"
+    ],
+    "tags": [
+      "carbon",
+      "component",
+      "usage",
+      "form"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "carbon",
+    "sourceUrl": "https://carbondesignsystem.com/components/form/usage/",
+    "metrics": {
+      "screen": "form"
+    }
+  },
+  {
+    "id": "app-pattern/sap-form-group",
+    "kind": "app-pattern",
+    "name": "Form Group",
+    "summary": "Form groups assemble form elements with labels, messages, and help containers. Components like `fd-form__item` with label and control can be used independently when error messages aren't needed.",
+    "domains": [
+      "b2b-saas",
+      "data-analytics",
+      "manufacturing",
+      "logistics",
+      "fintech-payments"
+    ],
+    "sectors": [
+      "enterprise"
+    ],
+    "tags": [
+      "sap",
+      "component",
+      "Forms & Inputs",
+      "form-group"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "sap",
+    "sourceUrl": "https://sap.github.io/fundamental-styles/",
+    "metrics": {
+      "screen": "form-group"
+    }
+  },
+  {
+    "id": "app-pattern/carbon-forms-pattern",
+    "kind": "app-pattern",
+    "name": "Forms",
+    "summary": "A form is a group of related input controls that allow users to provide data or configure options.",
+    "domains": [
+      "b2b-saas",
+      "product-surfaces",
+      "data-analytics"
+    ],
+    "sectors": [
+      "enterprise"
+    ],
+    "tags": [
+      "carbon",
+      "pattern",
+      "state",
+      "forms-pattern"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "carbon",
+    "sourceUrl": "https://carbondesignsystem.com/patterns/forms-pattern/",
+    "metrics": {
+      "screen": "forms-pattern"
+    }
+  },
+  {
+    "id": "app-pattern/pie-forms",
+    "kind": "app-pattern",
+    "name": "Forms",
+    "summary": "## What are forms? Forms refer to a collection of interactive fields that allow users to provide information or make selections within our products.",
+    "domains": [
+      "restaurants-food",
+      "ecommerce-dtc",
+      "product-surfaces"
+    ],
+    "sectors": [
+      "food-delivery",
+      "commerce"
+    ],
+    "tags": [
+      "pie",
+      "form",
+      "guidance",
+      "forms"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "pie",
+    "sourceUrl": "https://pie.design/patterns/forms/",
+    "metrics": {
+      "screen": "forms"
+    }
+  },
+  {
+    "id": "app-pattern/primer-forms",
+    "kind": "app-pattern",
+    "name": "Forms",
+    "summary": "Primer's form design guidelines aim to minimize the effort and cognitive load required to complete a task that requires data input from the user. For example, creating a new repo configuring settings, and logging in.",
+    "domains": [
+      "developer-tools",
+      "b2b-saas",
+      "product-surfaces"
+    ],
+    "sectors": [
+      "developer-tools"
+    ],
+    "tags": [
+      "primer",
+      "forms",
+      "guidance",
+      "forms"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "primer",
+    "sourceUrl": "https://primer.style/ui-patterns/forms/overview/",
+    "metrics": {
+      "screen": "forms"
+    }
+  },
+  {
+    "id": "app-pattern/ethereum-gas",
+    "kind": "app-pattern",
+    "name": "Gas and fees",
+    "summary": "Learn about Ethereum gas fees, how they're calculated, and their role in network security and transaction processing.",
+    "domains": [
+      "crypto-web3",
+      "fintech-payments",
+      "product-surfaces"
+    ],
+    "sectors": [
+      "web3",
+      "finance"
+    ],
+    "tags": [
+      "ethereum",
+      "web3",
+      "fees",
+      "gas"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "ethereum-org",
+    "sourceUrl": "https://ethereum.org/en/developers/docs/gas/",
+    "metrics": {
+      "screen": "gas"
     }
   },
   {
@@ -26214,6 +27716,63 @@
     }
   },
   {
+    "id": "app-pattern/pie-haptic-feedback",
+    "kind": "app-pattern",
+    "name": "Haptic feedback",
+    "summary": "## What are haptics? Haptics refer to the incorporation of tactile feedback into user interfaces to enhance the overall user experience.",
+    "domains": [
+      "restaurants-food",
+      "product-surfaces",
+      "fitness"
+    ],
+    "sectors": [
+      "food-delivery",
+      "commerce"
+    ],
+    "tags": [
+      "pie",
+      "feedback",
+      "mobile",
+      "haptic-feedback"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "pie",
+    "sourceUrl": "https://pie.design/patterns/haptic-feedback/",
+    "metrics": {
+      "screen": "haptic-feedback"
+    }
+  },
+  {
+    "id": "app-pattern/sap-icon-tab-bar",
+    "kind": "app-pattern",
+    "name": "Icon Tab Bar",
+    "summary": "Navigation and filtering control containing tabs that display icons, text, or both, linking to different content areas or views. Two key use cases: navigate between content sections or filter lists (showing all items or those matching specific attributes). Users switch tabs by clicking.",
+    "domains": [
+      "b2b-saas",
+      "data-analytics",
+      "manufacturing",
+      "logistics",
+      "fintech-payments"
+    ],
+    "sectors": [
+      "enterprise"
+    ],
+    "tags": [
+      "sap",
+      "component",
+      "Navigation",
+      "icon-tab-bar"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "sap",
+    "sourceUrl": "https://sap.github.io/fundamental-styles/",
+    "metrics": {
+      "screen": "icon-tab-bar"
+    }
+  },
+  {
     "id": "app-pattern/inbox-triage",
     "kind": "app-pattern",
     "name": "Inbox triage",
@@ -26238,6 +27797,35 @@
     "sourceUrl": "https://github.com/Leonxlnx/taste-skill",
     "metrics": {
       "screen": "inbox"
+    }
+  },
+  {
+    "id": "app-pattern/sap-input",
+    "kind": "app-pattern",
+    "name": "Input",
+    "summary": "Text input fields allow users to enter and edit single-line text, numbers, dates, or times. They should always be paired with a label, and required fields should have an asterisk (*). Features include autocomplete, suggestions, and value help for valid data entry.",
+    "domains": [
+      "b2b-saas",
+      "data-analytics",
+      "manufacturing",
+      "logistics",
+      "fintech-payments"
+    ],
+    "sectors": [
+      "enterprise"
+    ],
+    "tags": [
+      "sap",
+      "component",
+      "Forms & Inputs",
+      "input"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "sap",
+    "sourceUrl": "https://sap.github.io/fundamental-styles/",
+    "metrics": {
+      "screen": "input"
     }
   },
   {
@@ -26297,6 +27885,62 @@
     "sourceUrl": "https://service-manual.nhs.uk/design-system/patterns/interruption-page",
     "metrics": {
       "screen": "interruption-page"
+    }
+  },
+  {
+    "id": "app-pattern/pie-jet-ai",
+    "kind": "app-pattern",
+    "name": "JET AI",
+    "summary": "## Overview At JET we use AI to assist and elevate our users' experiences.",
+    "domains": [
+      "restaurants-food",
+      "ai-products",
+      "product-surfaces"
+    ],
+    "sectors": [
+      "food-delivery",
+      "commerce"
+    ],
+    "tags": [
+      "pie",
+      "ai",
+      "guidance",
+      "jet-ai"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "pie",
+    "sourceUrl": "https://pie.design/patterns/jet-ai/",
+    "metrics": {
+      "screen": "jet-ai"
+    }
+  },
+  {
+    "id": "app-pattern/pie-just-eat-plus",
+    "kind": "app-pattern",
+    "name": "Just Eat Plus",
+    "summary": "## Overview Just Eat+ is Just Eat Takeaway's subscription-based loyalty proposition that offers exclusive benefits such as 'free delivery', 'members-only discounts' and 'offers & rewards' from participating restaurants, grocery stores and…",
+    "domains": [
+      "restaurants-food",
+      "ecommerce-dtc",
+      "marketplaces"
+    ],
+    "sectors": [
+      "food-delivery",
+      "commerce"
+    ],
+    "tags": [
+      "pie",
+      "subscription",
+      "loyalty",
+      "just-eat-plus"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "pie",
+    "sourceUrl": "https://pie.design/patterns/just-eat-plus/",
+    "metrics": {
+      "screen": "just-eat-plus"
     }
   },
   {
@@ -26388,6 +28032,282 @@
     }
   },
   {
+    "id": "app-pattern/ant-layout",
+    "kind": "app-pattern",
+    "name": "Layout",
+    "summary": "Spatial layout is the starting point of systematic visual design.",
+    "domains": [
+      "b2b-saas",
+      "data-analytics"
+    ],
+    "sectors": [
+      "enterprise"
+    ],
+    "tags": [
+      "ant-design",
+      "layout",
+      "foundation",
+      "layout"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "ant-design",
+    "sourceUrl": "https://ant.design/docs/spec/layout",
+    "metrics": {
+      "screen": "layout"
+    }
+  },
+  {
+    "id": "app-pattern/carbon-legends",
+    "kind": "app-pattern",
+    "name": "Legends",
+    "summary": "Legends summarize the distinguishing visual properties such as colors or texture used in the visualization",
+    "domains": [
+      "data-analytics",
+      "b2b-saas"
+    ],
+    "sectors": [
+      "enterprise"
+    ],
+    "tags": [
+      "carbon",
+      "data-viz",
+      "legends"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "carbon",
+    "sourceUrl": "https://carbondesignsystem.com/data-visualization/legends/",
+    "metrics": {
+      "screen": "legends"
+    }
+  },
+  {
+    "id": "app-pattern/sap-list",
+    "kind": "app-pattern",
+    "name": "List",
+    "summary": "Lists display homogeneous basic data, distinguished from tables (which handle complex data). Used in master lists for master-detail scenarios with flexible column layout, popovers, and dialogs. Supports byline variant for additional content and semantic status.",
+    "domains": [
+      "b2b-saas",
+      "data-analytics",
+      "manufacturing",
+      "logistics",
+      "fintech-payments"
+    ],
+    "sectors": [
+      "enterprise"
+    ],
+    "tags": [
+      "sap",
+      "component",
+      "Data Display",
+      "list"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "sap",
+    "sourceUrl": "https://sap.github.io/fundamental-styles/",
+    "metrics": {
+      "screen": "list"
+    }
+  },
+  {
+    "id": "app-pattern/carbon-loading-pattern",
+    "kind": "app-pattern",
+    "name": "Loading",
+    "summary": "Loading patterns are used when information takes an extended amount of time to process and appear on screen.",
+    "domains": [
+      "b2b-saas",
+      "product-surfaces",
+      "data-analytics"
+    ],
+    "sectors": [
+      "enterprise"
+    ],
+    "tags": [
+      "carbon",
+      "pattern",
+      "state",
+      "loading-pattern"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "carbon",
+    "sourceUrl": "https://carbondesignsystem.com/patterns/loading-pattern/",
+    "metrics": {
+      "screen": "loading-pattern"
+    }
+  },
+  {
+    "id": "app-pattern/primer-loading",
+    "kind": "app-pattern",
+    "name": "Loading",
+    "summary": "How to use loading states to help users stay informed and engaged while waiting.",
+    "domains": [
+      "developer-tools",
+      "b2b-saas",
+      "product-surfaces"
+    ],
+    "sectors": [
+      "developer-tools"
+    ],
+    "tags": [
+      "primer",
+      "loading",
+      "states",
+      "loading"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "primer",
+    "sourceUrl": "https://primer.style/ui-patterns/loading/",
+    "metrics": {
+      "screen": "loading"
+    }
+  },
+  {
+    "id": "app-pattern/spectrum-menu",
+    "kind": "app-pattern",
+    "name": "Menu",
+    "summary": "Menus help users take actions, choose from a list of options, configure settings, and more. They can be placed in a transient container, like a popover or tray.",
+    "domains": [
+      "b2b-saas",
+      "product-surfaces",
+      "data-analytics",
+      "developer-tools"
+    ],
+    "sectors": [
+      "enterprise"
+    ],
+    "tags": [
+      "spectrum",
+      "component",
+      "usage",
+      "actions",
+      "menu"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "spectrum",
+    "sourceUrl": "https://spectrum.adobe.com/page/menu/",
+    "metrics": {
+      "screen": "menu"
+    }
+  },
+  {
+    "id": "app-pattern/sap-menu",
+    "kind": "app-pattern",
+    "name": "Menu",
+    "summary": "Menu is a listing structure with optional headers for creating menus. Commonly used as contents for dropdowns, contextual menus, etc., when paired with the popover component.",
+    "domains": [
+      "b2b-saas",
+      "data-analytics",
+      "manufacturing",
+      "logistics",
+      "fintech-payments"
+    ],
+    "sectors": [
+      "enterprise"
+    ],
+    "tags": [
+      "sap",
+      "component",
+      "Navigation",
+      "menu"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "sap",
+    "sourceUrl": "https://sap.github.io/fundamental-styles/",
+    "metrics": {
+      "screen": "menu"
+    }
+  },
+  {
+    "id": "app-pattern/sap-message-box",
+    "kind": "app-pattern",
+    "name": "Message Box",
+    "summary": "Message box displays a dialog with a simple message to the user. Unlike popover, it can relay messages unrelated to UI (e.g., technical errors). Inherits Dialog look/behavior (excluding drag/resize). Displays semantic colors and icons: Error, Warning, Success, Information, Confirmation.",
+    "domains": [
+      "b2b-saas",
+      "data-analytics",
+      "manufacturing",
+      "logistics",
+      "fintech-payments"
+    ],
+    "sectors": [
+      "enterprise"
+    ],
+    "tags": [
+      "sap",
+      "component",
+      "Feedback & Status",
+      "message-box"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "sap",
+    "sourceUrl": "https://sap.github.io/fundamental-styles/",
+    "metrics": {
+      "screen": "message-box"
+    }
+  },
+  {
+    "id": "app-pattern/pie-messaging-and-chatbots",
+    "kind": "app-pattern",
+    "name": "Messaging and chatbots",
+    "summary": "## Overview Messaging services facilitate the exchange of text, media, and information across platforms, allowing seamless interaction between users.",
+    "domains": [
+      "restaurants-food",
+      "product-surfaces",
+      "marketplaces"
+    ],
+    "sectors": [
+      "food-delivery",
+      "commerce"
+    ],
+    "tags": [
+      "pie",
+      "messaging",
+      "guidance",
+      "messaging-and-chatbots"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "pie",
+    "sourceUrl": "https://pie.design/patterns/messaging-and-chatbots/",
+    "metrics": {
+      "screen": "messaging-and-chatbots"
+    }
+  },
+  {
+    "id": "app-pattern/carbon-modal",
+    "kind": "app-pattern",
+    "name": "Modal",
+    "summary": "Modals focus the user’s attention exclusively on one task or piece of information via a window that sits on top of the page content.",
+    "domains": [
+      "b2b-saas",
+      "product-surfaces",
+      "data-analytics"
+    ],
+    "sectors": [
+      "enterprise"
+    ],
+    "tags": [
+      "carbon",
+      "component",
+      "usage",
+      "modal"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "carbon",
+    "sourceUrl": "https://carbondesignsystem.com/components/modal/usage/",
+    "metrics": {
+      "screen": "modal"
+    }
+  },
+  {
     "id": "app-pattern/cms-multi-input-date-field",
     "kind": "app-pattern",
     "name": "Multi-Input Date Field",
@@ -26469,6 +28389,58 @@
     }
   },
   {
+    "id": "app-pattern/ant-navigation",
+    "kind": "app-pattern",
+    "name": "Navigation",
+    "summary": "Broadly speaking, anything telling users where they are, where to go and how to get there can be called navigation.",
+    "domains": [
+      "b2b-saas",
+      "data-analytics"
+    ],
+    "sectors": [
+      "enterprise"
+    ],
+    "tags": [
+      "ant-design",
+      "navigation",
+      "layout",
+      "navigation"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "ant-design",
+    "sourceUrl": "https://ant.design/docs/spec/navigation",
+    "metrics": {
+      "screen": "navigation"
+    }
+  },
+  {
+    "id": "app-pattern/primer-navigation",
+    "kind": "app-pattern",
+    "name": "Navigation",
+    "summary": "Navigation patterns help users understand where they are and where they can go next.",
+    "domains": [
+      "developer-tools",
+      "b2b-saas"
+    ],
+    "sectors": [
+      "developer-tools"
+    ],
+    "tags": [
+      "primer",
+      "navigation",
+      "layout",
+      "navigation"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "primer",
+    "sourceUrl": "https://primer.style/ui-patterns/navigation/",
+    "metrics": {
+      "screen": "navigation"
+    }
+  },
+  {
     "id": "app-pattern/nhs-ask-for-nhs-numbers",
     "kind": "app-pattern",
     "name": "NHS numbers",
@@ -26494,6 +28466,116 @@
     "sourceUrl": "https://service-manual.nhs.uk/design-system/patterns/ask-for-nhs-numbers",
     "metrics": {
       "screen": "ask-for-nhs-numbers"
+    }
+  },
+  {
+    "id": "app-pattern/carbon-notification",
+    "kind": "app-pattern",
+    "name": "Notification",
+    "summary": "Notifications are messages that communicate information to the user. The two main variants of notifications are toast notifications and inline notifications.",
+    "domains": [
+      "b2b-saas",
+      "product-surfaces",
+      "data-analytics"
+    ],
+    "sectors": [
+      "enterprise"
+    ],
+    "tags": [
+      "carbon",
+      "component",
+      "usage",
+      "notification"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "carbon",
+    "sourceUrl": "https://carbondesignsystem.com/components/notification/usage/",
+    "metrics": {
+      "screen": "notification"
+    }
+  },
+  {
+    "id": "app-pattern/sap-notification",
+    "kind": "app-pattern",
+    "name": "Notification",
+    "summary": "Notifications should be well-instrumented, timed to provide value without being intrusive. Should be brief, concise, conveying specific information or prompting action. Used for reminders, alerts, and updates.",
+    "domains": [
+      "b2b-saas",
+      "data-analytics",
+      "manufacturing",
+      "logistics",
+      "fintech-payments"
+    ],
+    "sectors": [
+      "enterprise"
+    ],
+    "tags": [
+      "sap",
+      "component",
+      "Feedback & Status",
+      "notification"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "sap",
+    "sourceUrl": "https://sap.github.io/fundamental-styles/",
+    "metrics": {
+      "screen": "notification"
+    }
+  },
+  {
+    "id": "app-pattern/primer-notification-messaging",
+    "kind": "app-pattern",
+    "name": "Notification messaging",
+    "summary": "Messaging components are used to provide important and relevant information to the user, including feedback, contextual information, product updates, and more.",
+    "domains": [
+      "developer-tools",
+      "b2b-saas",
+      "community-social"
+    ],
+    "sectors": [
+      "developer-tools"
+    ],
+    "tags": [
+      "primer",
+      "notifications",
+      "messaging",
+      "notification-messaging"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "primer",
+    "sourceUrl": "https://primer.style/ui-patterns/notification-messaging/",
+    "metrics": {
+      "screen": "notification-messaging"
+    }
+  },
+  {
+    "id": "app-pattern/carbon-notification-pattern",
+    "kind": "app-pattern",
+    "name": "Notifications",
+    "summary": "Notifications are an important method of communicating with users and providing feedback.",
+    "domains": [
+      "b2b-saas",
+      "product-surfaces",
+      "data-analytics"
+    ],
+    "sectors": [
+      "enterprise"
+    ],
+    "tags": [
+      "carbon",
+      "pattern",
+      "state",
+      "notification-pattern"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "carbon",
+    "sourceUrl": "https://carbondesignsystem.com/patterns/notification-pattern/",
+    "metrics": {
+      "screen": "notification-pattern"
     }
   },
   {
@@ -26527,6 +28609,63 @@
     }
   },
   {
+    "id": "app-pattern/pie-onboarding-and-guided-tour",
+    "kind": "app-pattern",
+    "name": "Onboarding and guided tour",
+    "summary": "## Overview The onboarding and guided tour pattern aims to create a smooth and engaging first interaction, helping users understand the core functionalities, value propositions, or changes within the system.",
+    "domains": [
+      "restaurants-food",
+      "marketplaces",
+      "ecommerce-dtc",
+      "product-surfaces"
+    ],
+    "sectors": [
+      "food-delivery",
+      "commerce"
+    ],
+    "tags": [
+      "pie",
+      "onboarding",
+      "guidance",
+      "onboarding-and-guided-tour"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "pie",
+    "sourceUrl": "https://pie.design/patterns/onboarding-and-guided-tour/",
+    "metrics": {
+      "screen": "onboarding-and-guided-tour"
+    }
+  },
+  {
+    "id": "app-pattern/pie-overlay-patterns",
+    "kind": "app-pattern",
+    "name": "Overlay patterns",
+    "summary": "## What are overlay patterns?",
+    "domains": [
+      "restaurants-food",
+      "product-surfaces",
+      "ecommerce-dtc"
+    ],
+    "sectors": [
+      "food-delivery",
+      "commerce"
+    ],
+    "tags": [
+      "pie",
+      "overlay",
+      "guidance",
+      "overlay-patterns"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "pie",
+    "sourceUrl": "https://pie.design/patterns/overlay-patterns/",
+    "metrics": {
+      "screen": "overlay-patterns"
+    }
+  },
+  {
     "id": "app-pattern/cms-pagination",
     "kind": "app-pattern",
     "name": "Pagination",
@@ -26549,6 +28688,35 @@
     "quality": "verified",
     "source": "cms-design-system",
     "sourceUrl": "https://design.cms.gov/components/pagination/",
+    "metrics": {
+      "screen": "pagination"
+    }
+  },
+  {
+    "id": "app-pattern/sap-pagination",
+    "kind": "app-pattern",
+    "name": "Pagination",
+    "summary": "Pagination allows users to separate content into discrete pages, making it easier to digest and navigate through large sets of items. Commonly used for tables and tiles. Supports two display modes: standard (>9 pages with input) and short (<9 pages showing all).",
+    "domains": [
+      "b2b-saas",
+      "data-analytics",
+      "manufacturing",
+      "logistics",
+      "fintech-payments"
+    ],
+    "sectors": [
+      "enterprise"
+    ],
+    "tags": [
+      "sap",
+      "component",
+      "Navigation",
+      "pagination"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "sap",
+    "sourceUrl": "https://sap.github.io/fundamental-styles/",
     "metrics": {
       "screen": "pagination"
     }
@@ -26697,6 +28865,35 @@
     }
   },
   {
+    "id": "app-pattern/sap-popover",
+    "kind": "app-pattern",
+    "name": "Popover",
+    "summary": "Popover displays additional information for an object in a compact way without leaving the page. Contains control (trigger) and body (content). Can be paired with Menu for dropdown functionality. Supports header, footer, and scrollable variants with flexible placement options.",
+    "domains": [
+      "b2b-saas",
+      "data-analytics",
+      "manufacturing",
+      "logistics",
+      "fintech-payments"
+    ],
+    "sectors": [
+      "enterprise"
+    ],
+    "tags": [
+      "sap",
+      "component",
+      "Feedback & Status",
+      "popover"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "sap",
+    "sourceUrl": "https://sap.github.io/fundamental-styles/",
+    "metrics": {
+      "screen": "popover"
+    }
+  },
+  {
     "id": "app-pattern/power-flow",
     "kind": "app-pattern",
     "name": "Power flow summary",
@@ -26712,6 +28909,59 @@
     "quality": "verified",
     "source": "taste-skill",
     "sourceUrl": "https://github.com/Leonxlnx/taste-skill"
+  },
+  {
+    "id": "app-pattern/patternfly-primary-detail",
+    "kind": "app-pattern",
+    "name": "Primary-detail",
+    "summary": "A **primary-detail layout** is an interface that shows a list of items and the corresponding details of the selected item. ## Elements A primary component sits in a container on the page, and detail components typically live in a…",
+    "domains": [
+      "b2b-saas",
+      "data-analytics"
+    ],
+    "sectors": [
+      "enterprise"
+    ],
+    "tags": [
+      "patternfly",
+      "pattern",
+      "navigation",
+      "primary-detail"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "patternfly",
+    "sourceUrl": "https://www.patternfly.org/patterns/primary-detail/",
+    "metrics": {
+      "screen": "primary-detail"
+    }
+  },
+  {
+    "id": "app-pattern/primer-progressive-disclosure",
+    "kind": "app-pattern",
+    "name": "Progressive disclosure",
+    "summary": "These guidelines summarize how GitHub implements progressive disclosure—an interaction design pattern that hides/shows information—as well as guiding principles, best practices, and implementation support.",
+    "domains": [
+      "developer-tools",
+      "b2b-saas",
+      "product-surfaces"
+    ],
+    "sectors": [
+      "developer-tools"
+    ],
+    "tags": [
+      "primer",
+      "disclosure",
+      "layout",
+      "progressive-disclosure"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "primer",
+    "sourceUrl": "https://primer.style/ui-patterns/progressive-disclosure/",
+    "metrics": {
+      "screen": "progressive-disclosure"
+    }
   },
   {
     "id": "app-pattern/nhs-question-pages",
@@ -26738,6 +28988,35 @@
     "sourceUrl": "https://service-manual.nhs.uk/design-system/patterns/question-pages",
     "metrics": {
       "screen": "question-pages"
+    }
+  },
+  {
+    "id": "app-pattern/sap-radio",
+    "kind": "app-pattern",
+    "name": "Radio",
+    "summary": "Radio buttons provide mutually exclusive options, allowing users to select only one option from two or more choices. They only work in groups and are best for selecting from a small set of clearly different alternatives.",
+    "domains": [
+      "b2b-saas",
+      "data-analytics",
+      "manufacturing",
+      "logistics",
+      "fintech-payments"
+    ],
+    "sectors": [
+      "enterprise"
+    ],
+    "tags": [
+      "sap",
+      "component",
+      "Forms & Inputs",
+      "radio"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "sap",
+    "sourceUrl": "https://sap.github.io/fundamental-styles/",
+    "metrics": {
+      "screen": "radio"
     }
   },
   {
@@ -26823,6 +29102,116 @@
     "sourceUrl": "https://github.com/Leonxlnx/taste-skill",
     "metrics": {
       "screen": "analytics"
+    }
+  },
+  {
+    "id": "app-pattern/primer-saving",
+    "kind": "app-pattern",
+    "name": "Saving",
+    "summary": "Save patterns help users store and update their content and configuration throughout GitHub. These changes should be represented in the UI accurately, quickly, and obviously. Their behavior should inspire confidence and trust.",
+    "domains": [
+      "developer-tools",
+      "b2b-saas",
+      "product-surfaces"
+    ],
+    "sectors": [
+      "developer-tools"
+    ],
+    "tags": [
+      "primer",
+      "saving",
+      "states",
+      "saving"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "primer",
+    "sourceUrl": "https://primer.style/ui-patterns/saving/",
+    "metrics": {
+      "screen": "saving"
+    }
+  },
+  {
+    "id": "app-pattern/carbon-search",
+    "kind": "app-pattern",
+    "name": "Search",
+    "summary": "Search enables users to specify a word or a phrase to find relevant content without navigation.",
+    "domains": [
+      "b2b-saas",
+      "product-surfaces",
+      "data-analytics"
+    ],
+    "sectors": [
+      "enterprise"
+    ],
+    "tags": [
+      "carbon",
+      "component",
+      "usage",
+      "search"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "carbon",
+    "sourceUrl": "https://carbondesignsystem.com/components/search/usage/",
+    "metrics": {
+      "screen": "search"
+    }
+  },
+  {
+    "id": "app-pattern/carbon-search-pattern",
+    "kind": "app-pattern",
+    "name": "Search",
+    "summary": "Search enables users to specify a word or a phrase to find particular relevant pieces of content.",
+    "domains": [
+      "b2b-saas",
+      "product-surfaces",
+      "data-analytics"
+    ],
+    "sectors": [
+      "enterprise"
+    ],
+    "tags": [
+      "carbon",
+      "pattern",
+      "state",
+      "search-pattern"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "carbon",
+    "sourceUrl": "https://carbondesignsystem.com/patterns/search-pattern/",
+    "metrics": {
+      "screen": "search-pattern"
+    }
+  },
+  {
+    "id": "app-pattern/sap-select",
+    "kind": "app-pattern",
+    "name": "Select",
+    "summary": "Select component (dropdown) lets users pick one item from a small, predefined list. Can be placed in toolbars (chart, footer, header), forms, or tables. List stays hidden until opened.",
+    "domains": [
+      "b2b-saas",
+      "data-analytics",
+      "manufacturing",
+      "logistics",
+      "fintech-payments"
+    ],
+    "sectors": [
+      "enterprise"
+    ],
+    "tags": [
+      "sap",
+      "component",
+      "Forms & Inputs",
+      "select"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "sap",
+    "sourceUrl": "https://sap.github.io/fundamental-styles/",
+    "metrics": {
+      "screen": "select"
     }
   },
   {
@@ -26984,6 +29373,89 @@
     }
   },
   {
+    "id": "app-pattern/patternfly-status-and-severity",
+    "kind": "app-pattern",
+    "name": "Status and severity",
+    "summary": "import { Button, Icon, Content, ContentVariants } from '@patternfly/react-core'; import './status-and-severity.css'; import RhUiSeverityCriticalFillIcon from '@patternfly/react-icons/dist/esm/icons/rh-ui-severity-critical-fill-icon';…",
+    "domains": [
+      "b2b-saas",
+      "security",
+      "data-analytics"
+    ],
+    "sectors": [
+      "enterprise"
+    ],
+    "tags": [
+      "patternfly",
+      "pattern",
+      "status",
+      "status-and-severity"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "patternfly",
+    "sourceUrl": "https://www.patternfly.org/patterns/status-and-severity/",
+    "metrics": {
+      "screen": "status-and-severity"
+    }
+  },
+  {
+    "id": "app-pattern/carbon-status-indicator-pattern",
+    "kind": "app-pattern",
+    "name": "Status indicators",
+    "summary": "Status indicators are an important method of communicating severity level information to users. Different shapes and colors enable users to quickly assess and identify status and respond accordingly.",
+    "domains": [
+      "b2b-saas",
+      "product-surfaces",
+      "data-analytics"
+    ],
+    "sectors": [
+      "enterprise"
+    ],
+    "tags": [
+      "carbon",
+      "pattern",
+      "state",
+      "status-indicator-pattern"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "carbon",
+    "sourceUrl": "https://carbondesignsystem.com/patterns/status-indicator-pattern/",
+    "metrics": {
+      "screen": "status-indicator-pattern"
+    }
+  },
+  {
+    "id": "app-pattern/sap-switch",
+    "kind": "app-pattern",
+    "name": "Switch",
+    "summary": "Switch mimics a physical switch, allowing users to toggle individual features on or off. Mainly used for settings, personalization, and cases where impact is directly recognizable. Changes take immediate effect.",
+    "domains": [
+      "b2b-saas",
+      "data-analytics",
+      "manufacturing",
+      "logistics",
+      "fintech-payments"
+    ],
+    "sectors": [
+      "enterprise"
+    ],
+    "tags": [
+      "sap",
+      "component",
+      "Forms & Inputs",
+      "switch"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "sap",
+    "sourceUrl": "https://sap.github.io/fundamental-styles/",
+    "metrics": {
+      "screen": "switch"
+    }
+  },
+  {
     "id": "app-pattern/tabbed-object-detail",
     "kind": "app-pattern",
     "name": "Tabbed object detail in a sheet",
@@ -27042,6 +29514,64 @@
     "quality": "verified",
     "source": "cms-design-system",
     "sourceUrl": "https://design.cms.gov/components/table/",
+    "metrics": {
+      "screen": "table"
+    }
+  },
+  {
+    "id": "app-pattern/spectrum-table",
+    "kind": "app-pattern",
+    "name": "Table",
+    "summary": "Tables display information in rows and columns, allowing users to compare and scan structured data.",
+    "domains": [
+      "b2b-saas",
+      "product-surfaces",
+      "data-analytics",
+      "developer-tools"
+    ],
+    "sectors": [
+      "enterprise"
+    ],
+    "tags": [
+      "spectrum",
+      "component",
+      "usage",
+      "data-visualization",
+      "table"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "spectrum",
+    "sourceUrl": "https://spectrum.adobe.com/page/table/",
+    "metrics": {
+      "screen": "table"
+    }
+  },
+  {
+    "id": "app-pattern/sap-table",
+    "kind": "app-pattern",
+    "name": "Table",
+    "summary": "Table contains set of line items with rows (each showing one line item) and columns. Items can contain data or interactive elements. Two groups: fully responsive tables and desktop-centric tables. Responsive table offers flexibility, grid table for large datasets (>1,000 rows) and analytical use cases.",
+    "domains": [
+      "b2b-saas",
+      "data-analytics",
+      "manufacturing",
+      "logistics",
+      "fintech-payments"
+    ],
+    "sectors": [
+      "enterprise"
+    ],
+    "tags": [
+      "sap",
+      "component",
+      "Data Display",
+      "table"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "sap",
+    "sourceUrl": "https://sap.github.io/fundamental-styles/",
     "metrics": {
       "screen": "table"
     }
@@ -27109,6 +29639,62 @@
     }
   },
   {
+    "id": "app-pattern/carbon-tabs",
+    "kind": "app-pattern",
+    "name": "Tabs",
+    "summary": "Use tabs to allow users to navigate easily between views within the same context.",
+    "domains": [
+      "b2b-saas",
+      "product-surfaces",
+      "data-analytics"
+    ],
+    "sectors": [
+      "enterprise"
+    ],
+    "tags": [
+      "carbon",
+      "component",
+      "usage",
+      "tabs"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "carbon",
+    "sourceUrl": "https://carbondesignsystem.com/components/tabs/usage/",
+    "metrics": {
+      "screen": "tabs"
+    }
+  },
+  {
+    "id": "app-pattern/spectrum-tabs",
+    "kind": "app-pattern",
+    "name": "Tabs",
+    "summary": "Tabs organize content into multiple sections and allow users to navigate between them. The content under the set of tabs should be related and form a coherent unit.",
+    "domains": [
+      "b2b-saas",
+      "product-surfaces",
+      "data-analytics",
+      "developer-tools"
+    ],
+    "sectors": [
+      "enterprise"
+    ],
+    "tags": [
+      "spectrum",
+      "component",
+      "usage",
+      "navigation",
+      "tabs"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "spectrum",
+    "sourceUrl": "https://spectrum.adobe.com/page/tabs/",
+    "metrics": {
+      "screen": "tabs"
+    }
+  },
+  {
     "id": "app-pattern/leave-timeline",
     "kind": "app-pattern",
     "name": "Team timeline with kind encoding",
@@ -27124,6 +29710,232 @@
     "quality": "verified",
     "source": "taste-skill",
     "sourceUrl": "https://github.com/Leonxlnx/taste-skill"
+  },
+  {
+    "id": "app-pattern/spectrum-text-field",
+    "kind": "app-pattern",
+    "name": "Text field",
+    "summary": "Text fields allow users to input custom text entries with a keyboard. Various options can be shown with the field to communicate the input requirements.",
+    "domains": [
+      "b2b-saas",
+      "product-surfaces",
+      "data-analytics",
+      "developer-tools"
+    ],
+    "sectors": [
+      "enterprise"
+    ],
+    "tags": [
+      "spectrum",
+      "component",
+      "usage",
+      "inputs",
+      "text-field"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "spectrum",
+    "sourceUrl": "https://spectrum.adobe.com/page/text-field/",
+    "metrics": {
+      "screen": "text-field"
+    }
+  },
+  {
+    "id": "app-pattern/carbon-text-input",
+    "kind": "app-pattern",
+    "name": "Text input",
+    "summary": "Text inputs enable the user to interact with and input content and data. This component can be used for long and short form entries.",
+    "domains": [
+      "b2b-saas",
+      "product-surfaces",
+      "data-analytics"
+    ],
+    "sectors": [
+      "enterprise"
+    ],
+    "tags": [
+      "carbon",
+      "component",
+      "usage",
+      "text-input"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "carbon",
+    "sourceUrl": "https://carbondesignsystem.com/components/text-input/usage/",
+    "metrics": {
+      "screen": "text-input"
+    }
+  },
+  {
+    "id": "app-pattern/spectrum-toast",
+    "kind": "app-pattern",
+    "name": "Toast",
+    "summary": "Toasts display brief, temporary notifications. They're meant to be noticed without disrupting a user's experience or requiring an action to be taken.",
+    "domains": [
+      "b2b-saas",
+      "product-surfaces",
+      "data-analytics",
+      "developer-tools"
+    ],
+    "sectors": [
+      "enterprise"
+    ],
+    "tags": [
+      "spectrum",
+      "component",
+      "usage",
+      "feedback",
+      "toast"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "spectrum",
+    "sourceUrl": "https://spectrum.adobe.com/page/toast/",
+    "metrics": {
+      "screen": "toast"
+    }
+  },
+  {
+    "id": "app-pattern/sap-toolbar",
+    "kind": "app-pattern",
+    "name": "Toolbar",
+    "summary": "Toolbar enables users to change UI or trigger actions (change views, manipulate data/objects, navigate, perform actions). Usually paired with buttons, which are always right-aligned. Actions can be independent, object-specific, apply to item sets, or control UI content settings.",
+    "domains": [
+      "b2b-saas",
+      "data-analytics",
+      "manufacturing",
+      "logistics",
+      "fintech-payments"
+    ],
+    "sectors": [
+      "enterprise"
+    ],
+    "tags": [
+      "sap",
+      "component",
+      "Navigation",
+      "toolbar"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "sap",
+    "sourceUrl": "https://sap.github.io/fundamental-styles/",
+    "metrics": {
+      "screen": "toolbar"
+    }
+  },
+  {
+    "id": "app-pattern/spectrum-tooltip",
+    "kind": "app-pattern",
+    "name": "Tooltip",
+    "summary": "Tooltips show contextual help or information about specific components when a user hovers or focuses on them.",
+    "domains": [
+      "b2b-saas",
+      "product-surfaces",
+      "data-analytics",
+      "developer-tools"
+    ],
+    "sectors": [
+      "enterprise"
+    ],
+    "tags": [
+      "spectrum",
+      "component",
+      "usage",
+      "feedback",
+      "tooltip"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "spectrum",
+    "sourceUrl": "https://spectrum.adobe.com/page/tooltip/",
+    "metrics": {
+      "screen": "tooltip"
+    }
+  },
+  {
+    "id": "app-pattern/patternfly-tooltips",
+    "kind": "app-pattern",
+    "name": "Tooltips",
+    "summary": "import RhUiSettingsIcon from '@patternfly/react-icons/dist/esm/icons/rh-ui-settings-icon'; import RhUiCopyIcon from '@patternfly/react-icons/dist/esm/icons/rh-ui-copy-icon'; import RhUiSearchIcon from…",
+    "domains": [
+      "b2b-saas",
+      "product-surfaces"
+    ],
+    "sectors": [
+      "enterprise"
+    ],
+    "tags": [
+      "patternfly",
+      "content-design",
+      "tooltips",
+      "tooltips"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "patternfly",
+    "sourceUrl": "https://www.patternfly.org/content-design/writing-guides/tooltips/",
+    "metrics": {
+      "screen": "tooltips"
+    }
+  },
+  {
+    "id": "app-pattern/ethereum-transactions",
+    "kind": "app-pattern",
+    "name": "Transactions",
+    "summary": "An overview of Ethereum transactions – how they work, their data structure, and how to send them via an application.",
+    "domains": [
+      "crypto-web3",
+      "fintech-payments",
+      "product-surfaces"
+    ],
+    "sectors": [
+      "web3",
+      "finance"
+    ],
+    "tags": [
+      "ethereum",
+      "web3",
+      "transaction",
+      "transactions"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "ethereum-org",
+    "sourceUrl": "https://ethereum.org/en/developers/docs/transactions/",
+    "metrics": {
+      "screen": "transactions"
+    }
+  },
+  {
+    "id": "app-pattern/sap-wizard",
+    "kind": "app-pattern",
+    "name": "Wizard",
+    "summary": "Wizard guides user through long or unfamiliar task by dividing into sections, revealing information in digestible way. Consists of walkthrough screen (input required info) and summary page (read-only review before submission). Two types: standard (linear, known steps) and branching (non-linear, variable steps). Supports 3-8 steps, optional steps allowed.",
+    "domains": [
+      "b2b-saas",
+      "data-analytics",
+      "manufacturing",
+      "logistics",
+      "fintech-payments"
+    ],
+    "sectors": [
+      "enterprise"
+    ],
+    "tags": [
+      "sap",
+      "component",
+      "Layout & Containers",
+      "wizard"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "sap",
+    "sourceUrl": "https://sap.github.io/fundamental-styles/",
+    "metrics": {
+      "screen": "wizard"
+    }
   },
   {
     "id": "app-pattern/workspace-home-greeting",

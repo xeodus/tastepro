@@ -39,7 +39,7 @@ Once a change is confirmed, qualified (tests/checks pass), and committed, remove
 - Ingest stages a complete snapshot, runs the release validator, and swaps it into place. A failed fetch, transform, or validation leaves the live content untouched; still start from a clean tree and inspect the diff.
 - Root `sources.lock.json` is the human-edited pin source. `content/sources.lock.json` is derived; `bun run sources:update --write` edits the root, then ingest refreshes the packaged copy.
 - Source cache paths include the pinned commit, so changing a pin cannot reuse stale bytes.
-- Exact content counts are asserted in `scripts/lib/validate-content.ts`; the 905 catalog total is also hardcoded in `scripts/smoke-http.ts` and `.github/workflows/ci.yml`. Update all three deliberately when the snapshot changes.
+- Exact content counts are asserted in `scripts/lib/validate-content.ts`; the 1007 catalog total is also hardcoded in `scripts/smoke-http.ts` and `.github/workflows/ci.yml`. Update all three deliberately when the snapshot changes.
 - `bun run validate` checks schemas, counts, provenance, licenses, and the snapshot hash. The hash covers the catalog, full pack files, reference bodies, and pins; validation passing therefore proves those served artifacts match.
 - Adding or updating an upstream source requires its license under `content/sources/licenses/` plus `NOTICE` and `ATTRIBUTION.md` updates.
 

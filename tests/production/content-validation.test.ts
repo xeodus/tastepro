@@ -28,10 +28,10 @@ async function fileExists(path: string): Promise<boolean> {
 describe("committed content", () => {
   it("matches the catalog snapshot", async () => {
     const [catalog, stats] = await Promise.all([loader.catalog(), loader.stats()]);
-    expect(catalog).toHaveLength(905);
-    expect(stats.catalogEntries).toBe(905);
+    expect(catalog).toHaveLength(1007);
+    expect(stats.catalogEntries).toBe(1007);
     expect(stats.counts).toEqual({
-      "app-pattern": 57,
+      "app-pattern": 159,
       "app-shell": 5,
       "app-style": 7,
       brand: 84,
@@ -47,7 +47,7 @@ describe("committed content", () => {
       type: 44,
     });
     expect(stats.quality).toEqual({
-      verified: 582,
+      verified: 684,
       reference: 313,
       incomplete: 10,
     });
@@ -92,7 +92,7 @@ describe("committed content", () => {
       expect((await stat(path)).size).toBeGreaterThan(0);
     }
     const sources = await loader.sources();
-    expect(sources).toHaveLength(8);
+    expect(sources).toHaveLength(16);
     for (const source of sources) {
       const path = join(contentDir, source.licenseFile);
       expect(await fileExists(path), path).toBe(true);
@@ -229,6 +229,14 @@ describe("committed content", () => {
       "uswds",
       "cms-design-system",
       "nhs-uk",
+      "carbon",
+      "spectrum",
+      "ethereum-org",
+      "pie",
+      "sap",
+      "patternfly",
+      "ant-design",
+      "primer",
     ]);
     for (const source of lock.sources) {
       expect(source.commit).toMatch(/^[0-9a-f]{40}$/);
@@ -316,5 +324,166 @@ describe("committed content", () => {
     expect(nhsNumber?.provenance.commit).toHaveLength(40);
     expect(nhsNumber?.blueprint).toContain("NHS number");
     expect(nhsNumber?.blueprint).not.toContain("{%");
+  });
+
+  it("ships the IBM Carbon enterprise and data-viz patterns", async () => {
+    const packs = JSON.parse(
+      await readFile(join(contentDir, "generated", "kinds", "app-patterns.json"), "utf8"),
+    ) as Array<{
+      id: string;
+      blueprint: string;
+      provenance: { source: string; license: string; commit: string };
+    }>;
+    const carbon = packs.filter((pack) => pack.id.startsWith("app-pattern/carbon-"));
+    expect(carbon).toHaveLength(23);
+
+    const tabs = packs.find((pack) => pack.id === "app-pattern/carbon-tabs");
+    expect(tabs).toBeDefined();
+    expect(tabs?.provenance.source).toBe("carbon");
+    expect(tabs?.provenance.license).toBe("Apache-2.0");
+    expect(tabs?.provenance.commit).toHaveLength(40);
+    expect(tabs?.blueprint).toContain("tabs");
+    expect(tabs?.blueprint).not.toContain("StorybookDemo");
+    expect(packs.some((pack) => pack.id === "app-pattern/carbon-chart-anatomy")).toBe(true);
+  });
+
+  it("ships Adobe Spectrum component and foundation guidance", async () => {
+    const packs = JSON.parse(
+      await readFile(join(contentDir, "generated", "kinds", "app-patterns.json"), "utf8"),
+    ) as Array<{
+      id: string;
+      blueprint: string;
+      provenance: { source: string; license: string; commit: string };
+    }>;
+    const spectrum = packs.filter((pack) => pack.id.startsWith("app-pattern/spectrum-"));
+    expect(spectrum).toHaveLength(14);
+
+    const button = packs.find((pack) => pack.id === "app-pattern/spectrum-button");
+    expect(button).toBeDefined();
+    expect(button?.provenance.source).toBe("spectrum");
+    expect(button?.provenance.license).toBe("Apache-2.0");
+    expect(button?.provenance.commit).toHaveLength(40);
+    expect(button?.blueprint).toContain("Button");
+    expect(packs.some((pack) => pack.id === "app-pattern/spectrum-attention-hierarchy")).toBe(true);
+  });
+
+  it("ships the ethereum.org web3 guidance", async () => {
+    const packs = JSON.parse(
+      await readFile(join(contentDir, "generated", "kinds", "app-patterns.json"), "utf8"),
+    ) as Array<{
+      id: string;
+      blueprint: string;
+      provenance: { source: string; license: string; commit: string };
+    }>;
+    const ethereum = packs.filter((pack) => pack.id.startsWith("app-pattern/ethereum-"));
+    expect(ethereum).toHaveLength(5);
+
+    const heuristics = packs.find((pack) => pack.id === "app-pattern/ethereum-heuristics-for-web3");
+    expect(heuristics).toBeDefined();
+    expect(heuristics?.provenance.source).toBe("ethereum-org");
+    expect(heuristics?.provenance.license).toBe("CC-BY-4.0");
+    expect(heuristics?.provenance.commit).toHaveLength(40);
+    expect(heuristics?.blueprint).toContain("usability");
+    expect(heuristics?.blueprint).not.toContain("![");
+  });
+
+  it("ships the PIE food-delivery and marketplace patterns", async () => {
+    const packs = JSON.parse(
+      await readFile(join(contentDir, "generated", "kinds", "app-patterns.json"), "utf8"),
+    ) as Array<{
+      id: string;
+      blueprint: string;
+      provenance: { source: string; license: string; commit: string };
+    }>;
+    const pie = packs.filter((pack) => pack.id.startsWith("app-pattern/pie-"));
+    expect(pie).toHaveLength(8);
+
+    const onboarding = packs.find(
+      (pack) => pack.id === "app-pattern/pie-onboarding-and-guided-tour",
+    );
+    expect(onboarding).toBeDefined();
+    expect(onboarding?.provenance.source).toBe("pie");
+    expect(onboarding?.provenance.license).toBe("Apache-2.0");
+    expect(onboarding?.provenance.commit).toHaveLength(40);
+    expect(onboarding?.blueprint.length).toBeGreaterThan(350);
+  });
+
+  it("ships the SAP Fiori component guidance", async () => {
+    const packs = JSON.parse(
+      await readFile(join(contentDir, "generated", "kinds", "app-patterns.json"), "utf8"),
+    ) as Array<{
+      id: string;
+      blueprint: string;
+      provenance: { source: string; license: string; commit: string };
+    }>;
+    const sap = packs.filter((pack) => pack.id.startsWith("app-pattern/sap-"));
+    expect(sap).toHaveLength(20);
+
+    const button = packs.find((pack) => pack.id === "app-pattern/sap-button");
+    expect(button).toBeDefined();
+    expect(button?.provenance.source).toBe("sap");
+    expect(button?.provenance.license).toBe("Apache-2.0");
+    expect(button?.provenance.commit).toHaveLength(40);
+    expect(button?.blueprint).toContain("When to use");
+    expect(button?.blueprint).toContain("Best practices");
+  });
+
+  it("ships PatternFly dashboard and content-design guidance", async () => {
+    const packs = JSON.parse(
+      await readFile(join(contentDir, "generated", "kinds", "app-patterns.json"), "utf8"),
+    ) as Array<{
+      id: string;
+      blueprint: string;
+      provenance: { source: string; license: string; commit: string };
+    }>;
+    const patternfly = packs.filter((pack) => pack.id.startsWith("app-pattern/patternfly-"));
+    expect(patternfly).toHaveLength(10);
+
+    const dashboard = packs.find((pack) => pack.id === "app-pattern/patternfly-dashboard");
+    expect(dashboard).toBeDefined();
+    expect(dashboard?.provenance.source).toBe("patternfly");
+    expect(dashboard?.provenance.license).toBe("MIT");
+    expect(dashboard?.provenance.commit).toHaveLength(40);
+    expect(dashboard?.blueprint).toContain("dashboard");
+    expect(packs.some((pack) => pack.id === "app-pattern/patternfly-error-messages")).toBe(true);
+  });
+
+  it("ships the Ant Design B2B specifications", async () => {
+    const packs = JSON.parse(
+      await readFile(join(contentDir, "generated", "kinds", "app-patterns.json"), "utf8"),
+    ) as Array<{
+      id: string;
+      blueprint: string;
+      provenance: { source: string; license: string; commit: string };
+    }>;
+    const ant = packs.filter((pack) => pack.id.startsWith("app-pattern/ant-"));
+    expect(ant).toHaveLength(12);
+
+    const display = packs.find((pack) => pack.id === "app-pattern/ant-data-display");
+    expect(display).toBeDefined();
+    expect(display?.provenance.source).toBe("ant-design");
+    expect(display?.provenance.license).toBe("MIT");
+    expect(display?.provenance.commit).toHaveLength(40);
+    expect(display?.blueprint).toContain("Table");
+    expect(display?.blueprint).not.toContain("ImagePreview");
+  });
+
+  it("ships the GitHub Primer UI patterns", async () => {
+    const packs = JSON.parse(
+      await readFile(join(contentDir, "generated", "kinds", "app-patterns.json"), "utf8"),
+    ) as Array<{
+      id: string;
+      blueprint: string;
+      provenance: { source: string; license: string; commit: string };
+    }>;
+    const primer = packs.filter((pack) => pack.id.startsWith("app-pattern/primer-"));
+    expect(primer).toHaveLength(10);
+
+    const empty = packs.find((pack) => pack.id === "app-pattern/primer-empty-states");
+    expect(empty).toBeDefined();
+    expect(empty?.provenance.source).toBe("primer");
+    expect(empty?.provenance.license).toBe("MIT");
+    expect(empty?.provenance.commit).toHaveLength(40);
+    expect(empty?.blueprint).toContain("Blankslate");
   });
 });
