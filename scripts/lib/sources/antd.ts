@@ -90,8 +90,7 @@ function stripAnt(body: string): string {
       .replace(/<ImagePreview>[\s\S]*?<\/ImagePreview>/g, "")
       .replace(/<img[^>]*>/g, "")
       .replace(/!\[[^\]]*\]\([^)]*\)/g, "")
-      .replace(/\[([^\]]+)\]\([^)]*\)/g, "$1")
-      .replace(/<[^>]+>/g, ""),
+      .replace(/\[([^\]]+)\]\([^)]*\)/g, "$1"),
   );
 }
 
