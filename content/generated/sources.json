@@ -10,7 +10,7 @@
       "Leonxlnx"
     ],
     "url": "https://github.com/Leonxlnx/taste-skill",
-    "retrievedAt": "2026-11-26T18:32:12.212Z",
+    "retrievedAt": "2026-11-26T18:38:39.150Z",
     "notes": "Design directions, palettes, type pairings, hero and section blueprints, motion recipes, site studies, photo-set metadata, app-screen library, and reference essays.",
     "paths": {
       "skill": "skills/taste-skill/SKILL.md",
@@ -49,7 +49,7 @@
       "VoltAgent"
     ],
     "url": "https://github.com/VoltAgent/awesome-design-md",
-    "retrievedAt": "2026-11-26T18:32:12.273Z",
+    "retrievedAt": "2026-11-26T18:38:39.214Z",
     "notes": "84 brand design-system analyses with YAML tokens. Brand names are used as references with attribution; no logos or screenshots are redistributed.",
     "paths": {
       "readme": "README.md",
@@ -70,7 +70,7 @@
       "Vercel Labs"
     ],
     "url": "https://vercel.com/design/guidelines",
-    "retrievedAt": "2026-11-26T18:32:12.275Z",
+    "retrievedAt": "2026-11-26T18:38:39.217Z",
     "notes": "The audit rubric: accessibility, focus, forms, animation, typography, content handling, images, performance, navigation, touch, layout, dark mode, i18n, hydration, hover, copy, and anti-patterns.",
     "paths": {
       "rules": "command.md",
@@ -92,7 +92,7 @@
       "Microsoft"
     ],
     "url": "https://github.com/microsoft/playwright-cli",
-    "retrievedAt": "2026-11-26T18:32:12.279Z",
+    "retrievedAt": "2026-11-26T18:38:39.222Z",
     "notes": "Browser automation and session-management guidance for the audit loop. The TastePro audit implementation is original; this source informs the workflow and reference skill.",
     "paths": {
       "readme": "README.md",
@@ -114,7 +114,7 @@
       "Government Digital Service"
     ],
     "url": "https://design-system.service.gov.uk/",
-    "retrievedAt": "2026-11-26T18:32:12.281Z",
+    "retrievedAt": "2026-11-26T18:38:39.224Z",
     "notes": "Form and service patterns. Repository code is MIT; the published guidance is OGL-3.0. Images, Crown marks, and Nunjucks examples are excluded.",
     "paths": {
       "bank-details": "src/patterns/bank-details/index.md",
@@ -141,7 +141,7 @@
       "U.S. General Services Administration"
     ],
     "url": "https://designsystem.digital.gov/",
-    "retrievedAt": "2026-11-26T18:32:12.290Z",
+    "retrievedAt": "2026-11-26T18:38:39.234Z",
     "notes": "Identity and complex-form patterns. CC0; linked third-party fonts, icons, and agency marks are excluded.",
     "paths": {
       "name": "pages/patterns/create-a-profile/name.md",
@@ -168,7 +168,7 @@
       "Centers for Medicare & Medicaid Services"
     ],
     "url": "https://design.cms.gov/",
-    "retrievedAt": "2026-11-26T18:32:12.299Z",
+    "retrievedAt": "2026-11-26T18:38:39.242Z",
     "notes": "Medicare/Medicaid component and pattern guidance. CC0 with third-party font/icon exceptions; only text guidance is ingested.",
     "paths": {
       "alert": "packages/docs/content/components/alert.mdx",
@@ -195,7 +195,7 @@
       "NHS England"
     ],
     "url": "https://service-manual.nhs.uk/design-system",
-    "retrievedAt": "2026-11-26T18:32:12.303Z",
+    "retrievedAt": "2026-11-26T18:38:39.246Z",
     "notes": "Healthcare service patterns. Repository code is MIT; the published guidance is OGL-3.0. NHS marks, Frutiger, images, and design examples are excluded.",
     "paths": {
       "ask-for-nhs-numbers": "app/views/design-system/patterns/ask-for-nhs-numbers/index.njk",
@@ -222,7 +222,7 @@
       "IBM"
     ],
     "url": "https://carbondesignsystem.com/",
-    "retrievedAt": "2026-11-26T18:32:12.314Z",
+    "retrievedAt": "2026-11-26T18:38:39.258Z",
     "notes": "Enterprise component, pattern, and data-visualization guidance. The docs repository was archived on 2026-09-30; this is a pinned snapshot. Text only; images and IBM marks are excluded.",
     "paths": {
       "components": "src/pages/components/*/usage.mdx",
@@ -244,7 +244,7 @@
       "Adobe"
     ],
     "url": "https://spectrum.adobe.com/",
-    "retrievedAt": "2026-11-26T18:32:12.318Z",
+    "retrievedAt": "2026-11-26T18:38:39.263Z",
     "notes": "Spectrum 2 component and foundation guidance in JSON. Schema is 1.0.0-draft; pin and validate. Text only; images, fonts, and Adobe marks are excluded.",
     "paths": {
       "components": "packages/design-data/components/*.json",
@@ -265,7 +265,7 @@
       "Ethereum Foundation"
     ],
     "url": "https://ethereum.org/en/developers/docs/design-and-ux/",
-    "retrievedAt": "2026-11-26T18:32:15.071Z",
+    "retrievedAt": "2026-11-26T18:38:39.265Z",
     "notes": "Web3 design, DEX, transaction, and gas guidance. Content is CC BY 4.0; repository code is MIT. Images and outbound third-party research are excluded.",
     "paths": {
       "design-and-ux": "public/content/developers/docs/design-and-ux/index.md",
@@ -276,6 +276,33 @@
     },
     "counts": {
       "app-pattern": 5
+    }
+  },
+  {
+    "id": "pie",
+    "name": "PIE Design System",
+    "repo": "https://github.com/justeattakeaway/pie",
+    "commit": "cf7021732ad8ded4c818e95205d15b601d80fe50",
+    "license": "Apache-2.0",
+    "licenseFile": "sources/licenses/pie.txt",
+    "authors": [
+      "Just Eat Takeaway.com"
+    ],
+    "url": "https://pie.design/",
+    "retrievedAt": "2026-11-26T18:38:45.405Z",
+    "notes": "Food-delivery and marketplace patterns. Apache-2.0; brand palette, logos, food photography, and fonts are excluded.",
+    "paths": {
+      "onboarding": "apps/pie-docs/src/patterns/onboarding-and-guided-tour/web-guidance/web-guidance.md",
+      "overlays": "apps/pie-docs/src/patterns/overlay-patterns/overview/overview.md",
+      "forms": "apps/pie-docs/src/patterns/forms/overview/overview.md",
+      "messaging": "apps/pie-docs/src/patterns/messaging-and-chatbots/overview/overview.md",
+      "jet-ai": "apps/pie-docs/src/patterns/jet-ai/overview/overview.md",
+      "just-eat-plus": "apps/pie-docs/src/patterns/just-eat-plus/overview/overview.md",
+      "cookie-banner": "apps/pie-docs/src/patterns/cookie-banner/overview/overview.md",
+      "haptic-feedback": "apps/pie-docs/src/patterns/haptic-feedback/overview/overview.md"
+    },
+    "counts": {
+      "app-pattern": 8
     }
   }
 ]

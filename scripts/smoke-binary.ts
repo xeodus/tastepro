@@ -33,8 +33,8 @@ const info = JSON.parse(
 ) as {
   stats: { catalogEntries: number; contentHash: string };
 };
-if (info.stats.catalogEntries !== 947) {
-  throw new Error(`Binary content has ${info.stats.catalogEntries} entries, expected 947`);
+if (info.stats.catalogEntries !== 955) {
+  throw new Error(`Binary content has ${info.stats.catalogEntries} entries, expected 955`);
 }
 
 const transport = new StdioClientTransport({

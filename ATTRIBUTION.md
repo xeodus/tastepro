@@ -18,6 +18,7 @@ The complete upstream license texts are committed at:
 - `content/sources/licenses/carbon.txt`
 - `content/sources/licenses/spectrum.txt`
 - `content/sources/licenses/ethereum-org.txt`
+- `content/sources/licenses/pie.txt`
 
 The machine-readable pins are in `sources.lock.json` and
 `content/sources.lock.json`. Every generated pack also carries a `provenance`
@@ -26,19 +27,20 @@ transformations applied.
 
 ## Pinned sources
 
-| Source                                                                                     | Author              | License    | Commit                                     |
-| ------------------------------------------------------------------------------------------ | ------------------- | ---------- | ------------------------------------------ |
-| [Taste Skill](https://github.com/Leonxlnx/taste-skill)                                     | Leonxlnx            | MIT        | `12af471f627f866411b4bd785b19646d3672784c` |
-| [Awesome DESIGN.md](https://github.com/VoltAgent/awesome-design-md)                        | VoltAgent           | MIT        | `3b605329240ce735b510037cca322f1831fdd7f8` |
-| [Vercel Web Interface Guidelines](https://github.com/vercel-labs/web-interface-guidelines) | Vercel Labs         | MIT        | `434b7f91364665f2f733b310ec54809bf8f37937` |
-| [Microsoft Playwright CLI](https://github.com/microsoft/playwright-cli)                    | Microsoft           | Apache-2.0 | `b1a5903c5b633b8c9f843ad7b629c2a78437040c` |
-| [GOV.UK Design System](https://github.com/alphagov/govuk-design-system)                    | GDS                 | OGL-3.0    | `0c6de5736a4e755a3808fb31d3a7723a33b7c705` |
-| [USWDS](https://github.com/uswds/uswds-site)                                               | GSA                 | CC0-1.0    | `af13d80f071c3d897bee422f51954d9d7d156474` |
-| [CMS Design System](https://github.com/CMSgov/design-system)                               | CMS                 | CC0-1.0    | `269a1abeb3159824800e134064db8a7b35821ccd` |
-| [NHS.UK Design System](https://github.com/nhsuk/nhsuk-service-manual)                      | NHS England         | OGL-3.0    | `4a37578c4d8fa2c5bbf11b1039d806bebce59234` |
-| [IBM Carbon](https://github.com/carbon-design-system/carbon-website)                       | IBM                 | Apache-2.0 | `5e9cd1da43c32d3d3b991dc947b427f674da61a8` |
-| [Adobe Spectrum](https://github.com/adobe/spectrum-design-data)                            | Adobe               | Apache-2.0 | `1818e9c1035fd38f361a0698fb3453477b702552` |
-| [ethereum.org](https://github.com/ethereum/ethereum-org-website)                           | Ethereum Foundation | CC-BY-4.0  | `4302e8c0a8e51d161c124e8c57d8d93da2995da1` |
+| Source                                                                                     | Author                | License    | Commit                                     |
+| ------------------------------------------------------------------------------------------ | --------------------- | ---------- | ------------------------------------------ |
+| [Taste Skill](https://github.com/Leonxlnx/taste-skill)                                     | Leonxlnx              | MIT        | `12af471f627f866411b4bd785b19646d3672784c` |
+| [Awesome DESIGN.md](https://github.com/VoltAgent/awesome-design-md)                        | VoltAgent             | MIT        | `3b605329240ce735b510037cca322f1831fdd7f8` |
+| [Vercel Web Interface Guidelines](https://github.com/vercel-labs/web-interface-guidelines) | Vercel Labs           | MIT        | `434b7f91364665f2f733b310ec54809bf8f37937` |
+| [Microsoft Playwright CLI](https://github.com/microsoft/playwright-cli)                    | Microsoft             | Apache-2.0 | `b1a5903c5b633b8c9f843ad7b629c2a78437040c` |
+| [GOV.UK Design System](https://github.com/alphagov/govuk-design-system)                    | GDS                   | OGL-3.0    | `0c6de5736a4e755a3808fb31d3a7723a33b7c705` |
+| [USWDS](https://github.com/uswds/uswds-site)                                               | GSA                   | CC0-1.0    | `af13d80f071c3d897bee422f51954d9d7d156474` |
+| [CMS Design System](https://github.com/CMSgov/design-system)                               | CMS                   | CC0-1.0    | `269a1abeb3159824800e134064db8a7b35821ccd` |
+| [NHS.UK Design System](https://github.com/nhsuk/nhsuk-service-manual)                      | NHS England           | OGL-3.0    | `4a37578c4d8fa2c5bbf11b1039d806bebce59234` |
+| [IBM Carbon](https://github.com/carbon-design-system/carbon-website)                       | IBM                   | Apache-2.0 | `5e9cd1da43c32d3d3b991dc947b427f674da61a8` |
+| [Adobe Spectrum](https://github.com/adobe/spectrum-design-data)                            | Adobe                 | Apache-2.0 | `1818e9c1035fd38f361a0698fb3453477b702552` |
+| [ethereum.org](https://github.com/ethereum/ethereum-org-website)                           | Ethereum Foundation   | CC-BY-4.0  | `4302e8c0a8e51d161c124e8c57d8d93da2995da1` |
+| [PIE Design System](https://github.com/justeattakeaway/pie)                                | Just Eat Takeaway.com | Apache-2.0 | `cf7021732ad8ded4c818e95205d15b601d80fe50` |
 
 ## Taste Skill
 
@@ -267,6 +269,26 @@ transactions and gas documentation pages in the pinned repository.
 **Not included:** third-party images, outbound research, Ethereum marks, or
 screenshots.
 
+## PIE Design System
+
+**Used for:** eight food-delivery and marketplace patterns — onboarding and
+guided tour, overlays, forms, messaging and chatbots, JET AI, Just Eat Plus,
+cookie banner, and haptic feedback.
+
+**Paths:** `apps/pie-docs/src/patterns/*/{overview,guidance,web-guidance,apps-guidance}/*.md`
+in the pinned repository.
+
+**License:** Apache-2.0.
+
+**TastePro transformations:**
+
+- Removed Nunjucks includes, images, and link markup.
+- Joined overview and platform guidance into one pack per pattern.
+- Mapped each pattern to food-delivery, marketplace, and commerce domains.
+- Added provenance, source URLs, and quality metadata.
+
+**Not included:** the JET brand palette, logos, food photography, or fonts.
+
 ## Original TastePro content
 
 The following are original to TastePro and licensed under Apache-2.0:
@@ -311,11 +333,12 @@ SOFTWARE.
 
 ## Apache-2.0
 
-Microsoft Playwright CLI, IBM Carbon, Adobe Spectrum, and TastePro's original
-code and content are licensed under the Apache License 2.0. The full texts are
-in `LICENSE`, `content/sources/licenses/playwright-cli.txt`,
-`content/sources/licenses/carbon.txt`, and
-`content/sources/licenses/spectrum.txt`.
+Microsoft Playwright CLI, IBM Carbon, Adobe Spectrum, PIE, and TastePro's
+original code and content are licensed under the Apache License 2.0. The full
+texts are in `LICENSE`, `content/sources/licenses/playwright-cli.txt`,
+`content/sources/licenses/carbon.txt`,
+`content/sources/licenses/spectrum.txt`, and
+`content/sources/licenses/pie.txt`.
 
 ## Open Government Licence v3.0
 

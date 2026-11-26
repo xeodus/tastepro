@@ -1198,6 +1198,53 @@
     "phone": ""
   },
   {
+    "id": "app-pattern/pie-cookie-banner",
+    "kind": "app-pattern",
+    "name": "Cookie banner",
+    "summary": "## Overview The purpose of the cookie banner is to inform users about the use of cookies, obtain their consent, and customise their preferences.",
+    "domains": [
+      "restaurants-food",
+      "government-public",
+      "product-surfaces"
+    ],
+    "sectors": [
+      "food-delivery",
+      "commerce"
+    ],
+    "tags": [
+      "pie",
+      "consent",
+      "guidance",
+      "cookie-banner"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "pie",
+      "repo": "https://github.com/justeattakeaway/pie",
+      "commit": "cf7021732ad8ded4c818e95205d15b601d80fe50",
+      "path": "apps/pie-docs/src/patterns/cookie-banner/overview/overview.md",
+      "license": "Apache-2.0",
+      "authors": [
+        "Just Eat Takeaway.com"
+      ],
+      "url": "https://pie.design/",
+      "transformations": [
+        "removed Nunjucks includes, images, and link markup",
+        "joined the overview and guidance pages"
+      ]
+    },
+    "sourceUrl": "https://pie.design/patterns/cookie-banner/",
+    "screen": "cookie-banner",
+    "kinds": [
+      "consent",
+      "guidance"
+    ],
+    "basis": "a cookie banner pattern from PIE",
+    "blueprint": "## Overview\n\nThe purpose of the cookie banner is to inform users about the use of cookies, obtain their consent, and customise their preferences.\n\nIt aids websites in complying with privacy regulations by offering transparency regarding data collection practices and empowering users to control their privacy settings.\n\n---\n\n## Anatomy\n\n---\n\n## Variants\n\n### Banner\n\n### Modal\n\n---\n\n## Modifiers\n\n### Banner\n\n#### Default\n\n#### Primary actions only\n\nThis version is used when legal compliance in the country requires you to do so. In countries that do not require this, the default variation is used.\n\n---\n\n## Interaction area\n\n---\n\n## Content\n\n---\n\n## Behaviours\n\n### Banner background\n\nThe background page of the cookie banner isn’t disabled, and is only disabled once the modal is opened. The “Select your country” popover from the top navigation should sit on top of the banner so that the users can change the locale.\n\n### Modal background\n\nThe background page is disabled when the modal is opened until the user has made a selection and is ready to continue with their flow, or returns to the banner. A scrim is applied and the banner disappears.\n\n### Turn all on / off\n\nOnce the overarching toggle is toggled on/off, the child toggles follow suit. The overarching toggle will not be toggled on unless all child toggles are selected.\n\n---\n\n## Size\n\n### Wide width\n\nThe wide cookie banner has a minimum width of 700px and a maximum width of 1024px.\n\n### Narrow width\n\nThe narrow cookie banner has a minimum width of 320px and a maximum width of 699px.\n\n---\n\n## Positioning\n\n### Banner positioning\n\nThe cookie banner is always positioned at the bottom of the screen with default bottom, left and right padding of 16px from the container of the banner.\n\n### Modal positioning\n\nThe modal is positioned in the centre of the screen with a scrim applied.\n\n---\n\n## Motion\n\n### Banner\n\nIllustrates the movement taking place when the cookie banner enters and exit from view. You can see an animated example in our drive.\n\n#### Enter transition\n\nAs the cookie banner enters the view, it ascends by 75% of the component’s height over 400 milliseconds from its final position, simultaneously fading into view without any delay.\n\n#### Exit transition\n\nWhen the cookie banner exits from view it moves down 75% of the component’s height at 150ms from the final position. At the same time it fades out of view. Exit transitions are always quicker than entry.\n\n### Modal\n\n#### Overlapping transitions\n\nAs the pattern consists of two components, the transition between the banner exiting and the modal entering should overlap, ensuring a smooth and seamless transition.\n\n---\n\n## Examples LTR\n\n### Narrow (left-to-right)\n\nAt the narrow breakpoints, the banner has a maximum height of 432px, and the modal is set to full screen. If the content overflows due to a change in language, the available height, the call to action buttons and header become sticky and the body content scrolls.\n\n#### Banner\n\n#### Modal\n\n## Examples RTL\n\nFor languages that read right-to-left, the layout and alignment of the content is reorganised so the readability of the component makes logical sense.\n\n### Wide\n\n### Narrow\n\n---\n\n## Resources",
+    "phone": ""
+  },
+  {
     "id": "app-pattern/count-cards-filter",
     "kind": "app-pattern",
     "name": "Count cards that filter",
@@ -2094,6 +2141,53 @@
     "phone": ""
   },
   {
+    "id": "app-pattern/pie-forms",
+    "kind": "app-pattern",
+    "name": "Forms",
+    "summary": "## What are forms? Forms refer to a collection of interactive fields that allow users to provide information or make selections within our products.",
+    "domains": [
+      "restaurants-food",
+      "ecommerce-dtc",
+      "product-surfaces"
+    ],
+    "sectors": [
+      "food-delivery",
+      "commerce"
+    ],
+    "tags": [
+      "pie",
+      "form",
+      "guidance",
+      "forms"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "pie",
+      "repo": "https://github.com/justeattakeaway/pie",
+      "commit": "cf7021732ad8ded4c818e95205d15b601d80fe50",
+      "path": "apps/pie-docs/src/patterns/forms/overview/overview.md",
+      "license": "Apache-2.0",
+      "authors": [
+        "Just Eat Takeaway.com"
+      ],
+      "url": "https://pie.design/",
+      "transformations": [
+        "removed Nunjucks includes, images, and link markup",
+        "joined the overview and guidance pages"
+      ]
+    },
+    "sourceUrl": "https://pie.design/patterns/forms/",
+    "screen": "forms",
+    "kinds": [
+      "form",
+      "guidance"
+    ],
+    "basis": "a forms pattern from PIE",
+    "blueprint": "## What are forms?\n\nForms refer to a collection of interactive fields that allow users to provide information or make selections within our products. They are an essential element of user interfaces, enabling users to communicate their intentions, preferences,\nor data.\n\nBy designing clear, accessible, and intuitive forms, we aim to create experiences that are seamless and user-friendly, ensuring that users can efficiently engage with\nour interfaces.\n\n---\n\n## Best practices\n\n### Focus on relevant data\n\nOnly ask questions which are necessary to acquire the data which is actually needed. Use hint text to give users the context that they need to understand why you’re asking them for certain information.\n\n### Surfaces\n\nForms have the option to be positioned flexibly depending on the needs of the user. For example, on top of a visual element such as a map displaying relevant delivery details or to separate it from other related content.\n\n### Optional fields\n\nMost users assume that data asked of them is mandatory and that is often the case. Therefore, marking only the optional fields reduces noise for the user. It's also best to limit your optional fields since too many will confuse users.\nFind more on our best practices with form labels.\n\n### Call to action\n\nCall to action buttons should always remain active, unless there is some kind of issue on our end with the form and therefore the data will not be possible to submit. In this case, try to provide context where possible.\n\n### Character limits and user feedback\n\nWhen a character limit is necessary support users by providing guidance as they\ntype, with for example a character counter to show how much space is left. Plus,\nallow users to exceed the cap temporarily to allow them to refine their message\nwithout disruption.\n\n## Anatomy\n\n### Appropriate body inputs\n\nUse the appropriate input where possible for each data piece required. Such as:\n\n#### Checkboxes\n\nCheckboxes allow users to choose multiple options from an extensive list and for binary options that permit multiple selections, such as confirming terms and conditions.\n\n#### Date pickers\n\nDate pickers provide an easy way to select specific dates or data ranges in a consistent, risk averse manner (e.g. bookings or appointments). Don’t use a date picker if the user already knows or is very familiar with the date, e.g. date of birth.\n\n#### Dropdown\n\nDropdowns are for selecting one option from a long, predefined list of choices and conserving space is important. Dropdowns also allow hiding information which isn’t frequently used.\n\n#### Numeric steppers\n\nNumeric steppers are used when users need to input precise numeric data with easy to identify increments and decrements. A defined range or step size works best such as 1, 5, or 10.\n\n#### Radio buttons\n\nRadio buttons are for selecting one option from a small group of mutually exclusive choices and displaying all of those choices openly. This improves scannability and requires less actions from the user to see all of their options.\n\n#### Select inputs\n\nSelect inputs are for selecting one option from a long, predefined list of choices and conserving space is important. Select inputs also allow hiding information which isn’t frequently used.\n\n#### Switches\n\nSwitches are best utilised for binary on/off decisions. Switches are also particularly appropriate when an action has an immediate effect without requiring form submission.\n\n#### Textareas\n\nTextareas are used for multi-line, open-ended responses where users may need to write longer content. They excel at facilitating the collection of detailed and descriptive data, e.g. feedback & comments.\n\n#### Text inputs\n\nText inputs are used for short, open-ended data entry which require precise manual info (e.g. names, email addresses and postcodes). Typically, the input should be used for one line of text.\n\n#### Uploaders\n\nUploaders give users the ability to submit more complex data files such as documents, images, and other media easily.\n\n---\n\n## Body structure\n\n### Input widths\n\nDefine four standardised width options for form inputs to set clear expectations for users. These widths should be consistent across the pillar, and align to the grid.\nInput width should align with the expected length of the user’s entry, the longer the entry, the wider the input, and vice versa.\n\n### Column layouts\n\n#### Ordering\n\nWhere possible input fields should be arranged in a vertical layout (stacked on top of each other) rather than placed side by side or in a grid-like arrangement.\nForm content should be prepared to be read line by line either LTR or RTL depending on the language of the content to ensure users can easily digest the form.\n\n#### Rows\n\nLogically related fields can be placed in the same row, including standard inputs and those with prefixes or suffixes.\n\n##### Logically related fields\n\nTwo fields can be logically related by belonging to the same category of data. For example, a city and postcode both belong to an address.\n\n##### Prefixes and suffixes\n\nTwo fields with a connected relationship can be linked using an editable prefix or suffix, allowing users to modify the inputs directly.\n\n#### Alignment\n\nInput fields which do not fill their row should be aligned in the direction that they are read from based on the language of the content. E.g. LTR forms should align their inputs to the left.\n\nFooters should either be aligned to the opposite side of input content, or fill their container in small viewports. This is to provide contrast with the form body.\n\n---\n\n## Layout\n\nOutlines the internal spacing structure of the component. See the Spacing documentation for token details.\n\n---\n\n## Content\n\nUse sentence-style capitalisation and active language; strive for clarity and brevity in all copy. For additional guidance, refer to the UX copy team's documentation.\n\n### Button labels\n\nButton labels should guide users through a clear indication of the action the button will take once clicked. Use active verbs, such as Add or Delete. For a pair of buttons, use specific labels, such as Save or Discard, instead of using OK and Cancel. This is particularly helpful when users are confirming an action.\n\n### Form labels\n\nForm labels are a necessity because sighted users can read them, screen reader users will hear them, and motor-impaired users can more accurately set their focus area to them (due to the larger focus area). Avoid using placeholders as labels; once a user starts inputting data they will not be able to read what the label was, which makes it difficult to review answers.\n\n### Assistive text\n\nAssistive text should always be clear, concise, and actionable to guide users effectively. Whether offering instructions, highlighting errors, or confirming success, focus on providing users with the information they need to complete their tasks confidently.\n\n---\n\n## Behaviour\n\nAutofill, spellcheck and autocorrect are all native HTML features. Therefore, we have limited control over how these elements are styled or interact.\n\n### Autofill\n\nAutofill automatically fills in form fields with previously saved data.\n\nAutofill works best for **static, non-sensitive data** that improves user convenience without compromising privacy or security, such as contact information or general demographic data. Avoid autofilling sensitive, dynamic or confidential data to protect users and maintain trust, such as temporary codes or appointment notes.\n\n### Spellcheck\n\nSpellcheck is a feature that detects and **highlights spelling errors** in text fields.\n\nSpellcheck is useful for fields like comments, feedback, or open-ended text responses where correct spelling enhances clarity and professionalism. Avoid using spellcheck for fields which are often grammatically incorrect, such as email addresses.\n\n### Autocorrect\n\nAutocorrect **automatically changes misspelled words** or phrases as users type, based on a predefined dictionary or context. It aims to improve typing accuracy and reduce errors.\n\nAutocorrect is best used for casual text inputs like a long-form message in a contact form. Avoid using it for precise fields which could be answered with technical terms.\n\n---\n\n## Form feedback and support\n\n### Assistive text\n\nUse assistive text when the information is essential for completing the form field correctly and when immediate context improves usability. When guidance is helpful but not mandatory use the help icon detailed below.\n\n#### Default\n\nAssistive text reduces user confusion by providing additional guidance or context to help users fill out a field correctly.\n\n#### Error\n\nError assistive text must be used to alert users of mistakes in their input and provide instructions on how to resolve those issues. To allow users to easily recognise what has gone wrong and identify how to fix it, reducing frustration and abandonment.\n\n#### Success\n\nSuccess assistive text confirms that the input has been accepted or validated. Positive feedback builds user confidence and ensures clarity that their input passes live validation.\n\n### Help icon\n\nThe help icon provides access to additional, on-demand guidance without overwhelming the user interface. Consider combining these with assistive text when fields require extensive guidance by providing high-level information upfront and additional details on demand.\n\n---\n\n## Form validation\n\n### Live validation\n\nWait for users to navigate off their currently selected field, before validating the data which they have entered.\n\nValidating inputs live can be distracting from a task in progress rather than providing required assistance for smooth completion.\n\n### Submission validation\n\nSubmission validation ensures that data entered by users is correct and complete before being processed. If errors are detected during submission, it’s essential to provide feedback that helps users resolve these issues efficiently.\n\nWhen a user has submitted a form with at least one error, it’s important to assist them with finding those errors and identifying what went wrong so that they can fix the problem seamlessly and with minimum frustration.\n\nTherefore, it’s important to use the error summary component once a form has been submitted with incorrect data. Provide anchor links to errors throughout the form, marked via assistive text, error.",
+    "phone": ""
+  },
+  {
     "id": "app-pattern/ethereum-gas",
     "kind": "app-pattern",
     "name": "Gas and fees",
@@ -2185,6 +2279,53 @@
     "basis": "a report generated from a CSV",
     "blueprint": "No sidebar; the only chrome is a 47-48px viewer bar with a 1px rule. A centred 1088px column 33px below it: a 24/600 title, a 12px grey line 4px under it naming the source and the load time, one outlined 30px action on the right ('Refresh view'). If the data is a snapshot, one quiet notice (#fffbeb fill, 1px #fde68a, 12px #92400e text, 34px tall). Then 4 stat cards with a 12px gap (4 x 263 + 3 x 12 = 1088), a 12px grey label over an 18/600 tabular value; put the date range in the subtitle, not in a lone fifth card. Two charts side by side at the same 12px gap so their edges meet the stat columns: a time chart on a real time axis with flat labels, and a histogram with equal bins and square bottoms. Then the records table in a card: a 256x30 search in its header, a 14/600 grey header row over a 1px #e5e7eb rule, 37px rows over lighter #f3f4f6 rules, numbers right-aligned, a sort glyph on the active column only.",
     "phone": "Stats in a 2 x 2 grid; charts stacked; the table as two-line rows, or scrolling inside its own frame with the first column fixed."
+  },
+  {
+    "id": "app-pattern/pie-haptic-feedback",
+    "kind": "app-pattern",
+    "name": "Haptic feedback",
+    "summary": "## What are haptics? Haptics refer to the incorporation of tactile feedback into user interfaces to enhance the overall user experience.",
+    "domains": [
+      "restaurants-food",
+      "product-surfaces",
+      "fitness"
+    ],
+    "sectors": [
+      "food-delivery",
+      "commerce"
+    ],
+    "tags": [
+      "pie",
+      "feedback",
+      "mobile",
+      "haptic-feedback"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "pie",
+      "repo": "https://github.com/justeattakeaway/pie",
+      "commit": "cf7021732ad8ded4c818e95205d15b601d80fe50",
+      "path": "apps/pie-docs/src/patterns/haptic-feedback/overview/overview.md",
+      "license": "Apache-2.0",
+      "authors": [
+        "Just Eat Takeaway.com"
+      ],
+      "url": "https://pie.design/",
+      "transformations": [
+        "removed Nunjucks includes, images, and link markup",
+        "joined the overview and guidance pages"
+      ]
+    },
+    "sourceUrl": "https://pie.design/patterns/haptic-feedback/",
+    "screen": "haptic-feedback",
+    "kinds": [
+      "feedback",
+      "mobile"
+    ],
+    "basis": "a haptic feedback pattern from PIE",
+    "blueprint": "## What are haptics?\n\nHaptics refer to the incorporation of tactile feedback into user interfaces to enhance the overall user experience. It involves the use of touch-based sensations, such as vibrations or pulses, in response to user interactions with our products.\n\nBy integrating haptic feedback, we aim to provide users with a more intuitive and engaging interaction, making the digital experience feel more tangible and responsive.\n\n---\n\n## Best practices\n\nHere are some best practices when adding haptic feedback to your apps:\n\n### Understand user expectations\n\nFamiliarise yourself with system-provided haptic patterns and their meanings. Users often associate specific haptic feedback with particular interactions, so aligning with these expectations enhances usability.\n\n### Use system-provided patterns\n\nLeverage built-in haptic patterns provided by the operating system for standard interactions like toggles, sliders, and pickers. This ensures a consistent experience across the platform and makes your app more intuitive.\n\n### Be consistent\n\nEstablish a clear and causal relationship between haptic feedback and user actions. Consistency helps users associate specific haptic patterns with particular experiences, reinforcing the cause-and-effect relationship.\n\n### Complement other types of feedback\n\nEnsure that haptic feedback complements visual and auditory cues in your app. Harmonising these elements creates a more coherent and natural user experience. Match the intensity and timing of haptic feedback with accompanying animations or sounds.\n\n### Don’t overuse\n\nOverusing haptic feedback can lead to a diminished impact or even annoyance. Conduct user testing to find a balance that enhances the user experience without becoming intrusive.\n\n---\n\n## Working with haptics\n\nIn this section you’ll find everything you should know about how to communicate haptic feedback points with your team.\n\n### Who’s responsible for adding haptic feedback points?\n\nIt is the designer’s responsibility to indicate which interactions should provide haptic feedback and where (and why) should they occur. If you’re unsure about our types of haptic feedback, please check the guidance section, which outlines our different types of haptic feedback presets.\n\n### How do I share haptic interactions with development?\n\nEnsure that you provide annotations or include comments specifically directed to the engineers involved in your project. Clearly indicate the locations where haptic feedback is intended and specify the type of haptic feedback to be implemented.\n\n## About our haptic feedback types\n\nOur entire range of haptic feedback options relies on the system-default haptics provided by Apple in accordance with their Human Interface Guidelines.\n\n---\n\n## Soft haptic feedback\n\nSoft haptic feedback can serve various purposes in order to enhance the overall user experience in a subtle and nuanced manner.\n\n#### Where can I use soft haptic feedback?\n\n---\n\n## Medium haptic feedback\n\nMedium-intensity haptic feedback can convey a sense of importance and grab the user's attention. A good example of this might be the haptic feedback that occurs when a user navigates to a new screen, commonly known as a \"screen transition haptic\", which is designed to provide a tactile confirmation of the navigation action.\n\n#### Where can I use medium haptic feedback?\n\n---\n\n## Success haptic feedback\n\nA medium-intensity haptic response used to highlight the confirmation of an action. You can use it for the successful submission of a form or completion of a task, providing users with a reassuring response.\n\n#### Where can I use success haptic feedback?\n\n---\n\n## Warning haptic feedback\n\nThey can be strategically used in various scenarios where it's essential to alert users to critical information or potential issues that demand their attention before they actually happen.\n\n#### Where can I use warning haptic feedback?\n\n---\n\n## Error haptic feedback\n\nA strong, noticeable vibration. You can use this when an error occurs or an invalid action is attempted, signalling to the user that corrective action is needed.\n\n#### Where can I use error haptic feedback?",
+    "phone": ""
   },
   {
     "id": "app-pattern/inbox-triage",
@@ -2326,6 +2467,100 @@
     ],
     "basis": "a interruption page pattern from the NHS.UK service manual",
     "blueprint": "## When to use an interruption page\n\nThe interruption page is visually different from other components and patterns in order to draw a user's attention to something important.\n\nOnly use an interruption page when you need to make sure that the user is not about to make a mistake.\n\nUse interruption pages sparingly. The more often a user sees them, the more likely they are to skip over the content.\n\nTry using a regular page first, and only use the interruption page if you find in research that users are often missing the content. Please feed back any user research you do on this pattern.\n\nFor example use it to:\n\n- ask users to check a likely mistake\n\n- ask users to confirm something which cannot be undone\n\n- warn professionals they are about to do something risky\n\n### Check a likely mistake\n\nIf the user has entered some information which is likely to be a mistake, but is not impossible, you can use an interruption card to ask them to check if what they have entered is correct.\n\nUnlike a validation error in an error summary, they can continue without changing their answer.\n\n### Confirm something which cannot be undone\n\nIf the user is about to do something unusual which cannot be undone and could have serious consequences, such as cancelling a hospital appointment, you can use an interruption page to check with them first.\n\nDo not use this pattern if the outcome is less serious, such as unsubscribing from notifications.\n\nDo not use this pattern to ask a user to check all their answers as part of a regular journey. Use the check answers pattern instead.\n\n### Warn professionals they are about to do something risky\n\nIn a staff-facing service you can use an interruption page to make professionals, for example clinicians, aware that they're doing something unusual and potentially risky, but that they can choose to go ahead based upon their professional judgement.\n\nIf the action should never be taken, you should prevent it from happening.\n\nUse this warning sparingly.\n\n## When not to use an interruption page\n\nDo not use an interruption card to:\n\n- highlight important text on a page of content – consider using inset text instead\n\n- warn users on a page of long-form content – use a warning callout instead\n\n- ask users to agree to terms of use or other legal terms\n\n- display content that the user will see repeatedly\n\n- show users they have completed a task – use a confirmation page instead\n\n## How to use an interruption page\n\nThe interruption page uses the panel component with the addition of a nhsuk-panel--interruption class to make it blue. The button should have a nhsuk-button--reverse class to make it appear white.\n\nKeep the content on the interruption page as brief as possible.\n\n### Back links and cancel buttons\n\nInclude a back link at the top of the page to allow users to go back 1 step. Also allow users to use their browser back button.\n\nIf it's helpful to cancel the journey and jump back multiple steps or to a different part of the service, use an additional link grouped with the primary button. Label the link so that users know what will happen and where it will take them. To do this, add a <div class=\"nhsuk-button-group\"> container to group the button and the link together.\n\nDo not include a cancel link if it takes you back to the same page as the back link.",
+    "phone": ""
+  },
+  {
+    "id": "app-pattern/pie-jet-ai",
+    "kind": "app-pattern",
+    "name": "JET AI",
+    "summary": "## Overview At JET we use AI to assist and elevate our users' experiences.",
+    "domains": [
+      "restaurants-food",
+      "ai-products",
+      "product-surfaces"
+    ],
+    "sectors": [
+      "food-delivery",
+      "commerce"
+    ],
+    "tags": [
+      "pie",
+      "ai",
+      "guidance",
+      "jet-ai"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "pie",
+      "repo": "https://github.com/justeattakeaway/pie",
+      "commit": "cf7021732ad8ded4c818e95205d15b601d80fe50",
+      "path": "apps/pie-docs/src/patterns/jet-ai/overview/overview.md",
+      "license": "Apache-2.0",
+      "authors": [
+        "Just Eat Takeaway.com"
+      ],
+      "url": "https://pie.design/",
+      "transformations": [
+        "removed Nunjucks includes, images, and link markup",
+        "joined the overview and guidance pages"
+      ]
+    },
+    "sourceUrl": "https://pie.design/patterns/jet-ai/",
+    "screen": "jet-ai",
+    "kinds": [
+      "ai",
+      "guidance"
+    ],
+    "basis": "a jet ai pattern from PIE",
+    "blueprint": "## Overview\n\nAt JET we use AI to assist and elevate our users' experiences.\n\nWe have established an AI branding with its own, distinct visual identity for the purpose of providing clarity to our users on AI content across our products. This is so that we can continually be transparent in our use of AI.\n\n---\n\n## Brand principles\n\n### Dynamic\n\nAI is ever-evolving, and our motion pieces reflect its dynamic nature bringing the technology to life.\n\n### Futuristic\n\nAI brings opportunity to elevate our user's experiences and drive efficiency, whilst supporting them with their tasks.\n\n### Transparent\n\nTo overcome trust barriers, we must clearly communicate when and how AI is used.\n\n### Humanistic\n\nAs AI is artificial, so it's important we create human-centered experiences that deliver real value.\n\n---\n\n## Dos and Don'ts\n\n---\n\n## Iconography\n\nWe use specific icons to communicate AI content at JET.\nThe sparkle icons are the primary visual indicators and look to enable AI recognition for users. Because of this, sparkle icons should not be used in any other contexts or meanings.\n\n### Icon variants\n\nCurrently we are only using the filled variant for both AI icons, if you'd like to use the outline variant please get in touch with the PIE design system team.\n\nWe use two types of icon for AI content:\n\n### Icon examples\n\nThe primary AI icon is ‘Type 1’ and it includes 2 sparkles. This is to be used on all static AI content where the icon does not animate. We use this icon because it feels more interesting and dynamic than the alternative does when no animation is applied.\n\nTo see examples of our ‘Type 2’ icon animated please check the motion section of these guidelines and motion foundations.\n\n---\n\n## Gradients\n\nThere are two gradients used for AI content.\n\n- The border gradient is available to use across products. The fill gradient is only available for use within the AI assistant.\n- In the instance where both can be used, consider the hierarchy of the content within the existing screen/journey when choosing the gradient.\n\n### Direction and angle\n\nThe border and container gradients have the same 140° angle applied to them. Cupcake is always top-left and Aubergine bottom-right.\n\nThe gradient tokens have the above applied. Do not edit or detach the gradients.\n\n### Gradients light mode\n\nWe have two distinct gradients for AI content:\n\n- The token **ai-border-default** can be used as a strong border for buttons, tags and other containers (see more information in the component section). There is a border animation which can be used to highlight content. See the motion section for more details.\n- The token **ai-container-default** can only be used within the AI assistant.\n\n#### Light mode $ai-container-default\n\n#### Light mode $ai-border-default\n\n### Gradients dark mode\n\nIn dark mode, our **$ai-container-default** gradient token switches to a darker, but equally subtle version of the gradient on dark theme.\n\nThe token **$ai-border-default**, however remains the same. This is to preserve the brand identity of our AI content across themes.\n\n#### Dark mode $ai-container-default\n\n#### Dark mode $ai-border-default\n\n#### Examples\n\nThe border gradient can be applied across all areas of our product. The container gradients can only be applied within the AI assistant.\n\n---\n\n## Colours\n\nAI in product should primarily be communicated using gradients, as this is one of our main visual indicators for AI content.\n\nHowever we aim to support our gradients with these additional colours from the PIE Foundations library.\n\n### Colours light mode\n\n### Colours dark mode\n\n---\n\n## Motion\n\nMotion is a huge part of how we communicate AI within our products. We use it to make the AI experience feel more dynamic whilst also enhancing loading states, usability, and new features.\n\nMotion in AI should always feel smooth and fluid. Our motion intentionally mimics the pattern of breathing to ensure it feels calming and almost human like in nature.\n\nIf you would like additional motion pieces to support your work, please get in touch.\n\n### Animated background\n\nWe have an animated background image that’s only used for the AI Assistants.\n\nThe animation is set to an extremely subtle loop to ensure users aren’t annoyed or disorientated by the motion. Please ensure that this motion, although subtle, can be turned off through device reduce motion settings.\n\nWe supply our animating background as Lottie and JSON files, please use this with a blur of 80dp.\n\n### Border animation\n\nWe use gradient border animations to capture user attention or signify user action in relation to AI generated content. Our gradient borders move clockwise.\n\nGradient border animations can be applied to buttons or containers and can either be continuous or play on a loop of two rotations and come to a stop.\n\nContinuous animation works great for buttons where we want to callout user action whilst animating twice and stopping can be used to simply highlight returned AI queries that we wouldn't want to keep distracting the user with.\n\n### Thinking / Loading animation\n\nOur thinking / loading animation is the heart of our AI and can be used in most places where AI query is in progress.\n\nIt plays on a loop expanding from its default shape to a subtle bloat before contracting back to default in order to mimic the pattern of breathing. It also spins between rounds.\n\n---\n\n## Components\n\nThe PIE AI component library includes common components for designing AI user flows.\n\nWhen designing, consider the use of the components and avoid applying duplicate gradients and icons.  AI design should be intentional and contain one prominent piece of branding, not multiple.\n\nIf you would like additional components made to support your work, please get in touch with the PIE Design System team.\n\n### Button with icon\n\nThe AI button component can be used to signify an entry point into an AI experience.\n\nYou can also choose to use standard PIE button variants for AI content if you have already applied the branding in another way.\n\n- Use icon 1 to clearly label that the action uses AI.\n- Use icon 1 as there is no 'thinking / loading' motion used for buttons.\n- Use only on default backgrounds as this uses the AI border gradient.\n\n### Icon button\n\nUse one of the AI icons to signify the use of AI:\n\n- Use icon 1 if there is no motion involved.\n- Use icon 2 if the 'thinking / loading' motion is involved.\n\n### Chip\n\nThe AI chip component can be used alongside other chip variants.\n\nYou can also choose to use standard PIE chip variants for AI content if you have already applied the branding in another way.\n\n### Tag\n\nThe AI tag component can be used to contextualise AI content.\n\nYou can also choose to use standard PIE tag variants for AI content if you have already applied the branding in another way.",
+    "phone": ""
+  },
+  {
+    "id": "app-pattern/pie-just-eat-plus",
+    "kind": "app-pattern",
+    "name": "Just Eat Plus",
+    "summary": "## Overview Just Eat+ is Just Eat Takeaway's subscription-based loyalty proposition that offers exclusive benefits such as 'free delivery', 'members-only discounts' and 'offers & rewards' from participating restaurants, grocery stores and…",
+    "domains": [
+      "restaurants-food",
+      "ecommerce-dtc",
+      "marketplaces"
+    ],
+    "sectors": [
+      "food-delivery",
+      "commerce"
+    ],
+    "tags": [
+      "pie",
+      "subscription",
+      "loyalty",
+      "just-eat-plus"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "pie",
+      "repo": "https://github.com/justeattakeaway/pie",
+      "commit": "cf7021732ad8ded4c818e95205d15b601d80fe50",
+      "path": "apps/pie-docs/src/patterns/just-eat-plus/overview/overview.md",
+      "license": "Apache-2.0",
+      "authors": [
+        "Just Eat Takeaway.com"
+      ],
+      "url": "https://pie.design/",
+      "transformations": [
+        "removed Nunjucks includes, images, and link markup",
+        "joined the overview and guidance pages"
+      ]
+    },
+    "sourceUrl": "https://pie.design/patterns/just-eat-plus/",
+    "screen": "just-eat-plus",
+    "kinds": [
+      "subscription",
+      "loyalty"
+    ],
+    "basis": "a just eat plus pattern from PIE",
+    "blueprint": "## Overview\n\nJust Eat+ is Just Eat Takeaway's subscription-based loyalty proposition that offers exclusive benefits such as 'free delivery', 'members-only discounts' and 'offers & rewards' from participating restaurants, grocery stores and other partners.\n\n---\n\n## Brand principles\n\nOur Just Eat+ brand is an extension of our core brand. As such it should use JET's visual language and feel like part of the JET family.\n\nIt should also be memorable and be used consistently throughout our UI to allow users to familiarise themselves with Just Eat+ as a sub-brand.\n\nAnd lastly, it should always aim to feel rewarding and delightful to users. Just Eat+ should feel special, and always feel more than our typical product experience.\n\n- Part of the family\n- Memorable\n- Consistent\n- Rewarding and delightful\n\n---\n\n## Defined by gradients\n\nOur Just Eat+ identity is defined by our use of gradients. We don't typically use gradients in our product experience. By using this simple addition to our UI we are able to call out 'special' content, we also do this with our AI content.\n\nOur gradients are designed to complement and be used alongside our supportive brand colours 01 and 02.\n\n---\n\n## Dos and Don'ts\n\n---\n\n## Logos\n\nWe use two logo variants for Just Eat+, primary and secondary. These should be the only two Just Eat+ logos used in any UI elements within product.\n\nThe 3D asset of our logo is treated as an illustration and should not be used in any functional context. You can find out more information about this asset in the Imagery section.\n\n### Logo variants\n\nWe use two logo variants for Just Eat+, primary and secondary. They should be used in the same way we use all other logos in our system.\n\nOur **primary logo** is our logo by default. This should be used for most use cases in product.\n\nOur **secondary logo** is created to be seen at a smaller size and therefore should only be used for small UI elements where we would normally use a 12-16px icon, such as tags.\n\n---\n\n## Gradients\n\nThere are five main gradients available for JET+. We have three brand gradients, these are gradients that define the JET+ brand vary from strong to subtle.\n\nOur two support gradients are additional gradients that can be used in containers and page or screen backgrounds to support JET+ content.\n\nJET+ gradients must be applied to neutral backgrounds, we never use gradients over other gradients.\n\n### Direction and angle\n\nOur brand gradients follow the same light direction as our illustration set. The lightest point of our gradient is at the top-left and the darkest point sits at the bottom-right. This equates to a 140° angle in css.\n\nThe angle of the gradients should never be changed, doing so will detach the gradient style from the one in our system and effectively create a new gradient.\n\n### JET+ 01 brand gradient\n\nThe token $jetplus-brand-01 is our main brand gradient and the strongest of the three brand gradients created for JET+. It is made up of three global tokens including our brand 01 orange colour at the centre of the gradient.\n\n**The token $jetplus-brand-01 should only be used for borders and small UI elements** and care should be taken when dealing with content that needs to be accessible. It doesn't switch between light and dark theme to retain a strong brand identity.\n\n### Light mode for JET+ 02 and 03 gradients\n\nThe tokens $jetplus-brand-02 and $jetplus-brand-03 are additional brand gradients that are more subtle than $jetplus-brand-01, and can therefore be used for containers and larger UI elements along with text.\n\n**Use the token $jetplus-brand-03 as default in containers**, this will better ensure contrast accessibility with text.\n\n**Use $jetplus-brand-02 only in areas where you need a stronger brand identity** as it is slightly darker. For example, in our braze marketing container.\n\n### Dark mode for JET+ 02 and 03 gradients\n\nBoth jetplus-brand-02 and jetplus-brand-03 switch in dark theme to equally subtle tones that work well in dark theme, are both accessible with light text and also still communicate our brand identity well.\n\n### Light mode for JET+ support\n\nOur support gradients; $jetplus-support-01 and $jetplus-support-02 are additional support gradients that have been designed to be used in backgrounds and large, screen size containers. They are both very subtle, with $jetplus-support-01 being a more neutral gradient and $jetplus-support-02 being more brand focused. Both gradients fade into transparency, but we suggest using both alongside background tokens.\n\n### Dark mode for JET+ support\n\nOur support gradients; $jetplus-support-01 and $jetplus-support-02 both switch in dark theme equally subtle tones that work well in dark theme, are both accessible with light text and also still communicate our brand identity well.\n\n---\n\n## Colours\n\nJust Eat Plus should primarily be communicated using gradients, however, a number of colour foundations to be used to support the sub-brand.\n\n### Colours light mode\n\nWe support our gradients by using it alongside the brand colour $support-brand-02. For content we typically use a mix of $content-default and $content-brand.\n\nWe stick to using orange tones only for JET+ content.\n\n### Colours dark mode\n\nIn dark theme our colours maintain the same cohesive brand identity and work well with the dark theme version of our gradients.\n\n---\n\n## Typography\n\nJust Eat+ uses bold, high-impact, italic headings as part of its core brand identity.\n\nIn our design system these are all italic headings from XXL to XS, dependent on the hierarchy of content.\n\nPlease use narrow or wide respective of the context you're designing for.\n\n### Offset\n\nIn some areas of our product where we use heading text on two lines and need to have a greater impact we can offset our typography and use alignment in a more expressive and playful way. This is aligned with our global refresh.\n\nFor implementation into product this may need to be vectorised into an SVG format depending on where it's being used.\n\nPlease talk to the Design System team to see how we can help support offset type.\n\n---\n\n## Imagery\n\nWe use a set of imagery created especially for our Just Eat+ brand. These are defined by a faux 3D effect and the use of gradients to bring the illustration to life.\n\nYou can find these in our illustration library separated from our other illustrations style.\n\n### Illustrations in light mode\n\nA few examples of our JET+ illustrations in light mode.\n\n### Illustrations in dark mode\n\nA few examples of our JET+ illustrations in dark mode.\n\n### 3D assets\n\nWe also use specially created 3D assets as part of our Just Eat+ Branding. These are created using Cinema 4D and are implemented into product as .webp files.\n\nOur 3D logo should be used in imagery, marketing and braze content and should never be used to replace Just Eat+ logo assets in components or functional areas.\n\n## Patterns\n\nWe can also use the 'plus' pattern to add a bit of magic to braze and marketing content. These sit behind images to add more depth to the artwork and also serve to reinforce our brand identity.\n\n## Components\n\nOur JET+ component library sits under the Customer library within our Business Area folder.\n\nIt has been made specifically for JET+ sub-branded components that are used within the customer experience to communicate, call out or visually indicate JET+ specific content.\n\n### Button\n\nThe JET+ button is a clickable element in a user interface that triggers an action when pressed.\n\n### Offer tag\n\nThe JET+ offer tag is a small visual element used to represent JET+ offers within a user interface.\n\n### Braze banner\n\nA JET+ branded container with an image and CTA, used to market and advertise JET+ branded content.\n\n### Delivery container\n\nThe delivery container is an element used for upselling JET Eat+ delivery choices to users.\n\n### Callout container\n\nThe callout container is used to display brief messages to users about JET+ or their JET+ subscription, within a user interface.\n\n### Card\n\nThe card is used to highlight benefits the user could gain through JET+.\n\n## Motion\n\nWe use motion to inject an extra layer of reward and delight into our brand identity. Letting users feel like they've gained more in the product experience by signing up to JET+.\n\nWe use motion as a celebration, when a customer subscribes to Just Eat+.\n\n### Confetti\n\nTo mark a celebration, reward or new subscription to JET+ we congratulate the customer with a delightful confetti animation.\n\nThe confetti animation for JET+ uses JET+ branded colours and includes plus and star shaped confetti, making it visually different to other reward moments in our apps.",
     "phone": ""
   },
   {
@@ -2608,6 +2843,53 @@
     ],
     "basis": "component guidance from Adobe Spectrum",
     "blueprint": "Menus help users take actions, choose from a list of options, configure settings, and more. They can be placed in a transient container, like a popover or tray.\n\nMenus help users take actions, choose from a list of options, configure settings, and more. They can be placed in a transient container, like a popover or tray.\n\nDrill-in chevron. When a menu item includes a submenu, a drill-in chevron appears at the end of the item to indicate that additional options are available.\n\nLink-out icon. When a menu item leads to a different context, such as a new page or dialog, a link-out icon appears at the end of the item to indicate that the user will navigate away from the current view.\n\nPopover submenus. When a menu is displayed within popovers, a submenu will appear adjacent to the parent menu item in a separate popover. The submenu popover is aligned with an offset to horizontally overlap the parent menu and vertically align the first submenu item with the parent menu item. When a menu is shown in a popover, any submenu appears in a separate popover next to the parent item. The submenu popover is positioned to overlap the parent menu horizontally, with vertical alignment that matches the first submenu item to its parent.\n\nTray submenus. When a menu is shown in a tray, selecting a parent item with a submenu replaces the tray's content with the submenu. A back button labeled with the parent item's title appears at the top of the tray to let users return to the previous menu level.\n\nKeyboard focus. A menu item can be navigated using a keyboard. The keyboard focus state takes the menu item's visual hover state and adds a focus ring around the item.\n\nText overflow. When a menu item's label or description are too long for the available horizontal space, they wrap to form another line.\n\nSection dividers. Dividers appear between sections when two or more sections are used within the same menu.\n\nWindows high contrast mode. In Windows high contrast mode, menu items should display with default text color. Selected items should have the background and text colors defined for selected text.\n\nUse consistent sizing. Menus should be sized according to the component being used as the menu trigger. All submenus within the menu should also be using the same size as the menu trigger.\n\nUse sentence case for menu items. Following Adobe's UX writing style, write menu items in sentence case unless they contain words that are branded terms.\n\nEllipses in menu commands. Don't end a menu command with an ellipsis (…) unless it requires additional input to complete the action, typically in a dialog.\n\nUsing descriptions in menu items. Only use descriptions in menu items when the information will help a user to decide which action to take from the menu. Don't overload menu items with repetitive information or with promotional calls-to-action.\n\nRTL. For RTL (right-to-left) languages, the entire menu is mirrored horizontally, including the direction of the drill-in chevron and popover placement for submenus.\n\nKeyboard interactions. Key Interaction Enter or Space Opens menu and moves focus to first item. Down Arrow (on trigger) Opens menu and moves focus to first item. Up Arrow (on trigger, optional) Opens menu and moves focus to last item. Up Arrow / Down Arrow (in menu) Moves focus to previous/next item at the current menu level (wrapping behavior may be implementation-defined). Right Arrow / Left Arrow In submenu hierarchies: opens child submenu or returns to parent menu item (direction follows hierarchy and orientation). Home / End Moves focus to first/last item in current menu level. Printable character keys Moves focus to the next item whose label begins with typed character(s) (typeahead). Enter or Space (on item) Activates item. For checkbox/radio/switch items, may toggle state and optionally keep menu open based on selection behavior. Esc Closes current submenu/menu and returns focus to parent item or menu trigger. Tab / Shift + Tab Exits menu, closes open menus, and moves focus to next/previous focusable element.\n\nCursor guidelines. Cursor Description Pointer Use the pointer cursor for all interactive components in every state.\n\nWCAG 2.2 compliance. Any criterion not mention in the below table are not applicable to this component or are resolved with underlying requirements, engineering, and styles of the entire system. 1. Perceivable Requirement Criterion Level Compliance Non-text content 1.1.1 A Non-text elements, such as icons used in menu items, must provide a text alternative that communicates the item's purpose. All menu items, especially icon-only items, need an accessible name (for example, via a title, aria-label, or associated text) so screen readers can announce their function. Info and relationships, Identify purpose 1.3.1, 1.3.6 A, AAA Menus must be understandable to assistive technologies, such as screen readers. Use proper semantic HTML or the appropriate ARIA roles to ensure accessibility. Text contrast 1.4.3 AA The visual presentation of text has a contrast ratio of at least 4.5:1. Resize text 1.4.4 AA Menus should be built in such a way that they can be resized without assistive technology up to 200%. Visual presentation 1.4.8 AAA The width of text blocks is no more than 80 characters (40 for CJK languages), and text is never justified. Non-text contrast 1.4.11 AA The visual presentation of illustrations and component states have a contrast ratio of at least 3:1. Text spacing 1.4.12 AA Line height of text is at least 1.5x the font size. 2. Operable Requirement Criterion Level Compliance Keyboard 2.1.1, 2.1.3 A, AAA All functionality of the component is operable through a keyboard without specific timing for keystrokes. Keyboard traps 2.1.2 A Focus can be moved away from the component using only a keyboard. Seizures and physical reactions 2.3.1, 2.3.2, 2.3.3 A, AAA, AAA There is no flashing content or unnecessary motion or animation in this component. Focus order 2.4.3 A Navigation sequences receive focus in an order that preserves meaning and operability. Focus visible 2.4.7 AA Keyboard states use an indicator that is visible with at least 3:1 contrast.",
+    "phone": ""
+  },
+  {
+    "id": "app-pattern/pie-messaging-and-chatbots",
+    "kind": "app-pattern",
+    "name": "Messaging and chatbots",
+    "summary": "## Overview Messaging services facilitate the exchange of text, media, and information across platforms, allowing seamless interaction between users.",
+    "domains": [
+      "restaurants-food",
+      "product-surfaces",
+      "marketplaces"
+    ],
+    "sectors": [
+      "food-delivery",
+      "commerce"
+    ],
+    "tags": [
+      "pie",
+      "messaging",
+      "guidance",
+      "messaging-and-chatbots"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "pie",
+      "repo": "https://github.com/justeattakeaway/pie",
+      "commit": "cf7021732ad8ded4c818e95205d15b601d80fe50",
+      "path": "apps/pie-docs/src/patterns/messaging-and-chatbots/overview/overview.md",
+      "license": "Apache-2.0",
+      "authors": [
+        "Just Eat Takeaway.com"
+      ],
+      "url": "https://pie.design/",
+      "transformations": [
+        "removed Nunjucks includes, images, and link markup",
+        "joined the overview and guidance pages"
+      ]
+    },
+    "sourceUrl": "https://pie.design/patterns/messaging-and-chatbots/",
+    "screen": "messaging-and-chatbots",
+    "kinds": [
+      "messaging",
+      "guidance"
+    ],
+    "basis": "a messaging and chatbots pattern from PIE",
+    "blueprint": "## Overview\n\nMessaging services facilitate the exchange of text, media, and information across platforms, allowing seamless interaction between users. These tools offer efficient, scalable, and personalised communication experiences.\n\nChatbots, powered by AI, simulate human conversations and allow users to request information on-demand using natural language. They should provide helpful and reliable responses that address the user's question or task.\n\n---\n\n## Working with third party platforms\n\n### Customisation\n\nVarious platforms offer differing UI designs and levels of customisation. This means that your choice of platform will yield different end results, an important factor to consider when making your decision.\n\nFor most scenarios, the platform's out of the box UI kit will be used, providing essential functionality within the standard layout format. Basic customisation options will be available, allowing for content decisions and foundational updates.\n\nIf greater customisation is desired and justifiable within the means of the platform; more advanced levels of content control, layout adjustments, and additional functionalities will be available alongside foundational updates.\n\n### UI kits\n\nDepending on the platform you're using, there may be Figma UI kits available to assist in your design process. To check if a UI kit is readily accessible, please contact the PIE Design System team. If a kit isn’t available, we can either help you source one or provide guidance on how to proceed without it.\n\n## Foundations\n\nFor compliance with JET guidelines, it's essential to overwrite all available foundations to align with the PIE foundational tokens. Depending on the customisation level, various foundations may be available to adjustment. We advise confirming the customisation options available for the specific third party platform.\n\nFoundations you can investigate are:\n* Typography\n* Colour\n* Elevation\n* Radius\n* Spacing\n* Motion\n* Iconography\n\n---\n\n## Content width\n\nAll content types content should have a maximum width of 80% of the available space. This includes the avatar if used for the correspondents messages.\n\n---\n\n## Messages\n\n### Colour\n\nIt's crucial to differentiate between the correspondent's and user's messages. Below are message options designed to ensure clear distinction between both the user and the correspondent.\n\n### Borders\n\nBorders are an optional addition to message colours than can be used for multiple reasons.\n\n### Tails\n\nTails are a small extension that point towards the direction of the message’s sender that are attached to individual messages. They can vary in design depending on the third party platform that is being used.\n\n### Groups\n\nMessages sent in quick succession can be grouped to show users they are connected. Different third-party platforms may have varying time thresholds for defining grouped messages.\n\nThe spacing between individual messages is reduced to ensure they are visually tied together, and only the last message in a sequence retains its tail, while the others do not.\n\n---\n\n## Structured responses\n\nStructured responses are useful for chatbots that present choices to the user that are easy for the bot to understand, when selected, all structured responses will change their visual appearance and a user message will appear with the selected content.\n\nStructured responses are always paired with a message to provide context to the options provided.\n\n### Interactive states\n\nOutlines the atomic level interactive elements for the component.\n\n  **Default**\n\n    **Hover**\n\n  **Active**\n\n    **Focus**\n\n    **Disabled**\n\n---\n\n## Metadata\n\nMetadata should be applied to individual content elements or content groups to provide additional context\n\n### Name\n\nConsider including the correspondent's name as message metadata based on the user-correspondent relationship. It can be used to foster a more personalised connection or enhance identification depending on the conversation.\n\n#### First name\n\nUsing the correspondent’s first name allows personalisation whilst maintaining a level of privacy and security.\n\n#### First + last name\n\nUsing both first and last names in metadata enhances identification, professionalism, record-keeping, and personalised communication, particularly in contexts where accuracy and clarity are important.\n\n#### Restaurant name\n\nUsing a restaurant's name helps clearly identify the business, enabling personalised interactions and efficient customer service.\n\n### Date & timestamp\n\nConsider including the message’s date and time in the metadata, for both the user and the correspondent, depending on the message’s purpose. This can provide contextual understand the timing of events or response.\n\n#### Date & timestamp\n\nUsing both the timestamp and date provides precise tracking of when interactions occurred, which is crucial for context.\n\n#### Timestamp\n\nUsing just the timestamp ensures precise tracking of interactions and response times, for conversations lasting less than a day.\n\n### Placement\n\nDifferent UI kits position metadata in various locations relative to individual content elements, with some placing it above and others below. While using the default placement is acceptable, we recommend; if possible, positioning metadata below the message to reduce its prominence in the hierarchy.\n\n#### Below\n\n#### Above\n\n---\n\n## Avatars\n\nAvatars should only be visible for the correspondent, and not for the user. If the avatar is included in the conversation, it should be applied to all messages for consistency.\n\n### Variants\n\nVarious avatar variants are provided to cater for different correspondent types, ensuring users have distinct visual identifiers.\n\n#### Chatbot\n\n#### AI assistant\n\n#### Advisor\n\n#### Customer\n\n#### Courier\n\n#### Partner\n\n### Colour\n\nThe default colour should be brand orange to ensure that the brand colour is present within the UI. Consider the hierarchy of the avatar within the conversation when making a choice.\n\nMaintain consistency by using the same colour throughout the entire message, regardless of any changes in avatar variants.\n\n---\n\n## Footer\nThe footer is used to enter messages or select media to send in the conversation.\n\n---\n\n## Backgrounds\n\nVarious background options are available, but always ensure that the background choice feels appropriate for the scenario as the background can change the user’s experience.\n\n### Simple\n\nSingle coloured backgrounds help messages stand out clearly and keep them as the main focus. Simple backgrounds are also viewed as more professional, so consider this when making your choice.\n\n### Complex\n\n## Content\n\nCopy across chatbots and messaging services can impact how users perceive the experience. To ensure the tone of voice and content being proposed is suitable, reach out the product copywriting team for their expertise.\n\n---\n\n## Examples\n\nOutlines the atomic level interactive elements for the component.\n\n### LTR examples\n\nHere are some examples of messaging in left-to-right context:\n\n### RTL examples\n\nHere are some examples of messaging in right-to-left context:",
     "phone": ""
   },
   {
@@ -2979,6 +3261,101 @@
     "basis": "an event's analytics tab",
     "blueprint": "The page header is the object itself: one card (88px, 14px padding) holding a 50x62 cover, the 18/600 name with 28px icon buttons beside it (open, copy, share), a 13px grey meta line (date, time, place) and outlined 36px actions on the right. Under it, underline tabs on a full-width 1px rule, then a 36px row with a segmented time range on the left and a refresh button on the right. The body is one 6-column grid with one gutter (14px) in both directions whose spans change by row while every edge lands on the same lines: 3 KPI tiles of 2 columns, the main chart in 4 columns beside a side chart in 2, two progress cards of 3, a full-width trend of 6. Give the widest card to the screen's question, and do not give 824px to one ring and one legend row (flagged).",
     "phone": "The header card keeps cover, name and meta, with actions in a kebab; every grid item takes the full width in the same order."
+  },
+  {
+    "id": "app-pattern/pie-onboarding-and-guided-tour",
+    "kind": "app-pattern",
+    "name": "Onboarding and guided tour",
+    "summary": "## Overview The onboarding and guided tour pattern aims to create a smooth and engaging first interaction, helping users understand the core functionalities, value propositions, or changes within the system.",
+    "domains": [
+      "restaurants-food",
+      "marketplaces",
+      "ecommerce-dtc",
+      "product-surfaces"
+    ],
+    "sectors": [
+      "food-delivery",
+      "commerce"
+    ],
+    "tags": [
+      "pie",
+      "onboarding",
+      "guidance",
+      "onboarding-and-guided-tour"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "pie",
+      "repo": "https://github.com/justeattakeaway/pie",
+      "commit": "cf7021732ad8ded4c818e95205d15b601d80fe50",
+      "path": "apps/pie-docs/src/patterns/onboarding-and-guided-tour/web-guidance/web-guidance.md",
+      "license": "Apache-2.0",
+      "authors": [
+        "Just Eat Takeaway.com"
+      ],
+      "url": "https://pie.design/",
+      "transformations": [
+        "removed Nunjucks includes, images, and link markup",
+        "joined the overview and guidance pages"
+      ]
+    },
+    "sourceUrl": "https://pie.design/patterns/onboarding-and-guided-tour/",
+    "screen": "onboarding-and-guided-tour",
+    "kinds": [
+      "onboarding",
+      "guidance"
+    ],
+    "basis": "a onboarding and guided tour pattern from PIE",
+    "blueprint": "## Overview\n\nThe onboarding and guided tour pattern aims to create a smooth and engaging first interaction, helping users understand the core functionalities, value propositions, or changes within the system. By providing a clear, step-by-step guide, these patterns reduce friction, improve user confidence, and foster a positive experience from the very beginning.\n\n---\n\n## Purpose\n\nOnboarding can be designed using two approaches, depending on the purpose:\n\n### Overview onboarding\n\nOverview onboarding provides a high-level introduction to the product or a new feature set. It helps users understand the broader context of the system, setting expectations and aligning them with the key goals of the onboarding process.\n\n### Contextual onboarding\n\nContextual onboarding offers a step-by-step guidance tied directly to specific features or actions. It delivers assistance as users interact with the interface, ensuring help is timely and relevant without overwhelming them.\n\n---\n\n## Overview onboarding options\n\nThese are UI elements you can use to enhance the onboarding experience:\n\n### Modal\n\nUse a Modal when you need to provide users with a high-level introduction to the onboarding process or summarise what they can expect to learn. A modal sets the stage for onboarding by creating a focused environment free of distractions, allowing users to concentrate on the essential information.\n\n#### Actions\n\nIf the modal is used the beginning of the flow, always provide actions for user to start the onboarding tour and skip the tour within the component. This ensures users have full control over their onboarding experience and they can skip or exit the process at any point without feeling constrained.\n\nWhen a modal is used between steps, connecting the onboarding journey, providing actions allows users to easily navigate back and forth as needed. This flexibility gives users more control over their journey, enabling them to review previous steps or adjust their choices without losing progress.\n\n#### Assets\n\nImagery or other assets are great for emphasising the most impactful or valuable tools and features users should explore, especially those not immediately visible in the interface.\n\n#### Carousel\n\nIn a multi-step flow, a carousel helps users navigate through content in an organized and manageable way. It allows users to view and progress through steps one at a time while maintaining a clear overview of the entire process.\n\n---\n\n## Contextual onboarding options\n\nThese are UI elements you can use to enhance the onboarding experience:\n\n### Tooltip\n\nUse a Tooltip to guide users through specific features or highlight particular areas of the interface as they interact with it. Tooltips are most effective when used sparingly and targeted toward features that might not be immediately intuitive.\n\n#### Assets\n\nAdding an illustration or image to a tooltip to make it more visually engaging and fun for the user. This addition helps break down complex information, making it easier to understand.\n\n#### Text style\n\nYou can choose the text style that suits the hierarchy and aligns with the overall tooltip design, ensuring consistency and clear communication of information.\n\n#### Steps indicators\n\nDisplaying information such as the current step and total steps helps users understand their progress within the flow.\n\n#### Actions\n\nProviding additional actions allows users to easily navigate back and forth as needed.\n\n#### Colour variants\n\nThe default tooltip colour is dark, providing good contrast on light backgrounds. However, when tooltips are displayed on dark backgrounds, you can use inverse colour variants to ensure optimal accessibility and readability.\n\n#### Close\n\nTry to always give users with the option to exit the tour, for example by adding a \"Close\" icon button or other options to end the onboarding journey within the component.\n\n### Spotlight\n\nDuring a step-by-step or new feature guide, a spotlight can be utilised to direct attention to specific areas, helping the tooltip focus on key elements. This helps guide the user's attention, making it easier to understand the process by highlighting important sections or actions and improving clarity.\n\nUse spotlight to all elements that are relevant to the specific feature guide, ensuring users have a comprehensive view of the functionality being explained.\n\n---\n\n## Examples\n\n### LTR examples\n\nHere are some examples of messaging in left-to-right context:\n\n### RTL examples\n\nHere are some examples of messaging in right-to-left context:\n\n## Overview\n\nThe onboarding and guided tour pattern aim to create a smooth and engaging first interaction, helping users understand the core functionalities, value propositions, or changes within the system. By providing a clear, step-by-step guide, these patterns reduce friction, improve user confidence, and foster a positive experience from the very beginning.\n\nThe onboarding and guided tour pattern aims to create a smooth and engaging first interaction, helping users understand the core functionalities, value propositions, or changes within the system. By providing a clear, step-by-step guide, these patterns reduce friction, improve user confidence, and foster a positive experience from the very beginning.\n\n---\n\n## Purpose\n\nOnboarding can be designed using two approaches, depending on the purpose:\n\n### Overview onboarding\n\nOverview onboarding provides a high-level introduction to the product or a new feature set. It helps users understand the broader context of the system, setting expectations and aligning them with the key goals of the onboarding process.\n\n### Contextual onboarding\n\nContextual onboarding offers a step-by-step guidance tied directly to specific features or actions. It delivers assistance as users interact with the interface, ensuring help is timely and relevant without overwhelming them.\n\n---\n\n## Overview onboarding options\n\nThese are UI elements you can use to enhance the onboarding experience:\n\n### Alert (iOS) / Dialog (Android)\n\nUse an alert / dialog when you need to provide users with a high-level introduction to the onboarding process or summarise what they can expect to learn. It works best at the beginning of the flow or pairs effectively with subsequent tooltip steps.\n\n#### Actions\n\nWhen an alert / dialog is used at the beginning of the flow, always provide actions for user to start the onboarding tour and skip the tour within the component. This ensures users have full control over their onboarding experience and they can skip or exit the process at any point without feeling constrained.\n\nWhen an alert / dialog is used between steps, connecting the onboarding journey, providing actions allows users to easily navigate back and forth as needed. This flexibility gives users more control over their journey, enabling them to review previous steps or adjust their choices without losing progress.\n\n#### Assets\n\nImagery or other assets are great for emphasising the most impactful or valuable tools and features users should explore, especially those not immediately visible in the interface.\n\n### Full screen sheet (iOS) / Screen (Android)\n\nA full screen sheet / screen provides a high-level introduction to the product or feature while occupying the entire screen. It provides users with a focused, immersive onboarding experience. A full screen sheet is especially useful for showcasing overall key features of a product or system or presenting multi-step processes where users need to complete a sequence of actions or when introducing multiple, interconnected features that require a comprehensive explanation.\n\n#### Carousel\n\nIn a multi-step flow, a carousel helps users navigate through content in an organized and manageable way. It allows users to view and progress through steps one at a time while maintaining a clear overview of the entire process.\n\n#### Assets\n\nA full-screen sheet or screen is ideal for accommodating more complex content or rich imagery. It provides sufficient space to present detailed information, visual elements, or interactive components without overwhelming the user.\n\n---\n\n## Contextual onboarding options\n\nThese are UI elements you can use to enhance the onboarding experience:\n\n### Tooltip\n\nUse a Tooltip to guide users through specific features or highlight particular areas of the interface as they interact with it. Tooltips are most effective when used sparingly and targeted toward features that might not be immediately intuitive.\n\n#### Assets\n\nAdding an illustration or image to a tooltip to make it more visually engaging and fun for the user. This addition helps break down complex information, making it easier to understand.\n\n#### Text style\n\nYou can choose the text style that suits the hierarchy and aligns with the overall design system, ensuring consistency and clear communication of information.\n\n#### Steps indicators\n\nDisplaying information such as the current step and total steps helps users understand their progress within the flow.\n\n#### Actions\n\nProviding additional actions allows users to easily navigate back and forth as needed.\n\n#### Colour variants\n\nThe default tooltip colour is dark, providing good contrast on light backgrounds. However, when tooltips are displayed on dark backgrounds, you can use inverse colour variants to ensure optimal accessibility and readability.\n\n#### Close\n\nTry to always give users with the option to exit the tour, for example by adding a \"Close\" icon button or other options to end the onboarding journey within the component.\n\n### Spotlight\n\nDuring a step-by-step guide, the spotlight feature can be utilised to direct attention to specific areas, helping the tooltip focus on key elements. This helps guide the user's attention, making it easier to understand the process by highlighting important sections or actions and improving clarity.\n\nUse spotlight to all elements that are relevant to the specific feature guide, ensuring users have a comprehensive view of the functionality being explained.\n\n### Bottom sheet\n\nA bottom sheet provides a non-intrusive way to deliver contextual information or actions. This component is well-suited for specific steps within a user's flow or when triggered by user interactions. It is particularly effective for single-step interactions that require focused instructions or quick actions without involving multi-step processes.\n\n#### Single action\n\nA bottom sheet should focus on a specific feature or action within the user's flow. It should not include navigation elements, carousels, or multiple actions—only a single, clear action.\n\n---\n\n## Examples\n\n### LTR examples\n\nHere are some examples of messaging in left-to-right context:\n\n### RTL examples\n\nHere are some examples of messaging in right-to-left context:",
+    "phone": ""
+  },
+  {
+    "id": "app-pattern/pie-overlay-patterns",
+    "kind": "app-pattern",
+    "name": "Overlay patterns",
+    "summary": "## What are overlay patterns?",
+    "domains": [
+      "restaurants-food",
+      "product-surfaces",
+      "ecommerce-dtc"
+    ],
+    "sectors": [
+      "food-delivery",
+      "commerce"
+    ],
+    "tags": [
+      "pie",
+      "overlay",
+      "guidance",
+      "overlay-patterns"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "pie",
+      "repo": "https://github.com/justeattakeaway/pie",
+      "commit": "cf7021732ad8ded4c818e95205d15b601d80fe50",
+      "path": "apps/pie-docs/src/patterns/overlay-patterns/overview/overview.md",
+      "license": "Apache-2.0",
+      "authors": [
+        "Just Eat Takeaway.com"
+      ],
+      "url": "https://pie.design/",
+      "transformations": [
+        "removed Nunjucks includes, images, and link markup",
+        "joined the overview and guidance pages"
+      ]
+    },
+    "sourceUrl": "https://pie.design/patterns/overlay-patterns/",
+    "screen": "overlay-patterns",
+    "kinds": [
+      "overlay",
+      "guidance"
+    ],
+    "basis": "a overlay patterns pattern from PIE",
+    "blueprint": "## What are overlay patterns?\n\nOverlay patterns in UI design involve the presentation of additional content or functionality on top of existing elements within the user interface. These overlays can be temporary or permanent and serve various purposes, such as providing contextually relevant information, enabling interactions, or offering supplementary options.\n\nBy overlaying content, designers can optimise screen space and enhance user experience by reducing the need for users to navigate away from the current context.\n\n---\n\n## Best practices\n\nHere are some best practices when using overlay patterns in your products:\n\n### Purposeful use\n\nEnsure that overlays serve a clear purpose and enhance the user experience rather than adding unnecessary complexity. Overlays should provide valuable information or functionality without disrupting the user flow.\n\n### Clarity and visibility\n\nMake sure that overlays are visually distinct from the background content to prevent confusion. We use contrasting colours, borders, shadows or animations to clearly delineate the overlay from the underlying content.\n\n### User control\n\nWe should provide users with control over overlays, such as the ability to close or minimise them easily. Avoid forcing overlays on users, especially ones that interrupt their workflow or require immediate attention.\n\n### Responsive design\n\nOverlay patterns need to be responsive and adaptable to different screen sizes and frameworks. Ensure that they are legible and usable on both desktop and mobile devices (web and apps), and ensure you’re using the best solution or the right pattern for each scenario.\n\n### Consistency\n\nMaintain consistency in the design and behaviour of overlays throughout your website and apps. Use our consistent styling, interactions and placement to create a cohesive user experience.\n\n## Decision tree\n\nYou can follow this decision tree to choose the most appropriate UI component based on the specific context, importance, and user interaction requirements of your product interface.\n\n---\n\n## Modal\n\nA modal is a surface that overlays the page’s main content and is used to display information, gather input or confirm actions.\n\n---\n\n## Popover\n\nA popover is a small overlay that appears above content, offering extra information, context, or options to the user.\n\n---\n\n## Toast\n\nA toast shows short updates about app processes at the bottom of the screen.\n\n---\n\n## Tooltip\n\nA tooltip is a contextual message that appears when users interact with an element, providing additional information or guidance.\n\n---\n\n## Z-index\n\nZ-index is a CSS property used in web design to control the stacking order of elements on a page. It determines which elements appear in front of others, making it useful for managing overlapping elements in user interfaces.\n\nWe’ve prepared a table to help you understand how our components stack on top of each other.",
+    "phone": ""
   },
   {
     "id": "app-pattern/cms-pagination",

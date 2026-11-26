@@ -204,6 +204,27 @@
         "transactions": "public/content/developers/docs/transactions/index.md",
         "gas": "public/content/developers/docs/gas/index.md"
       }
+    },
+    {
+      "id": "pie",
+      "name": "PIE Design System",
+      "repo": "https://github.com/justeattakeaway/pie",
+      "commit": "cf7021732ad8ded4c818e95205d15b601d80fe50",
+      "license": "Apache-2.0",
+      "licenseUrl": "https://raw.githubusercontent.com/justeattakeaway/pie/cf7021732ad8ded4c818e95205d15b601d80fe50/LICENSE",
+      "authors": ["Just Eat Takeaway.com"],
+      "url": "https://pie.design/",
+      "notes": "Food-delivery and marketplace patterns. Apache-2.0; brand palette, logos, food photography, and fonts are excluded.",
+      "paths": {
+        "onboarding": "apps/pie-docs/src/patterns/onboarding-and-guided-tour/web-guidance/web-guidance.md",
+        "overlays": "apps/pie-docs/src/patterns/overlay-patterns/overview/overview.md",
+        "forms": "apps/pie-docs/src/patterns/forms/overview/overview.md",
+        "messaging": "apps/pie-docs/src/patterns/messaging-and-chatbots/overview/overview.md",
+        "jet-ai": "apps/pie-docs/src/patterns/jet-ai/overview/overview.md",
+        "just-eat-plus": "apps/pie-docs/src/patterns/just-eat-plus/overview/overview.md",
+        "cookie-banner": "apps/pie-docs/src/patterns/cookie-banner/overview/overview.md",
+        "haptic-feedback": "apps/pie-docs/src/patterns/haptic-feedback/overview/overview.md"
+      }
     }
   ]
 }

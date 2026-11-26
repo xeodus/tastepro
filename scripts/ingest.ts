@@ -30,6 +30,7 @@ import { cmsAdapter } from "./lib/sources/cms.js";
 import { ethereumAdapter } from "./lib/sources/ethereum.js";
 import { govukAdapter } from "./lib/sources/govuk.js";
 import { nhsAdapter } from "./lib/sources/nhs.js";
+import { pieAdapter } from "./lib/sources/pie.js";
 import { spectrumAdapter } from "./lib/sources/spectrum.js";
 import type { SourceContext } from "./lib/sources/types.js";
 import { uswdsAdapter } from "./lib/sources/uswds.js";
@@ -675,6 +676,7 @@ async function main(): Promise<void> {
     "carbon",
     "spectrum",
     "ethereum-org",
+    "pie",
   ];
   for (const id of required) {
     if (!byId.has(id)) throw new Error(`sources.lock.json is missing ${id}`);
@@ -783,6 +785,18 @@ async function main(): Promise<void> {
       writeLicense: () => fetchLicense(ethereumSource, options, staging),
     };
     const ethereum = await ethereumAdapter.fetch(ethereumContext);
+    const pieSource = byId.get("pie")!;
+    const pieContext: SourceContext = {
+      source: pieSource,
+      fetchText: (path) =>
+        fetchCached(lockUrl(pieSource, path), sourceCacheKey(pieSource, path), options),
+      fetchJson: (path) =>
+        fetchJsonCached(lockUrl(pieSource, path), sourceCacheKey(pieSource, path), options),
+      provenance: (path, transformations) => provenanceFor(pieSource, path, transformations),
+      sourceUrl: (path = "") => sourceUrl(pieSource, path),
+      writeLicense: () => fetchLicense(pieSource, options, staging),
+    };
+    const pie = await pieAdapter.fetch(pieContext);
     const domains = await buildDomains(options.contentDir);
 
     const warnings = [
@@ -795,6 +809,7 @@ async function main(): Promise<void> {
       ...carbon.warnings,
       ...spectrum.warnings,
       ...ethereum.warnings,
+      ...pie.warnings,
     ];
     const allPacks: Pack[] = sortPacks([
       ...taste.packs,
@@ -807,6 +822,7 @@ async function main(): Promise<void> {
       ...carbon.packs,
       ...spectrum.packs,
       ...ethereum.packs,
+      ...pie.packs,
       ...domains.packs,
     ]);
     const references: ReferencePack[] = sortPacks([
@@ -895,6 +911,7 @@ async function main(): Promise<void> {
       carbon.sourceInfo,
       spectrum.sourceInfo,
       ethereum.sourceInfo,
+      pie.sourceInfo,
     ];
     const counts = countBy(allContent, (pack) => pack.kind);
     const quality = countBy(allContent, (pack) => pack.quality);

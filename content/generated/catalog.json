@@ -26321,6 +26321,34 @@
     }
   },
   {
+    "id": "app-pattern/pie-cookie-banner",
+    "kind": "app-pattern",
+    "name": "Cookie banner",
+    "summary": "## Overview The purpose of the cookie banner is to inform users about the use of cookies, obtain their consent, and customise their preferences.",
+    "domains": [
+      "restaurants-food",
+      "government-public",
+      "product-surfaces"
+    ],
+    "sectors": [
+      "food-delivery",
+      "commerce"
+    ],
+    "tags": [
+      "pie",
+      "consent",
+      "guidance",
+      "cookie-banner"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "pie",
+    "sourceUrl": "https://pie.design/patterns/cookie-banner/",
+    "metrics": {
+      "screen": "cookie-banner"
+    }
+  },
+  {
     "id": "app-pattern/count-cards-filter",
     "kind": "app-pattern",
     "name": "Count cards that filter",
@@ -26845,6 +26873,34 @@
     }
   },
   {
+    "id": "app-pattern/pie-forms",
+    "kind": "app-pattern",
+    "name": "Forms",
+    "summary": "## What are forms? Forms refer to a collection of interactive fields that allow users to provide information or make selections within our products.",
+    "domains": [
+      "restaurants-food",
+      "ecommerce-dtc",
+      "product-surfaces"
+    ],
+    "sectors": [
+      "food-delivery",
+      "commerce"
+    ],
+    "tags": [
+      "pie",
+      "form",
+      "guidance",
+      "forms"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "pie",
+    "sourceUrl": "https://pie.design/patterns/forms/",
+    "metrics": {
+      "screen": "forms"
+    }
+  },
+  {
     "id": "app-pattern/ethereum-gas",
     "kind": "app-pattern",
     "name": "Gas and fees",
@@ -26898,6 +26954,34 @@
     "sourceUrl": "https://github.com/Leonxlnx/taste-skill",
     "metrics": {
       "screen": "report"
+    }
+  },
+  {
+    "id": "app-pattern/pie-haptic-feedback",
+    "kind": "app-pattern",
+    "name": "Haptic feedback",
+    "summary": "## What are haptics? Haptics refer to the incorporation of tactile feedback into user interfaces to enhance the overall user experience.",
+    "domains": [
+      "restaurants-food",
+      "product-surfaces",
+      "fitness"
+    ],
+    "sectors": [
+      "food-delivery",
+      "commerce"
+    ],
+    "tags": [
+      "pie",
+      "feedback",
+      "mobile",
+      "haptic-feedback"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "pie",
+    "sourceUrl": "https://pie.design/patterns/haptic-feedback/",
+    "metrics": {
+      "screen": "haptic-feedback"
     }
   },
   {
@@ -26984,6 +27068,62 @@
     "sourceUrl": "https://service-manual.nhs.uk/design-system/patterns/interruption-page",
     "metrics": {
       "screen": "interruption-page"
+    }
+  },
+  {
+    "id": "app-pattern/pie-jet-ai",
+    "kind": "app-pattern",
+    "name": "JET AI",
+    "summary": "## Overview At JET we use AI to assist and elevate our users' experiences.",
+    "domains": [
+      "restaurants-food",
+      "ai-products",
+      "product-surfaces"
+    ],
+    "sectors": [
+      "food-delivery",
+      "commerce"
+    ],
+    "tags": [
+      "pie",
+      "ai",
+      "guidance",
+      "jet-ai"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "pie",
+    "sourceUrl": "https://pie.design/patterns/jet-ai/",
+    "metrics": {
+      "screen": "jet-ai"
+    }
+  },
+  {
+    "id": "app-pattern/pie-just-eat-plus",
+    "kind": "app-pattern",
+    "name": "Just Eat Plus",
+    "summary": "## Overview Just Eat+ is Just Eat Takeaway's subscription-based loyalty proposition that offers exclusive benefits such as 'free delivery', 'members-only discounts' and 'offers & rewards' from participating restaurants, grocery stores and…",
+    "domains": [
+      "restaurants-food",
+      "ecommerce-dtc",
+      "marketplaces"
+    ],
+    "sectors": [
+      "food-delivery",
+      "commerce"
+    ],
+    "tags": [
+      "pie",
+      "subscription",
+      "loyalty",
+      "just-eat-plus"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "pie",
+    "sourceUrl": "https://pie.design/patterns/just-eat-plus/",
+    "metrics": {
+      "screen": "just-eat-plus"
     }
   },
   {
@@ -27153,6 +27293,34 @@
     "sourceUrl": "https://spectrum.adobe.com/page/menu/",
     "metrics": {
       "screen": "menu"
+    }
+  },
+  {
+    "id": "app-pattern/pie-messaging-and-chatbots",
+    "kind": "app-pattern",
+    "name": "Messaging and chatbots",
+    "summary": "## Overview Messaging services facilitate the exchange of text, media, and information across platforms, allowing seamless interaction between users.",
+    "domains": [
+      "restaurants-food",
+      "product-surfaces",
+      "marketplaces"
+    ],
+    "sectors": [
+      "food-delivery",
+      "commerce"
+    ],
+    "tags": [
+      "pie",
+      "messaging",
+      "guidance",
+      "messaging-and-chatbots"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "pie",
+    "sourceUrl": "https://pie.design/patterns/messaging-and-chatbots/",
+    "metrics": {
+      "screen": "messaging-and-chatbots"
     }
   },
   {
@@ -27373,6 +27541,63 @@
     "sourceUrl": "https://github.com/Leonxlnx/taste-skill",
     "metrics": {
       "screen": "detail"
+    }
+  },
+  {
+    "id": "app-pattern/pie-onboarding-and-guided-tour",
+    "kind": "app-pattern",
+    "name": "Onboarding and guided tour",
+    "summary": "## Overview The onboarding and guided tour pattern aims to create a smooth and engaging first interaction, helping users understand the core functionalities, value propositions, or changes within the system.",
+    "domains": [
+      "restaurants-food",
+      "marketplaces",
+      "ecommerce-dtc",
+      "product-surfaces"
+    ],
+    "sectors": [
+      "food-delivery",
+      "commerce"
+    ],
+    "tags": [
+      "pie",
+      "onboarding",
+      "guidance",
+      "onboarding-and-guided-tour"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "pie",
+    "sourceUrl": "https://pie.design/patterns/onboarding-and-guided-tour/",
+    "metrics": {
+      "screen": "onboarding-and-guided-tour"
+    }
+  },
+  {
+    "id": "app-pattern/pie-overlay-patterns",
+    "kind": "app-pattern",
+    "name": "Overlay patterns",
+    "summary": "## What are overlay patterns?",
+    "domains": [
+      "restaurants-food",
+      "product-surfaces",
+      "ecommerce-dtc"
+    ],
+    "sectors": [
+      "food-delivery",
+      "commerce"
+    ],
+    "tags": [
+      "pie",
+      "overlay",
+      "guidance",
+      "overlay-patterns"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "pie",
+    "sourceUrl": "https://pie.design/patterns/overlay-patterns/",
+    "metrics": {
+      "screen": "overlay-patterns"
     }
   },
   {
