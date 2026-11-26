@@ -151,7 +151,8 @@ Files:
 
 Dependency: `@modelcontextprotocol/server` 2.4.0 (stable, implements
 `2026-07-28`), `@modelcontextprotocol/server-legacy` for old clients, and the
-official codemod `@modelcontextprotocol/codemod`.
+official codemod `@modelcontextprotocol/codemod`. Spike result and exact steps:
+[`docs/protocol-v2.md`](docs/protocol-v2.md).
 
 Steps:
 1. Spike on a branch: install v2, run the codemod, port one tool, measure.
