@@ -25606,6 +25606,31 @@
     "sourceUrl": "https://github.com/Leonxlnx/taste-skill"
   },
   {
+    "id": "app-pattern/govuk-addresses",
+    "kind": "app-pattern",
+    "name": "Addresses",
+    "summary": "Help users provide an address",
+    "domains": [
+      "government-public",
+      "product-surfaces"
+    ],
+    "sectors": [
+      "government"
+    ],
+    "tags": [
+      "govuk",
+      "form",
+      "addresses"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "govuk-design-system",
+    "sourceUrl": "https://design-system.service.gov.uk/patterns/addresses/",
+    "metrics": {
+      "screen": "addresses"
+    }
+  },
+  {
     "id": "app-pattern/wallet-balance-actions-assets",
     "kind": "app-pattern",
     "name": "Balance, actions and assets",
@@ -25631,6 +25656,34 @@
     "sourceUrl": "https://github.com/Leonxlnx/taste-skill",
     "metrics": {
       "screen": "wallet"
+    }
+  },
+  {
+    "id": "app-pattern/govuk-bank-details",
+    "kind": "app-pattern",
+    "name": "Bank details",
+    "summary": "How to ask users for their bank details",
+    "domains": [
+      "fintech-payments",
+      "government-public",
+      "product-surfaces"
+    ],
+    "sectors": [
+      "government",
+      "finance"
+    ],
+    "tags": [
+      "govuk",
+      "form",
+      "payments",
+      "bank-details"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "govuk-design-system",
+    "sourceUrl": "https://design-system.service.gov.uk/patterns/bank-details/",
+    "metrics": {
+      "screen": "bank-details"
     }
   },
   {
@@ -25683,6 +25736,32 @@
     "sourceUrl": "https://github.com/Leonxlnx/taste-skill",
     "metrics": {
       "screen": "builder"
+    }
+  },
+  {
+    "id": "app-pattern/govuk-check-answers",
+    "kind": "app-pattern",
+    "name": "Check answers",
+    "summary": "Let users check their answers before submitting information to a service",
+    "domains": [
+      "government-public",
+      "product-surfaces"
+    ],
+    "sectors": [
+      "government"
+    ],
+    "tags": [
+      "govuk",
+      "form",
+      "review",
+      "check-answers"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "govuk-design-system",
+    "sourceUrl": "https://design-system.service.gov.uk/patterns/check-answers/",
+    "metrics": {
+      "screen": "check-answers"
     }
   },
   {
@@ -25752,6 +25831,57 @@
     "sourceUrl": "https://github.com/Leonxlnx/taste-skill",
     "metrics": {
       "screen": "overview"
+    }
+  },
+  {
+    "id": "app-pattern/govuk-dates",
+    "kind": "app-pattern",
+    "name": "Dates",
+    "summary": "Help users enter or select a date",
+    "domains": [
+      "government-public",
+      "product-surfaces"
+    ],
+    "sectors": [
+      "government"
+    ],
+    "tags": [
+      "govuk",
+      "form",
+      "dates"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "govuk-design-system",
+    "sourceUrl": "https://design-system.service.gov.uk/patterns/dates/",
+    "metrics": {
+      "screen": "dates"
+    }
+  },
+  {
+    "id": "app-pattern/govuk-error-summary",
+    "kind": "app-pattern",
+    "name": "Error summary",
+    "summary": "Use an error summary when there is a validation error",
+    "domains": [
+      "product-surfaces",
+      "government-public"
+    ],
+    "sectors": [
+      "government"
+    ],
+    "tags": [
+      "govuk",
+      "form",
+      "errors",
+      "error-summary"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "govuk-design-system",
+    "sourceUrl": "https://design-system.service.gov.uk/components/error-summary/",
+    "metrics": {
+      "screen": "error-summary"
     }
   },
   {
@@ -25929,6 +26059,31 @@
     }
   },
   {
+    "id": "app-pattern/govuk-names",
+    "kind": "app-pattern",
+    "name": "Names",
+    "summary": "Help users correctly enter their name",
+    "domains": [
+      "government-public",
+      "product-surfaces"
+    ],
+    "sectors": [
+      "government"
+    ],
+    "tags": [
+      "govuk",
+      "form",
+      "names"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "govuk-design-system",
+    "sourceUrl": "https://design-system.service.gov.uk/patterns/names/",
+    "metrics": {
+      "screen": "names"
+    }
+  },
+  {
     "id": "app-pattern/object-detail-header-grid",
     "kind": "app-pattern",
     "name": "Object header and a six-column grid",
@@ -25956,6 +26111,34 @@
     "sourceUrl": "https://github.com/Leonxlnx/taste-skill",
     "metrics": {
       "screen": "detail"
+    }
+  },
+  {
+    "id": "app-pattern/govuk-payment-card-details",
+    "kind": "app-pattern",
+    "name": "Payment card details",
+    "summary": "How to ask users for their payment card details",
+    "domains": [
+      "fintech-payments",
+      "ecommerce-dtc",
+      "government-public"
+    ],
+    "sectors": [
+      "government",
+      "finance"
+    ],
+    "tags": [
+      "govuk",
+      "form",
+      "payments",
+      "payment-card-details"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "govuk-design-system",
+    "sourceUrl": "https://design-system.service.gov.uk/patterns/payment-card-details/",
+    "metrics": {
+      "screen": "payment-card-details"
     }
   },
   {
@@ -26034,6 +26217,32 @@
     "quality": "verified",
     "source": "taste-skill",
     "sourceUrl": "https://github.com/Leonxlnx/taste-skill"
+  },
+  {
+    "id": "app-pattern/govuk-validation",
+    "kind": "app-pattern",
+    "name": "Recover from validation errors",
+    "summary": "Check the answers users give to make sure they’re valid - and if there’s an error, tell them what's wrong and how to fix it",
+    "domains": [
+      "product-surfaces",
+      "government-public"
+    ],
+    "sectors": [
+      "government"
+    ],
+    "tags": [
+      "govuk",
+      "form",
+      "errors",
+      "validation"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "govuk-design-system",
+    "sourceUrl": "https://design-system.service.gov.uk/patterns/validation/",
+    "metrics": {
+      "screen": "validation"
+    }
   },
   {
     "id": "app-pattern/report-card-legend-table",

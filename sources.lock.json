@@ -71,6 +71,27 @@
         "skill": "skills/playwright-cli/SKILL.md",
         "references": "skills/playwright-cli/references"
       }
+    },
+    {
+      "id": "govuk-design-system",
+      "name": "GOV.UK Design System",
+      "repo": "https://github.com/alphagov/govuk-design-system",
+      "commit": "0c6de5736a4e755a3808fb31d3a7723a33b7c705",
+      "license": "OGL-3.0",
+      "licenseUrl": "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
+      "authors": ["Government Digital Service"],
+      "url": "https://design-system.service.gov.uk/",
+      "notes": "Form and service patterns. Repository code is MIT; the published guidance is OGL-3.0. Images, Crown marks, and Nunjucks examples are excluded.",
+      "paths": {
+        "bank-details": "src/patterns/bank-details/index.md",
+        "payment-card-details": "src/patterns/payment-card-details/index.md",
+        "validation": "src/patterns/validation/index.md",
+        "error-summary": "src/components/error-summary/index.md",
+        "addresses": "src/patterns/addresses/index.md",
+        "names": "src/patterns/names/index.md",
+        "dates": "src/patterns/dates/index.md",
+        "check-answers": "src/patterns/check-answers/index.md"
+      }
     }
   ]
 }

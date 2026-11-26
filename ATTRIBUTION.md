@@ -11,6 +11,7 @@ The complete upstream license texts are committed at:
 - `content/sources/licenses/awesome-design-md.txt`
 - `content/sources/licenses/web-interface-guidelines.txt`
 - `content/sources/licenses/playwright-cli.txt`
+- `content/sources/licenses/govuk-design-system.txt`
 
 The machine-readable pins are in `sources.lock.json` and
 `content/sources.lock.json`. Every generated pack also carries a `provenance`
@@ -25,6 +26,7 @@ transformations applied.
 | [Awesome DESIGN.md](https://github.com/VoltAgent/awesome-design-md)                        | VoltAgent   | MIT        | `3b605329240ce735b510037cca322f1831fdd7f8` |
 | [Vercel Web Interface Guidelines](https://github.com/vercel-labs/web-interface-guidelines) | Vercel Labs | MIT        | `434b7f91364665f2f733b310ec54809bf8f37937` |
 | [Microsoft Playwright CLI](https://github.com/microsoft/playwright-cli)                    | Microsoft   | Apache-2.0 | `b1a5903c5b633b8c9f843ad7b629c2a78437040c` |
+| [GOV.UK Design System](https://github.com/alphagov/govuk-design-system)                    | GDS         | OGL-3.0    | `0c6de5736a4e755a3808fb31d3a7723a33b7c705` |
 
 ## Taste Skill
 
@@ -102,6 +104,28 @@ planned audit loop, plus reference skill documents.
 The TastePro audit implementation is original. M0 ships the audit rubric and
 prompt; it does not execute a browser. Browser execution is a later milestone.
 
+## GOV.UK Design System
+
+**Used for:** eight form and service patterns — bank details, payment card
+details, validation, error summary, addresses, names, dates, and check answers.
+
+**Paths:** `src/patterns/*/index.md` and `src/components/error-summary/index.md`
+in the pinned repository.
+
+**License:** repository code is MIT; the published guidance is licensed under
+the Open Government Licence v3.0.
+
+**TastePro transformations:**
+
+- Converted the published Markdown into `app-pattern` packs.
+- Stripped Nunjucks examples, links, and image references from the guidance.
+- Mapped each pattern to the TastePro domain taxonomy and form kinds.
+- Added provenance, source URLs, and quality metadata.
+- Did not copy Crown marks, screenshots, or example markup.
+
+**Not included:** the GOV.UK crown, Royal Coat of Arms, screenshots, card-scheme
+marks, or any binary asset.
+
 ## Original TastePro content
 
 The following are original to TastePro and licensed under Apache-2.0:
@@ -149,6 +173,18 @@ SOFTWARE.
 Microsoft Playwright CLI and TastePro's original code and content are licensed
 under the Apache License 2.0. The full text is in `LICENSE` and in
 `content/sources/licenses/playwright-cli.txt`.
+
+## Open Government Licence v3.0
+
+The GOV.UK Design System guidance is used under the Open Government Licence
+v3.0:
+
+> Contains public sector information licensed under the Open Government Licence
+> v3.0.
+
+The full licence text is committed at
+`content/sources/licenses/govuk-design-system.txt` and published at
+https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/.
 
 ## Reporting an attribution problem
 

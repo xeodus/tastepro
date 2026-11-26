@@ -154,21 +154,15 @@ Redraw first (`--redraw scenes`). If the brief really needs a scene the library 
 on the same stage so it inherits the guards:
 
 ```js
-Scenes["my-scene"] = (root, opts = {}) =>
-  Stage.scene(root, {
-    hold: opts.hold ?? 2, // screens the stage is held for
-    scrub: opts.scrub ?? true, // true when Lenis runs; 0.4-0.8 without it reads as weight
-    phone: "same", // or 'rest', or { hold, build } for a phone plan
-    build(tl, { q, phone }) {
-      // positions are fractions of the scene, 0-1
-      tl.fromTo(
-        q(".picture"),
-        { clipPath: "inset(30% 30% 30% 30%)" },
-        { clipPath: "inset(0% 0% 0% 0%)", duration: 0.6 },
-        0,
-      ).to(q(".title"), { yPercent: -40, autoAlpha: 0, duration: 0.25 }, 0.7);
-    },
-  });
+Scenes['my-scene'] = (root, opts = {}) => Stage.scene(root, {
+  hold: opts.hold ?? 2,          // screens the stage is held for
+  scrub: opts.scrub ?? true,     // true when Lenis runs; 0.4-0.8 without it reads as weight
+  phone: 'same',                 // or 'rest', or { hold, build } for a phone plan
+  build(tl, { q, phone }) {      // positions are fractions of the scene, 0-1
+    tl.fromTo(q('.picture'), { clipPath: 'inset(30% 30% 30% 30%)' }, { clipPath: 'inset(0% 0% 0% 0%)', duration: 0.6 }, 0)
+      .to(q('.title'), { yPercent: -40, autoAlpha: 0, duration: 0.25 }, 0.7);
+  },
+});
 ```
 
 and write its CSS finished composition first, then the live layout under `.scene.is-live`. Check it

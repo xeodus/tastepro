@@ -69,17 +69,9 @@ so. A headline is ink.
 With rules and shadows banned, a surface is told apart from the ground by tone alone:
 
 ```css
-.panel {
-  background: var(--surface);
-} /* 2–6 lightness points from --bg */
-.field {
-  background: var(--surface);
-  border: 0;
-} /* inputs: filled, with a clear focus state */
-.field:focus-visible {
-  outline: 2px solid var(--accent);
-  outline-offset: 2px;
-}
+.panel { background: var(--surface); }          /* 2–6 lightness points from --bg */
+.field { background: var(--surface); border: 0; } /* inputs: filled, with a clear focus state */
+.field:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 ```
 
 - One step is enough. If a panel does not read, increase padding or separate with space before

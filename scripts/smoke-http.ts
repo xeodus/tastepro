@@ -36,7 +36,7 @@ async function main(): Promise<void> {
     assert(health.ok, `healthz returned ${health.status}`);
     const healthBody = (await health.json()) as { status?: string; catalogEntries?: number };
     assert(healthBody.status === "ok", "healthz status is not ok");
-    assert(healthBody.catalogEntries === 873, "healthz catalog count is not 873");
+    assert(healthBody.catalogEntries === 881, "healthz catalog count is not 881");
     checks.push("healthz");
 
     const unauthorized = await fetch(`${running.url}/mcp`, {

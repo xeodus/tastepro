@@ -1,5 +1,47 @@
 [
   {
+    "id": "app-pattern/govuk-addresses",
+    "kind": "app-pattern",
+    "name": "Addresses",
+    "summary": "Help users provide an address",
+    "domains": [
+      "government-public",
+      "product-surfaces"
+    ],
+    "sectors": [
+      "government"
+    ],
+    "tags": [
+      "govuk",
+      "form",
+      "addresses"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "govuk-design-system",
+      "repo": "https://github.com/alphagov/govuk-design-system",
+      "commit": "0c6de5736a4e755a3808fb31d3a7723a33b7c705",
+      "path": "src/patterns/addresses/index.md",
+      "license": "OGL-3.0",
+      "authors": [
+        "Government Digital Service"
+      ],
+      "url": "https://design-system.service.gov.uk/",
+      "transformations": [
+        "stripped Nunjucks, images, and links"
+      ]
+    },
+    "sourceUrl": "https://design-system.service.gov.uk/patterns/addresses/",
+    "screen": "addresses",
+    "kinds": [
+      "form"
+    ],
+    "basis": "a addresses pattern from the GOV.UK Design System",
+    "blueprint": "Help users provide an address using one of the following:\n\n- address lookup\n- multiple text inputs\n- textarea\n\n## Address lookup\n\nAn address lookup helps users find a full address from partial information such as a postcode.\n\n### When to use an address lookup\n\nUse an address lookup to collect UK addresses where possible.\n\n### When not to use an address lookup\n\nAddress lookups generally only work for UK addresses.\n\nIf you expect both UK and international addresses, give users the option to either search for a UK address or manually enter an international address.\n\n### How an address lookup works\n\nAn address lookup lets users specify a UK address by entering their postcode and selecting their address from a list. There is also an option to enter a street name or number.\n\nWhen using an address lookup, you should:\n\n- make it clear that it will only work for UK addresses\n- provide a manual option for people with international addresses or addresses that are missing or not properly listed in the address lookup\n- let people enter their postcodes in upper or lower case and with or without spaces\n\n### Identify and match addresses with UPRN identifiers\n\nUse an address lookup that can identify addresses with Unique Property Reference Numbers (UPRNs). UPRNs are 12-digit unique identifiers for every addressable location across the UK.\n\nOpen standards for government mandate that services that store property information must use UPRN identifiers.\n\nUsing UPRN identifiers helps users enter addresses accurately. This helps your service by making address data more consistent and easier to handle, which reduces errors and removes the need for manual address matching in the future.\n\nSee a post on The power of UPRNs in linking data on the Geospatial Insights blog.\n\nYour address lookup should only use data from a single API. One option for this is the Ordnance Survey Places API. Public sector organisations can get access to OS Places API as part of the Public Sector Geospatial Agreement (PSGA).\n\n### Allow different postcode formats\n\nIt's easier for users if you accept and ignore unwanted characters. This is better than rejecting the input and telling the user they have not provided a valid postcode.\n\nYou should let users enter postcodes that contain:\n\n- upper and lower case letters\n- no spaces\n- additional spaces at the beginning, middle or end\n- punctuation like hyphens, brackets, dashes and full stops\n\n## Multiple text inputs\n\n### When to use multiple text inputs\n\nOnly use multiple text inputs to offer users a manual input option when you both:\n\n- know which countries the addresses will come from\n- can find a format that supports them all – this can be difficult to know if you’re asking for addresses outside of the UK\n\nUsing multiple text inputs means:\n\n- you can easily extract and use specific parts of an address\n- you can give help for individual text inputs\n- you can validate each part of the address separately\n- users can complete the form using their browser’s autocomplete function\n\nThe disadvantages of using multiple text inputs are that:\n\n- it’s hard to find a single format that works for all addresses\n- there’s no guarantee that users will use the text inputs the way you think they will\n- users cannot easily paste addresses from their clipboards\n\n### How multiple text inputs work\n\nIf you use multiple text inputs, you should:\n\n- only make individual text inputs mandatory if you really need the information\n- make the text inputs the appropriate length for the content – it helps people understand the form, for example, make postcode text inputs shorter than street text inputs\n- <a href=\"#allow-different-postcode-formats\">let users enter postcodes in different formats</a>\n\nMake sure there are enough text inputs to accommodate longer addresses if you know your users will need them. For example, allow users to include a company name or flat&nbsp;number.\n\nMake it optional for users to enter their county (such as Berkshire or Cumbria). It’s not part of a correct UK address, according to Royal Mail, and it’s not used to deliver post.\n\nRemove the county field if you’re sure your users will not need it, and your service will not use it.\n\n#### Use the autocomplete attribute on multiple address fields\n\nUse the `autocomplete` attribute on each individual address field to help users enter their address more quickly. This lets you specify each input’s purpose so browsers can autofill the information on a user’s behalf if they’ve entered it previously.\n\nCheck which input purpose to use for each field.\n\nIn production, you’ll need to do this to meet WCAG 2.2 success criterion 1.3.5 Identify input purpose. You will not normally need to use the `autocomplete` attribute in prototypes, as users will not generally be using their own devices.\n\n#### Error messages\n\nError messages should be styled like this:\n\nIf a postcode entered is not a real postcode, use a message like this:\n\nMake sure errors follow the guidance in the Error message component and have specific error messages for specific error states.\n\n## Textarea\n\n### When to use a textarea\n\nUse a textarea to offer users a manual option to enter an address, such as for international addresses or when users cannot find their address using an address lookup.\n\nA textarea is useful when you expect a broad range of address formats and you do not need to format the address for print or use specific sub-parts of the address (for example, street or postcode).\n\n### When not to use a textarea\n\nYou should not use a textarea if you need to separate an address into accurate sub-parts (for example, street or postcode).\n\n### How a textarea works\n\nTextareas let users enter an address in any format and make it easy to copy and paste addresses from their clipboard.\n\n#### Use the autocomplete attribute on a textarea\n\nUse the `autocomplete` attribute on the textarea component when you're asking for an address. This lets browsers autofill the information on a user's behalf if they’ve entered it previously.\n\nTo do this, set the `autocomplete` attribute to `street-address` as shown in the HTML and Nunjucks tabs in the textarea example above.\n\nIf you are working in production you’ll need to do this to meet WCAG 2.2 success criterion 1.3.5 Identify input purpose.\n\nYou will not normally need to use the `autocomplete` attribute in prototypes, as users will not generally be using their own devices.",
+    "phone": ""
+  },
+  {
     "id": "app-pattern/wallet-balance-actions-assets",
     "kind": "app-pattern",
     "name": "Balance, actions and assets",
@@ -44,6 +86,52 @@
     "basis": "a wallet home",
     "blueprint": "One column whose every element snaps to its two edges. A balance card (1px border, 16px radius, about 134px tall) holding one 32px figure and one line under it in which only the change is coloured ('-$0.09 in the last 30 days'); the title says what the figure is, so it needs no label. 32px below, 4 equal action tiles in a pale tint with dark same-hue icon and 12-14px label (4 x 144 + 3 x 16 = 624 in the study; scale the column and keep the arithmetic). 32-40px below, text tabs for the asset kinds on a 1px rule with a 2px ink indicator as wide as the word, a network or account select on the right of the same row. Then the asset table: 72px rows (48px round icon plus 24px), no dividers, two-line cells pairing a 16px value with a 14px grey unit amount, numeric columns right-aligned to shared edges, change as a small solid triangle and a coloured percentage, zero change grey, a missing share a grey em dash. On a desktop do not leave the column at phone width: the study's 624px column was flagged as a stretched phone screen; widen it to 864-1100 or give it a second column.",
     "phone": "This pattern is phone-first: the same column at full width with 16px margins, the 4 tiles in one row, the table as two-line rows with the value right-aligned."
+  },
+  {
+    "id": "app-pattern/govuk-bank-details",
+    "kind": "app-pattern",
+    "name": "Bank details",
+    "summary": "How to ask users for their bank details",
+    "domains": [
+      "fintech-payments",
+      "government-public",
+      "product-surfaces"
+    ],
+    "sectors": [
+      "government",
+      "finance"
+    ],
+    "tags": [
+      "govuk",
+      "form",
+      "payments",
+      "bank-details"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "govuk-design-system",
+      "repo": "https://github.com/alphagov/govuk-design-system",
+      "commit": "0c6de5736a4e755a3808fb31d3a7723a33b7c705",
+      "path": "src/patterns/bank-details/index.md",
+      "license": "OGL-3.0",
+      "authors": [
+        "Government Digital Service"
+      ],
+      "url": "https://design-system.service.gov.uk/",
+      "transformations": [
+        "stripped Nunjucks, images, and links"
+      ]
+    },
+    "sourceUrl": "https://design-system.service.gov.uk/patterns/bank-details/",
+    "screen": "bank-details",
+    "kinds": [
+      "form",
+      "payments"
+    ],
+    "basis": "a bank details pattern from the GOV.UK Design System",
+    "blueprint": "## When to use this pattern\n\nFollow this pattern if you need users to provide their bank details so you can pay them.\n\nOnly ask for bank details securely within your service. For example, do not ask users to send their bank details by email.\n\nThis pattern does yet not cover asking users for bank details so they can pay by Direct Debit.\n\nIf your service lets users set up Direct Debit payments, first check if you can use GOV.UK Pay.\n\n## How it works\n\nInclude extra fields if your payment service provider needs additional information.\n\n### Do not ask users for their account type\n\nDo not ask users if they have a bank account or building society account as not all users know this.\n\nIf your service does not support building society accounts, remove building society from the content and do not ask for a roll number.\n\n### Asking for building society roll numbers\n\nRoll numbers are only used by some building societies for certain types of account, so make this field optional.\n\nHowever, you need a user’s roll number when they have one. This is why the label says ‘(if you have one)’.\n\n### Allow different formats for the sort code\n\nLet users enter their sort code in whatever format is familiar to them. Allow additional spaces, hyphens and dashes.\n\nUse one input for the sort code. It allows users to enter their sort code more quickly, and avoids them needing to read and understand multiple input labels.\n\n### Use a branching question if users can choose how to get paid\n\nNot everyone has a bank account or wants to share their account details online.\n\nLet users choose to get paid by an alternative method.\n\nAdapt this question depending on what payment options your users need and what your service can support.\n\n### International bank account details\n\nIf you expect your users will have a non-UK bank account, you’ll need to:\n\n- use different fields to sort code and account number - usually BIC code (also known as 'SWIFT code') and IBAN\n- do research on other fields you may need to add for the countries your service supports\n- only show the fields for the country your user selects\n\nIf you expect your users to have a non-UK bank account, give them an option to select this.\n\nInternational bank accounts require different fields to sort code and account number.\n\nDifferent countries ask for additional details. This guidance does not cover all possibilities. You will need to research what information is needed by the countries your service supports.\n\nOnly show the fields that relate to that country.\n\nMost countries need the IBAN and BIC, sometimes known as the SWIFT code.\n\n### Error messages\n\nError messages should be styled like this:\n\nMake sure errors follow the guidance in the Error message component and have specific error messages for specific error states.\n\n#### If the name on the account is empty\n\nSay 'Enter the name on the account'.\n\n#### If the sort code is empty\n\nSay 'Enter a sort code'.\n\n#### If the sort code is not in the correct format\n\nSay 'Enter a valid sort code like 309430'.\n\n#### If the account number is empty\n\nSay 'Enter an account number'\n\n#### If the account number is not in the correct format\n\nSay 'Enter a valid account number like 00733445'.\n\n#### If the account number is too long or too short\n\nSay 'Account number must be between 6 and 8 digits'.\n\n#### If the building society roll number is too long\n\nSay 'Building society roll number must be between 1 and 18 characters'.\n\n#### If the building society roll number uses characters that are not allowed\n\nSay 'Building society roll number must only include letters a to z, numbers, hyphens, spaces, forward slashes and full stops'.\n\n## Research on this pattern\n\nThis pattern was originally contributed by a team at the Ministry of Justice.\n\nIt has not been tested in user research yet. It's closely based on the pattern used by GOV.UK Pay, and patterns used by the following government services.\n\n**Department for Work and Pensions**<br>\nUniversal Credit<br>\nGet Jobseeker’s Allowance<br>\nGet your State Pension\n\n**HM Revenue & Customs**<br>\nRegister your anti-money laundering supervision<br>\nTax-Free Childcare\n\n**Office of the Public Guardian**<br>\nClaim a power of attorney refund\n\n**Ministry of Justice**<br>\nClaim for costs of a child’s funeral\n\nIf you’ve used this pattern, get in touch to share your user research findings.\n\n### Next steps\n\nThe team that developed this pattern only found one service, Claim power of attorney refund, that warns users their bank details will be hidden for their security.\n\nBut GoCardless says to display a user's bank details again before the user submits them.\n\nSome users with older bank or building society accounts might have account numbers that are 9 or 10 digits long. Research is needed to confirm that these users know how to shorten their account number to fit into the field.\n\nMore research is also needed on:\n\n- how to ask users for their bank details in the context of setting up Direct Debit payments\n- whether bank details should be shown or not on a ‘Check your answers’ page and how that affects this pattern\n- how to handle international bank accounts so users are only asked for information that’s needed based on the location of their bank account\n- the information required to pay credit union accounts and how to ask credit union members for that information",
+    "phone": ""
   },
   {
     "id": "app-pattern/bar-list-ranking",
@@ -131,6 +219,50 @@
     "basis": "a flow builder in analytics mode",
     "blueprint": "No global navigation: a 44px top bar on the window ground with no rule (an exit arrow, the object's name at 16/600 with a status pill, and on the right 16px icon buttons on a 40px pitch, a secondary and a near-black primary, split by 1px dividers). Below, two panels on the ground with 8px outer margins and a 12px gap, both with a 1px border, 16px radius and no shadow: a 232px palette (16px padding, groups under 14px labels, items on a 40px pitch with a small type tile, a label and a drag grip) and the canvas, a flat well one step darker than the ground (#f4f6f8 on #f9fbfc) with no dot grid. Nodes share one width (338px in the study), 12px radius, a 1px hairline, padding 16 on top and 12 at the sides, a type tile and a 16/600 title, and their metrics in a well as key-value rows on a 32px pitch with right-aligned tabular or mono values ('0% (0)'). Nodes stack on one spine 64px apart with a 38px round insert button centred in each gap; connectors are 1px orthogonal lines with 6px rounded elbows. Overlays (date range, zoom, minimap) are small white controls pinned 16px inside the canvas corners. Canvas content is one size larger than the chrome (16 against 14). Node-type tiles may be tinted, one pastel per type, the same in the palette and on the canvas: pass --allow icon-chips to the inspector and say why.",
     "phone": "Editing a graph on a phone is rarely the job: show the flow read-only as a vertical list of nodes with their metrics, and the palette as a bottom sheet if editing is kept."
+  },
+  {
+    "id": "app-pattern/govuk-check-answers",
+    "kind": "app-pattern",
+    "name": "Check answers",
+    "summary": "Let users check their answers before submitting information to a service",
+    "domains": [
+      "government-public",
+      "product-surfaces"
+    ],
+    "sectors": [
+      "government"
+    ],
+    "tags": [
+      "govuk",
+      "form",
+      "review",
+      "check-answers"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "govuk-design-system",
+      "repo": "https://github.com/alphagov/govuk-design-system",
+      "commit": "0c6de5736a4e755a3808fb31d3a7723a33b7c705",
+      "path": "src/patterns/check-answers/index.md",
+      "license": "OGL-3.0",
+      "authors": [
+        "Government Digital Service"
+      ],
+      "url": "https://design-system.service.gov.uk/",
+      "transformations": [
+        "stripped Nunjucks, images, and links"
+      ]
+    },
+    "sourceUrl": "https://design-system.service.gov.uk/patterns/check-answers/",
+    "screen": "check-answers",
+    "kinds": [
+      "form",
+      "review"
+    ],
+    "basis": "a check answers pattern from the GOV.UK Design System",
+    "blueprint": "Let users check their answers before submitting information to a service.\n\n## When to use this pattern\n\nShow a single check answers page immediately before the confirmation screen for small to medium-sized transactions.\n\nWhen designing a very large transaction with multiple sections, it may help to include a check answers pages at the end of each section.\n\nThis can be valuable for services where different users might be completing each section. You should test this approach with your users to find out if it’s helpful.\n\nUse the Summary card component when users need to check multiple things of the same type. For example to review a series of interview appointments or application choices.\n\n## How it works\n\nCheck answers pages help to:\n\n- increase users’ confidence as they can clearly see that they have completed all the sections and that their data has been captured\n- reduce error rates as users are given a second chance to notice and correct errors before submitting data\n\n### Choose the right layout for the page\n\nMany services ask users for short answers, which are suitable for a layout that takes up two-thirds of the screen on desktop devices. For example, the 'Check your answers before submitting your application' page included in this guidance.\n\nUsing a two-thirds layout stops lines of text getting so long that the page becomes difficult to read. To learn more about line length, see 'Layout'. It also means the action links are closer to the other content on the page. Users with screen magnifiers are less likely to miss them.\n\nHowever, if your service asks users for longer or more detailed answers, a full width layout may be more suitable.\n\n### Make the page easy to understand\n\nUse the page title to tell the user what they need to do – otherwise, they might miss the 'submit' button at the end of the page.\n\nOn the page, you should also:\n\n- make it clear the transaction will not be complete until a user confirms their information is correct\n- break the content up into sections when you can\n- only show sections that are relevant to users &ndash; for example, if they’ve said they’re from the UK, do not show sections for questions they have not answered about locations outside of the UK\n- rephrase questions if you need to &ndash; for example, you do not need to label every individual line of an address, and you can rewrite long questions as shorter statements\n- make sure the 'submit' button clearly shows the action it performs &ndash; for example, ‘Change your tax details’ or ‘Send your claim form’\n\n### Let users go back and change their answers\n\nYou should provide a ‘Change’ link next to each section on your check answers page so that users can add or change the information. 'Change' links contain hidden text to make them accessible to screen reader users. Update the hidden text to describe what each 'change' link is for.\n\nIf a user decides to go back to a previous answer, make sure information they've already entered is pre-populated.\n\nThe answers pages should look the same way they did when the user last used them.\n\nWhen they’ve finished, the ‘Continue’ button should return them to the check answers page. They should not need to go through the rest of the transaction again.\n\nIf a user changes their response in a way that means you need to ask them more questions, do this before returning them to the check answers page.\n\nIf you have questions that are optional, let users know that they've skipped it without giving an answer by showing their response as ‘Not provided’.\n\n## Research on this pattern\n\nRead a blog about how the Carer’s Allowance Service used check answers to improve its users’ experience.",
+    "phone": ""
   },
   {
     "id": "app-pattern/count-cards-filter",
@@ -254,6 +386,92 @@
     "basis": "house pattern from testing: built after a flat 24-hour chart filled a whole first screen and lost to a richer layout",
     "blueprint": "Title row: the project's name as the h1 with a status pill (Healthy, Degraded) and a breadcrumb of team and product above it; repository, branch and a freshness stamp in a 14px grey line under it; the one primary action (Redeploy, or View logs when the latest deploy failed) on the right. Then a full-width card for what is live now: the production deployment's commit message at 16/600, its branch, short SHA in mono, author and age on the left, and three or four facts in divided cells on the right (domain, live since, build time, regions). Then the health strip: three or four KPIs in one divided container, each with its change in words and in the polarity colour when it moved the wrong way. Then a two-column row: the 24-hour chart at two-thirds (deploy markers as 1px ticks with their short SHA, the budget or SLO as a dashed reference line) and, at one-third, the block that explains the worst number (the spike and what reverted it, the status codes behind the error rate). Then the deployments table capped at 6 rows, a failed row carrying its failing step and a View logs action, a building row its elapsed time.",
     "phone": "The live deployment card becomes a stack of label-value rows; the KPIs a 2x2 grid; the chart full width with its markers; the explanation under it; deployments as two-line rows with region and duration on line 2."
+  },
+  {
+    "id": "app-pattern/govuk-dates",
+    "kind": "app-pattern",
+    "name": "Dates",
+    "summary": "Help users enter or select a date",
+    "domains": [
+      "government-public",
+      "product-surfaces"
+    ],
+    "sectors": [
+      "government"
+    ],
+    "tags": [
+      "govuk",
+      "form",
+      "dates"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "govuk-design-system",
+      "repo": "https://github.com/alphagov/govuk-design-system",
+      "commit": "0c6de5736a4e755a3808fb31d3a7723a33b7c705",
+      "path": "src/patterns/dates/index.md",
+      "license": "OGL-3.0",
+      "authors": [
+        "Government Digital Service"
+      ],
+      "url": "https://design-system.service.gov.uk/",
+      "transformations": [
+        "stripped Nunjucks, images, and links"
+      ]
+    },
+    "sourceUrl": "https://design-system.service.gov.uk/patterns/dates/",
+    "screen": "dates",
+    "kinds": [
+      "form"
+    ],
+    "basis": "a dates pattern from the GOV.UK Design System",
+    "blueprint": "Help users enter or select a date.\n\n## When to use this pattern\n\nFollow this pattern whenever you need users to provide or select a date as part of your&nbsp;service.\n\n## How it works\n\nThe way you should ask users for dates depends on the types of date you’re asking for.\n\nDates you may need users to provide include:\n\n- memorable dates, like a date of birth or marriage\n- dates from documents or cards, like a passport or credit card\n- approximate dates, like ‘December 2017’\n- relative dates, like ‘4 days from today’\n\nIn some cases you might need users to pick a date from a given selection.\n\n### Asking for memorable dates\n\nAsk for memorable dates, like dates of birth, using the Date input component component.\n\n### Asking for dates from documents and cards\n\nWhen asking for a date exactly as it’s shown on a passport, credit card or other document, make the fields match the format of the original. This makes it easier for users to copy the date across accurately.\n\n### Asking for approximate dates\n\nAllow users to enter an approximate date when you are asking them for information they may not know or may struggle to remember. For example, allow users to enter ‘December 2017’ for a field that says ‘the date you lost your passport’.\n\n### Asking for relative dates\n\nYou may need to ask for dates that are relative to today’s date or another date - this is common if a user is setting a reminder.\n\nTo do this let users enter or select relative dates like ‘tomorrow’ or ‘1 day before’. If the day of the week is important, show this as well.\n\n### Helping users to pick a date\n\nUsers might need to pick a date from a selection, for example, to book an appointment.\n\nTo do this, you can present dates in a calendar format using a calendar control. Users are typically shown one month’s worth of dates at a time, and can skip through months and&nbsp;years.\n\nOnly use a calendar control if users need to:\n\n- pick a date in the near future or recent past\n- know the day of the week, or the week of the month, as well as the date\n- be able to see dates in relation to other dates\n\nNever make a calendar control that depends on JavaScript as the only input option.&nbsp;Allow users to enter the date into a text input as well as use the control.\n\n### How to write dates\n\nSee the GOV.UK style for writing dates and date ranges.\n\nIf you give an example date, use 13 or more for the day and 9 or less for the month - for example ‘27 3 2007’. This helps users enter the date in the correct order and shows them they do not need to include leading zeroes.\n\n## Research on this pattern\n\nRead a blog post about asking for a date of birth.\n\nIf you’ve used this pattern, get in touch to share your user research findings.\n\nMore research is needed to determine the extent to which users struggle to enter months as numbers, and whether allowing them to enter months as text is helpful.",
+    "phone": ""
+  },
+  {
+    "id": "app-pattern/govuk-error-summary",
+    "kind": "app-pattern",
+    "name": "Error summary",
+    "summary": "Use an error summary when there is a validation error",
+    "domains": [
+      "product-surfaces",
+      "government-public"
+    ],
+    "sectors": [
+      "government"
+    ],
+    "tags": [
+      "govuk",
+      "form",
+      "errors",
+      "error-summary"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "govuk-design-system",
+      "repo": "https://github.com/alphagov/govuk-design-system",
+      "commit": "0c6de5736a4e755a3808fb31d3a7723a33b7c705",
+      "path": "src/components/error-summary/index.md",
+      "license": "OGL-3.0",
+      "authors": [
+        "Government Digital Service"
+      ],
+      "url": "https://design-system.service.gov.uk/",
+      "transformations": [
+        "stripped Nunjucks, images, and links"
+      ]
+    },
+    "sourceUrl": "https://design-system.service.gov.uk/components/error-summary/",
+    "screen": "error-summary",
+    "kinds": [
+      "form",
+      "errors"
+    ],
+    "basis": "a error summary pattern from the GOV.UK Design System",
+    "blueprint": "Use this component at the top of a page to summarise any errors a user has made.\n\nWhen a user makes an error, you must show both an error summary and an Error message component next to each answer that contains an error.\n\n## When to use this component\n\nAlways show an error summary when there is a validation error, even if there’s only one.\n\n## How it works\n\nYou must:\n\n- move keyboard focus to the error summary (the govuk-frontend javascript will do this for you)\n- include the heading ‘There is a problem’\n- link to each of the answers that have validation errors\n- make sure the error messages in the error summary are worded the same as those which appear next to the inputs with errors\n\nAs well as showing an error summary, follow the Validation pattern - for example, by adding ‘Error: ’ to the beginning of the page `<title>` so screen readers read it out as soon as possible.\n\nAnd make your error messages clear and concise.\n\nThere are 2 ways to use the error summary component. You can use HTML or, if you are using Nunjucks or the GOV.UK Prototype Kit, you can use the Nunjucks macro.\n\n### Linking from the error summary to each answer\n\nYou must link the errors in the error summary to the answer they relate to.\n\nFor questions that require a user to answer using a single field, like a file upload, select, textarea, text input or character count, link to the field.\n\nWhen a user has to enter their answer into multiple fields, such as the day, month and year fields in the date input component, link to the first field that contains an error.\n\nIf you do not know which field contains an error, link to the first field.\n\nFor questions that require a user to select one or more options from a list using radios or checkboxes, link to the first radio or checkbox.\n\n### Where to put the error summary\n\nPut the error summary at the top of the `main` container. If your page includes breadcrumbs or a back link, place it below these, but above the `<h1>`.",
+    "phone": ""
   },
   {
     "id": "app-pattern/finance-home-pinned-rail",
@@ -541,6 +759,48 @@
     "phone": "KPI tabs become a 2-up grid above the chart, with the selected cell marked by a fill (never an underline floating inside the grid) or a row of tabs that scrolls sideways; the chart is full width, 160-200px tall, with 4 x labels; the comparison table keeps its two right-aligned columns."
   },
   {
+    "id": "app-pattern/govuk-names",
+    "kind": "app-pattern",
+    "name": "Names",
+    "summary": "Help users correctly enter their name",
+    "domains": [
+      "government-public",
+      "product-surfaces"
+    ],
+    "sectors": [
+      "government"
+    ],
+    "tags": [
+      "govuk",
+      "form",
+      "names"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "govuk-design-system",
+      "repo": "https://github.com/alphagov/govuk-design-system",
+      "commit": "0c6de5736a4e755a3808fb31d3a7723a33b7c705",
+      "path": "src/patterns/names/index.md",
+      "license": "OGL-3.0",
+      "authors": [
+        "Government Digital Service"
+      ],
+      "url": "https://design-system.service.gov.uk/",
+      "transformations": [
+        "stripped Nunjucks, images, and links"
+      ]
+    },
+    "sourceUrl": "https://design-system.service.gov.uk/patterns/names/",
+    "screen": "names",
+    "kinds": [
+      "form"
+    ],
+    "basis": "a names pattern from the GOV.UK Design System",
+    "blueprint": "## When to use this pattern\n\nYou should follow this pattern whenever you need to ask for a user’s name as part of your service.\nOnly ask for people’s names if you need that information to deliver a service.\n\n## How it works\n\nMake it as easy as possible for a user to enter their name.\n\n### Make sure the fields work for most of your users\n\nFields must be long enough to accommodate the names of your users. You should use population data or data about your existing users to do this.\n\nSupport all the characters users may need to enter, including numbers and symbols.\n\n### Single or multiple name fields\n\nUse single or multiple fields depending on your user’s needs. Not everyone’s name fits the first-name, last-name format. Using multiple name fields mean there’s more risk that a person’s name will not fit the format you’ve chosen and that it is entered incorrectly.\n\nA single name field can accommodate the broadest range of name types, but means you cannot reliably extract parts of a name.\n\n### Labelling name fields\n\nLabel single name fields:\n\n- ‘Full name’\n\nFor multiple name fields, use:\n\n- ‘First name’\n- ‘Last name’\n\nIf users are from outside the UK, use the labels:\n\n- ‘Given names’\n- ‘Family name’\n\nMake it clear whether you need someone’s common name, or their name as it's written on official documents such as a passport or driving licence.\n\n#### Middle names\n\nOnly ask for middle names if your service requires them.\n\nUse the label:\n\n- ’Middle names‘\n\nMake sure middle names are optional, as not everyone has them.\n\nThe label should not include `(optional)`. Users will enter their middle names if they have them and skip the field if they do not.\n\n### Use the autocomplete attribute on name fields\n\nUse the `autocomplete` attribute on the text input component when you're asking for a user's name. This lets browsers autofill the information on a user's behalf if they’ve entered it previously.\n\nIf you are asking for a user's full name in a single field, set the `autocomplete` attribute to `name`.\n\nIf you are asking users to enter their name in multiple fields, set the `autocomplete` attribute on both fields using:\n\n- `given-name` for fields labelled 'First name' or 'Given name'\n- `family-name` for fields labelled 'Last name' or 'Family name'\n\nIf you are working in production you’ll need to do this to meet WCAG 2.2 success criterion 1.3.5 Identify input purpose.\n\nYou will not normally need to use the `autocomplete` attribute in prototypes, as users will not generally be using their own devices.\n\n### Do not spellcheck user's names\n\nSometimes, browsers will spellcheck the information a user enters into a text input. To make sure user's names will not be spellchecked, set the `spellcheck` attribute to `false` as shown in this example.\n\n### Avoid asking for a person’s title\n\nAvoid asking users for their title.\n\nIt’s extra work for them and you’re asking them to potentially reveal their gender and marital status, which they may not want to do.\n\nIt’s also hard to predict the range of titles your users will have. If you have to ask for someone’s title, use an optional Text input component not a Select component.\n\nRemember to correctly use people’s names in any resulting correspondence.\n\n### Allow users to change their name\n\nIf your service stores personal information, you should allow users to update their details, including their name.\n\nAllowing users to change their name helps your service respect their personal identity. It also means they can continue using your service without having to start over.\n\nPeople change their name for many reasons. For example, because of a change in marital status, family situation or gender.\n\nAvoid making it hard for users to change their name. As well as causing them distress, it may make them reluctant to use your service.\n\n### Error messages\n\nError messages should be styled like this:\n\nMake sure errors follow the guidance in the Error message component and have specific error messages for specific error states.\n\n## Research on this pattern\n\nIf you’ve used this pattern, get in touch to share your user research findings.\n\nYou can also read these articles to learn more about asking for users’ names:\n\n- Personal names around the world (W3C)\n- Avoid splitting single input entities (Baymard)\n- Falsehoods about names (Kalzumeus)",
+    "phone": ""
+  },
+  {
     "id": "app-pattern/object-detail-header-grid",
     "kind": "app-pattern",
     "name": "Object header and a six-column grid",
@@ -588,6 +848,52 @@
     "basis": "an event's analytics tab",
     "blueprint": "The page header is the object itself: one card (88px, 14px padding) holding a 50x62 cover, the 18/600 name with 28px icon buttons beside it (open, copy, share), a 13px grey meta line (date, time, place) and outlined 36px actions on the right. Under it, underline tabs on a full-width 1px rule, then a 36px row with a segmented time range on the left and a refresh button on the right. The body is one 6-column grid with one gutter (14px) in both directions whose spans change by row while every edge lands on the same lines: 3 KPI tiles of 2 columns, the main chart in 4 columns beside a side chart in 2, two progress cards of 3, a full-width trend of 6. Give the widest card to the screen's question, and do not give 824px to one ring and one legend row (flagged).",
     "phone": "The header card keeps cover, name and meta, with actions in a kebab; every grid item takes the full width in the same order."
+  },
+  {
+    "id": "app-pattern/govuk-payment-card-details",
+    "kind": "app-pattern",
+    "name": "Payment card details",
+    "summary": "How to ask users for their payment card details",
+    "domains": [
+      "fintech-payments",
+      "ecommerce-dtc",
+      "government-public"
+    ],
+    "sectors": [
+      "government",
+      "finance"
+    ],
+    "tags": [
+      "govuk",
+      "form",
+      "payments",
+      "payment-card-details"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "govuk-design-system",
+      "repo": "https://github.com/alphagov/govuk-design-system",
+      "commit": "0c6de5736a4e755a3808fb31d3a7723a33b7c705",
+      "path": "src/patterns/payment-card-details/index.md",
+      "license": "OGL-3.0",
+      "authors": [
+        "Government Digital Service"
+      ],
+      "url": "https://design-system.service.gov.uk/",
+      "transformations": [
+        "stripped Nunjucks, images, and links"
+      ]
+    },
+    "sourceUrl": "https://design-system.service.gov.uk/patterns/payment-card-details/",
+    "screen": "payment-card-details",
+    "kinds": [
+      "form",
+      "payments"
+    ],
+    "basis": "a payment card details pattern from the GOV.UK Design System",
+    "blueprint": "## When to use this pattern\n\nBefore using this pattern, check if GOV.UK Pay is suitable for your service.\n\nIf you cannot use GOV.UK Pay and need to build your own payment service, follow this pattern to collect payment card details from your users.\n\n## How it works\n\n### Allow different formats\n\nLet users enter payment card numbers in whatever format is familiar to them. Allow additional spaces, hyphens and dashes.\n\n### Help users enter valid card information\n\nPresent all fields on a single page, in the order in which they appear on a credit or debit card. This makes it easy for users to transcribe the information from their payment card.\n\nShow logos for the cards you accept as icons so users can see whether their card is supported.\n\nUse Issuer Identification Number (IIN) lookups to validate the card number as the user enters it. Once you’ve been able to identify the user’s card type, leave only the relevant logo highlighted and grey out the others.\n\n<div class=\"app-video\">\n  <video class=\"app-video__player\" role=\"region\" aria-labelledby=\"card-number-video-description\" controls muted>\n    <source src=\"card-number.mp4\" type=\"video/mp4\">\n  </video>\n  <p class=\"app-video__description\" id=\"card-number-video-description\">\n    This video shows the card number validation in practice. It does not have any audio.\n  </p>\n</div>\n\nIf JavaScript is not available, display all of the logos anyway, as they still help users to understand which card types you support.\n\nWhen you validate the card number, the card security code information should update according to the type of card being used. For example, if a user enters an American Express card, the hint text and icon should change to match the front of the card.\n\nDo not use CVV or other acronyms for the card security code.\n\nIf you need to ask for a user's name elsewhere in your service, do not assume that the name on their card will be the same.\n\n## Research on this pattern\n\nThis pattern is based on the one used in GOV.UK Pay, which has been live since November 2016.\n\nThe GOV.UK Pay team tests this pattern quarterly as part of its user research.\n\n### Services using this pattern\n\nAs of August 2018 the following services were using this pattern as part of GOV.UK Pay.\n\n**Office of the Public Guardian**<br>\nLasting Power of Attorney\n\n**Ministry of Justice**<br>\nSend money to a prisoner\n\n**Border Force**<br>\nRegistered Traveller: faster entry through the UK border<br>\nGlobal Entry: apply for faster entry to the USA<br>\nElectronic Visa Waiver\n\n**Disclosure and Barring Service**<br>\nBasic Disclosure<br>\nDisclosure Scotland\n\n**HM Courts and Tribunals**<br>\nProbate Fees<br>\nCivil Money Claims<br>\nDivorce Fees\n\n**Foreign and Commonwealth Office**<br>\nEmergency Travel Documents\n\n**Ministry of Defence**<br>\nDefence Academy\n\n**Department for Digital, Culture, Media & Sport**<br>\nGovernment Art Collection<br>\nPress Accreditation\n\n**Department for International Trade**<br>\nOverseas Market Introduction Service\n\n**Nottingham University Hospitals NHS Trust**<br>\nPrivate Care\n\n**Land Registry**<br>\nLocal Land Charges\n\n**Environment Agency**<br>\nWaste Permitting",
+    "phone": ""
   },
   {
     "id": "app-pattern/chart-pairs",
@@ -720,6 +1026,50 @@
     "basis": "house pattern from round-4 testing: a home-energy overview without it read as the stock dark dashboard; real energy apps lead with this flow",
     "blueprint": "A strip under the title row that answers \"where is the power going now?\": four nodes in one row (Sun, House, Battery, Grid), each a 14px label over its live figure at 20-24px with the unit as a grey suffix (2.4 kW), the battery's charge under its figure (88%). Between neighbours, a 2px connector only where power flows now, with its direction and amount in words above it (\"to battery 1.7 kW\"); an idle link is a 1px dashed rule in the grid colour. Solar and export carry the one data hue, import from the grid is grey, the house is ink. The flows balance and are built from one live-state object that also feeds the top bar and the charts: sun + grid import + battery out = house + battery in + export. A freshness stamp at the strip's right (\"Live · 20:34\").",
     "phone": "The four nodes become a 2x2 grid in the same order (Sun, House / Battery, Grid) with the flow sentence under it (\"Sun 2.4 kW: house 0.7, battery 1.7\"), no connectors."
+  },
+  {
+    "id": "app-pattern/govuk-validation",
+    "kind": "app-pattern",
+    "name": "Recover from validation errors",
+    "summary": "Check the answers users give to make sure they’re valid - and if there’s an error, tell them what's wrong and how to fix it",
+    "domains": [
+      "product-surfaces",
+      "government-public"
+    ],
+    "sectors": [
+      "government"
+    ],
+    "tags": [
+      "govuk",
+      "form",
+      "errors",
+      "validation"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "govuk-design-system",
+      "repo": "https://github.com/alphagov/govuk-design-system",
+      "commit": "0c6de5736a4e755a3808fb31d3a7723a33b7c705",
+      "path": "src/patterns/validation/index.md",
+      "license": "OGL-3.0",
+      "authors": [
+        "Government Digital Service"
+      ],
+      "url": "https://design-system.service.gov.uk/",
+      "transformations": [
+        "stripped Nunjucks, images, and links"
+      ]
+    },
+    "sourceUrl": "https://design-system.service.gov.uk/patterns/validation/",
+    "screen": "validation",
+    "kinds": [
+      "form",
+      "errors"
+    ],
+    "basis": "a recover from validation errors pattern from the GOV.UK Design System",
+    "blueprint": "Check the information the user gives you to make sure it’s valid. If there's a validation error, tell the user what's gone wrong and how to fix it. Turn off HTML5 validation.\n\n## When to use this pattern\n\nUse validation to identify when the user tried to provide information that you're not able to use. Then show the user an error message that helps them to fix the problem.\n\nBut minimise your chances of needing to show an error message in the first place by:\n\n- making sure your questions are well designed\n- accepting information in different formats, as long as it’s not ambiguous (for example, accept postcodes with or without spaces - and names that include a non-alphabetical character or an apostrophe, accent or other diacritic)\n\n## When not to use this pattern\n\nDo not use validation to check whether the user is eligible to use the service or has permission to do something. Instead, take them to a page which tells them they’re not eligible and gives them useful information about what to do next.\n\nThere are separate patterns for:\n\n- ‘There is a problem with the service’ pages\n- ‘Page not found’ pages\n- ‘Service unavailable’ pages\n\n## How it works\n\nValidation should refuse to accept:\n\n- information that cannot be correct\n- information that’s too ambiguous for you to use\n- missing information, if the information is required\n\nFor example, if you’re asking for someone’s date of birth you should not accept ‘13’ in the month field.\n\nUse validation to ignore unwanted characters, unless it would make the information too unclear for you to use. For example, any spaces, invisible characters or punctuation, like hyphens, brackets, dashes and full stops.\n\nIf these characters caused a validation error, it would be difficult for the user to see and fix – especially if added by accident.\n\nYou should ignore unwanted characters entered:\n\n- as part of numbers and codes, such as postcodes or card details\n- before or after an answer, as users might have copied and pasted them in by accident\n- by dictation software – this is particularly common when dictating numbers\n\n### How to tell the user about validation errors\n\nIf the user's answers fail validation:\n\n- show them the page again, with the form fields as the user filled them in\n- add ‘Error: ’ to the beginning of the page `<title>` so screen readers read it out as soon as possible\n- show an Error summary component at the top of the page, and move keyboard focus to it\n- show Error message components next to fields with errors\n\nRead guidance on writing good error messages.\n\nKeeping information that failed validation helps users to:\n\n- see what went wrong\n- edit their previous answer\n- avoid re-entering information\n\n### When to tell the user about validation errors\n\nDo not validate when the user moves away from a field. Wait until they try to move to the next part of the service - usually by clicking the ‘continue’ or ‘submit’ button at the bottom of the page.\n\nGenerally speaking, avoid validating the information in a field before the user has finished entering it. This sort of validation can cause problems - especially for users who type more slowly.\n\nOnly add this sort of validation if your user research shows that, on balance, it solves more problems for users than it causes. For example, the Character count component shows users an error message when they go over the character limit. Because it’s important that users do not spend time and effort writing out a response that turns out to be too long.\n\nIf you do use this sort of validation, make sure you validate in a way that’s accessible.\n\n## Client side and server side validation\n\nThere are 2 ways to carry out validation:\n\n- server side validation\n- client side validation (in the browser, using either JavaScript or HTML)\n\nYou’ll always need to carry out server side validation, even if you use client side validation. This is because there’s no guarantee that client side validation will work in all circumstances. For example, the user can bypass client side validation, or JavaScript can fail to load.\n\nOnly add client side validation if you find a user need for it. For example, because research shows it helps the user if you validate the information they're providing as they type.\n\nBefore you add client side validation, consider that:\n\n- it's hard to tell the user about errors in a way that works reliably across different browsers and assistive technologies\n- carrying out both kinds of validation means you have to check their rules do not conflict\n\n## Turn off HTML5 validation\n\nHTML5 validation is a type of client side validation built into browsers. Do not use it because:\n\n- the visual style, placement and content of HTML5 error messages cannot be made consistent with the GOV.UK Design System\n- we know that the GOV.UK Design System error message and error summary components are accessible\n\nTo turn off HTML5 validation, add ‘novalidate’ to your form tags.\n\nDo not add ‘required’ to your input fields.\n\n## Research on this pattern\n\nThis approach to validation has been used on a number of services over an extended period of time. For example, Renew or replace your adult passport.\n\nBut we'd like to expand the guidance, and we're especially interested in hearing from teams whose research has identified a need to use client side validation.\n\nWe'd also like to know about any research into whether not adding ‘required‘ to form fields causes problems for screen reader users.",
+    "phone": ""
   },
   {
     "id": "app-pattern/report-card-legend-table",
