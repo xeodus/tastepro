@@ -5,15 +5,25 @@
 1. Create the GitHub repository and push `main`.
 2. Enable branch protection for `main`, Dependabot alerts, CodeQL, and secret
    scanning.
-3. Configure npm trusted publishing for the `tastepro` package:
-   repository `xeodus/tastepro`, workflow `release.yml`, and explicitly allow
-   the `npm publish` action (new configurations default to staged publishing
-   only). Then set the repository variable `NPM_PUBLISH=true`.
-   If npm requires the package to exist first, set the `NPM_TOKEN` secret for
-   the first publish, then configure trusted publishing and revoke the token.
-4. Confirm the MCP Registry namespace `io.github.xeodus` is available to this
-   repository, then set the repository variable `MCP_REGISTRY_PUBLISH=true`.
-5. After the first image publish, set the GHCR package visibility to public if
+3. **First publish only.** Create a granular npm token with publish rights and
+   store it as the `NPM_TOKEN` secret. Set the repository variable
+   `NPM_PUBLISH=true`. Trusted publishing cannot be configured before the
+   package exists: `npm trust` explicitly requires it.
+4. After the first release is live, configure the trusted publisher:
+
+   ```bash
+   npm trust github tastepro \
+     --file release.yml \
+     --repo xeodus/tastepro \
+     --allow-publish
+   ```
+
+   This requires npm 11.15+, 2FA on the npm account, and write access to the
+   package. Then revoke `NPM_TOKEN`; later releases authenticate through OIDC.
+   A new trusted publisher configuration expires if its first publish does not
+   happen within 2 days, so configure it just before the next release.
+5. Set the repository variable `MCP_REGISTRY_PUBLISH=true`.
+6. After the first image publish, set the GHCR package visibility to public if
    users should pull without authentication.
 
 ## Cut a release

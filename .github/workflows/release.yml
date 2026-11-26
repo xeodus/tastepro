@@ -297,12 +297,24 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Install mcp-publisher
+      - name: Install cosign
+        uses: sigstore/cosign-installer@v3
+
+      - name: Download and verify mcp-publisher
         run: |
           set -euo pipefail
-          curl -fsSL "https://github.com/modelcontextprotocol/registry/releases/download/${MCP_PUBLISHER_VERSION}/mcp-publisher_linux_amd64.tar.gz" \
-            | tar xz mcp-publisher
+          archive="mcp-publisher_linux_amd64.tar.gz"
+          base_url="https://github.com/modelcontextprotocol/registry/releases/download/${MCP_PUBLISHER_VERSION}"
+          curl -fsSL -o "$archive" "$base_url/$archive"
+          curl -fsSL -o "$archive.sigstore.json" "$base_url/$archive.sigstore.json"
+          cosign verify-blob \
+            --bundle "$archive.sigstore.json" \
+            --certificate-identity "https://github.com/modelcontextprotocol/registry/.github/workflows/release.yml@refs/tags/${MCP_PUBLISHER_VERSION}" \
+            --certificate-oidc-issuer "https://token.actions.githubusercontent.com" \
+            "$archive"
+          tar xzf "$archive" mcp-publisher
           sudo mv mcp-publisher /usr/local/bin/
+          rm -f "$archive" "$archive.sigstore.json"
 
       - name: Validate server.json
         run: mcp-publisher validate
