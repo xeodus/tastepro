@@ -18,7 +18,7 @@ distribution path, and domain-specific public-sector patterns:
 - `npx -y tastepro` (npm, with provenance) and signed standalone binaries.
 - `tastepro audit <file>` for a local verdict with rule ids, evidence, fixes,
   and `--fail-on error` for CI.
-- 928 committed content packs across 14 kinds, including 57 app patterns.
+- 942 committed content packs across 14 kinds, including 57 app patterns.
 - GOV.UK, USWDS, CMS, and NHS.UK form and service patterns for payments,
   identity, eligibility, onboarding, and care journeys.
 - 40-domain taxonomy with 15 deep seed playbooks and same-family fallback for
@@ -33,7 +33,7 @@ distribution path, and domain-specific public-sector patterns:
   transport.
 - `server.json` for the official MCP Registry, covering the npm package and the
   GHCR image.
-- Content ingestion from nine pinned upstream repositories.
+- Content ingestion from ten pinned upstream repositories.
 - Unit, integration, contract, and production-tier tests.
 - Docker and staging scaffolding.
 
@@ -149,9 +149,9 @@ With Bun: `bun add -g tastepro`. From a checkout: `bun link`.
 | `reference`   |    25 | Full reference documents                |
 | `app-style`   |     7 | App visual systems                      |
 | `app-shell`   |     5 | App shell blueprints                    |
-| `app-pattern` |    80 | App screen and form patterns            |
+| `app-pattern` |    94 | App screen and form patterns            |
 
-Quality mix: 605 verified, 313 reference, 10 incomplete. Incomplete packs are
+Quality mix: 619 verified, 313 reference, 10 incomplete. Incomplete packs are
 excluded by default and are never presented as complete.
 
 The content is committed under `content/generated/`, so the server works

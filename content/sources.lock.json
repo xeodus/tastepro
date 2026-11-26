@@ -171,6 +171,21 @@
         "patterns": "src/pages/patterns/*/index.mdx",
         "dataVisualization": "src/pages/data-visualization/*/index.mdx"
       }
+    },
+    {
+      "id": "spectrum",
+      "name": "Adobe Spectrum",
+      "repo": "https://github.com/adobe/spectrum-design-data",
+      "commit": "1818e9c1035fd38f361a0698fb3453477b702552",
+      "license": "Apache-2.0",
+      "licenseUrl": "https://raw.githubusercontent.com/adobe/spectrum-design-data/1818e9c1035fd38f361a0698fb3453477b702552/LICENSE",
+      "authors": ["Adobe"],
+      "url": "https://spectrum.adobe.com/",
+      "notes": "Spectrum 2 component and foundation guidance in JSON. Schema is 1.0.0-draft; pin and validate. Text only; images, fonts, and Adobe marks are excluded.",
+      "paths": {
+        "components": "packages/design-data/components/*.json",
+        "guidelines": "packages/design-data/guidelines/*.json"
+      }
     }
   ]
 }

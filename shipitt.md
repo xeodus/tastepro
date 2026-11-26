@@ -88,7 +88,7 @@ Rules:
 - Version `1.1.0` for packaging + registry + protocol changes.
 
 **Gate:** `npm pack --dry-run` shows only runtime files; clean-dir
-`npx -y tastepro info` prints 928 entries; `npm audit signatures` verifies.
+`npx -y tastepro info` prints 942 entries; `npm audit signatures` verifies.
 
 **Rollback:** unpublish is not possible after 72h; publish a patch instead.
 

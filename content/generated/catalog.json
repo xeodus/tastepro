@@ -25714,6 +25714,64 @@
     }
   },
   {
+    "id": "app-pattern/spectrum-applying-the-type-system",
+    "kind": "app-pattern",
+    "name": "Applying the type system",
+    "summary": "Applying the type system The following are some general examples to show how the Spectrum 2 typography system all comes together, and how type styles can be used together to create visual hierarchy.",
+    "domains": [
+      "b2b-saas",
+      "product-surfaces",
+      "data-analytics",
+      "developer-tools"
+    ],
+    "sectors": [
+      "enterprise"
+    ],
+    "tags": [
+      "spectrum",
+      "guideline",
+      "foundation",
+      "designing",
+      "applying-the-type-system"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "spectrum",
+    "sourceUrl": "https://spectrum.adobe.com/foundations/typography/applying-the-type-system",
+    "metrics": {
+      "screen": "applying-the-type-system"
+    }
+  },
+  {
+    "id": "app-pattern/spectrum-attention-hierarchy",
+    "kind": "app-pattern",
+    "name": "Attention hierarchy",
+    "summary": "Attention hierarchy Attention hierarchy is a core concept in Spectrum 2.",
+    "domains": [
+      "b2b-saas",
+      "product-surfaces",
+      "data-analytics",
+      "developer-tools"
+    ],
+    "sectors": [
+      "enterprise"
+    ],
+    "tags": [
+      "spectrum",
+      "guideline",
+      "foundation",
+      "designing",
+      "attention-hierarchy"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "spectrum",
+    "sourceUrl": "https://spectrum.adobe.com/foundations/attention-hierarchy",
+    "metrics": {
+      "screen": "attention-hierarchy"
+    }
+  },
+  {
     "id": "app-pattern/carbon-axes-and-labels",
     "kind": "app-pattern",
     "name": "Axes and labels",
@@ -25874,6 +25932,64 @@
     }
   },
   {
+    "id": "app-pattern/spectrum-button",
+    "kind": "app-pattern",
+    "name": "Button",
+    "summary": "Buttons allow users to perform an action or to navigate to another page.",
+    "domains": [
+      "b2b-saas",
+      "product-surfaces",
+      "data-analytics",
+      "developer-tools"
+    ],
+    "sectors": [
+      "enterprise"
+    ],
+    "tags": [
+      "spectrum",
+      "component",
+      "usage",
+      "actions",
+      "button"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "spectrum",
+    "sourceUrl": "https://spectrum.adobe.com/page/button/",
+    "metrics": {
+      "screen": "button"
+    }
+  },
+  {
+    "id": "app-pattern/spectrum-card",
+    "kind": "app-pattern",
+    "name": "Card",
+    "summary": "Groups related content, such as a preview, a title and a description, on one surface. A card can be selectable and can be clickable as a whole.",
+    "domains": [
+      "b2b-saas",
+      "product-surfaces",
+      "data-analytics",
+      "developer-tools"
+    ],
+    "sectors": [
+      "enterprise"
+    ],
+    "tags": [
+      "spectrum",
+      "component",
+      "usage",
+      "containers",
+      "card"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "spectrum",
+    "sourceUrl": "https://spectrum.adobe.com/page/card/",
+    "metrics": {
+      "screen": "card"
+    }
+  },
+  {
     "id": "app-pattern/carbon-chart-anatomy",
     "kind": "app-pattern",
     "name": "Chart anatomy",
@@ -25980,6 +26096,64 @@
     }
   },
   {
+    "id": "app-pattern/spectrum-checkbox",
+    "kind": "app-pattern",
+    "name": "Checkbox",
+    "summary": "Checkboxes allow users to select multiple items from a list of individual items, or to mark one individual item as selected.",
+    "domains": [
+      "b2b-saas",
+      "product-surfaces",
+      "data-analytics",
+      "developer-tools"
+    ],
+    "sectors": [
+      "enterprise"
+    ],
+    "tags": [
+      "spectrum",
+      "component",
+      "usage",
+      "inputs",
+      "checkbox"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "spectrum",
+    "sourceUrl": "https://spectrum.adobe.com/page/checkbox/",
+    "metrics": {
+      "screen": "checkbox"
+    }
+  },
+  {
+    "id": "app-pattern/spectrum-cognitive",
+    "kind": "app-pattern",
+    "name": "Cognitive",
+    "summary": "Neurodivergence encompasses a wide range of cognitive, behavioral, and developmental differences.",
+    "domains": [
+      "b2b-saas",
+      "product-surfaces",
+      "data-analytics",
+      "developer-tools"
+    ],
+    "sectors": [
+      "enterprise"
+    ],
+    "tags": [
+      "spectrum",
+      "guideline",
+      "foundation",
+      "designing",
+      "cognitive"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "spectrum",
+    "sourceUrl": "https://main--spectrum-hub--adobe.aem.live/foundations/inclusivity/cognitive",
+    "metrics": {
+      "screen": "cognitive"
+    }
+  },
+  {
     "id": "app-pattern/carbon-color-palettes",
     "kind": "app-pattern",
     "name": "Color palettes",
@@ -26002,6 +26176,35 @@
     "sourceUrl": "https://carbondesignsystem.com/data-visualization/color-palettes/",
     "metrics": {
       "screen": "color-palettes"
+    }
+  },
+  {
+    "id": "app-pattern/spectrum-colors",
+    "kind": "app-pattern",
+    "name": "Colors",
+    "summary": "Colors Image: A green gradient circle icon, half outlined and half filled, representing accessibility. (source: https://spectrum.adobe.com/foundations/color/media_1c94508d2c8164b33419f7de3b02ce8d1743a2884.png?width=750&format=png&optimize=…",
+    "domains": [
+      "b2b-saas",
+      "product-surfaces",
+      "data-analytics",
+      "developer-tools"
+    ],
+    "sectors": [
+      "enterprise"
+    ],
+    "tags": [
+      "spectrum",
+      "guideline",
+      "foundation",
+      "designing",
+      "colors"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "spectrum",
+    "sourceUrl": "https://spectrum.adobe.com/foundations/color/colors",
+    "metrics": {
+      "screen": "colors"
     }
   },
   {
@@ -26030,6 +26233,35 @@
     "sourceUrl": "https://service-manual.nhs.uk/design-system/patterns/complete-multiple-tasks",
     "metrics": {
       "screen": "complete-multiple-tasks"
+    }
+  },
+  {
+    "id": "app-pattern/spectrum-component-spacing",
+    "kind": "app-pattern",
+    "name": "Component spacing",
+    "summary": "Component spacing Internal component spacing governs the space within components.",
+    "domains": [
+      "b2b-saas",
+      "product-surfaces",
+      "data-analytics",
+      "developer-tools"
+    ],
+    "sectors": [
+      "enterprise"
+    ],
+    "tags": [
+      "spectrum",
+      "guideline",
+      "foundation",
+      "designing",
+      "component-spacing"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "spectrum",
+    "sourceUrl": "https://spectrum.adobe.com/foundations/layout-and-structure/spacing/component-spacing",
+    "metrics": {
+      "screen": "component-spacing"
     }
   },
   {
@@ -26780,6 +27012,35 @@
     "sourceUrl": "https://carbondesignsystem.com/patterns/loading-pattern/",
     "metrics": {
       "screen": "loading-pattern"
+    }
+  },
+  {
+    "id": "app-pattern/spectrum-menu",
+    "kind": "app-pattern",
+    "name": "Menu",
+    "summary": "Menus help users take actions, choose from a list of options, configure settings, and more. They can be placed in a transient container, like a popover or tray.",
+    "domains": [
+      "b2b-saas",
+      "product-surfaces",
+      "data-analytics",
+      "developer-tools"
+    ],
+    "sectors": [
+      "enterprise"
+    ],
+    "tags": [
+      "spectrum",
+      "component",
+      "usage",
+      "actions",
+      "menu"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "spectrum",
+    "sourceUrl": "https://spectrum.adobe.com/page/menu/",
+    "metrics": {
+      "screen": "menu"
     }
   },
   {
@@ -27604,6 +27865,35 @@
     }
   },
   {
+    "id": "app-pattern/spectrum-table",
+    "kind": "app-pattern",
+    "name": "Table",
+    "summary": "Tables display information in rows and columns, allowing users to compare and scan structured data.",
+    "domains": [
+      "b2b-saas",
+      "product-surfaces",
+      "data-analytics",
+      "developer-tools"
+    ],
+    "sectors": [
+      "enterprise"
+    ],
+    "tags": [
+      "spectrum",
+      "component",
+      "usage",
+      "data-visualization",
+      "table"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "spectrum",
+    "sourceUrl": "https://spectrum.adobe.com/page/table/",
+    "metrics": {
+      "screen": "table"
+    }
+  },
+  {
     "id": "app-pattern/table-filter-bar",
     "kind": "app-pattern",
     "name": "Table with tabs and a filter bar",
@@ -27693,6 +27983,35 @@
     }
   },
   {
+    "id": "app-pattern/spectrum-tabs",
+    "kind": "app-pattern",
+    "name": "Tabs",
+    "summary": "Tabs organize content into multiple sections and allow users to navigate between them. The content under the set of tabs should be related and form a coherent unit.",
+    "domains": [
+      "b2b-saas",
+      "product-surfaces",
+      "data-analytics",
+      "developer-tools"
+    ],
+    "sectors": [
+      "enterprise"
+    ],
+    "tags": [
+      "spectrum",
+      "component",
+      "usage",
+      "navigation",
+      "tabs"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "spectrum",
+    "sourceUrl": "https://spectrum.adobe.com/page/tabs/",
+    "metrics": {
+      "screen": "tabs"
+    }
+  },
+  {
     "id": "app-pattern/leave-timeline",
     "kind": "app-pattern",
     "name": "Team timeline with kind encoding",
@@ -27708,6 +28027,35 @@
     "quality": "verified",
     "source": "taste-skill",
     "sourceUrl": "https://github.com/Leonxlnx/taste-skill"
+  },
+  {
+    "id": "app-pattern/spectrum-text-field",
+    "kind": "app-pattern",
+    "name": "Text field",
+    "summary": "Text fields allow users to input custom text entries with a keyboard. Various options can be shown with the field to communicate the input requirements.",
+    "domains": [
+      "b2b-saas",
+      "product-surfaces",
+      "data-analytics",
+      "developer-tools"
+    ],
+    "sectors": [
+      "enterprise"
+    ],
+    "tags": [
+      "spectrum",
+      "component",
+      "usage",
+      "inputs",
+      "text-field"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "spectrum",
+    "sourceUrl": "https://spectrum.adobe.com/page/text-field/",
+    "metrics": {
+      "screen": "text-field"
+    }
   },
   {
     "id": "app-pattern/carbon-text-input",
@@ -27734,6 +28082,64 @@
     "sourceUrl": "https://carbondesignsystem.com/components/text-input/usage/",
     "metrics": {
       "screen": "text-input"
+    }
+  },
+  {
+    "id": "app-pattern/spectrum-toast",
+    "kind": "app-pattern",
+    "name": "Toast",
+    "summary": "Toasts display brief, temporary notifications. They're meant to be noticed without disrupting a user's experience or requiring an action to be taken.",
+    "domains": [
+      "b2b-saas",
+      "product-surfaces",
+      "data-analytics",
+      "developer-tools"
+    ],
+    "sectors": [
+      "enterprise"
+    ],
+    "tags": [
+      "spectrum",
+      "component",
+      "usage",
+      "feedback",
+      "toast"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "spectrum",
+    "sourceUrl": "https://spectrum.adobe.com/page/toast/",
+    "metrics": {
+      "screen": "toast"
+    }
+  },
+  {
+    "id": "app-pattern/spectrum-tooltip",
+    "kind": "app-pattern",
+    "name": "Tooltip",
+    "summary": "Tooltips show contextual help or information about specific components when a user hovers or focuses on them.",
+    "domains": [
+      "b2b-saas",
+      "product-surfaces",
+      "data-analytics",
+      "developer-tools"
+    ],
+    "sectors": [
+      "enterprise"
+    ],
+    "tags": [
+      "spectrum",
+      "component",
+      "usage",
+      "feedback",
+      "tooltip"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "spectrum",
+    "sourceUrl": "https://spectrum.adobe.com/page/tooltip/",
+    "metrics": {
+      "screen": "tooltip"
     }
   },
   {

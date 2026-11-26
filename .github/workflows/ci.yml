@@ -91,7 +91,7 @@ jobs:
           npm init -y >/dev/null
           npm install ./tastepro-*.tgz >/dev/null
           ./node_modules/.bin/tastepro info | tee info.txt
-          grep -q "Catalog entries: 928" info.txt
+          grep -q "Catalog entries: 942" info.txt
 
           printf '<html><body><img src="/hero.png"><input autofocus></body></html>' > page.html
           ./node_modules/.bin/tastepro audit page.html --json > audit.json
@@ -211,7 +211,7 @@ jobs:
           done
 
           curl -fsS http://127.0.0.1:3000/healthz \
-            | jq -e '.status == "ok" and .catalogEntries == 928'
+            | jq -e '.status == "ok" and .catalogEntries == 942'
 
           status=$(curl -s -o /dev/null -w '%{http_code}' \
             -X POST http://127.0.0.1:3000/mcp \

@@ -28,10 +28,10 @@ async function fileExists(path: string): Promise<boolean> {
 describe("committed content", () => {
   it("matches the catalog snapshot", async () => {
     const [catalog, stats] = await Promise.all([loader.catalog(), loader.stats()]);
-    expect(catalog).toHaveLength(928);
-    expect(stats.catalogEntries).toBe(928);
+    expect(catalog).toHaveLength(942);
+    expect(stats.catalogEntries).toBe(942);
     expect(stats.counts).toEqual({
-      "app-pattern": 80,
+      "app-pattern": 94,
       "app-shell": 5,
       "app-style": 7,
       brand: 84,
@@ -47,7 +47,7 @@ describe("committed content", () => {
       type: 44,
     });
     expect(stats.quality).toEqual({
-      verified: 605,
+      verified: 619,
       reference: 313,
       incomplete: 10,
     });
@@ -92,7 +92,7 @@ describe("committed content", () => {
       expect((await stat(path)).size).toBeGreaterThan(0);
     }
     const sources = await loader.sources();
-    expect(sources).toHaveLength(9);
+    expect(sources).toHaveLength(10);
     for (const source of sources) {
       const path = join(contentDir, source.licenseFile);
       expect(await fileExists(path), path).toBe(true);
@@ -230,6 +230,7 @@ describe("committed content", () => {
       "cms-design-system",
       "nhs-uk",
       "carbon",
+      "spectrum",
     ]);
     for (const source of lock.sources) {
       expect(source.commit).toMatch(/^[0-9a-f]{40}$/);
@@ -338,5 +339,25 @@ describe("committed content", () => {
     expect(tabs?.blueprint).toContain("tabs");
     expect(tabs?.blueprint).not.toContain("StorybookDemo");
     expect(packs.some((pack) => pack.id === "app-pattern/carbon-chart-anatomy")).toBe(true);
+  });
+
+  it("ships Adobe Spectrum component and foundation guidance", async () => {
+    const packs = JSON.parse(
+      await readFile(join(contentDir, "generated", "kinds", "app-patterns.json"), "utf8"),
+    ) as Array<{
+      id: string;
+      blueprint: string;
+      provenance: { source: string; license: string; commit: string };
+    }>;
+    const spectrum = packs.filter((pack) => pack.id.startsWith("app-pattern/spectrum-"));
+    expect(spectrum).toHaveLength(14);
+
+    const button = packs.find((pack) => pack.id === "app-pattern/spectrum-button");
+    expect(button).toBeDefined();
+    expect(button?.provenance.source).toBe("spectrum");
+    expect(button?.provenance.license).toBe("Apache-2.0");
+    expect(button?.provenance.commit).toHaveLength(40);
+    expect(button?.blueprint).toContain("Button");
+    expect(packs.some((pack) => pack.id === "app-pattern/spectrum-attention-hierarchy")).toBe(true);
   });
 });
