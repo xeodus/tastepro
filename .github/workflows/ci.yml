@@ -167,7 +167,7 @@ jobs:
             -e TASTEPRO_ALLOWED_HOSTS=localhost,127.0.0.1 \
             --shm-size=1g \
             tastepro:audit
-          for attempt in $(seq 1 30); do
+          for _ in $(seq 1 30); do
             if curl -fsS http://127.0.0.1:3000/healthz >/dev/null 2>&1; then
               break
             fi
@@ -203,7 +203,7 @@ jobs:
             -e TASTEPRO_API_KEY=ci-token \
             -e TASTEPRO_ALLOWED_HOSTS=localhost,127.0.0.1 \
             tastepro:ci
-          for attempt in $(seq 1 30); do
+          for _ in $(seq 1 30); do
             if curl -fsS http://127.0.0.1:3000/healthz >/dev/null 2>&1; then
               break
             fi
