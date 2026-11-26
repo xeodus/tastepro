@@ -225,6 +225,20 @@
         "cookie-banner": "apps/pie-docs/src/patterns/cookie-banner/overview/overview.md",
         "haptic-feedback": "apps/pie-docs/src/patterns/haptic-feedback/overview/overview.md"
       }
+    },
+    {
+      "id": "sap",
+      "name": "SAP Fiori",
+      "repo": "https://github.com/SAP/fundamental-styles",
+      "commit": "0753390b563b4eafe4d90ec812205df1361941ac",
+      "license": "Apache-2.0",
+      "licenseUrl": "https://raw.githubusercontent.com/SAP/fundamental-styles/0753390b563b4eafe4d90ec812205df1361941ac/LICENSE",
+      "authors": ["SAP"],
+      "url": "https://sap.github.io/fundamental-styles/",
+      "notes": "SAP Fiori component guidance. Apache-2.0; text only, SAP marks and images excluded.",
+      "paths": {
+        "components": "docs/component-guidance.json"
+      }
     }
   ]
 }

@@ -19,6 +19,7 @@ The complete upstream license texts are committed at:
 - `content/sources/licenses/spectrum.txt`
 - `content/sources/licenses/ethereum-org.txt`
 - `content/sources/licenses/pie.txt`
+- `content/sources/licenses/sap.txt`
 
 The machine-readable pins are in `sources.lock.json` and
 `content/sources.lock.json`. Every generated pack also carries a `provenance`
@@ -41,6 +42,7 @@ transformations applied.
 | [Adobe Spectrum](https://github.com/adobe/spectrum-design-data)                            | Adobe                 | Apache-2.0 | `1818e9c1035fd38f361a0698fb3453477b702552` |
 | [ethereum.org](https://github.com/ethereum/ethereum-org-website)                           | Ethereum Foundation   | CC-BY-4.0  | `4302e8c0a8e51d161c124e8c57d8d93da2995da1` |
 | [PIE Design System](https://github.com/justeattakeaway/pie)                                | Just Eat Takeaway.com | Apache-2.0 | `cf7021732ad8ded4c818e95205d15b601d80fe50` |
+| [SAP Fiori](https://github.com/SAP/fundamental-styles)                                     | SAP                   | Apache-2.0 | `0753390b563b4eafe4d90ec812205df1361941ac` |
 
 ## Taste Skill
 
@@ -289,6 +291,26 @@ in the pinned repository.
 
 **Not included:** the JET brand palette, logos, food photography, or fonts.
 
+## SAP Fiori
+
+**Used for:** twenty enterprise components — button, table, form group, input,
+select, popover, message box, card, tab bar, breadcrumb, pagination, list, menu,
+toolbar, wizard, date picker, checkbox, radio, switch, and notification.
+
+**Paths:** `docs/component-guidance.json` in the pinned repository.
+
+**License:** Apache-2.0.
+
+**TastePro transformations:**
+
+- Selected `description`, `whenToUse`, `whenToAvoid`, and `bestPractices`.
+- Dropped implementation, token, and API fields.
+- Mapped each component to enterprise, analytics, manufacturing, logistics, and
+  fintech domains.
+- Added provenance, source URLs, and quality metadata.
+
+**Not included:** SAP marks, images, or implementation code.
+
 ## Original TastePro content
 
 The following are original to TastePro and licensed under Apache-2.0:
@@ -333,12 +355,13 @@ SOFTWARE.
 
 ## Apache-2.0
 
-Microsoft Playwright CLI, IBM Carbon, Adobe Spectrum, PIE, and TastePro's
-original code and content are licensed under the Apache License 2.0. The full
-texts are in `LICENSE`, `content/sources/licenses/playwright-cli.txt`,
+Microsoft Playwright CLI, IBM Carbon, Adobe Spectrum, PIE, SAP Fiori, and
+TastePro's original code and content are licensed under the Apache License 2.0.
+The full texts are in `LICENSE`, `content/sources/licenses/playwright-cli.txt`,
 `content/sources/licenses/carbon.txt`,
-`content/sources/licenses/spectrum.txt`, and
-`content/sources/licenses/pie.txt`.
+`content/sources/licenses/spectrum.txt`,
+`content/sources/licenses/pie.txt`, and
+`content/sources/licenses/sap.txt`.
 
 ## Open Government Licence v3.0
 

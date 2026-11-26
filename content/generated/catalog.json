@@ -25907,6 +25907,35 @@
     }
   },
   {
+    "id": "app-pattern/sap-breadcrumb",
+    "kind": "app-pattern",
+    "name": "Breadcrumb",
+    "summary": "A breadcrumb (or breadcrumb trail) is a type of secondary navigation that indicates the position of a page in its application hierarchy. It is typically used for drilldown scenarios where users navigate through related object pages, tables, and charts.",
+    "domains": [
+      "b2b-saas",
+      "data-analytics",
+      "manufacturing",
+      "logistics",
+      "fintech-payments"
+    ],
+    "sectors": [
+      "enterprise"
+    ],
+    "tags": [
+      "sap",
+      "component",
+      "Navigation",
+      "breadcrumb"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "sap",
+    "sourceUrl": "https://sap.github.io/fundamental-styles/",
+    "metrics": {
+      "screen": "breadcrumb"
+    }
+  },
+  {
     "id": "app-pattern/builder-canvas",
     "kind": "app-pattern",
     "name": "Builder canvas",
@@ -25989,6 +26018,35 @@
     }
   },
   {
+    "id": "app-pattern/sap-button",
+    "kind": "app-pattern",
+    "name": "Button",
+    "summary": "Buttons enable users to trigger actions in applications, from submitting data to opening menus or toggling views. They are available in different types and visual styles to reflect purpose, priority, and intent. Button behavior and appearance can change depending on user interaction, layout context, or the type of task.",
+    "domains": [
+      "b2b-saas",
+      "data-analytics",
+      "manufacturing",
+      "logistics",
+      "fintech-payments"
+    ],
+    "sectors": [
+      "enterprise"
+    ],
+    "tags": [
+      "sap",
+      "component",
+      "Actions & Controls",
+      "button"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "sap",
+    "sourceUrl": "https://sap.github.io/fundamental-styles/",
+    "metrics": {
+      "screen": "button"
+    }
+  },
+  {
     "id": "app-pattern/spectrum-card",
     "kind": "app-pattern",
     "name": "Card",
@@ -26013,6 +26071,35 @@
     "quality": "verified",
     "source": "spectrum",
     "sourceUrl": "https://spectrum.adobe.com/page/card/",
+    "metrics": {
+      "screen": "card"
+    }
+  },
+  {
+    "id": "app-pattern/sap-card",
+    "kind": "app-pattern",
+    "name": "Card",
+    "summary": "A card is a container that represents an app or page, providing easy access and content preview. It consists of optional building blocks: Header, Extended Header, Numeric Content, Content, Footer, and Media Block. Cards display various content types including charts, lists, tables, objects, and text.",
+    "domains": [
+      "b2b-saas",
+      "data-analytics",
+      "manufacturing",
+      "logistics",
+      "fintech-payments"
+    ],
+    "sectors": [
+      "enterprise"
+    ],
+    "tags": [
+      "sap",
+      "component",
+      "Layout & Containers",
+      "card"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "sap",
+    "sourceUrl": "https://sap.github.io/fundamental-styles/",
     "metrics": {
       "screen": "card"
     }
@@ -26148,6 +26235,35 @@
     "quality": "verified",
     "source": "spectrum",
     "sourceUrl": "https://spectrum.adobe.com/page/checkbox/",
+    "metrics": {
+      "screen": "checkbox"
+    }
+  },
+  {
+    "id": "app-pattern/sap-checkbox",
+    "kind": "app-pattern",
+    "name": "Checkbox",
+    "summary": "A checkbox lets users set a binary value (true/false). When selected, it toggles between checked (state applies), unchecked (state doesn't apply), and optionally tri-state/indeterminate (mixed selection of dependent fields). All options are visible, and users can make one or more independent selections.",
+    "domains": [
+      "b2b-saas",
+      "data-analytics",
+      "manufacturing",
+      "logistics",
+      "fintech-payments"
+    ],
+    "sectors": [
+      "enterprise"
+    ],
+    "tags": [
+      "sap",
+      "component",
+      "Forms & Inputs",
+      "checkbox"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "sap",
+    "sourceUrl": "https://sap.github.io/fundamental-styles/",
     "metrics": {
       "screen": "checkbox"
     }
@@ -26495,6 +26611,35 @@
     "sourceUrl": "https://designsystem.digital.gov/patterns/create-a-user-profile/date-of-birth/",
     "metrics": {
       "screen": "date-of-birth"
+    }
+  },
+  {
+    "id": "app-pattern/sap-date-picker",
+    "kind": "app-pattern",
+    "name": "Date Picker",
+    "summary": "Date Picker lets users select localized date using touch, mouse, or keyboard input. Responsive behavior for all devices - compact mode (smaller) and cozy mode (touch-friendly). Two parts: Input Field (direct entry or picker) and Date Picker (day/month/year/year ranges views).",
+    "domains": [
+      "b2b-saas",
+      "data-analytics",
+      "manufacturing",
+      "logistics",
+      "fintech-payments"
+    ],
+    "sectors": [
+      "enterprise"
+    ],
+    "tags": [
+      "sap",
+      "component",
+      "Forms & Inputs",
+      "date-picker"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "sap",
+    "sourceUrl": "https://sap.github.io/fundamental-styles/",
+    "metrics": {
+      "screen": "date-picker"
     }
   },
   {
@@ -26846,6 +26991,35 @@
     }
   },
   {
+    "id": "app-pattern/sap-form-group",
+    "kind": "app-pattern",
+    "name": "Form Group",
+    "summary": "Form groups assemble form elements with labels, messages, and help containers. Components like `fd-form__item` with label and control can be used independently when error messages aren't needed.",
+    "domains": [
+      "b2b-saas",
+      "data-analytics",
+      "manufacturing",
+      "logistics",
+      "fintech-payments"
+    ],
+    "sectors": [
+      "enterprise"
+    ],
+    "tags": [
+      "sap",
+      "component",
+      "Forms & Inputs",
+      "form-group"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "sap",
+    "sourceUrl": "https://sap.github.io/fundamental-styles/",
+    "metrics": {
+      "screen": "form-group"
+    }
+  },
+  {
     "id": "app-pattern/carbon-forms-pattern",
     "kind": "app-pattern",
     "name": "Forms",
@@ -26985,6 +27159,35 @@
     }
   },
   {
+    "id": "app-pattern/sap-icon-tab-bar",
+    "kind": "app-pattern",
+    "name": "Icon Tab Bar",
+    "summary": "Navigation and filtering control containing tabs that display icons, text, or both, linking to different content areas or views. Two key use cases: navigate between content sections or filter lists (showing all items or those matching specific attributes). Users switch tabs by clicking.",
+    "domains": [
+      "b2b-saas",
+      "data-analytics",
+      "manufacturing",
+      "logistics",
+      "fintech-payments"
+    ],
+    "sectors": [
+      "enterprise"
+    ],
+    "tags": [
+      "sap",
+      "component",
+      "Navigation",
+      "icon-tab-bar"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "sap",
+    "sourceUrl": "https://sap.github.io/fundamental-styles/",
+    "metrics": {
+      "screen": "icon-tab-bar"
+    }
+  },
+  {
     "id": "app-pattern/inbox-triage",
     "kind": "app-pattern",
     "name": "Inbox triage",
@@ -27009,6 +27212,35 @@
     "sourceUrl": "https://github.com/Leonxlnx/taste-skill",
     "metrics": {
       "screen": "inbox"
+    }
+  },
+  {
+    "id": "app-pattern/sap-input",
+    "kind": "app-pattern",
+    "name": "Input",
+    "summary": "Text input fields allow users to enter and edit single-line text, numbers, dates, or times. They should always be paired with a label, and required fields should have an asterisk (*). Features include autocomplete, suggestions, and value help for valid data entry.",
+    "domains": [
+      "b2b-saas",
+      "data-analytics",
+      "manufacturing",
+      "logistics",
+      "fintech-payments"
+    ],
+    "sectors": [
+      "enterprise"
+    ],
+    "tags": [
+      "sap",
+      "component",
+      "Forms & Inputs",
+      "input"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "sap",
+    "sourceUrl": "https://sap.github.io/fundamental-styles/",
+    "metrics": {
+      "screen": "input"
     }
   },
   {
@@ -27240,6 +27472,35 @@
     }
   },
   {
+    "id": "app-pattern/sap-list",
+    "kind": "app-pattern",
+    "name": "List",
+    "summary": "Lists display homogeneous basic data, distinguished from tables (which handle complex data). Used in master lists for master-detail scenarios with flexible column layout, popovers, and dialogs. Supports byline variant for additional content and semantic status.",
+    "domains": [
+      "b2b-saas",
+      "data-analytics",
+      "manufacturing",
+      "logistics",
+      "fintech-payments"
+    ],
+    "sectors": [
+      "enterprise"
+    ],
+    "tags": [
+      "sap",
+      "component",
+      "Data Display",
+      "list"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "sap",
+    "sourceUrl": "https://sap.github.io/fundamental-styles/",
+    "metrics": {
+      "screen": "list"
+    }
+  },
+  {
     "id": "app-pattern/carbon-loading-pattern",
     "kind": "app-pattern",
     "name": "Loading",
@@ -27293,6 +27554,64 @@
     "sourceUrl": "https://spectrum.adobe.com/page/menu/",
     "metrics": {
       "screen": "menu"
+    }
+  },
+  {
+    "id": "app-pattern/sap-menu",
+    "kind": "app-pattern",
+    "name": "Menu",
+    "summary": "Menu is a listing structure with optional headers for creating menus. Commonly used as contents for dropdowns, contextual menus, etc., when paired with the popover component.",
+    "domains": [
+      "b2b-saas",
+      "data-analytics",
+      "manufacturing",
+      "logistics",
+      "fintech-payments"
+    ],
+    "sectors": [
+      "enterprise"
+    ],
+    "tags": [
+      "sap",
+      "component",
+      "Navigation",
+      "menu"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "sap",
+    "sourceUrl": "https://sap.github.io/fundamental-styles/",
+    "metrics": {
+      "screen": "menu"
+    }
+  },
+  {
+    "id": "app-pattern/sap-message-box",
+    "kind": "app-pattern",
+    "name": "Message Box",
+    "summary": "Message box displays a dialog with a simple message to the user. Unlike popover, it can relay messages unrelated to UI (e.g., technical errors). Inherits Dialog look/behavior (excluding drag/resize). Displays semantic colors and icons: Error, Warning, Success, Information, Confirmation.",
+    "domains": [
+      "b2b-saas",
+      "data-analytics",
+      "manufacturing",
+      "logistics",
+      "fintech-payments"
+    ],
+    "sectors": [
+      "enterprise"
+    ],
+    "tags": [
+      "sap",
+      "component",
+      "Feedback & Status",
+      "message-box"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "sap",
+    "sourceUrl": "https://sap.github.io/fundamental-styles/",
+    "metrics": {
+      "screen": "message-box"
     }
   },
   {
@@ -27487,6 +27806,35 @@
     }
   },
   {
+    "id": "app-pattern/sap-notification",
+    "kind": "app-pattern",
+    "name": "Notification",
+    "summary": "Notifications should be well-instrumented, timed to provide value without being intrusive. Should be brief, concise, conveying specific information or prompting action. Used for reminders, alerts, and updates.",
+    "domains": [
+      "b2b-saas",
+      "data-analytics",
+      "manufacturing",
+      "logistics",
+      "fintech-payments"
+    ],
+    "sectors": [
+      "enterprise"
+    ],
+    "tags": [
+      "sap",
+      "component",
+      "Feedback & Status",
+      "notification"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "sap",
+    "sourceUrl": "https://sap.github.io/fundamental-styles/",
+    "metrics": {
+      "screen": "notification"
+    }
+  },
+  {
     "id": "app-pattern/carbon-notification-pattern",
     "kind": "app-pattern",
     "name": "Notifications",
@@ -27623,6 +27971,35 @@
     "quality": "verified",
     "source": "cms-design-system",
     "sourceUrl": "https://design.cms.gov/components/pagination/",
+    "metrics": {
+      "screen": "pagination"
+    }
+  },
+  {
+    "id": "app-pattern/sap-pagination",
+    "kind": "app-pattern",
+    "name": "Pagination",
+    "summary": "Pagination allows users to separate content into discrete pages, making it easier to digest and navigate through large sets of items. Commonly used for tables and tiles. Supports two display modes: standard (>9 pages with input) and short (<9 pages showing all).",
+    "domains": [
+      "b2b-saas",
+      "data-analytics",
+      "manufacturing",
+      "logistics",
+      "fintech-payments"
+    ],
+    "sectors": [
+      "enterprise"
+    ],
+    "tags": [
+      "sap",
+      "component",
+      "Navigation",
+      "pagination"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "sap",
+    "sourceUrl": "https://sap.github.io/fundamental-styles/",
     "metrics": {
       "screen": "pagination"
     }
@@ -27771,6 +28148,35 @@
     }
   },
   {
+    "id": "app-pattern/sap-popover",
+    "kind": "app-pattern",
+    "name": "Popover",
+    "summary": "Popover displays additional information for an object in a compact way without leaving the page. Contains control (trigger) and body (content). Can be paired with Menu for dropdown functionality. Supports header, footer, and scrollable variants with flexible placement options.",
+    "domains": [
+      "b2b-saas",
+      "data-analytics",
+      "manufacturing",
+      "logistics",
+      "fintech-payments"
+    ],
+    "sectors": [
+      "enterprise"
+    ],
+    "tags": [
+      "sap",
+      "component",
+      "Feedback & Status",
+      "popover"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "sap",
+    "sourceUrl": "https://sap.github.io/fundamental-styles/",
+    "metrics": {
+      "screen": "popover"
+    }
+  },
+  {
     "id": "app-pattern/power-flow",
     "kind": "app-pattern",
     "name": "Power flow summary",
@@ -27812,6 +28218,35 @@
     "sourceUrl": "https://service-manual.nhs.uk/design-system/patterns/question-pages",
     "metrics": {
       "screen": "question-pages"
+    }
+  },
+  {
+    "id": "app-pattern/sap-radio",
+    "kind": "app-pattern",
+    "name": "Radio",
+    "summary": "Radio buttons provide mutually exclusive options, allowing users to select only one option from two or more choices. They only work in groups and are best for selecting from a small set of clearly different alternatives.",
+    "domains": [
+      "b2b-saas",
+      "data-analytics",
+      "manufacturing",
+      "logistics",
+      "fintech-payments"
+    ],
+    "sectors": [
+      "enterprise"
+    ],
+    "tags": [
+      "sap",
+      "component",
+      "Forms & Inputs",
+      "radio"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "sap",
+    "sourceUrl": "https://sap.github.io/fundamental-styles/",
+    "metrics": {
+      "screen": "radio"
     }
   },
   {
@@ -27951,6 +28386,35 @@
     "sourceUrl": "https://carbondesignsystem.com/patterns/search-pattern/",
     "metrics": {
       "screen": "search-pattern"
+    }
+  },
+  {
+    "id": "app-pattern/sap-select",
+    "kind": "app-pattern",
+    "name": "Select",
+    "summary": "Select component (dropdown) lets users pick one item from a small, predefined list. Can be placed in toolbars (chart, footer, header), forms, or tables. List stays hidden until opened.",
+    "domains": [
+      "b2b-saas",
+      "data-analytics",
+      "manufacturing",
+      "logistics",
+      "fintech-payments"
+    ],
+    "sectors": [
+      "enterprise"
+    ],
+    "tags": [
+      "sap",
+      "component",
+      "Forms & Inputs",
+      "select"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "sap",
+    "sourceUrl": "https://sap.github.io/fundamental-styles/",
+    "metrics": {
+      "screen": "select"
     }
   },
   {
@@ -28139,6 +28603,35 @@
     }
   },
   {
+    "id": "app-pattern/sap-switch",
+    "kind": "app-pattern",
+    "name": "Switch",
+    "summary": "Switch mimics a physical switch, allowing users to toggle individual features on or off. Mainly used for settings, personalization, and cases where impact is directly recognizable. Changes take immediate effect.",
+    "domains": [
+      "b2b-saas",
+      "data-analytics",
+      "manufacturing",
+      "logistics",
+      "fintech-payments"
+    ],
+    "sectors": [
+      "enterprise"
+    ],
+    "tags": [
+      "sap",
+      "component",
+      "Forms & Inputs",
+      "switch"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "sap",
+    "sourceUrl": "https://sap.github.io/fundamental-styles/",
+    "metrics": {
+      "screen": "switch"
+    }
+  },
+  {
     "id": "app-pattern/tabbed-object-detail",
     "kind": "app-pattern",
     "name": "Tabbed object detail in a sheet",
@@ -28226,6 +28719,35 @@
     "quality": "verified",
     "source": "spectrum",
     "sourceUrl": "https://spectrum.adobe.com/page/table/",
+    "metrics": {
+      "screen": "table"
+    }
+  },
+  {
+    "id": "app-pattern/sap-table",
+    "kind": "app-pattern",
+    "name": "Table",
+    "summary": "Table contains set of line items with rows (each showing one line item) and columns. Items can contain data or interactive elements. Two groups: fully responsive tables and desktop-centric tables. Responsive table offers flexibility, grid table for large datasets (>1,000 rows) and analytical use cases.",
+    "domains": [
+      "b2b-saas",
+      "data-analytics",
+      "manufacturing",
+      "logistics",
+      "fintech-payments"
+    ],
+    "sectors": [
+      "enterprise"
+    ],
+    "tags": [
+      "sap",
+      "component",
+      "Data Display",
+      "table"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "sap",
+    "sourceUrl": "https://sap.github.io/fundamental-styles/",
     "metrics": {
       "screen": "table"
     }
@@ -28451,6 +28973,35 @@
     }
   },
   {
+    "id": "app-pattern/sap-toolbar",
+    "kind": "app-pattern",
+    "name": "Toolbar",
+    "summary": "Toolbar enables users to change UI or trigger actions (change views, manipulate data/objects, navigate, perform actions). Usually paired with buttons, which are always right-aligned. Actions can be independent, object-specific, apply to item sets, or control UI content settings.",
+    "domains": [
+      "b2b-saas",
+      "data-analytics",
+      "manufacturing",
+      "logistics",
+      "fintech-payments"
+    ],
+    "sectors": [
+      "enterprise"
+    ],
+    "tags": [
+      "sap",
+      "component",
+      "Navigation",
+      "toolbar"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "sap",
+    "sourceUrl": "https://sap.github.io/fundamental-styles/",
+    "metrics": {
+      "screen": "toolbar"
+    }
+  },
+  {
     "id": "app-pattern/spectrum-tooltip",
     "kind": "app-pattern",
     "name": "Tooltip",
@@ -28505,6 +29056,35 @@
     "sourceUrl": "https://ethereum.org/en/developers/docs/transactions/",
     "metrics": {
       "screen": "transactions"
+    }
+  },
+  {
+    "id": "app-pattern/sap-wizard",
+    "kind": "app-pattern",
+    "name": "Wizard",
+    "summary": "Wizard guides user through long or unfamiliar task by dividing into sections, revealing information in digestible way. Consists of walkthrough screen (input required info) and summary page (read-only review before submission). Two types: standard (linear, known steps) and branching (non-linear, variable steps). Supports 3-8 steps, optional steps allowed.",
+    "domains": [
+      "b2b-saas",
+      "data-analytics",
+      "manufacturing",
+      "logistics",
+      "fintech-payments"
+    ],
+    "sectors": [
+      "enterprise"
+    ],
+    "tags": [
+      "sap",
+      "component",
+      "Layout & Containers",
+      "wizard"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "source": "sap",
+    "sourceUrl": "https://sap.github.io/fundamental-styles/",
+    "metrics": {
+      "screen": "wizard"
     }
   },
   {

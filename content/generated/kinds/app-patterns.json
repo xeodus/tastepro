@@ -504,6 +504,54 @@
     "phone": "KPIs in a 2 x 2 grid; panels stack; the bar list keeps its bars at full width."
   },
   {
+    "id": "app-pattern/sap-breadcrumb",
+    "kind": "app-pattern",
+    "name": "Breadcrumb",
+    "summary": "A breadcrumb (or breadcrumb trail) is a type of secondary navigation that indicates the position of a page in its application hierarchy. It is typically used for drilldown scenarios where users navigate through related object pages, tables, and charts.",
+    "domains": [
+      "b2b-saas",
+      "data-analytics",
+      "manufacturing",
+      "logistics",
+      "fintech-payments"
+    ],
+    "sectors": [
+      "enterprise"
+    ],
+    "tags": [
+      "sap",
+      "component",
+      "Navigation",
+      "breadcrumb"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "sap",
+      "repo": "https://github.com/SAP/fundamental-styles",
+      "commit": "0753390b563b4eafe4d90ec812205df1361941ac",
+      "path": "docs/component-guidance.json",
+      "license": "Apache-2.0",
+      "authors": [
+        "SAP"
+      ],
+      "url": "https://sap.github.io/fundamental-styles/",
+      "transformations": [
+        "selected description, whenToUse, whenToAvoid, and bestPractices",
+        "dropped implementation and token fields"
+      ]
+    },
+    "sourceUrl": "https://sap.github.io/fundamental-styles/",
+    "screen": "breadcrumb",
+    "kinds": [
+      "component",
+      "guidance"
+    ],
+    "basis": "a breadcrumb component from SAP Fiori",
+    "blueprint": "A breadcrumb (or breadcrumb trail) is a type of secondary navigation that indicates the position of a page in its application hierarchy. It is typically used for drilldown scenarios where users navigate through related object pages, tables, and charts.\n\n### When to use\n\n- Show secondary navigation on the object page\n- Show navigation in a table\n- Show navigation in charts\n- Support a user flow that involves drilling down through multiple related object pages (Parent → Child 1 → Child 2 → Child 3)\n- Display the current location in a hierarchy\n- Enable navigation back to parent pages\n\n### When to avoid\n\n- Your hierarchy contains only one level\n- Linking to other floorplans, such as overview pages or list reports\n- Navigating across applications to unrelated object pages\n- Linking to standalone object pages, such as fact sheets → Use global navigation instead\n\n### Best practices\n\n- Use separator modifiers: `fd-breadcrumb--backslash` or `fd-breadcrumb--double-greater-than`\n- Current item can be displayed as non-interactive (without separator) or as a regular link\n- Use overflow breadcrumb with `fd-popover` for long paths with insufficient horizontal space\n- Make each breadcrumb item clickable to navigate to that level\n- Display breadcrumbs horizontally in a single line\n- Use overflow dropdown menu when there are too many levels\n- Implement responsive behavior to collapse into dropdown on small screens\n- Keep breadcrumb hierarchy meaningful and accurate",
+    "phone": ""
+  },
+  {
     "id": "app-pattern/builder-canvas",
     "kind": "app-pattern",
     "name": "Builder canvas",
@@ -641,6 +689,54 @@
     "phone": ""
   },
   {
+    "id": "app-pattern/sap-button",
+    "kind": "app-pattern",
+    "name": "Button",
+    "summary": "Buttons enable users to trigger actions in applications, from submitting data to opening menus or toggling views. They are available in different types and visual styles to reflect purpose, priority, and intent. Button behavior and appearance can change depending on user interaction, layout context, or the type of task.",
+    "domains": [
+      "b2b-saas",
+      "data-analytics",
+      "manufacturing",
+      "logistics",
+      "fintech-payments"
+    ],
+    "sectors": [
+      "enterprise"
+    ],
+    "tags": [
+      "sap",
+      "component",
+      "Actions & Controls",
+      "button"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "sap",
+      "repo": "https://github.com/SAP/fundamental-styles",
+      "commit": "0753390b563b4eafe4d90ec812205df1361941ac",
+      "path": "docs/component-guidance.json",
+      "license": "Apache-2.0",
+      "authors": [
+        "SAP"
+      ],
+      "url": "https://sap.github.io/fundamental-styles/",
+      "transformations": [
+        "selected description, whenToUse, whenToAvoid, and bestPractices",
+        "dropped implementation and token fields"
+      ]
+    },
+    "sourceUrl": "https://sap.github.io/fundamental-styles/",
+    "screen": "button",
+    "kinds": [
+      "component",
+      "guidance"
+    ],
+    "basis": "a button component from SAP Fiori",
+    "blueprint": "Buttons enable users to trigger actions in applications, from submitting data to opening menus or toggling views. They are available in different types and visual styles to reflect purpose, priority, and intent. Button behavior and appearance can change depending on user interaction, layout context, or the type of task.\n\n### When to use\n\n- Trigger specific actions such as Create/Edit/Save, Approve/Reject, Accept/Decline, OK/Cancel\n- Use toggle buttons in a toolbar to activate or deactivate an object or element\n- Use toggle buttons to switch between different states\n- Use segmented button in toolbar to select one option from a small group (e.g., Year/Month/Day, Small/Medium/Large)\n- Use menu button if you need a menu that provides more than one option\n- Use split button to offer a group of actions when one option is used more often than the others\n\n### When to avoid\n\n- Linking to a different page or object → Use link instead\n- Displaying general navigation functions → Use Home or breadcrumbs instead\n- Navigating within a multi-step process → Use wizard instead\n- Letting users upload content → Use upload set control instead\n- Letting users select from multiple related options → Use radio buttons or checkboxes instead\n- Using toggle button to trigger an activity, flow, or process (such as Create, Edit, or Save) → Use button instead\n- Using toggle button to display a large number of options → Use menu button instead\n- Using split button to switch between different states → Use toggle button or switch instead\n- Using split button for standalone actions with no additional options → Use button instead\n\n### Best practices\n\n- Use default button for neutral or informative (secondary) actions\n- Use emphasized button (`fd-button--emphasized`) to indicate the primary action on the screen\n- Use ghost button to trigger secondary actions or highlight the most important action in a content toolbar\n- Use positive button (`fd-button--positive`) to trigger positive semantic actions (e.g., Accept) - always with text\n- Use negative button (`fd-button--negative`) to trigger negative semantic actions (e.g., Reject) - always with text\n- Use attention button (`fd-button--attention`) to trigger semantic actions that need attention - always with text\n- Use transparent button (`fd-button--transparent`) for negative path actions in header/footer bars and secondary actions in toolbars\n- Use toggle button to switch between two states or activate/deactivate an element in a toolbar\n- Use segmented button for selecting one option from a small group\n- Use menu button for groups of multiple actions\n- Use split button when one option is used more often than others in a group of actions\n- Only use one emphasized button per page/dialog (indicates primary action)\n- Always include descriptive text or `aria-label` for icon-only buttons",
+    "phone": ""
+  },
+  {
     "id": "app-pattern/spectrum-card",
     "kind": "app-pattern",
     "name": "Card",
@@ -686,6 +782,54 @@
     ],
     "basis": "component guidance from Adobe Spectrum",
     "blueprint": "Groups related content, such as a preview, a title and a description, on one surface. A card can be selectable and can be clickable as a whole.\n\nCards group related content into distinct layouts depending on context.\n\nCard component Purpose / use case Interaction type Common visual elements Flex General-purpose, flexible content container Varies (Static or Clickable) Title, preview, checkbox Asset Display assets like images, text documents, files, videos, materials, etc. Clickable (navigates to 1-up view), selectable Preview, filename, metadata, checkbox Gallery Show multiple images or videos in a river grid. Clickable (navigates to 1-up view), selectable Preview, badge, checkbox Collection Group related items such as assets or products in a library of items. Clickable (drill-in), selectable multi or hero multi previews, collection title, checkbox Product Display product details for interaction Clickable (drill-in), selectable Cover image, thumbnail (logo), product title, checkbox Horizontal Displaying mostly text, possibly with a cropped cover image or icon. Clickable (drill-in) Optional cropped preview, icon, or thumbnail, title, metadata\n\nPreview minimum and maximum. Card preview areas have a maximum image height aspect ratio of 3:4, and a minimum height aspect ratio of of 4:1.\n\nText overflow. If the card has a fixed height, such as in a tile grid, long titles will be truncated. Use short titles to avoid this. In layouts with variable height, like a waterfall grid, titles will wrap to fit.\n\nClickable cards. Cards, by definition, should have some form of interaction such as viewing, editing, purchasing, etc. Some actions are exposed in buttons, and others simply occur by clicking the card. If a card only has an ability to be opened or viewed in more detail, do not include a button. Clicking anywhere on the card should perform that action. If a card has other interactive elements such as a hidden actions menu or an avatar, but no buttons, the whole card (outside of those elements) should be clickable.\n\nButtons in cards. If there's only one action (that's not opening or viewing the card), use a button to communicate that action. If there are two or more available actions, and one of those actions is to open or view the card, use a button to communicate \"View\" or \"Open,\" instead of relying on clicking on the card. If a standard card has a footer with a button, only the button is clickable. If a card has a preview, clicking the preview will open that card. When a preview is purely decorative, it is not clickable.\n\nGhost loading. When a group of cards are loading, they follow the ghost loading convention. There are 5 phases for ghost loading: Card group (including metadata) ghost loads. If metadata for all cards is loaded before all preview images are loaded, the metadata is displayed for all cards as soon as the last piece of metadata loads. Previews continue to ghost load. If all preview images load within the x period (a period of time, usually measured in seconds, that you need to specify depending on the use case), they are shown as soon as the last preview loads. If all previews have not finished loading at the end of the x period, the loaded previews are shown, and the pending previews receive individual circle loaders. The group is no longer in a ghost loading state. If the preview load times out, an error is shown along with a mechanism to retry loading.\n\nKeep cards simple. Cards are meant to just show a taste of the available information. Don't overload cards with more information than necessary.\n\nRTL. Cards in RTL languages mirror their horizontal layout and directional cues, while their interaction behavior stays the same. Any element with a left‑right relationship flips. Thumbnails or avatars that appear on the left in LTR move to the right in RTL. Metadata stacks reverse order, such as an icon followed by text becoming text followed by an icon. Action areas, including overflow menus, shift from the top right of the card to the top left. Vertical layout and center‑aligned elements do not change. Most icons remain the same, but directional icons, such as arrows and chevrons, flip to match reading direction.\n\nKeyboard interactions. Key Interaction Tab Moves focus forward to the next card. Arrow keys Moves focus within the card to focusable items within the card. If a button is included on the cards, the button should receive focus first. If there are multiple buttons, the primary or CTA button should receive focus first. Shift + Tab Moves focus backward to the previous card. Return or Enter If the card itself is clickable, Return or Enter will open the card. If the card is not clickable but has buttons, and the buttons or another item within the card is focused, that action is performed. Space If the card is selectable, the space bar will toggle selection. Ctrl / Command + Arrow keys Non-contiguous selection of cards.\n\nCursor guidelines. Non-interactive cards Cursor Description Default (Arrow) Use the default cursor for non-interactive cards. Cards with interactive elements Cursor Description Default (Arrow) Use the default cursor for the non-interactive portions of the card. Pointer Use the pointer cursor for the interactive elements. Grab hand Use the grab hand cursor when hovering over cards that are draggable. Cards that have other interactive elements that are also draggable should first enter a drag mode before showing the grab cursors and allowing a drag action. Grab fist Use the grab fist cursor when actively dragging a card. Fully interactive cards Cursor Description Pointer Use the pointer cursor for the entire card surface when the card is interactive, for example, if clicking the card will navigate to a one-up view. Grab hand Use the grab hand cursor when hovering over cards that are draggable. Grab fist Use the grab fist cursor when actively dragging a card.\n\nWCAG 2.2 compliance. Any criterion not mention in the below table are not applicable to this component or are resolved with underlying requirements, engineering, and styles of the entire system. 1. Perceivable Requirement Criterion Level Compliance Non-text content 1.1.1 A Non‑text elements—such as icons or illustrations used in cards—must provide a text alternative that communicates the control’s purpose. All controls, especially icon‑only controls, need an accessible name (for example, via a title, aria‑label, or associated text) so screen readers can announce their function. Info and relationships, Identify purpose 1.3.1, 1.3.6 AA Cards should be understandable by assistive technologies like screen readers. This means the proper semantic HTML or ARIA role should be utilized. Orientation 1.3.4 AA Cards are available in both vertical and horizontal orientations. Use of color 1.4.1 A Color is not used as a means to convey information or distinguish elements, indicate an action, or prompt a response. Color is always paired with text or icons, and is only used to enhance the meaning of the text. Text contrast 1.4.3 AA Large text has a contrast ratio of at least 3:1, and small text has a contrast ratio of at least 4.5:1. Incidental text such as disabled, hidden, or decorative text has no contrast requirement. Visual presentation 1.4.8 AAA The width of text blocks is no more than 80 characters (40 for CJK languages), and text is never justified. Non-text contrast 1.4.11 AA The visual presentation of illustrations, icons, and component states have a contrast ratio of at least 3:1. Text spacing 1.4.12 AA Line height of text is at least 1.5x the font size. 2. Operable Requirement Criterion Level Compliance Keyboard 2.1.1, 2.1.3 A, AAA All functionality of the component is operable through a keyboard without specific timing for keystrokes. Keyboard traps 2.1.2 A Focus can be moved away from the component using only a keyboard. Seizures and physical reactions 2.3.1, 2.3.2, 2.3.3 A, AAA, AAA There is no flashing content or unnecessary motion or animation in this component. Focus order 2.4.3 A Navigation sequences receive focus in an order that preserves meaning and operability. Focus visible 2.4.7 AA Keyboard states use an indicator that is visible with at least 3:1 contrast.",
+    "phone": ""
+  },
+  {
+    "id": "app-pattern/sap-card",
+    "kind": "app-pattern",
+    "name": "Card",
+    "summary": "A card is a container that represents an app or page, providing easy access and content preview. It consists of optional building blocks: Header, Extended Header, Numeric Content, Content, Footer, and Media Block. Cards display various content types including charts, lists, tables, objects, and text.",
+    "domains": [
+      "b2b-saas",
+      "data-analytics",
+      "manufacturing",
+      "logistics",
+      "fintech-payments"
+    ],
+    "sectors": [
+      "enterprise"
+    ],
+    "tags": [
+      "sap",
+      "component",
+      "Layout & Containers",
+      "card"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "sap",
+      "repo": "https://github.com/SAP/fundamental-styles",
+      "commit": "0753390b563b4eafe4d90ec812205df1361941ac",
+      "path": "docs/component-guidance.json",
+      "license": "Apache-2.0",
+      "authors": [
+        "SAP"
+      ],
+      "url": "https://sap.github.io/fundamental-styles/",
+      "transformations": [
+        "selected description, whenToUse, whenToAvoid, and bestPractices",
+        "dropped implementation and token fields"
+      ]
+    },
+    "sourceUrl": "https://sap.github.io/fundamental-styles/",
+    "screen": "card",
+    "kinds": [
+      "component",
+      "guidance"
+    ],
+    "basis": "a card component from SAP Fiori",
+    "blueprint": "A card is a container that represents an app or page, providing easy access and content preview. It consists of optional building blocks: Header, Extended Header, Numeric Content, Content, Footer, and Media Block. Cards display various content types including charts, lists, tables, objects, and text.\n\n### When to use\n\n- Give users easy access to an app or page relevant for a business task\n- Show a KPI or preview of the most important content\n- Let users complete a simple action without navigating to the underlying app\n- Display content types like charts, lists, tables, objects, or informative text\n- Offer cards on SAP Fiori launchpad or embed in other controls\n- Focus on a single object/topic or a group of objects\n\n### When to avoid\n\n- Cards for the same application should have distinct information from one another\n- Don't make cards editable - card sizes vary depending on layout and are fixed\n\n### Best practices\n\n- Use optional building blocks: Header, Extended Header, Numeric Content, Content, Footer, Media Block\n- Place Header either above or below Content (not separated with a line)\n- Card width adapts to its parent container\n- Each card should focus on either a single object/topic or a group of objects\n- Ensure cards referencing the same application have distinct information\n- Card sizes are not editable and vary depending on layout\n- All building blocks (Header, Content, Footer, etc.) are optional",
     "phone": ""
   },
   {
@@ -914,6 +1058,54 @@
     ],
     "basis": "component guidance from Adobe Spectrum",
     "blueprint": "Checkboxes allow users to select multiple items from a list of individual items, or to mark one individual item as selected.\n\nCheckboxes allow users to select multiple items from a list of individual items, or to mark one individual item as selected.\n\nKeyboard focus. A checkbox can be navigated using a keyboard. The keyboard focus state takes the checkbox's visual hover state and adds a blue ring to the checkbox in focus.\n\nText overflow. When the label is too long for the horizontal space available, it wraps to form another line.\n\nEmphasized or not? Emphasized checkboxes are optimal for forms, settings, etc. where the checkboxes need to be noticed, or to bring attention to selected items such as cards or table rows. Not emphasized checkboxes are optimal for application panels where all the visual components are monochrome in order to direct focus to the canvas.\n\nWhen to use a standalone checkbox. Standalone checkboxes should be used in situations where the context is clear without an associated text label. An example of this would be when a checkbox is connected to other controls inside of a panel.\n\nCheckbox vs. radio button. Checkboxes and radio buttons are not interchangeable. A set of checkboxes should be used to select as many options as desired (or none). A set of radio buttons should be used to select only a single option from a list of mutually exclusive options.\n\nCheckbox vs. switch. Use checkboxes to show selection, such as choosing multiple table rows. Use switches to show activation, like turning a setting on or off. Unlike switches, checkboxes can display an error state.\n\nLabel groups of related checkboxes. Sets of checkboxes should always have a clear label that describes what the list of options represents and guides users what to do. This is important for accessibility, since a screen reader will read the label before each option.\n\nRepresenting mixed values. When a checkbox represents multiple values that are not identical, the checkbox should appear in the indeterminate state. Any subsequent click or tap should select the checkbox, and update all values to be selected. Another click or tap after that should deselect the checkbox, and update all values to be not selected.\n\nRTL. For RTL (right-to-left) languages, the layout of the checkbox is mirrored. The checkmark is placed on the right side of the text.\n\nKeyboard interactions. Key Interaction Tab Moves focus to the checkbox (each checkbox is its own tab stop). Shift + Tab Moves focus to the previous checkbox, or to the previous item before it. Space Toggles the checkbox between selected and not selected. If the checkbox is partially selected initially, the checkbox becomes selected first (subsequent toggles alternate normally between selected and not selected).\n\nCursor guidelines. Cursor Description Pointer Use the pointer cursor for all interactive components in every state.\n\nWCAG 2.2 compliance. Any criterion not mention in the below table are not applicable to this component or are resolved with underlying requirements, engineering, and styles of the entire system. 1. Perceivable Requirement Criterion Level Compliance Non-text content 1.1.1 A Non‑text elements—such as the checkbox control—must provide a text alternative that communicates the control’s purpose. All controls, especially icon‑only controls, need an accessible name (for example, via a title, aria‑label, or associated text) so screen readers can announce their function. Info and relationships, Identify purpose 1.3.1, 1.3.6 A, AAA Checkboxes should be understandable by assistive technologies like screen readers. This means using the proper semantic HTML or ARIA role should be utilized. Orientation 1.3.4 AA Checkbox groups are available in both vertical and horizontal orientations. Use of color 1.4.1 A Color is not used as a means to convey information or distinguish elements, indicate an action, or prompt a response. Color is always paired with text or icons, and is only used to enhance the meaning of the text. Text contrast minimums 1.4.3 AA Large text has a contrast ratio of at least 3:1, and small text has a contrast ratio of at least 4.5:1. Incidental text such as disabled, hidden, or decorative text has no contrast requirement. Resize text 1.4.4 AA Checkboxes should be built in such a way that they can be resized without assistive technology up to 200%. Visual presentation 1.4.8 AAA Checkbox labels can wrap to multiple lines, so the 80-character (40 CJK) and no-justified-text guidance applies the same way it does for the group. Non-text contrast 1.4.11 AA The checkbox control and its various states have a contrast ratio of at least 3:1. Text spacing 1.4.12 AA Line height of text is at least 1.5x the font size when the label is wrapped. 2. Operable Requirement Criterion Level Compliance Keyboard 2.1.1, 2.1.3 A, AAA All functionality of the component is operable through a keyboard without specific timing for keystrokes. Keyboard traps 2.1.2 A Focus can be moved away from the component using only a keyboard. Seizures and physical feactions 2.3.1, 2.3.2, 2.3.3 A, AAA, AAA There is no flashing content or unnecessary motion or animation in this component. Focus order 2.4.3 A Navigation sequences receive focus in an order that preserves meaning and operability. Focus visible 2.4.7 AA Keyboard states use an indicator that is visible with at least 3:1 contrast.",
+    "phone": ""
+  },
+  {
+    "id": "app-pattern/sap-checkbox",
+    "kind": "app-pattern",
+    "name": "Checkbox",
+    "summary": "A checkbox lets users set a binary value (true/false). When selected, it toggles between checked (state applies), unchecked (state doesn't apply), and optionally tri-state/indeterminate (mixed selection of dependent fields). All options are visible, and users can make one or more independent selections.",
+    "domains": [
+      "b2b-saas",
+      "data-analytics",
+      "manufacturing",
+      "logistics",
+      "fintech-payments"
+    ],
+    "sectors": [
+      "enterprise"
+    ],
+    "tags": [
+      "sap",
+      "component",
+      "Forms & Inputs",
+      "checkbox"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "sap",
+      "repo": "https://github.com/SAP/fundamental-styles",
+      "commit": "0753390b563b4eafe4d90ec812205df1361941ac",
+      "path": "docs/component-guidance.json",
+      "license": "Apache-2.0",
+      "authors": [
+        "SAP"
+      ],
+      "url": "https://sap.github.io/fundamental-styles/",
+      "transformations": [
+        "selected description, whenToUse, whenToAvoid, and bestPractices",
+        "dropped implementation and token fields"
+      ]
+    },
+    "sourceUrl": "https://sap.github.io/fundamental-styles/",
+    "screen": "checkbox",
+    "kinds": [
+      "component",
+      "guidance"
+    ],
+    "basis": "a checkbox component from SAP Fiori",
+    "blueprint": "A checkbox lets users set a binary value (true/false). When selected, it toggles between checked (state applies), unchecked (state doesn't apply), and optionally tri-state/indeterminate (mixed selection of dependent fields). All options are visible, and users can make one or more independent selections.\n\n### When to use\n\n- Only one option can be selected or deselected (e.g., accept terms of use) when meaning is obvious\n- A group or list of options can be selected independently of each other\n- Options are displayed immediately without user interaction\n- Intermediate selection state (tri-state) is required when multiple sub-options are grouped under a parent option\n\n### When to avoid\n\n- User needs to choose multiple options from a large list → Use Combo Box Input instead\n- User can choose only one option from a list → Use Radio Buttons, Select, or List instead\n- User needs to perform instantaneous actions without reviewing or confirming → Use Switch instead\n- Not enough space available on screen → Use Combo Box instead\n\n### Best practices\n\n- Checked state means the described state applies or item is chosen\n- Unchecked state means the described state doesn't apply\n- Tri-state/indeterminate indicates neither checked nor unchecked (set via JavaScript `indeterminate` property)\n- Use tri-state to represent mixed selection when some (but not all) dependent fields are selected\n- All options visible without user interaction\n- Tri-state is visual only and cannot be achieved by direct user interaction\n- Use for independent selections where multiple options can be selected simultaneously",
     "phone": ""
   },
   {
@@ -1501,6 +1693,54 @@
     ],
     "basis": "a date of birth pattern from USWDS",
     "blueprint": "## About this pattern\n\n### What problem does this solve?\n\nWith many competing patterns for date formatting, users may become frustrated, confused, and more prone to make mistakes when entering a date of birth or other memorable date.\n\n### When to use this pattern\n\nUse this pattern when you need a user's date of birth or another memorable date.\n\n### What's the solution?\n\nAllowing a user to enter a memorable date using three clearly labeled fields provides the simplest and most inclusive digital experience. This is especially helpful when the date is in the past like a date of birth. By providing the Select component for month, and clearly labeled text input for date and year, users will understand what is being asked and not struggle to input the information or question what order the information should be entered in.\n\nMobile device users in particular may benefit from being able to type a year rather than using a scrolling date picker for date of birth or other memorable dates.\n\n## Guidance\n\n### What to do\n\n- Do provide text entry fields for day and year inputs, and the Select component for month.\n\n- Do label the fields clearly, including the month select. Some countries use a day/month/year format and it’s important that date and month are clearly distinguished to ensure correct date entry.\n\n- Do use a \"text\" vs \"numeric\" input type.\n\n- Do limit individual field character length.\n\n- Do consider your data requirements. Use both client-side and server-side validation to support properly formatted dates if possible. If you are unable to parse date without two digits, provide an example that reflects a leading zero and use clear validation messaging if a single digit without a leading zero is entered.\n\n- Do consider requiring a four-digit year to avoid potential confusion.\n\n### What not to do\n\n- Don't auto-advance focus from one field to the next. This makes it difficult for keyboard-only users to navigate and correct mistakes.\n\n- Do not use visual separators between fields.\n\n- Do not auto-advance focus from field to field.\n\n- Do not require leading zeros if possible.\n\n- Do not use a date picker.",
+    "phone": ""
+  },
+  {
+    "id": "app-pattern/sap-date-picker",
+    "kind": "app-pattern",
+    "name": "Date Picker",
+    "summary": "Date Picker lets users select localized date using touch, mouse, or keyboard input. Responsive behavior for all devices - compact mode (smaller) and cozy mode (touch-friendly). Two parts: Input Field (direct entry or picker) and Date Picker (day/month/year/year ranges views).",
+    "domains": [
+      "b2b-saas",
+      "data-analytics",
+      "manufacturing",
+      "logistics",
+      "fintech-payments"
+    ],
+    "sectors": [
+      "enterprise"
+    ],
+    "tags": [
+      "sap",
+      "component",
+      "Forms & Inputs",
+      "date-picker"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "sap",
+      "repo": "https://github.com/SAP/fundamental-styles",
+      "commit": "0753390b563b4eafe4d90ec812205df1361941ac",
+      "path": "docs/component-guidance.json",
+      "license": "Apache-2.0",
+      "authors": [
+        "SAP"
+      ],
+      "url": "https://sap.github.io/fundamental-styles/",
+      "transformations": [
+        "selected description, whenToUse, whenToAvoid, and bestPractices",
+        "dropped implementation and token fields"
+      ]
+    },
+    "sourceUrl": "https://sap.github.io/fundamental-styles/",
+    "screen": "date-picker",
+    "kinds": [
+      "component",
+      "guidance"
+    ],
+    "basis": "a date picker component from SAP Fiori",
+    "blueprint": "Date Picker lets users select localized date using touch, mouse, or keyboard input. Responsive behavior for all devices - compact mode (smaller) and cozy mode (touch-friendly). Two parts: Input Field (direct entry or picker) and Date Picker (day/month/year/year ranges views).\n\n### When to use\n\n- Users need to enter single date\n- Navigate directly from one month or year to another\n- Enter lots of data fast or primarily using keyboard\n- Single date selection needed\n- Responsive date input required\n- Direct date entry or picker selection\n\n### When to avoid\n\n- Combined date and time input → Use Date/Time Picker instead\n- Keep calendar visible and prominent → Use Calendar instead\n- Enter date range → Use Date Range Picker instead\n- Multiple dates selection → Use appropriate multi-date picker\n\n### Best practices\n\n- Input field for direct date entry or picker selection\n- Date picker shows day view, month view, year view, year ranges\n- Compact mode: smaller size\n- Cozy mode: touch-friendly size\n- Responsive behavior for all devices\n- Use touch, mouse, or keyboard input\n- Navigate directly between months/years\n- Single date selection\n- Localized date format\n- For date+time, use Date/Time Picker\n- For ranges, use Date Range Picker",
     "phone": ""
   },
   {
@@ -2095,6 +2335,54 @@
     "phone": ""
   },
   {
+    "id": "app-pattern/sap-form-group",
+    "kind": "app-pattern",
+    "name": "Form Group",
+    "summary": "Form groups assemble form elements with labels, messages, and help containers. Components like `fd-form__item` with label and control can be used independently when error messages aren't needed.",
+    "domains": [
+      "b2b-saas",
+      "data-analytics",
+      "manufacturing",
+      "logistics",
+      "fintech-payments"
+    ],
+    "sectors": [
+      "enterprise"
+    ],
+    "tags": [
+      "sap",
+      "component",
+      "Forms & Inputs",
+      "form-group"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "sap",
+      "repo": "https://github.com/SAP/fundamental-styles",
+      "commit": "0753390b563b4eafe4d90ec812205df1361941ac",
+      "path": "docs/component-guidance.json",
+      "license": "Apache-2.0",
+      "authors": [
+        "SAP"
+      ],
+      "url": "https://sap.github.io/fundamental-styles/",
+      "transformations": [
+        "selected description, whenToUse, whenToAvoid, and bestPractices",
+        "dropped implementation and token fields"
+      ]
+    },
+    "sourceUrl": "https://sap.github.io/fundamental-styles/",
+    "screen": "form-group",
+    "kinds": [
+      "component",
+      "guidance"
+    ],
+    "basis": "a form group component from SAP Fiori",
+    "blueprint": "Form groups assemble form elements with labels, messages, and help containers. Components like `fd-form__item` with label and control can be used independently when error messages aren't needed.\n\n### When to use\n\n- Assemble complete form elements with labels, controls, messages, and help text\n- Group related form fields with validation messages\n- Create structured form layouts with consistent spacing\n- Need error messages, help text, or validation feedback alongside form fields\n\n### When to avoid\n\n- Simple form fields that don't need error messages or help text → Use `fd-form__item` alone instead\n- When minimal form structure suffices\n\n### Best practices\n\n- Use full form group when error messages or help containers are needed\n- Use `fd-form__item` with label and control alone for simpler fields without messages\n- Components can be used independently based on needs\n- Provides consistent structure for labels, controls, messages, and help text\n- Not every form field needs the full form group structure\n- Choose minimal necessary components to avoid over-engineering simple forms",
+    "phone": ""
+  },
+  {
     "id": "app-pattern/carbon-forms-pattern",
     "kind": "app-pattern",
     "name": "Forms",
@@ -2328,6 +2616,54 @@
     "phone": ""
   },
   {
+    "id": "app-pattern/sap-icon-tab-bar",
+    "kind": "app-pattern",
+    "name": "Icon Tab Bar",
+    "summary": "Navigation and filtering control containing tabs that display icons, text, or both, linking to different content areas or views. Two key use cases: navigate between content sections or filter lists (showing all items or those matching specific attributes). Users switch tabs by clicking.",
+    "domains": [
+      "b2b-saas",
+      "data-analytics",
+      "manufacturing",
+      "logistics",
+      "fintech-payments"
+    ],
+    "sectors": [
+      "enterprise"
+    ],
+    "tags": [
+      "sap",
+      "component",
+      "Navigation",
+      "icon-tab-bar"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "sap",
+      "repo": "https://github.com/SAP/fundamental-styles",
+      "commit": "0753390b563b4eafe4d90ec812205df1361941ac",
+      "path": "docs/component-guidance.json",
+      "license": "Apache-2.0",
+      "authors": [
+        "SAP"
+      ],
+      "url": "https://sap.github.io/fundamental-styles/",
+      "transformations": [
+        "selected description, whenToUse, whenToAvoid, and bestPractices",
+        "dropped implementation and token fields"
+      ]
+    },
+    "sourceUrl": "https://sap.github.io/fundamental-styles/",
+    "screen": "icon-tab-bar",
+    "kinds": [
+      "component",
+      "guidance"
+    ],
+    "basis": "a icon tab bar component from SAP Fiori",
+    "blueprint": "Navigation and filtering control containing tabs that display icons, text, or both, linking to different content areas or views. Two key use cases: navigate between content sections or filter lists (showing all items or those matching specific attributes). Users switch tabs by clicking.\n\n### When to use\n\n- Business objects need to show multiple facets simultaneously\n- Allow users to browse through different facets\n- Need prominent or visual filter on top of a list\n- Clear-cut process steps need visualization\n- Navigate between different content sections on screen\n- Filter lists with option to display all or filtered items\n\n### When to avoid\n\n- Planning to use only one single tab\n- Displaying tabs in responsive table or grid layout → Use table toolbar instead\n- Displaying hierarchical navigation → Use tree or breadcrumb instead\n- Navigating to unrelated pages → Use links or navigation components instead\n\n### Best practices\n\n- Use for multiple facets of business objects\n- Use for prominent visual filtering\n- Each tab can display icon, text, or both\n- Users switch between tabs by clicking\n- Good for clear-cut process steps visualization\n- Requires at least two tabs (not for single tab)\n- For hierarchical navigation, use tree or breadcrumb instead",
+    "phone": ""
+  },
+  {
     "id": "app-pattern/inbox-triage",
     "kind": "app-pattern",
     "name": "Inbox triage",
@@ -2371,6 +2707,54 @@
     "basis": "assembled from the study's list, feed and rail measurements; no inbox screen was in the study",
     "blueprint": "Three regions on one ground: the navigation (a 230px sidebar or a 55px rail), the list, and the open item with its details. The list column has a fixed width (the study's fixed columns are 306 and 384px) and its own toolbar: saved views as underline tabs or a select, a 32px search, the count. Rows are two-line, 64-80px: line 1 is who (14/600) with the time in words right-aligned in grey ('9 min', 'Yesterday'); line 2 is the subject or last message in 13-14px grey, truncated to one line with an ellipsis. Unread rows set the name at 600 and add a 6px dot or a 16px count circle; read rows keep the name and subject in ink at 400 (grey is for meta only, never for a row's identity: faded urgent rows were the top complaint in testing). One status mark per row (priority or SLA, as a pale pill or words, not both). The selected row takes the --active fill of the nav pill (optionally a 2px accent bar inside its left edge), so it is never confused with a hover or a focus ring; never a saturated fill. The row's meta sits in fixed right-aligned slots (assignee 20px, channel 14px, priority 14px) so it lines up as columns; priority is printed only above normal. The open item fills the remaining width; its details (customer, plan, history) sit in a fixed column of 306-384px as key-value rows on a 28-32px pitch.",
     "phone": "One region at a time: the list fills the screen; choosing a row pushes the conversation; the details open from a button in its header; back returns to the list at the same scroll position."
+  },
+  {
+    "id": "app-pattern/sap-input",
+    "kind": "app-pattern",
+    "name": "Input",
+    "summary": "Text input fields allow users to enter and edit single-line text, numbers, dates, or times. They should always be paired with a label, and required fields should have an asterisk (*). Features include autocomplete, suggestions, and value help for valid data entry.",
+    "domains": [
+      "b2b-saas",
+      "data-analytics",
+      "manufacturing",
+      "logistics",
+      "fintech-payments"
+    ],
+    "sectors": [
+      "enterprise"
+    ],
+    "tags": [
+      "sap",
+      "component",
+      "Forms & Inputs",
+      "input"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "sap",
+      "repo": "https://github.com/SAP/fundamental-styles",
+      "commit": "0753390b563b4eafe4d90ec812205df1361941ac",
+      "path": "docs/component-guidance.json",
+      "license": "Apache-2.0",
+      "authors": [
+        "SAP"
+      ],
+      "url": "https://sap.github.io/fundamental-styles/",
+      "transformations": [
+        "selected description, whenToUse, whenToAvoid, and bestPractices",
+        "dropped implementation and token fields"
+      ]
+    },
+    "sourceUrl": "https://sap.github.io/fundamental-styles/",
+    "screen": "input",
+    "kinds": [
+      "component",
+      "guidance"
+    ],
+    "basis": "a input component from SAP Fiori",
+    "blueprint": "Text input fields allow users to enter and edit single-line text, numbers, dates, or times. They should always be paired with a label, and required fields should have an asterisk (*). Features include autocomplete, suggestions, and value help for valid data entry.\n\n### When to use\n\n- Enter short, single-line text or numbers, dates, or times\n- Enter password, URL, phone number, or email address\n- Select a single item from a large dataset (more than 200 items)\n- Find an object by searching multiple attributes (ID, city, customer name) - use with autocomplete and value help\n- Select one or more items from a list (multi-input)\n- Find items from a list by searching multiple attributes (combobox)\n\n### When to avoid\n\n- Entering dates and times → Use date picker, date range selection, or date/time picker instead\n- Entering long texts → Use textarea instead\n- Carrying out a search → Use search field instead\n- Selecting multiple values → Use multi-combo box (<200 items) or multi-input field (>200 items) instead\n- Selecting from small set of values (<20 items) → Consider select control instead\n\n### Best practices\n\n- Always pair input with a label\n- Mark required fields with asterisk (*) in label\n- Use autocomplete and suggestions for better user experience\n- Provide value help for complex data entry\n- For small sets (<20 items), use select control\n- For medium sets (20-200 items), use combo box\n- For large sets (>200 items), use input with value help\n- Single-line text only - use textarea for multi-line\n- Required fields must have visual indicator (asterisk) in label",
+    "phone": ""
   },
   {
     "id": "app-pattern/insights-share-tables",
@@ -2752,6 +3136,54 @@
     "phone": ""
   },
   {
+    "id": "app-pattern/sap-list",
+    "kind": "app-pattern",
+    "name": "List",
+    "summary": "Lists display homogeneous basic data, distinguished from tables (which handle complex data). Used in master lists for master-detail scenarios with flexible column layout, popovers, and dialogs. Supports byline variant for additional content and semantic status.",
+    "domains": [
+      "b2b-saas",
+      "data-analytics",
+      "manufacturing",
+      "logistics",
+      "fintech-payments"
+    ],
+    "sectors": [
+      "enterprise"
+    ],
+    "tags": [
+      "sap",
+      "component",
+      "Data Display",
+      "list"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "sap",
+      "repo": "https://github.com/SAP/fundamental-styles",
+      "commit": "0753390b563b4eafe4d90ec812205df1361941ac",
+      "path": "docs/component-guidance.json",
+      "license": "Apache-2.0",
+      "authors": [
+        "SAP"
+      ],
+      "url": "https://sap.github.io/fundamental-styles/",
+      "transformations": [
+        "selected description, whenToUse, whenToAvoid, and bestPractices",
+        "dropped implementation and token fields"
+      ]
+    },
+    "sourceUrl": "https://sap.github.io/fundamental-styles/",
+    "screen": "list",
+    "kinds": [
+      "component",
+      "guidance"
+    ],
+    "basis": "a list component from SAP Fiori",
+    "blueprint": "Lists display homogeneous basic data, distinguished from tables (which handle complex data). Used in master lists for master-detail scenarios with flexible column layout, popovers, and dialogs. Supports byline variant for additional content and semantic status.\n\n### When to use\n\n- Display homogeneous set of basic data\n- Sort, group, or filter simple datasets\n- Display single-level hierarchy (simpler than tree table)\n- Include additional text in list items (byline list with `fd-list--byline`)\n- Present semantic status in list items (byline list)\n- Display accounts in user menu (subline with third line)\n\n### When to avoid\n\n- Managing complex datasets needing extensive sorting, grouping, filtering, or editing → Use table instead\n- Working with complex hierarchies → Use tree instead\n- Including objects in list items (when using byline list) → Use Object List instead\n\n### Best practices\n\n- Use for homogeneous basic data (not complex data)\n- Use in master-detail scenarios with flexible column layout\n- Use in popovers or dialogs\n- Add `fd-list--byline` modifier for byline list (additional text/semantic status)\n- Byline list extends standard list items with additional content\n- Support single-level hierarchies (simpler use case)\n- Lists for basic data, tables for complex data\n- Use tree for complex hierarchies, not list",
+    "phone": ""
+  },
+  {
     "id": "app-pattern/carbon-loading-pattern",
     "kind": "app-pattern",
     "name": "Loading",
@@ -2843,6 +3275,102 @@
     ],
     "basis": "component guidance from Adobe Spectrum",
     "blueprint": "Menus help users take actions, choose from a list of options, configure settings, and more. They can be placed in a transient container, like a popover or tray.\n\nMenus help users take actions, choose from a list of options, configure settings, and more. They can be placed in a transient container, like a popover or tray.\n\nDrill-in chevron. When a menu item includes a submenu, a drill-in chevron appears at the end of the item to indicate that additional options are available.\n\nLink-out icon. When a menu item leads to a different context, such as a new page or dialog, a link-out icon appears at the end of the item to indicate that the user will navigate away from the current view.\n\nPopover submenus. When a menu is displayed within popovers, a submenu will appear adjacent to the parent menu item in a separate popover. The submenu popover is aligned with an offset to horizontally overlap the parent menu and vertically align the first submenu item with the parent menu item. When a menu is shown in a popover, any submenu appears in a separate popover next to the parent item. The submenu popover is positioned to overlap the parent menu horizontally, with vertical alignment that matches the first submenu item to its parent.\n\nTray submenus. When a menu is shown in a tray, selecting a parent item with a submenu replaces the tray's content with the submenu. A back button labeled with the parent item's title appears at the top of the tray to let users return to the previous menu level.\n\nKeyboard focus. A menu item can be navigated using a keyboard. The keyboard focus state takes the menu item's visual hover state and adds a focus ring around the item.\n\nText overflow. When a menu item's label or description are too long for the available horizontal space, they wrap to form another line.\n\nSection dividers. Dividers appear between sections when two or more sections are used within the same menu.\n\nWindows high contrast mode. In Windows high contrast mode, menu items should display with default text color. Selected items should have the background and text colors defined for selected text.\n\nUse consistent sizing. Menus should be sized according to the component being used as the menu trigger. All submenus within the menu should also be using the same size as the menu trigger.\n\nUse sentence case for menu items. Following Adobe's UX writing style, write menu items in sentence case unless they contain words that are branded terms.\n\nEllipses in menu commands. Don't end a menu command with an ellipsis (…) unless it requires additional input to complete the action, typically in a dialog.\n\nUsing descriptions in menu items. Only use descriptions in menu items when the information will help a user to decide which action to take from the menu. Don't overload menu items with repetitive information or with promotional calls-to-action.\n\nRTL. For RTL (right-to-left) languages, the entire menu is mirrored horizontally, including the direction of the drill-in chevron and popover placement for submenus.\n\nKeyboard interactions. Key Interaction Enter or Space Opens menu and moves focus to first item. Down Arrow (on trigger) Opens menu and moves focus to first item. Up Arrow (on trigger, optional) Opens menu and moves focus to last item. Up Arrow / Down Arrow (in menu) Moves focus to previous/next item at the current menu level (wrapping behavior may be implementation-defined). Right Arrow / Left Arrow In submenu hierarchies: opens child submenu or returns to parent menu item (direction follows hierarchy and orientation). Home / End Moves focus to first/last item in current menu level. Printable character keys Moves focus to the next item whose label begins with typed character(s) (typeahead). Enter or Space (on item) Activates item. For checkbox/radio/switch items, may toggle state and optionally keep menu open based on selection behavior. Esc Closes current submenu/menu and returns focus to parent item or menu trigger. Tab / Shift + Tab Exits menu, closes open menus, and moves focus to next/previous focusable element.\n\nCursor guidelines. Cursor Description Pointer Use the pointer cursor for all interactive components in every state.\n\nWCAG 2.2 compliance. Any criterion not mention in the below table are not applicable to this component or are resolved with underlying requirements, engineering, and styles of the entire system. 1. Perceivable Requirement Criterion Level Compliance Non-text content 1.1.1 A Non-text elements, such as icons used in menu items, must provide a text alternative that communicates the item's purpose. All menu items, especially icon-only items, need an accessible name (for example, via a title, aria-label, or associated text) so screen readers can announce their function. Info and relationships, Identify purpose 1.3.1, 1.3.6 A, AAA Menus must be understandable to assistive technologies, such as screen readers. Use proper semantic HTML or the appropriate ARIA roles to ensure accessibility. Text contrast 1.4.3 AA The visual presentation of text has a contrast ratio of at least 4.5:1. Resize text 1.4.4 AA Menus should be built in such a way that they can be resized without assistive technology up to 200%. Visual presentation 1.4.8 AAA The width of text blocks is no more than 80 characters (40 for CJK languages), and text is never justified. Non-text contrast 1.4.11 AA The visual presentation of illustrations and component states have a contrast ratio of at least 3:1. Text spacing 1.4.12 AA Line height of text is at least 1.5x the font size. 2. Operable Requirement Criterion Level Compliance Keyboard 2.1.1, 2.1.3 A, AAA All functionality of the component is operable through a keyboard without specific timing for keystrokes. Keyboard traps 2.1.2 A Focus can be moved away from the component using only a keyboard. Seizures and physical reactions 2.3.1, 2.3.2, 2.3.3 A, AAA, AAA There is no flashing content or unnecessary motion or animation in this component. Focus order 2.4.3 A Navigation sequences receive focus in an order that preserves meaning and operability. Focus visible 2.4.7 AA Keyboard states use an indicator that is visible with at least 3:1 contrast.",
+    "phone": ""
+  },
+  {
+    "id": "app-pattern/sap-menu",
+    "kind": "app-pattern",
+    "name": "Menu",
+    "summary": "Menu is a listing structure with optional headers for creating menus. Commonly used as contents for dropdowns, contextual menus, etc., when paired with the popover component.",
+    "domains": [
+      "b2b-saas",
+      "data-analytics",
+      "manufacturing",
+      "logistics",
+      "fintech-payments"
+    ],
+    "sectors": [
+      "enterprise"
+    ],
+    "tags": [
+      "sap",
+      "component",
+      "Navigation",
+      "menu"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "sap",
+      "repo": "https://github.com/SAP/fundamental-styles",
+      "commit": "0753390b563b4eafe4d90ec812205df1361941ac",
+      "path": "docs/component-guidance.json",
+      "license": "Apache-2.0",
+      "authors": [
+        "SAP"
+      ],
+      "url": "https://sap.github.io/fundamental-styles/",
+      "transformations": [
+        "selected description, whenToUse, whenToAvoid, and bestPractices",
+        "dropped implementation and token fields"
+      ]
+    },
+    "sourceUrl": "https://sap.github.io/fundamental-styles/",
+    "screen": "menu",
+    "kinds": [
+      "component",
+      "guidance"
+    ],
+    "basis": "a menu component from SAP Fiori",
+    "blueprint": "Menu is a listing structure with optional headers for creating menus. Commonly used as contents for dropdowns, contextual menus, etc., when paired with the popover component.\n\n### When to use\n\n- Offer more than one action\n- Users need to stay in a certain context\n- Small number of actions available\n- Create dropdowns or contextual menus (pair with popover component)\n\n### When to avoid\n\n- Providing only one option → Use button instead\n- Users would benefit from split button (easy-to-access default action with option for other actions) → Use split button instead\n\n### Best practices\n\n- Use for multiple actions (not single action)\n- Pair with popover component for dropdowns and contextual menus\n- Include optional headers to organize menu items\n- Keep number of actions small and manageable\n- Helps users stay in context while choosing actions\n- Requires more than one action (use button for single action)\n- Consider split button when there's a clear default action",
+    "phone": ""
+  },
+  {
+    "id": "app-pattern/sap-message-box",
+    "kind": "app-pattern",
+    "name": "Message Box",
+    "summary": "Message box displays a dialog with a simple message to the user. Unlike popover, it can relay messages unrelated to UI (e.g., technical errors). Inherits Dialog look/behavior (excluding drag/resize). Displays semantic colors and icons: Error, Warning, Success, Information, Confirmation.",
+    "domains": [
+      "b2b-saas",
+      "data-analytics",
+      "manufacturing",
+      "logistics",
+      "fintech-payments"
+    ],
+    "sectors": [
+      "enterprise"
+    ],
+    "tags": [
+      "sap",
+      "component",
+      "Feedback & Status",
+      "message-box"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "sap",
+      "repo": "https://github.com/SAP/fundamental-styles",
+      "commit": "0753390b563b4eafe4d90ec812205df1361941ac",
+      "path": "docs/component-guidance.json",
+      "license": "Apache-2.0",
+      "authors": [
+        "SAP"
+      ],
+      "url": "https://sap.github.io/fundamental-styles/",
+      "transformations": [
+        "selected description, whenToUse, whenToAvoid, and bestPractices",
+        "dropped implementation and token fields"
+      ]
+    },
+    "sourceUrl": "https://sap.github.io/fundamental-styles/",
+    "screen": "message-box",
+    "kinds": [
+      "component",
+      "guidance"
+    ],
+    "basis": "a message box component from SAP Fiori",
+    "blueprint": "Message box displays a dialog with a simple message to the user. Unlike popover, it can relay messages unrelated to UI (e.g., technical errors). Inherits Dialog look/behavior (excluding drag/resize). Displays semantic colors and icons: Error, Warning, Success, Information, Confirmation.\n\n### When to use\n\n- Display non-field-related messages\n- Interrupt user while performing an action\n- Display error, warning, success, confirmation, or information messages\n- Interrupt user for other reasons\n- User needs to acknowledge the message\n- User needs to make a decision (include two action buttons)\n\n### When to avoid\n\n- Displaying short success message → Use Message Toast instead\n- Message can be shown directly in form field → Show in form field\n\n### Best practices\n\n- Include two action buttons when user decision is required before continuing\n- Primary action button explicitly displays the action in text\n- Secondary button provides cancel option\n- Use semantic colors and icons: error, warning, success, information, confirmation\n- Inherits Dialog look and behavior (no dragging/resizing)\n- Can relay messages unrelated to UI (technical errors, system messages)\n- Interrupts user flow - use appropriately\n- For short success messages, use Message Toast instead",
     "phone": ""
   },
   {
@@ -3168,6 +3696,54 @@
     "phone": ""
   },
   {
+    "id": "app-pattern/sap-notification",
+    "kind": "app-pattern",
+    "name": "Notification",
+    "summary": "Notifications should be well-instrumented, timed to provide value without being intrusive. Should be brief, concise, conveying specific information or prompting action. Used for reminders, alerts, and updates.",
+    "domains": [
+      "b2b-saas",
+      "data-analytics",
+      "manufacturing",
+      "logistics",
+      "fintech-payments"
+    ],
+    "sectors": [
+      "enterprise"
+    ],
+    "tags": [
+      "sap",
+      "component",
+      "Feedback & Status",
+      "notification"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "sap",
+      "repo": "https://github.com/SAP/fundamental-styles",
+      "commit": "0753390b563b4eafe4d90ec812205df1361941ac",
+      "path": "docs/component-guidance.json",
+      "license": "Apache-2.0",
+      "authors": [
+        "SAP"
+      ],
+      "url": "https://sap.github.io/fundamental-styles/",
+      "transformations": [
+        "selected description, whenToUse, whenToAvoid, and bestPractices",
+        "dropped implementation and token fields"
+      ]
+    },
+    "sourceUrl": "https://sap.github.io/fundamental-styles/",
+    "screen": "notification",
+    "kinds": [
+      "component",
+      "guidance"
+    ],
+    "basis": "a notification component from SAP Fiori",
+    "blueprint": "Notifications should be well-instrumented, timed to provide value without being intrusive. Should be brief, concise, conveying specific information or prompting action. Used for reminders, alerts, and updates.\n\n### When to use\n\n- Reminders: upcoming events, appointments, deadlines, payments, tasks requiring attention/action\n- Alerts: urgent information like business-critical alerts\n- Updates: significant changes to user interests (status updates, workflow progress)\n- Well-timed communication without interrupting user\n- Action-oriented with clear call to action\n\n### When to avoid\n\n- Excessive notifications that frustrate users\n- Overwhelming users with too many messages in short time span\n- Non-relevant or non-useful information\n\n### Best practices\n\n- Clear on purpose (update, reminder, or alert)\n- Concise and to the point\n- Relevant and useful for user\n- Well-timed\n- Personalized where possible\n- Action-oriented with clear call to action\n- Transparent on importance (use importance indicator consistently)\n- Well-paced (avoid overwhelming with too many messages)\n- Consider user's perspective and context\n- Group notifications for similar event types when threshold reached (reduces overall count for non-critical events)\n- Provide value and relevance without overwhelming or interrupting\n- Avoid excessive notifications that diminish effectiveness",
+    "phone": ""
+  },
+  {
     "id": "app-pattern/carbon-notification-pattern",
     "kind": "app-pattern",
     "name": "Notifications",
@@ -3400,6 +3976,54 @@
     ],
     "basis": "a pagination pattern from the CMS Design System",
     "blueprint": "## Guidance\n\nPaginated content is any content split into multiple pages determined by a specific amount of content per page, not split by any meaningful attribute, like feature or subject or step. Search results and article collections are often paginated. Readers use the pagination component to move from page to page in paginated content, or directly to the first or last page of the paginated set.\n\n### When to use\n\n- Typically used for paginated search results.\n- Can be used for multi-page collections of related items, including articles related to a category or tag, content archives, and history or activity. Splitting a large collection of related items into individual pages can improve browsability and scannability.\n\n### When to consider alternatives\n\n- If you need to indicate progress in a series of steps that must be completed in succession, like an onboarding or checkout flow, this isn't the component for you.\n- If the length of the entire collection is less than 3-4 screen lengths long, consider showing all the items at once instead of paginating.\n\n### Usage\n\n- Users want to know the length of a paginated section, so show the size of the paginated set.\n- Highlight the current page the user is on in relation to the entire collection of pages.\n- Don't split the navigation items over multiple lines as this can make individual pages more difficult to understand and select.\n- Don't include out-of-sequence items directly adjacent to one another. Wherever there are missing pages, an ellipses should be used.\n- Avoid adding complexity by focusing on the essentials and avoid adding more items to Pagination just to fill the space.\n- Use touch targets that are big enough to select with any finger and have enough separation to avoid mistakes.\n- Do not use buttons for URL-based pagination. Because the URL is updated, the browser history stack updates and a link is the correct tag to use.\n- Consider page load, performance, and the user's scrolling preferences when determining how many items are displayed on each page.\n\n## Accessibility\nThe Pagination component has been tested against, and meets, WCAG 2.1 standards for text size, color contrast, and screenreader usage.\n\n### Accessibility Guidance\n\n- The Pagination component uses a wrapping `` element to identify it as a navigation section to screen readers and other assistive technologies.\n- Itʼs likely that you will have more than one `` on a page. If you do, Pagination **must** have an ARIA label attribute defined on the `` element that describes its purpose. To do this, supply a string value to the `ariaLabel` prop on the component adequately describing the purpose. “Pagination resultsˮ is a possible option.\n- The component sets `aria-current=\"page\"` on the `` element containing the current page value to properly voice the current page for screen readers.\n- The component adds an `aria-label` to the pagination item with the word “pageˮ and the page number so that screen readers will voice the word \"page\" before the page numbers automatically.\n- Once a pagination link has been clicked, the user should be redirected to that content and focus should shift to the top-level piece of content on that page, usually an ``, but this depends on content being paginated over.\n- Uses an `` element for the non-current pages. They are announced consistently by screen readers, and function as anchor links do normally (i.e. interactive and link to content).\n- Avoid large horizontal gaps between pagination elements, as this may cause users with limited vision or mobility to miss items when scanning. For mobile devices and devices with smaller screens we offer the `compact` boolean prop which changes the layout from using a series of anchor links for each page to instead rendering the text “Page X of Yˮ.\n\n### Accessibility Testing\n\n#### Keyboard navigation\n\n- If the \"Previous\" navigation link has keyboard focus, pressing the **TAB** key should move focus to the first pagination page link.\n- If a pagination page link has keyboard focus, pressing **TAB** should move focus to the next pagination link in sequence.\n- If the last pagination page link has keyboard focus, pressing **TAB** should move focus to the \"Next\" navigation link.\n- The currently active page link should not receive keyboard focus when pressing **TAB**.\n- Verify that keyboard focus is not trapped in the pagination and that users can tab into and out of the component.\n- Confirm a visible focus indicator appears on each pagination link when using a keyboard.\n\n#### Zoom magnification\n\n- When zoomed to 200%, pagination content must remain legible, functional, and properly sized. The component should automatically adjust to mobile styling.\n\n#### Screen reader\n\n- Screen readers must announce pagination links in the correct visual and numerical order.\n- Screen readers must announce the role and label of each link (e.g., 'link, page 10').\n\n## Code\n\n### React\n\nPagination requires three properties: `totalPages`, which is the total number of pages, `currentPage`, which acts a means to track the current page, and `onPageChange`, which is a function used to handle state changes when the user clicks a page.\n\nPagination also comes in two styles: default, which is compact on mobile viewports and expands to reveal individual pages on larger viewports, and `compact`, which maintains the compact layout regardless of viewport size.\n\n### Web Component\n\n### Style customization\n\nThe following CSS variables can be overridden to customize Pagination components:\n\n## Component maturity",
+    "phone": ""
+  },
+  {
+    "id": "app-pattern/sap-pagination",
+    "kind": "app-pattern",
+    "name": "Pagination",
+    "summary": "Pagination allows users to separate content into discrete pages, making it easier to digest and navigate through large sets of items. Commonly used for tables and tiles. Supports two display modes: standard (>9 pages with input) and short (<9 pages showing all).",
+    "domains": [
+      "b2b-saas",
+      "data-analytics",
+      "manufacturing",
+      "logistics",
+      "fintech-payments"
+    ],
+    "sectors": [
+      "enterprise"
+    ],
+    "tags": [
+      "sap",
+      "component",
+      "Navigation",
+      "pagination"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "sap",
+      "repo": "https://github.com/SAP/fundamental-styles",
+      "commit": "0753390b563b4eafe4d90ec812205df1361941ac",
+      "path": "docs/component-guidance.json",
+      "license": "Apache-2.0",
+      "authors": [
+        "SAP"
+      ],
+      "url": "https://sap.github.io/fundamental-styles/",
+      "transformations": [
+        "selected description, whenToUse, whenToAvoid, and bestPractices",
+        "dropped implementation and token fields"
+      ]
+    },
+    "sourceUrl": "https://sap.github.io/fundamental-styles/",
+    "screen": "pagination",
+    "kinds": [
+      "component",
+      "guidance"
+    ],
+    "basis": "a pagination component from SAP Fiori",
+    "blueprint": "Pagination allows users to separate content into discrete pages, making it easier to digest and navigate through large sets of items. Commonly used for tables and tiles. Supports two display modes: standard (>9 pages with input) and short (<9 pages showing all).\n\n### When to use\n\n- User needs to search through several related items (over 30 items)\n- Content contains products users can choose from\n- Allow users to bookmark specific pages\n- Optimize content for search engines\n- Navigate through large data sets or product listings\n- Display tables or tile collections with many items\n\n### When to avoid\n\n- Small data sets (under 30 items) → Show all items or use scrolling instead\n- Real-time data that updates frequently → Use infinite scroll or live updates\n- Content that should be viewed sequentially → Use stepper or wizard instead\n\n### Best practices\n\n- Use `fd-pagination--short` class for under 9 pages (shows all page buttons)\n- For over 9 pages: show 9 elements (pages, more symbols, current page) with input field\n- Highlight current page with active state button\n- Include first/last page navigation buttons\n- Show total number of items and current range\n- Use input field for direct page navigation on large data sets\n- Enable keyboard navigation (arrow keys, Enter)\n- Maintain page state in URL for bookmarking\n- Threshold of 30 items is a guideline - adjust based on item density\n- Consider infinite scroll for mobile experiences",
     "phone": ""
   },
   {
@@ -3639,6 +4263,54 @@
     "phone": "The getting-started strip becomes a 2 x 2 grid or a list; the table becomes two-line rows; the KPI strip a 2-column grid."
   },
   {
+    "id": "app-pattern/sap-popover",
+    "kind": "app-pattern",
+    "name": "Popover",
+    "summary": "Popover displays additional information for an object in a compact way without leaving the page. Contains control (trigger) and body (content). Can be paired with Menu for dropdown functionality. Supports header, footer, and scrollable variants with flexible placement options.",
+    "domains": [
+      "b2b-saas",
+      "data-analytics",
+      "manufacturing",
+      "logistics",
+      "fintech-payments"
+    ],
+    "sectors": [
+      "enterprise"
+    ],
+    "tags": [
+      "sap",
+      "component",
+      "Feedback & Status",
+      "popover"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "sap",
+      "repo": "https://github.com/SAP/fundamental-styles",
+      "commit": "0753390b563b4eafe4d90ec812205df1361941ac",
+      "path": "docs/component-guidance.json",
+      "license": "Apache-2.0",
+      "authors": [
+        "SAP"
+      ],
+      "url": "https://sap.github.io/fundamental-styles/",
+      "transformations": [
+        "selected description, whenToUse, whenToAvoid, and bestPractices",
+        "dropped implementation and token fields"
+      ]
+    },
+    "sourceUrl": "https://sap.github.io/fundamental-styles/",
+    "screen": "popover",
+    "kinds": [
+      "component",
+      "guidance"
+    ],
+    "basis": "a popover component from SAP Fiori",
+    "blueprint": "Popover displays additional information for an object in a compact way without leaving the page. Contains control (trigger) and body (content). Can be paired with Menu for dropdown functionality. Supports header, footer, and scrollable variants with flexible placement options.\n\n### When to use\n\n- Show additional information on demand without navigation\n- Define custom structure for supplementary content\n- Display UI elements not available in Quick View\n- Show contextual help or tooltips with rich content\n- Trigger dropdown menus from buttons\n- Display details for an object inline\n\n### When to avoid\n\n- Objects in master list → Use details area instead\n- Critical information that should always be visible → Use inline content\n- Complex forms or multi-step processes → Use Dialog instead\n- Long-form content → Use separate page or panel\n\n### Best practices\n\n- Only one popover visible at a time - opening one closes all others\n- Use `fd-popover__body-header` for header section\n- Use `fd-popover__body-footer` for footer with actions\n- Add `fd-popover-body__wrapper` inside body for scrollable content\n- Define explicit height when content may overflow\n- Show status information as text fields with semantic colors\n- Use placement modifiers to position popover relative to trigger\n- Align arrow with trigger using alignment modifiers\n- Close popover on outside click or Escape key\n- Avoid multiple layered popovers - causes collisions\n- Set max-height and enable scrolling for long content",
+    "phone": ""
+  },
+  {
     "id": "app-pattern/power-flow",
     "kind": "app-pattern",
     "name": "Power flow summary",
@@ -3716,6 +4388,54 @@
     ],
     "basis": "a question pages pattern from the NHS.UK service manual",
     "blueprint": "## When to use a question page\n\nFollow this pattern whenever you need to ask users questions in your service.\n\nMake sure you know why you're asking every question and only ask users for information you really need.\n\nOn every question page you should:\n\n- make sure it's clear to users why you're asking each question\n\n- allow users to answer \"I do not know\" or \"I'm not sure\" if they are valid responses\n\nRead more about:\n\n- making sure you need each question (in our guidance on How to write good questions for forms), which also covers essential and optional questions\n\n- designing good questions (GOV.UK service manual)\n\n- the question protocol (by Caroline Jarrett on Effortmark website)\n\n## How to use a question page\n\n### Start by asking 1 question per page\n\nAsking just 1 question per page helps users:\n\n- understand what you're asking them to do\n\n- focus on the specific question and its answer\n\nSometimes it makes sense to group related questions on the same page. User research will tell you when to do this. See the section on asking multiple questions on a page.\n\n### Elements you must include\n\nQuestion pages must include a:\n\n- back link\n\n- page heading\n\n- way for users to input information\n\n- continue button\n\n#### Back link\n\nSome users do not trust browser back buttons when they're entering data.\n\nAlways include a back link component at the top of question pages to reassure users it's possible to go back and change previous answers.\n\nHowever, do not break the browser back button. Make sure it takes users to the previous page they were on, in the state they last saw it.\n\nAn exception to this is when the user has performed an action they should only do once, like make a payment or complete an application. The browser back button should still work, but show the user a sensible message rather than letting them perform the action again.\n\n#### Page heading\n\nUsually the page heading should be the question. Do this by placing the heading (<h1>) into the label or legend. Find out about using legends, labels and captions.\n\nSometimes the page heading will be a statement. Find out more about when to use statements in the sections on:\n\n- asking complex questions without using hint text\n\n- asking multiple questions on a page\n\n#### Input\n\nFor example, a text input box, radios or checkboxes.\n\nMake sure to only ask for a piece of information once within a single journey.\n\nIf the same type of information is needed more than once, make it easier to reuse previously entered answers by:\n\n- pre-populating the relevant fields\n\n- showing carried-forward responses as an option for the user to select\n\n#### Continue button\n\nMake sure your Continue button is:\n\n- labelled \"Continue\", not \"Next\"\n\n- aligned to the left so users do not miss it\n\n### Using legends, labels and captions\n\nFor single question pages, using a <legend> or <label> as the page heading is good practice as it means that screen reader users will only hear the contents once. (Use a legend for a group or set of elements as a whole and a label for a specific element, like a text input.)\n\nRead more about why and how to make labels and legends headings (on GOV.UK) or see the examples below.\n\nLearn how to set label and legend sizes on the typography page.\n\nHere's an example of a question page with a legend as the page heading.\n\nThis is an example of a question page with a label as the page heading.\n\nDo not use the same page heading across multiple pages. The page heading should relate specifically to the information being asked for on the current page, not any higher-level section the page is part of.\n\nIf you need to show the high-level section, you can use an nhsuk-caption style. See headings with captions (on the Typography page).\n\nIn this example, the heading has the caption \"About you\" above it.\n\n### Helping users answer questions\n\n#### Using hint text\n\nUse hint text to show information that helps the majority of users answer the question, like how their information will be used or where to find it.\n\n#### Asking complex questions without using hint text\n\nIf you're asking a question that needs a detailed explanation, use:\n\n- an <h1> heading that's a statement (for example, \"If we need to contact you\") rather than a question\n\n- whatever mix of text, paragraphs, lists and examples best explains your question to users\n\n- a label, above the form input, that asks users a specific question, for example, \"Do you have any communication needs?\"\n\n### Asking multiple questions on a page\n\nSometimes it makes sense to group related questions on the same page. For example, if you're designing an internal service for staff who need to repeat and switch between tasks quickly.\n\nIf you need to ask for multiple related things on a page, use a statement as the heading.\n\nYou can style each <legend> or <label> to make the questions easier to scan. Read more about why and how to style labels and legends headings (on GOV.UK).\n\n### Using progress indicators\n\nStart by testing your form without a progress indicator to see if it's simple enough that users do not need one.\n\nTry improving the order, type or number of questions before adding a progress indicator. If people still have difficulty, try adding a simple step or question indicator like this one.\n\nOnly include the total number of questions if you can do so reliably. As the user moves through the form, make sure the indicator updates to tell them which question they are on and the total number remaining.\n\nDo not use progress indicators, like this one, that show all the questions at once.\n\nThese can be problematic because they:\n\n- are often not noticed\n\n- take up lots of space\n\n- do not scale well on small screens\n\n- can distract and confuse some users\n\n- make it hard to write good labels for the steps\n\n- make it hard to handle conditional sections\n\n### Using range sliders\n\nAvoid using range slider questions, where the user needs to click and drag a selector across a range of answers or values. These types of controls are difficult for some users to interact with.\n\nIf you do use a range slider, you must provide a method for selecting an answer that does not rely on click and drag movements. This relates to WCAG 2.2 success criterion 2.5.7 Dragging movements (W3C).",
+    "phone": ""
+  },
+  {
+    "id": "app-pattern/sap-radio",
+    "kind": "app-pattern",
+    "name": "Radio",
+    "summary": "Radio buttons provide mutually exclusive options, allowing users to select only one option from two or more choices. They only work in groups and are best for selecting from a small set of clearly different alternatives.",
+    "domains": [
+      "b2b-saas",
+      "data-analytics",
+      "manufacturing",
+      "logistics",
+      "fintech-payments"
+    ],
+    "sectors": [
+      "enterprise"
+    ],
+    "tags": [
+      "sap",
+      "component",
+      "Forms & Inputs",
+      "radio"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "sap",
+      "repo": "https://github.com/SAP/fundamental-styles",
+      "commit": "0753390b563b4eafe4d90ec812205df1361941ac",
+      "path": "docs/component-guidance.json",
+      "license": "Apache-2.0",
+      "authors": [
+        "SAP"
+      ],
+      "url": "https://sap.github.io/fundamental-styles/",
+      "transformations": [
+        "selected description, whenToUse, whenToAvoid, and bestPractices",
+        "dropped implementation and token fields"
+      ]
+    },
+    "sourceUrl": "https://sap.github.io/fundamental-styles/",
+    "screen": "radio",
+    "kinds": [
+      "component",
+      "guidance"
+    ],
+    "basis": "a radio component from SAP Fiori",
+    "blueprint": "Radio buttons provide mutually exclusive options, allowing users to select only one option from two or more choices. They only work in groups and are best for selecting from a small set of clearly different alternatives.\n\n### When to use\n\n- Users need to choose only one option from different alternatives\n- Users need to see all options at once without interacting with a dropdown\n- Small set of options (no more than 8)\n- Users need to trigger an immediate change without pressing Submit\n- Users need to choose quickly between at least two clearly different choices\n\n### When to avoid\n\n- Users need to select more than one option → Use checkboxes instead\n- Users need to select items in a list → Use checkboxes or direct tap selection\n- Users are expected to go with the most common option → Use dropdown with default instead\n- Users are choosing between just two options → Use single checkbox or toggle switch instead\n- More than 8 options to present → Use dropdown box or list view instead\n- Options are numbers with fixed steps → Use slider control instead\n- Users need to select a value from a range → Use slider instead\n\n### Best practices\n\n- Align radio buttons vertically, especially for long labels (easier to read and localize)\n- Use horizontal alignment only for one-word labels (e.g., background color settings)\n- Always align vertically in forms (label length varies across languages)\n- Use group labels and padding to separate multiple radio button groups\n- Default: long labels truncate with ellipsis\n- Use `.fd-radio__label--wrap` modifier for labels that wrap to new line (set max-width on label)\n- Use `.fd-radio__label--wrap-top-aligned` for top-left aligned wrapping labels\n- Radio buttons only work in groups for mutually exclusive options\n- Don't put two radio button groups next to each other without clear separation\n- Maximum 8 options - use dropdown for more",
     "phone": ""
   },
   {
@@ -3947,6 +4667,54 @@
     ],
     "basis": "interface pattern from IBM Carbon",
     "blueprint": "StructuredListWrapper,\n  StructuredListHead,\n  StructuredListBody,\n  StructuredListRow,\n  StructuredListInput,\n  StructuredListCell,\n  OrderedList,\n  UnorderedList,\n  ListItem,\n} from '@carbon/react';\n\nSearch is an essential pattern for navigation or discovery. We live in the age\nof search, where a search engine is often the primary entry point into the\ninternet. User expectations are high for the way search should work, and\nconsistency is critical.\n\n## Overview\n\nSearching is an intuitive method of discovery, offering users a way to explore a\nwebsite or application using keywords. Most searches begin broad, with the scope\nnarrowing as filters are applied.\n\nThe method of search you use depends on the size of the data set being searched\nand the location of the search within your product.\n\nThe placement of your search field depends on the construction of your\napplication and the scope of the search. For global searches, see the\n[global header pattern](/patterns/global-header) for placement guidance. See the\n[data table](/components/data-table/usage#search) component for search placement\nwithin a data table.\n\n### Anatomy\n\n1. **Scope filter (optional):** The optional scoped search allows users to limit\n   their searches to a section or category of content on a website.\n1. **Search icon:** Signifies a search field. The magnifying glass icon is a\n   universal way to indicate search.\n1. **Placeholder text:** Useful and short text hinting at what the user can\n   search for. For example, “Search for networks or devices.”\n1. **Text entry field:** The place where a user enters their search query.\n\n### Types of search\n\n          Type\n          When to use\n          Use cases\n\n            Basic search\n\n            When a user will conduct a search and be routed to a distinct\n            results page.\n\n            Global searches, or any search that routes users to a distinct\n            results page\n\n            Active search\n\n            Best for small data sets, like a single page, website, or table.\n            When a user will benefit from constant feedback based on their\n            search query, and when the server can handle a substantial search\n            query load.\n\n            Actively searches a database and lists the top results in results\n            panel or on the current page. For example:\n\n              — Searching a catalog\n\n              — Searching a small website\n\n              — Searching a small data set within a table\n\n— Searching a subset of information embedded within a product\n              or application’s page\n\n            Focused search\n\n            When the search is focused on tasks or information specific to the\n            active user. Limits server load by focusing search scope while\n            offering the power of a broad, basic search.\n\n              — Assigned tasks\n\n              — Product catalogs\n\n              — Personal repositories\n\n              — Work created by the active user\n\n### Best practices\n\n#### Avoid dead ends\n\nIf a search returns \"No results\", suggest a follow-up action. Provide\nsuggestions and helpful resources to aid the user in finding what they are\nlooking for. For more on no results for searches, see the\n[empty states pattern](/patterns/empty-states-pattern).\n\n#### Include a loading indicator\n\nIf the search will take longer than a moment or two, include a loading\nindicator. Your loading state should reflect your empty state with useful helper\ntext signaling that the search is still ongoing. Include a progress bar for\nadvanced, resource-intensive searches. Let the user know how far along the\nsearch is, and roughly how long it will take to finish.\n\n#### Display the number of results\n\nAlways include the number of search results, including for searches with no\nresults. If you plan to offer a scope filter, also include the number of results\nfor each scope selector.\n\n#### Don’t include a label\n\nAvoid adding a label to your search field. Users expect and understand search\nfields, and no label is necessary. A search icon along with useful placeholder\ntext should clearly indicate that the field is intended for search.\n\nProvide useful placeholder text and include a search icon.\n\nDon’t include a label for search fields.\n\n#### Localize the search field\n\nFor languages that read right to left, flip the layout of the search box as\nshown in the next example.\n\n  Example of a search box for languages that read right to left instead of left\n  to right\n\n  The search icon is recognized and acceptable across languages and countries.\n\n#### Add a scope filter to your search field\n\nThe optional scoped search allows users to limit their searches to a section or\ncategory of content on a website, as opposed to a global search that searches\neverything at once. Only one scoped category can be selected at a time, but the\ndropdown should always include an \"All\" or \"Any\" option, and this option should\nbe selected by default. With \"All\" or \"Any\" selected, the field will function as\na [basic global search](#basic-search).\n\nExample of a scope filter on a search field\n\n## Basic search\n\nBasic search entails any search that directs users to a distinct results page.\nIn these instances, offer either trending searches that match the active user’s\nkeywords, recent searches by the active user, or both.\n\nA basic search does not actually query a data set until the user runs the\nsearch.\n\nExample of a basic search field\n\n| When to use                          |                                                                                                                                                                                                                                                                   |\n| ------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |\n| _When searching is expensive_        | Searching a large body of information can be resource intensive and expensive, especially in instances where many users are searching the information simultaneously. Actively running the search after every character is entered or removed can be impractical. |\n| _When searching is slow_             | If the body of information is massive, actively searching can become too slow to be practical. Extended processing time following each character entered results in an application or website seeming unresponsive.                                               |\n| _When the information is unfamiliar_ | When users are searching an application or website they’re unfamiliar with, a dedicated search results page can give them a better idea of data structure and available resources.                                                                                |\n\n### Behaviors\n\n#### Recent search suggestions\n\nWhen a user clicks or tabs into a search field, they are be shown a menu of\neither the user’s recent searches, trending searches, or both. When the user\ntypes in the field, this menu is replaced with suggestions based on the search\nquery.\n\n#### Type-ahead suggestions\n\nType-ahead suggestions are generated from ongoing analyses of use search\npatterns, and place minimal load on servers. Without committing to a search, the\nuser can see a preview of results, suggestions of additional search terms, or\nzero in on what they were looking for.\n\nType-ahead suggestions appear as soon as the user begins typing in the search\nfield.\n\nExample of type-ahead suggestions\n\n#### Results page\n\nOnce the user runs the search, they are directed to a distinct results page. On\nthis page, the user should have the option to select filters to narrow their\nsearch results. If you’d prefer to offer filters before the user searches,\nconsider adding a scope filter.\n\nThe design of the results page will depend largely on the needs of your product,\nand more specific design guidance for a search results page will be covered in\nfuture pattern guidance.\n\n## Active search\n\nAn active search is a rapid way to search an application or data set. The search\nruns after each character is entered, and results are shown immediately below\nthe search field. You can think of active search as a way to filter a dataset\nthrough keywords.\n\nAn active search is constructed from a search field, a search icon, and an X\nthat serves as a clear or cancel button. There is no Search or Go button, as the\nsearch is run actively and the user is not routed to a results page.\n\nExample of an active search field\n\n| When to use                         |                                                                                                                                                                                                                                                                         |\n| ----------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |\n| _When data is limited_              | Active searches should be used in instances where the search is likely to return an accurate result, like a small website or data table with limited data. You can also use active search when looking through a catalog of items, like a product catalog or a library. |\n| _When users know what to look for_  | If users are familiar with a website or application, search will likely be used to find a resource the user knows exists. Actively returning results in the search results panel allows them to navigate directly to the page or resource.                              |\n| _When filtering an on-page catalog_ | If your product presents a catalog on a page, you can use an active search to refine options based on the query.                                                                                                                                                        |\n\n### Behaviors\n\n#### Search field\n\nActive search placeholder text should be more specific than a basic search and\nshould remain visible until the user begins typing in the search field. You can\noptionally add a \"See all results\" item to your results panel, which when\nclicked behaves as a [basic search](#basic-search).\n\nIf you are using active search for a catalog or library, refine the on-page\nresults as the user types.\n\nExample of an active search field\n\n#### Presenting results\n\nActive search is intended to be a quicker search-in-place experience. The user\nshould find what they’re looking for in the results panel. Recent searches from\nthe active user should appear in a panel below the search field and should be\nreplaced by matching search results when the user begins typing.\n\nYou can also implement active search for a small set of information displayed on\na full page, like a catalog of offerings. Before the search is run, all items\nshould be displayed. Once the user begins typing, only show items that match the\nuser’s search.\n\n## Focused search\n\nA focused search is a combination of basic search and active search. The user is\n[actively shown results](#active-search) within their immediate page, product,\nor scope. Below those results, they have the option to widen their scope to\nsearch all available data.\n\nFocused search is ideal for users who are using a specific tool that is part of\na catalog or suite.\n\nExample of a focused search with results panel\n\n| When to use                   |                                                                                                                                                                                                                                                                                                      |\n| ----------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |\n| _Within a product suite_      | A focused search can actively present results related to the active user. This limits the resources required for the search while still giving users the option to widen the scope of the search to an entire product catalog or database.                                                           |\n| _Within a folder or data set_ | Focused searches are ideal for searching within a folder or bucket, as the user can either further focus or expand the search through a data structure. If the results panel doesn’t deliver what the user needs, they can choose to search elsewhere without navigating away from the search field. |\n\n### Behaviors\n\n#### Search field\n\nA focused search queries for results related to the search’s focus, whether that\nis a user, a category, or a data set. The search results are presented in a\npanel just like in [active search](#active-search), but below the results an\noption to widen the scope and see a full page of search results is included.\n\nExample of focused search\n\nIf the user chooses a subcategory from the results panel, the search functions\nlike a [basic search](#basic-search) with a filter applied. Any selected filter\nshould persist during future searches until the user either discards the filter\nor begins a new session.\n\n#### Presenting results\n\nWhen the user clicks or tabs into the focused search field, a menu appears with\nrecent searches from the active user, suggestions specific to the user or\nsession, or both. When the user begins typing, the suggestions disappear and the\nresults are refined, following each character entered.\n\nYou can also cluster active results by category with the option to \"View all\"\nwithin the category. This is ideal for a user who may be searching within\nseveral similar data sets without knowing where the information lives. If the\nuser is likely to know the location of their data, offer a scope filter.\n\nA successful focused search will route a user directly to a page or resource. In\nthe event the user does select \"See all results\", present a results page. Always\ninclude the number of search results, including for searches with no results.\n\n## Accessibility\n\n### Search\n\nUsers should be able to `TAB` into the input field of the search box to begin\ntyping and press `ENTER` to run the search query.\n\nIf using a scope dropdown and/or type-ahead suggestions, those should also be\nnavigable by keyboard. For scope, `TAB` should select the dropdown and the\n`ARROW` keys should open it to cycle through the menu. `ENTER` should make a\nselection from the dropdown and advance the user to the input field of the\nsearch box.\n\nFor type-ahead suggestions, the `ARROW` keys should cycle through displayed\nsuggestions, with `ENTER` choosing a suggestion and `ESCAPE` allowing the user\nto exit the type-ahead menu without selecting anything.\n\n### Faceted filtering\n\nUsers should be able to `TAB` into the filter panel to cycle through the\ndifferent groups. Pressing `ENTER` moves the selection to the facets inside a\ngroup, allowing the user to move through the facets with the `ARROW` keys.\nPressing `ENTER` while a facet is in focus would toggle select or deselect the\nfacet.\n\nAfter a facet is selected or deselected, the focus state should be retained as\nthe content reloads, that way users don’t have to `TAB` through everything again\nas they move down the list.\n\n## Related\n\n#### Components\n\n- [Checkbox](/components/checkbox/usage)\n- [Date picker](/components/date-picker/usage)\n- [Modal](/components/modal/usage)\n- [Pagination](/components/pagination/usage)\n- [Search](/components/search/usage)\n- [Select](/components/button/usage#icon-usage)\n- [Text input](/components/text-input/usage)\n- [UI shell](/components/ui-shell-header/usage)\n\n#### Patterns\n\n- [Empty states](/patterns/empty-states-pattern)\n- [Filtering](/patterns/filtering)\n\n## References\n\n- Apple Human Interface Guidelines,\n  [Search Fields](https://developer.apple.com/design/human-interface-guidelines/macos/fields-and-labels/search-fields/)\n  (2019)\n- Nick Babich,\n  [Best Practices for Search Results](https://uxplanet.org/best-practices-for-search-results-1bbed9d7a311)\n  (2017)\n- Think with Google,\n  [In-App Search](https://www.thinkwithgoogle.com/marketing-resources/experience-design/chapter-2-in-app-search/)\n  (2016)\n\n## Feedback\n\nHelp us improve this pattern by providing feedback, asking questions, and\nleaving any other comments\n[on GitHub](https://github.com/carbon-design-system/carbon-website/issues/new?assignees=&labels=feedback&template=feedback.md).",
+    "phone": ""
+  },
+  {
+    "id": "app-pattern/sap-select",
+    "kind": "app-pattern",
+    "name": "Select",
+    "summary": "Select component (dropdown) lets users pick one item from a small, predefined list. Can be placed in toolbars (chart, footer, header), forms, or tables. List stays hidden until opened.",
+    "domains": [
+      "b2b-saas",
+      "data-analytics",
+      "manufacturing",
+      "logistics",
+      "fintech-payments"
+    ],
+    "sectors": [
+      "enterprise"
+    ],
+    "tags": [
+      "sap",
+      "component",
+      "Forms & Inputs",
+      "select"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "sap",
+      "repo": "https://github.com/SAP/fundamental-styles",
+      "commit": "0753390b563b4eafe4d90ec812205df1361941ac",
+      "path": "docs/component-guidance.json",
+      "license": "Apache-2.0",
+      "authors": [
+        "SAP"
+      ],
+      "url": "https://sap.github.io/fundamental-styles/",
+      "transformations": [
+        "selected description, whenToUse, whenToAvoid, and bestPractices",
+        "dropped implementation and token fields"
+      ]
+    },
+    "sourceUrl": "https://sap.github.io/fundamental-styles/",
+    "screen": "select",
+    "kinds": [
+      "component",
+      "guidance"
+    ],
+    "basis": "a select component from SAP Fiori",
+    "blueprint": "Select component (dropdown) lets users pick one item from a small, predefined list. Can be placed in toolbars (chart, footer, header), forms, or tables. List stays hidden until opened.\n\n### When to use\n\n- Choose only one item from short list (typically 2-12 items)\n- Users don't need to see all options at once\n- Helpful to start with default selection (especially if one option used most often)\n- Predefined list instead of free-form text input\n- Logically grouped list with common items first, others sorted\n- Space-saving alternative to radio buttons\n\n### When to avoid\n\n- Only two options → Use switch instead\n- Very large set of items → Use combo box instead\n- Display multiple attributes or search on multiple attributes → Use input field with select dialog or value help dialog\n- Need to display all options without interaction → Use radio buttons instead\n- More than 12 options → Consider combo box with search\n\n### Best practices\n\n- Keep texts concise, avoid complex content\n- Define default selection whenever possible\n- Sort values in meaningful order (common first, then alphabetical/numerical/topical)\n- Use appropriate text for \"not selected\" option (not blank)\n- Use fixed width (don't auto-adjust based on selection)\n- In two-column layout, place most relevant value in first column\n- Keep selection list items simple and scannable\n- Avoid icons in selection list - if used, ensure they match text\n- Avoid disabling selection options when possible",
     "phone": ""
   },
   {
@@ -4258,6 +5026,54 @@
     "phone": ""
   },
   {
+    "id": "app-pattern/sap-switch",
+    "kind": "app-pattern",
+    "name": "Switch",
+    "summary": "Switch mimics a physical switch, allowing users to toggle individual features on or off. Mainly used for settings, personalization, and cases where impact is directly recognizable. Changes take immediate effect.",
+    "domains": [
+      "b2b-saas",
+      "data-analytics",
+      "manufacturing",
+      "logistics",
+      "fintech-payments"
+    ],
+    "sectors": [
+      "enterprise"
+    ],
+    "tags": [
+      "sap",
+      "component",
+      "Forms & Inputs",
+      "switch"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "sap",
+      "repo": "https://github.com/SAP/fundamental-styles",
+      "commit": "0753390b563b4eafe4d90ec812205df1361941ac",
+      "path": "docs/component-guidance.json",
+      "license": "Apache-2.0",
+      "authors": [
+        "SAP"
+      ],
+      "url": "https://sap.github.io/fundamental-styles/",
+      "transformations": [
+        "selected description, whenToUse, whenToAvoid, and bestPractices",
+        "dropped implementation and token fields"
+      ]
+    },
+    "sourceUrl": "https://sap.github.io/fundamental-styles/",
+    "screen": "switch",
+    "kinds": [
+      "component",
+      "guidance"
+    ],
+    "basis": "a switch component from SAP Fiori",
+    "blueprint": "Switch mimics a physical switch, allowing users to toggle individual features on or off. Mainly used for settings, personalization, and cases where impact is directly recognizable. Changes take immediate effect.\n\n### When to use\n\n- Set something as active or inactive (e.g., dialog, feature toggle)\n- Clearly show mode or state of a setting\n- Change takes immediate effect without confirmation\n- Toggle between two mutually exclusive states (on/off)\n- Settings and personalization options\n- Binary choices with immediate impact\n\n### When to avoid\n\n- Additional steps required for changes to take effect → Use Checkbox instead\n- Requires confirmation or Submit button → Use Checkbox instead\n- Unclear if showing state or action → Use Checkbox instead\n- More than two options → Use Radio buttons or Select\n- Part of form requiring submission → Use Checkbox\n\n### Best practices\n\n- Use for immediate on/off toggles\n- Clearly show current mode or state\n- Use for settings and personalization\n- Ensure impact of toggle is directly recognizable\n- Provide clear labels describing what is being toggled\n- Show visual feedback for on/off states\n- Changes take effect immediately without confirmation\n- Don't use if change requires confirmation\n- Ensure it's clear whether showing state or action",
+    "phone": ""
+  },
+  {
     "id": "app-pattern/tabbed-object-detail",
     "kind": "app-pattern",
     "name": "Tabbed object detail in a sheet",
@@ -4405,6 +5221,54 @@
     ],
     "basis": "component guidance from Adobe Spectrum",
     "blueprint": "Tables display information in rows and columns, allowing users to compare and scan structured data.\n\nTables display information in rows and columns, allowing users to compare and scan structured data.\n\nStandard vs. quiet. Use a standard table when a table is the main focus of an experience. Quiet tables are for when a table is meant to be supplementary, subtle, or lightweight.\n\nColumn dividers help organize table content and aid users in parsing related data. You can apply dividers selectively to group related columns—for example, separating user information from action columns, or grouping metadata fields together. Use dividers sparingly to avoid visual clutter.\n\nSelection. By default, rows are not selectable. Enable selection with selectionMode=single or selectionMode=multiple. Checkbox selection (default): Checkboxes appear on the left. Clicking toggles selection. Use for bulk actions or when selection should be explicit. Highlight selection: No checkboxes—rows show a highlighted background when selected. Clicking a row selects it (use modifier keys for multi-select). Use when rows also need to support navigation or actions via onAction or href, or when a cleaner appearance is needed. Navigation: Use onAction for row actions or href for links. In highlight selection style, double-click performs actions while single-click selects, allowing both behaviors.\n\nHover state. All tables have a hover state regardless of if actions or selections can be made. This aids the user in viewing content in a single row.\n\nStart-align textual data. Similar to a paragraph of text, textual data should be start-aligned within a table (left-aligned in LTR languages, right-aligned in RTL languages). Never use center alignment.\n\nRight align numerical data. Numerical data should generally be right-aligned for ease of scanning and comparing. This alignment typically does NOT reverse in RTL languages because: Numbers are written left-to-right even in RTL languages (e.g., Arabic numerals) Right-alignment ensures decimal places and digits line up vertically for comparison Exception: Use start-alignment (left in LTR, right in RTL) when numbers are arbitrary identifiers, known as \"nominal numbers,\" which can't be compared or combined arithmetically (e.g., ZIP codes, IP addresses, phone numbers). These behave like text. Column headers follow the alignment of their data.\n\nUse tabular numbers for numerical data. When users need to compare numerical values, use tabular (monospaced) and lining (not old style) numbers to make it easier. These features are supported by Adobe Clean via the OpenType panel in Illustrator or via the CSS font feature settings.\n\nRespect vertical alignment. All content should be centered vertically within the row to offer the right visual balance.\n\nUse column dividers sparingly. Column dividers are optional decorations that can help organize table content and create groups of data. Only use these when necessary, and don't add them to every column.\n\nUse an en dash (–) for missing values. When there are gaps in the data, use an en dash (–) to represent null or not applicable (N/A) values.\n\nRTL. In right‑to‑left languages, the table layout is mirrored. The columns run from right to left, and the text alignment within each column is reversed. Keep in mind that some content, such as file extensions and email addresses, does not change direction or translate.\n\nKeyboard interactions. Key Interaction Tab Tabbing into an item that has a tooltip associated with it (e.g., an icon) shows the tooltip. Esc Hides the tooltip.\n\nCursor guidelines. Cursor Description Pointer If the trigger is a button or link, or a focus-only element (like an info icon that shows a tooltip on hover), use the pointer cursor. Default (Arrow) If the trigger is an icon that is not clickable, use the default cursor. Pointer If the tooltip has a link, use the pointer cursor when interacting with the link.\n\nWCAG 2.2 compliance. Any criterion not mention in the below table are not applicable to this component or are resolved with underlying requirements, engineering, and styles of the entire system. 1. Perceivable Requirement Criterion Level Compliance Non-text content 1.1.1 A Non‑text elements—such as icons used in tooltips and icons that trigger tooltips—must provide a text alternative that communicates the control’s purpose. All controls, especially icon‑only controls, need an accessible name (for example, via a title, aria‑label, or associated text) so screen readers can announce their function. Info and relationships, Identify purpose 1.3.1, 1.3.6 A, AAA Tooltips should be understandable by assistive technologies like screen readers. This means using the proper semantic HTML or ARIA role should be utilized. Use of color 1.4.1 A Color is never used as the sole way to convey meaning in tooltips. Tooltips use color to reinforce their meaning, but every tooltip also includes a clear text label that communicates purpose. Text contrast minimums 1.4.3 AA Large text has a contrast ratio of at least 3:1, and small text has a contrast ratio of at least 4.5:1. Incidental text such as disabled, hidden, or decorative text has no contrast requirement. Resize text 1.4.4 AA Tooltips should be built in such a way that they can be resized without assistive technology up to 200%. Visual presentation 1.4.8 AAA The width of text blocks is no more than 80 characters (40 for CJK languages), and text is never justified. Non-text contrast 1.4.11 AA The visual presentation of icons and various states have a contrast ratio of at least 3:1. Text spacing 1.4.12 AA Line height of text is at least 1.5x the font size in wrapped tooltips. 2. Operable Requirement Criterion Level Compliance Keyboard 2.1.1, 2.1.3 A, AAA All functionality of the component is operable through a keyboard without specific timing for keystrokes. Keyboard traps 2.1.2 A Focus can be moved away from the component using only a keyboard. Seizures and physical reactions 2.3.1, 2.3.2, 2.3.3 A, AAA, AAA There is no flashing content or unnecessary motion or animation in this component. Focus order 2.4.3 A Navigation sequences receive focus in an order that preserves meaning and operability. Focus visible 2.4.7 AA Keyboard states use an indicator that is visible with at least 3:1 contrast.",
+    "phone": ""
+  },
+  {
+    "id": "app-pattern/sap-table",
+    "kind": "app-pattern",
+    "name": "Table",
+    "summary": "Table contains set of line items with rows (each showing one line item) and columns. Items can contain data or interactive elements. Two groups: fully responsive tables and desktop-centric tables. Responsive table offers flexibility, grid table for large datasets (>1,000 rows) and analytical use cases.",
+    "domains": [
+      "b2b-saas",
+      "data-analytics",
+      "manufacturing",
+      "logistics",
+      "fintech-payments"
+    ],
+    "sectors": [
+      "enterprise"
+    ],
+    "tags": [
+      "sap",
+      "component",
+      "Data Display",
+      "table"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "sap",
+      "repo": "https://github.com/SAP/fundamental-styles",
+      "commit": "0753390b563b4eafe4d90ec812205df1361941ac",
+      "path": "docs/component-guidance.json",
+      "license": "Apache-2.0",
+      "authors": [
+        "SAP"
+      ],
+      "url": "https://sap.github.io/fundamental-styles/",
+      "transformations": [
+        "selected description, whenToUse, whenToAvoid, and bestPractices",
+        "dropped implementation and token fields"
+      ]
+    },
+    "sourceUrl": "https://sap.github.io/fundamental-styles/",
+    "screen": "table",
+    "kinds": [
+      "component",
+      "guidance"
+    ],
+    "basis": "a table component from SAP Fiori",
+    "blueprint": "Table contains set of line items with rows (each showing one line item) and columns. Items can contain data or interactive elements. Two groups: fully responsive tables and desktop-centric tables. Responsive table offers flexibility, grid table for large datasets (>1,000 rows) and analytical use cases.\n\n### When to use\n\n- Display large amounts of data in tabular form\n- Flexible, visually appealing table content (responsive table)\n- Focus on working with line items, not individual cells\n- Select one or more items needing details to choose correctly\n- Line items independent, no cross-column operations needed\n- Single implementation for all devices\n- Display >1,000 rows simultaneously (grid table)\n- Cell-level and spatial relationships important (grid table)\n- Comparing items is major use case (grid table)\n- Need analytical table without analytical binding (grid table)\n\n### When to avoid\n\n- Simple hierarchical dataset → Use Tree instead\n- Hierarchical master list for master-detail with Flexible Column Layout → Use Tree\n- Tree table would be too complex → Use Tree\n- Selecting hierarchical items with few details → Use Tree\n- Very few items (under 5) → Consider List or Card layout\n\n### Best practices\n\n- Use responsive table for flexible content and visual appeal\n- Responsive table allows multiple components and different item templates\n- Use grid table for >1,000 rows\n- Grid table maintains stable layout regardless of screen width\n- Grid table cells contain only one component\n- Include sorting, filtering, and search for large datasets\n- Provide selection for line items when needed\n- Use pagination for very large datasets\n- Make column headers clear and descriptive\n- Choose table type based on use case (responsive vs grid)\n- Consider performance with large datasets",
     "phone": ""
   },
   {
@@ -4781,6 +5645,54 @@
     "phone": ""
   },
   {
+    "id": "app-pattern/sap-toolbar",
+    "kind": "app-pattern",
+    "name": "Toolbar",
+    "summary": "Toolbar enables users to change UI or trigger actions (change views, manipulate data/objects, navigate, perform actions). Usually paired with buttons, which are always right-aligned. Actions can be independent, object-specific, apply to item sets, or control UI content settings.",
+    "domains": [
+      "b2b-saas",
+      "data-analytics",
+      "manufacturing",
+      "logistics",
+      "fintech-payments"
+    ],
+    "sectors": [
+      "enterprise"
+    ],
+    "tags": [
+      "sap",
+      "component",
+      "Navigation",
+      "toolbar"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "sap",
+      "repo": "https://github.com/SAP/fundamental-styles",
+      "commit": "0753390b563b4eafe4d90ec812205df1361941ac",
+      "path": "docs/component-guidance.json",
+      "license": "Apache-2.0",
+      "authors": [
+        "SAP"
+      ],
+      "url": "https://sap.github.io/fundamental-styles/",
+      "transformations": [
+        "selected description, whenToUse, whenToAvoid, and bestPractices",
+        "dropped implementation and token fields"
+      ]
+    },
+    "sourceUrl": "https://sap.github.io/fundamental-styles/",
+    "screen": "toolbar",
+    "kinds": [
+      "component",
+      "guidance"
+    ],
+    "basis": "a toolbar component from SAP Fiori",
+    "blueprint": "Toolbar enables users to change UI or trigger actions (change views, manipulate data/objects, navigate, perform actions). Usually paired with buttons, which are always right-aligned. Actions can be independent, object-specific, apply to item sets, or control UI content settings.\n\n### When to use\n\n- Change views or UI settings\n- Manipulate data or objects\n- Navigate to another page\n- Perform generic actions\n- Actions independent of current selection\n- Actions specific to current object (one selected item)\n- Actions applying to set of items (multiple selections)\n- Control settings for UI content (e.g., all items in Table)\n\n### When to avoid\n\n- Page-level actions → Use Action Bar instead\n- Form actions (Submit/Cancel) → Use form footer buttons\n- Navigation-only actions → Use breadcrumb or side navigation\n- Single isolated action → Use standalone button\n\n### Best practices\n\n- Buttons are always right-aligned\n- Support independent actions (not related to specific item)\n- Support object-specific actions (one item selected)\n- Support bulk actions (multiple items selected)\n- Control settings for UI content portions (e.g., Table settings)\n- Group related actions together\n- Use icon buttons for common actions with tooltips\n- Use text buttons for primary/emphasized actions\n- Show/hide actions based on context (selection state)\n- Disable unavailable actions rather than hiding when appropriate\n- Keep action count reasonable (don't overcrowd)\n- Consider overflow menu for many actions",
+    "phone": ""
+  },
+  {
     "id": "app-pattern/spectrum-tooltip",
     "kind": "app-pattern",
     "name": "Tooltip",
@@ -4873,6 +5785,54 @@
     ],
     "basis": "transaction lifecycle guidance from ethereum.org",
     "blueprint": "Transactions are cryptographically signed instructions from accounts. An account will initiate a transaction to update the state of the Ethereum network. The simplest transaction is transferring ETH from one account to another.\n\n## Prerequisites {#prerequisites}\n\nTo help you better understand this page, we recommend you first read Accounts and our introduction to Ethereum.\n\n## What's a transaction? {#whats-a-transaction}\n\nAn Ethereum transaction refers to an action initiated by an externally-owned account, in other words an account managed by a human, not a contract. For example, if Bob sends Alice 1 ETH, Bob's account must be debited and Alice's must be credited. This state-changing action takes place within a transaction.\n\nTransactions, which change the state of the EVM, need to be broadcast to the whole network. Any node can broadcast a request for a transaction to be executed on the EVM; after this happens, a validator will execute the transaction and propagate the resulting state change to the rest of the network.\n\nTransactions require a fee and must be included in a validated block. To make this overview simpler we'll cover gas fees and validation elsewhere.\n\nA submitted transaction includes the following information:\n\n- `from` – the address of the sender, that will be signing the transaction. This will be an externally-owned account as contract accounts cannot send transactions\n- `to` – the receiving address (if an externally-owned account, the transaction will transfer value. If a contract account, the transaction will execute the contract code)\n- `signature` – the identifier of the sender. This is generated when the sender's private key signs the transaction and confirms the sender has authorized this transaction\n- `nonce` - a sequentially incrementing counter which indicates the transaction number from the account\n- `value` – amount of ETH to transfer from sender to recipient (denominated in WEI, where 1ETH equals 1e+18wei)\n- `input data` – optional field to include arbitrary data\n- `gasLimit` – the maximum amount of gas units that can be consumed by the transaction. The EVM specifies the units of gas required by each computational step\n- `maxPriorityFeePerGas` - the maximum price of the consumed gas to be included as a tip to the validator\n- `maxFeePerGas` - the maximum fee per unit of gas willing to be paid for the transaction (inclusive of `baseFeePerGas` and `maxPriorityFeePerGas`)\n\nGas is a reference to the computation required to process the transaction by a validator. Users have to pay a fee for this computation. The `gasLimit`, and `maxPriorityFeePerGas` determine the maximum transaction fee paid to the validator. More on Gas.\n\nThe transaction object will look a little like this:\n\n```js\n{\n  from: \"0xEA674fdDe714fd979de3EdF0F56AA9716B898ec8\",\n  to: \"0xac03bb73b6a9e108530aff4df5077c2b3d481e5a\",\n  gasLimit: \"21000\",\n  maxFeePerGas: \"300\",\n  maxPriorityFeePerGas: \"10\",\n  nonce: \"0\",\n  value: \"10000000000\"\n}\n```\n\nBut a transaction object needs to be signed using the sender's private key. This proves that the transaction could only have come from the sender and was not sent fraudulently.\n\nAn Ethereum client like Geth will handle this signing process.\n\nExample JSON-RPC call:\n\n```json\n{\n  \"id\": 2,\n  \"jsonrpc\": \"2.0\",\n  \"method\": \"account_signTransaction\",\n  \"params\": [\n    {\n      \"from\": \"0x1923f626bb8dc025849e00f99c25fe2b2f7fb0db\",\n      \"gas\": \"0x55555\",\n      \"maxFeePerGas\": \"0x1234\",\n      \"maxPriorityFeePerGas\": \"0x1234\",\n      \"input\": \"0xabcd\",\n      \"nonce\": \"0x0\",\n      \"to\": \"0x07a565b7ed7d7a678680a4c162885bedbb695fe0\",\n      \"value\": \"0x1234\"\n    }\n  ]\n}\n```\n\nExample response:\n\n```json\n{\n  \"jsonrpc\": \"2.0\",\n  \"id\": 2,\n  \"result\": {\n    \"raw\": \"0xf88380018203339407a565b7ed7d7a678680a4c162885bedbb695fe080a44401a6e4000000000000000000000000000000000000000000000000000000000000001226a0223a7c9bcf5531c99be5ea7082183816eb20cfe0bbc322e97cc5c7f71ab8b20ea02aadee6b34b45bb15bc42d9c09de4a6754e7000908da72d48cc7704971491663\",\n    \"tx\": {\n      \"nonce\": \"0x0\",\n      \"maxFeePerGas\": \"0x1234\",\n      \"maxPriorityFeePerGas\": \"0x1234\",\n      \"gas\": \"0x55555\",\n      \"to\": \"0x07a565b7ed7d7a678680a4c162885bedbb695fe0\",\n      \"value\": \"0x1234\",\n      \"input\": \"0xabcd\",\n      \"v\": \"0x26\",\n      \"r\": \"0x223a7c9bcf5531c99be5ea7082183816eb20cfe0bbc322e97cc5c7f71ab8b20e\",\n      \"s\": \"0x2aadee6b34b45bb15bc42d9c09de4a6754e7000908da72d48cc7704971491663\",\n      \"hash\": \"0xeba2df809e7a612a0a0d444ccfa5c839624bdc00dd29e3340d46df3870f8a30e\"\n    }\n  }\n}\n```\n\n- the `raw` is the signed transaction in Recursive Length Prefix (RLP) encoded form\n- the `tx` is the signed transaction in JSON form\n\nWith the signature hash, the transaction can be cryptographically proven that it came from the sender and submitted to the network.\n\n### The data field {#the-data-field}\n\nThe vast majority of transactions access a contract from an externally-owned account.\nMost contracts are written in Solidity and interpret their data field in accordance with the application binary interface (ABI).\n\nThe first four bytes specify which function to call, using the hash of the function's name and arguments.\nYou can sometimes identify the function from the selector using this database.\n\nThe rest of the calldata is the arguments, encoded as specified in the ABI specs.\n\nFor example, lets look at this transaction.\nUse **Click to see More** to see the calldata.\n\nThe function selector is `0xa9059cbb`. There are several known functions with this signature.\nIn this case the contract source code has been uploaded to Etherscan, so we know the function is `transfer(address,uint256)`.\n\nThe rest of the data is:\n\n```\n0000000000000000000000004f6742badb049791cd9a37ea913f2bac38d01279\n000000000000000000000000000000000000000000000000000000003b0559f4\n```\n\nAccording to the ABI specifications, integer values (such as addresses, which are 20-byte integers) appear in the ABI as 32-byte words, padded with zeros in the front.\nSo we know that the `to` address is `4f6742badb049791cd9a37ea913f2bac38d01279`.\nThe `value` is 0x3b0559f4 = 990206452.\n\n### Transaction descriptors {#transaction-descriptors}\n\nBecause the data field contains opaque hexadecimal bytes, it can be extremely difficult to verify what action a transaction will actually perform. This \"blind signing\" vulnerability is addressed by **Clear Signing** through the use of transaction descriptors (defined by ERC-7730).\n\nThe ERC-7730 specification uses transaction descriptors (often structured as JSON files) to enrich the data found in ABIs and structured messages, like EVM transaction calldata, EIP-712 messages, and EIP-4337 User Operations. Developers use these descriptors to map specific transaction variables directly into formatting templates, ensuring the underlying data remains machine-readable for applications.\n\nOn the frontend, wallets use this formatting context to translate opaque bytecode into clear, human-readable information. By automatically resolving values like token addresses into recognized tickers, or amounts into decimals, users are presented with a plain-language summary of the transaction's exact intent (e.g., 'Swap 1000 USDC for at least 0.25 WETH') before they sign\n\n## Types of transactions {#types-of-transactions}\n\nOn Ethereum there are a few different types of transactions:\n\n- Regular transactions: a transaction from one account to another.\n- Contract deployment transactions: a transaction without a 'to' address, where the data field is used for the contract code.\n- Execution of a contract: a transaction that interacts with a deployed smart contract. In this case, 'to' address is the smart contract address.\n\n### On gas {#on-gas}\n\nAs mentioned, transactions cost gas to execute. Simple transfer transactions require 21000 units of Gas.\n\nSo for Bob to send Alice 1 ETH at a `baseFeePerGas` of 190 gwei and `maxPriorityFeePerGas` of 10 gwei, Bob will need to pay the following fee:\n\n```\n(190 + 10) * 21000 = 4,200,000 gwei\n--or--\n0.0042 ETH\n```\n\nBob's account will be debited **-1.0042 ETH** (1 ETH for Alice + 0.0042 ETH in gas fees)\n\nAlice's account will be credited **+1.0 ETH**\n\nThe base fee will be burned **-0.00399 ETH**\n\nValidator keeps the tip **+0.000210 ETH**\n\nAny gas not used in a transaction is refunded to the user account.\n\n### Smart contract interactions {#smart-contract-interactions}\n\nGas is required for any transaction that involves a smart contract.\n\nSmart contracts can also contain functions known as `view` or `pure` functions, which do not alter the state of the contract. As such, calling these functions from an EOA will not require any gas. The underlying RPC call for this scenario is `eth_call`.\n\nUnlike when accessed using `eth_call`, these `view` or `pure` functions are also commonly called internally (i.e., from the contract itself or from another contract) which does cost gas.\n\n## Transaction lifecycle {#transaction-lifecycle}\n\nOnce the transaction has been submitted the following happens:\n\n1. A transaction hash is cryptographically generated:\n   `0x97d99bc7729211111a21b12c933c949d4f31684f1d6954ff477d0477538ff017`\n2. The transaction is then broadcasted to the network and added to a transaction pool consisting of all other pending network transactions.\n3. A validator must pick your transaction and include it in a block in order to verify the transaction and consider it \"successful\".\n4. As time passes the block containing your transaction will be upgraded to \"justified\" then \"finalized\". These upgrades make it much\n   more certain that your transaction was successful and will never be altered. Once a block is \"finalized\" it could only ever be changed\n   by a network level attack that would cost many billions of dollars.\n\n## A visual demo {#a-visual-demo}\n\nWatch Austin walk you through transactions, gas, and mining.\n\n## Typed Transaction Envelope {#typed-transaction-envelope}\n\nEthereum originally had one format for transactions. Each transaction contained a nonce, gas price, gas limit, to address, value, data, v, r, and s. These fields are RLP-encoded, to look something like this:\n\n`RLP([nonce, gasPrice, gasLimit, to, value, data, v, r, s])`\n\nEthereum has evolved to support multiple types of transactions to allow for new features such as access lists and EIP-1559 to be implemented without affecting legacy transaction formats.\n\nEIP-2718 is what allows for this behavior. Transactions are interpreted as:\n\n`TransactionType || TransactionPayload`\n\nWhere the fields are defined as:\n\n- `TransactionType` - a number between 0 and 0x7f, for a total of 128 possible transaction types.\n- `TransactionPayload` - an arbitrary byte array defined by the transaction type.\n\nBased on the `TransactionType` value, a transaction can be classified as:\n\n1. **Type 0 (Legacy) Transactions:** The original transaction format used since Ethereum's launch. They do not include features from EIP-1559 such as dynamic gas fee calculations or access lists for smart contracts. Legacy transactions lack a specific prefix indicating their type in their serialized form, starting with the byte `0xf8` when using Recursive Length Prefix (RLP) encoding. The TransactionType value for these transactions is `0x0`.\n\n2. **Type 1 Transactions:** Introduced in EIP-2930 as part of Ethereum's Berlin Upgrade, these transactions include an `accessList` parameter. This list specifies addresses and storage keys the transaction expects to access, helping to potentially reduce gas costs for complex transactions involving smart contracts. EIP-1559 fee market changes are not included in Type 1 transactions. Type 1 transactions also include a `yParity` parameter, which can either be `0x0` or `0x1`, indicating the parity of the y-value of the secp256k1 signature. They are identified by starting with the byte `0x01`, and their TransactionType value is `0x1`.\n\n3. **Type 2 Transactions**, commonly referred to as EIP-1559 transactions, are transactions introduced in EIP-1559, in Ethereum's London Upgrade. They have become the standard transaction type on the Ethereum network. These transactions introduce a new fee market mechanism that improves predictability by separating the transaction fee into a base fee and a priority fee. They start with the byte `0x02` and include fields such as `maxPriorityFeePerGas` and `maxFeePerGas`. Type 2 transactions are now the default due to their flexibility and efficiency, especially favored during periods of high network congestion for their ability to help users manage transaction fees more predictably. The TransactionType value for these transactions is `0x2`.\n\n4. **Type 3 (Blob) Transactions** were introduced in EIP-4844 as part of Ethereum's Dencun Upgrade. These transactions are designed to handle \"blob\" data (Binary Large Objects) more efficiently, particularly benefiting Layer 2 rollups by providing a way to post data to the Ethereum network at a lower cost. Blob transactions include additional fields such as `blobVersionedHashes`, `maxFeePerBlobGas`, and `blobGasPrice`. They start with the byte `0x03`, and their TransactionType value is `0x3`. Blob transactions represent a significant improvement in Ethereum's data availability and scaling capabilities.\n\n5. **Type 4 Transactions** were introduced in EIP-7702 as part of Ethereum’s Pectra Upgrade. These transactions are designed to be forward-compatible with account abstraction. They allow EOAs to temporarily behave like smart contract accounts without compromising their original functionality. They include an `authorization_list` parameter, which specifies the smart contract to which the EOA delegates its authority. After the transaction, the EOA’s code field will have the address of the delegated smart contract.\n\n## Further reading {#further-reading}\n\n- EIP-2718: Typed Transaction Envelope\n\n_Know of a community resource that helped you? Edit this page and add it!_\n\n## Related topics {#related-topics}\n\n- Accounts\n- Ethereum virtual machine (EVM)\n- Gas",
+    "phone": ""
+  },
+  {
+    "id": "app-pattern/sap-wizard",
+    "kind": "app-pattern",
+    "name": "Wizard",
+    "summary": "Wizard guides user through long or unfamiliar task by dividing into sections, revealing information in digestible way. Consists of walkthrough screen (input required info) and summary page (read-only review before submission). Two types: standard (linear, known steps) and branching (non-linear, variable steps). Supports 3-8 steps, optional steps allowed.",
+    "domains": [
+      "b2b-saas",
+      "data-analytics",
+      "manufacturing",
+      "logistics",
+      "fintech-payments"
+    ],
+    "sectors": [
+      "enterprise"
+    ],
+    "tags": [
+      "sap",
+      "component",
+      "Layout & Containers",
+      "wizard"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "sap",
+      "repo": "https://github.com/SAP/fundamental-styles",
+      "commit": "0753390b563b4eafe4d90ec812205df1361941ac",
+      "path": "docs/component-guidance.json",
+      "license": "Apache-2.0",
+      "authors": [
+        "SAP"
+      ],
+      "url": "https://sap.github.io/fundamental-styles/",
+      "transformations": [
+        "selected description, whenToUse, whenToAvoid, and bestPractices",
+        "dropped implementation and token fields"
+      ]
+    },
+    "sourceUrl": "https://sap.github.io/fundamental-styles/",
+    "screen": "wizard",
+    "kinds": [
+      "component",
+      "guidance"
+    ],
+    "basis": "a wizard component from SAP Fiori",
+    "blueprint": "Wizard guides user through long or unfamiliar task by dividing into sections, revealing information in digestible way. Consists of walkthrough screen (input required info) and summary page (read-only review before submission). Two types: standard (linear, known steps) and branching (non-linear, variable steps). Supports 3-8 steps, optional steps allowed.\n\n### When to use\n\n- User has to accomplish long or unfamiliar task\n- Task consists of minimum 3 and maximum 8 steps\n- Linear progression through known steps (standard type)\n- Non-linear progression with variable steps (branching type)\n- Multi-step data entry or configuration\n- Complex process needs guidance\n- Final review before submission needed\n\n### When to avoid\n\n- Task has only 2 steps → Use simple two-page flow or dialog\n- Task has more than 8 steps → Break into multiple smaller wizards\n- Task format familiar to user → Use standard form\n- Simple single-page form → No wizard needed\n\n### Best practices\n\n- Standard type: total steps known, linear progression, fixed step count\n- Branching type: steps not known, variable count, non-linear progression\n- 3-8 steps (minimum 3, maximum 8)\n- Label optional steps as \"Optional\"\n- Allow skipping optional steps\n- Include walkthrough screen for input\n- Include summary page for read-only review\n- Use in full-screen or flexible column layout\n- Navigate back to originating page after completion/cancellation\n- No navigation to next page from wizard\n- Show progress indicator (current step / total steps)\n- Provide Next/Back navigation buttons\n- For 2 steps, use simpler approach\n- For >8 steps, split into multiple wizards",
     "phone": ""
   },
   {

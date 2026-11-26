@@ -113,8 +113,8 @@ describe("content loader", () => {
       loader.guidelines(),
       loader.packs("reference"),
     ]);
-    expect(catalog).toHaveLength(955);
-    expect(stats.catalogEntries).toBe(955);
+    expect(catalog).toHaveLength(975);
+    expect(stats.catalogEntries).toBe(975);
     expect(domains).toHaveLength(40);
     expect(guidelines).toHaveLength(104);
     expect(references).toHaveLength(25);

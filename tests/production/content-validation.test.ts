@@ -28,10 +28,10 @@ async function fileExists(path: string): Promise<boolean> {
 describe("committed content", () => {
   it("matches the catalog snapshot", async () => {
     const [catalog, stats] = await Promise.all([loader.catalog(), loader.stats()]);
-    expect(catalog).toHaveLength(955);
-    expect(stats.catalogEntries).toBe(955);
+    expect(catalog).toHaveLength(975);
+    expect(stats.catalogEntries).toBe(975);
     expect(stats.counts).toEqual({
-      "app-pattern": 107,
+      "app-pattern": 127,
       "app-shell": 5,
       "app-style": 7,
       brand: 84,
@@ -47,7 +47,7 @@ describe("committed content", () => {
       type: 44,
     });
     expect(stats.quality).toEqual({
-      verified: 632,
+      verified: 652,
       reference: 313,
       incomplete: 10,
     });
@@ -92,7 +92,7 @@ describe("committed content", () => {
       expect((await stat(path)).size).toBeGreaterThan(0);
     }
     const sources = await loader.sources();
-    expect(sources).toHaveLength(12);
+    expect(sources).toHaveLength(13);
     for (const source of sources) {
       const path = join(contentDir, source.licenseFile);
       expect(await fileExists(path), path).toBe(true);
@@ -233,6 +233,7 @@ describe("committed content", () => {
       "spectrum",
       "ethereum-org",
       "pie",
+      "sap",
     ]);
     for (const source of lock.sources) {
       expect(source.commit).toMatch(/^[0-9a-f]{40}$/);
@@ -402,5 +403,25 @@ describe("committed content", () => {
     expect(onboarding?.provenance.license).toBe("Apache-2.0");
     expect(onboarding?.provenance.commit).toHaveLength(40);
     expect(onboarding?.blueprint.length).toBeGreaterThan(350);
+  });
+
+  it("ships the SAP Fiori component guidance", async () => {
+    const packs = JSON.parse(
+      await readFile(join(contentDir, "generated", "kinds", "app-patterns.json"), "utf8"),
+    ) as Array<{
+      id: string;
+      blueprint: string;
+      provenance: { source: string; license: string; commit: string };
+    }>;
+    const sap = packs.filter((pack) => pack.id.startsWith("app-pattern/sap-"));
+    expect(sap).toHaveLength(20);
+
+    const button = packs.find((pack) => pack.id === "app-pattern/sap-button");
+    expect(button).toBeDefined();
+    expect(button?.provenance.source).toBe("sap");
+    expect(button?.provenance.license).toBe("Apache-2.0");
+    expect(button?.provenance.commit).toHaveLength(40);
+    expect(button?.blueprint).toContain("When to use");
+    expect(button?.blueprint).toContain("Best practices");
   });
 });
