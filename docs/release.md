@@ -5,9 +5,12 @@
 1. Create the GitHub repository and push `main`.
 2. Enable branch protection for `main`, Dependabot alerts, CodeQL, and secret
    scanning.
-3. No npm token is required. The release publishes signed binaries to GitHub
-   Releases and signed images to GHCR.
-4. After the first image publish, set the GHCR package visibility to public if
+3. Configure npm trusted publishing for the `tastepro` package:
+   repository `xeodus/tastepro`, workflow `release.yml`, environment left empty.
+   Then set the repository variable `NPM_PUBLISH=true`.
+4. Confirm the MCP Registry namespace `io.github.xeodus` is available to this
+   repository, then set the repository variable `MCP_REGISTRY_PUBLISH=true`.
+5. After the first image publish, set the GHCR package visibility to public if
    users should pull without authentication.
 
 ## Cut a release
@@ -27,7 +30,7 @@
 ## What the workflow does
 
 - **verify:** `bun ci`, `bun audit`, typecheck, lint, content validation, tests,
-  build, HTTP smoke, local-JWKS OAuth smoke, and `bun pm pack --dry-run`.
+  build, HTTP smoke, local-JWKS OAuth smoke, and `npm pack --dry-run`.
 - **oauth:** starts the reference Keycloak realm and runs `bun run smoke:oauth`.
 - **binaries:** builds macOS arm64/x64 and Linux arm64/x64, smokes the Linux
   binary, writes `SHA256SUMS`, signs it with cosign, and publishes a GitHub
@@ -36,10 +39,15 @@
   and provenance, and signs the digest.
 - **audit-image:** builds the Node/Playwright audit image for `linux/amd64`,
   pushes the `-audit` tag, and signs it.
+- **npm:** publishes `tastepro` to npmjs with provenance through trusted
+  publishing. Gated by `NPM_PUBLISH=true`.
+- **registry:** installs `mcp-publisher`, validates `server.json`, authenticates
+  with GitHub OIDC, and publishes to the official MCP Registry. Gated by
+  `MCP_REGISTRY_PUBLISH=true`; requires the npm and image jobs to succeed.
 
-The npm package is intentionally not published at launch. `bun publish` does
-not generate provenance yet; if the package channel is added later, decide
-whether to accept that or keep a narrow `npm publish --provenance` exception.
+`server.json` must list the exact npm version and the OCI image tag for the
+release. The package test enforces version parity; the registry rejects
+mismatches.
 
 ## Verify a release
 
@@ -55,6 +63,11 @@ docker pull ghcr.io/<owner>/tastepro:1.2.3
 cosign verify ghcr.io/<owner>/tastepro:1.2.3 \
   --certificate-identity-regexp 'https://github.com/<owner>/tastepro' \
   --certificate-oidc-issuer https://token.actions.githubusercontent.com
+
+npm view tastepro version
+npm audit signatures
+curl -fsS "https://registry.modelcontextprotocol.io/v0.1/servers?search=io.github.xeodus/tastepro" \
+  | jq -e '.servers | length > 0'
 ```
 
 Run the container with `TASTEPRO_ALLOWED_HOSTS` set; the image binds `0.0.0.0`

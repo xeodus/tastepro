@@ -1,8 +1,10 @@
 #!/usr/bin/env node
+import { readFile, stat } from "node:fs/promises";
+import { resolve } from "node:path";
 import type { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
 import { Command } from "commander";
-import { createAuditService } from "./core/audit.js";
+import { type AuditResponse, createAuditService } from "./core/audit.js";
 import type { ContentKind, Quality, SourceId } from "./core/schema.js";
 import { CONTENT_KINDS, QUALITY_LEVELS, SOURCE_IDS } from "./core/schema.js";
 import { createPlaywrightRenderer } from "./server/audit-browser.js";
@@ -101,6 +103,39 @@ function parseSource(value: string | undefined): SourceId | undefined {
     throw new Error(`Invalid source "${value}". Expected one of: ${SOURCE_IDS.join(", ")}`);
   }
   return value as SourceId;
+}
+
+type FailOn = "error" | "warn" | "none";
+
+function parseFailOn(value: string | undefined): FailOn {
+  const normalized = (value ?? "none").toLowerCase();
+  if (normalized !== "error" && normalized !== "warn" && normalized !== "none") {
+    throw new Error(`Invalid --fail-on "${value}". Expected: error, warn, none.`);
+  }
+  return normalized;
+}
+
+function formatAudit(response: AuditResponse): string {
+  const lines = [
+    `TastePro audit: ${response.target}`,
+    `Mode: ${response.mode}`,
+    `Findings: ${response.findings.length} (${response.summary.errors} errors, ${response.summary.warnings} warnings, ${response.summary.infos} infos)`,
+    "",
+  ];
+  for (const finding of response.findings) {
+    lines.push(`[${finding.severity.toUpperCase()}] ${finding.guidelineId} · ${finding.category}`);
+    lines.push(`  ${finding.rule}`);
+    lines.push(`  Evidence: ${finding.evidence}`);
+    lines.push(`  Fix: ${finding.fix}`);
+    lines.push("");
+  }
+  lines.push(`Checked: ${response.checked.length} rules`);
+  if (response.truncated) {
+    lines.push("Note: findings were truncated by the token budget.");
+  }
+  lines.push("", "Not verified:");
+  lines.push(...response.notVerified.map((item) => `  - ${item}`));
+  return lines.join("\n");
 }
 
 function output(value: unknown, asJson: boolean): void {
@@ -497,6 +532,62 @@ program
       return;
     }
     output(response, true);
+  });
+
+program
+  .command("audit")
+  .description("audit a local HTML file against the web-interface rubric")
+  .argument("<file>", "path to an HTML file")
+  .option("--target <label>", "report label (defaults to the file path)")
+  .option("--fail-on <level>", "exit non-zero on error | warn | none", "none")
+  .option("--max-tokens <tokens>", "response budget", "4000")
+  .option("--json", "print JSON", false)
+  .action(async (file: string, options, command) => {
+    const global = globalOptions(command);
+    const failOn = parseFailOn(options.failOn);
+    const path = resolve(file);
+
+    let size: number;
+    try {
+      const info = await stat(path);
+      if (!info.isFile()) {
+        throw new Error("not a regular file");
+      }
+      size = info.size;
+    } catch (error) {
+      throw new Error(
+        `Cannot read ${file}: ${error instanceof Error ? error.message : String(error)}`,
+      );
+    }
+    if (size > 1_000_000) {
+      throw new Error(`File is larger than 1 MB: ${path}`);
+    }
+
+    const html = await readFile(path, "utf8");
+    const context = createTasteProContext({ contentDir: global.contentDir });
+    const guidelines = await context.loader.guidelines();
+    const service = createAuditService({ guidelines });
+    const response = await service.audit({
+      html,
+      target: options.target ?? file,
+      maxTokens: Number.parseInt(String(options.maxTokens), 10),
+    });
+
+    if (options.json) {
+      output(response, true);
+    } else {
+      output(formatAudit(response), false);
+    }
+
+    const failed =
+      failOn === "error"
+        ? response.summary.errors > 0
+        : failOn === "warn"
+          ? response.summary.errors + response.summary.warnings > 0
+          : false;
+    if (failed) {
+      process.exitCode = 1;
+    }
   });
 
 program

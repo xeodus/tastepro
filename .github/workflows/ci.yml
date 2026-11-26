@@ -54,6 +54,46 @@ jobs:
       - name: OAuth smoke test (local JWKS)
         run: bun run smoke:oauth:local
 
+      - name: Package contents
+        run: npm pack --dry-run
+
+  package:
+    name: npm tarball
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    needs: verify
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Bun
+        uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: 1.4.4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+
+      - name: Install
+        run: bun ci
+
+      - name: Build
+        run: bun run build
+
+      - name: Pack and install in a clean directory
+        run: |
+          set -euo pipefail
+          work="$(mktemp -d)"
+          npm pack --pack-destination "$work" >/dev/null
+          cd "$work"
+          npm init -y >/dev/null
+          npm install ./tastepro-*.tgz >/dev/null
+          ./node_modules/.bin/tastepro info | tee info.txt
+          grep -q "Catalog entries: 873" info.txt
+          rm -rf "$work"
+
   binaries:
     name: Standalone binary
     runs-on: ubuntu-latest

@@ -4,6 +4,31 @@ All notable changes are recorded here. The project follows semantic versioning
 for the MCP tool surface, configuration, and package API. Content counts may
 change between minor releases without breaking the tool contract.
 
+## 1.1.0 - 2026-11-26
+
+### Added
+
+- `tastepro audit <file>` audits a local HTML file, prints rule ids, evidence
+  and fixes, and can fail a build with `--fail-on error`. `--json` prints the
+  same report for CI.
+- `server.json` publishes the server to the official MCP Registry through both
+  the npm package and the GHCR image.
+- npm distribution with provenance. `npx -y tastepro` is now the shortest local
+  install; the standalone binaries remain available.
+- One-line install recipes for Claude Code, Codex, OpenCode, Cursor, VS Code,
+  and Zed.
+
+### Changed
+
+- `docs/clients.md` uses the OpenCode V2 `mcp.servers` shape and the current
+  client commands. The retired V1 shape is gone.
+- The README quick start is npm-first; development instructions moved below it.
+
+### Fixed
+
+- The Docker image carries the
+  `io.modelcontextprotocol.server.name` label required by the MCP Registry.
+
 ## 1.0.2 - 2026-11-10
 
 ### Fixed

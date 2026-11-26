@@ -56,7 +56,7 @@ jobs:
         run: bun run smoke:oauth:local
 
       - name: Package contents
-        run: bun pm pack --dry-run
+        run: npm pack --dry-run
 
   oauth:
     name: Keycloak E2E
@@ -235,3 +235,69 @@ jobs:
 
       - name: Sign image
         run: cosign sign --yes "${{ env.IMAGE_NAME }}@${{ steps.push.outputs.digest }}"
+
+  npm:
+    name: Publish npm package
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    needs: [verify, oauth]
+    if: vars.NPM_PUBLISH == 'true'
+    permissions:
+      contents: read
+      id-token: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Bun
+        uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: 1.4.4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+
+      - name: Install
+        run: bun ci
+
+      - name: Build
+        run: bun run build
+
+      # Trusted publishing: configure this repository as a trusted publisher
+      # for `tastepro` on npmjs.com, then set the repository variable
+      # NPM_PUBLISH=true. No long-lived token is stored.
+      - name: Publish with provenance
+        run: npm publish --provenance --access public --ignore-scripts
+
+  registry:
+    name: Publish to the MCP Registry
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    needs: [npm, image]
+    if: vars.MCP_REGISTRY_PUBLISH == 'true'
+    permissions:
+      contents: read
+      id-token: write
+    env:
+      MCP_PUBLISHER_VERSION: v1.8.16
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install mcp-publisher
+        run: |
+          set -euo pipefail
+          curl -fsSL "https://github.com/modelcontextprotocol/registry/releases/download/${MCP_PUBLISHER_VERSION}/mcp-publisher_linux_amd64.tar.gz" \
+            | tar xz mcp-publisher
+          sudo mv mcp-publisher /usr/local/bin/
+
+      - name: Validate server.json
+        run: mcp-publisher validate
+
+      - name: Authenticate with GitHub OIDC
+        run: mcp-publisher login github-oidc
+
+      - name: Publish
+        run: mcp-publisher publish
