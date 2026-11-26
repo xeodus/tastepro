@@ -10,10 +10,14 @@ TastePro speaks **stdio** for local clients and **Streamable HTTP** for hosted
 clients. The same server works with ChatGPT, Claude, OpenCode, Cursor, and any
 MCP-compatible agent.
 
-## Status: 1.0
+## Status: 1.1
 
-The current build ships the read-only foundation plus the hosted audit:
+The current build ships the read-only foundation, the hosted audit, and the
+distribution path:
 
+- `npx -y tastepro` (npm, with provenance) and signed standalone binaries.
+- `tastepro audit <file>` for a local verdict with rule ids, evidence, fixes,
+  and `--fail-on error` for CI.
 - 873 committed content packs across 14 kinds.
 - 40-domain taxonomy with 15 deep seed playbooks and same-family fallback for
   uncovered domains.
@@ -25,6 +29,8 @@ The current build ships the read-only foundation plus the hosted audit:
 - OAuth resource-server auth for hosted deployments, plus bearer auth, host
   allowlists, CORS, body limits, session TTL, and health checks for the HTTP
   transport.
+- `server.json` for the official MCP Registry, covering the npm package and the
+  GHCR image.
 - Content ingestion from four pinned upstream repositories.
 - Unit, integration, contract, and production-tier tests.
 - Docker and staging scaffolding.
@@ -52,30 +58,43 @@ for them. Response budgets keep context use predictable.
 
 ## Quick start
 
-Requirements: Bun 1.4.4 or newer for development. The standalone binary needs no runtime installed.
+Requirements: Node.js 22 or newer. No account, no API key, and no network access
+at runtime.
 
 ```bash
-bun ci
-bun run build
-bun dist/cli.js info
-bun dist/cli.js --stdio
+npx -y tastepro info
+npx -y tastepro audit ./index.html --fail-on error
 ```
 
-`--stdio` is the default transport. It is meant to be launched by an MCP client,
-not used interactively from a shell. To expose the HTTP transport locally:
+Connect a client:
 
 ```bash
-bun dist/cli.js --http --host 127.0.0.1 --port 3000
+claude mcp add tastepro -- npx -y tastepro --stdio
 ```
 
-Health check:
+Use `codex mcp add`, `opencode mcp add`, or the JSON recipes in
+[install.md](docs/install.md). The server defaults to stdio and is meant to be
+launched by an MCP client, not used interactively from a shell.
+
+To expose the HTTP transport locally:
 
 ```bash
+npx -y tastepro --http --host 127.0.0.1 --port 3000
 curl http://127.0.0.1:3000/healthz
 ```
 
 The response includes the content hash, catalog counts, quality mix, and
 validation warning count.
+
+### Development
+
+Requirements: Bun 1.4.4 or newer.
+
+```bash
+bun ci
+bun run build
+bun dist/cli.js info
+```
 
 ### Build a standalone binary
 
@@ -95,20 +114,18 @@ is used.
 
 ### Install as a command
 
-From a checkout:
-
 ```bash
-bun link
+npm install -g tastepro
 tastepro info
 tastepro --stdio
 ```
 
-When the package is published, `bunx tastepro --stdio` will be the shortest
-local setup.
+With Bun: `bun add -g tastepro`. From a checkout: `bun link`.
 
 ### Connect a client
 
-- [Client setup: ChatGPT, Claude, OpenCode, Cursor](docs/clients.md)
+- [Install: one line per client](docs/install.md)
+- [Client setup: Claude, Codex, OpenCode, Cursor, VS Code, Zed](docs/clients.md)
 - [Deployment: Docker, staging, reverse proxy, auth](docs/deployment.md)
 - [Content model and authoring](docs/content.md)
 - [Architecture and testing](docs/architecture.md)

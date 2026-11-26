@@ -1,5 +1,8 @@
 import { spawn } from "node:child_process";
 import { readFileSync } from "node:fs";
+import { mkdtemp, rm, writeFile } from "node:fs/promises";
+import { tmpdir } from "node:os";
+import { join } from "node:path";
 import { afterEach, describe, expect, it } from "vitest";
 
 const PACKAGE_VERSION = (
@@ -52,7 +55,7 @@ describe("CLI", () => {
 
     const help = await run(["--help"]);
     expect(help.code).toBe(0);
-    for (const command of ["info", "search", "get", "guidelines", "domains"]) {
+    for (const command of ["info", "search", "get", "guidelines", "audit", "domains"]) {
       expect(help.stdout).toContain(command);
     }
     expect(help.stdout).toContain("--http");
@@ -132,6 +135,45 @@ describe("CLI", () => {
     const body = JSON.parse(domains.stdout) as Array<{ id: string; launchTier: boolean }>;
     expect(body).toHaveLength(40);
     expect(body.filter((domain) => domain.launchTier)).toHaveLength(15);
+  });
+
+  it("audits a local HTML file and can fail the build", async () => {
+    const dir = await mkdtemp(join(tmpdir(), "tastepro-audit-"));
+    const file = join(dir, "page.html");
+    await writeFile(file, '<html><body><img src="/hero.png"><input autofocus></body></html>');
+    try {
+      const json = await run(["audit", file, "--json"]);
+      expect(json.code).toBe(0);
+      const body = JSON.parse(json.stdout) as {
+        mode: string;
+        findings: Array<{ guidelineId: string }>;
+        summary: { errors: number; warnings: number };
+      };
+      expect(body.mode).toBe("static");
+      expect(body.summary.errors).toBeGreaterThan(0);
+      expect(body.summary.warnings).toBeGreaterThan(0);
+      expect(body.findings.some((finding) => finding.guidelineId.includes("images-need-alt"))).toBe(
+        true,
+      );
+
+      const failed = await run(["audit", file, "--fail-on", "error"]);
+      expect(failed.code).toBe(1);
+      expect(failed.stdout).toContain("TastePro audit:");
+      expect(failed.stdout).toContain("Not verified:");
+
+      const human = await run(["audit", file]);
+      expect(human.code).toBe(0);
+
+      const missing = await run(["audit", join(dir, "nope.html")]);
+      expect(missing.code).toBe(1);
+      expect(missing.stderr).toMatch(/Cannot read/);
+
+      const invalid = await run(["audit", file, "--fail-on", "sometimes"]);
+      expect(invalid.code).toBe(1);
+      expect(invalid.stderr).toMatch(/Invalid --fail-on/);
+    } finally {
+      await rm(dir, { recursive: true, force: true });
+    }
   });
 
   it("rejects invalid filters and ports", async () => {

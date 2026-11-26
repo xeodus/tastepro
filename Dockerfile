@@ -33,6 +33,10 @@ RUN bun install --frozen-lockfile --production
 FROM oven/bun:${BUN_VERSION} AS runtime
 WORKDIR /app
 
+# Required by the official MCP Registry for OCI packages. The value must match
+# the server name in server.json exactly.
+LABEL io.modelcontextprotocol.server.name="io.github.xeodus/tastepro"
+
 ENV NODE_ENV=production \
     TASTEPRO_HOST=0.0.0.0 \
     TASTEPRO_PORT=3000 \

@@ -5,9 +5,29 @@
 1. Create the GitHub repository and push `main`.
 2. Enable branch protection for `main`, Dependabot alerts, CodeQL, and secret
    scanning.
-3. No npm token is required. The release publishes signed binaries to GitHub
-   Releases and signed images to GHCR.
-4. After the first image publish, set the GHCR package visibility to public if
+3. **First publish only.** Create a granular access token on npmjs.com:
+   **Bypass 2FA enabled**, **All Packages**, **Read and write (publish and
+   stage)**, **1-day expiry**. Store it as the `NPM_TOKEN` secret and set
+   `NPM_PUBLISH=true`.
+   npm's banner about bypass-2FA restrictions is expected: account changes are
+   already blocked, but direct publishing still works until **January 2027**.
+   This token is a one-time bridge; revoke it after the release. Trusted
+   publishing replaces it for 1.2.0+.
+4. After the first release is live, configure the trusted publisher:
+
+   ```bash
+   npm trust github tastepro \
+     --file release.yml \
+     --repo xeodus/tastepro \
+     --allow-publish
+   ```
+
+   This requires npm 11.15+, 2FA on the npm account, and write access to the
+   package. Then revoke `NPM_TOKEN`; later releases authenticate through OIDC.
+   A new trusted publisher configuration expires if its first publish does not
+   happen within 2 days, so configure it just before the next release.
+5. Set the repository variable `MCP_REGISTRY_PUBLISH=true`.
+6. After the first image publish, set the GHCR package visibility to public if
    users should pull without authentication.
 
 ## Cut a release
@@ -27,7 +47,7 @@
 ## What the workflow does
 
 - **verify:** `bun ci`, `bun audit`, typecheck, lint, content validation, tests,
-  build, HTTP smoke, local-JWKS OAuth smoke, and `bun pm pack --dry-run`.
+  build, HTTP smoke, local-JWKS OAuth smoke, and `npm pack --dry-run`.
 - **oauth:** starts the reference Keycloak realm and runs `bun run smoke:oauth`.
 - **binaries:** builds macOS arm64/x64 and Linux arm64/x64, smokes the Linux
   binary, writes `SHA256SUMS`, signs it with cosign, and publishes a GitHub
@@ -36,10 +56,15 @@
   and provenance, and signs the digest.
 - **audit-image:** builds the Node/Playwright audit image for `linux/amd64`,
   pushes the `-audit` tag, and signs it.
+- **npm:** publishes `tastepro` to npmjs with provenance through trusted
+  publishing. Gated by `NPM_PUBLISH=true`.
+- **registry:** installs `mcp-publisher`, validates `server.json`, authenticates
+  with GitHub OIDC, and publishes to the official MCP Registry. Gated by
+  `MCP_REGISTRY_PUBLISH=true`; requires the npm and image jobs to succeed.
 
-The npm package is intentionally not published at launch. `bun publish` does
-not generate provenance yet; if the package channel is added later, decide
-whether to accept that or keep a narrow `npm publish --provenance` exception.
+`server.json` must list the exact npm version and the OCI image tag for the
+release. The package test enforces version parity; the registry rejects
+mismatches.
 
 ## Verify a release
 
@@ -55,6 +80,11 @@ docker pull ghcr.io/<owner>/tastepro:1.2.3
 cosign verify ghcr.io/<owner>/tastepro:1.2.3 \
   --certificate-identity-regexp 'https://github.com/<owner>/tastepro' \
   --certificate-oidc-issuer https://token.actions.githubusercontent.com
+
+npm view tastepro version
+npm audit signatures
+curl -fsS "https://registry.modelcontextprotocol.io/v0.1/servers?search=io.github.xeodus/tastepro" \
+  | jq -e '.servers | length > 0'
 ```
 
 Run the container with `TASTEPRO_ALLOWED_HOSTS` set; the image binds `0.0.0.0`
