@@ -69,14 +69,14 @@ describe("CLI", () => {
       stats: { catalogEntries: number; contentHash: string; warnings: string[] };
       sources: Array<{ id: string }>;
     };
-    expect(body.stats.catalogEntries).toBe(881);
+    expect(body.stats.catalogEntries).toBe(889);
     expect(body.stats.contentHash).toHaveLength(64);
     expect(body.stats.warnings).toHaveLength(29);
     expect(body.sources.map((source) => source.id)).toContain("taste-skill");
 
     const human = await run(["info"]);
     expect(human.code).toBe(0);
-    expect(human.stdout).toContain("Catalog entries: 881");
+    expect(human.stdout).toContain("Catalog entries: 889");
     expect(human.stdout).toContain("awesome-design-md");
     expect(human.stdout).toContain("Warnings: 29");
   });
@@ -250,7 +250,7 @@ describe("CLI", () => {
       expect(health.status).toBe(200);
       const body = (await health.json()) as { status: string; catalogEntries: number };
       expect(body.status).toBe("ok");
-      expect(body.catalogEntries).toBe(881);
+      expect(body.catalogEntries).toBe(889);
     } finally {
       child.kill("SIGTERM");
       const exit = await new Promise<{ code: number | null; signal: NodeJS.Signals | null }>(

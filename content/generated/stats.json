@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-26T15:43:22.898Z",
-  "contentHash": "2fbabdb6c5b08a8657d2d81c848b7a47fc7c2dd2e445c22e85dcfff59e9c4866",
-  "catalogEntries": 881,
+  "generatedAt": "2026-11-26T16:17:46.907Z",
+  "contentHash": "aaa2c4e588fbba739ee19331e8cdee3103dcdcc6b252b1add4f7550155af798f",
+  "catalogEntries": 889,
   "counts": {
-    "app-pattern": 33,
+    "app-pattern": 41,
     "app-shell": 5,
     "app-style": 7,
     "brand": 84,
@@ -20,7 +20,7 @@
     "reference": 25
   },
   "quality": {
-    "verified": 558,
+    "verified": 566,
     "reference": 313,
     "incomplete": 10
   },
@@ -36,7 +36,7 @@
         "Leonxlnx"
       ],
       "url": "https://github.com/Leonxlnx/taste-skill",
-      "retrievedAt": "2026-11-26T15:43:22.739Z",
+      "retrievedAt": "2026-11-26T16:17:46.730Z",
       "notes": "Design directions, palettes, type pairings, hero and section blueprints, motion recipes, site studies, photo-set metadata, app-screen library, and reference essays.",
       "paths": {
         "skill": "skills/taste-skill/SKILL.md",
@@ -75,7 +75,7 @@
         "VoltAgent"
       ],
       "url": "https://github.com/VoltAgent/awesome-design-md",
-      "retrievedAt": "2026-11-26T15:43:22.800Z",
+      "retrievedAt": "2026-11-26T16:17:46.792Z",
       "notes": "84 brand design-system analyses with YAML tokens. Brand names are used as references with attribution; no logos or screenshots are redistributed.",
       "paths": {
         "readme": "README.md",
@@ -96,7 +96,7 @@
         "Vercel Labs"
       ],
       "url": "https://vercel.com/design/guidelines",
-      "retrievedAt": "2026-11-26T15:43:22.802Z",
+      "retrievedAt": "2026-11-26T16:17:46.795Z",
       "notes": "The audit rubric: accessibility, focus, forms, animation, typography, content handling, images, performance, navigation, touch, layout, dark mode, i18n, hydration, hover, copy, and anti-patterns.",
       "paths": {
         "rules": "command.md",
@@ -118,7 +118,7 @@
         "Microsoft"
       ],
       "url": "https://github.com/microsoft/playwright-cli",
-      "retrievedAt": "2026-11-26T15:43:22.804Z",
+      "retrievedAt": "2026-11-26T16:17:46.799Z",
       "notes": "Browser automation and session-management guidance for the audit loop. The TastePro audit implementation is original; this source informs the workflow and reference skill.",
       "paths": {
         "readme": "README.md",
@@ -140,7 +140,7 @@
         "Government Digital Service"
       ],
       "url": "https://design-system.service.gov.uk/",
-      "retrievedAt": "2026-11-26T15:43:22.805Z",
+      "retrievedAt": "2026-11-26T16:17:46.801Z",
       "notes": "Form and service patterns. Repository code is MIT; the published guidance is OGL-3.0. Images, Crown marks, and Nunjucks examples are excluded.",
       "paths": {
         "bank-details": "src/patterns/bank-details/index.md",
@@ -155,12 +155,39 @@
       "counts": {
         "app-pattern": 8
       }
+    },
+    {
+      "id": "uswds",
+      "name": "USWDS",
+      "repo": "https://github.com/uswds/uswds-site",
+      "commit": "af13d80f071c3d897bee422f51954d9d7d156474",
+      "license": "CC0-1.0",
+      "licenseFile": "sources/licenses/uswds.txt",
+      "authors": [
+        "U.S. General Services Administration"
+      ],
+      "url": "https://designsystem.digital.gov/",
+      "retrievedAt": "2026-11-26T16:17:46.812Z",
+      "notes": "Identity and complex-form patterns. CC0; linked third-party fonts, icons, and agency marks are excluded.",
+      "paths": {
+        "name": "pages/patterns/create-a-profile/name.md",
+        "address": "pages/patterns/create-a-profile/address.md",
+        "date-of-birth": "pages/patterns/create-a-profile/date-of-birth.md",
+        "email-address": "pages/patterns/create-a-profile/email-address.md",
+        "phone-number": "pages/patterns/create-a-profile/phone-number.md",
+        "social-security-number": "pages/patterns/create-a-profile/social-security-number.md",
+        "keep-a-record": "pages/patterns/complex-form/keep-a-record.md",
+        "establish-trust": "pages/patterns/complex-form/establish-trust.md"
+      },
+      "counts": {
+        "app-pattern": 8
+      }
     }
   ],
   "warnings": [
     "brand/1win contrast: on-primary-on-primary is 2.81:1 (on-primary #ffffff on primary #00b24b); needs 4.5:1",
-    "brand/aljazeera contrast: on-primary-on-primary is 2.32:1 (on-primary #ffffff on primary #fa9000); needs 4.5:1",
     "brand/airbnb contrast: on-primary-on-primary is 3.52:1 (on-primary #ffffff on primary #ff385c); needs 4.5:1",
+    "brand/aljazeera contrast: on-primary-on-primary is 2.32:1 (on-primary #ffffff on primary #fa9000); needs 4.5:1",
     "brand/claude contrast: on-primary-on-primary is 3.28:1 (on-primary #ffffff on primary #cc785c); needs 4.5:1",
     "brand/cohere contrast: muted-on-canvas is 3.04:1 (muted #93939f on canvas #ffffff); needs 4.5:1",
     "brand/coinbase contrast: muted-on-canvas is 3.88:1 (muted #7c828a on canvas #ffffff); needs 4.5:1",
@@ -172,8 +199,8 @@
     "brand/jobright contrast: muted-on-canvas is 3.24:1 (muted #86909c on canvas #ffffff); needs 4.5:1",
     "brand/minimax contrast: muted-on-canvas is 2.32:1 (muted #a8aab2 on canvas #ffffff); needs 4.5:1",
     "brand/mintlify contrast: muted-on-canvas is 2.37:1 (muted #a8a8aa on canvas #ffffff); needs 4.5:1",
-    "brand/miro contrast: muted-on-canvas is 2.37:1 (muted #a5a8b5 on canvas #ffffff); needs 4.5:1",
     "brand/mistral.ai contrast: muted-on-canvas is 2.38:1 (muted #a8a8a8 on canvas #ffffff); needs 4.5:1; on-primary-on-primary is 3.34:1 (on-primary #ffffff on primary #fa520f); needs 4.5:1",
+    "brand/miro contrast: muted-on-canvas is 2.37:1 (muted #a5a8b5 on canvas #ffffff); needs 4.5:1",
     "brand/mongodb contrast: muted-on-canvas is 2.13:1 (muted #a8b3bc on canvas #ffffff); needs 4.5:1",
     "brand/mydealz contrast: muted-on-canvas is 2.16:1 (muted #a7a9ac on canvas #f3f5f7); needs 4.5:1; on-primary-on-primary is 3.09:1 (on-primary #ffffff on primary #30a83c); needs 4.5:1",
     "brand/notion contrast: muted-on-canvas is 1.98:1 (muted #bbb8b1 on canvas #ffffff); needs 4.5:1",

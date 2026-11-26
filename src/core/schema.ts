@@ -49,6 +49,7 @@ export const SOURCE_IDS = [
   "web-interface-guidelines",
   "playwright-cli",
   "govuk-design-system",
+  "uswds",
   "tastepro",
 ] as const;
 

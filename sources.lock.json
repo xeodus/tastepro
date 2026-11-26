@@ -92,6 +92,27 @@
         "dates": "src/patterns/dates/index.md",
         "check-answers": "src/patterns/check-answers/index.md"
       }
+    },
+    {
+      "id": "uswds",
+      "name": "USWDS",
+      "repo": "https://github.com/uswds/uswds-site",
+      "commit": "af13d80f071c3d897bee422f51954d9d7d156474",
+      "license": "CC0-1.0",
+      "licenseUrl": "https://raw.githubusercontent.com/uswds/uswds-site/af13d80f071c3d897bee422f51954d9d7d156474/LICENSE.md",
+      "authors": ["U.S. General Services Administration"],
+      "url": "https://designsystem.digital.gov/",
+      "notes": "Identity and complex-form patterns. CC0; linked third-party fonts, icons, and agency marks are excluded.",
+      "paths": {
+        "name": "pages/patterns/create-a-profile/name.md",
+        "address": "pages/patterns/create-a-profile/address.md",
+        "date-of-birth": "pages/patterns/create-a-profile/date-of-birth.md",
+        "email-address": "pages/patterns/create-a-profile/email-address.md",
+        "phone-number": "pages/patterns/create-a-profile/phone-number.md",
+        "social-security-number": "pages/patterns/create-a-profile/social-security-number.md",
+        "keep-a-record": "pages/patterns/complex-form/keep-a-record.md",
+        "establish-trust": "pages/patterns/complex-form/establish-trust.md"
+      }
     }
   ]
 }

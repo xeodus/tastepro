@@ -1,5 +1,52 @@
 [
   {
+    "id": "app-pattern/uswds-address",
+    "kind": "app-pattern",
+    "name": "Address",
+    "summary": "The physical and mailing address patterns help users enter their address successfully.",
+    "domains": [
+      "government-public",
+      "product-surfaces",
+      "ecommerce-dtc"
+    ],
+    "sectors": [
+      "government",
+      "identity"
+    ],
+    "tags": [
+      "uswds",
+      "form",
+      "identity",
+      "address"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "uswds",
+      "repo": "https://github.com/uswds/uswds-site",
+      "commit": "af13d80f071c3d897bee422f51954d9d7d156474",
+      "path": "pages/patterns/create-a-profile/address.md",
+      "license": "CC0-1.0",
+      "authors": [
+        "U.S. General Services Administration"
+      ],
+      "url": "https://designsystem.digital.gov/",
+      "transformations": [
+        "converted HTML guidance to text",
+        "removed Jekyll includes, previews, and examples"
+      ]
+    },
+    "sourceUrl": "https://designsystem.digital.gov/patterns/create-a-user-profile/address/",
+    "screen": "address",
+    "kinds": [
+      "form",
+      "identity"
+    ],
+    "basis": "a address pattern from USWDS",
+    "blueprint": "## About these patterns\n\n### What problems do these patterns solve?\n\nWhile most addresses in the U.S. follow a specific pattern, there are unique variations in some rural areas, U.S. territories, and military posts. In addition, some people are unhoused or in temporary housing, and may need to specify a mailing address that is different from their physical address —  particularly in disaster relief and recovery situations.\n\n## Physical address\n\n### When to use this pattern\n\nUse this pattern when you need the physical location of a person and you need to parse out the specific parts of the address. This may be important when determining benefits eligibility, for disaster recovery purposes, or other reasons. Since physical addresses may be new, temporary, or not currently served by the USPS consider asking for a mailing address, too. Physical addresses may be where a building or property is located, or potentially where a displaced individual is currently located. Mailing addresses are where postal mail must be sent.\n\n### When to consider something else\n\nThis pattern supports domestic U.S. addresses, including the U.S. territories and military outposts. If you need to collect addresses that may not fit this format, such as international addresses for citizens living overseas, you will need to [use something else](https://www.upu.int/en/Postal-Solutions/Programmes-Services/Addressing-Solutions).\n\n### What’s the solution\n\nProvide all the fields needed for a user to provide a physical address, even less conventional attributes like a [Google Plus Code](https://maps.google.com/pluscodes/).\n\n### Guidance\n\n#### What to do\n\n- Do support long text fields.\n\n- Do support a rich array of diacritics, accents, and alternative characters.\n\n- Do allow both upper and lowercase letters throughout each field.\n\n- Allow users to enter hyphens, apostrophes, special characters, and blank spaces in each name field.\n\n- Consider using the autocomplete attribute on address input fields to allow the browser to autofill information that has been previously entered.\n\n- Provide rich information cues in dropdowns. For example, for state dropdowns, use MD - Maryland and TX - Texas, rather than the state code alone.\n\n- Do provide the Puerto Rican Urbanization field, unless your program does not serve Puerto Rico.\n\n- If your program does not serve the armed forces or U.S. territories, you may want to provide links to related resources for these users if such resources exist.\n\n#### What not to do\n\n- Don't auto-advance focus from one field to the next. This makes it difficult for keyboard-only users to navigate and correct mistakes.\n\n- Do not limit addresses to conventionally formatted addresses. Some rural areas and the U.S. territories have unusually formatted addresses.\n\n- Do not assume that people can receive mail at their physical location. People in some communities can only receive mail at post office boxes.",
+    "phone": ""
+  },
+  {
     "id": "app-pattern/govuk-addresses",
     "kind": "app-pattern",
     "name": "Addresses",
@@ -388,6 +435,53 @@
     "phone": "The live deployment card becomes a stack of label-value rows; the KPIs a 2x2 grid; the chart full width with its markers; the explanation under it; deployments as two-line rows with region and duration on line 2."
   },
   {
+    "id": "app-pattern/uswds-date-of-birth",
+    "kind": "app-pattern",
+    "name": "Date of birth",
+    "summary": "Date of birth, and other memorable dates, can be an essential piece of information used to validate identity or eligibility for services or benefits. This pattern allows users to enter their date of birth or another memorable date (such as, birth of child, death of loved one) without friction.",
+    "domains": [
+      "government-public",
+      "product-surfaces",
+      "healthcare-wellness"
+    ],
+    "sectors": [
+      "government",
+      "identity"
+    ],
+    "tags": [
+      "uswds",
+      "form",
+      "identity",
+      "date-of-birth"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "uswds",
+      "repo": "https://github.com/uswds/uswds-site",
+      "commit": "af13d80f071c3d897bee422f51954d9d7d156474",
+      "path": "pages/patterns/create-a-profile/date-of-birth.md",
+      "license": "CC0-1.0",
+      "authors": [
+        "U.S. General Services Administration"
+      ],
+      "url": "https://designsystem.digital.gov/",
+      "transformations": [
+        "converted HTML guidance to text",
+        "removed Jekyll includes, previews, and examples"
+      ]
+    },
+    "sourceUrl": "https://designsystem.digital.gov/patterns/create-a-user-profile/date-of-birth/",
+    "screen": "date-of-birth",
+    "kinds": [
+      "form",
+      "identity"
+    ],
+    "basis": "a date of birth pattern from USWDS",
+    "blueprint": "## About this pattern\n\n### What problem does this solve?\n\nWith many competing patterns for date formatting, users may become frustrated, confused, and more prone to make mistakes when entering a date of birth or other memorable date.\n\n### When to use this pattern\n\nUse this pattern when you need a user's date of birth or another memorable date.\n\n### What's the solution?\n\nAllowing a user to enter a memorable date using three clearly labeled fields provides the simplest and most inclusive digital experience. This is especially helpful when the date is in the past like a date of birth. By providing the Select component for month, and clearly labeled text input for date and year, users will understand what is being asked and not struggle to input the information or question what order the information should be entered in.\n\nMobile device users in particular may benefit from being able to type a year rather than using a scrolling date picker for date of birth or other memorable dates.\n\n## Guidance\n\n### What to do\n\n- Do provide text entry fields for day and year inputs, and the Select component for month.\n\n- Do label the fields clearly, including the month select. Some countries use a day/month/year format and it’s important that date and month are clearly distinguished to ensure correct date entry.\n\n- Do use a \"text\" vs \"numeric\" input type.\n\n- Do limit individual field character length.\n\n- Do consider your data requirements. Use both client-side and server-side validation to support properly formatted dates if possible. If you are unable to parse date without two digits, provide an example that reflects a leading zero and use clear validation messaging if a single digit without a leading zero is entered.\n\n- Do consider requiring a four-digit year to avoid potential confusion.\n\n### What not to do\n\n- Don't auto-advance focus from one field to the next. This makes it difficult for keyboard-only users to navigate and correct mistakes.\n\n- Do not use visual separators between fields.\n\n- Do not auto-advance focus from field to field.\n\n- Do not require leading zeros if possible.\n\n- Do not use a date picker.",
+    "phone": ""
+  },
+  {
     "id": "app-pattern/govuk-dates",
     "kind": "app-pattern",
     "name": "Dates",
@@ -427,6 +521,52 @@
     ],
     "basis": "a dates pattern from the GOV.UK Design System",
     "blueprint": "Help users enter or select a date.\n\n## When to use this pattern\n\nFollow this pattern whenever you need users to provide or select a date as part of your&nbsp;service.\n\n## How it works\n\nThe way you should ask users for dates depends on the types of date you’re asking for.\n\nDates you may need users to provide include:\n\n- memorable dates, like a date of birth or marriage\n- dates from documents or cards, like a passport or credit card\n- approximate dates, like ‘December 2017’\n- relative dates, like ‘4 days from today’\n\nIn some cases you might need users to pick a date from a given selection.\n\n### Asking for memorable dates\n\nAsk for memorable dates, like dates of birth, using the Date input component component.\n\n### Asking for dates from documents and cards\n\nWhen asking for a date exactly as it’s shown on a passport, credit card or other document, make the fields match the format of the original. This makes it easier for users to copy the date across accurately.\n\n### Asking for approximate dates\n\nAllow users to enter an approximate date when you are asking them for information they may not know or may struggle to remember. For example, allow users to enter ‘December 2017’ for a field that says ‘the date you lost your passport’.\n\n### Asking for relative dates\n\nYou may need to ask for dates that are relative to today’s date or another date - this is common if a user is setting a reminder.\n\nTo do this let users enter or select relative dates like ‘tomorrow’ or ‘1 day before’. If the day of the week is important, show this as well.\n\n### Helping users to pick a date\n\nUsers might need to pick a date from a selection, for example, to book an appointment.\n\nTo do this, you can present dates in a calendar format using a calendar control. Users are typically shown one month’s worth of dates at a time, and can skip through months and&nbsp;years.\n\nOnly use a calendar control if users need to:\n\n- pick a date in the near future or recent past\n- know the day of the week, or the week of the month, as well as the date\n- be able to see dates in relation to other dates\n\nNever make a calendar control that depends on JavaScript as the only input option.&nbsp;Allow users to enter the date into a text input as well as use the control.\n\n### How to write dates\n\nSee the GOV.UK style for writing dates and date ranges.\n\nIf you give an example date, use 13 or more for the day and 9 or less for the month - for example ‘27 3 2007’. This helps users enter the date in the correct order and shows them they do not need to include leading zeroes.\n\n## Research on this pattern\n\nRead a blog post about asking for a date of birth.\n\nIf you’ve used this pattern, get in touch to share your user research findings.\n\nMore research is needed to determine the extent to which users struggle to enter months as numbers, and whether allowing them to enter months as text is helpful.",
+    "phone": ""
+  },
+  {
+    "id": "app-pattern/uswds-email-address",
+    "kind": "app-pattern",
+    "name": "Email address",
+    "summary": "The email address pattern allows users to confidently and accurately enter their email address and ensures that it is properly formatted.",
+    "domains": [
+      "government-public",
+      "product-surfaces"
+    ],
+    "sectors": [
+      "government",
+      "identity"
+    ],
+    "tags": [
+      "uswds",
+      "form",
+      "identity",
+      "email-address"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "uswds",
+      "repo": "https://github.com/uswds/uswds-site",
+      "commit": "af13d80f071c3d897bee422f51954d9d7d156474",
+      "path": "pages/patterns/create-a-profile/email-address.md",
+      "license": "CC0-1.0",
+      "authors": [
+        "U.S. General Services Administration"
+      ],
+      "url": "https://designsystem.digital.gov/",
+      "transformations": [
+        "converted HTML guidance to text",
+        "removed Jekyll includes, previews, and examples"
+      ]
+    },
+    "sourceUrl": "https://designsystem.digital.gov/patterns/create-a-user-profile/email-address/",
+    "screen": "email-address",
+    "kinds": [
+      "form",
+      "identity"
+    ],
+    "basis": "a email address pattern from USWDS",
+    "blueprint": "## About this pattern\n\n### What problem does this solve?\n\nEmail addresses can be confusing to enter and users often make mistakes. Some users find it very frustrating to try to identify problems in email formatting.\n\n### When to use this pattern\n\nUse this pattern whenever you are collecting email addresses.\n\n### What's the solution?\n\nA text input field with validation and robust error messaging to guide users in providing the correct information.\n\n## Guidance\n\n### What to do\n\n- Tell users why you need their email address, why you might contact them, and when.\n\n- Do validate formatting by checking for an at symbol (@) that is preceded and followed by one or more characters (not spaces).\n\n- Do use both client-side and server-side validation to support properly formatted email addresses if possible.\n\n- Do consider checking for common misspellings of popular email providers. Warn users if you detect a likely misspelling, but allow them to continue since it might be a genuine email address.\n\n- Do accommodate up to 256 characters. Email addresses cannot be longer than 256 characters.\n\n- Do allow users to paste their email address.\n\n- Do consider enabling autocomplete to allow autofill to enter the email address if they’ve entered it previously.\n\n- Do use fieldset and legend to group related fields together, and clear labels and attributes on these form elements.\n\n- Do provide meaningful error messages that suggest the correct format for an email address.\n\n- Do consider the safety implications of users who share email addresses with others. Consider asking for permission to leave potentially sensitive messages.\n\n### What not to do\n\n- Do not require users to re-enter their email address, unless you have a good reason for doing so.\n\n- Do not set arbitrary minimum lengths for the local portion of the email address (occurring before the @ symbol) or domain (after the @ symbol) parts.\n\n- Do not invalidate characters frequently seen in email addresses including hyphens (-), underscores (_), plus signs (+), or periods (.) in the local portion of an email address. See RFC 822 for the exhaustive list of permitted characters in the local portion of an email address.\n\n- Do not restrict top-level domains for email address unless your use case is very specific, for example, only .gov or .mil addresses.\n\n- Do not assume that email messages are private unless explicitly stated through permission-based settings.",
     "phone": ""
   },
   {
@@ -471,6 +611,52 @@
     ],
     "basis": "a error summary pattern from the GOV.UK Design System",
     "blueprint": "Use this component at the top of a page to summarise any errors a user has made.\n\nWhen a user makes an error, you must show both an error summary and an Error message component next to each answer that contains an error.\n\n## When to use this component\n\nAlways show an error summary when there is a validation error, even if there’s only one.\n\n## How it works\n\nYou must:\n\n- move keyboard focus to the error summary (the govuk-frontend javascript will do this for you)\n- include the heading ‘There is a problem’\n- link to each of the answers that have validation errors\n- make sure the error messages in the error summary are worded the same as those which appear next to the inputs with errors\n\nAs well as showing an error summary, follow the Validation pattern - for example, by adding ‘Error: ’ to the beginning of the page `<title>` so screen readers read it out as soon as possible.\n\nAnd make your error messages clear and concise.\n\nThere are 2 ways to use the error summary component. You can use HTML or, if you are using Nunjucks or the GOV.UK Prototype Kit, you can use the Nunjucks macro.\n\n### Linking from the error summary to each answer\n\nYou must link the errors in the error summary to the answer they relate to.\n\nFor questions that require a user to answer using a single field, like a file upload, select, textarea, text input or character count, link to the field.\n\nWhen a user has to enter their answer into multiple fields, such as the day, month and year fields in the date input component, link to the first field that contains an error.\n\nIf you do not know which field contains an error, link to the first field.\n\nFor questions that require a user to select one or more options from a list using radios or checkboxes, link to the first radio or checkbox.\n\n### Where to put the error summary\n\nPut the error summary at the top of the `main` container. If your page includes breadcrumbs or a back link, place it below these, but above the `<h1>`.",
+    "phone": ""
+  },
+  {
+    "id": "app-pattern/uswds-establish-trust",
+    "kind": "app-pattern",
+    "name": "Establish trust",
+    "summary": "Help users understand the purpose of a form and the time commitment needed to complete it, feel confident they have what they need, and trust that the information they provide will be safeguarded and used responsibly.",
+    "domains": [
+      "government-public",
+      "nonprofit-civic",
+      "product-surfaces"
+    ],
+    "sectors": [
+      "government"
+    ],
+    "tags": [
+      "uswds",
+      "form",
+      "trust",
+      "establish-trust"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "uswds",
+      "repo": "https://github.com/uswds/uswds-site",
+      "commit": "af13d80f071c3d897bee422f51954d9d7d156474",
+      "path": "pages/patterns/complex-form/establish-trust.md",
+      "license": "CC0-1.0",
+      "authors": [
+        "U.S. General Services Administration"
+      ],
+      "url": "https://designsystem.digital.gov/",
+      "transformations": [
+        "converted HTML guidance to text",
+        "removed Jekyll includes, previews, and examples"
+      ]
+    },
+    "sourceUrl": "https://designsystem.digital.gov/patterns/complete-a-complex-form/establish-trust/",
+    "screen": "establish-trust",
+    "kinds": [
+      "form",
+      "trust"
+    ],
+    "basis": "a establish trust pattern from USWDS",
+    "blueprint": "## About this pattern\n\n### What problem does this solve?\n\nGovernment forms can be very stressful and overwhelming for users to complete. If they are in the midst of a crisis or recovering from trauma, form completion can be very challenging. Respect for their life experiences and time, and reassurances about process and privacy, can help reduce user stress and frustration.\n\n### When to use this pattern\n\nUse this pattern when you are asking users to provide more than basic contact information, especially if you are collecting information that may require disclosing sensitive personal, financial, health, or safety details in a digital form.\n\n### What’s the solution\n\nProvide clear information on why it is necessary to complete the form, what information is needed to successfully complete the form, and how the information will be kept secure. Be as transparent as possible.\n\n## Guidance\n\n### What to do\n\n- Do provide information on why information is being collected and how it is being used.\n\n- Do use plain language.\n\n- Do use people-first language. Emphasize people’s abilities, not their limitations, and choose words that emphasize the need for accessibility, not the disability. For example, use accessible parking, not handicapped parking.\n\n- Do use inclusive language. Choose gender neutral words when possible. Avoid using citizen, unless you are specifically addressing that audience. Choose words that include the broadest appropriate group.\n\n- Do provide a list of what information your user will need to successfully complete the form.\n\n- Do provide an approximate amount of time it will take the user to complete the form.\n\n- Do allow the user to save and resume if possible. Some users may need to take breaks as they complete a form on a difficult topic. If users can save and resume the form, tell them so up front, so they know this is an option.\n\n- Do provide the user with a summary of their answers before they submit the form.\n\n### What not to do\n\n- Do not overwhelm your user. Provide enough background information to communicate the purpose and requirements of the form, but use principles of progressive disclosure to gradually move from simple to more difficult questions.\n\n- Do not ask for information that may be disturbing to the user without context. Explain why you need the information. For example, if you are going to ask about mental health or substance use issues or details on the illness or death of a loved one, explain why that information is required for the program or service.\n\n- Do not create a false sense of urgency. People under stress — even just the stress of filling out a long government form — do not need added pressure.\n\n- Use care to avoid making gender, pronoun, or biological sex assumptions based on previous answers.\n\n- Don’t provide examples that may make some groups feel excluded or targeted, such as including images or illustrations that reinforce stereotypes or stigma.",
     "phone": ""
   },
   {
@@ -660,6 +846,52 @@
     "phone": "KPIs become a 2 x 3 grid; the chart is full width; the share tables stack in one column and keep their row bars."
   },
   {
+    "id": "app-pattern/uswds-keep-a-record",
+    "kind": "app-pattern",
+    "name": "Keep a record",
+    "summary": "Help users feel confident in their form submission by providing a record to download or print. A printed or downloaded record of their answers provides a reference for future use, and helps users confirm their successful form submission.",
+    "domains": [
+      "government-public",
+      "nonprofit-civic",
+      "product-surfaces"
+    ],
+    "sectors": [
+      "government"
+    ],
+    "tags": [
+      "uswds",
+      "form",
+      "trust",
+      "keep-a-record"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "uswds",
+      "repo": "https://github.com/uswds/uswds-site",
+      "commit": "af13d80f071c3d897bee422f51954d9d7d156474",
+      "path": "pages/patterns/complex-form/keep-a-record.md",
+      "license": "CC0-1.0",
+      "authors": [
+        "U.S. General Services Administration"
+      ],
+      "url": "https://designsystem.digital.gov/",
+      "transformations": [
+        "converted HTML guidance to text",
+        "removed Jekyll includes, previews, and examples"
+      ]
+    },
+    "sourceUrl": "https://designsystem.digital.gov/patterns/complete-a-complex-form/keep-a-record/",
+    "screen": "keep-a-record",
+    "kinds": [
+      "form",
+      "trust"
+    ],
+    "basis": "a keep a record pattern from USWDS",
+    "blueprint": "## About this pattern\n\n### What problem does this solve?\n\nHitting the “Submit” button on a form can be terrifying, especially if the form is complex or contains deeply personal information. Providing the user with a record of the answers provided, questions skipped, and the URL and date stamp of form submission can reduce fear, increase confidence, and improve the user’s trust in your program.\n\nThis record also provides a quick reference to submitted answers that might influence eligibility, helping program support personnel work with users to identify potential misunderstandings or mistakes for easier resolution and improved service.\n\n### When to use this pattern\n\nUse this pattern when you are collecting information from users that extends beyond basic contact information, especially if you are collecting information in a long, complex form.\n\n### What’s the solution\n\nProvide the user with a printable record of their answers using a print style sheet designed to provide a streamlined record of the user’s submission, while conserving paper and ink.\n\n## Guidance\n\n### What to do\n\n- Use a print style sheet to create a summary of submitted information in a print-optimized format.\n\n- Do optimize for print by removing unnecessary graphics, minimizing color usage, and making effective use of page dimensions.\n\n- Provide a “title block” that includes the site name, URL, date, and record of successful submission.\n\n- Add any next steps, time frames, or reference numbers like case or record identifiers to the title block, if possible.\n\n- Include a complete recap of all questions and their submitted answers.\n\n- Consider whether any of the submitted values might benefit from partial masking when printed (e.g., a Social Security Number field). If you do mask, display no more than the last four (4) digits to ensure the user can still recognize their entry as the proper value.\n\n- Include a “Print” button on the summary page.\n\n- Strongly consider building in PDF generation. Print-to-PDF functionality is not widely understood in general, and can be particularly cumbersome on mobile devices.\n\n- Do use good semantic structures to aid in creating more accessible PDFs.\n\n### What not to do\n\n- Don't arbitrarily choose which questions and answers are displayed on the record of submitted information. If a question was important enough to ask, it's important enough to keep in the user's record of their form submission.\n\n- Don't include images that are not important to understanding the content.\n\n- Do not print-disable pages or try to suppress page numbering.",
+    "phone": ""
+  },
+  {
     "id": "app-pattern/kpi-strip-chart-rail",
     "kind": "app-pattern",
     "name": "KPI strip, main chart and a side rail",
@@ -757,6 +989,53 @@
     "basis": "a seller home",
     "blueprint": "One card per subject, 8-16px apart: the main chart card runs full width, and any card holding a table of five columns or fewer, or a short list, pairs with its neighbour in two columns, the page header indented by the card padding so the title, the card titles, the numbers and the plot share one left edge. Balances that do not change during the day go first, in one container split by 1px dividers into equal columns; a zero balance is grey and its caption becomes the next step. In the main card, 2-4 KPIs sit in a row and act as the chart's series tabs: the selected one carries a 2px rule and an ink label, the others keep a grey label and their value in ink at a lighter weight (a grey value reads as disabled); when the tabs are the per-entity breakdown the brief asks for (takings by shop), nothing is greyed and the rule alone marks the selection. Choosing one swaps the series. Under them, one line chart as wide as the card's content (about 1136x220 in the study): 3-4 solid 1px gridlines, 4-6 round y ticks at 12px, a 2-3px line in ink with straight segments and no fill, an 8px hover dot with a 1px dashed guide and the line after the cursor in pale grey. Close with a 2-3 row comparison table on a 36px pitch, value and change columns right-aligned under a 14px grey header such as 'vs prior Monday'.",
     "phone": "KPI tabs become a 2-up grid above the chart, with the selected cell marked by a fill (never an underline floating inside the grid) or a row of tabs that scrolls sideways; the chart is full width, 160-200px tall, with 4 x labels; the comparison table keeps its two right-aligned columns."
+  },
+  {
+    "id": "app-pattern/uswds-name",
+    "kind": "app-pattern",
+    "name": "Name",
+    "summary": "The name pattern makes it as easy as possible for users to enter their name in the format required. This pattern is often used to validate identity and helps collect name elements in the most effective and least intrusive manner possible.",
+    "domains": [
+      "government-public",
+      "product-surfaces",
+      "healthcare-wellness"
+    ],
+    "sectors": [
+      "government",
+      "identity"
+    ],
+    "tags": [
+      "uswds",
+      "form",
+      "identity",
+      "name"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "uswds",
+      "repo": "https://github.com/uswds/uswds-site",
+      "commit": "af13d80f071c3d897bee422f51954d9d7d156474",
+      "path": "pages/patterns/create-a-profile/name.md",
+      "license": "CC0-1.0",
+      "authors": [
+        "U.S. General Services Administration"
+      ],
+      "url": "https://designsystem.digital.gov/",
+      "transformations": [
+        "converted HTML guidance to text",
+        "removed Jekyll includes, previews, and examples"
+      ]
+    },
+    "sourceUrl": "https://designsystem.digital.gov/patterns/create-a-user-profile/name/",
+    "screen": "name",
+    "kinds": [
+      "form",
+      "identity"
+    ],
+    "basis": "a name pattern from USWDS",
+    "blueprint": "## About this pattern\n\n### What problem does this solve?\n\nPeople have a wide variety of names in various formats. It can be confusing and alienating for them to enter their name if it doesn’t conform to the form fields provided, or if the form fields don’t support the characters, length, or language they require. At the same time, the name fields are often used as a primary form of identity validation, so the agency — and privacy issues — require the information be entered in a specific and consistent way.\n\n### When to use this pattern\n\nFollow this pattern when you need to ask for a user’s name as part of your service. Only ask for a name if you need it.\n\n### What's the solution?\n\nProvide multiple text entry fields that support a rich array of special characters and accents. Provide direction on how to complete the form and what to do if the name doesn’t fit into the provided format.\n\n## Guidance\n\n### What to do\n\n- Do support long text fields for each name. Allow users to enter up to 128 characters per field, but follow form norms for field display size.\n\n- Do support names as short as a single character.\n\n- Do consider confirming very short or empty name fields.\n\n- Do support a rich array of diacritics, accents, and alternative characters.\n\n- Allow users to enter more than one name in each field. Spanish-speaking people will often have two family names. Brazilians may have three or four family names.\n\n- Do allow both upper- and lowercase letters throughout each field.\n\n- Allow users to enter hyphens, apostrophes, and blank spaces in each name field.\n\n- Consider using the autocomplete attribute on name fields to allow the browser to autofill information that has been previously entered.\n\n- Do use fieldset and legend to group related fields together, and clear labels and attributes on these form elements.\n\n- Do display the complete name wherever the information is displayed (even if it is long), including on a confirmation page. You may need to truncate a name when used to convey logged-in status in the site header.\n\n- Do use hint text to help users understand which name should be used in each field.\n\n### What not to do\n\n- Do not require users to enter something in each field. In some cultures, such as Indonesian and Icelandic, people may have only one name.\n\n- If you need to request a middle name, don’t request just an initial. In some cultures, people often have multiple middle names and may not typically abbreviate them with initials.\n\n- Do not assume that a single character is an initial. Some names are one character long.\n\n- Do not normalize casing in names. In some names, such as McNamara and van der Waals, casing is part of the name.\n\n- Do not ask for maiden name. Women are not the only ones who change their names. Ask for previous name.",
+    "phone": ""
   },
   {
     "id": "app-pattern/govuk-names",
@@ -944,6 +1223,52 @@
     "basis": "a network analytics overview",
     "blueprint": "Title at 24-32px with one sentence under it saying what the filters do, then one filter row of 36-38px controls (one filled or near-black, the rest borderless or text, a reset link last) and 16-24px to the KPIs. KPI row: 3 equal cards in the content column (3 x 372 + 2 x 17 = 1152 in the study) or one divided container; a 16px label over the value with the change written as a phrase on the value's baseline ('+8 in the last 90 days'), grey when it is zero. Then one row per metric: the per-period column chart on the left and its cumulative line on the right, at equal width (2 x 568 + 16 = 1152) and with the same x ticks; square bars, a 2px straight line, integer ticks from zero, no legend because each chart has one series. One gap value horizontally and vertically.",
     "phone": "Pairs stack, the cumulative chart directly under its per-period chart; KPI cards become a single column of label-value rows."
+  },
+  {
+    "id": "app-pattern/uswds-phone-number",
+    "kind": "app-pattern",
+    "name": "Phone number",
+    "summary": "The phone number pattern allows users to easily enter their phone number and ensures the phone number is properly formatted.",
+    "domains": [
+      "government-public",
+      "product-surfaces"
+    ],
+    "sectors": [
+      "government",
+      "identity"
+    ],
+    "tags": [
+      "uswds",
+      "form",
+      "identity",
+      "phone-number"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "uswds",
+      "repo": "https://github.com/uswds/uswds-site",
+      "commit": "af13d80f071c3d897bee422f51954d9d7d156474",
+      "path": "pages/patterns/create-a-profile/phone-number.md",
+      "license": "CC0-1.0",
+      "authors": [
+        "U.S. General Services Administration"
+      ],
+      "url": "https://designsystem.digital.gov/",
+      "transformations": [
+        "converted HTML guidance to text",
+        "removed Jekyll includes, previews, and examples"
+      ]
+    },
+    "sourceUrl": "https://designsystem.digital.gov/patterns/create-a-user-profile/phone-number/",
+    "screen": "phone-number",
+    "kinds": [
+      "form",
+      "identity"
+    ],
+    "basis": "a phone number pattern from USWDS",
+    "blueprint": "## About this pattern\n\n### What problem does this solve?\n\nPeople format their phone number in varying ways — with or without extra spaces, hyphens, periods, and parentheses. Some may be more accustomed to providing only seven digits. This pattern was designed to reduce confusion and frustration and ensure accurate entry.\n\n### When to use this pattern\n\nUse this pattern if you need to collect the user’s phone number. Only ask for the phone number if you need it. This pattern is designed to support U.S. phone numbers and their specific format.\n\n### What's the solution?\n\nHelp users enter their phone numbers in a consistent, correct, usable format. Use the form label and hint text to show users the expected format, and if you specifically need a U.S. or SMS-capable mobile phone number. When possible, use input masking and both client- and server-side validation to ensure the phone number they enter can be successfully used to contact them if needed.\n\n## Guidance\n\n### What to do\n\n- Tell users why you need their phone number, why you might contact them, and when.\n\n- Do clearly state if you need a U.S. telephone number.\n\n- Do clearly state if you need an SMS-capable mobile phone number, such as when you need to text a security code for validation.\n\n- Use clear hint text and input masking to ensure proper formatting.\n\n- Do use a \"text\" vs \"numeric\" input type.\n\n- Do use fieldset and legend to group related radio buttons together, and clear labels and attributes on these form elements.\n\n- Consider using the autocomplete attribute on telephone number inputs, to allow the browser to autofill information if it has been previously entered.\n\n- Offer very clear validation messages to help users successfully meet format requirements.\n\n- Allow a user to supply multiple phone numbers, labeling options Primary and Secondary.\n\n- Consider offering an extension field for a business line or other temporary residences/shelters.\n\n- Do consider the safety implications of users who share phones and voicemail boxes. Ask for permission to leave potentially sensitive messages.\n\n### What not to do\n\n- Do not require users to enter hyphens or other characters.\n\n- Do not split the phone number into separate fields. Separate fields have a high user interaction cost\n\n- Do not assume that voicemail boxes are private unless explicitly stated through permission-based settings or in the message itself.",
+    "phone": ""
   },
   {
     "id": "app-pattern/platform-overview-tray",
@@ -1333,6 +1658,53 @@
     "basis": "one settings page",
     "blueprint": "Use this only when usage is the question of the view (a plan, billing or quota view), and show only numbers no section below repeats, at a size below the h1. When a settings screen also reports usage, put 3-4 usage numbers in one row on top (a 14px grey label, a 30px regular value, a 12px change pinned to the card bottom with its window in words, a grey dash where there is no comparison) and link out to the analytics screen ('View more') instead of drawing a chart. Below, the two-column settings rows. One dark primary per screen. Keep upsell to one surface: the studied settings page carried three nags (a top banner, a setup button and a gated strip) and was flagged for it.",
     "phone": "The usage row becomes a 2-column grid of label-value pairs; settings rows stack."
+  },
+  {
+    "id": "app-pattern/uswds-social-security-number",
+    "kind": "app-pattern",
+    "name": "Social Security Number",
+    "summary": "The Social Security Number pattern allows users to easily enter their Social Security Number and ensures the Social Security Number is properly formatted.",
+    "domains": [
+      "government-public",
+      "fintech-payments",
+      "healthcare-wellness"
+    ],
+    "sectors": [
+      "government",
+      "identity"
+    ],
+    "tags": [
+      "uswds",
+      "form",
+      "identity",
+      "social-security-number"
+    ],
+    "moods": [],
+    "quality": "verified",
+    "provenance": {
+      "source": "uswds",
+      "repo": "https://github.com/uswds/uswds-site",
+      "commit": "af13d80f071c3d897bee422f51954d9d7d156474",
+      "path": "pages/patterns/create-a-profile/social-security-number.md",
+      "license": "CC0-1.0",
+      "authors": [
+        "U.S. General Services Administration"
+      ],
+      "url": "https://designsystem.digital.gov/",
+      "transformations": [
+        "converted HTML guidance to text",
+        "removed Jekyll includes, previews, and examples"
+      ]
+    },
+    "sourceUrl": "https://designsystem.digital.gov/patterns/create-a-user-profile/social-security-number/",
+    "screen": "social-security-number",
+    "kinds": [
+      "form",
+      "identity"
+    ],
+    "basis": "a social security number pattern from USWDS",
+    "blueprint": "## About this pattern\n\n### What problem does this solve?\n\nA Social Security Number is often a critical piece for validating identity when applying for government services or benefits, but can be confusing for users to enter correctly.\n\n### When to use this pattern\n\nOnly use this pattern when you need to confirm a user's identity by asking for their Social Security Number. This information may be important when determining eligibility for many federal programs, such as federal student loans, public assistance, and Medicare.\n\n### When to consider something else\n\nIf you do not specifically need a person’s Social Security Number, do not ask for or collect this information. The Social Security Number is intricately linked to a person’s identity, and should only be used when absolutely required for identification purposes.\n\nWhile most U.S. citizens and eligible U.S. residents have a Social Security Number, some people may not know their Social Security Number, or may lack the necessary documentation to obtain one easily.\n\n### What's the solution?\n\nProvide a single text field to enter the Social Security Number.\n\n## Guidance\n\n### What to do\n\n- Do allow users to enter a Social Security Number with as much fault tolerance as possible. Hyphens and blank spaces in the Social Security Number field should be accommodated if at all possible, since users may be accustomed to entering separators to the numeric groups that make up a Social Security Number.\n\n- Do use a \"text\" vs \"numeric\" input type.\n\n- Do consider using input masking to guide correct entry of the Social Security Number.\n\n- Do use both client-side and server-side validation if possible to enforce format consistency and flag invalid Social Security Numbers.\n\n### What not to do\n\n- Do not separate the Social Security Number entry into three separate fields.\n\n- Do not use placeholder text.",
+    "phone": ""
   },
   {
     "id": "app-pattern/tabbed-object-detail",

@@ -27,6 +27,7 @@ import { commitSnapshot, discardStaging, prepareStaging } from "./lib/snapshot.j
 import { type LockSource, loadSourceLock, sourceCacheKey } from "./lib/source-lock.js";
 import { govukAdapter } from "./lib/sources/govuk.js";
 import type { SourceContext } from "./lib/sources/types.js";
+import { uswdsAdapter } from "./lib/sources/uswds.js";
 import { parseReference, parseTasteLibrary } from "./lib/taste.js";
 import { validateContent } from "./lib/validate-content.js";
 
@@ -663,6 +664,7 @@ async function main(): Promise<void> {
     "web-interface-guidelines",
     "playwright-cli",
     "govuk-design-system",
+    "uswds",
   ];
   for (const id of required) {
     if (!byId.has(id)) throw new Error(`sources.lock.json is missing ${id}`);
@@ -691,14 +693,32 @@ async function main(): Promise<void> {
       writeLicense: () => fetchLicense(govukSource, options, staging),
     };
     const govuk = await govukAdapter.fetch(govukContext);
+    const uswdsSource = byId.get("uswds")!;
+    const uswdsContext: SourceContext = {
+      source: uswdsSource,
+      fetchText: (path) =>
+        fetchCached(lockUrl(uswdsSource, path), sourceCacheKey(uswdsSource, path), options),
+      fetchJson: (path) =>
+        fetchJsonCached(lockUrl(uswdsSource, path), sourceCacheKey(uswdsSource, path), options),
+      provenance: (path, transformations) => provenanceFor(uswdsSource, path, transformations),
+      sourceUrl: (path = "") => sourceUrl(uswdsSource, path),
+      writeLicense: () => fetchLicense(uswdsSource, options, staging),
+    };
+    const uswds = await uswdsAdapter.fetch(uswdsContext);
     const domains = await buildDomains(options.contentDir);
 
-    const warnings = [...brands.warnings, ...domains.warnings, ...govuk.warnings];
+    const warnings = [
+      ...brands.warnings,
+      ...domains.warnings,
+      ...govuk.warnings,
+      ...uswds.warnings,
+    ];
     const allPacks: Pack[] = sortPacks([
       ...taste.packs,
       ...brands.packs,
       ...guidelines.packs,
       ...govuk.packs,
+      ...uswds.packs,
       ...domains.packs,
     ]);
     const references: ReferencePack[] = sortPacks([
@@ -781,6 +801,7 @@ async function main(): Promise<void> {
       guidelines.sourceInfo,
       playwright.sourceInfo,
       govuk.sourceInfo,
+      uswds.sourceInfo,
     ];
     const counts = countBy(allContent, (pack) => pack.kind);
     const quality = countBy(allContent, (pack) => pack.quality);

@@ -12,6 +12,7 @@ The complete upstream license texts are committed at:
 - `content/sources/licenses/web-interface-guidelines.txt`
 - `content/sources/licenses/playwright-cli.txt`
 - `content/sources/licenses/govuk-design-system.txt`
+- `content/sources/licenses/uswds.txt`
 
 The machine-readable pins are in `sources.lock.json` and
 `content/sources.lock.json`. Every generated pack also carries a `provenance`
@@ -27,6 +28,7 @@ transformations applied.
 | [Vercel Web Interface Guidelines](https://github.com/vercel-labs/web-interface-guidelines) | Vercel Labs | MIT        | `434b7f91364665f2f733b310ec54809bf8f37937` |
 | [Microsoft Playwright CLI](https://github.com/microsoft/playwright-cli)                    | Microsoft   | Apache-2.0 | `b1a5903c5b633b8c9f843ad7b629c2a78437040c` |
 | [GOV.UK Design System](https://github.com/alphagov/govuk-design-system)                    | GDS         | OGL-3.0    | `0c6de5736a4e755a3808fb31d3a7723a33b7c705` |
+| [USWDS](https://github.com/uswds/uswds-site)                                               | GSA         | CC0-1.0    | `af13d80f071c3d897bee422f51954d9d7d156474` |
 
 ## Taste Skill
 
@@ -126,6 +128,27 @@ the Open Government Licence v3.0.
 **Not included:** the GOV.UK crown, Royal Coat of Arms, screenshots, card-scheme
 marks, or any binary asset.
 
+## USWDS
+
+**Used for:** eight identity and complex-form patterns — name, address, date of
+birth, email address, phone number, Social Security Number, keep a record, and
+establish trust.
+
+**Paths:** `pages/patterns/create-a-profile/*.md` and
+`pages/patterns/complex-form/*.md` in the pinned repository.
+
+**License:** CC0 1.0 Universal (public domain).
+
+**TastePro transformations:**
+
+- Converted the HTML guidance blocks into `app-pattern` packs.
+- Removed Jekyll includes, previews, code samples, and example markup.
+- Mapped each pattern to the TastePro domain taxonomy and form kinds.
+- Added provenance, source URLs, and quality metadata.
+
+**Not included:** agency logos, third-party fonts and icons, screenshots, or
+example markup.
+
 ## Original TastePro content
 
 The following are original to TastePro and licensed under Apache-2.0:
@@ -185,6 +208,11 @@ v3.0:
 The full licence text is committed at
 `content/sources/licenses/govuk-design-system.txt` and published at
 https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/.
+
+## CC0 1.0
+
+USWDS is released under CC0 1.0 Universal (public domain). The full text is
+committed at `content/sources/licenses/uswds.txt`.
 
 ## Reporting an attribution problem
 
