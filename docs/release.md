@@ -6,8 +6,11 @@
 2. Enable branch protection for `main`, Dependabot alerts, CodeQL, and secret
    scanning.
 3. Configure npm trusted publishing for the `tastepro` package:
-   repository `xeodus/tastepro`, workflow `release.yml`, environment left empty.
-   Then set the repository variable `NPM_PUBLISH=true`.
+   repository `xeodus/tastepro`, workflow `release.yml`, and explicitly allow
+   the `npm publish` action (new configurations default to staged publishing
+   only). Then set the repository variable `NPM_PUBLISH=true`.
+   If npm requires the package to exist first, set the `NPM_TOKEN` secret for
+   the first publish, then configure trusted publishing and revoke the token.
 4. Confirm the MCP Registry namespace `io.github.xeodus` is available to this
    repository, then set the repository variable `MCP_REGISTRY_PUBLISH=true`.
 5. After the first image publish, set the GHCR package visibility to public if

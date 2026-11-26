@@ -266,10 +266,21 @@ jobs:
         run: bun run build
 
       # Trusted publishing: configure this repository as a trusted publisher
-      # for `tastepro` on npmjs.com, then set the repository variable
-      # NPM_PUBLISH=true. No long-lived token is stored.
+      # for `tastepro` on npmjs.com and allow the `npm publish` action, then set
+      # the repository variable NPM_PUBLISH=true. No long-lived token is stored.
+      #
+      # First publish only: if npm requires the package to exist before a
+      # trusted publisher can be configured, set the NPM_TOKEN secret instead.
+      # The token is used once and can be revoked afterwards.
       - name: Publish with provenance
-        run: npm publish --provenance --access public --ignore-scripts
+        run: |
+          set -euo pipefail
+          if [ -n "${NPM_TOKEN:-}" ]; then
+            echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" >> "$HOME/.npmrc"
+          fi
+          npm publish --provenance --access public --ignore-scripts
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
 
   registry:
     name: Publish to the MCP Registry
