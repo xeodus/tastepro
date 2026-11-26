@@ -325,12 +325,12 @@ jobs:
         run: |
           set -euo pipefail
           version="$(jq -r .version server.json)"
-          for _ in $(seq 1 30); do
-            if curl -fsS "https://registry.npmjs.org/tastepro/${version}" >/dev/null; then
+          for _ in $(seq 1 60); do
+            if curl -fsS "https://registry.npmjs.org/tastepro/${version}" >/dev/null 2>&1; then
               echo "tastepro@${version} is visible on npm"
               exit 0
             fi
-            sleep 5
+            sleep 10
           done
           echo "timed out waiting for tastepro@${version} on npm" >&2
           exit 1
